@@ -845,14 +845,58 @@
       "title": "Placeholder count has not regressed since Milestone 2",
       "kind": "measure",
       "measure": "placeholder_control_count",
-      "expected": 7,
+      "expected": 10,
       "unit": "count",
       "tolerance": 0,
       "mode": "assert",
       "refs": [
         "GEOMETRY-CONTROL.md section 3"
       ],
-      "rationale": "A ratchet. Adding a placeholder without retiring another fails the suite; retiring one requires updating this expectation downward."
+      "rationale": "A ratchet. Adding a placeholder without retiring another fails the suite; retiring one requires updating this expectation downward. Raised 7 -> 10 at Milestone 6 for CTL-108, CTL-109 and CTL-110, the approach viaduct's bent spacing, bent width and girder depth. This is a deliberate, argued increase, not a relaxation: the approaches were previously drawn as a single flat slab, which concealed the fact that the structural form of 437 m of lower level and 483 m of upper roadway per side was entirely unknown. Modelling that structure makes three specific unknowns visible and countable where before there were none, which is the direction this ratchet is meant to encourage. The extent those placeholders are applied over is grade A (CTL-002, CTL-003). See OQ-020."
+    },
+    {
+      "id": "GRT-071",
+      "title": "The lower level reaches its sourced abutment station",
+      "kind": "measure",
+      "measure": "approach_lower_deck_outer_x",
+      "expected": 882.396,
+      "unit": "m",
+      "tolerance": 0.01,
+      "mode": "assert",
+      "refs": [
+        "CTL-002",
+        "GEOMETRY-CONTROL.md section 5, OQ-020"
+      ],
+      "rationale": "CTL-002 puts the lower level's abutments 5790 ft apart, grade A, so the lower deck must reach +/-882.4 m. Before Milestone 6 all deck geometry stopped at the anchorage face at +/-445 m, silently contradicting a grade-A control. This test exists so that cannot recur."
+    },
+    {
+      "id": "GRT-072",
+      "title": "The upper roadway reaches its sourced portal station",
+      "kind": "measure",
+      "measure": "approach_upper_deck_outer_x",
+      "expected": 928.116,
+      "unit": "m",
+      "tolerance": 0.01,
+      "mode": "assert",
+      "refs": [
+        "CTL-003",
+        "GEOMETRY-CONTROL.md section 5, OQ-020"
+      ],
+      "rationale": "CTL-003 puts the upper roadway's portals 6090 ft apart, grade A. The upper roadway therefore runs 300 ft further out than the lower level's abutments, and the model must show that difference rather than ending both decks together."
+    },
+    {
+      "id": "GRT-073",
+      "title": "Every part carries a material assignment from the control document",
+      "kind": "measure",
+      "measure": "parts_without_material",
+      "expected": 0,
+      "unit": "count",
+      "tolerance": 0,
+      "mode": "assert",
+      "refs": [
+        "GEOMETRY-CONTROL.md section 7"
+      ],
+      "rationale": "A part with no material rule means the control document does not say how it should look, and the renderer would be choosing. Section 7 has no default rule for exactly this reason, so this test guards the section 7 table against drifting behind the part list."
     }
   ]
 }

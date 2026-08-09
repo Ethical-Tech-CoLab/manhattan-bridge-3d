@@ -3,10 +3,10 @@
   "model": "control_skeleton",
   "milestone": 2,
   "generated_by": "build_control_skeleton.py@1.0.0",
-  "generated_at": "2026-08-09T17:17:06+00:00",
+  "generated_at": "2026-08-09T18:56:49+00:00",
   "control_document": {
     "path": "GEOMETRY-CONTROL.md",
-    "sha256": "feb9991c3d1d977c61be4d812fef7752fd3858fe1301223e5f7f670bfeb35707"
+    "sha256": "fe6b1eecc89d364f456b599ccd9271cf79d477ed1c71cb32b6c8ec8305474f2c"
   },
   "source_register": "SOURCE-REGISTER.md",
   "confidence_model": "CONFIDENCE-MODEL.md",
@@ -114,7 +114,10 @@
     "lower_deck_offset_above_clearance": 1.0363200000000001,
     "subway_track_bay_inner_offset": 8.2296,
     "subway_track_spacing_y": 4.2672,
-    "subway_track_structure_depth": 0.45720000000000005
+    "subway_track_structure_depth": 0.45720000000000005,
+    "approach_bent_spacing": 30.48,
+    "approach_bent_width_y": 2.4384,
+    "approach_girder_depth": 3.048
   },
   "controls_raw": {
     "total_bridge_and_approaches_length": 6855.0,
@@ -185,7 +188,10 @@
     "lower_deck_offset_above_clearance": 3.4,
     "subway_track_bay_inner_offset": 27.0,
     "subway_track_spacing_y": 14.0,
-    "subway_track_structure_depth": 1.5
+    "subway_track_structure_depth": 1.5,
+    "approach_bent_spacing": 100.0,
+    "approach_bent_width_y": 8.0,
+    "approach_girder_depth": 10.0
   },
   "control_confidence": {
     "total_bridge_and_approaches_length": "A",
@@ -256,15 +262,18 @@
     "lower_deck_offset_above_clearance": "D",
     "subway_track_bay_inner_offset": "D",
     "subway_track_spacing_y": "D",
-    "subway_track_structure_depth": "D"
+    "subway_track_structure_depth": "D",
+    "approach_bent_spacing": "D",
+    "approach_bent_width_y": "D",
+    "approach_girder_depth": "D"
   },
   "measures": {
-    "part_count": 81,
+    "part_count": 95,
     "confidence_histogram": {
       "A": 33,
       "B": 4,
       "C": 0,
-      "D": 44
+      "D": 58
     },
     "suspender_segment_count": 516,
     "suspender_pitch_m": 5.671594936708861,
@@ -298,8 +307,11 @@
     "deck_centerline_length_m": 2089.404,
     "tower_spacing_m": 448.05600000000004,
     "anchorage_spacing_m": 890.0160000000001,
-    "placeholder_control_count": 7,
-    "sourced_control_count": 62
+    "placeholder_control_count": 10,
+    "sourced_control_count": 62,
+    "approach_lower_deck_outer_x": 882.3960000000001,
+    "approach_upper_deck_outer_x": 928.1160000000001,
+    "parts_without_material": 0
   },
   "outputs": {
     "glb": "mesh/glb/control_skeleton.glb",

@@ -35,7 +35,7 @@
           "byte_size": 137944,
           "triangle_count": 4620,
           "max_geometric_error_m": 8.0,
-          "sha256": "79f4752338f4ceb6ea79e7c755c502b695c9066343432a77e1867389ab710a38"
+          "sha256": "f6a106ed7eab6b031cd56403940a0db0f062cd86010e27c2f2de7ca3d83a8367"
         }
       ]
     },
@@ -52,9 +52,9 @@
           "level": 0,
           "url": "assets/bridge.lod0.glb",
           "format": "glb",
-          "byte_size": 608196,
+          "byte_size": 722636,
           "max_geometric_error_m": 0.01,
-          "sha256": "0640eb900a9a342fc6e71cbcd2642de35903d45b61269558ded46c5339e18944"
+          "sha256": "644779efa9a1cf7f9afc5e7a2826755f778217174ab3322376f4c26707686c1e"
         }
       ]
     },
@@ -2192,6 +2192,195 @@
       ]
     },
     {
+      "asset_id": "urn:d3d:manhattan-bridge:manhattan_approach_lower_deck",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -882.396,
+          -18.288,
+          39.13632
+        ],
+        "max": [
+          -517.2456,
+          18.288,
+          42.18432
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "manhattan_approach_lower_deck",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:manhattan_approach_upper_deck",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -928.116,
+          -18.288,
+          48.4632
+        ],
+        "max": [
+          -517.2456,
+          18.288,
+          49.3776
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "manhattan_approach_upper_deck",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:track_1_approach_manhattan",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -882.396,
+          11.77925,
+          42.18432
+        ],
+        "max": [
+          -517.2456,
+          13.21435,
+          42.64152
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "track_1_approach_manhattan",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:track_2_approach_manhattan",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -882.396,
+          7.51205,
+          42.18432
+        ],
+        "max": [
+          -517.2456,
+          8.94715,
+          42.64152
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "track_2_approach_manhattan",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:track_3_approach_manhattan",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -882.396,
+          -8.94715,
+          42.18432
+        ],
+        "max": [
+          -517.2456,
+          -7.51205,
+          42.64152
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "track_3_approach_manhattan",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:track_4_approach_manhattan",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -882.396,
+          -13.21435,
+          42.18432
+        ],
+        "max": [
+          -517.2456,
+          -11.77925,
+          42.64152
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "track_4_approach_manhattan",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:manhattan_approach_bents",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -899.987314,
+          -18.288,
+          0.0
+        ],
+        "max": [
+          -545.374286,
+          18.288,
+          49.3776
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "manhattan_approach_bents",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
       "asset_id": "urn:d3d:manhattan-bridge:manhattan_approach",
       "kind": "single",
       "metadata_url": "bridge/metadata.json",
@@ -2214,6 +2403,195 @@
           "url": "assets/bridge.lod0.glb",
           "format": "glb",
           "node_name": "manhattan_approach",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:brooklyn_approach_lower_deck",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          517.2456,
+          -18.288,
+          39.13632
+        ],
+        "max": [
+          882.396,
+          18.288,
+          42.18432
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "brooklyn_approach_lower_deck",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:brooklyn_approach_upper_deck",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          517.2456,
+          -18.288,
+          48.4632
+        ],
+        "max": [
+          928.116,
+          18.288,
+          49.3776
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "brooklyn_approach_upper_deck",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:track_1_approach_brooklyn",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          517.2456,
+          11.77925,
+          42.18432
+        ],
+        "max": [
+          882.396,
+          13.21435,
+          42.64152
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "track_1_approach_brooklyn",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:track_2_approach_brooklyn",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          517.2456,
+          7.51205,
+          42.18432
+        ],
+        "max": [
+          882.396,
+          8.94715,
+          42.64152
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "track_2_approach_brooklyn",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:track_3_approach_brooklyn",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          517.2456,
+          -8.94715,
+          42.18432
+        ],
+        "max": [
+          882.396,
+          -7.51205,
+          42.64152
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "track_3_approach_brooklyn",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:track_4_approach_brooklyn",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          517.2456,
+          -13.21435,
+          42.18432
+        ],
+        "max": [
+          882.396,
+          -11.77925,
+          42.64152
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "track_4_approach_brooklyn",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:brooklyn_approach_bents",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          545.374286,
+          -18.288,
+          0.0
+        ],
+        "max": [
+          899.987314,
+          18.288,
+          49.3776
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "brooklyn_approach_bents",
           "max_geometric_error_m": 0.01
         }
       ]
@@ -2249,11 +2627,11 @@
   "provenance": {
     "module_id": "manhattan-bridge",
     "generated_by": "publish_module_contract.py via build_control_skeleton.py@1.0.0",
-    "generated_at": "2026-08-09T17:35:56+00:00",
+    "generated_at": "2026-08-09T18:59:20+00:00",
     "source_documents": [
       {
         "path": "GEOMETRY-CONTROL.md",
-        "sha256": "feb9991c3d1d977c61be4d812fef7752fd3858fe1301223e5f7f670bfeb35707"
+        "sha256": "fe6b1eecc89d364f456b599ccd9271cf79d477ed1c71cb32b6c8ec8305474f2c"
       }
     ]
   }

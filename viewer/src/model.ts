@@ -23,10 +23,50 @@ export interface PartMetadata {
   control_refs: string[];
   open_questions: string[];
   basis_confidence: Confidence;
+  material: MaterialName;
+  material_id: string;
+  material_confidence: Confidence;
+  material_sources: string[];
   geometry_kinds: string[];
   bbox_prototype_m: { min: number[]; max: number[]; size: number[] };
   bbox_ho_mm: { size: number[] };
 }
+
+/** Closed vocabulary, mirroring ALLOWED_MATERIALS in scripts/control_model.py. */
+export type MaterialName =
+  | 'masonry'
+  | 'concrete'
+  | 'steel_structural'
+  | 'steel_wire'
+  | 'roadway_surface'
+  | 'reference';
+
+export interface MaterialAppearance {
+  label: string;
+  color: string;
+  roughness: number;
+  metalness: number;
+  /** Opacity used in material mode. Schematic transparency is abandoned so the bridge reads solid. */
+  opacity: number;
+}
+
+/**
+ * How each controlled material is rendered.
+ *
+ * These are appearance values, not claims about the bridge: the *assignment* of a material to a
+ * part is controlled and graded in GEOMETRY-CONTROL.md section 7, and this table only says what
+ * masonry looks like. Keeping the two apart is why a grade-D material assignment can still be
+ * rendered convincingly without the render implying the assignment is certain -- the material
+ * grade is shown in the metadata panel and by the provenance outline.
+ */
+export const MATERIAL_APPEARANCE: Record<MaterialName, MaterialAppearance> = {
+  masonry: { label: 'masonry', color: '#9a8f7d', roughness: 0.96, metalness: 0.02, opacity: 1 },
+  concrete: { label: 'concrete', color: '#8d8d88', roughness: 0.92, metalness: 0.0, opacity: 1 },
+  steel_structural: { label: 'structural steel', color: '#7d8894', roughness: 0.52, metalness: 0.82, opacity: 1 },
+  steel_wire: { label: 'wire rope', color: '#8a8577', roughness: 0.38, metalness: 0.9, opacity: 1 },
+  roadway_surface: { label: 'roadway surface', color: '#4a4a4d', roughness: 0.98, metalness: 0.0, opacity: 1 },
+  reference: { label: 'reference geometry', color: '#5f6b78', roughness: 1, metalness: 0, opacity: 0.25 },
+};
 
 export interface ControlEntry {
   control_id: string;

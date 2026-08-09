@@ -3,10 +3,10 @@
   "model": "control_skeleton",
   "milestone": 2,
   "generated_by": "build_control_skeleton.py@1.0.0",
-  "generated_at": "2026-08-09T17:17:06+00:00",
+  "generated_at": "2026-08-09T18:56:49+00:00",
   "control_document": {
     "path": "GEOMETRY-CONTROL.md",
-    "sha256": "feb9991c3d1d977c61be4d812fef7752fd3858fe1301223e5f7f670bfeb35707"
+    "sha256": "fe6b1eecc89d364f456b599ccd9271cf79d477ed1c71cb32b6c8ec8305474f2c"
   },
   "source_register": "SOURCE-REGISTER.md",
   "confidence_model": "CONFIDENCE-MODEL.md",
@@ -156,6 +156,15 @@
         0.26
       ],
       "unlit": false
+    },
+    "approach_envelope": {
+      "color": [
+        0.46,
+        0.5,
+        0.56,
+        0.1
+      ],
+      "unlit": false
     }
   },
   "parts": [
@@ -181,6 +190,10 @@
       ],
       "open_questions": [],
       "basis_confidence": "A",
+      "material": "reference",
+      "material_id": "MAT-014",
+      "material_confidence": "D",
+      "material_sources": [],
       "geometry_kinds": [
         "quad"
       ],
@@ -257,6 +270,10 @@
       ],
       "open_questions": [],
       "basis_confidence": "A",
+      "material": "reference",
+      "material_id": "MAT-014",
+      "material_confidence": "D",
+      "material_sources": [],
       "geometry_kinds": [
         "polyline"
       ],
@@ -332,6 +349,10 @@
         "OQ-013"
       ],
       "basis_confidence": "A",
+      "material": "reference",
+      "material_id": "MAT-015",
+      "material_confidence": "D",
+      "material_sources": [],
       "geometry_kinds": [
         "polyline"
       ],
@@ -397,6 +418,10 @@
       ],
       "open_questions": [],
       "basis_confidence": "A",
+      "material": "reference",
+      "material_id": "MAT-016",
+      "material_confidence": "D",
+      "material_sources": [],
       "geometry_kinds": [
         "lines"
       ],
@@ -476,6 +501,10 @@
       ],
       "open_questions": [],
       "basis_confidence": "A",
+      "material": "reference",
+      "material_id": "MAT-016",
+      "material_confidence": "D",
+      "material_sources": [],
       "geometry_kinds": [
         "lines"
       ],
@@ -555,6 +584,10 @@
       ],
       "open_questions": [],
       "basis_confidence": "A",
+      "material": "reference",
+      "material_id": "MAT-016",
+      "material_confidence": "D",
+      "material_sources": [],
       "geometry_kinds": [
         "lines"
       ],
@@ -635,6 +668,10 @@
       ],
       "open_questions": [],
       "basis_confidence": "A",
+      "material": "reference",
+      "material_id": "MAT-016",
+      "material_confidence": "D",
+      "material_sources": [],
       "geometry_kinds": [
         "lines"
       ],
@@ -715,6 +752,10 @@
       ],
       "open_questions": [],
       "basis_confidence": "A",
+      "material": "reference",
+      "material_id": "MAT-016",
+      "material_confidence": "D",
+      "material_sources": [],
       "geometry_kinds": [
         "lines"
       ],
@@ -796,6 +837,10 @@
         "OQ-002"
       ],
       "basis_confidence": "D",
+      "material": "reference",
+      "material_id": "MAT-016",
+      "material_confidence": "D",
+      "material_sources": [],
       "geometry_kinds": [
         "lines"
       ],
@@ -877,6 +922,10 @@
         "OQ-002"
       ],
       "basis_confidence": "D",
+      "material": "reference",
+      "material_id": "MAT-016",
+      "material_confidence": "D",
+      "material_sources": [],
       "geometry_kinds": [
         "lines"
       ],
@@ -958,6 +1007,10 @@
         "OQ-002"
       ],
       "basis_confidence": "D",
+      "material": "reference",
+      "material_id": "MAT-016",
+      "material_confidence": "D",
+      "material_sources": [],
       "geometry_kinds": [
         "lines"
       ],
@@ -1039,6 +1092,10 @@
         "OQ-002"
       ],
       "basis_confidence": "D",
+      "material": "reference",
+      "material_id": "MAT-016",
+      "material_confidence": "D",
+      "material_sources": [],
       "geometry_kinds": [
         "lines"
       ],
@@ -1121,6 +1178,10 @@
       ],
       "open_questions": [],
       "basis_confidence": "B",
+      "material": "reference",
+      "material_id": "MAT-016",
+      "material_confidence": "D",
+      "material_sources": [],
       "geometry_kinds": [
         "lines"
       ],
@@ -1203,6 +1264,10 @@
       ],
       "open_questions": [],
       "basis_confidence": "B",
+      "material": "reference",
+      "material_id": "MAT-016",
+      "material_confidence": "D",
+      "material_sources": [],
       "geometry_kinds": [
         "lines"
       ],
@@ -1284,6 +1349,10 @@
       ],
       "open_questions": [],
       "basis_confidence": "A",
+      "material": "reference",
+      "material_id": "MAT-018",
+      "material_confidence": "D",
+      "material_sources": [],
       "geometry_kinds": [
         "polyline"
       ],
@@ -1353,6 +1422,10 @@
       ],
       "open_questions": [],
       "basis_confidence": "A",
+      "material": "concrete",
+      "material_id": "MAT-003",
+      "material_confidence": "D",
+      "material_sources": [],
       "geometry_kinds": [
         "box"
       ],
@@ -1423,6 +1496,12 @@
         "OQ-016"
       ],
       "basis_confidence": "A",
+      "material": "masonry",
+      "material_id": "MAT-001",
+      "material_confidence": "A",
+      "material_sources": [
+        "SRC-016"
+      ],
       "geometry_kinds": [
         "box"
       ],
@@ -1493,6 +1572,12 @@
       ],
       "open_questions": [],
       "basis_confidence": "A",
+      "material": "steel_structural",
+      "material_id": "MAT-005",
+      "material_confidence": "A",
+      "material_sources": [
+        "SRC-016"
+      ],
       "geometry_kinds": [
         "prism"
       ],
@@ -1597,6 +1682,12 @@
       ],
       "open_questions": [],
       "basis_confidence": "A",
+      "material": "steel_structural",
+      "material_id": "MAT-005",
+      "material_confidence": "A",
+      "material_sources": [
+        "SRC-016"
+      ],
       "geometry_kinds": [
         "prism"
       ],
@@ -1701,6 +1792,12 @@
       ],
       "open_questions": [],
       "basis_confidence": "A",
+      "material": "steel_structural",
+      "material_id": "MAT-005",
+      "material_confidence": "A",
+      "material_sources": [
+        "SRC-016"
+      ],
       "geometry_kinds": [
         "prism"
       ],
@@ -1805,6 +1902,12 @@
       ],
       "open_questions": [],
       "basis_confidence": "A",
+      "material": "steel_structural",
+      "material_id": "MAT-005",
+      "material_confidence": "A",
+      "material_sources": [
+        "SRC-016"
+      ],
       "geometry_kinds": [
         "prism"
       ],
@@ -1909,6 +2012,12 @@
         "OQ-007"
       ],
       "basis_confidence": "D",
+      "material": "steel_structural",
+      "material_id": "MAT-017",
+      "material_confidence": "B",
+      "material_sources": [
+        "SRC-016"
+      ],
       "geometry_kinds": [
         "lines"
       ],
@@ -2326,6 +2435,10 @@
       ],
       "open_questions": [],
       "basis_confidence": "A",
+      "material": "reference",
+      "material_id": "MAT-018",
+      "material_confidence": "D",
+      "material_sources": [],
       "geometry_kinds": [
         "polyline"
       ],
@@ -2395,6 +2508,10 @@
       ],
       "open_questions": [],
       "basis_confidence": "A",
+      "material": "concrete",
+      "material_id": "MAT-003",
+      "material_confidence": "D",
+      "material_sources": [],
       "geometry_kinds": [
         "box"
       ],
@@ -2465,6 +2582,12 @@
         "OQ-016"
       ],
       "basis_confidence": "A",
+      "material": "masonry",
+      "material_id": "MAT-001",
+      "material_confidence": "A",
+      "material_sources": [
+        "SRC-016"
+      ],
       "geometry_kinds": [
         "box"
       ],
@@ -2535,6 +2658,12 @@
       ],
       "open_questions": [],
       "basis_confidence": "A",
+      "material": "steel_structural",
+      "material_id": "MAT-005",
+      "material_confidence": "A",
+      "material_sources": [
+        "SRC-016"
+      ],
       "geometry_kinds": [
         "prism"
       ],
@@ -2639,6 +2768,12 @@
       ],
       "open_questions": [],
       "basis_confidence": "A",
+      "material": "steel_structural",
+      "material_id": "MAT-005",
+      "material_confidence": "A",
+      "material_sources": [
+        "SRC-016"
+      ],
       "geometry_kinds": [
         "prism"
       ],
@@ -2743,6 +2878,12 @@
       ],
       "open_questions": [],
       "basis_confidence": "A",
+      "material": "steel_structural",
+      "material_id": "MAT-005",
+      "material_confidence": "A",
+      "material_sources": [
+        "SRC-016"
+      ],
       "geometry_kinds": [
         "prism"
       ],
@@ -2847,6 +2988,12 @@
       ],
       "open_questions": [],
       "basis_confidence": "A",
+      "material": "steel_structural",
+      "material_id": "MAT-005",
+      "material_confidence": "A",
+      "material_sources": [
+        "SRC-016"
+      ],
       "geometry_kinds": [
         "prism"
       ],
@@ -2951,6 +3098,12 @@
         "OQ-007"
       ],
       "basis_confidence": "D",
+      "material": "steel_structural",
+      "material_id": "MAT-017",
+      "material_confidence": "B",
+      "material_sources": [
+        "SRC-016"
+      ],
       "geometry_kinds": [
         "lines"
       ],
@@ -3370,6 +3523,10 @@
       ],
       "open_questions": [],
       "basis_confidence": "B",
+      "material": "masonry",
+      "material_id": "MAT-010",
+      "material_confidence": "D",
+      "material_sources": [],
       "geometry_kinds": [
         "box"
       ],
@@ -3437,6 +3594,10 @@
       ],
       "open_questions": [],
       "basis_confidence": "B",
+      "material": "masonry",
+      "material_id": "MAT-010",
+      "material_confidence": "D",
+      "material_sources": [],
       "geometry_kinds": [
         "box"
       ],
@@ -3513,6 +3674,13 @@
         "OQ-001"
       ],
       "basis_confidence": "B",
+      "material": "steel_wire",
+      "material_id": "MAT-007",
+      "material_confidence": "C",
+      "material_sources": [
+        "SRC-011",
+        "SRC-015"
+      ],
       "geometry_kinds": [
         "tube"
       ],
@@ -4867,6 +5035,13 @@
         "OQ-001"
       ],
       "basis_confidence": "B",
+      "material": "steel_wire",
+      "material_id": "MAT-007",
+      "material_confidence": "C",
+      "material_sources": [
+        "SRC-011",
+        "SRC-015"
+      ],
       "geometry_kinds": [
         "tube"
       ],
@@ -6221,6 +6396,13 @@
         "OQ-001"
       ],
       "basis_confidence": "B",
+      "material": "steel_wire",
+      "material_id": "MAT-007",
+      "material_confidence": "C",
+      "material_sources": [
+        "SRC-011",
+        "SRC-015"
+      ],
       "geometry_kinds": [
         "tube"
       ],
@@ -7575,6 +7757,13 @@
         "OQ-001"
       ],
       "basis_confidence": "B",
+      "material": "steel_wire",
+      "material_id": "MAT-007",
+      "material_confidence": "C",
+      "material_sources": [
+        "SRC-011",
+        "SRC-015"
+      ],
       "geometry_kinds": [
         "tube"
       ],
@@ -8931,6 +9120,12 @@
         "OQ-001"
       ],
       "basis_confidence": "B",
+      "material": "steel_wire",
+      "material_id": "MAT-008",
+      "material_confidence": "C",
+      "material_sources": [
+        "SRC-011"
+      ],
       "geometry_kinds": [
         "lines"
       ],
@@ -10549,6 +10744,12 @@
         "OQ-001"
       ],
       "basis_confidence": "B",
+      "material": "steel_wire",
+      "material_id": "MAT-008",
+      "material_confidence": "C",
+      "material_sources": [
+        "SRC-011"
+      ],
       "geometry_kinds": [
         "lines"
       ],
@@ -12167,6 +12368,12 @@
         "OQ-001"
       ],
       "basis_confidence": "B",
+      "material": "steel_wire",
+      "material_id": "MAT-008",
+      "material_confidence": "C",
+      "material_sources": [
+        "SRC-011"
+      ],
       "geometry_kinds": [
         "lines"
       ],
@@ -13785,6 +13992,12 @@
         "OQ-001"
       ],
       "basis_confidence": "B",
+      "material": "steel_wire",
+      "material_id": "MAT-008",
+      "material_confidence": "C",
+      "material_sources": [
+        "SRC-011"
+      ],
       "geometry_kinds": [
         "lines"
       ],
@@ -15398,6 +15611,10 @@
         "OQ-013"
       ],
       "basis_confidence": "B",
+      "material": "roadway_surface",
+      "material_id": "MAT-013",
+      "material_confidence": "D",
+      "material_sources": [],
       "geometry_kinds": [
         "box"
       ],
@@ -15471,6 +15688,10 @@
         "OQ-013"
       ],
       "basis_confidence": "B",
+      "material": "roadway_surface",
+      "material_id": "MAT-013",
+      "material_confidence": "D",
+      "material_sources": [],
       "geometry_kinds": [
         "box"
       ],
@@ -15540,6 +15761,10 @@
         "OQ-013"
       ],
       "basis_confidence": "B",
+      "material": "roadway_surface",
+      "material_id": "MAT-013",
+      "material_confidence": "D",
+      "material_sources": [],
       "geometry_kinds": [
         "box"
       ],
@@ -15608,6 +15833,12 @@
       ],
       "open_questions": [],
       "basis_confidence": "A",
+      "material": "steel_structural",
+      "material_id": "MAT-009",
+      "material_confidence": "C",
+      "material_sources": [
+        "SRC-011"
+      ],
       "geometry_kinds": [
         "lines"
       ],
@@ -15697,6 +15928,12 @@
         "OQ-017"
       ],
       "basis_confidence": "D",
+      "material": "steel_structural",
+      "material_id": "MAT-009",
+      "material_confidence": "C",
+      "material_sources": [
+        "SRC-011"
+      ],
       "geometry_kinds": [
         "lines"
       ],
@@ -17665,6 +17902,12 @@
       ],
       "open_questions": [],
       "basis_confidence": "A",
+      "material": "steel_structural",
+      "material_id": "MAT-009",
+      "material_confidence": "C",
+      "material_sources": [
+        "SRC-011"
+      ],
       "geometry_kinds": [
         "lines"
       ],
@@ -17754,6 +17997,12 @@
         "OQ-017"
       ],
       "basis_confidence": "D",
+      "material": "steel_structural",
+      "material_id": "MAT-009",
+      "material_confidence": "C",
+      "material_sources": [
+        "SRC-011"
+      ],
       "geometry_kinds": [
         "lines"
       ],
@@ -19722,6 +19971,12 @@
       ],
       "open_questions": [],
       "basis_confidence": "A",
+      "material": "steel_structural",
+      "material_id": "MAT-009",
+      "material_confidence": "C",
+      "material_sources": [
+        "SRC-011"
+      ],
       "geometry_kinds": [
         "lines"
       ],
@@ -19811,6 +20066,12 @@
         "OQ-017"
       ],
       "basis_confidence": "D",
+      "material": "steel_structural",
+      "material_id": "MAT-009",
+      "material_confidence": "C",
+      "material_sources": [
+        "SRC-011"
+      ],
       "geometry_kinds": [
         "lines"
       ],
@@ -21779,6 +22040,12 @@
       ],
       "open_questions": [],
       "basis_confidence": "A",
+      "material": "steel_structural",
+      "material_id": "MAT-009",
+      "material_confidence": "C",
+      "material_sources": [
+        "SRC-011"
+      ],
       "geometry_kinds": [
         "lines"
       ],
@@ -21868,6 +22135,12 @@
         "OQ-017"
       ],
       "basis_confidence": "D",
+      "material": "steel_structural",
+      "material_id": "MAT-009",
+      "material_confidence": "C",
+      "material_sources": [
+        "SRC-011"
+      ],
       "geometry_kinds": [
         "lines"
       ],
@@ -23841,6 +24114,10 @@
         "OQ-013"
       ],
       "basis_confidence": "B",
+      "material": "roadway_surface",
+      "material_id": "MAT-013",
+      "material_confidence": "D",
+      "material_sources": [],
       "geometry_kinds": [
         "box"
       ],
@@ -23914,6 +24191,10 @@
         "OQ-013"
       ],
       "basis_confidence": "B",
+      "material": "roadway_surface",
+      "material_id": "MAT-013",
+      "material_confidence": "D",
+      "material_sources": [],
       "geometry_kinds": [
         "box"
       ],
@@ -23983,6 +24264,10 @@
         "OQ-013"
       ],
       "basis_confidence": "B",
+      "material": "roadway_surface",
+      "material_id": "MAT-013",
+      "material_confidence": "D",
+      "material_sources": [],
       "geometry_kinds": [
         "box"
       ],
@@ -24051,6 +24336,12 @@
       ],
       "open_questions": [],
       "basis_confidence": "A",
+      "material": "steel_structural",
+      "material_id": "MAT-009",
+      "material_confidence": "C",
+      "material_sources": [
+        "SRC-011"
+      ],
       "geometry_kinds": [
         "lines"
       ],
@@ -24140,6 +24431,12 @@
         "OQ-017"
       ],
       "basis_confidence": "D",
+      "material": "steel_structural",
+      "material_id": "MAT-009",
+      "material_confidence": "C",
+      "material_sources": [
+        "SRC-011"
+      ],
       "geometry_kinds": [
         "lines"
       ],
@@ -25148,6 +25445,12 @@
       ],
       "open_questions": [],
       "basis_confidence": "A",
+      "material": "steel_structural",
+      "material_id": "MAT-009",
+      "material_confidence": "C",
+      "material_sources": [
+        "SRC-011"
+      ],
       "geometry_kinds": [
         "lines"
       ],
@@ -25237,6 +25540,12 @@
         "OQ-017"
       ],
       "basis_confidence": "D",
+      "material": "steel_structural",
+      "material_id": "MAT-009",
+      "material_confidence": "C",
+      "material_sources": [
+        "SRC-011"
+      ],
       "geometry_kinds": [
         "lines"
       ],
@@ -26245,6 +26554,12 @@
       ],
       "open_questions": [],
       "basis_confidence": "A",
+      "material": "steel_structural",
+      "material_id": "MAT-009",
+      "material_confidence": "C",
+      "material_sources": [
+        "SRC-011"
+      ],
       "geometry_kinds": [
         "lines"
       ],
@@ -26334,6 +26649,12 @@
         "OQ-017"
       ],
       "basis_confidence": "D",
+      "material": "steel_structural",
+      "material_id": "MAT-009",
+      "material_confidence": "C",
+      "material_sources": [
+        "SRC-011"
+      ],
       "geometry_kinds": [
         "lines"
       ],
@@ -27342,6 +27663,12 @@
       ],
       "open_questions": [],
       "basis_confidence": "A",
+      "material": "steel_structural",
+      "material_id": "MAT-009",
+      "material_confidence": "C",
+      "material_sources": [
+        "SRC-011"
+      ],
       "geometry_kinds": [
         "lines"
       ],
@@ -27431,6 +27758,12 @@
         "OQ-017"
       ],
       "basis_confidence": "D",
+      "material": "steel_structural",
+      "material_id": "MAT-009",
+      "material_confidence": "C",
+      "material_sources": [
+        "SRC-011"
+      ],
       "geometry_kinds": [
         "lines"
       ],
@@ -28444,6 +28777,10 @@
         "OQ-013"
       ],
       "basis_confidence": "B",
+      "material": "roadway_surface",
+      "material_id": "MAT-013",
+      "material_confidence": "D",
+      "material_sources": [],
       "geometry_kinds": [
         "box"
       ],
@@ -28517,6 +28854,10 @@
         "OQ-013"
       ],
       "basis_confidence": "B",
+      "material": "roadway_surface",
+      "material_id": "MAT-013",
+      "material_confidence": "D",
+      "material_sources": [],
       "geometry_kinds": [
         "box"
       ],
@@ -28586,6 +28927,10 @@
         "OQ-013"
       ],
       "basis_confidence": "B",
+      "material": "roadway_surface",
+      "material_id": "MAT-013",
+      "material_confidence": "D",
+      "material_sources": [],
       "geometry_kinds": [
         "box"
       ],
@@ -28654,6 +28999,12 @@
       ],
       "open_questions": [],
       "basis_confidence": "A",
+      "material": "steel_structural",
+      "material_id": "MAT-009",
+      "material_confidence": "C",
+      "material_sources": [
+        "SRC-011"
+      ],
       "geometry_kinds": [
         "lines"
       ],
@@ -28743,6 +29094,12 @@
         "OQ-017"
       ],
       "basis_confidence": "D",
+      "material": "steel_structural",
+      "material_id": "MAT-009",
+      "material_confidence": "C",
+      "material_sources": [
+        "SRC-011"
+      ],
       "geometry_kinds": [
         "lines"
       ],
@@ -29751,6 +30108,12 @@
       ],
       "open_questions": [],
       "basis_confidence": "A",
+      "material": "steel_structural",
+      "material_id": "MAT-009",
+      "material_confidence": "C",
+      "material_sources": [
+        "SRC-011"
+      ],
       "geometry_kinds": [
         "lines"
       ],
@@ -29840,6 +30203,12 @@
         "OQ-017"
       ],
       "basis_confidence": "D",
+      "material": "steel_structural",
+      "material_id": "MAT-009",
+      "material_confidence": "C",
+      "material_sources": [
+        "SRC-011"
+      ],
       "geometry_kinds": [
         "lines"
       ],
@@ -30848,6 +31217,12 @@
       ],
       "open_questions": [],
       "basis_confidence": "A",
+      "material": "steel_structural",
+      "material_id": "MAT-009",
+      "material_confidence": "C",
+      "material_sources": [
+        "SRC-011"
+      ],
       "geometry_kinds": [
         "lines"
       ],
@@ -30937,6 +31312,12 @@
         "OQ-017"
       ],
       "basis_confidence": "D",
+      "material": "steel_structural",
+      "material_id": "MAT-009",
+      "material_confidence": "C",
+      "material_sources": [
+        "SRC-011"
+      ],
       "geometry_kinds": [
         "lines"
       ],
@@ -31945,6 +32326,12 @@
       ],
       "open_questions": [],
       "basis_confidence": "A",
+      "material": "steel_structural",
+      "material_id": "MAT-009",
+      "material_confidence": "C",
+      "material_sources": [
+        "SRC-011"
+      ],
       "geometry_kinds": [
         "lines"
       ],
@@ -32034,6 +32421,12 @@
         "OQ-017"
       ],
       "basis_confidence": "D",
+      "material": "steel_structural",
+      "material_id": "MAT-009",
+      "material_confidence": "C",
+      "material_sources": [
+        "SRC-011"
+      ],
       "geometry_kinds": [
         "lines"
       ],
@@ -33045,6 +33438,10 @@
         "OQ-013"
       ],
       "basis_confidence": "B",
+      "material": "roadway_surface",
+      "material_id": "MAT-019",
+      "material_confidence": "D",
+      "material_sources": [],
       "geometry_kinds": [
         "box"
       ],
@@ -33116,6 +33513,10 @@
         "OQ-013"
       ],
       "basis_confidence": "B",
+      "material": "roadway_surface",
+      "material_id": "MAT-019",
+      "material_confidence": "D",
+      "material_sources": [],
       "geometry_kinds": [
         "box"
       ],
@@ -33192,6 +33593,10 @@
         "OQ-013"
       ],
       "basis_confidence": "B",
+      "material": "steel_structural",
+      "material_id": "MAT-012",
+      "material_confidence": "D",
+      "material_sources": [],
       "geometry_kinds": [
         "box"
       ],
@@ -33268,6 +33673,10 @@
         "OQ-013"
       ],
       "basis_confidence": "B",
+      "material": "steel_structural",
+      "material_id": "MAT-012",
+      "material_confidence": "D",
+      "material_sources": [],
       "geometry_kinds": [
         "box"
       ],
@@ -33344,6 +33753,10 @@
         "OQ-013"
       ],
       "basis_confidence": "B",
+      "material": "steel_structural",
+      "material_id": "MAT-012",
+      "material_confidence": "D",
+      "material_sources": [],
       "geometry_kinds": [
         "box"
       ],
@@ -33420,6 +33833,10 @@
         "OQ-013"
       ],
       "basis_confidence": "B",
+      "material": "steel_structural",
+      "material_id": "MAT-012",
+      "material_confidence": "D",
+      "material_sources": [],
       "geometry_kinds": [
         "box"
       ],
@@ -33465,6 +33882,910 @@
       ]
     },
     {
+      "part_id": "manhattan_approach_lower_deck",
+      "system": "approaches",
+      "subsystem": "lower_roadway",
+      "source_basis": [
+        "control_dimension",
+        "inferred"
+      ],
+      "confidence": "D",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Lower level carried from the outboard face of the anchorage to the abutment. The extent is sourced: CTL-002 puts the lower level's abutments 5790 ft apart, which is grade A, so this deck exists and reaches this station. Its structural depth and its grade down to street level are not sourced; it is drawn level because inventing a gradient would be worse than admitting there is none. See OQ-020.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-002",
+        "CTL-003",
+        "CTL-001",
+        "CTL-004",
+        "CTL-039",
+        "CTL-040",
+        "CTL-021",
+        "CTL-034",
+        "CTL-008",
+        "CTL-110",
+        "CTL-104"
+      ],
+      "open_questions": [
+        "OQ-002",
+        "OQ-013",
+        "OQ-020"
+      ],
+      "basis_confidence": "C",
+      "material": "steel_structural",
+      "material_id": "MAT-011",
+      "material_confidence": "D",
+      "material_sources": [],
+      "geometry_kinds": [
+        "box"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          -882.396,
+          -18.288,
+          39.13632
+        ],
+        "max": [
+          -517.2456,
+          18.288,
+          42.18432
+        ],
+        "size": [
+          365.1504,
+          36.576,
+          3.048
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          4192.31,
+          419.93,
+          34.99
+        ]
+      },
+      "style": "approach_solid",
+      "geometry": [
+        {
+          "kind": "box",
+          "min": [
+            -882.3960000000001,
+            -18.288,
+            39.136320000000005
+          ],
+          "max": [
+            -517.2456000000001,
+            18.288,
+            42.18432000000001
+          ]
+        }
+      ]
+    },
+    {
+      "part_id": "manhattan_approach_upper_deck",
+      "system": "approaches",
+      "subsystem": "upper_roadway",
+      "source_basis": [
+        "control_dimension",
+        "inferred"
+      ],
+      "confidence": "D",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Upper roadway carried from the anchorage to the portal. CTL-003 puts the portals 6090 ft apart, grade A, which is 300 ft further out than the lower level's abutments - the upper roadway genuinely runs past the end of the lower level. Drawn level; see OQ-020.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-002",
+        "CTL-003",
+        "CTL-001",
+        "CTL-004",
+        "CTL-039",
+        "CTL-040",
+        "CTL-021",
+        "CTL-034",
+        "CTL-008",
+        "CTL-103"
+      ],
+      "open_questions": [
+        "OQ-002",
+        "OQ-013",
+        "OQ-020"
+      ],
+      "basis_confidence": "C",
+      "material": "steel_structural",
+      "material_id": "MAT-011",
+      "material_confidence": "D",
+      "material_sources": [],
+      "geometry_kinds": [
+        "box"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          -928.116,
+          -18.288,
+          48.4632
+        ],
+        "max": [
+          -517.2456,
+          18.288,
+          49.3776
+        ],
+        "size": [
+          410.8704,
+          36.576,
+          0.9144
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          4717.23,
+          419.93,
+          10.5
+        ]
+      },
+      "style": "approach_solid",
+      "geometry": [
+        {
+          "kind": "box",
+          "min": [
+            -928.1160000000001,
+            -18.288,
+            48.4632
+          ],
+          "max": [
+            -517.2456000000001,
+            18.288,
+            49.3776
+          ]
+        }
+      ]
+    },
+    {
+      "part_id": "track_1_approach_manhattan",
+      "system": "approaches",
+      "subsystem": "subway_tracks",
+      "source_basis": [
+        "control_dimension",
+        "inferred"
+      ],
+      "confidence": "D",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "track_1 continued across the manhattan approach to the abutment. The four tracks have to reach the subway portals, so ending them at the anchorage was a modelling artefact rather than a statement about the bridge. The transverse centreline remains the OQ-010 placeholder and the approach trackwork alignment is unregistered; see OQ-020.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-002",
+        "CTL-003",
+        "CTL-001",
+        "CTL-004",
+        "CTL-039",
+        "CTL-040",
+        "CTL-021",
+        "CTL-034",
+        "CTL-008",
+        "CTL-017",
+        "CTL-105",
+        "CTL-106",
+        "CTL-107"
+      ],
+      "open_questions": [
+        "OQ-010",
+        "OQ-013",
+        "OQ-020"
+      ],
+      "basis_confidence": "C",
+      "material": "steel_structural",
+      "material_id": "MAT-011",
+      "material_confidence": "D",
+      "material_sources": [],
+      "geometry_kinds": [
+        "box"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          -882.396,
+          11.77925,
+          42.18432
+        ],
+        "max": [
+          -517.2456,
+          13.21435,
+          42.64152
+        ],
+        "size": [
+          365.1504,
+          1.4351,
+          0.4572
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          4192.31,
+          16.48,
+          5.25
+        ]
+      },
+      "style": "track_solid",
+      "geometry": [
+        {
+          "kind": "box",
+          "min": [
+            -882.3960000000001,
+            11.7792500508,
+            42.18432000000001
+          ],
+          "max": [
+            -517.2456000000001,
+            13.2143499492,
+            42.64152000000001
+          ]
+        }
+      ]
+    },
+    {
+      "part_id": "track_2_approach_manhattan",
+      "system": "approaches",
+      "subsystem": "subway_tracks",
+      "source_basis": [
+        "control_dimension",
+        "inferred"
+      ],
+      "confidence": "D",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "track_2 continued across the manhattan approach to the abutment. The four tracks have to reach the subway portals, so ending them at the anchorage was a modelling artefact rather than a statement about the bridge. The transverse centreline remains the OQ-010 placeholder and the approach trackwork alignment is unregistered; see OQ-020.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-002",
+        "CTL-003",
+        "CTL-001",
+        "CTL-004",
+        "CTL-039",
+        "CTL-040",
+        "CTL-021",
+        "CTL-034",
+        "CTL-008",
+        "CTL-017",
+        "CTL-105",
+        "CTL-106",
+        "CTL-107"
+      ],
+      "open_questions": [
+        "OQ-010",
+        "OQ-013",
+        "OQ-020"
+      ],
+      "basis_confidence": "C",
+      "material": "steel_structural",
+      "material_id": "MAT-011",
+      "material_confidence": "D",
+      "material_sources": [],
+      "geometry_kinds": [
+        "box"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          -882.396,
+          7.51205,
+          42.18432
+        ],
+        "max": [
+          -517.2456,
+          8.94715,
+          42.64152
+        ],
+        "size": [
+          365.1504,
+          1.4351,
+          0.4572
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          4192.31,
+          16.48,
+          5.25
+        ]
+      },
+      "style": "track_solid",
+      "geometry": [
+        {
+          "kind": "box",
+          "min": [
+            -882.3960000000001,
+            7.512050050799999,
+            42.18432000000001
+          ],
+          "max": [
+            -517.2456000000001,
+            8.9471499492,
+            42.64152000000001
+          ]
+        }
+      ]
+    },
+    {
+      "part_id": "track_3_approach_manhattan",
+      "system": "approaches",
+      "subsystem": "subway_tracks",
+      "source_basis": [
+        "control_dimension",
+        "inferred"
+      ],
+      "confidence": "D",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "track_3 continued across the manhattan approach to the abutment. The four tracks have to reach the subway portals, so ending them at the anchorage was a modelling artefact rather than a statement about the bridge. The transverse centreline remains the OQ-010 placeholder and the approach trackwork alignment is unregistered; see OQ-020.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-002",
+        "CTL-003",
+        "CTL-001",
+        "CTL-004",
+        "CTL-039",
+        "CTL-040",
+        "CTL-021",
+        "CTL-034",
+        "CTL-008",
+        "CTL-017",
+        "CTL-105",
+        "CTL-106",
+        "CTL-107"
+      ],
+      "open_questions": [
+        "OQ-010",
+        "OQ-013",
+        "OQ-020"
+      ],
+      "basis_confidence": "C",
+      "material": "steel_structural",
+      "material_id": "MAT-011",
+      "material_confidence": "D",
+      "material_sources": [],
+      "geometry_kinds": [
+        "box"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          -882.396,
+          -8.94715,
+          42.18432
+        ],
+        "max": [
+          -517.2456,
+          -7.51205,
+          42.64152
+        ],
+        "size": [
+          365.1504,
+          1.4351,
+          0.4572
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          4192.31,
+          16.48,
+          5.25
+        ]
+      },
+      "style": "track_solid",
+      "geometry": [
+        {
+          "kind": "box",
+          "min": [
+            -882.3960000000001,
+            -8.9471499492,
+            42.18432000000001
+          ],
+          "max": [
+            -517.2456000000001,
+            -7.512050050799999,
+            42.64152000000001
+          ]
+        }
+      ]
+    },
+    {
+      "part_id": "track_4_approach_manhattan",
+      "system": "approaches",
+      "subsystem": "subway_tracks",
+      "source_basis": [
+        "control_dimension",
+        "inferred"
+      ],
+      "confidence": "D",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "track_4 continued across the manhattan approach to the abutment. The four tracks have to reach the subway portals, so ending them at the anchorage was a modelling artefact rather than a statement about the bridge. The transverse centreline remains the OQ-010 placeholder and the approach trackwork alignment is unregistered; see OQ-020.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-002",
+        "CTL-003",
+        "CTL-001",
+        "CTL-004",
+        "CTL-039",
+        "CTL-040",
+        "CTL-021",
+        "CTL-034",
+        "CTL-008",
+        "CTL-017",
+        "CTL-105",
+        "CTL-106",
+        "CTL-107"
+      ],
+      "open_questions": [
+        "OQ-010",
+        "OQ-013",
+        "OQ-020"
+      ],
+      "basis_confidence": "C",
+      "material": "steel_structural",
+      "material_id": "MAT-011",
+      "material_confidence": "D",
+      "material_sources": [],
+      "geometry_kinds": [
+        "box"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          -882.396,
+          -13.21435,
+          42.18432
+        ],
+        "max": [
+          -517.2456,
+          -11.77925,
+          42.64152
+        ],
+        "size": [
+          365.1504,
+          1.4351,
+          0.4572
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          4192.31,
+          16.48,
+          5.25
+        ]
+      },
+      "style": "track_solid",
+      "geometry": [
+        {
+          "kind": "box",
+          "min": [
+            -882.3960000000001,
+            -13.2143499492,
+            42.18432000000001
+          ],
+          "max": [
+            -517.2456000000001,
+            -11.7792500508,
+            42.64152000000001
+          ]
+        }
+      ]
+    },
+    {
+      "part_id": "manhattan_approach_bents",
+      "system": "approaches",
+      "subsystem": "substructure",
+      "source_basis": [
+        "inferred"
+      ],
+      "confidence": "D",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "13 viaduct bents per side at a placeholder 100 ft spacing. Nothing about this rhythm is sourced - it exists so the approach reads as a supported viaduct rather than a floating slab, and so a viewer can see there is structure between the anchorage and the street. The bents stop at z = 0 (mean high water) rather than at ground, because no source gives the ground profile under either approach. See OQ-020.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-002",
+        "CTL-003",
+        "CTL-001",
+        "CTL-004",
+        "CTL-039",
+        "CTL-040",
+        "CTL-021",
+        "CTL-034",
+        "CTL-008",
+        "CTL-108",
+        "CTL-109",
+        "CTL-110"
+      ],
+      "open_questions": [
+        "OQ-020"
+      ],
+      "basis_confidence": "D",
+      "material": "steel_structural",
+      "material_id": "MAT-011",
+      "material_confidence": "D",
+      "material_sources": [],
+      "geometry_kinds": [
+        "box"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          -899.987314,
+          -18.288,
+          0.0
+        ],
+        "max": [
+          -545.374286,
+          18.288,
+          49.3776
+        ],
+        "size": [
+          354.613029,
+          36.576,
+          49.3776
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          4071.33,
+          419.93,
+          566.91
+        ]
+      },
+      "style": "approach_solid",
+      "geometry": [
+        {
+          "kind": "box",
+          "min": [
+            -899.9873142857144,
+            -18.288,
+            0.0
+          ],
+          "max": [
+            -897.5489142857144,
+            -15.849599999999999,
+            49.3776
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            -899.9873142857144,
+            15.849599999999999,
+            0.0
+          ],
+          "max": [
+            -897.5489142857144,
+            18.288,
+            49.3776
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            -870.6394285714287,
+            -18.288,
+            0.0
+          ],
+          "max": [
+            -868.2010285714287,
+            -15.849599999999999,
+            39.136320000000005
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            -870.6394285714287,
+            15.849599999999999,
+            0.0
+          ],
+          "max": [
+            -868.2010285714287,
+            18.288,
+            39.136320000000005
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            -841.291542857143,
+            -18.288,
+            0.0
+          ],
+          "max": [
+            -838.853142857143,
+            -15.849599999999999,
+            39.136320000000005
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            -841.291542857143,
+            15.849599999999999,
+            0.0
+          ],
+          "max": [
+            -838.853142857143,
+            18.288,
+            39.136320000000005
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            -811.9436571428572,
+            -18.288,
+            0.0
+          ],
+          "max": [
+            -809.5052571428572,
+            -15.849599999999999,
+            39.136320000000005
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            -811.9436571428572,
+            15.849599999999999,
+            0.0
+          ],
+          "max": [
+            -809.5052571428572,
+            18.288,
+            39.136320000000005
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            -782.5957714285715,
+            -18.288,
+            0.0
+          ],
+          "max": [
+            -780.1573714285715,
+            -15.849599999999999,
+            39.136320000000005
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            -782.5957714285715,
+            15.849599999999999,
+            0.0
+          ],
+          "max": [
+            -780.1573714285715,
+            18.288,
+            39.136320000000005
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            -753.2478857142858,
+            -18.288,
+            0.0
+          ],
+          "max": [
+            -750.8094857142858,
+            -15.849599999999999,
+            39.136320000000005
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            -753.2478857142858,
+            15.849599999999999,
+            0.0
+          ],
+          "max": [
+            -750.8094857142858,
+            18.288,
+            39.136320000000005
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            -723.9000000000001,
+            -18.288,
+            0.0
+          ],
+          "max": [
+            -721.4616000000001,
+            -15.849599999999999,
+            39.136320000000005
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            -723.9000000000001,
+            15.849599999999999,
+            0.0
+          ],
+          "max": [
+            -721.4616000000001,
+            18.288,
+            39.136320000000005
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            -694.5521142857144,
+            -18.288,
+            0.0
+          ],
+          "max": [
+            -692.1137142857144,
+            -15.849599999999999,
+            39.136320000000005
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            -694.5521142857144,
+            15.849599999999999,
+            0.0
+          ],
+          "max": [
+            -692.1137142857144,
+            18.288,
+            39.136320000000005
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            -665.2042285714288,
+            -18.288,
+            0.0
+          ],
+          "max": [
+            -662.7658285714288,
+            -15.849599999999999,
+            39.136320000000005
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            -665.2042285714288,
+            15.849599999999999,
+            0.0
+          ],
+          "max": [
+            -662.7658285714288,
+            18.288,
+            39.136320000000005
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            -635.856342857143,
+            -18.288,
+            0.0
+          ],
+          "max": [
+            -633.417942857143,
+            -15.849599999999999,
+            39.136320000000005
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            -635.856342857143,
+            15.849599999999999,
+            0.0
+          ],
+          "max": [
+            -633.417942857143,
+            18.288,
+            39.136320000000005
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            -606.5084571428572,
+            -18.288,
+            0.0
+          ],
+          "max": [
+            -604.0700571428572,
+            -15.849599999999999,
+            39.136320000000005
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            -606.5084571428572,
+            15.849599999999999,
+            0.0
+          ],
+          "max": [
+            -604.0700571428572,
+            18.288,
+            39.136320000000005
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            -577.1605714285715,
+            -18.288,
+            0.0
+          ],
+          "max": [
+            -574.7221714285715,
+            -15.849599999999999,
+            39.136320000000005
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            -577.1605714285715,
+            15.849599999999999,
+            0.0
+          ],
+          "max": [
+            -574.7221714285715,
+            18.288,
+            39.136320000000005
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            -547.8126857142859,
+            -18.288,
+            0.0
+          ],
+          "max": [
+            -545.3742857142859,
+            -15.849599999999999,
+            39.136320000000005
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            -547.8126857142859,
+            15.849599999999999,
+            0.0
+          ],
+          "max": [
+            -545.3742857142859,
+            18.288,
+            39.136320000000005
+          ]
+        }
+      ]
+    },
+    {
       "part_id": "manhattan_approach",
       "system": "approaches",
       "subsystem": null,
@@ -33475,11 +34796,13 @@
       "confidence": "D",
       "prototype_units": "meters",
       "ho_scale_units": "millimeters",
-      "notes": "Approach deck envelope, drawn level from the outboard face of the anchorage to the approach end station. The length split is now a sourced ratio (OQ-006 mitigated), but grade, plan curvature and the continuous Warren truss structure described by SRC-011 are not modelled.",
+      "notes": "Overall approach corridor envelope, from the outboard face of the anchorage to the approach end station. This is a bounding volume, not structure: the decks, tracks and bents inside it are separate parts. The end station rests on the sourced length ratio (OQ-006 mitigated); plan curvature and grade are not modelled. See OQ-020.",
       "scale": "1:1 prototype, HO 1:87.1",
       "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
       "review_status": "unreviewed",
       "control_refs": [
+        "CTL-002",
+        "CTL-003",
         "CTL-001",
         "CTL-004",
         "CTL-039",
@@ -33487,15 +34810,20 @@
         "CTL-021",
         "CTL-034",
         "CTL-008",
-        "CTL-010",
-        "CTL-103"
+        "CTL-103",
+        "CTL-010"
       ],
       "open_questions": [
         "OQ-002",
         "OQ-006",
-        "OQ-013"
+        "OQ-013",
+        "OQ-020"
       ],
       "basis_confidence": "C",
+      "material": "steel_structural",
+      "material_id": "MAT-011",
+      "material_confidence": "D",
+      "material_sources": [],
       "geometry_kinds": [
         "box"
       ],
@@ -33523,7 +34851,7 @@
           10.5
         ]
       },
-      "style": "approach_solid",
+      "style": "approach_envelope",
       "geometry": [
         {
           "kind": "box",
@@ -33541,6 +34869,910 @@
       ]
     },
     {
+      "part_id": "brooklyn_approach_lower_deck",
+      "system": "approaches",
+      "subsystem": "lower_roadway",
+      "source_basis": [
+        "control_dimension",
+        "inferred"
+      ],
+      "confidence": "D",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Lower level carried from the outboard face of the anchorage to the abutment. The extent is sourced: CTL-002 puts the lower level's abutments 5790 ft apart, which is grade A, so this deck exists and reaches this station. Its structural depth and its grade down to street level are not sourced; it is drawn level because inventing a gradient would be worse than admitting there is none. See OQ-020.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-002",
+        "CTL-003",
+        "CTL-001",
+        "CTL-004",
+        "CTL-039",
+        "CTL-040",
+        "CTL-021",
+        "CTL-034",
+        "CTL-008",
+        "CTL-110",
+        "CTL-104"
+      ],
+      "open_questions": [
+        "OQ-002",
+        "OQ-013",
+        "OQ-020"
+      ],
+      "basis_confidence": "C",
+      "material": "steel_structural",
+      "material_id": "MAT-011",
+      "material_confidence": "D",
+      "material_sources": [],
+      "geometry_kinds": [
+        "box"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          517.2456,
+          -18.288,
+          39.13632
+        ],
+        "max": [
+          882.396,
+          18.288,
+          42.18432
+        ],
+        "size": [
+          365.1504,
+          36.576,
+          3.048
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          4192.31,
+          419.93,
+          34.99
+        ]
+      },
+      "style": "approach_solid",
+      "geometry": [
+        {
+          "kind": "box",
+          "min": [
+            517.2456000000001,
+            -18.288,
+            39.136320000000005
+          ],
+          "max": [
+            882.3960000000001,
+            18.288,
+            42.18432000000001
+          ]
+        }
+      ]
+    },
+    {
+      "part_id": "brooklyn_approach_upper_deck",
+      "system": "approaches",
+      "subsystem": "upper_roadway",
+      "source_basis": [
+        "control_dimension",
+        "inferred"
+      ],
+      "confidence": "D",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Upper roadway carried from the anchorage to the portal. CTL-003 puts the portals 6090 ft apart, grade A, which is 300 ft further out than the lower level's abutments - the upper roadway genuinely runs past the end of the lower level. Drawn level; see OQ-020.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-002",
+        "CTL-003",
+        "CTL-001",
+        "CTL-004",
+        "CTL-039",
+        "CTL-040",
+        "CTL-021",
+        "CTL-034",
+        "CTL-008",
+        "CTL-103"
+      ],
+      "open_questions": [
+        "OQ-002",
+        "OQ-013",
+        "OQ-020"
+      ],
+      "basis_confidence": "C",
+      "material": "steel_structural",
+      "material_id": "MAT-011",
+      "material_confidence": "D",
+      "material_sources": [],
+      "geometry_kinds": [
+        "box"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          517.2456,
+          -18.288,
+          48.4632
+        ],
+        "max": [
+          928.116,
+          18.288,
+          49.3776
+        ],
+        "size": [
+          410.8704,
+          36.576,
+          0.9144
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          4717.23,
+          419.93,
+          10.5
+        ]
+      },
+      "style": "approach_solid",
+      "geometry": [
+        {
+          "kind": "box",
+          "min": [
+            517.2456000000001,
+            -18.288,
+            48.4632
+          ],
+          "max": [
+            928.1160000000001,
+            18.288,
+            49.3776
+          ]
+        }
+      ]
+    },
+    {
+      "part_id": "track_1_approach_brooklyn",
+      "system": "approaches",
+      "subsystem": "subway_tracks",
+      "source_basis": [
+        "control_dimension",
+        "inferred"
+      ],
+      "confidence": "D",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "track_1 continued across the brooklyn approach to the abutment. The four tracks have to reach the subway portals, so ending them at the anchorage was a modelling artefact rather than a statement about the bridge. The transverse centreline remains the OQ-010 placeholder and the approach trackwork alignment is unregistered; see OQ-020.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-002",
+        "CTL-003",
+        "CTL-001",
+        "CTL-004",
+        "CTL-039",
+        "CTL-040",
+        "CTL-021",
+        "CTL-034",
+        "CTL-008",
+        "CTL-017",
+        "CTL-105",
+        "CTL-106",
+        "CTL-107"
+      ],
+      "open_questions": [
+        "OQ-010",
+        "OQ-013",
+        "OQ-020"
+      ],
+      "basis_confidence": "C",
+      "material": "steel_structural",
+      "material_id": "MAT-011",
+      "material_confidence": "D",
+      "material_sources": [],
+      "geometry_kinds": [
+        "box"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          517.2456,
+          11.77925,
+          42.18432
+        ],
+        "max": [
+          882.396,
+          13.21435,
+          42.64152
+        ],
+        "size": [
+          365.1504,
+          1.4351,
+          0.4572
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          4192.31,
+          16.48,
+          5.25
+        ]
+      },
+      "style": "track_solid",
+      "geometry": [
+        {
+          "kind": "box",
+          "min": [
+            517.2456000000001,
+            11.7792500508,
+            42.18432000000001
+          ],
+          "max": [
+            882.3960000000001,
+            13.2143499492,
+            42.64152000000001
+          ]
+        }
+      ]
+    },
+    {
+      "part_id": "track_2_approach_brooklyn",
+      "system": "approaches",
+      "subsystem": "subway_tracks",
+      "source_basis": [
+        "control_dimension",
+        "inferred"
+      ],
+      "confidence": "D",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "track_2 continued across the brooklyn approach to the abutment. The four tracks have to reach the subway portals, so ending them at the anchorage was a modelling artefact rather than a statement about the bridge. The transverse centreline remains the OQ-010 placeholder and the approach trackwork alignment is unregistered; see OQ-020.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-002",
+        "CTL-003",
+        "CTL-001",
+        "CTL-004",
+        "CTL-039",
+        "CTL-040",
+        "CTL-021",
+        "CTL-034",
+        "CTL-008",
+        "CTL-017",
+        "CTL-105",
+        "CTL-106",
+        "CTL-107"
+      ],
+      "open_questions": [
+        "OQ-010",
+        "OQ-013",
+        "OQ-020"
+      ],
+      "basis_confidence": "C",
+      "material": "steel_structural",
+      "material_id": "MAT-011",
+      "material_confidence": "D",
+      "material_sources": [],
+      "geometry_kinds": [
+        "box"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          517.2456,
+          7.51205,
+          42.18432
+        ],
+        "max": [
+          882.396,
+          8.94715,
+          42.64152
+        ],
+        "size": [
+          365.1504,
+          1.4351,
+          0.4572
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          4192.31,
+          16.48,
+          5.25
+        ]
+      },
+      "style": "track_solid",
+      "geometry": [
+        {
+          "kind": "box",
+          "min": [
+            517.2456000000001,
+            7.512050050799999,
+            42.18432000000001
+          ],
+          "max": [
+            882.3960000000001,
+            8.9471499492,
+            42.64152000000001
+          ]
+        }
+      ]
+    },
+    {
+      "part_id": "track_3_approach_brooklyn",
+      "system": "approaches",
+      "subsystem": "subway_tracks",
+      "source_basis": [
+        "control_dimension",
+        "inferred"
+      ],
+      "confidence": "D",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "track_3 continued across the brooklyn approach to the abutment. The four tracks have to reach the subway portals, so ending them at the anchorage was a modelling artefact rather than a statement about the bridge. The transverse centreline remains the OQ-010 placeholder and the approach trackwork alignment is unregistered; see OQ-020.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-002",
+        "CTL-003",
+        "CTL-001",
+        "CTL-004",
+        "CTL-039",
+        "CTL-040",
+        "CTL-021",
+        "CTL-034",
+        "CTL-008",
+        "CTL-017",
+        "CTL-105",
+        "CTL-106",
+        "CTL-107"
+      ],
+      "open_questions": [
+        "OQ-010",
+        "OQ-013",
+        "OQ-020"
+      ],
+      "basis_confidence": "C",
+      "material": "steel_structural",
+      "material_id": "MAT-011",
+      "material_confidence": "D",
+      "material_sources": [],
+      "geometry_kinds": [
+        "box"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          517.2456,
+          -8.94715,
+          42.18432
+        ],
+        "max": [
+          882.396,
+          -7.51205,
+          42.64152
+        ],
+        "size": [
+          365.1504,
+          1.4351,
+          0.4572
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          4192.31,
+          16.48,
+          5.25
+        ]
+      },
+      "style": "track_solid",
+      "geometry": [
+        {
+          "kind": "box",
+          "min": [
+            517.2456000000001,
+            -8.9471499492,
+            42.18432000000001
+          ],
+          "max": [
+            882.3960000000001,
+            -7.512050050799999,
+            42.64152000000001
+          ]
+        }
+      ]
+    },
+    {
+      "part_id": "track_4_approach_brooklyn",
+      "system": "approaches",
+      "subsystem": "subway_tracks",
+      "source_basis": [
+        "control_dimension",
+        "inferred"
+      ],
+      "confidence": "D",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "track_4 continued across the brooklyn approach to the abutment. The four tracks have to reach the subway portals, so ending them at the anchorage was a modelling artefact rather than a statement about the bridge. The transverse centreline remains the OQ-010 placeholder and the approach trackwork alignment is unregistered; see OQ-020.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-002",
+        "CTL-003",
+        "CTL-001",
+        "CTL-004",
+        "CTL-039",
+        "CTL-040",
+        "CTL-021",
+        "CTL-034",
+        "CTL-008",
+        "CTL-017",
+        "CTL-105",
+        "CTL-106",
+        "CTL-107"
+      ],
+      "open_questions": [
+        "OQ-010",
+        "OQ-013",
+        "OQ-020"
+      ],
+      "basis_confidence": "C",
+      "material": "steel_structural",
+      "material_id": "MAT-011",
+      "material_confidence": "D",
+      "material_sources": [],
+      "geometry_kinds": [
+        "box"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          517.2456,
+          -13.21435,
+          42.18432
+        ],
+        "max": [
+          882.396,
+          -11.77925,
+          42.64152
+        ],
+        "size": [
+          365.1504,
+          1.4351,
+          0.4572
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          4192.31,
+          16.48,
+          5.25
+        ]
+      },
+      "style": "track_solid",
+      "geometry": [
+        {
+          "kind": "box",
+          "min": [
+            517.2456000000001,
+            -13.2143499492,
+            42.18432000000001
+          ],
+          "max": [
+            882.3960000000001,
+            -11.7792500508,
+            42.64152000000001
+          ]
+        }
+      ]
+    },
+    {
+      "part_id": "brooklyn_approach_bents",
+      "system": "approaches",
+      "subsystem": "substructure",
+      "source_basis": [
+        "inferred"
+      ],
+      "confidence": "D",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "13 viaduct bents per side at a placeholder 100 ft spacing. Nothing about this rhythm is sourced - it exists so the approach reads as a supported viaduct rather than a floating slab, and so a viewer can see there is structure between the anchorage and the street. The bents stop at z = 0 (mean high water) rather than at ground, because no source gives the ground profile under either approach. See OQ-020.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-002",
+        "CTL-003",
+        "CTL-001",
+        "CTL-004",
+        "CTL-039",
+        "CTL-040",
+        "CTL-021",
+        "CTL-034",
+        "CTL-008",
+        "CTL-108",
+        "CTL-109",
+        "CTL-110"
+      ],
+      "open_questions": [
+        "OQ-020"
+      ],
+      "basis_confidence": "D",
+      "material": "steel_structural",
+      "material_id": "MAT-011",
+      "material_confidence": "D",
+      "material_sources": [],
+      "geometry_kinds": [
+        "box"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          545.374286,
+          -18.288,
+          0.0
+        ],
+        "max": [
+          899.987314,
+          18.288,
+          49.3776
+        ],
+        "size": [
+          354.613029,
+          36.576,
+          49.3776
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          4071.33,
+          419.93,
+          566.91
+        ]
+      },
+      "style": "approach_solid",
+      "geometry": [
+        {
+          "kind": "box",
+          "min": [
+            545.3742857142857,
+            -18.288,
+            0.0
+          ],
+          "max": [
+            547.8126857142857,
+            -15.849599999999999,
+            39.136320000000005
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            545.3742857142857,
+            15.849599999999999,
+            0.0
+          ],
+          "max": [
+            547.8126857142857,
+            18.288,
+            39.136320000000005
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            574.7221714285715,
+            -18.288,
+            0.0
+          ],
+          "max": [
+            577.1605714285715,
+            -15.849599999999999,
+            39.136320000000005
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            574.7221714285715,
+            15.849599999999999,
+            0.0
+          ],
+          "max": [
+            577.1605714285715,
+            18.288,
+            39.136320000000005
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            604.0700571428572,
+            -18.288,
+            0.0
+          ],
+          "max": [
+            606.5084571428572,
+            -15.849599999999999,
+            39.136320000000005
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            604.0700571428572,
+            15.849599999999999,
+            0.0
+          ],
+          "max": [
+            606.5084571428572,
+            18.288,
+            39.136320000000005
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            633.417942857143,
+            -18.288,
+            0.0
+          ],
+          "max": [
+            635.856342857143,
+            -15.849599999999999,
+            39.136320000000005
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            633.417942857143,
+            15.849599999999999,
+            0.0
+          ],
+          "max": [
+            635.856342857143,
+            18.288,
+            39.136320000000005
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            662.7658285714286,
+            -18.288,
+            0.0
+          ],
+          "max": [
+            665.2042285714286,
+            -15.849599999999999,
+            39.136320000000005
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            662.7658285714286,
+            15.849599999999999,
+            0.0
+          ],
+          "max": [
+            665.2042285714286,
+            18.288,
+            39.136320000000005
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            692.1137142857144,
+            -18.288,
+            0.0
+          ],
+          "max": [
+            694.5521142857144,
+            -15.849599999999999,
+            39.136320000000005
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            692.1137142857144,
+            15.849599999999999,
+            0.0
+          ],
+          "max": [
+            694.5521142857144,
+            18.288,
+            39.136320000000005
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            721.4616000000001,
+            -18.288,
+            0.0
+          ],
+          "max": [
+            723.9000000000001,
+            -15.849599999999999,
+            39.136320000000005
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            721.4616000000001,
+            15.849599999999999,
+            0.0
+          ],
+          "max": [
+            723.9000000000001,
+            18.288,
+            39.136320000000005
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            750.8094857142858,
+            -18.288,
+            0.0
+          ],
+          "max": [
+            753.2478857142858,
+            -15.849599999999999,
+            39.136320000000005
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            750.8094857142858,
+            15.849599999999999,
+            0.0
+          ],
+          "max": [
+            753.2478857142858,
+            18.288,
+            39.136320000000005
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            780.1573714285714,
+            -18.288,
+            0.0
+          ],
+          "max": [
+            782.5957714285714,
+            -15.849599999999999,
+            39.136320000000005
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            780.1573714285714,
+            15.849599999999999,
+            0.0
+          ],
+          "max": [
+            782.5957714285714,
+            18.288,
+            39.136320000000005
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            809.5052571428572,
+            -18.288,
+            0.0
+          ],
+          "max": [
+            811.9436571428572,
+            -15.849599999999999,
+            39.136320000000005
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            809.5052571428572,
+            15.849599999999999,
+            0.0
+          ],
+          "max": [
+            811.9436571428572,
+            18.288,
+            39.136320000000005
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            838.853142857143,
+            -18.288,
+            0.0
+          ],
+          "max": [
+            841.291542857143,
+            -15.849599999999999,
+            39.136320000000005
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            838.853142857143,
+            15.849599999999999,
+            0.0
+          ],
+          "max": [
+            841.291542857143,
+            18.288,
+            39.136320000000005
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            868.2010285714287,
+            -18.288,
+            0.0
+          ],
+          "max": [
+            870.6394285714287,
+            -15.849599999999999,
+            39.136320000000005
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            868.2010285714287,
+            15.849599999999999,
+            0.0
+          ],
+          "max": [
+            870.6394285714287,
+            18.288,
+            39.136320000000005
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            897.5489142857143,
+            -18.288,
+            0.0
+          ],
+          "max": [
+            899.9873142857143,
+            -15.849599999999999,
+            49.3776
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            897.5489142857143,
+            15.849599999999999,
+            0.0
+          ],
+          "max": [
+            899.9873142857143,
+            18.288,
+            49.3776
+          ]
+        }
+      ]
+    },
+    {
       "part_id": "brooklyn_approach",
       "system": "approaches",
       "subsystem": null,
@@ -33551,11 +35783,13 @@
       "confidence": "D",
       "prototype_units": "meters",
       "ho_scale_units": "millimeters",
-      "notes": "Approach deck envelope, drawn level from the outboard face of the anchorage to the approach end station. The length split is now a sourced ratio (OQ-006 mitigated), but grade, plan curvature and the continuous Warren truss structure described by SRC-011 are not modelled.",
+      "notes": "Overall approach corridor envelope, from the outboard face of the anchorage to the approach end station. This is a bounding volume, not structure: the decks, tracks and bents inside it are separate parts. The end station rests on the sourced length ratio (OQ-006 mitigated); plan curvature and grade are not modelled. See OQ-020.",
       "scale": "1:1 prototype, HO 1:87.1",
       "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
       "review_status": "unreviewed",
       "control_refs": [
+        "CTL-002",
+        "CTL-003",
         "CTL-001",
         "CTL-004",
         "CTL-039",
@@ -33563,15 +35797,20 @@
         "CTL-021",
         "CTL-034",
         "CTL-008",
-        "CTL-010",
-        "CTL-103"
+        "CTL-103",
+        "CTL-010"
       ],
       "open_questions": [
         "OQ-002",
         "OQ-006",
-        "OQ-013"
+        "OQ-013",
+        "OQ-020"
       ],
       "basis_confidence": "C",
+      "material": "steel_structural",
+      "material_id": "MAT-011",
+      "material_confidence": "D",
+      "material_sources": [],
       "geometry_kinds": [
         "box"
       ],
@@ -33599,7 +35838,7 @@
           10.5
         ]
       },
-      "style": "approach_solid",
+      "style": "approach_envelope",
       "geometry": [
         {
           "kind": "box",

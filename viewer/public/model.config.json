@@ -1,6 +1,6 @@
 {
   "title": "Manhattan Bridge — Control Skeleton",
-  "subtitle": "Milestone 5 · published to the shared district contract",
+  "subtitle": "Milestone 6 · approaches connected, materials sourced",
   "modelUrl": "control_skeleton.glb",
   "metadataUrl": "parts.json",
   "scaleDenominator": 87.1,
@@ -8,13 +8,13 @@
   "background": "#0d1117",
   "lineRaycastThreshold": 4,
   "camera": {
-    "position": [1150, 520, 1250],
+    "position": [1850, 430, 620],
     "target": [0, 45, 0],
     "near": 0.5,
     "far": 30000,
-    "fov": 45
+    "fov": 42
   },
-  "framePadding": 1.05,
+  "framePadding": 0.92,
   "governance": {
     "controlDocument": "GEOMETRY-CONTROL.md",
     "sourceRegister": "SOURCE-REGISTER.md",

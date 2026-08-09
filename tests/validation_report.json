@@ -1,10 +1,10 @@
 {
   "schema_version": "1.0",
-  "control_document_sha256": "feb9991c3d1d977c61be4d812fef7752fd3858fe1301223e5f7f670bfeb35707",
-  "built_from_sha256": "feb9991c3d1d977c61be4d812fef7752fd3858fe1301223e5f7f670bfeb35707",
+  "control_document_sha256": "fe6b1eecc89d364f456b599ccd9271cf79d477ed1c71cb32b6c8ec8305474f2c",
+  "built_from_sha256": "fe6b1eecc89d364f456b599ccd9271cf79d477ed1c71cb32b6c8ec8305474f2c",
   "generated_by_build": "build_control_skeleton.py@1.0.0",
   "summary": {
-    "pass": 67,
+    "pass": 70,
     "reported": 5,
     "fail": 0,
     "error": 0
@@ -555,7 +555,7 @@
       "suite": "geometry_regression",
       "mode": "assert",
       "status": "pass",
-      "detail": "81 parts checked against 10 required fields"
+      "detail": "95 parts checked against 10 required fields"
     },
     {
       "id": "GRT-061",
@@ -563,7 +563,7 @@
       "suite": "geometry_regression",
       "mode": "assert",
       "status": "pass",
-      "detail": "81 unique part_id values"
+      "detail": "95 unique part_id values"
     },
     {
       "id": "GRT-062",
@@ -571,7 +571,7 @@
       "suite": "geometry_regression",
       "mode": "assert",
       "status": "pass",
-      "detail": "81 parts checked"
+      "detail": "95 parts checked"
     },
     {
       "id": "GRT-063",
@@ -587,7 +587,7 @@
       "suite": "geometry_regression",
       "mode": "assert",
       "status": "pass",
-      "detail": "81 parts checked against their control references"
+      "detail": "95 parts checked against their control references"
     },
     {
       "id": "GRT-065",
@@ -595,7 +595,7 @@
       "suite": "geometry_regression",
       "mode": "assert",
       "status": "pass",
-      "detail": "44 confidence D parts"
+      "detail": "58 confidence D parts"
     },
     {
       "id": "GRT-066",
@@ -627,7 +627,7 @@
       "suite": "geometry_regression",
       "mode": "report_only",
       "status": "reported",
-      "detail": "7 placeholder controls remain, 62 sourced; 44 of 81 parts are confidence D"
+      "detail": "10 placeholder controls remain, 62 sourced; 58 of 95 parts are confidence D"
     },
     {
       "id": "GRT-070",
@@ -635,9 +635,42 @@
       "suite": "geometry_regression",
       "mode": "assert",
       "status": "pass",
-      "detail": "actual 7 count, expected 7 count, deviation +0",
-      "actual": 7.0,
-      "expected": 7.0,
+      "detail": "actual 10 count, expected 10 count, deviation +0",
+      "actual": 10.0,
+      "expected": 10.0,
+      "deviation": 0.0
+    },
+    {
+      "id": "GRT-071",
+      "title": "The lower level reaches its sourced abutment station",
+      "suite": "geometry_regression",
+      "mode": "assert",
+      "status": "pass",
+      "detail": "actual 882.396 m, expected 882.396 m, deviation +1.14e-13",
+      "actual": 882.396,
+      "expected": 882.396,
+      "deviation": 0.0
+    },
+    {
+      "id": "GRT-072",
+      "title": "The upper roadway reaches its sourced portal station",
+      "suite": "geometry_regression",
+      "mode": "assert",
+      "status": "pass",
+      "detail": "actual 928.116 m, expected 928.116 m, deviation +1.14e-13",
+      "actual": 928.116,
+      "expected": 928.116,
+      "deviation": 0.0
+    },
+    {
+      "id": "GRT-073",
+      "title": "Every part carries a material assignment from the control document",
+      "suite": "geometry_regression",
+      "mode": "assert",
+      "status": "pass",
+      "detail": "actual 0 count, expected 0 count, deviation +0",
+      "actual": 0.0,
+      "expected": 0.0,
       "deviation": 0.0
     },
     {
@@ -654,7 +687,7 @@
       "suite": "source_traceability",
       "mode": "assert",
       "status": "pass",
-      "detail": "69 controls"
+      "detail": "72 controls"
     },
     {
       "id": "STT-003",
@@ -662,7 +695,7 @@
       "suite": "source_traceability",
       "mode": "assert",
       "status": "pass",
-      "detail": "7 placeholders"
+      "detail": "10 placeholders"
     },
     {
       "id": "STT-004",
@@ -670,7 +703,7 @@
       "suite": "source_traceability",
       "mode": "assert",
       "status": "pass",
-      "detail": "547 control references"
+      "detail": "721 control references"
     },
     {
       "id": "STT-005",
@@ -678,7 +711,7 @@
       "suite": "source_traceability",
       "mode": "assert",
       "status": "pass",
-      "detail": "18 registered open questions"
+      "detail": "20 registered open questions"
     },
     {
       "id": "STT-006",
@@ -686,7 +719,7 @@
       "suite": "source_traceability",
       "mode": "assert",
       "status": "pass",
-      "detail": "81 parts"
+      "detail": "95 parts"
     },
     {
       "id": "STT-007",
@@ -726,7 +759,7 @@
       "suite": "source_traceability",
       "mode": "assert",
       "status": "pass",
-      "detail": "81 parts"
+      "detail": "95 parts"
     },
     {
       "id": "STT-012",
@@ -734,7 +767,7 @@
       "suite": "source_traceability",
       "mode": "assert",
       "status": "pass",
-      "detail": "control document sha256 feb9991c3d1d"
+      "detail": "control document sha256 fe6b1eecc89d"
     }
   ]
 }

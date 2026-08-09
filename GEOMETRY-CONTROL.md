@@ -125,6 +125,9 @@ transverse track positions.
 | CTL-105 | subway_track_bay_inner_offset | 27 | ft | none | D | PLACEHOLDER. Transverse offset to the innermost track centerline of each side. **Now bounded**: SRC-011 places the tracks between the inner truss (CTL-022, 20 ft) and the outer truss (CTL-023, 48 ft), so this value cannot be far wrong. Retired by SRC-004. See OQ-010. |
 | CTL-106 | subway_track_spacing_y | 14 | ft | none | D | PLACEHOLDER. Transverse spacing between the two tracks in the same bay. Bounded by the 28 ft truss bay. Retired by SRC-004. See OQ-010. |
 | CTL-107 | subway_track_structure_depth | 1.5 | ft | none | D | PLACEHOLDER. Rail-top height above the lower deck reference plane, used only to separate the track envelope from the deck envelope visually. Retired by SRC-004. See OQ-013. |
+| CTL-108 | approach_bent_spacing | 100 | ft | none | D | PLACEHOLDER. Longitudinal spacing of the approach viaduct bents. Chosen only so the approach reads as a supported viaduct rather than a floating slab; no source gives it. The *extent* it is applied over is sourced (CTL-002, CTL-003), the rhythm is not. Retired by SRC-004. See OQ-020. |
+| CTL-109 | approach_bent_width_y | 8 | ft | none | D | PLACEHOLDER. Transverse width of an approach viaduct bent column. See OQ-020. |
+| CTL-110 | approach_girder_depth | 10 | ft | none | D | PLACEHOLDER. Structural depth carrying the approach decks between bents. See OQ-020. |
 
 ---
 
@@ -229,6 +232,8 @@ in the plausible range reproduces 157. This replaces the arbitrary 30 ft pitch u
 | OQ-016 | The two period primaries give vertical build-ups that differ by 8 ft. SRC-016: cutting edge -92 ft, caisson 47.5 ft high, footing seat -33 ft, capstone +23 ft (115 ft overall). SRC-015: caisson 56 ft, masonry 67 ft, 123 ft overall, which against -92 ft implies a capstone at +31 ft. | Tower foundation internals | SRC-004 | New at Milestone 3. The model follows SRC-016 throughout because its figures are explicit elevations rather than summary heights, and they are internally consistent. The SRC-015 heights are recorded as CTL-047, CTL-048 and CTL-053 but are not used. |
 | OQ-017 | Warren truss diagonal direction at each panel, chord and diagonal member sections, and the tower bracing arrangement. | Truss and tower web detail | SRC-004, SRC-005 | New at Milestone 4. The truss depth, spacing and panel count are all sourced, so the panel *positions* are correct; the alternating diagonal pattern is the Warren form named by three sources but its handedness at each panel is not documented. Detail photographs (SRC-005) could settle it to grade B. |
 | OQ-018 | The consuming district's `foreign_assets` tile declarations disagree with the placement that same district published. | District-side streaming of the proxy, not this module's geometry | dumbo-district-3d | New at Milestone 5. Not a defect in this repository; see section 6.3. A corrected tile set has been computed and offered at `viewer/metadata/proposed_foreign_assets.json`. Open until the district accepts or rebuts it. |
+| OQ-019 | Materials are unregistered for the anchorages, the caissons, the cables, the stiffening trusses and both roadway surfaces. | Rendered appearance, not dimensions | SRC-004, SRC-005 | New at Milestone 6. See section 7. The tower pier (masonry), its footing (concrete) and the tower steel are grade A from period primaries; everything else is inferred or placeholder. No dimension depends on this, but the rendered image does, so it is graded rather than assumed silently. |
+| OQ-020 | The approach viaducts' structural form is unregistered: bent spacing, girder type and depth, pier form, and the longitudinal grade down to street level. | Approach geometry between the anchorage and the abutment/portal | SRC-004, SRC-011 | New at Milestone 6. The *extent* is sourced — CTL-002 puts the lower level's abutments at +/-882.4 m and CTL-003 puts the upper roadway's portals at +/-928.1 m, both grade A — so the structure demonstrably continues past the anchorage. What it looks like is not registered. The approach is therefore modelled to the sourced stations with a placeholder bent spacing, and drawn level because no source gives the grade. |
 
 ---
 
@@ -356,3 +361,45 @@ integration to discover.
 **Guard against regression.** `scripts/verify_placement.py` re-derives the occupied tile set from
 the published GLB on every run and exits non-zero while the two disagree, so this cannot be
 silently forgotten and cannot be broken by a future geometry change without notice.
+
+---
+
+## 7. Material assignments
+
+Material is a geometric fact in the sense that matters here: it decides whether a rendered surface
+reads as stone or as steel, and a viewer that paints the tower piers the same colour as the trusses
+is making an unsourced claim just as surely as one that invents a dimension. So materials are
+controlled here, with the same grading discipline as dimensions, rather than being chosen in the
+renderer.
+
+`applies_to` is matched against `part_id` as a glob. The first matching row wins, so order is
+significant and the table runs from most specific to least. `material` is a closed vocabulary:
+`masonry`, `concrete`, `steel_structural`, `steel_wire`, `roadway_surface`, `reference`.
+
+| ID | applies_to | material | Sources | Confidence | Notes |
+|---|---|---|---|---|---|
+| MAT-001 | `tower_*_pier` | masonry | SRC-016 | A | CTL-028 and CTL-029 describe the "masonry pier at the capstone" directly. The **stone type is not registered** — the model says masonry, not granite. |
+| MAT-002 | `tower_*_footing` | concrete | SRC-016 | A | CTL-054, piers "seated on concrete footings about 33 feet below high water level". |
+| MAT-003 | `tower_*_caisson` | concrete | none | D | PLACEHOLDER. The caisson dimensions are grade A from both period primaries but **no registered source states what it is made of**. Period practice was a timber box with concrete fill; that is not a registered fact. See OQ-019. |
+| MAT-004 | `tower_*_pedestal` | steel_structural | SRC-012, SRC-015 | A | CTL-032 "steel pedestal"; CTL-051 "wrought-steel pedestal total depth". |
+| MAT-005 | `tower_*_leg*` | steel_structural | SRC-016 | A | CTL-045, "the towers are to be of steel 330 feet high", direct quotation. Corroborated by the 1909 plaque, CTL-019, "height of steel towers above mean high water". |
+| MAT-006 | `tower_*_diaphragm*` | steel_structural | SRC-015 | B | CTL-060, "two intersecting plate-steel diaphragms". OCR-damaged at the dimension but not at the material. |
+| MAT-017 | `tower_*_bracing` | steel_structural | SRC-016 | B | Part of the steel tower of CTL-045. The bracing *arrangement* is unregistered (OQ-017); only its material is carried here. |
+| MAT-018 | `tower_*_centerline` | reference | none | D | Construction geometry, not fabric. See MAT-014. |
+| MAT-007 | `*_main_cable_*` | steel_wire | SRC-011, SRC-015 | C | The sources establish the cable is built of 9472 drawn wires in 37 strands (CTL-041) and give the wire diameter (CTL-043), but **no registered passage names the metal**. Steel is inferred from the structure type and period. See OQ-019. |
+| MAT-008 | `suspenders_*` | steel_wire | SRC-011 | C | As MAT-007. Suspender pitch is derived, not the material. |
+| MAT-009 | `stiffening_truss_*` | steel_structural | SRC-011 | C | Three sources agree the stiffening trusses are Warren trusses 24 ft deep (CTL-010) but none that is registered names the metal. Inferred, consistent with the sourced steel towers. See OQ-019. |
+| MAT-010 | `*_anchorage` | masonry | none | D | PLACEHOLDER. The anchorage dimensions are grade A/B and CTL-052 registers a 46 ft street arch through each one, which implies massive construction, but **no registered source states the material**. See OQ-019. |
+| MAT-011 | `*_approach*` | steel_structural | none | D | PLACEHOLDER. See OQ-020; the approach viaduct's structural form and material are both unregistered. |
+| MAT-012 | `track_*` | steel_structural | none | D | PLACEHOLDER. Rail is steel by definition, but no registered source describes this bridge's rail, and SRC-010 is a gauge standard rather than a statement about the Manhattan Bridge. Graded D deliberately rather than borrowing authority from a source that does not carry it. |
+| MAT-019 | `footwalk_*` | roadway_surface | none | D | PLACEHOLDER. SRC-015 establishes the footwalks are carried on cantilever extensions of the floor beams (OQ-014) but says nothing about the walking surface. |
+| MAT-013 | `*_roadway_*` | roadway_surface | none | D | PLACEHOLDER. No registered source describes the wearing surface on either level. |
+| MAT-014 | `reference_*` | reference | none | D | Non-physical construction geometry: datum planes, axes, station markers. Never rendered as material. |
+| MAT-015 | `control_curve_*` | reference | none | D | As MAT-014. |
+| MAT-016 | `station_*` | reference | none | D | As MAT-014. |
+
+**Why the two stone rows differ in grade.** The tower pier is grade A because a period primary says
+"masonry" in a sentence that also gives its dimensions. The anchorage is grade D because no
+registered source says anything about what it is built from, even though every photograph shows
+stone. A photograph is not in the register, so it cannot grade a control; that asymmetry is the
+point of the register, not a defect in it.

@@ -3,6 +3,7 @@ import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import type { Confidence, PartMetadata, PartsDocument, ViewerConfig } from './model';
+import { MATERIAL_APPEARANCE } from './model';
 
 /**
  * BridgeViewer renders any source-governed GLB whose part nodes carry metadata in glTF `extras`.
@@ -21,6 +22,7 @@ export interface BridgeViewerProps {
   hiddenSystems: Set<string>;
   hiddenParts: Set<string>;
   confidenceOverlay: boolean;
+  materialMode: boolean;
   onSelect: (partId: string | null) => void;
   focusToken: number;
 }
@@ -64,6 +66,8 @@ function collectParts(root: THREE.Object3D): RenderablePart[] {
       const cloned = renderable.material as THREE.MeshStandardMaterial;
       renderable.userData.baseColor = cloned.color.clone();
       renderable.userData.baseOpacity = cloned.opacity;
+      renderable.userData.baseRoughness = cloned.roughness ?? 1;
+      renderable.userData.baseMetalness = cloned.metalness ?? 0;
       renderables.push(renderable);
     });
     if (renderables.length > 0) parts.push({ id: partId, root: object, renderables });
@@ -129,7 +133,7 @@ function frameCamera(viewer: Viewer, config: ViewerConfig, doc: PartsDocument): 
 }
 
 export default function BridgeViewer(props: BridgeViewerProps) {
-  const { config, doc, selectedId, hiddenSystems, hiddenParts, confidenceOverlay, onSelect } = props;
+  const { config, doc, selectedId, hiddenSystems, hiddenParts, confidenceOverlay, materialMode, onSelect } = props;
   const hostRef = useRef<HTMLDivElement | null>(null);
   const viewerRef = useRef<Viewer | null>(null);
   const onSelectRef = useRef(onSelect);
@@ -282,21 +286,50 @@ export default function BridgeViewer(props: BridgeViewerProps) {
       const meta = metadataById.get(part.id);
       part.root.visible = !(hiddenParts.has(part.id) || (meta ? hiddenSystems.has(meta.system) : false));
       const isSelected = part.id === selectedId;
+      const appearance =
+        materialMode && meta ? MATERIAL_APPEARANCE[meta.material] ?? null : null;
+
       part.renderables.forEach((renderable) => {
         const material = renderable.material as THREE.MeshStandardMaterial;
         const base = renderable.userData.baseColor as THREE.Color;
         const baseOpacity = renderable.userData.baseOpacity as number;
-        const overlay =
-          confidenceOverlay && meta
-            ? new THREE.Color(doc.confidence_colors[meta.confidence as Confidence])
+        const isLine = (renderable as THREE.LineSegments).isLineSegments === true;
+
+        // Confidence overlay still wins: it is a governance view, and if the reader has asked to
+        // see grades, an attractive stone finish must not overrule that.
+        const overlay = confidenceOverlay && meta
+          ? new THREE.Color(doc.confidence_colors[meta.confidence as Confidence])
+          : appearance
+            ? new THREE.Color(appearance.color)
             : base;
         material.color.copy(isSelected ? SELECTION_COLOR : overlay);
-        material.opacity = isSelected ? Math.min(1, baseOpacity * 2.5) : baseOpacity;
+
+        if (appearance && !confidenceOverlay) {
+          // Line primitives keep their schematic opacity: a wire-drawn truss web rendered opaque
+          // would read as solid plate, which would be a stronger claim than the geometry supports.
+          material.opacity = isSelected
+            ? Math.min(1, appearance.opacity * 2.5)
+            : isLine
+              ? baseOpacity
+              : appearance.opacity;
+          if (!isLine) {
+            material.roughness = appearance.roughness;
+            material.metalness = appearance.metalness;
+            material.flatShading = meta?.material === 'masonry' || meta?.material === 'concrete';
+          }
+        } else {
+          material.opacity = isSelected ? Math.min(1, baseOpacity * 2.5) : baseOpacity;
+          if (!isLine) {
+            material.roughness = renderable.userData.baseRoughness as number;
+            material.metalness = renderable.userData.baseMetalness as number;
+            material.flatShading = false;
+          }
+        }
         material.transparent = material.opacity < 1;
         material.needsUpdate = true;
       });
     });
-  }, [ready, doc, hiddenParts, hiddenSystems, selectedId, confidenceOverlay]);
+  }, [ready, doc, hiddenParts, hiddenSystems, selectedId, confidenceOverlay, materialMode]);
 
   // ------------------------------------------------------------ selection box
   useEffect(() => {

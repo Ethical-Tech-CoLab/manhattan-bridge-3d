@@ -1,5 +1,5 @@
 import type { ControlEntry, PartMetadata, PartsDocument, UnitMode } from '../src/model';
-import { CONFIDENCE_LABELS, formatLength } from '../src/model';
+import { CONFIDENCE_LABELS, MATERIAL_APPEARANCE, formatLength } from '../src/model';
 
 interface MetadataPanelProps {
   doc: PartsDocument;
@@ -59,6 +59,24 @@ export default function MetadataPanel({ doc, part, unitMode }: MetadataPanelProp
         </dd>
         <dt>Source basis</dt>
         <dd>{part.source_basis.join(', ')}</dd>
+        <dt>Material</dt>
+        <dd>
+          <span className="material-line">
+            <span
+              className="material-swatch"
+              style={{ background: MATERIAL_APPEARANCE[part.material]?.color ?? '#666' }}
+            />
+            <span>
+              {MATERIAL_APPEARANCE[part.material]?.label ?? part.material} · grade{' '}
+              {part.material_confidence} · {part.material_id}
+            </span>
+          </span>
+          <span className="hint">
+            {part.material_sources.length > 0
+              ? `from ${part.material_sources.join(', ')}`
+              : 'no registered source names this material — placeholder'}
+          </span>
+        </dd>
         <dt>Units</dt>
         <dd>
           prototype {part.prototype_units} · HO {part.ho_scale_units}

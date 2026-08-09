@@ -16,6 +16,7 @@ export default function App() {
   const [hiddenSystems, setHiddenSystems] = useState<Set<string>>(new Set());
   const [hiddenParts, setHiddenParts] = useState<Set<string>>(new Set());
   const [confidenceOverlay, setConfidenceOverlay] = useState(false);
+  const [materialMode, setMaterialMode] = useState(true);
   const [unitMode, setUnitMode] = useState<UnitMode>('prototype');
   const [panel, setPanel] = useState<'metadata' | 'dimensions'>('metadata');
   const [focusToken, setFocusToken] = useState(0);
@@ -125,6 +126,21 @@ export default function App() {
             active={confidenceOverlay}
             onToggle={() => setConfidenceOverlay((value) => !value)}
           />
+          <div className="material-toggle">
+            <label>
+              <input
+                type="checkbox"
+                checked={materialMode}
+                onChange={() => setMaterialMode((value) => !value)}
+              />
+              <span>Materials</span>
+            </label>
+            <p>
+              Surfaces painted from the material assignments in GEOMETRY-CONTROL.md section 7.
+              Turn off for the schematic view. The confidence overlay overrides this, so grades are
+              never hidden behind a finish.
+            </p>
+          </div>
         </aside>
         <main className="stage">
           <BridgeViewer
@@ -134,6 +150,7 @@ export default function App() {
             hiddenSystems={hiddenSystems}
             hiddenParts={hiddenParts}
             confidenceOverlay={confidenceOverlay}
+            materialMode={materialMode}
             onSelect={selectPart}
             focusToken={focusToken}
           />

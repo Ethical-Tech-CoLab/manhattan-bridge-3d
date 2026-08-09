@@ -3,7 +3,7 @@
 A source-governed, part-addressable digital twin of the Manhattan Bridge for browser rendering and
 HO-scale (1:87.1) study.
 
-**Current state: Milestone 4 — sourced detail geometry. Both period engineering primaries examined directly.**
+**Current state: Milestone 6 — approaches connected to their sourced stations, materials graded and rendered.**
 
 The governing rule, from [AGENT-INSTRUCTIONS.md](AGENT-INSTRUCTIONS.md): no existing 3D model is
 authoritative. Official dimensions and archival drawings are the control geometry. Photogrammetry
@@ -49,10 +49,17 @@ viewer/metadata/build_report.json          derived values and measures used by t
 tests/validation_report.json               last test run
 ```
 
-81 parts across 7 systems: reference (datum, control curves, 11 stations), towers (centerlines,
+95 parts across 7 systems: reference (datum, control curves, 11 stations), towers (centerlines,
 caissons, piers, eight tapered legs, bracing), anchorages, four main cables, four suspender groups,
 the deck system (two offset upper roadways, lower roadway, sixteen truss chord sets and sixteen truss
-web sets, two footwalks, four subway tracks), and two approaches.
+web sets, two footwalks, four subway tracks), and the approaches (lower deck to the sourced abutment,
+upper roadway to the sourced portal, continued trackwork, and viaduct bents).
+
+Every part also carries a **material**, assigned and graded in
+[GEOMETRY-CONTROL.md](GEOMETRY-CONTROL.md) section 7 rather than chosen in the renderer. Material
+grade is tracked separately from dimensional grade: the tower piers are grade-A masonry on the
+strength of a period primary, while the anchorages are grade-D masonry because no registered source
+says what they are built from, even though every photograph shows stone.
 
 `.blend` and `.step` are **not** produced by the default path, because it has no binary dependencies.
 [cad/procedural/build_in_blender.py](cad/procedural/build_in_blender.py) rebuilds the identical
@@ -94,6 +101,19 @@ the cables.
 chords and web at the derived 18.61 ft panel pitch, and main cables drawn at their sourced 21.2 in
 diameter. Truss chords and web are **separate parts** because the chords are grade A and only the web
 pattern is inferred.
+
+**Milestone 5** published the module to the shared district contract so the neighbouring
+`dumbo-district-3d` twin can place the bridge: a schema-valid manifest, a level-2 proxy, a
+hash-verified copy of the canonical frame, and the vertical datum declared rather than silently
+converted.
+
+**Milestone 6** fixed a defect the earlier renders concealed. All deck geometry stopped at the
+anchorage face, ±445 m, while two grade-A controls say otherwise: CTL-002 puts the lower level's
+abutments 5790 ft apart and CTL-003 puts the upper roadway's portals 6090 ft apart. The tracks and
+steelwork therefore ended in mid-air, 437 m and 483 m short of stations the register already
+documented. The approaches are now structure rather than a flat slab — lower deck, upper roadway,
+continued trackwork and viaduct bents — with the *extent* sourced and the *form* held as three new
+placeholders under OQ-020. The same milestone added the graded material table.
 
 Thirteen conflicts are carried openly in [SOURCE-REGISTER.md](SOURCE-REGISTER.md) rather than
 silently resolved. Seven are settled by weight of evidence.

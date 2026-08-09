@@ -485,3 +485,39 @@ aside.right {
 .placeholder-list li {
   padding: 2px 0;
 }
+
+.material-toggle {
+  border-top: 1px solid #1e2733;
+  padding: 12px 14px;
+}
+
+.material-toggle label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #d5dee8;
+  cursor: pointer;
+}
+
+.material-toggle p {
+  margin: 6px 0 0;
+  font-size: 11px;
+  line-height: 1.45;
+  color: #7d8b9b;
+}
+
+.material-line {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.material-swatch {
+  width: 11px;
+  height: 11px;
+  border-radius: 2px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  flex: none;
+}

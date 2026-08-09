@@ -6419,6 +6419,652 @@
       }
     },
     {
+      "asset_id": "urn:d3d:manhattan-bridge:manhattan_approach_lower_deck",
+      "local_id": "manhattan_approach_lower_deck",
+      "module_id": "manhattan-bridge",
+      "display_name": "manhattan approach lower deck",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "approaches",
+        "subsystem": "lower_roadway",
+        "path": [
+          "approaches",
+          "lower_roadway"
+        ]
+      },
+      "source_basis": [
+        "control_dimension",
+        "inferred"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-001",
+        "SRC-002",
+        "SRC-011",
+        "SRC-012",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "D",
+      "basis_confidence": "C",
+      "control_refs": [
+        "CTL-002",
+        "CTL-003",
+        "CTL-001",
+        "CTL-004",
+        "CTL-039",
+        "CTL-040",
+        "CTL-021",
+        "CTL-034",
+        "CTL-008",
+        "CTL-110",
+        "CTL-104"
+      ],
+      "open_questions": [
+        "OQ-002",
+        "OQ-013",
+        "OQ-020"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Lower level carried from the outboard face of the anchorage to the abutment. The extent is sourced: CTL-002 puts the lower level's abutments 5790 ft apart, which is grade A, so this deck exists and reaches this station. Its structural depth and its grade down to street level are not sourced; it is drawn level because inventing a gradient would be worse than admitting there is none. See OQ-020.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              4192.31,
+              419.93,
+              34.99
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "box"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -882.396,
+          -18.288,
+          39.13632
+        ],
+        "max": [
+          -517.2456,
+          18.288,
+          42.18432
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          -699.8208,
+          0.0,
+          40.6603
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:manhattan_approach_upper_deck",
+      "local_id": "manhattan_approach_upper_deck",
+      "module_id": "manhattan-bridge",
+      "display_name": "manhattan approach upper deck",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "approaches",
+        "subsystem": "upper_roadway",
+        "path": [
+          "approaches",
+          "upper_roadway"
+        ]
+      },
+      "source_basis": [
+        "control_dimension",
+        "inferred"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-001",
+        "SRC-002",
+        "SRC-011",
+        "SRC-012",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "D",
+      "basis_confidence": "C",
+      "control_refs": [
+        "CTL-002",
+        "CTL-003",
+        "CTL-001",
+        "CTL-004",
+        "CTL-039",
+        "CTL-040",
+        "CTL-021",
+        "CTL-034",
+        "CTL-008",
+        "CTL-103"
+      ],
+      "open_questions": [
+        "OQ-002",
+        "OQ-013",
+        "OQ-020"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Upper roadway carried from the anchorage to the portal. CTL-003 puts the portals 6090 ft apart, grade A, which is 300 ft further out than the lower level's abutments - the upper roadway genuinely runs past the end of the lower level. Drawn level; see OQ-020.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              4717.23,
+              419.93,
+              10.5
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "box"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -928.116,
+          -18.288,
+          48.4632
+        ],
+        "max": [
+          -517.2456,
+          18.288,
+          49.3776
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          -722.6808,
+          0.0,
+          48.9204
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:track_1_approach_manhattan",
+      "local_id": "track_1_approach_manhattan",
+      "module_id": "manhattan-bridge",
+      "display_name": "track 1 approach manhattan",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "approaches",
+        "subsystem": "subway_tracks",
+        "path": [
+          "approaches",
+          "subway_tracks"
+        ]
+      },
+      "source_basis": [
+        "control_dimension",
+        "inferred"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-001",
+        "SRC-002",
+        "SRC-010",
+        "SRC-011",
+        "SRC-012",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "D",
+      "basis_confidence": "C",
+      "control_refs": [
+        "CTL-002",
+        "CTL-003",
+        "CTL-001",
+        "CTL-004",
+        "CTL-039",
+        "CTL-040",
+        "CTL-021",
+        "CTL-034",
+        "CTL-008",
+        "CTL-017",
+        "CTL-105",
+        "CTL-106",
+        "CTL-107"
+      ],
+      "open_questions": [
+        "OQ-010",
+        "OQ-013",
+        "OQ-020"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "track_1 continued across the manhattan approach to the abutment. The four tracks have to reach the subway portals, so ending them at the anchorage was a modelling artefact rather than a statement about the bridge. The transverse centreline remains the OQ-010 placeholder and the approach trackwork alignment is unregistered; see OQ-020.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              4192.31,
+              16.48,
+              5.25
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "box"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -882.396,
+          11.77925,
+          42.18432
+        ],
+        "max": [
+          -517.2456,
+          13.21435,
+          42.64152
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          -699.8208,
+          12.4968,
+          42.4129
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:track_2_approach_manhattan",
+      "local_id": "track_2_approach_manhattan",
+      "module_id": "manhattan-bridge",
+      "display_name": "track 2 approach manhattan",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "approaches",
+        "subsystem": "subway_tracks",
+        "path": [
+          "approaches",
+          "subway_tracks"
+        ]
+      },
+      "source_basis": [
+        "control_dimension",
+        "inferred"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-001",
+        "SRC-002",
+        "SRC-010",
+        "SRC-011",
+        "SRC-012",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "D",
+      "basis_confidence": "C",
+      "control_refs": [
+        "CTL-002",
+        "CTL-003",
+        "CTL-001",
+        "CTL-004",
+        "CTL-039",
+        "CTL-040",
+        "CTL-021",
+        "CTL-034",
+        "CTL-008",
+        "CTL-017",
+        "CTL-105",
+        "CTL-106",
+        "CTL-107"
+      ],
+      "open_questions": [
+        "OQ-010",
+        "OQ-013",
+        "OQ-020"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "track_2 continued across the manhattan approach to the abutment. The four tracks have to reach the subway portals, so ending them at the anchorage was a modelling artefact rather than a statement about the bridge. The transverse centreline remains the OQ-010 placeholder and the approach trackwork alignment is unregistered; see OQ-020.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              4192.31,
+              16.48,
+              5.25
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "box"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -882.396,
+          7.51205,
+          42.18432
+        ],
+        "max": [
+          -517.2456,
+          8.94715,
+          42.64152
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          -699.8208,
+          8.2296,
+          42.4129
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:track_3_approach_manhattan",
+      "local_id": "track_3_approach_manhattan",
+      "module_id": "manhattan-bridge",
+      "display_name": "track 3 approach manhattan",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "approaches",
+        "subsystem": "subway_tracks",
+        "path": [
+          "approaches",
+          "subway_tracks"
+        ]
+      },
+      "source_basis": [
+        "control_dimension",
+        "inferred"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-001",
+        "SRC-002",
+        "SRC-010",
+        "SRC-011",
+        "SRC-012",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "D",
+      "basis_confidence": "C",
+      "control_refs": [
+        "CTL-002",
+        "CTL-003",
+        "CTL-001",
+        "CTL-004",
+        "CTL-039",
+        "CTL-040",
+        "CTL-021",
+        "CTL-034",
+        "CTL-008",
+        "CTL-017",
+        "CTL-105",
+        "CTL-106",
+        "CTL-107"
+      ],
+      "open_questions": [
+        "OQ-010",
+        "OQ-013",
+        "OQ-020"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "track_3 continued across the manhattan approach to the abutment. The four tracks have to reach the subway portals, so ending them at the anchorage was a modelling artefact rather than a statement about the bridge. The transverse centreline remains the OQ-010 placeholder and the approach trackwork alignment is unregistered; see OQ-020.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              4192.31,
+              16.48,
+              5.25
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "box"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -882.396,
+          -8.94715,
+          42.18432
+        ],
+        "max": [
+          -517.2456,
+          -7.51205,
+          42.64152
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          -699.8208,
+          -8.2296,
+          42.4129
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:track_4_approach_manhattan",
+      "local_id": "track_4_approach_manhattan",
+      "module_id": "manhattan-bridge",
+      "display_name": "track 4 approach manhattan",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "approaches",
+        "subsystem": "subway_tracks",
+        "path": [
+          "approaches",
+          "subway_tracks"
+        ]
+      },
+      "source_basis": [
+        "control_dimension",
+        "inferred"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-001",
+        "SRC-002",
+        "SRC-010",
+        "SRC-011",
+        "SRC-012",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "D",
+      "basis_confidence": "C",
+      "control_refs": [
+        "CTL-002",
+        "CTL-003",
+        "CTL-001",
+        "CTL-004",
+        "CTL-039",
+        "CTL-040",
+        "CTL-021",
+        "CTL-034",
+        "CTL-008",
+        "CTL-017",
+        "CTL-105",
+        "CTL-106",
+        "CTL-107"
+      ],
+      "open_questions": [
+        "OQ-010",
+        "OQ-013",
+        "OQ-020"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "track_4 continued across the manhattan approach to the abutment. The four tracks have to reach the subway portals, so ending them at the anchorage was a modelling artefact rather than a statement about the bridge. The transverse centreline remains the OQ-010 placeholder and the approach trackwork alignment is unregistered; see OQ-020.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              4192.31,
+              16.48,
+              5.25
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "box"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -882.396,
+          -13.21435,
+          42.18432
+        ],
+        "max": [
+          -517.2456,
+          -11.77925,
+          42.64152
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          -699.8208,
+          -12.4968,
+          42.4129
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:manhattan_approach_bents",
+      "local_id": "manhattan_approach_bents",
+      "module_id": "manhattan-bridge",
+      "display_name": "manhattan approach bents",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "approaches",
+        "subsystem": "substructure",
+        "path": [
+          "approaches",
+          "substructure"
+        ]
+      },
+      "source_basis": [
+        "inferred"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-001",
+        "SRC-002",
+        "SRC-011",
+        "SRC-012",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "D",
+      "basis_confidence": "D",
+      "control_refs": [
+        "CTL-002",
+        "CTL-003",
+        "CTL-001",
+        "CTL-004",
+        "CTL-039",
+        "CTL-040",
+        "CTL-021",
+        "CTL-034",
+        "CTL-008",
+        "CTL-108",
+        "CTL-109",
+        "CTL-110"
+      ],
+      "open_questions": [
+        "OQ-020"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "13 viaduct bents per side at a placeholder 100 ft spacing. Nothing about this rhythm is sourced - it exists so the approach reads as a supported viaduct rather than a floating slab, and so a viewer can see there is structure between the anchorage and the street. The bents stop at z = 0 (mean high water) rather than at ground, because no source gives the ground profile under either approach. See OQ-020.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              4071.33,
+              419.93,
+              566.91
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "box"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -899.987314,
+          -18.288,
+          0.0
+        ],
+        "max": [
+          -545.374286,
+          18.288,
+          49.3776
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          -722.6808,
+          0.0,
+          24.6888
+        ]
+      }
+    },
+    {
       "asset_id": "urn:d3d:manhattan-bridge:manhattan_approach",
       "local_id": "manhattan_approach",
       "module_id": "manhattan-bridge",
@@ -6447,6 +7093,8 @@
       "confidence": "D",
       "basis_confidence": "C",
       "control_refs": [
+        "CTL-002",
+        "CTL-003",
         "CTL-001",
         "CTL-004",
         "CTL-039",
@@ -6454,18 +7102,19 @@
         "CTL-021",
         "CTL-034",
         "CTL-008",
-        "CTL-010",
-        "CTL-103"
+        "CTL-103",
+        "CTL-010"
       ],
       "open_questions": [
         "OQ-002",
         "OQ-006",
-        "OQ-013"
+        "OQ-013",
+        "OQ-020"
       ],
       "review_status": "unreviewed",
       "last_modified_by": "build_control_skeleton.py@1.0.0",
       "units": "meters",
-      "notes": "Approach deck envelope, drawn level from the outboard face of the anchorage to the approach end station. The length split is now a sourced ratio (OQ-006 mitigated), but grade, plan curvature and the continuous Warren truss structure described by SRC-011 are not modelled.",
+      "notes": "Overall approach corridor envelope, from the outboard face of the anchorage to the approach end station. This is a bounding volume, not structure: the decks, tracks and bents inside it are separate parts. The end station rests on the sourced length ratio (OQ-006 mitigated); plan curvature and grade are not modelled. See OQ-020.",
       "extensions": {
         "manhattan-bridge": {
           "prototype_units": "meters",
@@ -6506,6 +7155,652 @@
       }
     },
     {
+      "asset_id": "urn:d3d:manhattan-bridge:brooklyn_approach_lower_deck",
+      "local_id": "brooklyn_approach_lower_deck",
+      "module_id": "manhattan-bridge",
+      "display_name": "brooklyn approach lower deck",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "approaches",
+        "subsystem": "lower_roadway",
+        "path": [
+          "approaches",
+          "lower_roadway"
+        ]
+      },
+      "source_basis": [
+        "control_dimension",
+        "inferred"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-001",
+        "SRC-002",
+        "SRC-011",
+        "SRC-012",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "D",
+      "basis_confidence": "C",
+      "control_refs": [
+        "CTL-002",
+        "CTL-003",
+        "CTL-001",
+        "CTL-004",
+        "CTL-039",
+        "CTL-040",
+        "CTL-021",
+        "CTL-034",
+        "CTL-008",
+        "CTL-110",
+        "CTL-104"
+      ],
+      "open_questions": [
+        "OQ-002",
+        "OQ-013",
+        "OQ-020"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Lower level carried from the outboard face of the anchorage to the abutment. The extent is sourced: CTL-002 puts the lower level's abutments 5790 ft apart, which is grade A, so this deck exists and reaches this station. Its structural depth and its grade down to street level are not sourced; it is drawn level because inventing a gradient would be worse than admitting there is none. See OQ-020.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              4192.31,
+              419.93,
+              34.99
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "box"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          517.2456,
+          -18.288,
+          39.13632
+        ],
+        "max": [
+          882.396,
+          18.288,
+          42.18432
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          699.8208,
+          0.0,
+          40.6603
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:brooklyn_approach_upper_deck",
+      "local_id": "brooklyn_approach_upper_deck",
+      "module_id": "manhattan-bridge",
+      "display_name": "brooklyn approach upper deck",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "approaches",
+        "subsystem": "upper_roadway",
+        "path": [
+          "approaches",
+          "upper_roadway"
+        ]
+      },
+      "source_basis": [
+        "control_dimension",
+        "inferred"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-001",
+        "SRC-002",
+        "SRC-011",
+        "SRC-012",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "D",
+      "basis_confidence": "C",
+      "control_refs": [
+        "CTL-002",
+        "CTL-003",
+        "CTL-001",
+        "CTL-004",
+        "CTL-039",
+        "CTL-040",
+        "CTL-021",
+        "CTL-034",
+        "CTL-008",
+        "CTL-103"
+      ],
+      "open_questions": [
+        "OQ-002",
+        "OQ-013",
+        "OQ-020"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Upper roadway carried from the anchorage to the portal. CTL-003 puts the portals 6090 ft apart, grade A, which is 300 ft further out than the lower level's abutments - the upper roadway genuinely runs past the end of the lower level. Drawn level; see OQ-020.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              4717.23,
+              419.93,
+              10.5
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "box"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          517.2456,
+          -18.288,
+          48.4632
+        ],
+        "max": [
+          928.116,
+          18.288,
+          49.3776
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          722.6808,
+          0.0,
+          48.9204
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:track_1_approach_brooklyn",
+      "local_id": "track_1_approach_brooklyn",
+      "module_id": "manhattan-bridge",
+      "display_name": "track 1 approach brooklyn",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "approaches",
+        "subsystem": "subway_tracks",
+        "path": [
+          "approaches",
+          "subway_tracks"
+        ]
+      },
+      "source_basis": [
+        "control_dimension",
+        "inferred"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-001",
+        "SRC-002",
+        "SRC-010",
+        "SRC-011",
+        "SRC-012",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "D",
+      "basis_confidence": "C",
+      "control_refs": [
+        "CTL-002",
+        "CTL-003",
+        "CTL-001",
+        "CTL-004",
+        "CTL-039",
+        "CTL-040",
+        "CTL-021",
+        "CTL-034",
+        "CTL-008",
+        "CTL-017",
+        "CTL-105",
+        "CTL-106",
+        "CTL-107"
+      ],
+      "open_questions": [
+        "OQ-010",
+        "OQ-013",
+        "OQ-020"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "track_1 continued across the brooklyn approach to the abutment. The four tracks have to reach the subway portals, so ending them at the anchorage was a modelling artefact rather than a statement about the bridge. The transverse centreline remains the OQ-010 placeholder and the approach trackwork alignment is unregistered; see OQ-020.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              4192.31,
+              16.48,
+              5.25
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "box"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          517.2456,
+          11.77925,
+          42.18432
+        ],
+        "max": [
+          882.396,
+          13.21435,
+          42.64152
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          699.8208,
+          12.4968,
+          42.4129
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:track_2_approach_brooklyn",
+      "local_id": "track_2_approach_brooklyn",
+      "module_id": "manhattan-bridge",
+      "display_name": "track 2 approach brooklyn",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "approaches",
+        "subsystem": "subway_tracks",
+        "path": [
+          "approaches",
+          "subway_tracks"
+        ]
+      },
+      "source_basis": [
+        "control_dimension",
+        "inferred"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-001",
+        "SRC-002",
+        "SRC-010",
+        "SRC-011",
+        "SRC-012",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "D",
+      "basis_confidence": "C",
+      "control_refs": [
+        "CTL-002",
+        "CTL-003",
+        "CTL-001",
+        "CTL-004",
+        "CTL-039",
+        "CTL-040",
+        "CTL-021",
+        "CTL-034",
+        "CTL-008",
+        "CTL-017",
+        "CTL-105",
+        "CTL-106",
+        "CTL-107"
+      ],
+      "open_questions": [
+        "OQ-010",
+        "OQ-013",
+        "OQ-020"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "track_2 continued across the brooklyn approach to the abutment. The four tracks have to reach the subway portals, so ending them at the anchorage was a modelling artefact rather than a statement about the bridge. The transverse centreline remains the OQ-010 placeholder and the approach trackwork alignment is unregistered; see OQ-020.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              4192.31,
+              16.48,
+              5.25
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "box"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          517.2456,
+          7.51205,
+          42.18432
+        ],
+        "max": [
+          882.396,
+          8.94715,
+          42.64152
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          699.8208,
+          8.2296,
+          42.4129
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:track_3_approach_brooklyn",
+      "local_id": "track_3_approach_brooklyn",
+      "module_id": "manhattan-bridge",
+      "display_name": "track 3 approach brooklyn",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "approaches",
+        "subsystem": "subway_tracks",
+        "path": [
+          "approaches",
+          "subway_tracks"
+        ]
+      },
+      "source_basis": [
+        "control_dimension",
+        "inferred"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-001",
+        "SRC-002",
+        "SRC-010",
+        "SRC-011",
+        "SRC-012",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "D",
+      "basis_confidence": "C",
+      "control_refs": [
+        "CTL-002",
+        "CTL-003",
+        "CTL-001",
+        "CTL-004",
+        "CTL-039",
+        "CTL-040",
+        "CTL-021",
+        "CTL-034",
+        "CTL-008",
+        "CTL-017",
+        "CTL-105",
+        "CTL-106",
+        "CTL-107"
+      ],
+      "open_questions": [
+        "OQ-010",
+        "OQ-013",
+        "OQ-020"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "track_3 continued across the brooklyn approach to the abutment. The four tracks have to reach the subway portals, so ending them at the anchorage was a modelling artefact rather than a statement about the bridge. The transverse centreline remains the OQ-010 placeholder and the approach trackwork alignment is unregistered; see OQ-020.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              4192.31,
+              16.48,
+              5.25
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "box"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          517.2456,
+          -8.94715,
+          42.18432
+        ],
+        "max": [
+          882.396,
+          -7.51205,
+          42.64152
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          699.8208,
+          -8.2296,
+          42.4129
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:track_4_approach_brooklyn",
+      "local_id": "track_4_approach_brooklyn",
+      "module_id": "manhattan-bridge",
+      "display_name": "track 4 approach brooklyn",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "approaches",
+        "subsystem": "subway_tracks",
+        "path": [
+          "approaches",
+          "subway_tracks"
+        ]
+      },
+      "source_basis": [
+        "control_dimension",
+        "inferred"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-001",
+        "SRC-002",
+        "SRC-010",
+        "SRC-011",
+        "SRC-012",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "D",
+      "basis_confidence": "C",
+      "control_refs": [
+        "CTL-002",
+        "CTL-003",
+        "CTL-001",
+        "CTL-004",
+        "CTL-039",
+        "CTL-040",
+        "CTL-021",
+        "CTL-034",
+        "CTL-008",
+        "CTL-017",
+        "CTL-105",
+        "CTL-106",
+        "CTL-107"
+      ],
+      "open_questions": [
+        "OQ-010",
+        "OQ-013",
+        "OQ-020"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "track_4 continued across the brooklyn approach to the abutment. The four tracks have to reach the subway portals, so ending them at the anchorage was a modelling artefact rather than a statement about the bridge. The transverse centreline remains the OQ-010 placeholder and the approach trackwork alignment is unregistered; see OQ-020.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              4192.31,
+              16.48,
+              5.25
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "box"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          517.2456,
+          -13.21435,
+          42.18432
+        ],
+        "max": [
+          882.396,
+          -11.77925,
+          42.64152
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          699.8208,
+          -12.4968,
+          42.4129
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:brooklyn_approach_bents",
+      "local_id": "brooklyn_approach_bents",
+      "module_id": "manhattan-bridge",
+      "display_name": "brooklyn approach bents",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "approaches",
+        "subsystem": "substructure",
+        "path": [
+          "approaches",
+          "substructure"
+        ]
+      },
+      "source_basis": [
+        "inferred"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-001",
+        "SRC-002",
+        "SRC-011",
+        "SRC-012",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "D",
+      "basis_confidence": "D",
+      "control_refs": [
+        "CTL-002",
+        "CTL-003",
+        "CTL-001",
+        "CTL-004",
+        "CTL-039",
+        "CTL-040",
+        "CTL-021",
+        "CTL-034",
+        "CTL-008",
+        "CTL-108",
+        "CTL-109",
+        "CTL-110"
+      ],
+      "open_questions": [
+        "OQ-020"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "13 viaduct bents per side at a placeholder 100 ft spacing. Nothing about this rhythm is sourced - it exists so the approach reads as a supported viaduct rather than a floating slab, and so a viewer can see there is structure between the anchorage and the street. The bents stop at z = 0 (mean high water) rather than at ground, because no source gives the ground profile under either approach. See OQ-020.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              4071.33,
+              419.93,
+              566.91
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "box"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          545.374286,
+          -18.288,
+          0.0
+        ],
+        "max": [
+          899.987314,
+          18.288,
+          49.3776
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          722.6808,
+          0.0,
+          24.6888
+        ]
+      }
+    },
+    {
       "asset_id": "urn:d3d:manhattan-bridge:brooklyn_approach",
       "local_id": "brooklyn_approach",
       "module_id": "manhattan-bridge",
@@ -6534,6 +7829,8 @@
       "confidence": "D",
       "basis_confidence": "C",
       "control_refs": [
+        "CTL-002",
+        "CTL-003",
         "CTL-001",
         "CTL-004",
         "CTL-039",
@@ -6541,18 +7838,19 @@
         "CTL-021",
         "CTL-034",
         "CTL-008",
-        "CTL-010",
-        "CTL-103"
+        "CTL-103",
+        "CTL-010"
       ],
       "open_questions": [
         "OQ-002",
         "OQ-006",
-        "OQ-013"
+        "OQ-013",
+        "OQ-020"
       ],
       "review_status": "unreviewed",
       "last_modified_by": "build_control_skeleton.py@1.0.0",
       "units": "meters",
-      "notes": "Approach deck envelope, drawn level from the outboard face of the anchorage to the approach end station. The length split is now a sourced ratio (OQ-006 mitigated), but grade, plan curvature and the continuous Warren truss structure described by SRC-011 are not modelled.",
+      "notes": "Overall approach corridor envelope, from the outboard face of the anchorage to the approach end station. This is a bounding volume, not structure: the decks, tracks and bents inside it are separate parts. The end station rests on the sourced length ratio (OQ-006 mitigated); plan curvature and grade are not modelled. See OQ-020.",
       "extensions": {
         "manhattan-bridge": {
           "prototype_units": "meters",
@@ -6596,11 +7894,11 @@
   "provenance": {
     "module_id": "manhattan-bridge",
     "generated_by": "publish_module_contract.py via build_control_skeleton.py@1.0.0",
-    "generated_at": "2026-08-09T17:35:56+00:00",
+    "generated_at": "2026-08-09T18:59:20+00:00",
     "source_documents": [
       {
         "path": "GEOMETRY-CONTROL.md",
-        "sha256": "feb9991c3d1d977c61be4d812fef7752fd3858fe1301223e5f7f670bfeb35707"
+        "sha256": "fe6b1eecc89d364f456b599ccd9271cf79d477ed1c71cb32b6c8ec8305474f2c"
       }
     ]
   }

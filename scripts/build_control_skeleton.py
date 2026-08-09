@@ -84,6 +84,7 @@ STYLES: dict[str, dict[str, Any]] = {
     "truss_panel": {"color": (0.55, 0.75, 0.72, 0.28), "unlit": False},
     "track_solid": {"color": (0.88, 0.40, 0.42, 0.55), "unlit": False},
     "approach_solid": {"color": (0.50, 0.55, 0.60, 0.26), "unlit": False},
+    "approach_envelope": {"color": (0.46, 0.50, 0.56, 0.10), "unlit": False},
 }
 
 Point = tuple[float, float, float]
@@ -105,6 +106,24 @@ class Part:
     subsystem: str | None = None
     open_questions: list[str] = field(default_factory=list)
     confidence: str = ""
+    material: str = ""
+    material_id: str = ""
+    material_confidence: str = ""
+    material_sources: list[str] = field(default_factory=list)
+
+    def resolve_material(self, model: ControlModel) -> None:
+        """Attach the material the control document assigns to this part.
+
+        Deliberately does not fold the material grade into `confidence`. A part's dimensional
+        confidence and the confidence that it is made of stone are different claims, and collapsing
+        them would let a grade-D material silently downgrade grade-A geometry -- the same mistake
+        SRC-018 section 5.4 records having made in its own first implementation.
+        """
+        rule = model.material_for(self.part_id)
+        self.material = rule.material
+        self.material_id = rule.material_id
+        self.material_confidence = rule.confidence
+        self.material_sources = list(rule.source_ids)
 
     def resolve_confidence(self, model: ControlModel) -> None:
         """Weakest-link rule from CONFIDENCE-MODEL.md section 1."""
@@ -169,6 +188,10 @@ class Part:
             "control_refs": list(self.control_refs),
             "open_questions": list(self.open_questions),
             "basis_confidence": self.basis_confidence,
+            "material": self.material,
+            "material_id": self.material_id,
+            "material_confidence": self.material_confidence,
+            "material_sources": list(self.material_sources),
             "geometry_kinds": sorted({prim["kind"] for prim in self.geometry}),
             "bbox_prototype_m": {
                 "min": [round(v, 6) for v in bbox["min"]],
@@ -295,6 +318,9 @@ REQUIRED_CONTROL_KEYS = (
     "subway_track_bay_inner_offset",
     "subway_track_spacing_y",
     "subway_track_structure_depth",
+    "approach_bent_spacing",
+    "approach_bent_width_y",
+    "approach_girder_depth",
 )
 
 
@@ -1194,6 +1220,29 @@ def build_parts(model: ControlModel, sk: Skeleton) -> list[Part]:
         )
 
     # --------------------------------------------------------------- approaches
+    #
+    # Two grade-A controls establish that the structure does not stop at the anchorage. CTL-002
+    # puts the lower level's abutments 5790 ft apart and CTL-003 puts the upper roadway's portals
+    # 6090 ft apart, so the decks demonstrably continue 437 m and 483 m respectively beyond the
+    # anchorage face at +/-445 m. Modelling them as a single flat slab, as Milestone 1 did, left the
+    # tracks and steelwork ending in mid-air and understated the sourced extent of the bridge.
+    #
+    # What is NOT sourced is the structural form: bent spacing, girder depth and the grade down to
+    # street level. Those are placeholders (CTL-108..110) tagged to OQ-020, and the approach is
+    # drawn level because no source gives the profile.
+    abut_x = sk.x("STA-ABUT-B")
+    portal_x = sk.x("STA-PORTAL-B")
+    bent_spacing = m("approach_bent_spacing")
+    bent_half_y = m("approach_bent_width_y") / 2.0
+    girder_depth = m("approach_girder_depth")
+
+    approach_extent_refs = ids(
+        "lower_level_abutment_to_abutment", "upper_roadway_portal_to_portal",
+        "total_bridge_and_approaches_length", "anchorage_to_anchorage_suspended_length",
+        "manhattan_approach_and_plaza_length", "brooklyn_approach_and_plaza_length",
+        "deck_overall_width", "anchorage_extent_x", "center_clearance_above_mhw",
+    )
+
     for side, station_id, end_station, direction in (
         ("manhattan", "STA-ANC-M", "STA-APPR-END-M", -1.0),
         ("brooklyn", "STA-ANC-B", "STA-APPR-END-B", 1.0),
@@ -1201,32 +1250,150 @@ def build_parts(model: ControlModel, sk: Skeleton) -> list[Part]:
         inner_x = sk.x(station_id) + direction * m("anchorage_extent_x")
         outer_x = sk.x(end_station)
         x0, x1 = sorted((inner_x, outer_x))
+        lower_end = direction * abut_x
+        upper_end = direction * portal_x
+
+        # Lower level: carries the four tracks and the lower roadway out to the sourced abutment.
+        lo0, lo1 = sorted((inner_x, lower_end))
+        parts.append(
+            Part(
+                part_id=f"{side}_approach_lower_deck",
+                system="approaches",
+                subsystem="lower_roadway",
+                source_basis=["control_dimension", "inferred"],
+                basis_confidence="C",
+                control_refs=approach_extent_refs + ids("approach_girder_depth", "lower_deck_offset_above_clearance"),
+                open_questions=["OQ-002", "OQ-013", "OQ-020"],
+                notes=(
+                    "Lower level carried from the outboard face of the anchorage to the abutment. "
+                    "The extent is sourced: CTL-002 puts the lower level's abutments 5790 ft apart, "
+                    "which is grade A, so this deck exists and reaches this station. Its structural "
+                    "depth and its grade down to street level are not sourced; it is drawn level "
+                    "because inventing a gradient would be worse than admitting there is none. "
+                    "See OQ-020."
+                ),
+                geometry=[box((lo0, -deck_half_w, lower_deck - girder_depth), (lo1, deck_half_w, lower_deck))],
+                style="approach_solid",
+            )
+        )
+
+        # Upper roadway: continues past the abutment to the sourced portal.
+        up0, up1 = sorted((inner_x, upper_end))
+        parts.append(
+            Part(
+                part_id=f"{side}_approach_upper_deck",
+                system="approaches",
+                subsystem="upper_roadway",
+                source_basis=["control_dimension", "inferred"],
+                basis_confidence="C",
+                control_refs=approach_extent_refs + ids("upper_deck_structure_depth"),
+                open_questions=["OQ-002", "OQ-013", "OQ-020"],
+                notes=(
+                    "Upper roadway carried from the anchorage to the portal. CTL-003 puts the "
+                    "portals 6090 ft apart, grade A, which is 300 ft further out than the lower "
+                    "level's abutments - the upper roadway genuinely runs past the end of the lower "
+                    "level. Drawn level; see OQ-020."
+                ),
+                geometry=[box((up0, -deck_half_w, upper_deck - m("upper_deck_structure_depth")),
+                              (up1, deck_half_w, upper_deck))],
+                style="approach_solid",
+            )
+        )
+
+        # Track continuation. The transverse positions are the same placeholders as on the
+        # suspended span; what is new is that the tracks no longer stop in mid-air.
+        for track_id, y in track_planes:
+            parts.append(
+                Part(
+                    part_id=f"{track_id}_approach_{side}",
+                    system="approaches",
+                    subsystem="subway_tracks",
+                    source_basis=["control_dimension", "inferred"],
+                    basis_confidence="C",
+                    control_refs=approach_extent_refs + ids(
+                        "subway_track_gauge", "subway_track_bay_inner_offset",
+                        "subway_track_spacing_y", "subway_track_structure_depth",
+                    ),
+                    open_questions=["OQ-010", "OQ-013", "OQ-020"],
+                    notes=(
+                        f"{track_id} continued across the {side} approach to the abutment. The four "
+                        "tracks have to reach the subway portals, so ending them at the anchorage "
+                        "was a modelling artefact rather than a statement about the bridge. The "
+                        "transverse centreline remains the OQ-010 placeholder and the approach "
+                        "trackwork alignment is unregistered; see OQ-020."
+                    ),
+                    geometry=[
+                        box(
+                            (lo0, y - gauge_half, lower_deck),
+                            (lo1, y + gauge_half, lower_deck + m("subway_track_structure_depth")),
+                        )
+                    ],
+                    style="track_solid",
+                )
+            )
+
+        # Viaduct bents. Placeholder rhythm over a sourced extent, drawn as solid columns because
+        # a line primitive at this scale reads as a stray wire rather than as support.
+        span_lo, span_hi = sorted((inner_x, upper_end))
+        n_bents = max(1, int((span_hi - span_lo) / bent_spacing))
+        bent_solids: list[dict[str, Any]] = []
+        for i in range(1, n_bents + 1):
+            bx = span_lo + (span_hi - span_lo) * i / (n_bents + 1)
+            top = upper_deck if abs(bx) > abs(lower_end) else lower_deck - girder_depth
+            for by in (-deck_half_w + bent_half_y, deck_half_w - bent_half_y):
+                bent_solids.append(
+                    box(
+                        (bx - bent_half_y, by - bent_half_y, 0.0),
+                        (bx + bent_half_y, by + bent_half_y, top),
+                    )
+                )
+        parts.append(
+            Part(
+                part_id=f"{side}_approach_bents",
+                system="approaches",
+                subsystem="substructure",
+                source_basis=["inferred"],
+                basis_confidence="D",
+                control_refs=approach_extent_refs + ids("approach_bent_spacing", "approach_bent_width_y", "approach_girder_depth"),
+                open_questions=["OQ-020"],
+                notes=(
+                    f"{n_bents} viaduct bents per side at a placeholder {bent_spacing / 0.3048:.0f} ft "
+                    "spacing. Nothing about this rhythm is sourced - it exists so the approach reads "
+                    "as a supported viaduct rather than a floating slab, and so a viewer can see "
+                    "there is structure between the anchorage and the street. The bents stop at "
+                    "z = 0 (mean high water) rather than at ground, because no source gives the "
+                    "ground profile under either approach. See OQ-020."
+                ),
+                geometry=bent_solids,
+                style="approach_solid",
+            )
+        )
+
+        # The original single-slab envelope is retained as the overall approach corridor, now
+        # explicitly described as an envelope rather than as structure.
         parts.append(
             Part(
                 part_id=f"{side}_approach",
                 system="approaches",
                 source_basis=["control_dimension", "inferred"],
                 basis_confidence="C",
-                control_refs=ids(
-                    "total_bridge_and_approaches_length", "anchorage_to_anchorage_suspended_length",
-                    "manhattan_approach_and_plaza_length", "brooklyn_approach_and_plaza_length",
-                    "deck_overall_width", "anchorage_extent_x", "center_clearance_above_mhw",
-                    "stiffening_truss_depth_asce", "upper_deck_structure_depth",
-                ),
-                open_questions=["OQ-002", "OQ-006", "OQ-013"],
+                control_refs=approach_extent_refs + ids("upper_deck_structure_depth", "stiffening_truss_depth_asce"),
+                open_questions=["OQ-002", "OQ-006", "OQ-013", "OQ-020"],
                 notes=(
-                    "Approach deck envelope, drawn level from the outboard face of the anchorage to "
-                    "the approach end station. The length split is now a sourced ratio (OQ-006 "
-                    "mitigated), but grade, plan curvature and the continuous Warren truss structure "
-                    "described by SRC-011 are not modelled."
+                    "Overall approach corridor envelope, from the outboard face of the anchorage to "
+                    "the approach end station. This is a bounding volume, not structure: the decks, "
+                    "tracks and bents inside it are separate parts. The end station rests on the "
+                    "sourced length ratio (OQ-006 mitigated); plan curvature and grade are not "
+                    "modelled. See OQ-020."
                 ),
                 geometry=[box((x0, -deck_half_w, truss_top), (x1, deck_half_w, upper_deck))],
-                style="approach_solid",
+                style="approach_envelope",
             )
         )
 
     for part in parts:
         part.resolve_confidence(model)
+        part.resolve_material(model)
     return parts
 
 
@@ -1386,6 +1553,22 @@ def compute_measures(parts: Sequence[Part], model: ControlModel, sk: Skeleton) -
         "anchorage_spacing_m": sk.x("STA-ANC-B") - sk.x("STA-ANC-M"),
         "placeholder_control_count": len(model.placeholders),
         "sourced_control_count": len(model.controls) - len(model.placeholders),
+        # Milestone 6: the approaches must reach the stations two grade-A controls put them at.
+        # Measured off the built geometry rather than recomputed from the controls, so the test
+        # exercises what was actually exported.
+        "approach_lower_deck_outer_x": max(
+            abs(v)
+            for p in parts
+            if p.part_id.endswith("_approach_lower_deck")
+            for v in (p.bbox()["min"][0], p.bbox()["max"][0])
+        ),
+        "approach_upper_deck_outer_x": max(
+            abs(v)
+            for p in parts
+            if p.part_id.endswith("_approach_upper_deck")
+            for v in (p.bbox()["min"][0], p.bbox()["max"][0])
+        ),
+        "parts_without_material": sum(1 for p in parts if not p.material),
     }
 
 
