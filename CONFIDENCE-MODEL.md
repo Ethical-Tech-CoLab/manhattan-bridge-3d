@@ -90,12 +90,18 @@ moved back to the placeholder table.
 Milestone 3 status: the tower caissons and piers are solid volumes whose every dimension comes from directly
 examined period primary sources, so they are graded `A`.
 
+The live counts are emitted by every build into `viewer/metadata/parts.json` and surfaced in the viewer's
+confidence legend, so this table is a snapshot rather than the authority. As of Milestone 7, across 95 parts:
+
 | Grade | Parts | Notes |
 |---|---:|---|
-| A | 25 | Stations, datum, bridge axis, tower centerlines, caissons, piers, sixteen stiffening truss planes. |
-| B | 6 | Tower shafts, anchorages, approach-end stations. |
-| C | 0 | Nothing derived from meshes or photogrammetry yet. |
-| D | 30 | Cables, suspenders, deck and track envelopes, approaches — each blocked by one of the seven remaining placeholders. |
+| A | 33 | Stations, datum, bridge axis, tower centerlines, caissons, piers, tower legs, stiffening truss chords. |
+| B | 4 | Anchorages and the approach-end stations. |
+| C | 0 | **Still nothing derived from a mesh or from photogrammetry.** This band stays empty until an image set is ingested and aligned; see section 6. |
+| D | 58 | Cables, suspenders, deck, tracks and approaches — each blocked by one of the ten remaining placeholders. |
+
+The empty `C` band is the single most informative cell in this table: it records that no photographic or
+photogrammetric evidence has yet entered the model at all.
 
 ---
 
@@ -109,3 +115,80 @@ examined period primary sources, so they are graded `A`.
 | D | red | `#c4453c` |
 
 The viewer's confidence overlay recolours every part by this table so that unverified geometry is visually obvious.
+
+---
+
+## 6. Photographic and crowdsourced evidence
+
+A photograph is the most abundant evidence available for this bridge and the most easily misused.
+This section states exactly what one is allowed to prove, because "we have thousands of tourist
+photos" is true and is *not* the same claim as "we can measure the deck framing".
+
+### 6.1 What a photograph is
+
+A photograph is a projection of a structure onto a plane at one instant, through an unknown lens,
+from an unrecorded position. It records **existence, arrangement, material, condition and date**. It
+does not record **dimension**. Recovering dimension from it requires either a second view with known
+geometry, or a scale reference in frame.
+
+That distinction maps onto the two axes this repository already keeps separate: photographs are
+strong evidence for *geometry provenance* and for *material*, and weak evidence for a *control
+dimension*.
+
+### 6.2 What a photograph may and may not grade
+
+| Claim | Best grade a photograph alone supports | Why |
+|---|---|---|
+| This element exists | `A` for existence, but existence is not a dimension | Visible fact |
+| This element is made of stone | `A` for the material row | Visible fact, if the photograph is registered and dated |
+| These elements are arranged in this order | `B` | Visible, but foreshortening can mislead about spacing |
+| This element is *N* feet long | **`D`. Never higher from a photograph alone.** | A projection without scale control cannot yield a length |
+| This element is *N* feet long, measured against a control dimension visible in the same frame | `B` | This is photogrammetric measurement, and the deviation must be recorded |
+| Geometry from `SfM` aligned to the control skeleton | `C` | Registered to controls, not independent of them |
+| Geometry from `SfM` with surveyed scale control points | `MEASURED`, with a stated Level of Accuracy | The only route to `MEASURED` on this project |
+
+**The rule that follows.** A photograph may promote a *material* row to `A` and may move a part's
+geometry provenance from `ASSUMED` to `INFERRED`. It may not promote a *dimensional* control above
+`D` on its own. Those are different tables and the promotion rules differ.
+
+**A worked example already sitting in the model.** `MAT-010` grades the anchorage masonry `D`
+because no registered source states what it is built from, even though every photograph shows stone.
+That row is not waiting for a drawing. It is waiting for **one registered, licensed, dated
+photograph** of an anchorage face. This is the cheapest grade promotion available in the entire
+repository, and it is the clearest demonstration that the register — not the fact — is the
+bottleneck.
+
+### 6.3 Crowdsourced pools: the three things that go wrong
+
+**Licence, per file, not per pool.** Wikimedia Commons is not a licence; it is a hosting platform
+whose files carry many different licences, some incompatible with redistribution. `SRC-006` records
+"licence must be captured per file" for this reason. `scripts/ingest_sources.py` refuses to ingest a
+file without one.
+
+**Date, because a photograph describes a moment.** The bridge was rehabilitated over decades. A 1970s
+photograph of the truss web is evidence about the 1970s. Every ingested asset records an
+`observed_date` separate from its retrieval date, and geometry derived from it inherits that date.
+
+**Viewpoint bias, which is the subtle one.** Crowdsourced photography is not a random sample of the
+structure. It is overwhelmingly shot from Brooklyn Bridge Park, DUMBO's Washington Street, and the
+pedestrian path — because that is where people stand. That distribution is genuinely useful for the
+**underside and the outboard faces**, which is exactly what aerial survey cannot see. It is close to
+useless for the **interior of the truss bays and the deck framing**, which is exactly where this
+model's remaining placeholders are (`OQ-013`, `OQ-010`).
+
+So the honest expectation is worth stating in advance: a large tourist photo set will improve the
+*layers on top of* the skeleton — material, arrangement, ornament, condition, texture — and will
+probably not retire `OQ-013`. The occlusion is structural, not a matter of sample size. Ten thousand
+photographs from the riverbank still do not see inside a truss bay.
+
+### 6.4 What would retire the placeholders
+
+Ranked by cost, cheapest first:
+
+1. **One licensed photograph of each anchorage and tower face** — promotes `MAT-003` and `MAT-010`,
+   and moves several parts from `ASSUMED` toward `INFERRED`.
+2. **A walkway-level image set along the pedestrian path** — the path runs *inside* the structure,
+   between the trusses. This is the only publicly accessible viewpoint that sees the deck framing,
+   and it is the one capture that could plausibly reach `OQ-013`.
+3. **`SfM` with scale control** — a survey target, or any control dimension physically measured on
+   site. This is what makes `MEASURED` non-zero for the first time.

@@ -141,6 +141,40 @@ single dimension.
 Thirteen conflicts are carried openly in [SOURCE-REGISTER.md](SOURCE-REGISTER.md) rather than
 silently resolved. Seven are settled by weight of evidence.
 
+## Photographs, video and crowdsourced imagery
+
+No photographic evidence has entered this model yet. That is why the confidence `C` band is empty
+and why `MEASURED` provenance is zero -- both are honest readings, not oversights.
+
+Assets enter only through `scripts/ingest_sources.py`, which refuses anything lacking a registered
+`SRC-###`, an explicit licence, an attribution and an **observation date** (the date the image
+records, not the date it was downloaded). Files under a redistributable licence are copied in and
+checksummed; everything else is recorded by reference, so the repository never stores something it
+has no right to.
+
+```powershell
+python scripts/ingest_sources.py --list-sets   # the nine capture zones
+python scripts/ingest_sources.py --verify      # checksums plus coverage against those zones
+```
+
+**What a photograph is allowed to prove** is set out in
+[CONFIDENCE-MODEL.md section 6](CONFIDENCE-MODEL.md). The short version: a photograph can promote a
+**material** row to `A`, and can move a part's geometry provenance from `ASSUMED` to `INFERRED`. It
+cannot promote a **dimensional** control above `D` on its own, because a projection without scale
+control cannot yield a length.
+
+The cheapest promotion available anywhere in this repository is one licensed, dated photograph of an
+anchorage face. `MAT-010` grades the anchorage masonry `D` even though every photograph shows stone,
+because no *registered* source says so. There, the register is the bottleneck, not the fact.
+
+One expectation worth setting in advance. Crowdsourced photography is not a random sample of the
+structure -- it is shot from where people stand, which is the riverbank, the parks and the
+pedestrian path. That is excellent coverage of the **underside and outboard faces**, which is
+exactly what aerial survey cannot see, and poor coverage of the **truss-bay interiors and deck
+framing**, which is exactly where the remaining placeholders are. Ten thousand photographs from
+Brooklyn Bridge Park still do not see inside a truss bay. The occlusion is structural, not a
+sample-size problem.
+
 ## Repository layout
 
 ```text
@@ -184,10 +218,11 @@ NAVD88 happens at placement time, from the frozen shared frame. See GEOMETRY-CON
 | `validate_contract.mjs` | Implemented. Validates every published document, all 81 metadata records, six cross-document invariants, and URL resolution under both deployment layouts. |
 | `verify_placement.py` | Implemented. Re-derives the occupied tile set from the published GLB and compares it with the consuming district's declarations. Exits non-zero while they disagree. |
 | `check_corridor_geodetic.py` | Implemented. Tests the district's tile declarations against the placement axis, using only sourced coordinates. |
-| `ingest_sources.py` | Stub. Milestone 6. |
-| `import_reference_meshes.py` | Stub. Milestone 6. |
-| `align_mesh_to_control.py` | Stub. Milestone 6. |
-| `segment_components.py` | Stub. Milestone 6. |
+| `ingest_sources.py` | Implemented. The only way an asset enters `/sources`. Refuses anything without a registered `SRC-###`, an explicit licence, an attribution and an observation date; stores a copy only under a redistributable licence, and records everything else by reference and checksum. |
+| `adapt_brief_for_bridge.py` | Implemented. Adapts this repository's build brief for a sibling bridge, quarantining the Manhattan control dimensions as a negative control. |
+| `import_reference_meshes.py` | Stub. Milestone 8. |
+| `align_mesh_to_control.py` | Stub. Milestone 8. |
+| `segment_components.py` | Stub. Milestone 8. |
 
 The stubs exit with status 2 and explain what must happen first. They do not silently no-op.
 

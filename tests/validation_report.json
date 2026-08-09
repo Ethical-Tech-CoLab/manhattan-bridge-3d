@@ -723,7 +723,7 @@
       "suite": "source_traceability",
       "mode": "assert",
       "status": "pass",
-      "detail": "21 registered sources"
+      "detail": "24 registered sources"
     },
     {
       "id": "STT-002",
@@ -787,7 +787,7 @@
       "suite": "source_traceability",
       "mode": "assert",
       "status": "pass",
-      "detail": "21 sources carry a verification state"
+      "detail": "24 sources carry a verification state"
     },
     {
       "id": "STT-010",
