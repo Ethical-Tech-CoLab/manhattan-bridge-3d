@@ -3,10 +3,10 @@
   "model": "control_skeleton",
   "milestone": 2,
   "generated_by": "build_control_skeleton.py@1.0.0",
-  "generated_at": "2026-08-09T22:04:58+00:00",
+  "generated_at": "2026-08-09T23:44:26+00:00",
   "control_document": {
     "path": "GEOMETRY-CONTROL.md",
-    "sha256": "356263280ac96281d5a0d5cf72f952c16ea3ac537ac52301aa6eecc806645187"
+    "sha256": "83ba243db2dffb0802dd63f5095b85ca1f06459a1fa4da6bdf4529800c6e17e4"
   },
   "source_register": "SOURCE-REGISTER.md",
   "confidence_model": "CONFIDENCE-MODEL.md",
@@ -75,6 +75,16 @@
           "tower_brooklyn_leg_c",
           "tower_brooklyn_leg_d",
           "tower_brooklyn_bracing"
+        ],
+        "arches": [
+          "tower_manhattan_arch_lower",
+          "tower_manhattan_arch_upper",
+          "tower_brooklyn_arch_lower",
+          "tower_brooklyn_arch_upper"
+        ],
+        "ornament": [
+          "tower_manhattan_finials",
+          "tower_brooklyn_finials"
         ]
       }
     },
@@ -1066,7 +1076,7 @@
       ],
       "confidence": "B",
       "is_placeholder": false,
-      "notes": "Ornamental finials above high water. Recorded, not used for geometry.",
+      "notes": "Ornamental finials above high water. **Now used**: with CTL-018 it derives CTL-113, the finial height above the saddle, which is what the tower-top ornament is built from.",
       "ho": {
         "prototype_m": 106.68,
         "prototype_ft": 350.0,
@@ -2136,15 +2146,61 @@
         "ho_in": 1.38,
         "ho_ft": 0.11
       }
+    },
+    {
+      "control_id": "CTL-111",
+      "key": "tower_arch_height_to_width_ratio",
+      "value": 3.3,
+      "unit": "ratio",
+      "value_m": 3.3,
+      "source_ids": [],
+      "confidence": "D",
+      "is_placeholder": true,
+      "notes": "PLACEHOLDER, but not arbitrary: **measured off the HAER photograph** (SRC-018) by `scripts/measure_arch_from_photo.py`, which reports 162 px tall against 49 px wide for the lower opening. A ratio survives an uncalibrated projection where a length does not, so this is the one quantity that image is asked to supply. The *width* it multiplies is sourced (the gap between the centre legs, from CTL-056 and the truss offsets); the ratio is not. See OQ-023.",
+      "ho": null
+    },
+    {
+      "control_id": "CTL-112",
+      "key": "tower_arch_head_rise_fraction",
+      "value": 0.5,
+      "unit": "ratio",
+      "value_m": 0.5,
+      "source_ids": [],
+      "confidence": "D",
+      "is_placeholder": true,
+      "notes": "PLACEHOLDER. Fraction of the arch width taken by the rounded head, i.e. a semicircular head. The photograph shows the void narrowing at the top over a parallel-sided shaft, which is a round head; the exact rise is not measurable from one uncalibrated view. See OQ-023.",
+      "ho": null
+    },
+    {
+      "control_id": "CTL-113",
+      "key": "tower_finial_top_above_saddle",
+      "value": 27.5,
+      "unit": "ft",
+      "value_m": 8.382,
+      "source_ids": [
+        "SRC-012",
+        "SRC-015"
+      ],
+      "confidence": "B",
+      "is_placeholder": false,
+      "notes": "**Derived, not guessed.** CTL-020 puts the ornamental finials 350 ft above high water and CTL-018 puts the cable saddle at 322.5 ft, so the finials stand 27.5 ft above the saddle. Both inputs are registered, so this inherits the weaker of their grades. It is the *height* only: the shape of the casting is unregistered, see OQ-023.",
+      "ho": {
+        "prototype_m": 8.382,
+        "prototype_ft": 27.5,
+        "prototype_in": 330.0,
+        "ho_mm": 96.2,
+        "ho_in": 3.79,
+        "ho_ft": 0.32
+      }
     }
   ],
   "measures": {
-    "part_count": 95,
+    "part_count": 101,
     "confidence_histogram": {
       "A": 33,
       "B": 4,
       "C": 0,
-      "D": 58
+      "D": 64
     },
     "suspender_segment_count": 516,
     "suspender_pitch_m": 5.671594936708861,
@@ -2165,11 +2221,11 @@
       "max": [
         1027.4976639344263,
         27.736800000000002,
-        98.56724
+        106.68
       ]
     },
     "model_length_prototype_m": 2089.404,
-    "model_height_prototype_m": 126.60884,
+    "model_height_prototype_m": 134.72160000000002,
     "model_width_prototype_m": 55.473600000000005,
     "single_main_cable_polyline_length_m": 921.5056781379687,
     "cable_sag_main_span_m": 48.9204,
@@ -2178,23 +2234,23 @@
     "deck_centerline_length_m": 2089.404,
     "tower_spacing_m": 448.05600000000004,
     "anchorage_spacing_m": 890.0160000000001,
-    "placeholder_control_count": 10,
-    "sourced_control_count": 62,
+    "placeholder_control_count": 12,
+    "sourced_control_count": 63,
     "approach_lower_deck_outer_x": 882.3960000000001,
     "approach_upper_deck_outer_x": 928.1160000000001,
     "parts_without_material": 0,
     "geometry_provenance_tally": {
       "MEASURED": 0,
       "DOCUMENTED": 37,
-      "INFERRED": 56,
-      "ASSUMED": 2
+      "INFERRED": 60,
+      "ASSUMED": 4
     },
     "parts_measured": 0,
     "parts_documented": 37,
-    "parts_assumed": 2,
+    "parts_assumed": 4,
     "parts_without_provenance": 0,
     "deck_longitudinal_gap_m": 0.0,
-    "geometry_fingerprint": "sha256:0b7910732ce9556c"
+    "geometry_fingerprint": "sha256:cbf0c6528d9c357f"
   },
   "parts": [
     {
@@ -3432,6 +3488,197 @@
       }
     },
     {
+      "part_id": "tower_manhattan_arch_lower",
+      "system": "towers",
+      "subsystem": "arches",
+      "source_basis": [
+        "control_dimension",
+        "photo",
+        "inferred"
+      ],
+      "confidence": "D",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Lower arch opening between the two centre tower legs. SRC-018's photograph establishes that this opening exists, that its head is round, and where it sits relative to the legs and the deck. Its width is sourced, being the gap between the centre legs; its height is CTL-111, a proportion measured off that photograph by scripts/measure_arch_from_photo.py, and the head rise is CTL-112. No source dimensions this opening, so the part is graded D. Modelled as a spandrel rather than a cut hole, so it is real selectable geometry rather than painted detail. See OQ-023.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-005",
+        "CTL-030",
+        "CTL-018",
+        "CTL-022",
+        "CTL-058",
+        "CTL-111",
+        "CTL-112"
+      ],
+      "open_questions": [
+        "OQ-007",
+        "OQ-023"
+      ],
+      "basis_confidence": "D",
+      "geometry_provenance": "INFERRED",
+      "material": "steel_structural",
+      "material_id": "MAT-020",
+      "material_confidence": "B",
+      "material_sources": [
+        "SRC-016"
+      ],
+      "geometry_kinds": [
+        "box"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          -224.79,
+          -7.62,
+          7.0104
+        ],
+        "max": [
+          -223.266,
+          7.62,
+          38.416992
+        ],
+        "size": [
+          1.524,
+          15.24,
+          31.406592
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          17.5,
+          174.97,
+          360.58
+        ]
+      }
+    },
+    {
+      "part_id": "tower_manhattan_arch_upper",
+      "system": "towers",
+      "subsystem": "arches",
+      "source_basis": [
+        "control_dimension",
+        "photo",
+        "inferred"
+      ],
+      "confidence": "D",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Upper arch opening between the two centre tower legs. SRC-018's photograph establishes that this opening exists, that its head is round, and where it sits relative to the legs and the deck. Its width is sourced, being the gap between the centre legs; its height is CTL-111, a proportion measured off that photograph by scripts/measure_arch_from_photo.py, and the head rise is CTL-112. No source dimensions this opening, so the part is graded D. Modelled as a spandrel rather than a cut hole, so it is real selectable geometry rather than painted detail. See OQ-023.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-005",
+        "CTL-030",
+        "CTL-018",
+        "CTL-022",
+        "CTL-058",
+        "CTL-111",
+        "CTL-112"
+      ],
+      "open_questions": [
+        "OQ-007",
+        "OQ-023"
+      ],
+      "basis_confidence": "D",
+      "geometry_provenance": "INFERRED",
+      "material": "steel_structural",
+      "material_id": "MAT-020",
+      "material_confidence": "B",
+      "material_sources": [
+        "SRC-016"
+      ],
+      "geometry_kinds": [
+        "box"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          -224.79,
+          -7.62,
+          48.4632
+        ],
+        "max": [
+          -223.266,
+          7.62,
+          88.6968
+        ],
+        "size": [
+          1.524,
+          15.24,
+          40.2336
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          17.5,
+          174.97,
+          461.92
+        ]
+      }
+    },
+    {
+      "part_id": "tower_manhattan_finials",
+      "system": "towers",
+      "subsystem": "ornament",
+      "source_basis": [
+        "photo",
+        "inferred"
+      ],
+      "confidence": "D",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Ornamental cap on each of the four tower columns, clearly present in SRC-018's photograph and dimensioned by no registered source. Drawn as a two-stage stepped cap because that is what the photograph shows in silhouette; the detail of the casting is not modelled. CTL-113 is a frank guess at the height. Pure ornament: no other geometry depends on it. See OQ-023.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-005",
+        "CTL-018",
+        "CTL-058",
+        "CTL-056",
+        "CTL-113"
+      ],
+      "open_questions": [
+        "OQ-023"
+      ],
+      "basis_confidence": "D",
+      "geometry_provenance": "ASSUMED",
+      "material": "steel_structural",
+      "material_id": "MAT-021",
+      "material_confidence": "C",
+      "material_sources": [
+        "SRC-012"
+      ],
+      "geometry_kinds": [
+        "box"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          -224.7138,
+          -15.3162,
+          98.298
+        ],
+        "max": [
+          -223.3422,
+          15.3162,
+          106.68
+        ],
+        "size": [
+          1.3716,
+          30.6324,
+          8.382
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          15.75,
+          351.69,
+          96.23
+        ]
+      }
+    },
+    {
       "part_id": "tower_brooklyn_centerline",
       "system": "towers",
       "subsystem": "centerlines",
@@ -3904,6 +4151,197 @@
           0.0,
           335.94,
           723.17
+        ]
+      }
+    },
+    {
+      "part_id": "tower_brooklyn_arch_lower",
+      "system": "towers",
+      "subsystem": "arches",
+      "source_basis": [
+        "control_dimension",
+        "photo",
+        "inferred"
+      ],
+      "confidence": "D",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Lower arch opening between the two centre tower legs. SRC-018's photograph establishes that this opening exists, that its head is round, and where it sits relative to the legs and the deck. Its width is sourced, being the gap between the centre legs; its height is CTL-111, a proportion measured off that photograph by scripts/measure_arch_from_photo.py, and the head rise is CTL-112. No source dimensions this opening, so the part is graded D. Modelled as a spandrel rather than a cut hole, so it is real selectable geometry rather than painted detail. See OQ-023.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-005",
+        "CTL-030",
+        "CTL-018",
+        "CTL-022",
+        "CTL-058",
+        "CTL-111",
+        "CTL-112"
+      ],
+      "open_questions": [
+        "OQ-007",
+        "OQ-023"
+      ],
+      "basis_confidence": "D",
+      "geometry_provenance": "INFERRED",
+      "material": "steel_structural",
+      "material_id": "MAT-020",
+      "material_confidence": "B",
+      "material_sources": [
+        "SRC-016"
+      ],
+      "geometry_kinds": [
+        "box"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          223.266,
+          -7.62,
+          7.0104
+        ],
+        "max": [
+          224.79,
+          7.62,
+          38.416992
+        ],
+        "size": [
+          1.524,
+          15.24,
+          31.406592
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          17.5,
+          174.97,
+          360.58
+        ]
+      }
+    },
+    {
+      "part_id": "tower_brooklyn_arch_upper",
+      "system": "towers",
+      "subsystem": "arches",
+      "source_basis": [
+        "control_dimension",
+        "photo",
+        "inferred"
+      ],
+      "confidence": "D",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Upper arch opening between the two centre tower legs. SRC-018's photograph establishes that this opening exists, that its head is round, and where it sits relative to the legs and the deck. Its width is sourced, being the gap between the centre legs; its height is CTL-111, a proportion measured off that photograph by scripts/measure_arch_from_photo.py, and the head rise is CTL-112. No source dimensions this opening, so the part is graded D. Modelled as a spandrel rather than a cut hole, so it is real selectable geometry rather than painted detail. See OQ-023.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-005",
+        "CTL-030",
+        "CTL-018",
+        "CTL-022",
+        "CTL-058",
+        "CTL-111",
+        "CTL-112"
+      ],
+      "open_questions": [
+        "OQ-007",
+        "OQ-023"
+      ],
+      "basis_confidence": "D",
+      "geometry_provenance": "INFERRED",
+      "material": "steel_structural",
+      "material_id": "MAT-020",
+      "material_confidence": "B",
+      "material_sources": [
+        "SRC-016"
+      ],
+      "geometry_kinds": [
+        "box"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          223.266,
+          -7.62,
+          48.4632
+        ],
+        "max": [
+          224.79,
+          7.62,
+          88.6968
+        ],
+        "size": [
+          1.524,
+          15.24,
+          40.2336
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          17.5,
+          174.97,
+          461.92
+        ]
+      }
+    },
+    {
+      "part_id": "tower_brooklyn_finials",
+      "system": "towers",
+      "subsystem": "ornament",
+      "source_basis": [
+        "photo",
+        "inferred"
+      ],
+      "confidence": "D",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Ornamental cap on each of the four tower columns, clearly present in SRC-018's photograph and dimensioned by no registered source. Drawn as a two-stage stepped cap because that is what the photograph shows in silhouette; the detail of the casting is not modelled. CTL-113 is a frank guess at the height. Pure ornament: no other geometry depends on it. See OQ-023.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-005",
+        "CTL-018",
+        "CTL-058",
+        "CTL-056",
+        "CTL-113"
+      ],
+      "open_questions": [
+        "OQ-023"
+      ],
+      "basis_confidence": "D",
+      "geometry_provenance": "ASSUMED",
+      "material": "steel_structural",
+      "material_id": "MAT-021",
+      "material_confidence": "C",
+      "material_sources": [
+        "SRC-012"
+      ],
+      "geometry_kinds": [
+        "box"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          223.3422,
+          -15.3162,
+          98.298
+        ],
+        "max": [
+          224.7138,
+          15.3162,
+          106.68
+        ],
+        "size": [
+          1.3716,
+          30.6324,
+          8.382
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          15.75,
+          351.69,
+          96.23
         ]
       }
     },

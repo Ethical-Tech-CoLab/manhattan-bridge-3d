@@ -1802,6 +1802,279 @@
       }
     },
     {
+      "asset_id": "urn:d3d:manhattan-bridge:tower_manhattan_arch_lower",
+      "local_id": "tower_manhattan_arch_lower",
+      "module_id": "manhattan-bridge",
+      "display_name": "tower manhattan arch lower",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "towers",
+        "subsystem": "arches",
+        "path": [
+          "towers",
+          "arches"
+        ]
+      },
+      "source_basis": [
+        "control_dimension",
+        "photo",
+        "inferred"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-002",
+        "SRC-011",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "D",
+      "basis_confidence": "D",
+      "control_refs": [
+        "CTL-005",
+        "CTL-030",
+        "CTL-018",
+        "CTL-022",
+        "CTL-058",
+        "CTL-111",
+        "CTL-112"
+      ],
+      "open_questions": [
+        "OQ-007",
+        "OQ-023"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Lower arch opening between the two centre tower legs. SRC-018's photograph establishes that this opening exists, that its head is round, and where it sits relative to the legs and the deck. Its width is sourced, being the gap between the centre legs; its height is CTL-111, a proportion measured off that photograph by scripts/measure_arch_from_photo.py, and the head rise is CTL-112. No source dimensions this opening, so the part is graded D. Modelled as a spandrel rather than a cut hole, so it is real selectable geometry rather than painted detail. See OQ-023.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              17.5,
+              174.97,
+              360.58
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "box"
+          ],
+          "geometry_provenance": "INFERRED",
+          "material": "steel_structural",
+          "material_id": "MAT-020",
+          "material_confidence": "B",
+          "material_sources": [
+            "SRC-016"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -224.79,
+          -7.62,
+          7.0104
+        ],
+        "max": [
+          -223.266,
+          7.62,
+          38.416992
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          -224.028,
+          0.0,
+          22.7137
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:tower_manhattan_arch_upper",
+      "local_id": "tower_manhattan_arch_upper",
+      "module_id": "manhattan-bridge",
+      "display_name": "tower manhattan arch upper",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "towers",
+        "subsystem": "arches",
+        "path": [
+          "towers",
+          "arches"
+        ]
+      },
+      "source_basis": [
+        "control_dimension",
+        "photo",
+        "inferred"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-002",
+        "SRC-011",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "D",
+      "basis_confidence": "D",
+      "control_refs": [
+        "CTL-005",
+        "CTL-030",
+        "CTL-018",
+        "CTL-022",
+        "CTL-058",
+        "CTL-111",
+        "CTL-112"
+      ],
+      "open_questions": [
+        "OQ-007",
+        "OQ-023"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Upper arch opening between the two centre tower legs. SRC-018's photograph establishes that this opening exists, that its head is round, and where it sits relative to the legs and the deck. Its width is sourced, being the gap between the centre legs; its height is CTL-111, a proportion measured off that photograph by scripts/measure_arch_from_photo.py, and the head rise is CTL-112. No source dimensions this opening, so the part is graded D. Modelled as a spandrel rather than a cut hole, so it is real selectable geometry rather than painted detail. See OQ-023.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              17.5,
+              174.97,
+              461.92
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "box"
+          ],
+          "geometry_provenance": "INFERRED",
+          "material": "steel_structural",
+          "material_id": "MAT-020",
+          "material_confidence": "B",
+          "material_sources": [
+            "SRC-016"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -224.79,
+          -7.62,
+          48.4632
+        ],
+        "max": [
+          -223.266,
+          7.62,
+          88.6968
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          -224.028,
+          0.0,
+          68.58
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:tower_manhattan_finials",
+      "local_id": "tower_manhattan_finials",
+      "module_id": "manhattan-bridge",
+      "display_name": "tower manhattan finials",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "towers",
+        "subsystem": "ornament",
+        "path": [
+          "towers",
+          "ornament"
+        ]
+      },
+      "source_basis": [
+        "photo",
+        "inferred"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-002",
+        "SRC-011",
+        "SRC-012",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "D",
+      "basis_confidence": "D",
+      "control_refs": [
+        "CTL-005",
+        "CTL-018",
+        "CTL-058",
+        "CTL-056",
+        "CTL-113"
+      ],
+      "open_questions": [
+        "OQ-023"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Ornamental cap on each of the four tower columns, clearly present in SRC-018's photograph and dimensioned by no registered source. Drawn as a two-stage stepped cap because that is what the photograph shows in silhouette; the detail of the casting is not modelled. CTL-113 is a frank guess at the height. Pure ornament: no other geometry depends on it. See OQ-023.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              15.75,
+              351.69,
+              96.23
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "box"
+          ],
+          "geometry_provenance": "ASSUMED",
+          "material": "steel_structural",
+          "material_id": "MAT-021",
+          "material_confidence": "C",
+          "material_sources": [
+            "SRC-012"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -224.7138,
+          -15.3162,
+          98.298
+        ],
+        "max": [
+          -223.3422,
+          15.3162,
+          106.68
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          -224.028,
+          0.0,
+          102.489
+        ]
+      }
+    },
+    {
       "asset_id": "urn:d3d:manhattan-bridge:tower_brooklyn_centerline",
       "local_id": "tower_brooklyn_centerline",
       "module_id": "manhattan-bridge",
@@ -2484,6 +2757,279 @@
           224.028,
           0.0,
           64.0652
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:tower_brooklyn_arch_lower",
+      "local_id": "tower_brooklyn_arch_lower",
+      "module_id": "manhattan-bridge",
+      "display_name": "tower brooklyn arch lower",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "towers",
+        "subsystem": "arches",
+        "path": [
+          "towers",
+          "arches"
+        ]
+      },
+      "source_basis": [
+        "control_dimension",
+        "photo",
+        "inferred"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-002",
+        "SRC-011",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "D",
+      "basis_confidence": "D",
+      "control_refs": [
+        "CTL-005",
+        "CTL-030",
+        "CTL-018",
+        "CTL-022",
+        "CTL-058",
+        "CTL-111",
+        "CTL-112"
+      ],
+      "open_questions": [
+        "OQ-007",
+        "OQ-023"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Lower arch opening between the two centre tower legs. SRC-018's photograph establishes that this opening exists, that its head is round, and where it sits relative to the legs and the deck. Its width is sourced, being the gap between the centre legs; its height is CTL-111, a proportion measured off that photograph by scripts/measure_arch_from_photo.py, and the head rise is CTL-112. No source dimensions this opening, so the part is graded D. Modelled as a spandrel rather than a cut hole, so it is real selectable geometry rather than painted detail. See OQ-023.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              17.5,
+              174.97,
+              360.58
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "box"
+          ],
+          "geometry_provenance": "INFERRED",
+          "material": "steel_structural",
+          "material_id": "MAT-020",
+          "material_confidence": "B",
+          "material_sources": [
+            "SRC-016"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          223.266,
+          -7.62,
+          7.0104
+        ],
+        "max": [
+          224.79,
+          7.62,
+          38.416992
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          224.028,
+          0.0,
+          22.7137
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:tower_brooklyn_arch_upper",
+      "local_id": "tower_brooklyn_arch_upper",
+      "module_id": "manhattan-bridge",
+      "display_name": "tower brooklyn arch upper",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "towers",
+        "subsystem": "arches",
+        "path": [
+          "towers",
+          "arches"
+        ]
+      },
+      "source_basis": [
+        "control_dimension",
+        "photo",
+        "inferred"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-002",
+        "SRC-011",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "D",
+      "basis_confidence": "D",
+      "control_refs": [
+        "CTL-005",
+        "CTL-030",
+        "CTL-018",
+        "CTL-022",
+        "CTL-058",
+        "CTL-111",
+        "CTL-112"
+      ],
+      "open_questions": [
+        "OQ-007",
+        "OQ-023"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Upper arch opening between the two centre tower legs. SRC-018's photograph establishes that this opening exists, that its head is round, and where it sits relative to the legs and the deck. Its width is sourced, being the gap between the centre legs; its height is CTL-111, a proportion measured off that photograph by scripts/measure_arch_from_photo.py, and the head rise is CTL-112. No source dimensions this opening, so the part is graded D. Modelled as a spandrel rather than a cut hole, so it is real selectable geometry rather than painted detail. See OQ-023.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              17.5,
+              174.97,
+              461.92
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "box"
+          ],
+          "geometry_provenance": "INFERRED",
+          "material": "steel_structural",
+          "material_id": "MAT-020",
+          "material_confidence": "B",
+          "material_sources": [
+            "SRC-016"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          223.266,
+          -7.62,
+          48.4632
+        ],
+        "max": [
+          224.79,
+          7.62,
+          88.6968
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          224.028,
+          0.0,
+          68.58
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:tower_brooklyn_finials",
+      "local_id": "tower_brooklyn_finials",
+      "module_id": "manhattan-bridge",
+      "display_name": "tower brooklyn finials",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "towers",
+        "subsystem": "ornament",
+        "path": [
+          "towers",
+          "ornament"
+        ]
+      },
+      "source_basis": [
+        "photo",
+        "inferred"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-002",
+        "SRC-011",
+        "SRC-012",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "D",
+      "basis_confidence": "D",
+      "control_refs": [
+        "CTL-005",
+        "CTL-018",
+        "CTL-058",
+        "CTL-056",
+        "CTL-113"
+      ],
+      "open_questions": [
+        "OQ-023"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Ornamental cap on each of the four tower columns, clearly present in SRC-018's photograph and dimensioned by no registered source. Drawn as a two-stage stepped cap because that is what the photograph shows in silhouette; the detail of the casting is not modelled. CTL-113 is a frank guess at the height. Pure ornament: no other geometry depends on it. See OQ-023.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              15.75,
+              351.69,
+              96.23
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "box"
+          ],
+          "geometry_provenance": "ASSUMED",
+          "material": "steel_structural",
+          "material_id": "MAT-021",
+          "material_confidence": "C",
+          "material_sources": [
+            "SRC-012"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          223.3422,
+          -15.3162,
+          98.298
+        ],
+        "max": [
+          224.7138,
+          15.3162,
+          106.68
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          224.028,
+          0.0,
+          102.489
         ]
       }
     },
@@ -8461,11 +9007,11 @@
   "provenance": {
     "module_id": "manhattan-bridge",
     "generated_by": "publish_module_contract.py via build_control_skeleton.py@1.0.0",
-    "generated_at": "2026-08-09T22:08:42+00:00",
+    "generated_at": "2026-08-09T23:44:28+00:00",
     "source_documents": [
       {
         "path": "GEOMETRY-CONTROL.md",
-        "sha256": "356263280ac96281d5a0d5cf72f952c16ea3ac537ac52301aa6eecc806645187"
+        "sha256": "83ba243db2dffb0802dd63f5095b85ca1f06459a1fa4da6bdf4529800c6e17e4"
       }
     ]
   }

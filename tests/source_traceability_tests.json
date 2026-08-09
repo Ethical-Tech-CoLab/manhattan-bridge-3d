@@ -24,7 +24,9 @@
       "kind": "traceability",
       "rule": "graded_controls_have_sources",
       "mode": "assert",
-      "refs": ["SOURCE-REGISTER.md rule 1"]
+      "refs": [
+        "SOURCE-REGISTER.md rule 1"
+      ]
     },
     {
       "id": "STT-003",
@@ -57,12 +59,16 @@
     },
     {
       "id": "STT-007",
-      "title": "No part claims a drawing, photo, mesh or photogrammetry basis in Milestone 1",
+      "title": "Only source bases the register actually supports may be claimed",
       "kind": "traceability",
       "rule": "forbidden_source_basis",
-      "forbidden": ["drawing", "photo", "mesh_reference", "photogrammetry"],
+      "forbidden": [
+        "drawing",
+        "mesh_reference",
+        "photogrammetry"
+      ],
       "mode": "assert",
-      "rationale": "Milestone 1 imports no external sources. Any such basis would be an unsupported claim."
+      "rationale": "Milestone 1 forbade every non-dimensional basis because nothing had been ingested. At Milestone 8 'photo' became legitimate: SRC-018 is registered, CC BY 4.0, verified, and its photographs are ingested under sources/ with licence records and checksums. The other three stay forbidden because no drawing, mesh or photogrammetry asset exists in this repository yet. The test now guards that boundary rather than enforcing a blanket ban."
     },
     {
       "id": "STT-008",
@@ -70,7 +76,9 @@
       "kind": "traceability",
       "rule": "verification_pending_census",
       "mode": "report_only",
-      "refs": ["SOURCE-REGISTER.md rule 2"]
+      "refs": [
+        "SOURCE-REGISTER.md rule 2"
+      ]
     },
     {
       "id": "STT-009",
@@ -95,7 +103,9 @@
         "details"
       ],
       "mode": "assert",
-      "refs": ["AGENT-INSTRUCTIONS.md section 6"]
+      "refs": [
+        "AGENT-INSTRUCTIONS.md section 6"
+      ]
     },
     {
       "id": "STT-011",
@@ -103,7 +113,9 @@
       "kind": "traceability",
       "rule": "parts_have_review_fields",
       "mode": "assert",
-      "refs": ["AGENT-INSTRUCTIONS.md section 11"]
+      "refs": [
+        "AGENT-INSTRUCTIONS.md section 11"
+      ]
     },
     {
       "id": "STT-012",

@@ -412,10 +412,10 @@
     },
     {
       "id": "GRT-033",
-      "title": "Model vertical extent spans caisson underside to the top of the cable at the saddle",
+      "title": "Model vertical extent spans caisson underside to the top of the tower finials",
       "kind": "measure",
       "measure": "model_height_prototype_m",
-      "expected": 126.6088,
+      "expected": 134.7216,
       "unit": "m",
       "tolerance": 0.002,
       "mode": "assert",
@@ -424,7 +424,7 @@
         "CTL-031",
         "CTL-042"
       ],
-      "rationale": "92 ft below MHW plus 322.5 ft to the saddle plus half the 21.2 in cable diameter, because the cable is drawn as a solid tube whose centreline sits at the saddle elevation."
+      "rationale": "92 ft below MHW to the top of the ornamental finials at 350 ft above MHW (CTL-020). Raised at Milestone 8 from the previous saddle-topped figure: the finials are now modelled, and CTL-020 puts them 27.5 ft above the cable saddle, so the model legitimately reaches higher than it did. The old expectation was not wrong; it described a model that stopped at the cables."
     },
     {
       "id": "GRT-034",
@@ -845,14 +845,14 @@
       "title": "Placeholder count has not regressed since Milestone 2",
       "kind": "measure",
       "measure": "placeholder_control_count",
-      "expected": 10,
+      "expected": 12,
       "unit": "count",
       "tolerance": 0,
       "mode": "assert",
       "refs": [
         "GEOMETRY-CONTROL.md section 3"
       ],
-      "rationale": "A ratchet. Adding a placeholder without retiring another fails the suite; retiring one requires updating this expectation downward. Raised 7 -> 10 at Milestone 6 for CTL-108, CTL-109 and CTL-110, the approach viaduct's bent spacing, bent width and girder depth. This is a deliberate, argued increase, not a relaxation: the approaches were previously drawn as a single flat slab, which concealed the fact that the structural form of 437 m of lower level and 483 m of upper roadway per side was entirely unknown. Modelling that structure makes three specific unknowns visible and countable where before there were none, which is the direction this ratchet is meant to encourage. The extent those placeholders are applied over is grade A (CTL-002, CTL-003). See OQ-020."
+      "rationale": "A ratchet. Adding a placeholder without retiring another fails the suite. Raised 10 -> 12 at Milestone 8 for CTL-111 and CTL-112, the tower arch proportion and head rise. An argued increase: the towers were previously plain tapered boxes, silently omitting the two large arch openings SRC-018's photograph shows on every tower. Modelling them makes two specific unknowns countable where the whole opening was previously absent. CTL-113, the finial height, is NOT a placeholder: it is derived from CTL-020 and CTL-018, both registered."
     },
     {
       "id": "GRT-071",
@@ -924,14 +924,14 @@
       "refs": [
         "SRC-018 VISUAL-MODEL-FRAMEWORK.md section 5.4"
       ],
-      "rationale": "Geometry provenance is rendered as line style, so a part without one would be drawn with no uncertainty signal at all — the silent failure the two-field schema exists to prevent."
+      "rationale": "Geometry provenance is rendered as line style, so a part without one would be drawn with no uncertainty signal at all \u2014 the silent failure the two-field schema exists to prevent."
     },
     {
       "id": "GRT-076",
       "title": "Assumed geometry is confined to elements no source mentions",
       "kind": "measure",
       "measure": "parts_assumed",
-      "expected": 2,
+      "expected": 4,
       "unit": "count",
       "tolerance": 0,
       "mode": "assert",
@@ -939,7 +939,7 @@
         "GEOMETRY-CONTROL.md section 5, OQ-020",
         "SRC-018 VISUAL-MODEL-FRAMEWORK.md section 5.4"
       ],
-      "rationale": "Only the two approach bent groups are ASSUMED: no registered source mentions a bent on either approach. Everything else expresses at least one sourced control, which makes it INFERRED rather than ASSUMED. A rise here means geometry was added that nothing documents, which is the one thing this project must not do quietly."
+      "rationale": "ASSUMED means no sourced control speaks to the element at all. Four parts qualify: the two approach bent groups, and at Milestone 8 the two tower finial groups. The finials' HEIGHT is sourced via CTL-113, but their SHAPE is not -- no registered source describes the casting, so the stepped cap is engineering judgement about form. A rise beyond 4 means geometry was added that nothing documents."
     },
     {
       "id": "GRT-077",
@@ -954,7 +954,7 @@
         "CTL-002",
         "CTL-052"
       ],
-      "rationale": "CTL-002 describes the lower level as running abutment to abutment, so it cannot break. Until Milestone 7 the approach decks and all four tracks started at the anchorage's outboard face rather than its cable point, leaving a 72.2 m hole per side — the anchorage's own length — where the roadway and rails simply stopped and resumed. The roadways pass through the anchorage, which is why CTL-052 registers a 46 ft thoroughfare arch through each one. This measures the largest longitudinal gap in the lower-level chain and asserts it is closed."
+      "rationale": "CTL-002 describes the lower level as running abutment to abutment, so it cannot break. Until Milestone 7 the approach decks and all four tracks started at the anchorage's outboard face rather than its cable point, leaving a 72.2 m hole per side \u2014 the anchorage's own length \u2014 where the roadway and rails simply stopped and resumed. The roadways pass through the anchorage, which is why CTL-052 registers a 46 ft thoroughfare arch through each one. This measures the largest longitudinal gap in the lower-level chain and asserts it is closed."
     },
     {
       "id": "GRT-078",

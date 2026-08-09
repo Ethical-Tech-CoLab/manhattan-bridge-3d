@@ -3,10 +3,10 @@
   "model": "control_skeleton",
   "milestone": 2,
   "generated_by": "build_control_skeleton.py@1.0.0",
-  "generated_at": "2026-08-09T22:04:58+00:00",
+  "generated_at": "2026-08-09T23:44:26+00:00",
   "control_document": {
     "path": "GEOMETRY-CONTROL.md",
-    "sha256": "356263280ac96281d5a0d5cf72f952c16ea3ac537ac52301aa6eecc806645187"
+    "sha256": "83ba243db2dffb0802dd63f5095b85ca1f06459a1fa4da6bdf4529800c6e17e4"
   },
   "source_register": "SOURCE-REGISTER.md",
   "confidence_model": "CONFIDENCE-MODEL.md",
@@ -804,6 +804,18 @@
       "ho_mm": 35.0,
       "ho_in": 1.38,
       "ho_ft": 0.11
+    },
+    {
+      "control_id": "CTL-113",
+      "key": "tower_finial_top_above_saddle",
+      "prototype": "27.5 ft",
+      "confidence": "B",
+      "prototype_m": 8.382,
+      "prototype_ft": 27.5,
+      "prototype_in": 330.0,
+      "ho_mm": 96.2,
+      "ho_in": 3.79,
+      "ho_ft": 0.32
     }
   ]
 }

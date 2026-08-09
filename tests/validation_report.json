@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "control_document_sha256": "356263280ac96281d5a0d5cf72f952c16ea3ac537ac52301aa6eecc806645187",
-  "built_from_sha256": "356263280ac96281d5a0d5cf72f952c16ea3ac537ac52301aa6eecc806645187",
+  "control_document_sha256": "83ba243db2dffb0802dd63f5095b85ca1f06459a1fa4da6bdf4529800c6e17e4",
+  "built_from_sha256": "83ba243db2dffb0802dd63f5095b85ca1f06459a1fa4da6bdf4529800c6e17e4",
   "generated_by_build": "build_control_skeleton.py@1.0.0",
   "summary": {
     "pass": 74,
@@ -320,14 +320,14 @@
     },
     {
       "id": "GRT-033",
-      "title": "Model vertical extent spans caisson underside to the top of the cable at the saddle",
+      "title": "Model vertical extent spans caisson underside to the top of the tower finials",
       "suite": "geometry_regression",
       "mode": "assert",
       "status": "pass",
-      "detail": "actual 126.609 m, expected 126.609 m, deviation +4e-05",
-      "actual": 126.60884,
-      "expected": 126.6088,
-      "deviation": 4e-05
+      "detail": "actual 134.722 m, expected 134.722 m, deviation +2.84e-14",
+      "actual": 134.7216,
+      "expected": 134.7216,
+      "deviation": 0.0
     },
     {
       "id": "GRT-034",
@@ -555,7 +555,7 @@
       "suite": "geometry_regression",
       "mode": "assert",
       "status": "pass",
-      "detail": "95 parts checked against 10 required fields"
+      "detail": "101 parts checked against 10 required fields"
     },
     {
       "id": "GRT-061",
@@ -563,7 +563,7 @@
       "suite": "geometry_regression",
       "mode": "assert",
       "status": "pass",
-      "detail": "95 unique part_id values"
+      "detail": "101 unique part_id values"
     },
     {
       "id": "GRT-062",
@@ -571,7 +571,7 @@
       "suite": "geometry_regression",
       "mode": "assert",
       "status": "pass",
-      "detail": "95 parts checked"
+      "detail": "101 parts checked"
     },
     {
       "id": "GRT-063",
@@ -587,7 +587,7 @@
       "suite": "geometry_regression",
       "mode": "assert",
       "status": "pass",
-      "detail": "95 parts checked against their control references"
+      "detail": "101 parts checked against their control references"
     },
     {
       "id": "GRT-065",
@@ -595,7 +595,7 @@
       "suite": "geometry_regression",
       "mode": "assert",
       "status": "pass",
-      "detail": "58 confidence D parts"
+      "detail": "64 confidence D parts"
     },
     {
       "id": "GRT-066",
@@ -627,7 +627,7 @@
       "suite": "geometry_regression",
       "mode": "report_only",
       "status": "reported",
-      "detail": "10 placeholder controls remain, 62 sourced; 58 of 95 parts are confidence D"
+      "detail": "12 placeholder controls remain, 63 sourced; 64 of 101 parts are confidence D"
     },
     {
       "id": "GRT-070",
@@ -635,9 +635,9 @@
       "suite": "geometry_regression",
       "mode": "assert",
       "status": "pass",
-      "detail": "actual 10 count, expected 10 count, deviation +0",
-      "actual": 10.0,
-      "expected": 10.0,
+      "detail": "actual 12 count, expected 12 count, deviation +0",
+      "actual": 12.0,
+      "expected": 12.0,
       "deviation": 0.0
     },
     {
@@ -701,9 +701,9 @@
       "suite": "geometry_regression",
       "mode": "assert",
       "status": "pass",
-      "detail": "actual 2 count, expected 2 count, deviation +0",
-      "actual": 2.0,
-      "expected": 2.0,
+      "detail": "actual 4 count, expected 4 count, deviation +0",
+      "actual": 4.0,
+      "expected": 4.0,
       "deviation": 0.0
     },
     {
@@ -723,8 +723,8 @@
       "suite": "geometry_regression",
       "mode": "report",
       "status": "reported",
-      "detail": "geometry_fingerprint = sha256:0b7910732ce9556c",
-      "actual": "sha256:0b7910732ce9556c",
+      "detail": "geometry_fingerprint = sha256:cbf0c6528d9c357f",
+      "actual": "sha256:cbf0c6528d9c357f",
       "expected": "sha256:pinned"
     },
     {
@@ -741,7 +741,7 @@
       "suite": "source_traceability",
       "mode": "assert",
       "status": "pass",
-      "detail": "72 controls"
+      "detail": "75 controls"
     },
     {
       "id": "STT-003",
@@ -749,7 +749,7 @@
       "suite": "source_traceability",
       "mode": "assert",
       "status": "pass",
-      "detail": "10 placeholders"
+      "detail": "12 placeholders"
     },
     {
       "id": "STT-004",
@@ -757,7 +757,7 @@
       "suite": "source_traceability",
       "mode": "assert",
       "status": "pass",
-      "detail": "721 control references"
+      "detail": "759 control references"
     },
     {
       "id": "STT-005",
@@ -765,7 +765,7 @@
       "suite": "source_traceability",
       "mode": "assert",
       "status": "pass",
-      "detail": "22 registered open questions"
+      "detail": "23 registered open questions"
     },
     {
       "id": "STT-006",
@@ -773,15 +773,15 @@
       "suite": "source_traceability",
       "mode": "assert",
       "status": "pass",
-      "detail": "95 parts"
+      "detail": "101 parts"
     },
     {
       "id": "STT-007",
-      "title": "No part claims a drawing, photo, mesh or photogrammetry basis in Milestone 1",
+      "title": "Only source bases the register actually supports may be claimed",
       "suite": "source_traceability",
       "mode": "assert",
       "status": "pass",
-      "detail": "forbidden in Milestone 1: ['drawing', 'mesh_reference', 'photo', 'photogrammetry']"
+      "detail": "forbidden in Milestone 1: ['drawing', 'mesh_reference', 'photogrammetry']"
     },
     {
       "id": "STT-008",
@@ -813,7 +813,7 @@
       "suite": "source_traceability",
       "mode": "assert",
       "status": "pass",
-      "detail": "95 parts"
+      "detail": "101 parts"
     },
     {
       "id": "STT-012",
@@ -821,7 +821,7 @@
       "suite": "source_traceability",
       "mode": "assert",
       "status": "pass",
-      "detail": "control document sha256 356263280ac9"
+      "detail": "control document sha256 83ba243db2df"
     }
   ]
 }

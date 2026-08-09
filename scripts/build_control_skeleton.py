@@ -937,6 +937,146 @@ def build_parts(model: ControlModel, sk: Skeleton) -> list[Part]:
             )
         )
 
+        # ----------------------------------------------------------- arch portals
+        #
+        # SRC-018's photograph shows two openings per tower between the two centre legs: one below
+        # the deck above the pier, one above the deck. Each is a tall shaft with a rounded head,
+        # flanked by X-braced panels in the outer bays.
+        #
+        # What is sourced and what is not, precisely: the opening's WIDTH is the gap between the
+        # centre legs, which follows from CTL-056 and the truss offsets and is grade A. Its HEIGHT
+        # comes from CTL-111, a proportion measured off the photograph, and its head shape from
+        # CTL-112. The photograph establishes that these openings exist, what shape they are and
+        # where they sit -- so this is INFERRED, not ASSUMED -- but no source dimensions them, which
+        # is why the parts carry basis D and cite OQ-023.
+        #
+        # The arch is built as a SPANDREL: solid material flanking and spanning a void, rather than
+        # a hole cut in a plate. That keeps it real geometry a reader can select and grade, instead
+        # of apparent detail painted onto a surface, which section 7.2 of CONFIDENCE-MODEL.md
+        # refuses.
+        inner_ys = sorted(y for _, y, position in truss_planes if position.endswith("inner"))
+        if len(inner_ys) != 2:
+            # Raise rather than skip. An earlier version matched the position string with `== "inner"`
+            # against values that are actually "south inner"/"north inner", so this block silently
+            # built nothing and the arches were simply absent from the model with no error at all.
+            # A condition that quietly produces less geometry is the worst kind of bug here.
+            raise ControlDocumentError(
+                f"expected exactly 2 inner truss planes to span the tower arch, found {len(inner_ys)}"
+            )
+        arch_half_w = (inner_ys[1] - inner_ys[0]) / 2.0
+        arch_ratio = m("tower_arch_height_to_width_ratio")
+        rise_fraction = m("tower_arch_head_rise_fraction")
+        spandrel_hx = leg_half_top / 2.0
+
+        for label, springing_z, available in (
+            ("lower", pier_top, truss_bottom - pier_top),
+            ("upper", truss_top, saddle_z - truss_top),
+        ):
+            full_height = min(arch_half_w * 2.0 * arch_ratio, available * 0.92)
+            if full_height <= 0:
+                continue
+            head_rise = arch_half_w * 2.0 * rise_fraction
+            shaft_top = springing_z + max(0.0, full_height - head_rise)
+            crown_z = springing_z + full_height
+
+            # The parallel-sided shaft below the head. This was missing in the first version:
+            # only the head courses were emitted, so the arch appeared as a 6 m fragment
+            # floating where its crown should be, with no opening beneath it.
+            head: list[dict[str, Any]] = []
+            for sign in (-1.0, 1.0):
+                lo_y, hi_y = sorted((sign * arch_half_w, sign * (arch_half_w + spandrel_hx * 2.0)))
+                head.append(box((x - spandrel_hx, lo_y, springing_z), (x + spandrel_hx, hi_y, shaft_top)))
+
+            # The rounded head, approximated by horizontal courses that step inward. Twelve
+            # courses is enough that the curve reads as a curve at every viewing distance the
+            # LOD ladder covers, without inventing precision the source cannot support.
+            courses = 12
+            for i in range(courses):
+                t0 = i / courses
+                t1 = (i + 1) / courses
+                z0 = shaft_top + (crown_z - shaft_top) * t0
+                z1 = shaft_top + (crown_z - shaft_top) * t1
+                # Circular head: half-width falls off as cos of the angle through the arc.
+                w0 = arch_half_w * math.sqrt(max(0.0, 1.0 - t0 * t0))
+                w1 = arch_half_w * math.sqrt(max(0.0, 1.0 - t1 * t1))
+                for sign in (-1.0, 1.0):
+                    outer = sign * (arch_half_w + spandrel_hx * 2.0)
+                    inner0 = sign * w0
+                    inner1 = sign * w1
+                    lo_y, hi_y = sorted((min(inner0, inner1, key=abs), outer))
+                    if abs(hi_y - lo_y) < 1e-6:
+                        continue
+                    head.append(box((x - spandrel_hx, min(lo_y, hi_y), z0), (x + spandrel_hx, max(lo_y, hi_y), z1)))
+
+            parts.append(
+                Part(
+                    part_id=f"tower_{side}_arch_{label}",
+                    system="towers",
+                    subsystem="arches",
+                    source_basis=["control_dimension", "photo", "inferred"],
+                    basis_confidence="D",
+                    control_refs=ids(
+                        "main_span", "tower_pier_top_above_mhw", "cable_saddle_elevation",
+                        "truss_offset_inner", "tower_leg_length_at_top",
+                        "tower_arch_height_to_width_ratio", "tower_arch_head_rise_fraction",
+                    ),
+                    open_questions=["OQ-007", "OQ-023"],
+                    notes=(
+                        f"{label.capitalize()} arch opening between the two centre tower legs. "
+                        "SRC-018's photograph establishes that this opening exists, that its "
+                        "head is round, and where it sits relative to the legs and the deck. "
+                        "Its width is sourced, being the gap between the centre legs; its "
+                        "height is CTL-111, a proportion measured off that photograph by "
+                        "scripts/measure_arch_from_photo.py, and the head rise is CTL-112. No "
+                        "source dimensions this opening, so the part is graded D. Modelled as "
+                        "a spandrel rather than a cut hole, so it is real selectable geometry "
+                        "rather than painted detail. See OQ-023."
+                    ),
+                    geometry=head,
+                    style="tower_steel",
+                )
+            )
+
+        # ----------------------------------------------------------- ornamental finials
+        finial_h = m("tower_finial_top_above_saddle")
+        finials: list[dict[str, Any]] = []
+        for _, y, _ in truss_planes:
+            finials.append(
+                box(
+                    (x - leg_half_top * 0.45, y - leg_hw * 0.9, saddle_z),
+                    (x + leg_half_top * 0.45, y + leg_hw * 0.9, saddle_z + finial_h * 0.6),
+                )
+            )
+            finials.append(
+                box(
+                    (x - leg_half_top * 0.28, y - leg_hw * 0.55, saddle_z + finial_h * 0.6),
+                    (x + leg_half_top * 0.28, y + leg_hw * 0.55, saddle_z + finial_h),
+                )
+            )
+        parts.append(
+            Part(
+                part_id=f"tower_{side}_finials",
+                system="towers",
+                subsystem="ornament",
+                source_basis=["photo", "inferred"],
+                basis_confidence="D",
+                control_refs=ids(
+                    "main_span", "cable_saddle_elevation", "tower_leg_length_at_top",
+                    "tower_leg_width_transverse", "tower_finial_top_above_saddle",
+                ),
+                open_questions=["OQ-023"],
+                notes=(
+                    "Ornamental cap on each of the four tower columns, clearly present in SRC-018's "
+                    "photograph and dimensioned by no registered source. Drawn as a two-stage "
+                    "stepped cap because that is what the photograph shows in silhouette; the "
+                    "detail of the casting is not modelled. CTL-113 is a frank guess at the height. "
+                    "Pure ornament: no other geometry depends on it. See OQ-023."
+                ),
+                geometry=finials,
+                style="tower_steel",
+            )
+        )
+
     # --------------------------------------------------------------- anchorages
     for side, station_id, direction in (
         ("manhattan", "STA-ANC-M", -1.0),

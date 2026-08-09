@@ -25,9 +25,10 @@ export default function PresentationNotice({ doc, active }: PresentationNoticePr
         registered datum.
       </p>
       <p>
-        Nothing here is measured — {tally.MEASURED ?? 0} parts. Tower arch openings, ornamental
-        finials and truss web members are <em>not modelled</em>, so the structure is simpler than
-        the bridge. Tracked as <code>OQ-021</code>, to be replaced by measured capture.
+        Nothing here is measured — {tally.MEASURED ?? 0} parts. The tower arch openings and
+        finials are modelled but <em>not dimensioned by any source</em>; the truss web is drawn as
+        lines, not members. Tracked as <code>OQ-021</code> and <code>OQ-023</code>, to be replaced
+        by measured capture.
       </p>
     </div>
   );
