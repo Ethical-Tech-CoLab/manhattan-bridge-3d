@@ -53,7 +53,12 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "quad"
-          ]
+          ],
+          "geometry_provenance": "DOCUMENTED",
+          "material": "reference",
+          "material_id": "MAT-014",
+          "material_confidence": "D",
+          "material_sources": []
         }
       },
       "bbox": {
@@ -127,7 +132,12 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "polyline"
-          ]
+          ],
+          "geometry_provenance": "DOCUMENTED",
+          "material": "reference",
+          "material_id": "MAT-014",
+          "material_confidence": "D",
+          "material_sources": []
         }
       },
       "bbox": {
@@ -213,7 +223,12 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "polyline"
-          ]
+          ],
+          "geometry_provenance": "INFERRED",
+          "material": "reference",
+          "material_id": "MAT-015",
+          "material_confidence": "D",
+          "material_sources": []
         }
       },
       "bbox": {
@@ -286,7 +301,12 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "lines"
-          ]
+          ],
+          "geometry_provenance": "DOCUMENTED",
+          "material": "reference",
+          "material_id": "MAT-016",
+          "material_confidence": "D",
+          "material_sources": []
         }
       },
       "bbox": {
@@ -359,7 +379,12 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "lines"
-          ]
+          ],
+          "geometry_provenance": "DOCUMENTED",
+          "material": "reference",
+          "material_id": "MAT-016",
+          "material_confidence": "D",
+          "material_sources": []
         }
       },
       "bbox": {
@@ -432,7 +457,12 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "lines"
-          ]
+          ],
+          "geometry_provenance": "DOCUMENTED",
+          "material": "reference",
+          "material_id": "MAT-016",
+          "material_confidence": "D",
+          "material_sources": []
         }
       },
       "bbox": {
@@ -506,7 +536,12 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "lines"
-          ]
+          ],
+          "geometry_provenance": "DOCUMENTED",
+          "material": "reference",
+          "material_id": "MAT-016",
+          "material_confidence": "D",
+          "material_sources": []
         }
       },
       "bbox": {
@@ -580,7 +615,12 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "lines"
-          ]
+          ],
+          "geometry_provenance": "DOCUMENTED",
+          "material": "reference",
+          "material_id": "MAT-016",
+          "material_confidence": "D",
+          "material_sources": []
         }
       },
       "bbox": {
@@ -652,7 +692,12 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "lines"
-          ]
+          ],
+          "geometry_provenance": "INFERRED",
+          "material": "reference",
+          "material_id": "MAT-016",
+          "material_confidence": "D",
+          "material_sources": []
         }
       },
       "bbox": {
@@ -724,7 +769,12 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "lines"
-          ]
+          ],
+          "geometry_provenance": "INFERRED",
+          "material": "reference",
+          "material_id": "MAT-016",
+          "material_confidence": "D",
+          "material_sources": []
         }
       },
       "bbox": {
@@ -796,7 +846,12 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "lines"
-          ]
+          ],
+          "geometry_provenance": "INFERRED",
+          "material": "reference",
+          "material_id": "MAT-016",
+          "material_confidence": "D",
+          "material_sources": []
         }
       },
       "bbox": {
@@ -868,7 +923,12 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "lines"
-          ]
+          ],
+          "geometry_provenance": "INFERRED",
+          "material": "reference",
+          "material_id": "MAT-016",
+          "material_confidence": "D",
+          "material_sources": []
         }
       },
       "bbox": {
@@ -944,7 +1004,12 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "lines"
-          ]
+          ],
+          "geometry_provenance": "DOCUMENTED",
+          "material": "reference",
+          "material_id": "MAT-016",
+          "material_confidence": "D",
+          "material_sources": []
         }
       },
       "bbox": {
@@ -1020,7 +1085,12 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "lines"
-          ]
+          ],
+          "geometry_provenance": "DOCUMENTED",
+          "material": "reference",
+          "material_id": "MAT-016",
+          "material_confidence": "D",
+          "material_sources": []
         }
       },
       "bbox": {
@@ -1095,7 +1165,12 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "polyline"
-          ]
+          ],
+          "geometry_provenance": "DOCUMENTED",
+          "material": "reference",
+          "material_id": "MAT-018",
+          "material_confidence": "D",
+          "material_sources": []
         }
       },
       "bbox": {
@@ -1172,7 +1247,12 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "box"
-          ]
+          ],
+          "geometry_provenance": "DOCUMENTED",
+          "material": "concrete",
+          "material_id": "MAT-003",
+          "material_confidence": "D",
+          "material_sources": []
         }
       },
       "bbox": {
@@ -1253,6 +1333,13 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "box"
+          ],
+          "geometry_provenance": "DOCUMENTED",
+          "material": "masonry",
+          "material_id": "MAT-001",
+          "material_confidence": "A",
+          "material_sources": [
+            "SRC-016"
           ]
         }
       },
@@ -1333,6 +1420,13 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "prism"
+          ],
+          "geometry_provenance": "DOCUMENTED",
+          "material": "steel_structural",
+          "material_id": "MAT-005",
+          "material_confidence": "A",
+          "material_sources": [
+            "SRC-016"
           ]
         }
       },
@@ -1413,6 +1507,13 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "prism"
+          ],
+          "geometry_provenance": "DOCUMENTED",
+          "material": "steel_structural",
+          "material_id": "MAT-005",
+          "material_confidence": "A",
+          "material_sources": [
+            "SRC-016"
           ]
         }
       },
@@ -1493,6 +1594,13 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "prism"
+          ],
+          "geometry_provenance": "DOCUMENTED",
+          "material": "steel_structural",
+          "material_id": "MAT-005",
+          "material_confidence": "A",
+          "material_sources": [
+            "SRC-016"
           ]
         }
       },
@@ -1573,6 +1681,13 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "prism"
+          ],
+          "geometry_provenance": "DOCUMENTED",
+          "material": "steel_structural",
+          "material_id": "MAT-005",
+          "material_confidence": "A",
+          "material_sources": [
+            "SRC-016"
           ]
         }
       },
@@ -1654,6 +1769,13 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "lines"
+          ],
+          "geometry_provenance": "INFERRED",
+          "material": "steel_structural",
+          "material_id": "MAT-017",
+          "material_confidence": "B",
+          "material_sources": [
+            "SRC-016"
           ]
         }
       },
@@ -1729,7 +1851,12 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "polyline"
-          ]
+          ],
+          "geometry_provenance": "DOCUMENTED",
+          "material": "reference",
+          "material_id": "MAT-018",
+          "material_confidence": "D",
+          "material_sources": []
         }
       },
       "bbox": {
@@ -1806,7 +1933,12 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "box"
-          ]
+          ],
+          "geometry_provenance": "DOCUMENTED",
+          "material": "concrete",
+          "material_id": "MAT-003",
+          "material_confidence": "D",
+          "material_sources": []
         }
       },
       "bbox": {
@@ -1887,6 +2019,13 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "box"
+          ],
+          "geometry_provenance": "DOCUMENTED",
+          "material": "masonry",
+          "material_id": "MAT-001",
+          "material_confidence": "A",
+          "material_sources": [
+            "SRC-016"
           ]
         }
       },
@@ -1967,6 +2106,13 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "prism"
+          ],
+          "geometry_provenance": "DOCUMENTED",
+          "material": "steel_structural",
+          "material_id": "MAT-005",
+          "material_confidence": "A",
+          "material_sources": [
+            "SRC-016"
           ]
         }
       },
@@ -2047,6 +2193,13 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "prism"
+          ],
+          "geometry_provenance": "DOCUMENTED",
+          "material": "steel_structural",
+          "material_id": "MAT-005",
+          "material_confidence": "A",
+          "material_sources": [
+            "SRC-016"
           ]
         }
       },
@@ -2127,6 +2280,13 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "prism"
+          ],
+          "geometry_provenance": "DOCUMENTED",
+          "material": "steel_structural",
+          "material_id": "MAT-005",
+          "material_confidence": "A",
+          "material_sources": [
+            "SRC-016"
           ]
         }
       },
@@ -2207,6 +2367,13 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "prism"
+          ],
+          "geometry_provenance": "DOCUMENTED",
+          "material": "steel_structural",
+          "material_id": "MAT-005",
+          "material_confidence": "A",
+          "material_sources": [
+            "SRC-016"
           ]
         }
       },
@@ -2288,6 +2455,13 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "lines"
+          ],
+          "geometry_provenance": "INFERRED",
+          "material": "steel_structural",
+          "material_id": "MAT-017",
+          "material_confidence": "B",
+          "material_sources": [
+            "SRC-016"
           ]
         }
       },
@@ -2364,7 +2538,12 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "box"
-          ]
+          ],
+          "geometry_provenance": "DOCUMENTED",
+          "material": "masonry",
+          "material_id": "MAT-010",
+          "material_confidence": "D",
+          "material_sources": []
         }
       },
       "bbox": {
@@ -2440,7 +2619,12 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "box"
-          ]
+          ],
+          "geometry_provenance": "DOCUMENTED",
+          "material": "masonry",
+          "material_id": "MAT-010",
+          "material_confidence": "D",
+          "material_sources": []
         }
       },
       "bbox": {
@@ -2527,6 +2711,14 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "tube"
+          ],
+          "geometry_provenance": "INFERRED",
+          "material": "steel_wire",
+          "material_id": "MAT-007",
+          "material_confidence": "C",
+          "material_sources": [
+            "SRC-011",
+            "SRC-015"
           ]
         }
       },
@@ -2614,6 +2806,14 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "tube"
+          ],
+          "geometry_provenance": "INFERRED",
+          "material": "steel_wire",
+          "material_id": "MAT-007",
+          "material_confidence": "C",
+          "material_sources": [
+            "SRC-011",
+            "SRC-015"
           ]
         }
       },
@@ -2701,6 +2901,14 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "tube"
+          ],
+          "geometry_provenance": "INFERRED",
+          "material": "steel_wire",
+          "material_id": "MAT-007",
+          "material_confidence": "C",
+          "material_sources": [
+            "SRC-011",
+            "SRC-015"
           ]
         }
       },
@@ -2788,6 +2996,14 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "tube"
+          ],
+          "geometry_provenance": "INFERRED",
+          "material": "steel_wire",
+          "material_id": "MAT-007",
+          "material_confidence": "C",
+          "material_sources": [
+            "SRC-011",
+            "SRC-015"
           ]
         }
       },
@@ -2877,6 +3093,13 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "lines"
+          ],
+          "geometry_provenance": "INFERRED",
+          "material": "steel_wire",
+          "material_id": "MAT-008",
+          "material_confidence": "C",
+          "material_sources": [
+            "SRC-011"
           ]
         }
       },
@@ -2966,6 +3189,13 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "lines"
+          ],
+          "geometry_provenance": "INFERRED",
+          "material": "steel_wire",
+          "material_id": "MAT-008",
+          "material_confidence": "C",
+          "material_sources": [
+            "SRC-011"
           ]
         }
       },
@@ -3055,6 +3285,13 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "lines"
+          ],
+          "geometry_provenance": "INFERRED",
+          "material": "steel_wire",
+          "material_id": "MAT-008",
+          "material_confidence": "C",
+          "material_sources": [
+            "SRC-011"
           ]
         }
       },
@@ -3144,6 +3381,13 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "lines"
+          ],
+          "geometry_provenance": "INFERRED",
+          "material": "steel_wire",
+          "material_id": "MAT-008",
+          "material_confidence": "C",
+          "material_sources": [
+            "SRC-011"
           ]
         }
       },
@@ -3230,7 +3474,12 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "box"
-          ]
+          ],
+          "geometry_provenance": "INFERRED",
+          "material": "roadway_surface",
+          "material_id": "MAT-013",
+          "material_confidence": "D",
+          "material_sources": []
         }
       },
       "bbox": {
@@ -3316,7 +3565,12 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "box"
-          ]
+          ],
+          "geometry_provenance": "INFERRED",
+          "material": "roadway_surface",
+          "material_id": "MAT-013",
+          "material_confidence": "D",
+          "material_sources": []
         }
       },
       "bbox": {
@@ -3397,7 +3651,12 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "box"
-          ]
+          ],
+          "geometry_provenance": "INFERRED",
+          "material": "roadway_surface",
+          "material_id": "MAT-013",
+          "material_confidence": "D",
+          "material_sources": []
         }
       },
       "bbox": {
@@ -3476,6 +3735,13 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "lines"
+          ],
+          "geometry_provenance": "DOCUMENTED",
+          "material": "steel_structural",
+          "material_id": "MAT-009",
+          "material_confidence": "C",
+          "material_sources": [
+            "SRC-011"
           ]
         }
       },
@@ -3561,6 +3827,13 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "lines"
+          ],
+          "geometry_provenance": "INFERRED",
+          "material": "steel_structural",
+          "material_id": "MAT-009",
+          "material_confidence": "C",
+          "material_sources": [
+            "SRC-011"
           ]
         }
       },
@@ -3640,6 +3913,13 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "lines"
+          ],
+          "geometry_provenance": "DOCUMENTED",
+          "material": "steel_structural",
+          "material_id": "MAT-009",
+          "material_confidence": "C",
+          "material_sources": [
+            "SRC-011"
           ]
         }
       },
@@ -3725,6 +4005,13 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "lines"
+          ],
+          "geometry_provenance": "INFERRED",
+          "material": "steel_structural",
+          "material_id": "MAT-009",
+          "material_confidence": "C",
+          "material_sources": [
+            "SRC-011"
           ]
         }
       },
@@ -3804,6 +4091,13 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "lines"
+          ],
+          "geometry_provenance": "DOCUMENTED",
+          "material": "steel_structural",
+          "material_id": "MAT-009",
+          "material_confidence": "C",
+          "material_sources": [
+            "SRC-011"
           ]
         }
       },
@@ -3889,6 +4183,13 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "lines"
+          ],
+          "geometry_provenance": "INFERRED",
+          "material": "steel_structural",
+          "material_id": "MAT-009",
+          "material_confidence": "C",
+          "material_sources": [
+            "SRC-011"
           ]
         }
       },
@@ -3968,6 +4269,13 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "lines"
+          ],
+          "geometry_provenance": "DOCUMENTED",
+          "material": "steel_structural",
+          "material_id": "MAT-009",
+          "material_confidence": "C",
+          "material_sources": [
+            "SRC-011"
           ]
         }
       },
@@ -4053,6 +4361,13 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "lines"
+          ],
+          "geometry_provenance": "INFERRED",
+          "material": "steel_structural",
+          "material_id": "MAT-009",
+          "material_confidence": "C",
+          "material_sources": [
+            "SRC-011"
           ]
         }
       },
@@ -4139,7 +4454,12 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "box"
-          ]
+          ],
+          "geometry_provenance": "INFERRED",
+          "material": "roadway_surface",
+          "material_id": "MAT-013",
+          "material_confidence": "D",
+          "material_sources": []
         }
       },
       "bbox": {
@@ -4225,7 +4545,12 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "box"
-          ]
+          ],
+          "geometry_provenance": "INFERRED",
+          "material": "roadway_surface",
+          "material_id": "MAT-013",
+          "material_confidence": "D",
+          "material_sources": []
         }
       },
       "bbox": {
@@ -4306,7 +4631,12 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "box"
-          ]
+          ],
+          "geometry_provenance": "INFERRED",
+          "material": "roadway_surface",
+          "material_id": "MAT-013",
+          "material_confidence": "D",
+          "material_sources": []
         }
       },
       "bbox": {
@@ -4385,6 +4715,13 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "lines"
+          ],
+          "geometry_provenance": "DOCUMENTED",
+          "material": "steel_structural",
+          "material_id": "MAT-009",
+          "material_confidence": "C",
+          "material_sources": [
+            "SRC-011"
           ]
         }
       },
@@ -4470,6 +4807,13 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "lines"
+          ],
+          "geometry_provenance": "INFERRED",
+          "material": "steel_structural",
+          "material_id": "MAT-009",
+          "material_confidence": "C",
+          "material_sources": [
+            "SRC-011"
           ]
         }
       },
@@ -4549,6 +4893,13 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "lines"
+          ],
+          "geometry_provenance": "DOCUMENTED",
+          "material": "steel_structural",
+          "material_id": "MAT-009",
+          "material_confidence": "C",
+          "material_sources": [
+            "SRC-011"
           ]
         }
       },
@@ -4634,6 +4985,13 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "lines"
+          ],
+          "geometry_provenance": "INFERRED",
+          "material": "steel_structural",
+          "material_id": "MAT-009",
+          "material_confidence": "C",
+          "material_sources": [
+            "SRC-011"
           ]
         }
       },
@@ -4713,6 +5071,13 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "lines"
+          ],
+          "geometry_provenance": "DOCUMENTED",
+          "material": "steel_structural",
+          "material_id": "MAT-009",
+          "material_confidence": "C",
+          "material_sources": [
+            "SRC-011"
           ]
         }
       },
@@ -4798,6 +5163,13 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "lines"
+          ],
+          "geometry_provenance": "INFERRED",
+          "material": "steel_structural",
+          "material_id": "MAT-009",
+          "material_confidence": "C",
+          "material_sources": [
+            "SRC-011"
           ]
         }
       },
@@ -4877,6 +5249,13 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "lines"
+          ],
+          "geometry_provenance": "DOCUMENTED",
+          "material": "steel_structural",
+          "material_id": "MAT-009",
+          "material_confidence": "C",
+          "material_sources": [
+            "SRC-011"
           ]
         }
       },
@@ -4962,6 +5341,13 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "lines"
+          ],
+          "geometry_provenance": "INFERRED",
+          "material": "steel_structural",
+          "material_id": "MAT-009",
+          "material_confidence": "C",
+          "material_sources": [
+            "SRC-011"
           ]
         }
       },
@@ -5048,7 +5434,12 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "box"
-          ]
+          ],
+          "geometry_provenance": "INFERRED",
+          "material": "roadway_surface",
+          "material_id": "MAT-013",
+          "material_confidence": "D",
+          "material_sources": []
         }
       },
       "bbox": {
@@ -5134,7 +5525,12 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "box"
-          ]
+          ],
+          "geometry_provenance": "INFERRED",
+          "material": "roadway_surface",
+          "material_id": "MAT-013",
+          "material_confidence": "D",
+          "material_sources": []
         }
       },
       "bbox": {
@@ -5215,7 +5611,12 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "box"
-          ]
+          ],
+          "geometry_provenance": "INFERRED",
+          "material": "roadway_surface",
+          "material_id": "MAT-013",
+          "material_confidence": "D",
+          "material_sources": []
         }
       },
       "bbox": {
@@ -5294,6 +5695,13 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "lines"
+          ],
+          "geometry_provenance": "DOCUMENTED",
+          "material": "steel_structural",
+          "material_id": "MAT-009",
+          "material_confidence": "C",
+          "material_sources": [
+            "SRC-011"
           ]
         }
       },
@@ -5379,6 +5787,13 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "lines"
+          ],
+          "geometry_provenance": "INFERRED",
+          "material": "steel_structural",
+          "material_id": "MAT-009",
+          "material_confidence": "C",
+          "material_sources": [
+            "SRC-011"
           ]
         }
       },
@@ -5458,6 +5873,13 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "lines"
+          ],
+          "geometry_provenance": "DOCUMENTED",
+          "material": "steel_structural",
+          "material_id": "MAT-009",
+          "material_confidence": "C",
+          "material_sources": [
+            "SRC-011"
           ]
         }
       },
@@ -5543,6 +5965,13 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "lines"
+          ],
+          "geometry_provenance": "INFERRED",
+          "material": "steel_structural",
+          "material_id": "MAT-009",
+          "material_confidence": "C",
+          "material_sources": [
+            "SRC-011"
           ]
         }
       },
@@ -5622,6 +6051,13 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "lines"
+          ],
+          "geometry_provenance": "DOCUMENTED",
+          "material": "steel_structural",
+          "material_id": "MAT-009",
+          "material_confidence": "C",
+          "material_sources": [
+            "SRC-011"
           ]
         }
       },
@@ -5707,6 +6143,13 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "lines"
+          ],
+          "geometry_provenance": "INFERRED",
+          "material": "steel_structural",
+          "material_id": "MAT-009",
+          "material_confidence": "C",
+          "material_sources": [
+            "SRC-011"
           ]
         }
       },
@@ -5786,6 +6229,13 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "lines"
+          ],
+          "geometry_provenance": "DOCUMENTED",
+          "material": "steel_structural",
+          "material_id": "MAT-009",
+          "material_confidence": "C",
+          "material_sources": [
+            "SRC-011"
           ]
         }
       },
@@ -5871,6 +6321,13 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "lines"
+          ],
+          "geometry_provenance": "INFERRED",
+          "material": "steel_structural",
+          "material_id": "MAT-009",
+          "material_confidence": "C",
+          "material_sources": [
+            "SRC-011"
           ]
         }
       },
@@ -5954,7 +6411,12 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "box"
-          ]
+          ],
+          "geometry_provenance": "INFERRED",
+          "material": "roadway_surface",
+          "material_id": "MAT-019",
+          "material_confidence": "D",
+          "material_sources": []
         }
       },
       "bbox": {
@@ -6037,7 +6499,12 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "box"
-          ]
+          ],
+          "geometry_provenance": "INFERRED",
+          "material": "roadway_surface",
+          "material_id": "MAT-019",
+          "material_confidence": "D",
+          "material_sources": []
         }
       },
       "bbox": {
@@ -6126,7 +6593,12 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "box"
-          ]
+          ],
+          "geometry_provenance": "INFERRED",
+          "material": "steel_structural",
+          "material_id": "MAT-012",
+          "material_confidence": "D",
+          "material_sources": []
         }
       },
       "bbox": {
@@ -6215,7 +6687,12 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "box"
-          ]
+          ],
+          "geometry_provenance": "INFERRED",
+          "material": "steel_structural",
+          "material_id": "MAT-012",
+          "material_confidence": "D",
+          "material_sources": []
         }
       },
       "bbox": {
@@ -6304,7 +6781,12 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "box"
-          ]
+          ],
+          "geometry_provenance": "INFERRED",
+          "material": "steel_structural",
+          "material_id": "MAT-012",
+          "material_confidence": "D",
+          "material_sources": []
         }
       },
       "bbox": {
@@ -6393,7 +6875,12 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "box"
-          ]
+          ],
+          "geometry_provenance": "INFERRED",
+          "material": "steel_structural",
+          "material_id": "MAT-012",
+          "material_confidence": "D",
+          "material_sources": []
         }
       },
       "bbox": {
@@ -6484,7 +6971,12 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "box"
-          ]
+          ],
+          "geometry_provenance": "INFERRED",
+          "material": "steel_structural",
+          "material_id": "MAT-011",
+          "material_confidence": "D",
+          "material_sources": []
         }
       },
       "bbox": {
@@ -6574,7 +7066,12 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "box"
-          ]
+          ],
+          "geometry_provenance": "INFERRED",
+          "material": "steel_structural",
+          "material_id": "MAT-011",
+          "material_confidence": "D",
+          "material_sources": []
         }
       },
       "bbox": {
@@ -6668,7 +7165,12 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "box"
-          ]
+          ],
+          "geometry_provenance": "INFERRED",
+          "material": "steel_structural",
+          "material_id": "MAT-011",
+          "material_confidence": "D",
+          "material_sources": []
         }
       },
       "bbox": {
@@ -6762,7 +7264,12 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "box"
-          ]
+          ],
+          "geometry_provenance": "INFERRED",
+          "material": "steel_structural",
+          "material_id": "MAT-011",
+          "material_confidence": "D",
+          "material_sources": []
         }
       },
       "bbox": {
@@ -6856,7 +7363,12 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "box"
-          ]
+          ],
+          "geometry_provenance": "INFERRED",
+          "material": "steel_structural",
+          "material_id": "MAT-011",
+          "material_confidence": "D",
+          "material_sources": []
         }
       },
       "bbox": {
@@ -6950,7 +7462,12 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "box"
-          ]
+          ],
+          "geometry_provenance": "INFERRED",
+          "material": "steel_structural",
+          "material_id": "MAT-011",
+          "material_confidence": "D",
+          "material_sources": []
         }
       },
       "bbox": {
@@ -7039,7 +7556,12 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "box"
-          ]
+          ],
+          "geometry_provenance": "ASSUMED",
+          "material": "steel_structural",
+          "material_id": "MAT-011",
+          "material_confidence": "D",
+          "material_sources": []
         }
       },
       "bbox": {
@@ -7129,7 +7651,12 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "box"
-          ]
+          ],
+          "geometry_provenance": "INFERRED",
+          "material": "steel_structural",
+          "material_id": "MAT-011",
+          "material_confidence": "D",
+          "material_sources": []
         }
       },
       "bbox": {
@@ -7220,7 +7747,12 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "box"
-          ]
+          ],
+          "geometry_provenance": "INFERRED",
+          "material": "steel_structural",
+          "material_id": "MAT-011",
+          "material_confidence": "D",
+          "material_sources": []
         }
       },
       "bbox": {
@@ -7310,7 +7842,12 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "box"
-          ]
+          ],
+          "geometry_provenance": "INFERRED",
+          "material": "steel_structural",
+          "material_id": "MAT-011",
+          "material_confidence": "D",
+          "material_sources": []
         }
       },
       "bbox": {
@@ -7404,7 +7941,12 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "box"
-          ]
+          ],
+          "geometry_provenance": "INFERRED",
+          "material": "steel_structural",
+          "material_id": "MAT-011",
+          "material_confidence": "D",
+          "material_sources": []
         }
       },
       "bbox": {
@@ -7498,7 +8040,12 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "box"
-          ]
+          ],
+          "geometry_provenance": "INFERRED",
+          "material": "steel_structural",
+          "material_id": "MAT-011",
+          "material_confidence": "D",
+          "material_sources": []
         }
       },
       "bbox": {
@@ -7592,7 +8139,12 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "box"
-          ]
+          ],
+          "geometry_provenance": "INFERRED",
+          "material": "steel_structural",
+          "material_id": "MAT-011",
+          "material_confidence": "D",
+          "material_sources": []
         }
       },
       "bbox": {
@@ -7686,7 +8238,12 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "box"
-          ]
+          ],
+          "geometry_provenance": "INFERRED",
+          "material": "steel_structural",
+          "material_id": "MAT-011",
+          "material_confidence": "D",
+          "material_sources": []
         }
       },
       "bbox": {
@@ -7775,7 +8332,12 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "box"
-          ]
+          ],
+          "geometry_provenance": "ASSUMED",
+          "material": "steel_structural",
+          "material_id": "MAT-011",
+          "material_confidence": "D",
+          "material_sources": []
         }
       },
       "bbox": {
@@ -7865,7 +8427,12 @@
           "scale": "1:1 prototype, HO 1:87.1",
           "geometry_kinds": [
             "box"
-          ]
+          ],
+          "geometry_provenance": "INFERRED",
+          "material": "steel_structural",
+          "material_id": "MAT-011",
+          "material_confidence": "D",
+          "material_sources": []
         }
       },
       "bbox": {
@@ -7894,11 +8461,11 @@
   "provenance": {
     "module_id": "manhattan-bridge",
     "generated_by": "publish_module_contract.py via build_control_skeleton.py@1.0.0",
-    "generated_at": "2026-08-09T18:59:20+00:00",
+    "generated_at": "2026-08-09T19:20:17+00:00",
     "source_documents": [
       {
         "path": "GEOMETRY-CONTROL.md",
-        "sha256": "fe6b1eecc89d364f456b599ccd9271cf79d477ed1c71cb32b6c8ec8305474f2c"
+        "sha256": "e39fc87625f03ec1f963cc5b955404b9671a2e9aca6fab30b85309eb31130575"
       }
     ]
   }

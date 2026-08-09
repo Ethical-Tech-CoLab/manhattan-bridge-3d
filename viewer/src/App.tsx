@@ -4,8 +4,9 @@ import ConfidenceLegend from '../components/ConfidenceLegend';
 import DimensionPanel from '../components/DimensionPanel';
 import MetadataPanel from '../components/MetadataPanel';
 import PartTree from '../components/PartTree';
+import ProvenancePanel from '../components/ProvenancePanel';
 import Toolbar from '../components/Toolbar';
-import type { PartsDocument, UnitMode, ViewerConfig } from './model';
+import type { GeometryProvenance, PartsDocument, UnitMode, ViewerConfig } from './model';
 
 export default function App() {
   const [config, setConfig] = useState<ViewerConfig | null>(null);
@@ -17,6 +18,8 @@ export default function App() {
   const [hiddenParts, setHiddenParts] = useState<Set<string>>(new Set());
   const [confidenceOverlay, setConfidenceOverlay] = useState(false);
   const [materialMode, setMaterialMode] = useState(true);
+  const [provenanceOutlines, setProvenanceOutlines] = useState(true);
+  const [hiddenProvenance, setHiddenProvenance] = useState<Set<string>>(new Set());
   const [unitMode, setUnitMode] = useState<UnitMode>('prototype');
   const [panel, setPanel] = useState<'metadata' | 'dimensions'>('metadata');
   const [focusToken, setFocusToken] = useState(0);
@@ -47,6 +50,15 @@ export default function App() {
     () => doc?.parts.find((part) => part.part_id === selectedId) ?? null,
     [doc, selectedId],
   );
+
+  const toggleProvenance = useCallback((state: GeometryProvenance) => {
+    setHiddenProvenance((previous) => {
+      const next = new Set(previous);
+      if (next.has(state)) next.delete(state);
+      else next.add(state);
+      return next;
+    });
+  }, []);
 
   const toggleSystem = useCallback((system: string) => {
     setHiddenSystems((previous) => {
@@ -112,6 +124,13 @@ export default function App() {
       />
       <div className="body">
         <aside className="left">
+          <ProvenancePanel
+            doc={doc}
+            outlines={provenanceOutlines}
+            onToggleOutlines={() => setProvenanceOutlines((value) => !value)}
+            hidden={hiddenProvenance}
+            onToggleProvenance={toggleProvenance}
+          />
           <PartTree
             doc={doc}
             selectedId={selectedId}
@@ -151,6 +170,8 @@ export default function App() {
             hiddenParts={hiddenParts}
             confidenceOverlay={confidenceOverlay}
             materialMode={materialMode}
+            provenanceOutlines={provenanceOutlines}
+            hiddenProvenance={hiddenProvenance}
             onSelect={selectPart}
             focusToken={focusToken}
           />

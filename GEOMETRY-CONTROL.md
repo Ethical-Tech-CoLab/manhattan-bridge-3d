@@ -403,3 +403,48 @@ significant and the table runs from most specific to least. `material` is a clos
 registered source says anything about what it is built from, even though every photograph shows
 stone. A photograph is not in the register, so it cannot grade a control; that asymmetry is the
 point of the register, not a defect in it.
+
+---
+
+## 8. Geometry provenance — how the shape is known
+
+Adopted from SRC-018 (`manhattan-bridge-noise-dumbo`, `VISUAL-MODEL-FRAMEWORK.md` sections 5.4 and
+5.5), whose central argument this project accepts: **how thoroughly a source was read and what that
+source establishes about an element's geometry are two different claims, and collapsing them into
+one field hides the more important of the two.** A source can be opened, read and quoted -- fully
+verified -- and still support only `ASSUMED` geometry, because a sentence establishing that an
+element exists says nothing about where it is. That framework's own reference implementation records
+having made exactly this mistake, labelling eight components "verified" on the strength of a source
+that located none of them.
+
+This repository already grades sources (`SOURCE-REGISTER.md`) and dimensions (section 2). Geometry
+provenance is the third, independent axis, derived per part in `build_control_skeleton.py`:
+
+| State | Meaning | Rendered as | Count |
+|---|---|---|---:|
+| `MEASURED` | Derived from an instrument reading of the actual structure. | Solid outline, full opacity | **0** |
+| `DOCUMENTED` | *This element's* own position or dimension is stated in a source that was read. | Solid outline, full opacity | 37 |
+| `INFERRED` | The element's *existence* is documented, but its position or dimension is reasoned. | Dashed outline, reduced opacity | 56 |
+| `ASSUMED` | Placed by engineering judgement, with no source statement locating it at all. | Dotted outline, low opacity, **no dimension callouts** | 2 |
+
+**Nothing on this bridge is `MEASURED`,** and SRC-018 reaches the same conclusion independently for
+both East River subway bridges. `GRT-074` reports that count on every run so the day it changes, it
+changes visibly.
+
+**The `INFERRED`/`ASSUMED` boundary is drawn on whether anything sourced speaks to the element at
+all**, not on how confident its shape is. The two `ASSUMED` parts are the approach bent groups: no
+registered source mentions a bent on either approach. The approach *decks* are `INFERRED`, because
+CTL-002 and CTL-003 document that they exist and how far they run while leaving depth and grade to
+judgement. `GRT-076` pins the assumed count at 2, so geometry that nothing documents cannot be added
+quietly.
+
+**The rule that follows, adopted verbatim:**
+
+> No dimension may be annotated on any element whose geometry provenance is `ASSUMED`. If we do not
+> know where it is, we do not get to say how big it is.
+
+**The filter hides rather than fades.** SRC-018 is explicit about why, and it is worth repeating: "a
+faded outline is still a shape a reader will trace, and the honest experience of switching both off
+on this project is an empty frame." Switching `INFERRED` and `ASSUMED` off in the viewer leaves the
+towers, the anchorages and the station markers. That is the whole of what this model can be said to
+document.

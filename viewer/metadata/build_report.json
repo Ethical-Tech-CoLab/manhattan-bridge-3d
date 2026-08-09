@@ -3,10 +3,10 @@
   "model": "control_skeleton",
   "milestone": 2,
   "generated_by": "build_control_skeleton.py@1.0.0",
-  "generated_at": "2026-08-09T18:56:49+00:00",
+  "generated_at": "2026-08-09T19:20:16+00:00",
   "control_document": {
     "path": "GEOMETRY-CONTROL.md",
-    "sha256": "fe6b1eecc89d364f456b599ccd9271cf79d477ed1c71cb32b6c8ec8305474f2c"
+    "sha256": "e39fc87625f03ec1f963cc5b955404b9671a2e9aca6fab30b85309eb31130575"
   },
   "source_register": "SOURCE-REGISTER.md",
   "confidence_model": "CONFIDENCE-MODEL.md",
@@ -311,7 +311,17 @@
     "sourced_control_count": 62,
     "approach_lower_deck_outer_x": 882.3960000000001,
     "approach_upper_deck_outer_x": 928.1160000000001,
-    "parts_without_material": 0
+    "parts_without_material": 0,
+    "geometry_provenance_tally": {
+      "MEASURED": 0,
+      "DOCUMENTED": 37,
+      "INFERRED": 56,
+      "ASSUMED": 2
+    },
+    "parts_measured": 0,
+    "parts_documented": 37,
+    "parts_assumed": 2,
+    "parts_without_provenance": 0
   },
   "outputs": {
     "glb": "mesh/glb/control_skeleton.glb",

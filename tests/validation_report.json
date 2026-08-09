@@ -1,10 +1,10 @@
 {
   "schema_version": "1.0",
-  "control_document_sha256": "fe6b1eecc89d364f456b599ccd9271cf79d477ed1c71cb32b6c8ec8305474f2c",
-  "built_from_sha256": "fe6b1eecc89d364f456b599ccd9271cf79d477ed1c71cb32b6c8ec8305474f2c",
+  "control_document_sha256": "e39fc87625f03ec1f963cc5b955404b9671a2e9aca6fab30b85309eb31130575",
+  "built_from_sha256": "e39fc87625f03ec1f963cc5b955404b9671a2e9aca6fab30b85309eb31130575",
   "generated_by_build": "build_control_skeleton.py@1.0.0",
   "summary": {
-    "pass": 70,
+    "pass": 73,
     "reported": 5,
     "fail": 0,
     "error": 0
@@ -674,6 +674,39 @@
       "deviation": 0.0
     },
     {
+      "id": "GRT-074",
+      "title": "No element of this bridge claims to be measured",
+      "suite": "geometry_regression",
+      "mode": "report",
+      "status": "pass",
+      "detail": "actual 0 count, expected 0 count, deviation +0",
+      "actual": 0.0,
+      "expected": 0.0,
+      "deviation": 0.0
+    },
+    {
+      "id": "GRT-075",
+      "title": "Every part carries a derived geometry provenance",
+      "suite": "geometry_regression",
+      "mode": "assert",
+      "status": "pass",
+      "detail": "actual 0 count, expected 0 count, deviation +0",
+      "actual": 0.0,
+      "expected": 0.0,
+      "deviation": 0.0
+    },
+    {
+      "id": "GRT-076",
+      "title": "Assumed geometry is confined to elements no source mentions",
+      "suite": "geometry_regression",
+      "mode": "assert",
+      "status": "pass",
+      "detail": "actual 2 count, expected 2 count, deviation +0",
+      "actual": 2.0,
+      "expected": 2.0,
+      "deviation": 0.0
+    },
+    {
       "id": "STT-001",
       "title": "Every source cited by a control exists in the source register",
       "suite": "source_traceability",
@@ -767,7 +800,7 @@
       "suite": "source_traceability",
       "mode": "assert",
       "status": "pass",
-      "detail": "control document sha256 fe6b1eecc89d"
+      "detail": "control document sha256 e39fc87625f0"
     }
   ]
 }

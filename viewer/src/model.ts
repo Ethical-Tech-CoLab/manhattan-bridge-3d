@@ -23,6 +23,7 @@ export interface PartMetadata {
   control_refs: string[];
   open_questions: string[];
   basis_confidence: Confidence;
+  geometry_provenance: GeometryProvenance;
   material: MaterialName;
   material_id: string;
   material_confidence: Confidence;
@@ -142,6 +143,74 @@ export const CONFIDENCE_LABELS: Record<Confidence, string> = {
 };
 
 export type UnitMode = 'prototype' | 'ho';
+
+/**
+ * How the shape and position of an element are known, kept independent of how thoroughly its
+ * source was read. Adopted from SRC-018 (manhattan-bridge-noise-dumbo, VISUAL-MODEL-FRAMEWORK.md
+ * section 5.4), whose central argument is that these are two different claims: a source can be
+ * fully verified and still support only ASSUMED geometry, because a sentence establishing that an
+ * element exists says nothing about where it is.
+ */
+export type GeometryProvenance = 'MEASURED' | 'DOCUMENTED' | 'INFERRED' | 'ASSUMED';
+
+export const PROVENANCE_ORDER: GeometryProvenance[] = [
+  'MEASURED',
+  'DOCUMENTED',
+  'INFERRED',
+  'ASSUMED',
+];
+
+export interface ProvenanceStyle {
+  label: string;
+  description: string;
+  /** Outline colour. */
+  color: string;
+  /** null = solid line; [dash, gap] in world units = dashed or dotted. */
+  dash: [number, number] | null;
+  /** Multiplier applied to fill opacity, per the SRC-018 section 5.5 rendering table. */
+  fillOpacity: number;
+  /** SRC-018: no dimension may be annotated on ASSUMED geometry. */
+  allowDimensions: boolean;
+}
+
+/**
+ * The rendering rules from SRC-018 section 5.5, adopted verbatim in intent:
+ * solid for known, dashed for reasoned, dotted for judged.
+ */
+export const PROVENANCE_STYLE: Record<GeometryProvenance, ProvenanceStyle> = {
+  MEASURED: {
+    label: 'measured',
+    description: 'An instrument reading of the actual structure. No element of this bridge is at this level.',
+    color: '#7ee0a8',
+    dash: null,
+    fillOpacity: 1,
+    allowDimensions: true,
+  },
+  DOCUMENTED: {
+    label: 'documented',
+    description: "This element's position or dimension is stated numerically in a source that was read.",
+    color: '#8fd0f0',
+    dash: null,
+    fillOpacity: 1,
+    allowDimensions: true,
+  },
+  INFERRED: {
+    label: 'inferred',
+    description: "The element's existence is documented, but its position or dimension is reasoned.",
+    color: '#e8c46a',
+    dash: [7, 4],
+    fillOpacity: 0.72,
+    allowDimensions: true,
+  },
+  ASSUMED: {
+    label: 'assumed',
+    description: 'Placed by engineering judgement, with no source statement locating it at all. Carries no dimensions.',
+    color: '#e2798b',
+    dash: [1.2, 3.2],
+    fillOpacity: 0.4,
+    allowDimensions: false,
+  },
+};
 
 /** Format a prototype length in meters for display in the active unit mode. */
 export function formatLength(meters: number, mode: UnitMode, scaleDenominator: number): string {

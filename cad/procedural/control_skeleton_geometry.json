@@ -3,10 +3,10 @@
   "model": "control_skeleton",
   "milestone": 2,
   "generated_by": "build_control_skeleton.py@1.0.0",
-  "generated_at": "2026-08-09T18:56:49+00:00",
+  "generated_at": "2026-08-09T19:20:16+00:00",
   "control_document": {
     "path": "GEOMETRY-CONTROL.md",
-    "sha256": "fe6b1eecc89d364f456b599ccd9271cf79d477ed1c71cb32b6c8ec8305474f2c"
+    "sha256": "e39fc87625f03ec1f963cc5b955404b9671a2e9aca6fab30b85309eb31130575"
   },
   "source_register": "SOURCE-REGISTER.md",
   "confidence_model": "CONFIDENCE-MODEL.md",
@@ -190,6 +190,7 @@
       ],
       "open_questions": [],
       "basis_confidence": "A",
+      "geometry_provenance": "DOCUMENTED",
       "material": "reference",
       "material_id": "MAT-014",
       "material_confidence": "D",
@@ -270,6 +271,7 @@
       ],
       "open_questions": [],
       "basis_confidence": "A",
+      "geometry_provenance": "DOCUMENTED",
       "material": "reference",
       "material_id": "MAT-014",
       "material_confidence": "D",
@@ -349,6 +351,7 @@
         "OQ-013"
       ],
       "basis_confidence": "A",
+      "geometry_provenance": "INFERRED",
       "material": "reference",
       "material_id": "MAT-015",
       "material_confidence": "D",
@@ -418,6 +421,7 @@
       ],
       "open_questions": [],
       "basis_confidence": "A",
+      "geometry_provenance": "DOCUMENTED",
       "material": "reference",
       "material_id": "MAT-016",
       "material_confidence": "D",
@@ -501,6 +505,7 @@
       ],
       "open_questions": [],
       "basis_confidence": "A",
+      "geometry_provenance": "DOCUMENTED",
       "material": "reference",
       "material_id": "MAT-016",
       "material_confidence": "D",
@@ -584,6 +589,7 @@
       ],
       "open_questions": [],
       "basis_confidence": "A",
+      "geometry_provenance": "DOCUMENTED",
       "material": "reference",
       "material_id": "MAT-016",
       "material_confidence": "D",
@@ -668,6 +674,7 @@
       ],
       "open_questions": [],
       "basis_confidence": "A",
+      "geometry_provenance": "DOCUMENTED",
       "material": "reference",
       "material_id": "MAT-016",
       "material_confidence": "D",
@@ -752,6 +759,7 @@
       ],
       "open_questions": [],
       "basis_confidence": "A",
+      "geometry_provenance": "DOCUMENTED",
       "material": "reference",
       "material_id": "MAT-016",
       "material_confidence": "D",
@@ -837,6 +845,7 @@
         "OQ-002"
       ],
       "basis_confidence": "D",
+      "geometry_provenance": "INFERRED",
       "material": "reference",
       "material_id": "MAT-016",
       "material_confidence": "D",
@@ -922,6 +931,7 @@
         "OQ-002"
       ],
       "basis_confidence": "D",
+      "geometry_provenance": "INFERRED",
       "material": "reference",
       "material_id": "MAT-016",
       "material_confidence": "D",
@@ -1007,6 +1017,7 @@
         "OQ-002"
       ],
       "basis_confidence": "D",
+      "geometry_provenance": "INFERRED",
       "material": "reference",
       "material_id": "MAT-016",
       "material_confidence": "D",
@@ -1092,6 +1103,7 @@
         "OQ-002"
       ],
       "basis_confidence": "D",
+      "geometry_provenance": "INFERRED",
       "material": "reference",
       "material_id": "MAT-016",
       "material_confidence": "D",
@@ -1178,6 +1190,7 @@
       ],
       "open_questions": [],
       "basis_confidence": "B",
+      "geometry_provenance": "DOCUMENTED",
       "material": "reference",
       "material_id": "MAT-016",
       "material_confidence": "D",
@@ -1264,6 +1277,7 @@
       ],
       "open_questions": [],
       "basis_confidence": "B",
+      "geometry_provenance": "DOCUMENTED",
       "material": "reference",
       "material_id": "MAT-016",
       "material_confidence": "D",
@@ -1349,6 +1363,7 @@
       ],
       "open_questions": [],
       "basis_confidence": "A",
+      "geometry_provenance": "DOCUMENTED",
       "material": "reference",
       "material_id": "MAT-018",
       "material_confidence": "D",
@@ -1422,6 +1437,7 @@
       ],
       "open_questions": [],
       "basis_confidence": "A",
+      "geometry_provenance": "DOCUMENTED",
       "material": "concrete",
       "material_id": "MAT-003",
       "material_confidence": "D",
@@ -1496,6 +1512,7 @@
         "OQ-016"
       ],
       "basis_confidence": "A",
+      "geometry_provenance": "DOCUMENTED",
       "material": "masonry",
       "material_id": "MAT-001",
       "material_confidence": "A",
@@ -1572,6 +1589,7 @@
       ],
       "open_questions": [],
       "basis_confidence": "A",
+      "geometry_provenance": "DOCUMENTED",
       "material": "steel_structural",
       "material_id": "MAT-005",
       "material_confidence": "A",
@@ -1682,6 +1700,7 @@
       ],
       "open_questions": [],
       "basis_confidence": "A",
+      "geometry_provenance": "DOCUMENTED",
       "material": "steel_structural",
       "material_id": "MAT-005",
       "material_confidence": "A",
@@ -1792,6 +1811,7 @@
       ],
       "open_questions": [],
       "basis_confidence": "A",
+      "geometry_provenance": "DOCUMENTED",
       "material": "steel_structural",
       "material_id": "MAT-005",
       "material_confidence": "A",
@@ -1902,6 +1922,7 @@
       ],
       "open_questions": [],
       "basis_confidence": "A",
+      "geometry_provenance": "DOCUMENTED",
       "material": "steel_structural",
       "material_id": "MAT-005",
       "material_confidence": "A",
@@ -2012,6 +2033,7 @@
         "OQ-007"
       ],
       "basis_confidence": "D",
+      "geometry_provenance": "INFERRED",
       "material": "steel_structural",
       "material_id": "MAT-017",
       "material_confidence": "B",
@@ -2435,6 +2457,7 @@
       ],
       "open_questions": [],
       "basis_confidence": "A",
+      "geometry_provenance": "DOCUMENTED",
       "material": "reference",
       "material_id": "MAT-018",
       "material_confidence": "D",
@@ -2508,6 +2531,7 @@
       ],
       "open_questions": [],
       "basis_confidence": "A",
+      "geometry_provenance": "DOCUMENTED",
       "material": "concrete",
       "material_id": "MAT-003",
       "material_confidence": "D",
@@ -2582,6 +2606,7 @@
         "OQ-016"
       ],
       "basis_confidence": "A",
+      "geometry_provenance": "DOCUMENTED",
       "material": "masonry",
       "material_id": "MAT-001",
       "material_confidence": "A",
@@ -2658,6 +2683,7 @@
       ],
       "open_questions": [],
       "basis_confidence": "A",
+      "geometry_provenance": "DOCUMENTED",
       "material": "steel_structural",
       "material_id": "MAT-005",
       "material_confidence": "A",
@@ -2768,6 +2794,7 @@
       ],
       "open_questions": [],
       "basis_confidence": "A",
+      "geometry_provenance": "DOCUMENTED",
       "material": "steel_structural",
       "material_id": "MAT-005",
       "material_confidence": "A",
@@ -2878,6 +2905,7 @@
       ],
       "open_questions": [],
       "basis_confidence": "A",
+      "geometry_provenance": "DOCUMENTED",
       "material": "steel_structural",
       "material_id": "MAT-005",
       "material_confidence": "A",
@@ -2988,6 +3016,7 @@
       ],
       "open_questions": [],
       "basis_confidence": "A",
+      "geometry_provenance": "DOCUMENTED",
       "material": "steel_structural",
       "material_id": "MAT-005",
       "material_confidence": "A",
@@ -3098,6 +3127,7 @@
         "OQ-007"
       ],
       "basis_confidence": "D",
+      "geometry_provenance": "INFERRED",
       "material": "steel_structural",
       "material_id": "MAT-017",
       "material_confidence": "B",
@@ -3523,6 +3553,7 @@
       ],
       "open_questions": [],
       "basis_confidence": "B",
+      "geometry_provenance": "DOCUMENTED",
       "material": "masonry",
       "material_id": "MAT-010",
       "material_confidence": "D",
@@ -3594,6 +3625,7 @@
       ],
       "open_questions": [],
       "basis_confidence": "B",
+      "geometry_provenance": "DOCUMENTED",
       "material": "masonry",
       "material_id": "MAT-010",
       "material_confidence": "D",
@@ -3674,6 +3706,7 @@
         "OQ-001"
       ],
       "basis_confidence": "B",
+      "geometry_provenance": "INFERRED",
       "material": "steel_wire",
       "material_id": "MAT-007",
       "material_confidence": "C",
@@ -5035,6 +5068,7 @@
         "OQ-001"
       ],
       "basis_confidence": "B",
+      "geometry_provenance": "INFERRED",
       "material": "steel_wire",
       "material_id": "MAT-007",
       "material_confidence": "C",
@@ -6396,6 +6430,7 @@
         "OQ-001"
       ],
       "basis_confidence": "B",
+      "geometry_provenance": "INFERRED",
       "material": "steel_wire",
       "material_id": "MAT-007",
       "material_confidence": "C",
@@ -7757,6 +7792,7 @@
         "OQ-001"
       ],
       "basis_confidence": "B",
+      "geometry_provenance": "INFERRED",
       "material": "steel_wire",
       "material_id": "MAT-007",
       "material_confidence": "C",
@@ -9120,6 +9156,7 @@
         "OQ-001"
       ],
       "basis_confidence": "B",
+      "geometry_provenance": "INFERRED",
       "material": "steel_wire",
       "material_id": "MAT-008",
       "material_confidence": "C",
@@ -10744,6 +10781,7 @@
         "OQ-001"
       ],
       "basis_confidence": "B",
+      "geometry_provenance": "INFERRED",
       "material": "steel_wire",
       "material_id": "MAT-008",
       "material_confidence": "C",
@@ -12368,6 +12406,7 @@
         "OQ-001"
       ],
       "basis_confidence": "B",
+      "geometry_provenance": "INFERRED",
       "material": "steel_wire",
       "material_id": "MAT-008",
       "material_confidence": "C",
@@ -13992,6 +14031,7 @@
         "OQ-001"
       ],
       "basis_confidence": "B",
+      "geometry_provenance": "INFERRED",
       "material": "steel_wire",
       "material_id": "MAT-008",
       "material_confidence": "C",
@@ -15611,6 +15651,7 @@
         "OQ-013"
       ],
       "basis_confidence": "B",
+      "geometry_provenance": "INFERRED",
       "material": "roadway_surface",
       "material_id": "MAT-013",
       "material_confidence": "D",
@@ -15688,6 +15729,7 @@
         "OQ-013"
       ],
       "basis_confidence": "B",
+      "geometry_provenance": "INFERRED",
       "material": "roadway_surface",
       "material_id": "MAT-013",
       "material_confidence": "D",
@@ -15761,6 +15803,7 @@
         "OQ-013"
       ],
       "basis_confidence": "B",
+      "geometry_provenance": "INFERRED",
       "material": "roadway_surface",
       "material_id": "MAT-013",
       "material_confidence": "D",
@@ -15833,6 +15876,7 @@
       ],
       "open_questions": [],
       "basis_confidence": "A",
+      "geometry_provenance": "DOCUMENTED",
       "material": "steel_structural",
       "material_id": "MAT-009",
       "material_confidence": "C",
@@ -15928,6 +15972,7 @@
         "OQ-017"
       ],
       "basis_confidence": "D",
+      "geometry_provenance": "INFERRED",
       "material": "steel_structural",
       "material_id": "MAT-009",
       "material_confidence": "C",
@@ -17902,6 +17947,7 @@
       ],
       "open_questions": [],
       "basis_confidence": "A",
+      "geometry_provenance": "DOCUMENTED",
       "material": "steel_structural",
       "material_id": "MAT-009",
       "material_confidence": "C",
@@ -17997,6 +18043,7 @@
         "OQ-017"
       ],
       "basis_confidence": "D",
+      "geometry_provenance": "INFERRED",
       "material": "steel_structural",
       "material_id": "MAT-009",
       "material_confidence": "C",
@@ -19971,6 +20018,7 @@
       ],
       "open_questions": [],
       "basis_confidence": "A",
+      "geometry_provenance": "DOCUMENTED",
       "material": "steel_structural",
       "material_id": "MAT-009",
       "material_confidence": "C",
@@ -20066,6 +20114,7 @@
         "OQ-017"
       ],
       "basis_confidence": "D",
+      "geometry_provenance": "INFERRED",
       "material": "steel_structural",
       "material_id": "MAT-009",
       "material_confidence": "C",
@@ -22040,6 +22089,7 @@
       ],
       "open_questions": [],
       "basis_confidence": "A",
+      "geometry_provenance": "DOCUMENTED",
       "material": "steel_structural",
       "material_id": "MAT-009",
       "material_confidence": "C",
@@ -22135,6 +22185,7 @@
         "OQ-017"
       ],
       "basis_confidence": "D",
+      "geometry_provenance": "INFERRED",
       "material": "steel_structural",
       "material_id": "MAT-009",
       "material_confidence": "C",
@@ -24114,6 +24165,7 @@
         "OQ-013"
       ],
       "basis_confidence": "B",
+      "geometry_provenance": "INFERRED",
       "material": "roadway_surface",
       "material_id": "MAT-013",
       "material_confidence": "D",
@@ -24191,6 +24243,7 @@
         "OQ-013"
       ],
       "basis_confidence": "B",
+      "geometry_provenance": "INFERRED",
       "material": "roadway_surface",
       "material_id": "MAT-013",
       "material_confidence": "D",
@@ -24264,6 +24317,7 @@
         "OQ-013"
       ],
       "basis_confidence": "B",
+      "geometry_provenance": "INFERRED",
       "material": "roadway_surface",
       "material_id": "MAT-013",
       "material_confidence": "D",
@@ -24336,6 +24390,7 @@
       ],
       "open_questions": [],
       "basis_confidence": "A",
+      "geometry_provenance": "DOCUMENTED",
       "material": "steel_structural",
       "material_id": "MAT-009",
       "material_confidence": "C",
@@ -24431,6 +24486,7 @@
         "OQ-017"
       ],
       "basis_confidence": "D",
+      "geometry_provenance": "INFERRED",
       "material": "steel_structural",
       "material_id": "MAT-009",
       "material_confidence": "C",
@@ -25445,6 +25501,7 @@
       ],
       "open_questions": [],
       "basis_confidence": "A",
+      "geometry_provenance": "DOCUMENTED",
       "material": "steel_structural",
       "material_id": "MAT-009",
       "material_confidence": "C",
@@ -25540,6 +25597,7 @@
         "OQ-017"
       ],
       "basis_confidence": "D",
+      "geometry_provenance": "INFERRED",
       "material": "steel_structural",
       "material_id": "MAT-009",
       "material_confidence": "C",
@@ -26554,6 +26612,7 @@
       ],
       "open_questions": [],
       "basis_confidence": "A",
+      "geometry_provenance": "DOCUMENTED",
       "material": "steel_structural",
       "material_id": "MAT-009",
       "material_confidence": "C",
@@ -26649,6 +26708,7 @@
         "OQ-017"
       ],
       "basis_confidence": "D",
+      "geometry_provenance": "INFERRED",
       "material": "steel_structural",
       "material_id": "MAT-009",
       "material_confidence": "C",
@@ -27663,6 +27723,7 @@
       ],
       "open_questions": [],
       "basis_confidence": "A",
+      "geometry_provenance": "DOCUMENTED",
       "material": "steel_structural",
       "material_id": "MAT-009",
       "material_confidence": "C",
@@ -27758,6 +27819,7 @@
         "OQ-017"
       ],
       "basis_confidence": "D",
+      "geometry_provenance": "INFERRED",
       "material": "steel_structural",
       "material_id": "MAT-009",
       "material_confidence": "C",
@@ -28777,6 +28839,7 @@
         "OQ-013"
       ],
       "basis_confidence": "B",
+      "geometry_provenance": "INFERRED",
       "material": "roadway_surface",
       "material_id": "MAT-013",
       "material_confidence": "D",
@@ -28854,6 +28917,7 @@
         "OQ-013"
       ],
       "basis_confidence": "B",
+      "geometry_provenance": "INFERRED",
       "material": "roadway_surface",
       "material_id": "MAT-013",
       "material_confidence": "D",
@@ -28927,6 +28991,7 @@
         "OQ-013"
       ],
       "basis_confidence": "B",
+      "geometry_provenance": "INFERRED",
       "material": "roadway_surface",
       "material_id": "MAT-013",
       "material_confidence": "D",
@@ -28999,6 +29064,7 @@
       ],
       "open_questions": [],
       "basis_confidence": "A",
+      "geometry_provenance": "DOCUMENTED",
       "material": "steel_structural",
       "material_id": "MAT-009",
       "material_confidence": "C",
@@ -29094,6 +29160,7 @@
         "OQ-017"
       ],
       "basis_confidence": "D",
+      "geometry_provenance": "INFERRED",
       "material": "steel_structural",
       "material_id": "MAT-009",
       "material_confidence": "C",
@@ -30108,6 +30175,7 @@
       ],
       "open_questions": [],
       "basis_confidence": "A",
+      "geometry_provenance": "DOCUMENTED",
       "material": "steel_structural",
       "material_id": "MAT-009",
       "material_confidence": "C",
@@ -30203,6 +30271,7 @@
         "OQ-017"
       ],
       "basis_confidence": "D",
+      "geometry_provenance": "INFERRED",
       "material": "steel_structural",
       "material_id": "MAT-009",
       "material_confidence": "C",
@@ -31217,6 +31286,7 @@
       ],
       "open_questions": [],
       "basis_confidence": "A",
+      "geometry_provenance": "DOCUMENTED",
       "material": "steel_structural",
       "material_id": "MAT-009",
       "material_confidence": "C",
@@ -31312,6 +31382,7 @@
         "OQ-017"
       ],
       "basis_confidence": "D",
+      "geometry_provenance": "INFERRED",
       "material": "steel_structural",
       "material_id": "MAT-009",
       "material_confidence": "C",
@@ -32326,6 +32397,7 @@
       ],
       "open_questions": [],
       "basis_confidence": "A",
+      "geometry_provenance": "DOCUMENTED",
       "material": "steel_structural",
       "material_id": "MAT-009",
       "material_confidence": "C",
@@ -32421,6 +32493,7 @@
         "OQ-017"
       ],
       "basis_confidence": "D",
+      "geometry_provenance": "INFERRED",
       "material": "steel_structural",
       "material_id": "MAT-009",
       "material_confidence": "C",
@@ -33438,6 +33511,7 @@
         "OQ-013"
       ],
       "basis_confidence": "B",
+      "geometry_provenance": "INFERRED",
       "material": "roadway_surface",
       "material_id": "MAT-019",
       "material_confidence": "D",
@@ -33513,6 +33587,7 @@
         "OQ-013"
       ],
       "basis_confidence": "B",
+      "geometry_provenance": "INFERRED",
       "material": "roadway_surface",
       "material_id": "MAT-019",
       "material_confidence": "D",
@@ -33593,6 +33668,7 @@
         "OQ-013"
       ],
       "basis_confidence": "B",
+      "geometry_provenance": "INFERRED",
       "material": "steel_structural",
       "material_id": "MAT-012",
       "material_confidence": "D",
@@ -33673,6 +33749,7 @@
         "OQ-013"
       ],
       "basis_confidence": "B",
+      "geometry_provenance": "INFERRED",
       "material": "steel_structural",
       "material_id": "MAT-012",
       "material_confidence": "D",
@@ -33753,6 +33830,7 @@
         "OQ-013"
       ],
       "basis_confidence": "B",
+      "geometry_provenance": "INFERRED",
       "material": "steel_structural",
       "material_id": "MAT-012",
       "material_confidence": "D",
@@ -33833,6 +33911,7 @@
         "OQ-013"
       ],
       "basis_confidence": "B",
+      "geometry_provenance": "INFERRED",
       "material": "steel_structural",
       "material_id": "MAT-012",
       "material_confidence": "D",
@@ -33915,6 +33994,7 @@
         "OQ-020"
       ],
       "basis_confidence": "C",
+      "geometry_provenance": "INFERRED",
       "material": "steel_structural",
       "material_id": "MAT-011",
       "material_confidence": "D",
@@ -33996,6 +34076,7 @@
         "OQ-020"
       ],
       "basis_confidence": "C",
+      "geometry_provenance": "INFERRED",
       "material": "steel_structural",
       "material_id": "MAT-011",
       "material_confidence": "D",
@@ -34080,6 +34161,7 @@
         "OQ-020"
       ],
       "basis_confidence": "C",
+      "geometry_provenance": "INFERRED",
       "material": "steel_structural",
       "material_id": "MAT-011",
       "material_confidence": "D",
@@ -34164,6 +34246,7 @@
         "OQ-020"
       ],
       "basis_confidence": "C",
+      "geometry_provenance": "INFERRED",
       "material": "steel_structural",
       "material_id": "MAT-011",
       "material_confidence": "D",
@@ -34248,6 +34331,7 @@
         "OQ-020"
       ],
       "basis_confidence": "C",
+      "geometry_provenance": "INFERRED",
       "material": "steel_structural",
       "material_id": "MAT-011",
       "material_confidence": "D",
@@ -34332,6 +34416,7 @@
         "OQ-020"
       ],
       "basis_confidence": "C",
+      "geometry_provenance": "INFERRED",
       "material": "steel_structural",
       "material_id": "MAT-011",
       "material_confidence": "D",
@@ -34412,6 +34497,7 @@
         "OQ-020"
       ],
       "basis_confidence": "D",
+      "geometry_provenance": "ASSUMED",
       "material": "steel_structural",
       "material_id": "MAT-011",
       "material_confidence": "D",
@@ -34820,6 +34906,7 @@
         "OQ-020"
       ],
       "basis_confidence": "C",
+      "geometry_provenance": "INFERRED",
       "material": "steel_structural",
       "material_id": "MAT-011",
       "material_confidence": "D",
@@ -34902,6 +34989,7 @@
         "OQ-020"
       ],
       "basis_confidence": "C",
+      "geometry_provenance": "INFERRED",
       "material": "steel_structural",
       "material_id": "MAT-011",
       "material_confidence": "D",
@@ -34983,6 +35071,7 @@
         "OQ-020"
       ],
       "basis_confidence": "C",
+      "geometry_provenance": "INFERRED",
       "material": "steel_structural",
       "material_id": "MAT-011",
       "material_confidence": "D",
@@ -35067,6 +35156,7 @@
         "OQ-020"
       ],
       "basis_confidence": "C",
+      "geometry_provenance": "INFERRED",
       "material": "steel_structural",
       "material_id": "MAT-011",
       "material_confidence": "D",
@@ -35151,6 +35241,7 @@
         "OQ-020"
       ],
       "basis_confidence": "C",
+      "geometry_provenance": "INFERRED",
       "material": "steel_structural",
       "material_id": "MAT-011",
       "material_confidence": "D",
@@ -35235,6 +35326,7 @@
         "OQ-020"
       ],
       "basis_confidence": "C",
+      "geometry_provenance": "INFERRED",
       "material": "steel_structural",
       "material_id": "MAT-011",
       "material_confidence": "D",
@@ -35319,6 +35411,7 @@
         "OQ-020"
       ],
       "basis_confidence": "C",
+      "geometry_provenance": "INFERRED",
       "material": "steel_structural",
       "material_id": "MAT-011",
       "material_confidence": "D",
@@ -35399,6 +35492,7 @@
         "OQ-020"
       ],
       "basis_confidence": "D",
+      "geometry_provenance": "ASSUMED",
       "material": "steel_structural",
       "material_id": "MAT-011",
       "material_confidence": "D",
@@ -35807,6 +35901,7 @@
         "OQ-020"
       ],
       "basis_confidence": "C",
+      "geometry_provenance": "INFERRED",
       "material": "steel_structural",
       "material_id": "MAT-011",
       "material_confidence": "D",

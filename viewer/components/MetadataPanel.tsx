@@ -1,5 +1,5 @@
 import type { ControlEntry, PartMetadata, PartsDocument, UnitMode } from '../src/model';
-import { CONFIDENCE_LABELS, MATERIAL_APPEARANCE, formatLength } from '../src/model';
+import { CONFIDENCE_LABELS, MATERIAL_APPEARANCE, PROVENANCE_STYLE, formatLength } from '../src/model';
 
 interface MetadataPanelProps {
   doc: PartsDocument;
@@ -59,6 +59,22 @@ export default function MetadataPanel({ doc, part, unitMode }: MetadataPanelProp
         </dd>
         <dt>Source basis</dt>
         <dd>{part.source_basis.join(', ')}</dd>
+        <dt>Geometry provenance</dt>
+        <dd>
+          <span className="material-line">
+            <span
+              className="provenance-key"
+              style={{
+                borderColor: PROVENANCE_STYLE[part.geometry_provenance]?.color,
+                borderStyle: PROVENANCE_STYLE[part.geometry_provenance]?.dash
+                  ? (PROVENANCE_STYLE[part.geometry_provenance].dash![0] < 2 ? 'dotted' : 'dashed')
+                  : 'solid',
+              }}
+            />
+            <span>{PROVENANCE_STYLE[part.geometry_provenance]?.label ?? part.geometry_provenance}</span>
+          </span>
+          <span className="hint">{PROVENANCE_STYLE[part.geometry_provenance]?.description}</span>
+        </dd>
         <dt>Material</dt>
         <dd>
           <span className="material-line">

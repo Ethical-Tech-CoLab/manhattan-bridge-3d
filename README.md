@@ -61,6 +61,21 @@ grade is tracked separately from dimensional grade: the tower piers are grade-A 
 strength of a period primary, while the anchorages are grade-D masonry because no registered source
 says what they are built from, even though every photograph shows stone.
 
+Every part also carries a **geometry provenance** — `MEASURED`, `DOCUMENTED`, `INFERRED` or
+`ASSUMED` — which is a different question from source confidence and is kept on its own axis
+([section 8](GEOMETRY-CONTROL.md)). It is drawn into the geometry as solid, dashed and dotted
+outlines, so uncertainty is visible by default rather than behind a toggle:
+
+| | count |
+|---|---:|
+| measured | **0** |
+| documented | 37 |
+| inferred | 56 |
+| assumed | 2 |
+
+Switching `inferred` and `assumed` off in the viewer leaves the towers, the anchorages and the
+station markers. That is the whole of what this model can be said to document.
+
 `.blend` and `.step` are **not** produced by the default path, because it has no binary dependencies.
 [cad/procedural/build_in_blender.py](cad/procedural/build_in_blender.py) rebuilds the identical
 skeleton inside Blender from the tool-neutral JSON when a `.blend` is needed.
@@ -114,6 +129,13 @@ steelwork therefore ended in mid-air, 437 m and 483 m short of stations the regi
 documented. The approaches are now structure rather than a flat slab — lower deck, upper roadway,
 continued trackwork and viaduct bents — with the *extent* sourced and the *form* held as three new
 placeholders under OQ-020. The same milestone added the graded material table.
+
+It also adopted the two-field provenance model from SRC-018 after establishing something worth
+recording: the noise-dumbo schematics that set the visual bar are **not** built from measured
+drawings either. That framework states plainly that no element of either East River subway bridge
+reaches `MEASURED` or `DOCUMENTED`. Their visual quality comes from rendering discipline, not from
+sources this project lacks, which means the same standard is reachable here without inventing a
+single dimension.
 
 Thirteen conflicts are carried openly in [SOURCE-REGISTER.md](SOURCE-REGISTER.md) rather than
 silently resolved. Seven are settled by weight of evidence.

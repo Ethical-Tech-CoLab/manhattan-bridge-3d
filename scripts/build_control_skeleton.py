@@ -106,10 +106,58 @@ class Part:
     subsystem: str | None = None
     open_questions: list[str] = field(default_factory=list)
     confidence: str = ""
+    geometry_provenance: str = ""
     material: str = ""
     material_id: str = ""
     material_confidence: str = ""
     material_sources: list[str] = field(default_factory=list)
+
+    def resolve_provenance(self, model: ControlModel) -> None:
+        """Derive geometry provenance, kept independent of source verification state.
+
+        SRC-018 section 5.4 makes the case for two fields rather than one: a source can be fully
+        read and quoted and still support only ASSUMED geometry, because a sentence establishing
+        that an element exists says nothing about where it is. Their own reference implementation
+        collapsed the two and consequently labelled eight components "verified" on the strength of
+        a source that located none of them.
+
+        The four values, and how this model earns them:
+
+        MEASURED   an instrument reading of the actual structure. Nothing here qualifies, and
+                   nothing will until photogrammetry or survey lands. It is computed rather than
+                   hardcoded to zero so that the day it changes, it changes honestly.
+        DOCUMENTED every control this part rests on is sourced, and the part is a direct
+                   expression of those controls rather than a reasoned reconstruction.
+        INFERRED   the element's *existence* is documented -- it expresses at least one sourced
+                   control -- but its position or dimension is reasoned.
+        ASSUMED    no sourced control documents this element at all, so it is placed by
+                   engineering judgement.
+
+        The INFERRED/ASSUMED boundary is the one that carries the weight, and it is drawn on
+        whether anything sourced speaks to the element, not on how confident the shape is. The
+        approach bents are ASSUMED because no source mentions a bent; the approach *decks* are
+        INFERRED because CTL-002 and CTL-003 document that they exist and how far they run, while
+        leaving their depth and grade to judgement.
+        """
+        if "photogrammetry" in self.source_basis or "survey" in self.source_basis:
+            self.geometry_provenance = "MEASURED"
+            return
+
+        sourced_refs = [
+            ref for ref in self.control_refs
+            if ref in model.by_id and not model.by_id[ref].is_placeholder
+        ]
+        placeholder_refs = [
+            ref for ref in self.control_refs
+            if ref in model.by_id and model.by_id[ref].is_placeholder
+        ]
+
+        if "control_dimension" not in self.source_basis or not sourced_refs:
+            self.geometry_provenance = "ASSUMED"
+        elif placeholder_refs or "inferred" in self.source_basis or self.basis_confidence == "D":
+            self.geometry_provenance = "INFERRED"
+        else:
+            self.geometry_provenance = "DOCUMENTED"
 
     def resolve_material(self, model: ControlModel) -> None:
         """Attach the material the control document assigns to this part.
@@ -188,6 +236,7 @@ class Part:
             "control_refs": list(self.control_refs),
             "open_questions": list(self.open_questions),
             "basis_confidence": self.basis_confidence,
+            "geometry_provenance": self.geometry_provenance,
             "material": self.material,
             "material_id": self.material_id,
             "material_confidence": self.material_confidence,
@@ -1393,6 +1442,7 @@ def build_parts(model: ControlModel, sk: Skeleton) -> list[Part]:
 
     for part in parts:
         part.resolve_confidence(model)
+        part.resolve_provenance(model)
         part.resolve_material(model)
     return parts
 
@@ -1569,6 +1619,18 @@ def compute_measures(parts: Sequence[Part], model: ControlModel, sk: Skeleton) -
             for v in (p.bbox()["min"][0], p.bbox()["max"][0])
         ),
         "parts_without_material": sum(1 for p in parts if not p.material),
+        # SRC-018 section 5.5 asks for a standing tally of provenance states, "displayed
+        # permanently, not buried in a methods appendix". Computed here so the viewer renders a
+        # number it did not invent.
+        "geometry_provenance_tally": {
+            state: sum(1 for p in parts if p.geometry_provenance == state)
+            for state in ("MEASURED", "DOCUMENTED", "INFERRED", "ASSUMED")
+        },
+        # Flattened for the regression harness, which compares scalars.
+        "parts_measured": sum(1 for p in parts if p.geometry_provenance == "MEASURED"),
+        "parts_documented": sum(1 for p in parts if p.geometry_provenance == "DOCUMENTED"),
+        "parts_assumed": sum(1 for p in parts if p.geometry_provenance == "ASSUMED"),
+        "parts_without_provenance": sum(1 for p in parts if not p.geometry_provenance),
     }
 
 

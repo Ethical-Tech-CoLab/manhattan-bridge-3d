@@ -3,7 +3,7 @@ import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import type { Confidence, PartMetadata, PartsDocument, ViewerConfig } from './model';
-import { MATERIAL_APPEARANCE } from './model';
+import { MATERIAL_APPEARANCE, PROVENANCE_STYLE } from './model';
 
 /**
  * BridgeViewer renders any source-governed GLB whose part nodes carry metadata in glTF `extras`.
@@ -23,6 +23,8 @@ export interface BridgeViewerProps {
   hiddenParts: Set<string>;
   confidenceOverlay: boolean;
   materialMode: boolean;
+  provenanceOutlines: boolean;
+  hiddenProvenance: Set<string>;
   onSelect: (partId: string | null) => void;
   focusToken: number;
 }
@@ -31,6 +33,7 @@ interface RenderablePart {
   id: string;
   root: THREE.Object3D;
   renderables: Array<THREE.Mesh | THREE.LineSegments>;
+  outlines: THREE.LineSegments[];
 }
 
 interface Viewer {
@@ -70,7 +73,7 @@ function collectParts(root: THREE.Object3D): RenderablePart[] {
       renderable.userData.baseMetalness = cloned.metalness ?? 0;
       renderables.push(renderable);
     });
-    if (renderables.length > 0) parts.push({ id: partId, root: object, renderables });
+    if (renderables.length > 0) parts.push({ id: partId, root: object, renderables, outlines: [] });
   });
   return parts;
 }
@@ -132,8 +135,65 @@ function frameCamera(viewer: Viewer, config: ViewerConfig, doc: PartsDocument): 
   controls.update();
 }
 
+/**
+ * Attach a provenance outline to every mesh: solid for documented, dashed for inferred, dotted for
+ * assumed (SRC-018 section 5.5).
+ *
+ * The outlines are built once after load and then only toggled, because EdgesGeometry is expensive
+ * and the provenance of a part never changes at runtime. Line primitives are skipped: a truss web
+ * drawn as wires is already unmistakably schematic, and outlining a line with a line would just
+ * thicken it.
+ */
+function buildProvenanceOutlines(viewer: Viewer, doc: PartsDocument): void {
+  const metadataById = new Map(doc.parts.map((part) => [part.part_id, part]));
+
+  viewer.parts.forEach((part) => {
+    const meta = metadataById.get(part.id);
+    if (!meta) return;
+    const style = PROVENANCE_STYLE[meta.geometry_provenance];
+    if (!style) return;
+
+    part.renderables.forEach((renderable) => {
+      if ((renderable as THREE.Mesh).isMesh !== true) return;
+      const mesh = renderable as THREE.Mesh;
+      const edges = new THREE.EdgesGeometry(mesh.geometry, 25);
+      const material = style.dash
+        ? new THREE.LineDashedMaterial({
+            color: new THREE.Color(style.color),
+            dashSize: style.dash[0],
+            gapSize: style.dash[1],
+            transparent: true,
+            opacity: 0.95,
+          })
+        : new THREE.LineBasicMaterial({
+            color: new THREE.Color(style.color),
+            transparent: true,
+            opacity: 0.85,
+          });
+      const outline = new THREE.LineSegments(edges, material);
+      // Required for LineDashedMaterial; without it every dashed line renders solid.
+      outline.computeLineDistances();
+      outline.userData.isProvenanceOutline = true;
+      outline.renderOrder = 2;
+      mesh.add(outline);
+      part.outlines.push(outline);
+    });
+  });
+}
+
 export default function BridgeViewer(props: BridgeViewerProps) {
-  const { config, doc, selectedId, hiddenSystems, hiddenParts, confidenceOverlay, materialMode, onSelect } = props;
+  const {
+    config,
+    doc,
+    selectedId,
+    hiddenSystems,
+    hiddenParts,
+    confidenceOverlay,
+    materialMode,
+    provenanceOutlines,
+    hiddenProvenance,
+    onSelect,
+  } = props;
   const hostRef = useRef<HTMLDivElement | null>(null);
   const viewerRef = useRef<Viewer | null>(null);
   const onSelectRef = useRef(onSelect);
@@ -220,6 +280,7 @@ export default function BridgeViewer(props: BridgeViewerProps) {
         if (disposed) return;
         scene.add(gltf.scene);
         viewer.parts = collectParts(gltf.scene);
+        buildProvenanceOutlines(viewer, doc);
         resize();
         frameCamera(viewer, config, doc);
         setReady(true);
@@ -284,10 +345,23 @@ export default function BridgeViewer(props: BridgeViewerProps) {
 
     viewer.parts.forEach((part) => {
       const meta = metadataById.get(part.id);
-      part.root.visible = !(hiddenParts.has(part.id) || (meta ? hiddenSystems.has(meta.system) : false));
+      // SRC-018 section 5.5 is explicit that the provenance filter must hide rather than fade:
+      // "a faded outline is still a shape a reader will trace, and the honest experience of
+      // switching both off on this project is an empty frame."
+      const provenanceHidden = meta ? hiddenProvenance.has(meta.geometry_provenance) : false;
+      part.root.visible = !(
+        hiddenParts.has(part.id) ||
+        (meta ? hiddenSystems.has(meta.system) : false) ||
+        provenanceHidden
+      );
       const isSelected = part.id === selectedId;
       const appearance =
         materialMode && meta ? MATERIAL_APPEARANCE[meta.material] ?? null : null;
+      const provenance = meta ? PROVENANCE_STYLE[meta.geometry_provenance] : null;
+
+      part.outlines.forEach((outline) => {
+        outline.visible = provenanceOutlines;
+      });
 
       part.renderables.forEach((renderable) => {
         const material = renderable.material as THREE.MeshStandardMaterial;
@@ -307,11 +381,14 @@ export default function BridgeViewer(props: BridgeViewerProps) {
         if (appearance && !confidenceOverlay) {
           // Line primitives keep their schematic opacity: a wire-drawn truss web rendered opaque
           // would read as solid plate, which would be a stronger claim than the geometry supports.
+          // Fill opacity is further reduced by provenance so that reasoned and judged geometry
+          // recedes behind what is actually documented.
+          const provenanceFill = provenanceOutlines && provenance ? provenance.fillOpacity : 1;
           material.opacity = isSelected
             ? Math.min(1, appearance.opacity * 2.5)
             : isLine
               ? baseOpacity
-              : appearance.opacity;
+              : appearance.opacity * provenanceFill;
           if (!isLine) {
             material.roughness = appearance.roughness;
             material.metalness = appearance.metalness;
@@ -329,7 +406,17 @@ export default function BridgeViewer(props: BridgeViewerProps) {
         material.needsUpdate = true;
       });
     });
-  }, [ready, doc, hiddenParts, hiddenSystems, selectedId, confidenceOverlay, materialMode]);
+  }, [
+    ready,
+    doc,
+    hiddenParts,
+    hiddenSystems,
+    selectedId,
+    confidenceOverlay,
+    materialMode,
+    provenanceOutlines,
+    hiddenProvenance,
+  ]);
 
   // ------------------------------------------------------------ selection box
   useEffect(() => {

@@ -897,6 +897,49 @@
         "GEOMETRY-CONTROL.md section 7"
       ],
       "rationale": "A part with no material rule means the control document does not say how it should look, and the renderer would be choosing. Section 7 has no default rule for exactly this reason, so this test guards the section 7 table against drifting behind the part list."
+    },
+    {
+      "id": "GRT-074",
+      "title": "No element of this bridge claims to be measured",
+      "kind": "measure",
+      "measure": "parts_measured",
+      "expected": 0,
+      "unit": "count",
+      "tolerance": 0,
+      "mode": "report",
+      "refs": [
+        "SRC-018 VISUAL-MODEL-FRAMEWORK.md section 5.4"
+      ],
+      "rationale": "MEASURED means the geometry derives from an instrument reading of the actual structure. Nothing here qualifies, and SRC-018 independently reaches the same conclusion for both East River subway bridges. Report-only rather than assert, because the day photogrammetry or survey lands this number should rise, and the suite should announce that rather than block it."
+    },
+    {
+      "id": "GRT-075",
+      "title": "Every part carries a derived geometry provenance",
+      "kind": "measure",
+      "measure": "parts_without_provenance",
+      "expected": 0,
+      "unit": "count",
+      "tolerance": 0,
+      "mode": "assert",
+      "refs": [
+        "SRC-018 VISUAL-MODEL-FRAMEWORK.md section 5.4"
+      ],
+      "rationale": "Geometry provenance is rendered as line style, so a part without one would be drawn with no uncertainty signal at all — the silent failure the two-field schema exists to prevent."
+    },
+    {
+      "id": "GRT-076",
+      "title": "Assumed geometry is confined to elements no source mentions",
+      "kind": "measure",
+      "measure": "parts_assumed",
+      "expected": 2,
+      "unit": "count",
+      "tolerance": 0,
+      "mode": "assert",
+      "refs": [
+        "GEOMETRY-CONTROL.md section 5, OQ-020",
+        "SRC-018 VISUAL-MODEL-FRAMEWORK.md section 5.4"
+      ],
+      "rationale": "Only the two approach bent groups are ASSUMED: no registered source mentions a bent on either approach. Everything else expresses at least one sourced control, which makes it INFERRED rather than ASSUMED. A rise here means geometry was added that nothing documents, which is the one thing this project must not do quietly."
     }
   ]
 }

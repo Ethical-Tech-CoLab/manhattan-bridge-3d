@@ -143,7 +143,22 @@ def build_lod(model) -> dict[str, Any]:
 
 
 TAXONOMY_KEYS = ("system", "subsystem")
-EXTENSION_KEYS = ("prototype_units", "ho_scale_units", "bbox_ho_mm", "scale", "geometry_kinds")
+EXTENSION_KEYS = (
+    "prototype_units",
+    "ho_scale_units",
+    "bbox_ho_mm",
+    "scale",
+    "geometry_kinds",
+    # Milestone 6. Geometry provenance and material are deliberately module-private: they are this
+    # module's epistemic apparatus, adopted from SRC-018, and the shared metadata schema has no
+    # field for either. Publishing them under the module namespace lets a consumer read them
+    # without implying they are part of the cross-module contract.
+    "geometry_provenance",
+    "material",
+    "material_id",
+    "material_confidence",
+    "material_sources",
+)
 
 # Coarse class shared with the district, from the metadata schema enum. The fine-grained
 # system/subsystem taxonomy stays module-local under `taxonomy`.
