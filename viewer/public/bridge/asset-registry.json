@@ -1,0 +1,2260 @@
+{
+  "contract_version": "1.0.0",
+  "module_id": "manhattan-bridge",
+  "frame_id": "nyc-harbor-enu",
+  "ladder_id": "manhattan-bridge-ladder",
+  "base_url": "../",
+  "assets": [
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:bridge_proxy",
+      "kind": "proxy",
+      "represents": "urn:d3d:manhattan-bridge:control_skeleton",
+      "tags": [
+        "landmark",
+        "context",
+        "district_visible"
+      ],
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -1061.9063360655737,
+          -27.736800000000002,
+          -28.041600000000003
+        ],
+        "max": [
+          1027.4976639344263,
+          27.736800000000002,
+          98.56669691405095
+        ]
+      },
+      "variants": [
+        {
+          "level": 2,
+          "url": "assets/bridge.lod2.glb",
+          "format": "glb",
+          "byte_size": 137944,
+          "triangle_count": 4620,
+          "max_geometric_error_m": 8.0,
+          "sha256": "79f4752338f4ceb6ea79e7c755c502b695c9066343432a77e1867389ab710a38"
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:control_skeleton",
+      "kind": "aggregate",
+      "tags": [
+        "inspect",
+        "authoritative"
+      ],
+      "metadata_url": "bridge/metadata.json",
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "byte_size": 608196,
+          "max_geometric_error_m": 0.01,
+          "sha256": "0640eb900a9a342fc6e71cbcd2642de35903d45b61269558ded46c5339e18944"
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:reference_datum_mhw_plane",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -445.008,
+          -18.288,
+          0.0
+        ],
+        "max": [
+          445.008,
+          18.288,
+          0.0
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "reference_datum_mhw_plane",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:reference_bridge_axis",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -445.008,
+          0.0,
+          0.0
+        ],
+        "max": [
+          445.008,
+          0.0,
+          0.0
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "reference_bridge_axis",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:control_curve_deck_centerline",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -1061.906336,
+          0.0,
+          49.3776
+        ],
+        "max": [
+          1027.497664,
+          0.0,
+          49.3776
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "control_curve_deck_centerline",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:station_sta_mid",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          0.0,
+          -14.6304,
+          0.0
+        ],
+        "max": [
+          0.0,
+          14.6304,
+          98.298
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "station_sta_mid",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:station_sta_twr_m",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -224.028,
+          -14.6304,
+          0.0
+        ],
+        "max": [
+          -224.028,
+          14.6304,
+          98.298
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "station_sta_twr_m",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:station_sta_twr_b",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          224.028,
+          -14.6304,
+          0.0
+        ],
+        "max": [
+          224.028,
+          14.6304,
+          98.298
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "station_sta_twr_b",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:station_sta_anc_m",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -445.008,
+          -14.6304,
+          0.0
+        ],
+        "max": [
+          -445.008,
+          14.6304,
+          98.298
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "station_sta_anc_m",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:station_sta_anc_b",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          445.008,
+          -14.6304,
+          0.0
+        ],
+        "max": [
+          445.008,
+          14.6304,
+          98.298
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "station_sta_anc_b",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:station_sta_abut_m",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -882.396,
+          -14.6304,
+          0.0
+        ],
+        "max": [
+          -882.396,
+          14.6304,
+          98.298
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "station_sta_abut_m",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:station_sta_abut_b",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          882.396,
+          -14.6304,
+          0.0
+        ],
+        "max": [
+          882.396,
+          14.6304,
+          98.298
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "station_sta_abut_b",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:station_sta_portal_m",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -928.116,
+          -14.6304,
+          0.0
+        ],
+        "max": [
+          -928.116,
+          14.6304,
+          98.298
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "station_sta_portal_m",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:station_sta_portal_b",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          928.116,
+          -14.6304,
+          0.0
+        ],
+        "max": [
+          928.116,
+          14.6304,
+          98.298
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "station_sta_portal_b",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:station_sta_appr_end_m",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -1061.906336,
+          -14.6304,
+          0.0
+        ],
+        "max": [
+          -1061.906336,
+          14.6304,
+          98.298
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "station_sta_appr_end_m",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:station_sta_appr_end_b",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          1027.497664,
+          -14.6304,
+          0.0
+        ],
+        "max": [
+          1027.497664,
+          14.6304,
+          98.298
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "station_sta_appr_end_b",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:tower_manhattan_centerline",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -224.028,
+          0.0,
+          -28.0416
+        ],
+        "max": [
+          -224.028,
+          0.0,
+          98.298
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "tower_manhattan_centerline",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:tower_manhattan_caisson",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -235.9152,
+          -21.9456,
+          -28.0416
+        ],
+        "max": [
+          -212.1408,
+          21.9456,
+          -13.5636
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "tower_manhattan_caisson",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:tower_manhattan_pier",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -234.3912,
+          -20.4216,
+          -13.5636
+        ],
+        "max": [
+          -213.6648,
+          20.4216,
+          7.0104
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "tower_manhattan_pier",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:tower_manhattan_leg_a",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -228.9048,
+          -15.3924,
+          7.0104
+        ],
+        "max": [
+          -219.1512,
+          -13.8684,
+          98.298
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "tower_manhattan_leg_a",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:tower_manhattan_leg_b",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -228.9048,
+          -6.858,
+          7.0104
+        ],
+        "max": [
+          -219.1512,
+          -5.334,
+          98.298
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "tower_manhattan_leg_b",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:tower_manhattan_leg_c",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -228.9048,
+          5.334,
+          7.0104
+        ],
+        "max": [
+          -219.1512,
+          6.858,
+          98.298
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "tower_manhattan_leg_c",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:tower_manhattan_leg_d",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -228.9048,
+          13.8684,
+          7.0104
+        ],
+        "max": [
+          -219.1512,
+          15.3924,
+          98.298
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "tower_manhattan_leg_d",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:tower_manhattan_bracing",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -224.028,
+          -14.6304,
+          32.570928
+        ],
+        "max": [
+          -224.028,
+          14.6304,
+          95.559372
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "tower_manhattan_bracing",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:tower_brooklyn_centerline",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          224.028,
+          0.0,
+          -28.0416
+        ],
+        "max": [
+          224.028,
+          0.0,
+          98.298
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "tower_brooklyn_centerline",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:tower_brooklyn_caisson",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          212.1408,
+          -21.9456,
+          -28.0416
+        ],
+        "max": [
+          235.9152,
+          21.9456,
+          -13.5636
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "tower_brooklyn_caisson",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:tower_brooklyn_pier",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          213.6648,
+          -20.4216,
+          -13.5636
+        ],
+        "max": [
+          234.3912,
+          20.4216,
+          7.0104
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "tower_brooklyn_pier",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:tower_brooklyn_leg_a",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          219.1512,
+          -15.3924,
+          7.0104
+        ],
+        "max": [
+          228.9048,
+          -13.8684,
+          98.298
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "tower_brooklyn_leg_a",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:tower_brooklyn_leg_b",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          219.1512,
+          -6.858,
+          7.0104
+        ],
+        "max": [
+          228.9048,
+          -5.334,
+          98.298
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "tower_brooklyn_leg_b",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:tower_brooklyn_leg_c",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          219.1512,
+          5.334,
+          7.0104
+        ],
+        "max": [
+          228.9048,
+          6.858,
+          98.298
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "tower_brooklyn_leg_c",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:tower_brooklyn_leg_d",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          219.1512,
+          13.8684,
+          7.0104
+        ],
+        "max": [
+          228.9048,
+          15.3924,
+          98.298
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "tower_brooklyn_leg_d",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:tower_brooklyn_bracing",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          224.028,
+          -14.6304,
+          32.570928
+        ],
+        "max": [
+          224.028,
+          14.6304,
+          95.559372
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "tower_brooklyn_bracing",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:manhattan_anchorage",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -517.2456,
+          -27.7368,
+          0.0
+        ],
+        "max": [
+          -445.008,
+          27.7368,
+          41.148
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "manhattan_anchorage",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:brooklyn_anchorage",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          445.008,
+          -27.7368,
+          0.0
+        ],
+        "max": [
+          517.2456,
+          27.7368,
+          41.148
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "brooklyn_anchorage",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:south_main_cable_1",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -445.27724,
+          -14.89964,
+          40.87876
+        ],
+        "max": [
+          445.27724,
+          -14.36116,
+          98.56724
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "south_main_cable_1",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:south_main_cable_2",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -445.27724,
+          -6.36524,
+          40.87876
+        ],
+        "max": [
+          445.27724,
+          -5.82676,
+          98.56724
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "south_main_cable_2",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:north_main_cable_2",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -445.27724,
+          5.82676,
+          40.87876
+        ],
+        "max": [
+          445.27724,
+          6.36524,
+          98.56724
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "north_main_cable_2",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:north_main_cable_1",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -445.27724,
+          14.36116,
+          40.87876
+        ],
+        "max": [
+          445.27724,
+          14.89964,
+          98.56724
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "north_main_cable_1",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:suspenders_truss_a",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -374.325266,
+          -14.6304,
+          48.4632
+        ],
+        "max": [
+          374.325266,
+          -14.6304,
+          94.653074
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "suspenders_truss_a",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:suspenders_truss_b",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -374.325266,
+          -6.096,
+          48.4632
+        ],
+        "max": [
+          374.325266,
+          -6.096,
+          94.653074
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "suspenders_truss_b",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:suspenders_truss_c",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -374.325266,
+          6.096,
+          48.4632
+        ],
+        "max": [
+          374.325266,
+          6.096,
+          94.653074
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "suspenders_truss_c",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:suspenders_truss_d",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -374.325266,
+          14.6304,
+          48.4632
+        ],
+        "max": [
+          374.325266,
+          14.6304,
+          94.653074
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "suspenders_truss_d",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:upper_roadway_brooklyn_bound_main_span",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -224.028,
+          -13.7922,
+          48.4632
+        ],
+        "max": [
+          224.028,
+          -6.9342,
+          49.3776
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "upper_roadway_brooklyn_bound_main_span",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:upper_roadway_manhattan_bound_main_span",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -224.028,
+          6.7056,
+          48.4632
+        ],
+        "max": [
+          224.028,
+          14.0208,
+          49.3776
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "upper_roadway_manhattan_bound_main_span",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:lower_roadway_envelope_main_span",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -224.028,
+          -5.334,
+          41.148
+        ],
+        "max": [
+          224.028,
+          5.334,
+          42.18432
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "lower_roadway_envelope_main_span",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:stiffening_truss_a_chords_main_span",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -224.028,
+          -14.6304,
+          41.148
+        ],
+        "max": [
+          224.028,
+          -14.6304,
+          48.4632
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "stiffening_truss_a_chords_main_span",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:stiffening_truss_a_web_main_span",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -224.028,
+          -14.6304,
+          41.148
+        ],
+        "max": [
+          224.028,
+          -14.6304,
+          48.4632
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "stiffening_truss_a_web_main_span",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:stiffening_truss_b_chords_main_span",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -224.028,
+          -6.096,
+          41.148
+        ],
+        "max": [
+          224.028,
+          -6.096,
+          48.4632
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "stiffening_truss_b_chords_main_span",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:stiffening_truss_b_web_main_span",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -224.028,
+          -6.096,
+          41.148
+        ],
+        "max": [
+          224.028,
+          -6.096,
+          48.4632
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "stiffening_truss_b_web_main_span",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:stiffening_truss_c_chords_main_span",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -224.028,
+          6.096,
+          41.148
+        ],
+        "max": [
+          224.028,
+          6.096,
+          48.4632
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "stiffening_truss_c_chords_main_span",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:stiffening_truss_c_web_main_span",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -224.028,
+          6.096,
+          41.148
+        ],
+        "max": [
+          224.028,
+          6.096,
+          48.4632
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "stiffening_truss_c_web_main_span",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:stiffening_truss_d_chords_main_span",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -224.028,
+          14.6304,
+          41.148
+        ],
+        "max": [
+          224.028,
+          14.6304,
+          48.4632
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "stiffening_truss_d_chords_main_span",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:stiffening_truss_d_web_main_span",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -224.028,
+          14.6304,
+          41.148
+        ],
+        "max": [
+          224.028,
+          14.6304,
+          48.4632
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "stiffening_truss_d_web_main_span",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:upper_roadway_brooklyn_bound_side_span_manhattan",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -445.008,
+          -13.7922,
+          48.4632
+        ],
+        "max": [
+          -224.028,
+          -6.9342,
+          49.3776
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "upper_roadway_brooklyn_bound_side_span_manhattan",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:upper_roadway_manhattan_bound_side_span_manhattan",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -445.008,
+          6.7056,
+          48.4632
+        ],
+        "max": [
+          -224.028,
+          14.0208,
+          49.3776
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "upper_roadway_manhattan_bound_side_span_manhattan",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:lower_roadway_envelope_side_span_manhattan",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -445.008,
+          -5.334,
+          41.148
+        ],
+        "max": [
+          -224.028,
+          5.334,
+          42.18432
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "lower_roadway_envelope_side_span_manhattan",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:stiffening_truss_a_chords_side_span_manhattan",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -445.008,
+          -14.6304,
+          41.148
+        ],
+        "max": [
+          -224.028,
+          -14.6304,
+          48.4632
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "stiffening_truss_a_chords_side_span_manhattan",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:stiffening_truss_a_web_side_span_manhattan",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -445.008,
+          -14.6304,
+          41.148
+        ],
+        "max": [
+          -224.028,
+          -14.6304,
+          48.4632
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "stiffening_truss_a_web_side_span_manhattan",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:stiffening_truss_b_chords_side_span_manhattan",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -445.008,
+          -6.096,
+          41.148
+        ],
+        "max": [
+          -224.028,
+          -6.096,
+          48.4632
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "stiffening_truss_b_chords_side_span_manhattan",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:stiffening_truss_b_web_side_span_manhattan",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -445.008,
+          -6.096,
+          41.148
+        ],
+        "max": [
+          -224.028,
+          -6.096,
+          48.4632
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "stiffening_truss_b_web_side_span_manhattan",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:stiffening_truss_c_chords_side_span_manhattan",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -445.008,
+          6.096,
+          41.148
+        ],
+        "max": [
+          -224.028,
+          6.096,
+          48.4632
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "stiffening_truss_c_chords_side_span_manhattan",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:stiffening_truss_c_web_side_span_manhattan",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -445.008,
+          6.096,
+          41.148
+        ],
+        "max": [
+          -224.028,
+          6.096,
+          48.4632
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "stiffening_truss_c_web_side_span_manhattan",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:stiffening_truss_d_chords_side_span_manhattan",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -445.008,
+          14.6304,
+          41.148
+        ],
+        "max": [
+          -224.028,
+          14.6304,
+          48.4632
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "stiffening_truss_d_chords_side_span_manhattan",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:stiffening_truss_d_web_side_span_manhattan",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -445.008,
+          14.6304,
+          41.148
+        ],
+        "max": [
+          -224.028,
+          14.6304,
+          48.4632
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "stiffening_truss_d_web_side_span_manhattan",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:upper_roadway_brooklyn_bound_side_span_brooklyn",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          224.028,
+          -13.7922,
+          48.4632
+        ],
+        "max": [
+          445.008,
+          -6.9342,
+          49.3776
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "upper_roadway_brooklyn_bound_side_span_brooklyn",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:upper_roadway_manhattan_bound_side_span_brooklyn",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          224.028,
+          6.7056,
+          48.4632
+        ],
+        "max": [
+          445.008,
+          14.0208,
+          49.3776
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "upper_roadway_manhattan_bound_side_span_brooklyn",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:lower_roadway_envelope_side_span_brooklyn",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          224.028,
+          -5.334,
+          41.148
+        ],
+        "max": [
+          445.008,
+          5.334,
+          42.18432
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "lower_roadway_envelope_side_span_brooklyn",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:stiffening_truss_a_chords_side_span_brooklyn",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          224.028,
+          -14.6304,
+          41.148
+        ],
+        "max": [
+          445.008,
+          -14.6304,
+          48.4632
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "stiffening_truss_a_chords_side_span_brooklyn",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:stiffening_truss_a_web_side_span_brooklyn",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          224.028,
+          -14.6304,
+          41.148
+        ],
+        "max": [
+          445.008,
+          -14.6304,
+          48.4632
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "stiffening_truss_a_web_side_span_brooklyn",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:stiffening_truss_b_chords_side_span_brooklyn",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          224.028,
+          -6.096,
+          41.148
+        ],
+        "max": [
+          445.008,
+          -6.096,
+          48.4632
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "stiffening_truss_b_chords_side_span_brooklyn",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:stiffening_truss_b_web_side_span_brooklyn",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          224.028,
+          -6.096,
+          41.148
+        ],
+        "max": [
+          445.008,
+          -6.096,
+          48.4632
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "stiffening_truss_b_web_side_span_brooklyn",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:stiffening_truss_c_chords_side_span_brooklyn",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          224.028,
+          6.096,
+          41.148
+        ],
+        "max": [
+          445.008,
+          6.096,
+          48.4632
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "stiffening_truss_c_chords_side_span_brooklyn",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:stiffening_truss_c_web_side_span_brooklyn",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          224.028,
+          6.096,
+          41.148
+        ],
+        "max": [
+          445.008,
+          6.096,
+          48.4632
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "stiffening_truss_c_web_side_span_brooklyn",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:stiffening_truss_d_chords_side_span_brooklyn",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          224.028,
+          14.6304,
+          41.148
+        ],
+        "max": [
+          445.008,
+          14.6304,
+          48.4632
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "stiffening_truss_d_chords_side_span_brooklyn",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:stiffening_truss_d_web_side_span_brooklyn",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          224.028,
+          14.6304,
+          41.148
+        ],
+        "max": [
+          445.008,
+          14.6304,
+          48.4632
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "stiffening_truss_d_web_side_span_brooklyn",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:footwalk_south",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -445.008,
+          -17.6784,
+          42.18432
+        ],
+        "max": [
+          445.008,
+          -14.6304,
+          42.48432
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "footwalk_south",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:footwalk_north",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -445.008,
+          14.6304,
+          42.18432
+        ],
+        "max": [
+          445.008,
+          17.6784,
+          42.48432
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "footwalk_north",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:track_1",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -445.008,
+          11.77925,
+          42.18432
+        ],
+        "max": [
+          445.008,
+          13.21435,
+          42.64152
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "track_1",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:track_2",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -445.008,
+          7.51205,
+          42.18432
+        ],
+        "max": [
+          445.008,
+          8.94715,
+          42.64152
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "track_2",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:track_3",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -445.008,
+          -8.94715,
+          42.18432
+        ],
+        "max": [
+          445.008,
+          -7.51205,
+          42.64152
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "track_3",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:track_4",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -445.008,
+          -13.21435,
+          42.18432
+        ],
+        "max": [
+          445.008,
+          -11.77925,
+          42.64152
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "track_4",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:manhattan_approach",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -1061.906336,
+          -18.288,
+          48.4632
+        ],
+        "max": [
+          -517.2456,
+          18.288,
+          49.3776
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "manhattan_approach",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:brooklyn_approach",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          517.2456,
+          -18.288,
+          48.4632
+        ],
+        "max": [
+          1027.497664,
+          18.288,
+          49.3776
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "brooklyn_approach",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "module_id": "manhattan-bridge",
+    "generated_by": "publish_module_contract.py via build_control_skeleton.py@1.0.0",
+    "generated_at": "2026-08-09T17:17:08+00:00",
+    "source_documents": [
+      {
+        "path": "GEOMETRY-CONTROL.md",
+        "sha256": "feb9991c3d1d977c61be4d812fef7752fd3858fe1301223e5f7f670bfeb35707"
+      }
+    ]
+  }
+}

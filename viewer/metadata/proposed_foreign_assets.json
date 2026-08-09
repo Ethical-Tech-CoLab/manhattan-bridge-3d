@@ -1,0 +1,48 @@
+{
+  "note": "Tiles actually occupied by urn:d3d:manhattan-bridge:bridge_proxy under the placement published in bridge-manifest.json. Proposed correction to dumbo-district-3d/viewer/public/district/tile-index.json foreign_assets. Owned by dumbo-district; offered, not applied.",
+  "proxy_urn": "urn:d3d:manhattan-bridge:bridge_proxy",
+  "declared_by_district": [
+    "t_5_2",
+    "t_6_2",
+    "t_6_3",
+    "t_6_4",
+    "t_6_5",
+    "t_6_6",
+    "t_7_3",
+    "t_7_4",
+    "t_7_5",
+    "t_7_6",
+    "t_7_7",
+    "t_8_7"
+  ],
+  "occupied_by_proxy": [
+    "t_6_5",
+    "t_6_6",
+    "t_6_7",
+    "t_7_3",
+    "t_7_4",
+    "t_7_5",
+    "t_7_6",
+    "t_8_1",
+    "t_8_2",
+    "t_8_3",
+    "t_8_4",
+    "t_9_1"
+  ],
+  "declared_but_not_occupied": [
+    "t_5_2",
+    "t_6_2",
+    "t_6_3",
+    "t_6_4",
+    "t_7_7",
+    "t_8_7"
+  ],
+  "occupied_but_not_declared": [
+    "t_6_7",
+    "t_8_1",
+    "t_8_2",
+    "t_8_3",
+    "t_8_4",
+    "t_9_1"
+  ]
+}

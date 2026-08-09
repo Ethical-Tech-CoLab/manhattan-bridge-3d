@@ -219,7 +219,7 @@ in the plausible range reproduces 157. This replaces the arbitrary 30 ft pitch u
 | OQ-006 | Split of approach length between the two sides. | Approach stations | SRC-012 | **Mitigated**: ratio derived from CTL-039/CTL-040 as 0.5143. Absolute lengths still include plazas, so the split is a ratio only. |
 | OQ-007 | Tower plan dimensions, leg spacing, arch openings. | Tower geometry | SRC-004 | **Mostly retired**: caisson (78 x 144 ft), pier (68 x 134 ft), pedestal (18 x 43 ft) and the full vertical build-up are registered. SRC-015 adds that the towers have four columns in the planes of the trusses. Arch openings and column taper still open. |
 | OQ-008 | Anchorage plan dimensions. | Anchorage geometry | SRC-015 | **Retired** by CTL-034/035/036, two of the three now confirmed directly. |
-| OQ-009 | Real-world azimuth and geodetic anchor of the bridge axis. | Georeferencing | SRC-001, SRC-003 | Open. SRC-002 gives a landmark coordinate of roughly 40 deg 42' 27" N, 73 deg 59' 27" W, not yet adopted as a control. |
+| OQ-009 | Real-world azimuth and geodetic anchor of the bridge axis. | Georeferencing | SRC-001, SRC-003, SRC-004 | **Mitigated, still open.** A placement is now published and ratified at confidence C; see section 6. It remains open because both horizontal estimates derive from mapped alignments rather than survey. |
 | OQ-010 | Exact transverse centerlines of the four subway tracks. | Track placement | SRC-004 | **Mitigated**: tracks are confirmed to lie in the A-B and C-D truss bays, bounding them between 20 ft and 48 ft from centerline. Note CONF-011: the 1908 design put two of them on the upper deck. |
 | OQ-011 | Conflict CONF-001, main cable diameter. | Cable solid geometry | SRC-004 | **Largely explained**: SRC-015's 21.25 in is on the wires excluding wrapping, which reconciles three of the four figures. |
 | OQ-012 | Conflict CONF-002, stiffening truss depth. | Truss depth | — | **Effectively resolved** toward 24 ft. The SRC-015 sentence is OCR-damaged at exactly that number. |
@@ -228,3 +228,131 @@ in the plausible range reproduces 157. This replaces the arbitrary 30 ft pitch u
 | OQ-015 | Top of the masonry pier above MHW. | Tower pier height | SRC-016 | **Retired.** SRC-016 states 23 ft explicitly; see CONF-009. |
 | OQ-016 | The two period primaries give vertical build-ups that differ by 8 ft. SRC-016: cutting edge -92 ft, caisson 47.5 ft high, footing seat -33 ft, capstone +23 ft (115 ft overall). SRC-015: caisson 56 ft, masonry 67 ft, 123 ft overall, which against -92 ft implies a capstone at +31 ft. | Tower foundation internals | SRC-004 | New at Milestone 3. The model follows SRC-016 throughout because its figures are explicit elevations rather than summary heights, and they are internally consistent. The SRC-015 heights are recorded as CTL-047, CTL-048 and CTL-053 but are not used. |
 | OQ-017 | Warren truss diagonal direction at each panel, chord and diagonal member sections, and the tower bracing arrangement. | Truss and tower web detail | SRC-004, SRC-005 | New at Milestone 4. The truss depth, spacing and panel count are all sourced, so the panel *positions* are correct; the alternating diagonal pattern is the Warren form named by three sources but its handedness at each panel is not documented. Detail photographs (SRC-005) could settle it to grade B. |
+| OQ-018 | The consuming district's `foreign_assets` tile declarations disagree with the placement that same district published. | District-side streaming of the proxy, not this module's geometry | dumbo-district-3d | New at Milestone 5. Not a defect in this repository; see section 6.3. A corrected tile set has been computed and offered at `viewer/metadata/proposed_foreign_assets.json`. Open until the district accepts or rebuts it. |
+
+---
+
+## 6. Georeferencing and the shared scene frame
+
+This section registers where the module frame defined in section 1 sits in the real world. It exists
+because `manhattan-bridge-3d` is consumed by `dumbo-district-3d` through the
+`digital-3d-shared-contracts` v1 interface, and a consumer cannot place geometry authored in a
+private frame without it. The published form is `viewer/public/bridge-manifest.json`.
+
+Authoring does not change. Geometry stays in the module frame with `z = 0` at mean high water; the
+transform to the shared frame happens at placement time.
+
+### 6.1 Vertical datum — grade A
+
+| Item | Value |
+|---|---|
+| Module vertical datum | MHW (mean high water) |
+| Shared frame vertical datum | NAVD88 |
+| Correction applied at placement | `z_navd88 = z_mhw + 0.59` |
+
+**Independently verified.** Queried the NOAA CO-OPS API for station 8518750 (The Battery, NY), epoch
+1983-2001, in meters on station datum:
+
+| Datum | Value | |
+|---|---:|---|
+| MHHW | 2.543 | |
+| MHW | **2.445** | |
+| MSL | 1.785 | |
+| MLW | 1.065 | |
+| MLLW | 1.002 | |
+| NAVD88 | **1.848** | |
+
+`MHW - NAVD88 = 2.445 - 1.848 = 0.597 m`, which corroborates the 0.596 m NYSAPLS figure to 1 mm.
+
+The shared frame publishes **0.59 m**. That is 7 mm below the measured 0.597 m, and 0.597 would
+conventionally round to 0.60. The module adopts 0.59 anyway: the frame is frozen for the life of
+contract major version 1, consistency across modules matters more than 7 mm, and 7 mm is two orders
+of magnitude below the +/-0.61 m accuracy of the building footprints the bridge is placed against.
+Recorded rather than silently accepted.
+
+### 6.2 Horizontal placement — grade C, OQ-009 remains open
+
+`dumbo-district-3d` proposed a provisional placement (DOQ-001) so integration could proceed. This
+module reproduced their derivation from the same inputs and audited it rather than accepting it.
+
+| Term | Value |
+|---|---|
+| Frame | `nyc-harbor-enu` |
+| Translation | `[-150.22, 511.26, 0.59]` m |
+| `yaw_deg` | 292.633 (module +X onto scene East, CCW looking down) |
+| Azimuth of +X | 157.367 deg from north, toward Brooklyn |
+
+**What the audit found.**
+
+*The azimuth is stable.* Refitting the principal axis over subsets of the mapped alignment gives
+157.367 deg for all 72 points, 157.496 deg for the two long edge paths alone, and 157.024 deg for
+the roadway ways alone. The spread is about +/-0.35 deg, which is +/-6 m of lateral error at the far
+end of a 2,089 m structure and under +/-3 m across the DUMBO district.
+
+*The translation has independent corroboration.* The ASCE Historic Civil Engineering Landmark
+coordinate for this bridge, 40 deg 42' 27.0" N, 73 deg 59' 26.9" W, falls **11.8 m** from the
+centroid of the mapped alignment. Two unrelated sources agreeing to 11.8 m over a 2 km structure is
+materially better evidence than either alone.
+
+*A defect was found and rejected as immaterial.* The mapped ways are edge paths, not a centreline:
+37 points on the north bike path, 27 on the south pedestrian path, 8 on the roadway. The centroid is
+therefore about 2.3 m north of the midline between the two paths. That is below the accuracy of the
+placement as a whole and is not corrected.
+
+*An alternative estimator was tested and rejected.* Using the midpoint of the mapped extent instead
+of the centroid moves the origin 43.4 m along the axis and **away** from the ASCE coordinate, to
+34.3 m. The mapped extent is 1,891 m against the 2,089 m of CTL-001, so OSM omits roughly 198 m of
+approach, and asymmetric omission biases an extent midpoint more than it biases a centroid. The
+centroid is retained.
+
+*An unexpected cross-check on deck width.* The two mapped edge paths are 35.3 m apart. CTL-021 gives
+a 120 ft (36.58 m) deck, and CTL-023 plus CTL-025 put the footwalk centrelines 32.3 m apart. The
+mapped separation falls between those two, which is where paths inboard of the deck edge should sit.
+This is weak corroboration of the sourced deck width from a completely independent dataset.
+
+**Why grade C and not higher.** Both horizontal terms derive from mapped alignments, not survey.
+OpenStreetMap is community mapping; the ASCE landmark coordinate is a representative point for the
+structure and is not documented as the main-span midpoint. Grade C matches CONFIDENCE-MODEL.md:
+derived from an existing dataset aligned to controls.
+
+**Why `provisional: false` nonetheless.** In the shared contract, `provisional` means "proposed by a
+consumer and not yet ratified by the owning module". This module has now audited and adopted it, so
+the flag is cleared and ownership moves here. The honest signal moves to `confidence: C` and to
+OQ-009, which stays open until a geodetic anchor is registered from an archival drawing or survey.
+
+**What would retire OQ-009.** A tower centre coordinate from SRC-004, or any survey monument on the
+structure. Because the tower centrelines are exactly `+/- main_span / 2` from the origin along the
+axis, a single surveyed tower position would fix both the anchor and the azimuth to grade A.
+
+
+### 6.3 The consuming district's tile declarations disagree with its own placement — OQ-018
+
+The district's tile index names `urn:d3d:manhattan-bridge:bridge_proxy` in the `foreign_assets` of
+twelve tiles, so that walking into one of those tiles streams the bridge. Applying the placement
+published in section 6.2 to the level-2 proxy and asking which tiles the geometry actually occupies
+gives a different set of twelve, overlapping the declared set in only six.
+
+This is not a rounding disagreement. Walking the published axis across the district grid
+(`scripts/check_corridor_geodetic.py`) shows the declared tile set has a principal azimuth of
+**17.8 deg**, while the published placement axis runs at **157.4 deg** — a disagreement of
+**40.4 deg**. Tile `t_5_2` lies about 358 m from the bridge axis, an order of magnitude beyond any
+plausible deck half-width.
+
+**The evidence favours the placement, not the tile list.** The placement origin sits **10.5 m** from
+the ASCE landmark plaque coordinate (SRC-002), which is the only independently sourced geodetic
+point on the structure in the register and played no part in deriving either artifact. Nothing
+independent corroborates the declared tile set, and its azimuth is inconsistent with the placement
+published in the same repository.
+
+Both artifacts are owned by the district, so this repository does not change either. The corrected
+membership is computed and written to `viewer/metadata/proposed_foreign_assets.json` by
+`scripts/verify_placement.py`, and offered as a proposal.
+
+The practical consequence, if it is not corrected, is that a visitor walking south-east along the
+bridge would have the proxy unload while still underneath it, and see it appear over ground it does
+not cross. That is a visible failure, which is why it is recorded here rather than left to the
+integration to discover.
+
+**Guard against regression.** `scripts/verify_placement.py` re-derives the occupied tile set from
+the published GLB on every run and exits non-zero while the two disagree, so this cannot be
+silently forgotten and cannot be broken by a future geometry change without notice.

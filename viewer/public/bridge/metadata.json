@@ -1,0 +1,6607 @@
+{
+  "contract_version": "1.0.0",
+  "module_id": "manhattan-bridge",
+  "records": [
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:reference_datum_mhw_plane",
+      "local_id": "reference_datum_mhw_plane",
+      "module_id": "manhattan-bridge",
+      "display_name": "reference datum mhw plane",
+      "category": "reference",
+      "taxonomy": {
+        "system": "reference",
+        "subsystem": "datum",
+        "path": [
+          "reference",
+          "datum"
+        ]
+      },
+      "source_basis": [
+        "control_dimension",
+        "official_facts"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-002",
+        "SRC-011",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "A",
+      "basis_confidence": "A",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-021"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Visualisation of the z = 0 mean high water datum, drawn to the sourced 120 ft deck width (CTL-021). The datum and its extent are both grade A.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              10218.32,
+              419.93,
+              0.0
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "quad"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -445.008,
+          -18.288,
+          0.0
+        ],
+        "max": [
+          445.008,
+          18.288,
+          0.0
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:reference_bridge_axis",
+      "local_id": "reference_bridge_axis",
+      "module_id": "manhattan-bridge",
+      "display_name": "reference bridge axis",
+      "category": "reference",
+      "taxonomy": {
+        "system": "reference",
+        "subsystem": "control_curves",
+        "path": [
+          "reference",
+          "control_curves"
+        ]
+      },
+      "source_basis": [
+        "control_dimension"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-002",
+        "SRC-011",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "A",
+      "basis_confidence": "A",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Longitudinal bridge axis at the datum, anchorage cable point to anchorage cable point. Real-world azimuth is unregistered, see OQ-009.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              10218.32,
+              0.0,
+              0.0
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "polyline"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -445.008,
+          0.0,
+          0.0
+        ],
+        "max": [
+          445.008,
+          0.0,
+          0.0
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:control_curve_deck_centerline",
+      "local_id": "control_curve_deck_centerline",
+      "module_id": "manhattan-bridge",
+      "display_name": "control curve deck centerline",
+      "category": "reference",
+      "taxonomy": {
+        "system": "reference",
+        "subsystem": "control_curves",
+        "path": [
+          "reference",
+          "control_curves"
+        ]
+      },
+      "source_basis": [
+        "control_dimension",
+        "inferred"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-001",
+        "SRC-002",
+        "SRC-011",
+        "SRC-012",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "D",
+      "basis_confidence": "A",
+      "control_refs": [
+        "CTL-008",
+        "CTL-010",
+        "CTL-103",
+        "CTL-001",
+        "CTL-039",
+        "CTL-040"
+      ],
+      "open_questions": [
+        "OQ-002",
+        "OQ-006",
+        "OQ-013"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Deck centerline control curve at the upper roadway elevation. Drawn level over the full length; approach grades are unregistered and the approach split is a ratio only (OQ-006).",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              23988.56,
+              0.0,
+              0.0
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "polyline"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -1061.906336,
+          0.0,
+          49.3776
+        ],
+        "max": [
+          1027.497664,
+          0.0,
+          49.3776
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          -17.2043,
+          0.0,
+          49.3776
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:station_sta_mid",
+      "local_id": "station_sta_mid",
+      "module_id": "manhattan-bridge",
+      "display_name": "station sta mid",
+      "category": "reference",
+      "taxonomy": {
+        "system": "reference",
+        "subsystem": "stations",
+        "path": [
+          "reference",
+          "stations"
+        ]
+      },
+      "source_basis": [
+        "control_dimension"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-002",
+        "SRC-011",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "A",
+      "basis_confidence": "A",
+      "control_refs": [
+        "CTL-005"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Main span midpoint (origin). Model origin.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              0.0,
+              335.94,
+              1128.56
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "lines"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          0.0,
+          -14.6304,
+          0.0
+        ],
+        "max": [
+          0.0,
+          14.6304,
+          98.298
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          0.0,
+          0.0,
+          49.149
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:station_sta_twr_m",
+      "local_id": "station_sta_twr_m",
+      "module_id": "manhattan-bridge",
+      "display_name": "station sta twr m",
+      "category": "reference",
+      "taxonomy": {
+        "system": "reference",
+        "subsystem": "stations",
+        "path": [
+          "reference",
+          "stations"
+        ]
+      },
+      "source_basis": [
+        "control_dimension"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-002",
+        "SRC-011",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "A",
+      "basis_confidence": "A",
+      "control_refs": [
+        "CTL-005"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Manhattan tower centerline.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              0.0,
+              335.94,
+              1128.56
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "lines"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -224.028,
+          -14.6304,
+          0.0
+        ],
+        "max": [
+          -224.028,
+          14.6304,
+          98.298
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          -224.028,
+          0.0,
+          49.149
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:station_sta_twr_b",
+      "local_id": "station_sta_twr_b",
+      "module_id": "manhattan-bridge",
+      "display_name": "station sta twr b",
+      "category": "reference",
+      "taxonomy": {
+        "system": "reference",
+        "subsystem": "stations",
+        "path": [
+          "reference",
+          "stations"
+        ]
+      },
+      "source_basis": [
+        "control_dimension"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-002",
+        "SRC-011",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "A",
+      "basis_confidence": "A",
+      "control_refs": [
+        "CTL-005"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Brooklyn tower centerline.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              0.0,
+              335.94,
+              1128.56
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "lines"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          224.028,
+          -14.6304,
+          0.0
+        ],
+        "max": [
+          224.028,
+          14.6304,
+          98.298
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          224.028,
+          0.0,
+          49.149
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:station_sta_anc_m",
+      "local_id": "station_sta_anc_m",
+      "module_id": "manhattan-bridge",
+      "display_name": "station sta anc m",
+      "category": "reference",
+      "taxonomy": {
+        "system": "reference",
+        "subsystem": "stations",
+        "path": [
+          "reference",
+          "stations"
+        ]
+      },
+      "source_basis": [
+        "control_dimension"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-002",
+        "SRC-011",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "A",
+      "basis_confidence": "A",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Manhattan anchorage cable point.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              0.0,
+              335.94,
+              1128.56
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "lines"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -445.008,
+          -14.6304,
+          0.0
+        ],
+        "max": [
+          -445.008,
+          14.6304,
+          98.298
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          -445.008,
+          0.0,
+          49.149
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:station_sta_anc_b",
+      "local_id": "station_sta_anc_b",
+      "module_id": "manhattan-bridge",
+      "display_name": "station sta anc b",
+      "category": "reference",
+      "taxonomy": {
+        "system": "reference",
+        "subsystem": "stations",
+        "path": [
+          "reference",
+          "stations"
+        ]
+      },
+      "source_basis": [
+        "control_dimension"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-002",
+        "SRC-011",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "A",
+      "basis_confidence": "A",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Brooklyn anchorage cable point.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              0.0,
+              335.94,
+              1128.56
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "lines"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          445.008,
+          -14.6304,
+          0.0
+        ],
+        "max": [
+          445.008,
+          14.6304,
+          98.298
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          445.008,
+          0.0,
+          49.149
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:station_sta_abut_m",
+      "local_id": "station_sta_abut_m",
+      "module_id": "manhattan-bridge",
+      "display_name": "station sta abut m",
+      "category": "reference",
+      "taxonomy": {
+        "system": "reference",
+        "subsystem": "stations",
+        "path": [
+          "reference",
+          "stations"
+        ]
+      },
+      "source_basis": [
+        "control_dimension"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-001"
+      ],
+      "confidence": "D",
+      "basis_confidence": "D",
+      "control_refs": [
+        "CTL-002"
+      ],
+      "open_questions": [
+        "OQ-002"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Manhattan lower-level abutment. Symmetric placement about the main span midpoint is an assumption, see OQ-002.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              0.0,
+              335.94,
+              1128.56
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "lines"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -882.396,
+          -14.6304,
+          0.0
+        ],
+        "max": [
+          -882.396,
+          14.6304,
+          98.298
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          -882.396,
+          0.0,
+          49.149
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:station_sta_abut_b",
+      "local_id": "station_sta_abut_b",
+      "module_id": "manhattan-bridge",
+      "display_name": "station sta abut b",
+      "category": "reference",
+      "taxonomy": {
+        "system": "reference",
+        "subsystem": "stations",
+        "path": [
+          "reference",
+          "stations"
+        ]
+      },
+      "source_basis": [
+        "control_dimension"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-001"
+      ],
+      "confidence": "D",
+      "basis_confidence": "D",
+      "control_refs": [
+        "CTL-002"
+      ],
+      "open_questions": [
+        "OQ-002"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Brooklyn lower-level abutment. Symmetric placement about the main span midpoint is an assumption, see OQ-002.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              0.0,
+              335.94,
+              1128.56
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "lines"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          882.396,
+          -14.6304,
+          0.0
+        ],
+        "max": [
+          882.396,
+          14.6304,
+          98.298
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          882.396,
+          0.0,
+          49.149
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:station_sta_portal_m",
+      "local_id": "station_sta_portal_m",
+      "module_id": "manhattan-bridge",
+      "display_name": "station sta portal m",
+      "category": "reference",
+      "taxonomy": {
+        "system": "reference",
+        "subsystem": "stations",
+        "path": [
+          "reference",
+          "stations"
+        ]
+      },
+      "source_basis": [
+        "control_dimension"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-001"
+      ],
+      "confidence": "D",
+      "basis_confidence": "D",
+      "control_refs": [
+        "CTL-003"
+      ],
+      "open_questions": [
+        "OQ-002"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Manhattan upper roadway portal. Symmetric placement about the main span midpoint is an assumption, see OQ-002.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              0.0,
+              335.94,
+              1128.56
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "lines"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -928.116,
+          -14.6304,
+          0.0
+        ],
+        "max": [
+          -928.116,
+          14.6304,
+          98.298
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          -928.116,
+          0.0,
+          49.149
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:station_sta_portal_b",
+      "local_id": "station_sta_portal_b",
+      "module_id": "manhattan-bridge",
+      "display_name": "station sta portal b",
+      "category": "reference",
+      "taxonomy": {
+        "system": "reference",
+        "subsystem": "stations",
+        "path": [
+          "reference",
+          "stations"
+        ]
+      },
+      "source_basis": [
+        "control_dimension"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-001"
+      ],
+      "confidence": "D",
+      "basis_confidence": "D",
+      "control_refs": [
+        "CTL-003"
+      ],
+      "open_questions": [
+        "OQ-002"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Brooklyn upper roadway portal. Symmetric placement about the main span midpoint is an assumption, see OQ-002.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              0.0,
+              335.94,
+              1128.56
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "lines"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          928.116,
+          -14.6304,
+          0.0
+        ],
+        "max": [
+          928.116,
+          14.6304,
+          98.298
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          928.116,
+          0.0,
+          49.149
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:station_sta_appr_end_m",
+      "local_id": "station_sta_appr_end_m",
+      "module_id": "manhattan-bridge",
+      "display_name": "station sta appr end m",
+      "category": "reference",
+      "taxonomy": {
+        "system": "reference",
+        "subsystem": "stations",
+        "path": [
+          "reference",
+          "stations"
+        ]
+      },
+      "source_basis": [
+        "control_dimension"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-001",
+        "SRC-002",
+        "SRC-011",
+        "SRC-012",
+        "SRC-013"
+      ],
+      "confidence": "B",
+      "basis_confidence": "B",
+      "control_refs": [
+        "CTL-001",
+        "CTL-004",
+        "CTL-039",
+        "CTL-040"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Manhattan approach end. Approach split derived from the quoted approach-and-plaza lengths, see OQ-006. The quoted lengths include plazas, so only their ratio is used.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              0.0,
+              335.94,
+              1128.56
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "lines"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -1061.906336,
+          -14.6304,
+          0.0
+        ],
+        "max": [
+          -1061.906336,
+          14.6304,
+          98.298
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          -1061.9063,
+          0.0,
+          49.149
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:station_sta_appr_end_b",
+      "local_id": "station_sta_appr_end_b",
+      "module_id": "manhattan-bridge",
+      "display_name": "station sta appr end b",
+      "category": "reference",
+      "taxonomy": {
+        "system": "reference",
+        "subsystem": "stations",
+        "path": [
+          "reference",
+          "stations"
+        ]
+      },
+      "source_basis": [
+        "control_dimension"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-001",
+        "SRC-002",
+        "SRC-011",
+        "SRC-012",
+        "SRC-013"
+      ],
+      "confidence": "B",
+      "basis_confidence": "B",
+      "control_refs": [
+        "CTL-001",
+        "CTL-004",
+        "CTL-039",
+        "CTL-040"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Brooklyn approach end. Approach split derived from the quoted approach-and-plaza lengths, see OQ-006. The quoted lengths include plazas, so only their ratio is used.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              0.0,
+              335.94,
+              1128.56
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "lines"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          1027.497664,
+          -14.6304,
+          0.0
+        ],
+        "max": [
+          1027.497664,
+          14.6304,
+          98.298
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          1027.4977,
+          0.0,
+          49.149
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:tower_manhattan_centerline",
+      "local_id": "tower_manhattan_centerline",
+      "module_id": "manhattan-bridge",
+      "display_name": "tower manhattan centerline",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "towers",
+        "subsystem": "centerlines",
+        "path": [
+          "towers",
+          "centerlines"
+        ]
+      },
+      "source_basis": [
+        "control_dimension"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-002",
+        "SRC-011",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "A",
+      "basis_confidence": "A",
+      "control_refs": [
+        "CTL-005",
+        "CTL-018",
+        "CTL-031"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Tower centerline from the caisson underside to the cable saddles. Both ends are now stated directly by SRC-015, retiring OQ-003.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              0.0,
+              0.0,
+              1450.51
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "polyline"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -224.028,
+          0.0,
+          -28.0416
+        ],
+        "max": [
+          -224.028,
+          0.0,
+          98.298
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          -224.028,
+          0.0,
+          35.1282
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:tower_manhattan_caisson",
+      "local_id": "tower_manhattan_caisson",
+      "module_id": "manhattan-bridge",
+      "display_name": "tower manhattan caisson",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "towers",
+        "subsystem": "foundations",
+        "path": [
+          "towers",
+          "foundations"
+        ]
+      },
+      "source_basis": [
+        "control_dimension"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-002",
+        "SRC-011",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "A",
+      "basis_confidence": "A",
+      "control_refs": [
+        "CTL-005",
+        "CTL-049",
+        "CTL-050",
+        "CTL-046",
+        "CTL-031"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Timber-and-concrete caisson envelope, 78 by 144 ft in plan and 47.5 ft high, with its cutting edge 92 ft below mean high water. All extents from SRC-016 directly, the footprint independently confirmed by SRC-015. See CONF-013.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              272.96,
+              503.92,
+              166.22
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "box"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -235.9152,
+          -21.9456,
+          -28.0416
+        ],
+        "max": [
+          -212.1408,
+          21.9456,
+          -13.5636
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          -224.028,
+          0.0,
+          -20.8026
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:tower_manhattan_pier",
+      "local_id": "tower_manhattan_pier",
+      "module_id": "manhattan-bridge",
+      "display_name": "tower manhattan pier",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "towers",
+        "subsystem": "foundations",
+        "path": [
+          "towers",
+          "foundations"
+        ]
+      },
+      "source_basis": [
+        "control_dimension"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-002",
+        "SRC-011",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "A",
+      "basis_confidence": "A",
+      "control_refs": [
+        "CTL-005",
+        "CTL-028",
+        "CTL-029",
+        "CTL-030",
+        "CTL-046",
+        "CTL-031"
+      ],
+      "open_questions": [
+        "OQ-016"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Masonry pier envelope from the caisson top to the capstone 23 ft above mean high water. Plan (68 by 134 ft on top) and capstone elevation are both stated explicitly by SRC-016. The pier is drawn from the caisson top rather than from its footing seat at -33 ft, so the envelope is conservative. See OQ-016.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              237.96,
+              468.92,
+              236.21
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "box"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -234.3912,
+          -20.4216,
+          -13.5636
+        ],
+        "max": [
+          -213.6648,
+          20.4216,
+          7.0104
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          -224.028,
+          0.0,
+          -3.2766
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:tower_manhattan_leg_a",
+      "local_id": "tower_manhattan_leg_a",
+      "module_id": "manhattan-bridge",
+      "display_name": "tower manhattan leg a",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "towers",
+        "subsystem": "legs",
+        "path": [
+          "towers",
+          "legs"
+        ]
+      },
+      "source_basis": [
+        "control_dimension"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-002",
+        "SRC-011",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "A",
+      "basis_confidence": "A",
+      "control_refs": [
+        "CTL-005",
+        "CTL-018",
+        "CTL-030",
+        "CTL-056",
+        "CTL-057",
+        "CTL-058",
+        "CTL-022",
+        "CTL-023"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Box-section tower leg in the plane of truss A (south outer). SRC-015: four legs, each 5 ft wide transversely, tapering from 32 ft to 10 ft parallel to the bridge axis, and the trusses are carried in the planes of the legs. Straight taper assumed between the two stated end dimensions.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              111.98,
+              17.5,
+              1048.08
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "prism"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -228.9048,
+          -15.3924,
+          7.0104
+        ],
+        "max": [
+          -219.1512,
+          -13.8684,
+          98.298
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          -224.028,
+          -14.6304,
+          52.6542
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:tower_manhattan_leg_b",
+      "local_id": "tower_manhattan_leg_b",
+      "module_id": "manhattan-bridge",
+      "display_name": "tower manhattan leg b",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "towers",
+        "subsystem": "legs",
+        "path": [
+          "towers",
+          "legs"
+        ]
+      },
+      "source_basis": [
+        "control_dimension"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-002",
+        "SRC-011",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "A",
+      "basis_confidence": "A",
+      "control_refs": [
+        "CTL-005",
+        "CTL-018",
+        "CTL-030",
+        "CTL-056",
+        "CTL-057",
+        "CTL-058",
+        "CTL-022",
+        "CTL-023"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Box-section tower leg in the plane of truss B (south inner). SRC-015: four legs, each 5 ft wide transversely, tapering from 32 ft to 10 ft parallel to the bridge axis, and the trusses are carried in the planes of the legs. Straight taper assumed between the two stated end dimensions.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              111.98,
+              17.5,
+              1048.08
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "prism"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -228.9048,
+          -6.858,
+          7.0104
+        ],
+        "max": [
+          -219.1512,
+          -5.334,
+          98.298
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          -224.028,
+          -6.096,
+          52.6542
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:tower_manhattan_leg_c",
+      "local_id": "tower_manhattan_leg_c",
+      "module_id": "manhattan-bridge",
+      "display_name": "tower manhattan leg c",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "towers",
+        "subsystem": "legs",
+        "path": [
+          "towers",
+          "legs"
+        ]
+      },
+      "source_basis": [
+        "control_dimension"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-002",
+        "SRC-011",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "A",
+      "basis_confidence": "A",
+      "control_refs": [
+        "CTL-005",
+        "CTL-018",
+        "CTL-030",
+        "CTL-056",
+        "CTL-057",
+        "CTL-058",
+        "CTL-022",
+        "CTL-023"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Box-section tower leg in the plane of truss C (north inner). SRC-015: four legs, each 5 ft wide transversely, tapering from 32 ft to 10 ft parallel to the bridge axis, and the trusses are carried in the planes of the legs. Straight taper assumed between the two stated end dimensions.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              111.98,
+              17.5,
+              1048.08
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "prism"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -228.9048,
+          5.334,
+          7.0104
+        ],
+        "max": [
+          -219.1512,
+          6.858,
+          98.298
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          -224.028,
+          6.096,
+          52.6542
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:tower_manhattan_leg_d",
+      "local_id": "tower_manhattan_leg_d",
+      "module_id": "manhattan-bridge",
+      "display_name": "tower manhattan leg d",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "towers",
+        "subsystem": "legs",
+        "path": [
+          "towers",
+          "legs"
+        ]
+      },
+      "source_basis": [
+        "control_dimension"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-002",
+        "SRC-011",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "A",
+      "basis_confidence": "A",
+      "control_refs": [
+        "CTL-005",
+        "CTL-018",
+        "CTL-030",
+        "CTL-056",
+        "CTL-057",
+        "CTL-058",
+        "CTL-022",
+        "CTL-023"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Box-section tower leg in the plane of truss D (north outer). SRC-015: four legs, each 5 ft wide transversely, tapering from 32 ft to 10 ft parallel to the bridge axis, and the trusses are carried in the planes of the legs. Straight taper assumed between the two stated end dimensions.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              111.98,
+              17.5,
+              1048.08
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "prism"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -228.9048,
+          13.8684,
+          7.0104
+        ],
+        "max": [
+          -219.1512,
+          15.3924,
+          98.298
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          -224.028,
+          14.6304,
+          52.6542
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:tower_manhattan_bracing",
+      "local_id": "tower_manhattan_bracing",
+      "module_id": "manhattan-bridge",
+      "display_name": "tower manhattan bracing",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "towers",
+        "subsystem": "legs",
+        "path": [
+          "towers",
+          "legs"
+        ]
+      },
+      "source_basis": [
+        "control_dimension",
+        "inferred"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-002",
+        "SRC-011",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "D",
+      "basis_confidence": "D",
+      "control_refs": [
+        "CTL-005",
+        "CTL-018",
+        "CTL-030",
+        "CTL-022",
+        "CTL-023"
+      ],
+      "open_questions": [
+        "OQ-007"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Transverse bracing between the tower legs. SRC-015 states the legs are 'heavily braced together' and a 1904 account describes a 'great open arch' at the centre, but no source gives the panel levels or the arch profile, so the number and elevation of these struts are placeholders. See OQ-007.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              0.0,
+              335.94,
+              723.17
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "lines"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -224.028,
+          -14.6304,
+          32.570928
+        ],
+        "max": [
+          -224.028,
+          14.6304,
+          95.559372
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          -224.028,
+          0.0,
+          64.0652
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:tower_brooklyn_centerline",
+      "local_id": "tower_brooklyn_centerline",
+      "module_id": "manhattan-bridge",
+      "display_name": "tower brooklyn centerline",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "towers",
+        "subsystem": "centerlines",
+        "path": [
+          "towers",
+          "centerlines"
+        ]
+      },
+      "source_basis": [
+        "control_dimension"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-002",
+        "SRC-011",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "A",
+      "basis_confidence": "A",
+      "control_refs": [
+        "CTL-005",
+        "CTL-018",
+        "CTL-031"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Tower centerline from the caisson underside to the cable saddles. Both ends are now stated directly by SRC-015, retiring OQ-003.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              0.0,
+              0.0,
+              1450.51
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "polyline"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          224.028,
+          0.0,
+          -28.0416
+        ],
+        "max": [
+          224.028,
+          0.0,
+          98.298
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          224.028,
+          0.0,
+          35.1282
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:tower_brooklyn_caisson",
+      "local_id": "tower_brooklyn_caisson",
+      "module_id": "manhattan-bridge",
+      "display_name": "tower brooklyn caisson",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "towers",
+        "subsystem": "foundations",
+        "path": [
+          "towers",
+          "foundations"
+        ]
+      },
+      "source_basis": [
+        "control_dimension"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-002",
+        "SRC-011",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "A",
+      "basis_confidence": "A",
+      "control_refs": [
+        "CTL-005",
+        "CTL-049",
+        "CTL-050",
+        "CTL-046",
+        "CTL-031"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Timber-and-concrete caisson envelope, 78 by 144 ft in plan and 47.5 ft high, with its cutting edge 92 ft below mean high water. All extents from SRC-016 directly, the footprint independently confirmed by SRC-015. See CONF-013.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              272.96,
+              503.92,
+              166.22
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "box"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          212.1408,
+          -21.9456,
+          -28.0416
+        ],
+        "max": [
+          235.9152,
+          21.9456,
+          -13.5636
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          224.028,
+          0.0,
+          -20.8026
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:tower_brooklyn_pier",
+      "local_id": "tower_brooklyn_pier",
+      "module_id": "manhattan-bridge",
+      "display_name": "tower brooklyn pier",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "towers",
+        "subsystem": "foundations",
+        "path": [
+          "towers",
+          "foundations"
+        ]
+      },
+      "source_basis": [
+        "control_dimension"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-002",
+        "SRC-011",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "A",
+      "basis_confidence": "A",
+      "control_refs": [
+        "CTL-005",
+        "CTL-028",
+        "CTL-029",
+        "CTL-030",
+        "CTL-046",
+        "CTL-031"
+      ],
+      "open_questions": [
+        "OQ-016"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Masonry pier envelope from the caisson top to the capstone 23 ft above mean high water. Plan (68 by 134 ft on top) and capstone elevation are both stated explicitly by SRC-016. The pier is drawn from the caisson top rather than from its footing seat at -33 ft, so the envelope is conservative. See OQ-016.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              237.96,
+              468.92,
+              236.21
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "box"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          213.6648,
+          -20.4216,
+          -13.5636
+        ],
+        "max": [
+          234.3912,
+          20.4216,
+          7.0104
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          224.028,
+          0.0,
+          -3.2766
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:tower_brooklyn_leg_a",
+      "local_id": "tower_brooklyn_leg_a",
+      "module_id": "manhattan-bridge",
+      "display_name": "tower brooklyn leg a",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "towers",
+        "subsystem": "legs",
+        "path": [
+          "towers",
+          "legs"
+        ]
+      },
+      "source_basis": [
+        "control_dimension"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-002",
+        "SRC-011",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "A",
+      "basis_confidence": "A",
+      "control_refs": [
+        "CTL-005",
+        "CTL-018",
+        "CTL-030",
+        "CTL-056",
+        "CTL-057",
+        "CTL-058",
+        "CTL-022",
+        "CTL-023"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Box-section tower leg in the plane of truss A (south outer). SRC-015: four legs, each 5 ft wide transversely, tapering from 32 ft to 10 ft parallel to the bridge axis, and the trusses are carried in the planes of the legs. Straight taper assumed between the two stated end dimensions.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              111.98,
+              17.5,
+              1048.08
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "prism"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          219.1512,
+          -15.3924,
+          7.0104
+        ],
+        "max": [
+          228.9048,
+          -13.8684,
+          98.298
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          224.028,
+          -14.6304,
+          52.6542
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:tower_brooklyn_leg_b",
+      "local_id": "tower_brooklyn_leg_b",
+      "module_id": "manhattan-bridge",
+      "display_name": "tower brooklyn leg b",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "towers",
+        "subsystem": "legs",
+        "path": [
+          "towers",
+          "legs"
+        ]
+      },
+      "source_basis": [
+        "control_dimension"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-002",
+        "SRC-011",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "A",
+      "basis_confidence": "A",
+      "control_refs": [
+        "CTL-005",
+        "CTL-018",
+        "CTL-030",
+        "CTL-056",
+        "CTL-057",
+        "CTL-058",
+        "CTL-022",
+        "CTL-023"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Box-section tower leg in the plane of truss B (south inner). SRC-015: four legs, each 5 ft wide transversely, tapering from 32 ft to 10 ft parallel to the bridge axis, and the trusses are carried in the planes of the legs. Straight taper assumed between the two stated end dimensions.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              111.98,
+              17.5,
+              1048.08
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "prism"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          219.1512,
+          -6.858,
+          7.0104
+        ],
+        "max": [
+          228.9048,
+          -5.334,
+          98.298
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          224.028,
+          -6.096,
+          52.6542
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:tower_brooklyn_leg_c",
+      "local_id": "tower_brooklyn_leg_c",
+      "module_id": "manhattan-bridge",
+      "display_name": "tower brooklyn leg c",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "towers",
+        "subsystem": "legs",
+        "path": [
+          "towers",
+          "legs"
+        ]
+      },
+      "source_basis": [
+        "control_dimension"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-002",
+        "SRC-011",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "A",
+      "basis_confidence": "A",
+      "control_refs": [
+        "CTL-005",
+        "CTL-018",
+        "CTL-030",
+        "CTL-056",
+        "CTL-057",
+        "CTL-058",
+        "CTL-022",
+        "CTL-023"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Box-section tower leg in the plane of truss C (north inner). SRC-015: four legs, each 5 ft wide transversely, tapering from 32 ft to 10 ft parallel to the bridge axis, and the trusses are carried in the planes of the legs. Straight taper assumed between the two stated end dimensions.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              111.98,
+              17.5,
+              1048.08
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "prism"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          219.1512,
+          5.334,
+          7.0104
+        ],
+        "max": [
+          228.9048,
+          6.858,
+          98.298
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          224.028,
+          6.096,
+          52.6542
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:tower_brooklyn_leg_d",
+      "local_id": "tower_brooklyn_leg_d",
+      "module_id": "manhattan-bridge",
+      "display_name": "tower brooklyn leg d",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "towers",
+        "subsystem": "legs",
+        "path": [
+          "towers",
+          "legs"
+        ]
+      },
+      "source_basis": [
+        "control_dimension"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-002",
+        "SRC-011",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "A",
+      "basis_confidence": "A",
+      "control_refs": [
+        "CTL-005",
+        "CTL-018",
+        "CTL-030",
+        "CTL-056",
+        "CTL-057",
+        "CTL-058",
+        "CTL-022",
+        "CTL-023"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Box-section tower leg in the plane of truss D (north outer). SRC-015: four legs, each 5 ft wide transversely, tapering from 32 ft to 10 ft parallel to the bridge axis, and the trusses are carried in the planes of the legs. Straight taper assumed between the two stated end dimensions.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              111.98,
+              17.5,
+              1048.08
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "prism"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          219.1512,
+          13.8684,
+          7.0104
+        ],
+        "max": [
+          228.9048,
+          15.3924,
+          98.298
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          224.028,
+          14.6304,
+          52.6542
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:tower_brooklyn_bracing",
+      "local_id": "tower_brooklyn_bracing",
+      "module_id": "manhattan-bridge",
+      "display_name": "tower brooklyn bracing",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "towers",
+        "subsystem": "legs",
+        "path": [
+          "towers",
+          "legs"
+        ]
+      },
+      "source_basis": [
+        "control_dimension",
+        "inferred"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-002",
+        "SRC-011",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "D",
+      "basis_confidence": "D",
+      "control_refs": [
+        "CTL-005",
+        "CTL-018",
+        "CTL-030",
+        "CTL-022",
+        "CTL-023"
+      ],
+      "open_questions": [
+        "OQ-007"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Transverse bracing between the tower legs. SRC-015 states the legs are 'heavily braced together' and a 1904 account describes a 'great open arch' at the centre, but no source gives the panel levels or the arch profile, so the number and elevation of these struts are placeholders. See OQ-007.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              0.0,
+              335.94,
+              723.17
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "lines"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          224.028,
+          -14.6304,
+          32.570928
+        ],
+        "max": [
+          224.028,
+          14.6304,
+          95.559372
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          224.028,
+          0.0,
+          64.0652
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:manhattan_anchorage",
+      "local_id": "manhattan_anchorage",
+      "module_id": "manhattan-bridge",
+      "display_name": "manhattan anchorage",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "anchorages",
+        "path": [
+          "anchorages"
+        ]
+      },
+      "source_basis": [
+        "control_dimension"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-002",
+        "SRC-011",
+        "SRC-012",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "B",
+      "basis_confidence": "B",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-034",
+        "CTL-035",
+        "CTL-036"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Anchorage envelope, 237 ft long by 182 ft wide by 135 ft tall, all sourced (CTL-034/035/036), retiring OQ-008. Extends outboard from the cable point. The Cherry Street and Water Street arches are not modelled.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              829.36,
+              636.9,
+              472.42
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "box"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -517.2456,
+          -27.7368,
+          0.0
+        ],
+        "max": [
+          -445.008,
+          27.7368,
+          41.148
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          -481.1268,
+          0.0,
+          20.574
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:brooklyn_anchorage",
+      "local_id": "brooklyn_anchorage",
+      "module_id": "manhattan-bridge",
+      "display_name": "brooklyn anchorage",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "anchorages",
+        "path": [
+          "anchorages"
+        ]
+      },
+      "source_basis": [
+        "control_dimension"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-002",
+        "SRC-011",
+        "SRC-012",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "B",
+      "basis_confidence": "B",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-034",
+        "CTL-035",
+        "CTL-036"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Anchorage envelope, 237 ft long by 182 ft wide by 135 ft tall, all sourced (CTL-034/035/036), retiring OQ-008. Extends outboard from the cable point. The Cherry Street and Water Street arches are not modelled.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              829.36,
+              636.9,
+              472.42
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "box"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          445.008,
+          -27.7368,
+          0.0
+        ],
+        "max": [
+          517.2456,
+          27.7368,
+          41.148
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          481.1268,
+          0.0,
+          20.574
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:south_main_cable_1",
+      "local_id": "south_main_cable_1",
+      "module_id": "manhattan-bridge",
+      "display_name": "south main cable 1",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "cables",
+        "path": [
+          "cables"
+        ]
+      },
+      "source_basis": [
+        "control_dimension",
+        "inferred"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-001",
+        "SRC-002",
+        "SRC-011",
+        "SRC-012",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "D",
+      "basis_confidence": "B",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-018",
+        "CTL-102",
+        "CTL-101",
+        "CTL-008",
+        "CTL-010",
+        "CTL-022",
+        "CTL-023",
+        "CTL-036",
+        "CTL-042"
+      ],
+      "open_questions": [
+        "OQ-001"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Main cable over truss A (south outer), drawn at its sourced diameter of 21.2 in. SRC-011 measures 21.2 in overall and SRC-015 states 21.25 in on the wires excluding wrapping, so the two agree to within 0.05 in and the thickness is no longer speculative. Saddle and anchorage elevations are sourced; the sag is derived from the truss top chord, see OQ-001.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              10224.51,
+              6.18,
+              662.32
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "tube"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -445.27724,
+          -14.89964,
+          40.87876
+        ],
+        "max": [
+          445.27724,
+          -14.36116,
+          98.56724
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          0.0,
+          -14.6304,
+          69.723
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:south_main_cable_2",
+      "local_id": "south_main_cable_2",
+      "module_id": "manhattan-bridge",
+      "display_name": "south main cable 2",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "cables",
+        "path": [
+          "cables"
+        ]
+      },
+      "source_basis": [
+        "control_dimension",
+        "inferred"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-001",
+        "SRC-002",
+        "SRC-011",
+        "SRC-012",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "D",
+      "basis_confidence": "B",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-018",
+        "CTL-102",
+        "CTL-101",
+        "CTL-008",
+        "CTL-010",
+        "CTL-022",
+        "CTL-023",
+        "CTL-036",
+        "CTL-042"
+      ],
+      "open_questions": [
+        "OQ-001"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Main cable over truss B (south inner), drawn at its sourced diameter of 21.2 in. SRC-011 measures 21.2 in overall and SRC-015 states 21.25 in on the wires excluding wrapping, so the two agree to within 0.05 in and the thickness is no longer speculative. Saddle and anchorage elevations are sourced; the sag is derived from the truss top chord, see OQ-001.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              10224.51,
+              6.18,
+              662.32
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "tube"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -445.27724,
+          -6.36524,
+          40.87876
+        ],
+        "max": [
+          445.27724,
+          -5.82676,
+          98.56724
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          0.0,
+          -6.096,
+          69.723
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:north_main_cable_2",
+      "local_id": "north_main_cable_2",
+      "module_id": "manhattan-bridge",
+      "display_name": "north main cable 2",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "cables",
+        "path": [
+          "cables"
+        ]
+      },
+      "source_basis": [
+        "control_dimension",
+        "inferred"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-001",
+        "SRC-002",
+        "SRC-011",
+        "SRC-012",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "D",
+      "basis_confidence": "B",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-018",
+        "CTL-102",
+        "CTL-101",
+        "CTL-008",
+        "CTL-010",
+        "CTL-022",
+        "CTL-023",
+        "CTL-036",
+        "CTL-042"
+      ],
+      "open_questions": [
+        "OQ-001"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Main cable over truss C (north inner), drawn at its sourced diameter of 21.2 in. SRC-011 measures 21.2 in overall and SRC-015 states 21.25 in on the wires excluding wrapping, so the two agree to within 0.05 in and the thickness is no longer speculative. Saddle and anchorage elevations are sourced; the sag is derived from the truss top chord, see OQ-001.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              10224.51,
+              6.18,
+              662.32
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "tube"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -445.27724,
+          5.82676,
+          40.87876
+        ],
+        "max": [
+          445.27724,
+          6.36524,
+          98.56724
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          0.0,
+          6.096,
+          69.723
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:north_main_cable_1",
+      "local_id": "north_main_cable_1",
+      "module_id": "manhattan-bridge",
+      "display_name": "north main cable 1",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "cables",
+        "path": [
+          "cables"
+        ]
+      },
+      "source_basis": [
+        "control_dimension",
+        "inferred"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-001",
+        "SRC-002",
+        "SRC-011",
+        "SRC-012",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "D",
+      "basis_confidence": "B",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-018",
+        "CTL-102",
+        "CTL-101",
+        "CTL-008",
+        "CTL-010",
+        "CTL-022",
+        "CTL-023",
+        "CTL-036",
+        "CTL-042"
+      ],
+      "open_questions": [
+        "OQ-001"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Main cable over truss D (north outer), drawn at its sourced diameter of 21.2 in. SRC-011 measures 21.2 in overall and SRC-015 states 21.25 in on the wires excluding wrapping, so the two agree to within 0.05 in and the thickness is no longer speculative. Saddle and anchorage elevations are sourced; the sag is derived from the truss top chord, see OQ-001.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              10224.51,
+              6.18,
+              662.32
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "tube"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -445.27724,
+          14.36116,
+          40.87876
+        ],
+        "max": [
+          445.27724,
+          14.89964,
+          98.56724
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          0.0,
+          14.6304,
+          69.723
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:suspenders_truss_a",
+      "local_id": "suspenders_truss_a",
+      "module_id": "manhattan-bridge",
+      "display_name": "suspenders truss a",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "suspenders",
+        "path": [
+          "suspenders"
+        ]
+      },
+      "source_basis": [
+        "control_dimension",
+        "inferred"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-001",
+        "SRC-002",
+        "SRC-011",
+        "SRC-012",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "D",
+      "basis_confidence": "B",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-018",
+        "CTL-102",
+        "CTL-101",
+        "CTL-008",
+        "CTL-010",
+        "CTL-022",
+        "CTL-023",
+        "CTL-036",
+        "CTL-037",
+        "CTL-015",
+        "CTL-038"
+      ],
+      "open_questions": [
+        "OQ-001"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Suspender set on truss A (south outer), grouped as one addressable part. Pitch is derived from the sourced 628 panel points (CTL-037): 79 panels in the main span and 39 in each side span at 18.608 ft, the unique integer solution. Two ropes per panel point (CTL-038) are not modelled individually.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              8595.3,
+              0.0,
+              530.31
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "lines"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -374.325266,
+          -14.6304,
+          48.4632
+        ],
+        "max": [
+          374.325266,
+          -14.6304,
+          94.653074
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          0.0,
+          -14.6304,
+          71.5581
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:suspenders_truss_b",
+      "local_id": "suspenders_truss_b",
+      "module_id": "manhattan-bridge",
+      "display_name": "suspenders truss b",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "suspenders",
+        "path": [
+          "suspenders"
+        ]
+      },
+      "source_basis": [
+        "control_dimension",
+        "inferred"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-001",
+        "SRC-002",
+        "SRC-011",
+        "SRC-012",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "D",
+      "basis_confidence": "B",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-018",
+        "CTL-102",
+        "CTL-101",
+        "CTL-008",
+        "CTL-010",
+        "CTL-022",
+        "CTL-023",
+        "CTL-036",
+        "CTL-037",
+        "CTL-015",
+        "CTL-038"
+      ],
+      "open_questions": [
+        "OQ-001"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Suspender set on truss B (south inner), grouped as one addressable part. Pitch is derived from the sourced 628 panel points (CTL-037): 79 panels in the main span and 39 in each side span at 18.608 ft, the unique integer solution. Two ropes per panel point (CTL-038) are not modelled individually.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              8595.3,
+              0.0,
+              530.31
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "lines"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -374.325266,
+          -6.096,
+          48.4632
+        ],
+        "max": [
+          374.325266,
+          -6.096,
+          94.653074
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          0.0,
+          -6.096,
+          71.5581
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:suspenders_truss_c",
+      "local_id": "suspenders_truss_c",
+      "module_id": "manhattan-bridge",
+      "display_name": "suspenders truss c",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "suspenders",
+        "path": [
+          "suspenders"
+        ]
+      },
+      "source_basis": [
+        "control_dimension",
+        "inferred"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-001",
+        "SRC-002",
+        "SRC-011",
+        "SRC-012",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "D",
+      "basis_confidence": "B",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-018",
+        "CTL-102",
+        "CTL-101",
+        "CTL-008",
+        "CTL-010",
+        "CTL-022",
+        "CTL-023",
+        "CTL-036",
+        "CTL-037",
+        "CTL-015",
+        "CTL-038"
+      ],
+      "open_questions": [
+        "OQ-001"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Suspender set on truss C (north inner), grouped as one addressable part. Pitch is derived from the sourced 628 panel points (CTL-037): 79 panels in the main span and 39 in each side span at 18.608 ft, the unique integer solution. Two ropes per panel point (CTL-038) are not modelled individually.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              8595.3,
+              0.0,
+              530.31
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "lines"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -374.325266,
+          6.096,
+          48.4632
+        ],
+        "max": [
+          374.325266,
+          6.096,
+          94.653074
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          0.0,
+          6.096,
+          71.5581
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:suspenders_truss_d",
+      "local_id": "suspenders_truss_d",
+      "module_id": "manhattan-bridge",
+      "display_name": "suspenders truss d",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "suspenders",
+        "path": [
+          "suspenders"
+        ]
+      },
+      "source_basis": [
+        "control_dimension",
+        "inferred"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-001",
+        "SRC-002",
+        "SRC-011",
+        "SRC-012",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "D",
+      "basis_confidence": "B",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-018",
+        "CTL-102",
+        "CTL-101",
+        "CTL-008",
+        "CTL-010",
+        "CTL-022",
+        "CTL-023",
+        "CTL-036",
+        "CTL-037",
+        "CTL-015",
+        "CTL-038"
+      ],
+      "open_questions": [
+        "OQ-001"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Suspender set on truss D (north outer), grouped as one addressable part. Pitch is derived from the sourced 628 panel points (CTL-037): 79 panels in the main span and 39 in each side span at 18.608 ft, the unique integer solution. Two ropes per panel point (CTL-038) are not modelled individually.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              8595.3,
+              0.0,
+              530.31
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "lines"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -374.325266,
+          14.6304,
+          48.4632
+        ],
+        "max": [
+          374.325266,
+          14.6304,
+          94.653074
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          0.0,
+          14.6304,
+          71.5581
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:upper_roadway_brooklyn_bound_main_span",
+      "local_id": "upper_roadway_brooklyn_bound_main_span",
+      "module_id": "manhattan-bridge",
+      "display_name": "upper roadway brooklyn bound main span",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "deck_system",
+        "subsystem": "upper_roadway",
+        "path": [
+          "deck_system",
+          "upper_roadway"
+        ]
+      },
+      "source_basis": [
+        "control_dimension"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-001",
+        "SRC-002",
+        "SRC-011",
+        "SRC-012",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "D",
+      "basis_confidence": "B",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-026",
+        "CTL-027",
+        "CTL-022",
+        "CTL-023",
+        "CTL-008",
+        "CTL-010",
+        "CTL-103"
+      ],
+      "open_questions": [
+        "OQ-013"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Upper roadway envelope, west, over trusses A-B, over the main span. SRC-011 states the upper levels rest on trusses A-B and C-D, so the roadways are offset from the centerline. Width is sourced; only the deck structure depth is a placeholder (OQ-013).",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              5144.16,
+              78.74,
+              10.5
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "box"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -224.028,
+          -13.7922,
+          48.4632
+        ],
+        "max": [
+          224.028,
+          -6.9342,
+          49.3776
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          0.0,
+          -10.3632,
+          48.9204
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:upper_roadway_manhattan_bound_main_span",
+      "local_id": "upper_roadway_manhattan_bound_main_span",
+      "module_id": "manhattan-bridge",
+      "display_name": "upper roadway manhattan bound main span",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "deck_system",
+        "subsystem": "upper_roadway",
+        "path": [
+          "deck_system",
+          "upper_roadway"
+        ]
+      },
+      "source_basis": [
+        "control_dimension"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-001",
+        "SRC-002",
+        "SRC-011",
+        "SRC-012",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "D",
+      "basis_confidence": "B",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-026",
+        "CTL-027",
+        "CTL-022",
+        "CTL-023",
+        "CTL-008",
+        "CTL-010",
+        "CTL-103"
+      ],
+      "open_questions": [
+        "OQ-013"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Upper roadway envelope, east, over trusses C-D, over the main span. SRC-011 states the upper levels rest on trusses A-B and C-D, so the roadways are offset from the centerline. Width is sourced; only the deck structure depth is a placeholder (OQ-013).",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              5144.16,
+              83.99,
+              10.5
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "box"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -224.028,
+          6.7056,
+          48.4632
+        ],
+        "max": [
+          224.028,
+          14.0208,
+          49.3776
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          0.0,
+          10.3632,
+          48.9204
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:lower_roadway_envelope_main_span",
+      "local_id": "lower_roadway_envelope_main_span",
+      "module_id": "manhattan-bridge",
+      "display_name": "lower roadway envelope main span",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "deck_system",
+        "subsystem": "lower_roadway",
+        "path": [
+          "deck_system",
+          "lower_roadway"
+        ]
+      },
+      "source_basis": [
+        "control_dimension"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-001",
+        "SRC-002",
+        "SRC-011",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "D",
+      "basis_confidence": "B",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-024",
+        "CTL-008",
+        "CTL-104"
+      ],
+      "open_questions": [
+        "OQ-013"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Lower roadway envelope over the main span, centered on the bridge centerline at the sourced 35 ft width (CTL-024, 1909 cross-section).",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              5144.16,
+              122.48,
+              11.9
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "box"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -224.028,
+          -5.334,
+          41.148
+        ],
+        "max": [
+          224.028,
+          5.334,
+          42.18432
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          0.0,
+          0.0,
+          41.6662
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:stiffening_truss_a_chords_main_span",
+      "local_id": "stiffening_truss_a_chords_main_span",
+      "module_id": "manhattan-bridge",
+      "display_name": "stiffening truss a chords main span",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "deck_system",
+        "subsystem": "stiffening_trusses",
+        "path": [
+          "deck_system",
+          "stiffening_trusses"
+        ]
+      },
+      "source_basis": [
+        "control_dimension"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-001",
+        "SRC-002",
+        "SRC-011",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "A",
+      "basis_confidence": "A",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-008",
+        "CTL-010",
+        "CTL-022",
+        "CTL-023"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Top and bottom chords of stiffening truss A (south outer) over the main span. Depth 24 ft and the 28-40-28 ft transverse spacing are sourced from SRC-002, SRC-011 and SRC-015. Chord member sections are not modelled.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              5144.16,
+              0.0,
+              83.99
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "lines"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -224.028,
+          -14.6304,
+          41.148
+        ],
+        "max": [
+          224.028,
+          -14.6304,
+          48.4632
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          0.0,
+          -14.6304,
+          44.8056
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:stiffening_truss_a_web_main_span",
+      "local_id": "stiffening_truss_a_web_main_span",
+      "module_id": "manhattan-bridge",
+      "display_name": "stiffening truss a web main span",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "deck_system",
+        "subsystem": "stiffening_trusses",
+        "path": [
+          "deck_system",
+          "stiffening_trusses"
+        ]
+      },
+      "source_basis": [
+        "control_dimension",
+        "inferred"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-001",
+        "SRC-002",
+        "SRC-011",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "D",
+      "basis_confidence": "D",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-008",
+        "CTL-010",
+        "CTL-022",
+        "CTL-023",
+        "CTL-037",
+        "CTL-015"
+      ],
+      "open_questions": [
+        "OQ-017"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Web members of truss A (south outer) over the main span: 79 panels at 18.61 ft. The panel *positions* are sourced, being the unique integer solution to the 628 panel points in CTL-037. The alternating diagonal pattern follows the Warren form named by SRC-002, SRC-011 and SRC-012, but no source gives the diagonal handedness at each panel or whether verticals are present, so the web itself is inferred. See OQ-017.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              5144.16,
+              0.0,
+              83.99
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "lines"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -224.028,
+          -14.6304,
+          41.148
+        ],
+        "max": [
+          224.028,
+          -14.6304,
+          48.4632
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          0.0,
+          -14.6304,
+          44.8056
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:stiffening_truss_b_chords_main_span",
+      "local_id": "stiffening_truss_b_chords_main_span",
+      "module_id": "manhattan-bridge",
+      "display_name": "stiffening truss b chords main span",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "deck_system",
+        "subsystem": "stiffening_trusses",
+        "path": [
+          "deck_system",
+          "stiffening_trusses"
+        ]
+      },
+      "source_basis": [
+        "control_dimension"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-001",
+        "SRC-002",
+        "SRC-011",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "A",
+      "basis_confidence": "A",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-008",
+        "CTL-010",
+        "CTL-022",
+        "CTL-023"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Top and bottom chords of stiffening truss B (south inner) over the main span. Depth 24 ft and the 28-40-28 ft transverse spacing are sourced from SRC-002, SRC-011 and SRC-015. Chord member sections are not modelled.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              5144.16,
+              0.0,
+              83.99
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "lines"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -224.028,
+          -6.096,
+          41.148
+        ],
+        "max": [
+          224.028,
+          -6.096,
+          48.4632
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          0.0,
+          -6.096,
+          44.8056
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:stiffening_truss_b_web_main_span",
+      "local_id": "stiffening_truss_b_web_main_span",
+      "module_id": "manhattan-bridge",
+      "display_name": "stiffening truss b web main span",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "deck_system",
+        "subsystem": "stiffening_trusses",
+        "path": [
+          "deck_system",
+          "stiffening_trusses"
+        ]
+      },
+      "source_basis": [
+        "control_dimension",
+        "inferred"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-001",
+        "SRC-002",
+        "SRC-011",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "D",
+      "basis_confidence": "D",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-008",
+        "CTL-010",
+        "CTL-022",
+        "CTL-023",
+        "CTL-037",
+        "CTL-015"
+      ],
+      "open_questions": [
+        "OQ-017"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Web members of truss B (south inner) over the main span: 79 panels at 18.61 ft. The panel *positions* are sourced, being the unique integer solution to the 628 panel points in CTL-037. The alternating diagonal pattern follows the Warren form named by SRC-002, SRC-011 and SRC-012, but no source gives the diagonal handedness at each panel or whether verticals are present, so the web itself is inferred. See OQ-017.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              5144.16,
+              0.0,
+              83.99
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "lines"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -224.028,
+          -6.096,
+          41.148
+        ],
+        "max": [
+          224.028,
+          -6.096,
+          48.4632
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          0.0,
+          -6.096,
+          44.8056
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:stiffening_truss_c_chords_main_span",
+      "local_id": "stiffening_truss_c_chords_main_span",
+      "module_id": "manhattan-bridge",
+      "display_name": "stiffening truss c chords main span",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "deck_system",
+        "subsystem": "stiffening_trusses",
+        "path": [
+          "deck_system",
+          "stiffening_trusses"
+        ]
+      },
+      "source_basis": [
+        "control_dimension"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-001",
+        "SRC-002",
+        "SRC-011",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "A",
+      "basis_confidence": "A",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-008",
+        "CTL-010",
+        "CTL-022",
+        "CTL-023"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Top and bottom chords of stiffening truss C (north inner) over the main span. Depth 24 ft and the 28-40-28 ft transverse spacing are sourced from SRC-002, SRC-011 and SRC-015. Chord member sections are not modelled.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              5144.16,
+              0.0,
+              83.99
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "lines"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -224.028,
+          6.096,
+          41.148
+        ],
+        "max": [
+          224.028,
+          6.096,
+          48.4632
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          0.0,
+          6.096,
+          44.8056
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:stiffening_truss_c_web_main_span",
+      "local_id": "stiffening_truss_c_web_main_span",
+      "module_id": "manhattan-bridge",
+      "display_name": "stiffening truss c web main span",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "deck_system",
+        "subsystem": "stiffening_trusses",
+        "path": [
+          "deck_system",
+          "stiffening_trusses"
+        ]
+      },
+      "source_basis": [
+        "control_dimension",
+        "inferred"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-001",
+        "SRC-002",
+        "SRC-011",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "D",
+      "basis_confidence": "D",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-008",
+        "CTL-010",
+        "CTL-022",
+        "CTL-023",
+        "CTL-037",
+        "CTL-015"
+      ],
+      "open_questions": [
+        "OQ-017"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Web members of truss C (north inner) over the main span: 79 panels at 18.61 ft. The panel *positions* are sourced, being the unique integer solution to the 628 panel points in CTL-037. The alternating diagonal pattern follows the Warren form named by SRC-002, SRC-011 and SRC-012, but no source gives the diagonal handedness at each panel or whether verticals are present, so the web itself is inferred. See OQ-017.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              5144.16,
+              0.0,
+              83.99
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "lines"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -224.028,
+          6.096,
+          41.148
+        ],
+        "max": [
+          224.028,
+          6.096,
+          48.4632
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          0.0,
+          6.096,
+          44.8056
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:stiffening_truss_d_chords_main_span",
+      "local_id": "stiffening_truss_d_chords_main_span",
+      "module_id": "manhattan-bridge",
+      "display_name": "stiffening truss d chords main span",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "deck_system",
+        "subsystem": "stiffening_trusses",
+        "path": [
+          "deck_system",
+          "stiffening_trusses"
+        ]
+      },
+      "source_basis": [
+        "control_dimension"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-001",
+        "SRC-002",
+        "SRC-011",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "A",
+      "basis_confidence": "A",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-008",
+        "CTL-010",
+        "CTL-022",
+        "CTL-023"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Top and bottom chords of stiffening truss D (north outer) over the main span. Depth 24 ft and the 28-40-28 ft transverse spacing are sourced from SRC-002, SRC-011 and SRC-015. Chord member sections are not modelled.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              5144.16,
+              0.0,
+              83.99
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "lines"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -224.028,
+          14.6304,
+          41.148
+        ],
+        "max": [
+          224.028,
+          14.6304,
+          48.4632
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          0.0,
+          14.6304,
+          44.8056
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:stiffening_truss_d_web_main_span",
+      "local_id": "stiffening_truss_d_web_main_span",
+      "module_id": "manhattan-bridge",
+      "display_name": "stiffening truss d web main span",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "deck_system",
+        "subsystem": "stiffening_trusses",
+        "path": [
+          "deck_system",
+          "stiffening_trusses"
+        ]
+      },
+      "source_basis": [
+        "control_dimension",
+        "inferred"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-001",
+        "SRC-002",
+        "SRC-011",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "D",
+      "basis_confidence": "D",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-008",
+        "CTL-010",
+        "CTL-022",
+        "CTL-023",
+        "CTL-037",
+        "CTL-015"
+      ],
+      "open_questions": [
+        "OQ-017"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Web members of truss D (north outer) over the main span: 79 panels at 18.61 ft. The panel *positions* are sourced, being the unique integer solution to the 628 panel points in CTL-037. The alternating diagonal pattern follows the Warren form named by SRC-002, SRC-011 and SRC-012, but no source gives the diagonal handedness at each panel or whether verticals are present, so the web itself is inferred. See OQ-017.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              5144.16,
+              0.0,
+              83.99
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "lines"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -224.028,
+          14.6304,
+          41.148
+        ],
+        "max": [
+          224.028,
+          14.6304,
+          48.4632
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          0.0,
+          14.6304,
+          44.8056
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:upper_roadway_brooklyn_bound_side_span_manhattan",
+      "local_id": "upper_roadway_brooklyn_bound_side_span_manhattan",
+      "module_id": "manhattan-bridge",
+      "display_name": "upper roadway brooklyn bound side span manhattan",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "deck_system",
+        "subsystem": "upper_roadway",
+        "path": [
+          "deck_system",
+          "upper_roadway"
+        ]
+      },
+      "source_basis": [
+        "control_dimension"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-001",
+        "SRC-002",
+        "SRC-011",
+        "SRC-012",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "D",
+      "basis_confidence": "B",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-026",
+        "CTL-027",
+        "CTL-022",
+        "CTL-023",
+        "CTL-008",
+        "CTL-010",
+        "CTL-103"
+      ],
+      "open_questions": [
+        "OQ-013"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Upper roadway envelope, west, over trusses A-B, over the side span manhattan. SRC-011 states the upper levels rest on trusses A-B and C-D, so the roadways are offset from the centerline. Width is sourced; only the deck structure depth is a placeholder (OQ-013).",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              2537.08,
+              78.74,
+              10.5
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "box"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -445.008,
+          -13.7922,
+          48.4632
+        ],
+        "max": [
+          -224.028,
+          -6.9342,
+          49.3776
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          -334.518,
+          -10.3632,
+          48.9204
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:upper_roadway_manhattan_bound_side_span_manhattan",
+      "local_id": "upper_roadway_manhattan_bound_side_span_manhattan",
+      "module_id": "manhattan-bridge",
+      "display_name": "upper roadway manhattan bound side span manhattan",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "deck_system",
+        "subsystem": "upper_roadway",
+        "path": [
+          "deck_system",
+          "upper_roadway"
+        ]
+      },
+      "source_basis": [
+        "control_dimension"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-001",
+        "SRC-002",
+        "SRC-011",
+        "SRC-012",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "D",
+      "basis_confidence": "B",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-026",
+        "CTL-027",
+        "CTL-022",
+        "CTL-023",
+        "CTL-008",
+        "CTL-010",
+        "CTL-103"
+      ],
+      "open_questions": [
+        "OQ-013"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Upper roadway envelope, east, over trusses C-D, over the side span manhattan. SRC-011 states the upper levels rest on trusses A-B and C-D, so the roadways are offset from the centerline. Width is sourced; only the deck structure depth is a placeholder (OQ-013).",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              2537.08,
+              83.99,
+              10.5
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "box"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -445.008,
+          6.7056,
+          48.4632
+        ],
+        "max": [
+          -224.028,
+          14.0208,
+          49.3776
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          -334.518,
+          10.3632,
+          48.9204
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:lower_roadway_envelope_side_span_manhattan",
+      "local_id": "lower_roadway_envelope_side_span_manhattan",
+      "module_id": "manhattan-bridge",
+      "display_name": "lower roadway envelope side span manhattan",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "deck_system",
+        "subsystem": "lower_roadway",
+        "path": [
+          "deck_system",
+          "lower_roadway"
+        ]
+      },
+      "source_basis": [
+        "control_dimension"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-001",
+        "SRC-002",
+        "SRC-011",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "D",
+      "basis_confidence": "B",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-024",
+        "CTL-008",
+        "CTL-104"
+      ],
+      "open_questions": [
+        "OQ-013"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Lower roadway envelope over the side span manhattan, centered on the bridge centerline at the sourced 35 ft width (CTL-024, 1909 cross-section).",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              2537.08,
+              122.48,
+              11.9
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "box"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -445.008,
+          -5.334,
+          41.148
+        ],
+        "max": [
+          -224.028,
+          5.334,
+          42.18432
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          -334.518,
+          0.0,
+          41.6662
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:stiffening_truss_a_chords_side_span_manhattan",
+      "local_id": "stiffening_truss_a_chords_side_span_manhattan",
+      "module_id": "manhattan-bridge",
+      "display_name": "stiffening truss a chords side span manhattan",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "deck_system",
+        "subsystem": "stiffening_trusses",
+        "path": [
+          "deck_system",
+          "stiffening_trusses"
+        ]
+      },
+      "source_basis": [
+        "control_dimension"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-001",
+        "SRC-002",
+        "SRC-011",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "A",
+      "basis_confidence": "A",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-008",
+        "CTL-010",
+        "CTL-022",
+        "CTL-023"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Top and bottom chords of stiffening truss A (south outer) over the side span manhattan. Depth 24 ft and the 28-40-28 ft transverse spacing are sourced from SRC-002, SRC-011 and SRC-015. Chord member sections are not modelled.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              2537.08,
+              0.0,
+              83.99
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "lines"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -445.008,
+          -14.6304,
+          41.148
+        ],
+        "max": [
+          -224.028,
+          -14.6304,
+          48.4632
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          -334.518,
+          -14.6304,
+          44.8056
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:stiffening_truss_a_web_side_span_manhattan",
+      "local_id": "stiffening_truss_a_web_side_span_manhattan",
+      "module_id": "manhattan-bridge",
+      "display_name": "stiffening truss a web side span manhattan",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "deck_system",
+        "subsystem": "stiffening_trusses",
+        "path": [
+          "deck_system",
+          "stiffening_trusses"
+        ]
+      },
+      "source_basis": [
+        "control_dimension",
+        "inferred"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-001",
+        "SRC-002",
+        "SRC-011",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "D",
+      "basis_confidence": "D",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-008",
+        "CTL-010",
+        "CTL-022",
+        "CTL-023",
+        "CTL-037",
+        "CTL-015"
+      ],
+      "open_questions": [
+        "OQ-017"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Web members of truss A (south outer) over the side span manhattan: 39 panels at 18.59 ft. The panel *positions* are sourced, being the unique integer solution to the 628 panel points in CTL-037. The alternating diagonal pattern follows the Warren form named by SRC-002, SRC-011 and SRC-012, but no source gives the diagonal handedness at each panel or whether verticals are present, so the web itself is inferred. See OQ-017.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              2537.08,
+              0.0,
+              83.99
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "lines"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -445.008,
+          -14.6304,
+          41.148
+        ],
+        "max": [
+          -224.028,
+          -14.6304,
+          48.4632
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          -334.518,
+          -14.6304,
+          44.8056
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:stiffening_truss_b_chords_side_span_manhattan",
+      "local_id": "stiffening_truss_b_chords_side_span_manhattan",
+      "module_id": "manhattan-bridge",
+      "display_name": "stiffening truss b chords side span manhattan",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "deck_system",
+        "subsystem": "stiffening_trusses",
+        "path": [
+          "deck_system",
+          "stiffening_trusses"
+        ]
+      },
+      "source_basis": [
+        "control_dimension"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-001",
+        "SRC-002",
+        "SRC-011",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "A",
+      "basis_confidence": "A",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-008",
+        "CTL-010",
+        "CTL-022",
+        "CTL-023"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Top and bottom chords of stiffening truss B (south inner) over the side span manhattan. Depth 24 ft and the 28-40-28 ft transverse spacing are sourced from SRC-002, SRC-011 and SRC-015. Chord member sections are not modelled.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              2537.08,
+              0.0,
+              83.99
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "lines"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -445.008,
+          -6.096,
+          41.148
+        ],
+        "max": [
+          -224.028,
+          -6.096,
+          48.4632
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          -334.518,
+          -6.096,
+          44.8056
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:stiffening_truss_b_web_side_span_manhattan",
+      "local_id": "stiffening_truss_b_web_side_span_manhattan",
+      "module_id": "manhattan-bridge",
+      "display_name": "stiffening truss b web side span manhattan",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "deck_system",
+        "subsystem": "stiffening_trusses",
+        "path": [
+          "deck_system",
+          "stiffening_trusses"
+        ]
+      },
+      "source_basis": [
+        "control_dimension",
+        "inferred"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-001",
+        "SRC-002",
+        "SRC-011",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "D",
+      "basis_confidence": "D",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-008",
+        "CTL-010",
+        "CTL-022",
+        "CTL-023",
+        "CTL-037",
+        "CTL-015"
+      ],
+      "open_questions": [
+        "OQ-017"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Web members of truss B (south inner) over the side span manhattan: 39 panels at 18.59 ft. The panel *positions* are sourced, being the unique integer solution to the 628 panel points in CTL-037. The alternating diagonal pattern follows the Warren form named by SRC-002, SRC-011 and SRC-012, but no source gives the diagonal handedness at each panel or whether verticals are present, so the web itself is inferred. See OQ-017.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              2537.08,
+              0.0,
+              83.99
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "lines"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -445.008,
+          -6.096,
+          41.148
+        ],
+        "max": [
+          -224.028,
+          -6.096,
+          48.4632
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          -334.518,
+          -6.096,
+          44.8056
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:stiffening_truss_c_chords_side_span_manhattan",
+      "local_id": "stiffening_truss_c_chords_side_span_manhattan",
+      "module_id": "manhattan-bridge",
+      "display_name": "stiffening truss c chords side span manhattan",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "deck_system",
+        "subsystem": "stiffening_trusses",
+        "path": [
+          "deck_system",
+          "stiffening_trusses"
+        ]
+      },
+      "source_basis": [
+        "control_dimension"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-001",
+        "SRC-002",
+        "SRC-011",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "A",
+      "basis_confidence": "A",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-008",
+        "CTL-010",
+        "CTL-022",
+        "CTL-023"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Top and bottom chords of stiffening truss C (north inner) over the side span manhattan. Depth 24 ft and the 28-40-28 ft transverse spacing are sourced from SRC-002, SRC-011 and SRC-015. Chord member sections are not modelled.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              2537.08,
+              0.0,
+              83.99
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "lines"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -445.008,
+          6.096,
+          41.148
+        ],
+        "max": [
+          -224.028,
+          6.096,
+          48.4632
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          -334.518,
+          6.096,
+          44.8056
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:stiffening_truss_c_web_side_span_manhattan",
+      "local_id": "stiffening_truss_c_web_side_span_manhattan",
+      "module_id": "manhattan-bridge",
+      "display_name": "stiffening truss c web side span manhattan",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "deck_system",
+        "subsystem": "stiffening_trusses",
+        "path": [
+          "deck_system",
+          "stiffening_trusses"
+        ]
+      },
+      "source_basis": [
+        "control_dimension",
+        "inferred"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-001",
+        "SRC-002",
+        "SRC-011",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "D",
+      "basis_confidence": "D",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-008",
+        "CTL-010",
+        "CTL-022",
+        "CTL-023",
+        "CTL-037",
+        "CTL-015"
+      ],
+      "open_questions": [
+        "OQ-017"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Web members of truss C (north inner) over the side span manhattan: 39 panels at 18.59 ft. The panel *positions* are sourced, being the unique integer solution to the 628 panel points in CTL-037. The alternating diagonal pattern follows the Warren form named by SRC-002, SRC-011 and SRC-012, but no source gives the diagonal handedness at each panel or whether verticals are present, so the web itself is inferred. See OQ-017.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              2537.08,
+              0.0,
+              83.99
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "lines"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -445.008,
+          6.096,
+          41.148
+        ],
+        "max": [
+          -224.028,
+          6.096,
+          48.4632
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          -334.518,
+          6.096,
+          44.8056
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:stiffening_truss_d_chords_side_span_manhattan",
+      "local_id": "stiffening_truss_d_chords_side_span_manhattan",
+      "module_id": "manhattan-bridge",
+      "display_name": "stiffening truss d chords side span manhattan",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "deck_system",
+        "subsystem": "stiffening_trusses",
+        "path": [
+          "deck_system",
+          "stiffening_trusses"
+        ]
+      },
+      "source_basis": [
+        "control_dimension"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-001",
+        "SRC-002",
+        "SRC-011",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "A",
+      "basis_confidence": "A",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-008",
+        "CTL-010",
+        "CTL-022",
+        "CTL-023"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Top and bottom chords of stiffening truss D (north outer) over the side span manhattan. Depth 24 ft and the 28-40-28 ft transverse spacing are sourced from SRC-002, SRC-011 and SRC-015. Chord member sections are not modelled.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              2537.08,
+              0.0,
+              83.99
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "lines"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -445.008,
+          14.6304,
+          41.148
+        ],
+        "max": [
+          -224.028,
+          14.6304,
+          48.4632
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          -334.518,
+          14.6304,
+          44.8056
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:stiffening_truss_d_web_side_span_manhattan",
+      "local_id": "stiffening_truss_d_web_side_span_manhattan",
+      "module_id": "manhattan-bridge",
+      "display_name": "stiffening truss d web side span manhattan",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "deck_system",
+        "subsystem": "stiffening_trusses",
+        "path": [
+          "deck_system",
+          "stiffening_trusses"
+        ]
+      },
+      "source_basis": [
+        "control_dimension",
+        "inferred"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-001",
+        "SRC-002",
+        "SRC-011",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "D",
+      "basis_confidence": "D",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-008",
+        "CTL-010",
+        "CTL-022",
+        "CTL-023",
+        "CTL-037",
+        "CTL-015"
+      ],
+      "open_questions": [
+        "OQ-017"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Web members of truss D (north outer) over the side span manhattan: 39 panels at 18.59 ft. The panel *positions* are sourced, being the unique integer solution to the 628 panel points in CTL-037. The alternating diagonal pattern follows the Warren form named by SRC-002, SRC-011 and SRC-012, but no source gives the diagonal handedness at each panel or whether verticals are present, so the web itself is inferred. See OQ-017.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              2537.08,
+              0.0,
+              83.99
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "lines"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -445.008,
+          14.6304,
+          41.148
+        ],
+        "max": [
+          -224.028,
+          14.6304,
+          48.4632
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          -334.518,
+          14.6304,
+          44.8056
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:upper_roadway_brooklyn_bound_side_span_brooklyn",
+      "local_id": "upper_roadway_brooklyn_bound_side_span_brooklyn",
+      "module_id": "manhattan-bridge",
+      "display_name": "upper roadway brooklyn bound side span brooklyn",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "deck_system",
+        "subsystem": "upper_roadway",
+        "path": [
+          "deck_system",
+          "upper_roadway"
+        ]
+      },
+      "source_basis": [
+        "control_dimension"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-001",
+        "SRC-002",
+        "SRC-011",
+        "SRC-012",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "D",
+      "basis_confidence": "B",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-026",
+        "CTL-027",
+        "CTL-022",
+        "CTL-023",
+        "CTL-008",
+        "CTL-010",
+        "CTL-103"
+      ],
+      "open_questions": [
+        "OQ-013"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Upper roadway envelope, west, over trusses A-B, over the side span brooklyn. SRC-011 states the upper levels rest on trusses A-B and C-D, so the roadways are offset from the centerline. Width is sourced; only the deck structure depth is a placeholder (OQ-013).",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              2537.08,
+              78.74,
+              10.5
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "box"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          224.028,
+          -13.7922,
+          48.4632
+        ],
+        "max": [
+          445.008,
+          -6.9342,
+          49.3776
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          334.518,
+          -10.3632,
+          48.9204
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:upper_roadway_manhattan_bound_side_span_brooklyn",
+      "local_id": "upper_roadway_manhattan_bound_side_span_brooklyn",
+      "module_id": "manhattan-bridge",
+      "display_name": "upper roadway manhattan bound side span brooklyn",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "deck_system",
+        "subsystem": "upper_roadway",
+        "path": [
+          "deck_system",
+          "upper_roadway"
+        ]
+      },
+      "source_basis": [
+        "control_dimension"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-001",
+        "SRC-002",
+        "SRC-011",
+        "SRC-012",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "D",
+      "basis_confidence": "B",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-026",
+        "CTL-027",
+        "CTL-022",
+        "CTL-023",
+        "CTL-008",
+        "CTL-010",
+        "CTL-103"
+      ],
+      "open_questions": [
+        "OQ-013"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Upper roadway envelope, east, over trusses C-D, over the side span brooklyn. SRC-011 states the upper levels rest on trusses A-B and C-D, so the roadways are offset from the centerline. Width is sourced; only the deck structure depth is a placeholder (OQ-013).",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              2537.08,
+              83.99,
+              10.5
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "box"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          224.028,
+          6.7056,
+          48.4632
+        ],
+        "max": [
+          445.008,
+          14.0208,
+          49.3776
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          334.518,
+          10.3632,
+          48.9204
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:lower_roadway_envelope_side_span_brooklyn",
+      "local_id": "lower_roadway_envelope_side_span_brooklyn",
+      "module_id": "manhattan-bridge",
+      "display_name": "lower roadway envelope side span brooklyn",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "deck_system",
+        "subsystem": "lower_roadway",
+        "path": [
+          "deck_system",
+          "lower_roadway"
+        ]
+      },
+      "source_basis": [
+        "control_dimension"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-001",
+        "SRC-002",
+        "SRC-011",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "D",
+      "basis_confidence": "B",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-024",
+        "CTL-008",
+        "CTL-104"
+      ],
+      "open_questions": [
+        "OQ-013"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Lower roadway envelope over the side span brooklyn, centered on the bridge centerline at the sourced 35 ft width (CTL-024, 1909 cross-section).",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              2537.08,
+              122.48,
+              11.9
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "box"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          224.028,
+          -5.334,
+          41.148
+        ],
+        "max": [
+          445.008,
+          5.334,
+          42.18432
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          334.518,
+          0.0,
+          41.6662
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:stiffening_truss_a_chords_side_span_brooklyn",
+      "local_id": "stiffening_truss_a_chords_side_span_brooklyn",
+      "module_id": "manhattan-bridge",
+      "display_name": "stiffening truss a chords side span brooklyn",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "deck_system",
+        "subsystem": "stiffening_trusses",
+        "path": [
+          "deck_system",
+          "stiffening_trusses"
+        ]
+      },
+      "source_basis": [
+        "control_dimension"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-001",
+        "SRC-002",
+        "SRC-011",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "A",
+      "basis_confidence": "A",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-008",
+        "CTL-010",
+        "CTL-022",
+        "CTL-023"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Top and bottom chords of stiffening truss A (south outer) over the side span brooklyn. Depth 24 ft and the 28-40-28 ft transverse spacing are sourced from SRC-002, SRC-011 and SRC-015. Chord member sections are not modelled.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              2537.08,
+              0.0,
+              83.99
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "lines"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          224.028,
+          -14.6304,
+          41.148
+        ],
+        "max": [
+          445.008,
+          -14.6304,
+          48.4632
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          334.518,
+          -14.6304,
+          44.8056
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:stiffening_truss_a_web_side_span_brooklyn",
+      "local_id": "stiffening_truss_a_web_side_span_brooklyn",
+      "module_id": "manhattan-bridge",
+      "display_name": "stiffening truss a web side span brooklyn",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "deck_system",
+        "subsystem": "stiffening_trusses",
+        "path": [
+          "deck_system",
+          "stiffening_trusses"
+        ]
+      },
+      "source_basis": [
+        "control_dimension",
+        "inferred"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-001",
+        "SRC-002",
+        "SRC-011",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "D",
+      "basis_confidence": "D",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-008",
+        "CTL-010",
+        "CTL-022",
+        "CTL-023",
+        "CTL-037",
+        "CTL-015"
+      ],
+      "open_questions": [
+        "OQ-017"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Web members of truss A (south outer) over the side span brooklyn: 39 panels at 18.59 ft. The panel *positions* are sourced, being the unique integer solution to the 628 panel points in CTL-037. The alternating diagonal pattern follows the Warren form named by SRC-002, SRC-011 and SRC-012, but no source gives the diagonal handedness at each panel or whether verticals are present, so the web itself is inferred. See OQ-017.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              2537.08,
+              0.0,
+              83.99
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "lines"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          224.028,
+          -14.6304,
+          41.148
+        ],
+        "max": [
+          445.008,
+          -14.6304,
+          48.4632
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          334.518,
+          -14.6304,
+          44.8056
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:stiffening_truss_b_chords_side_span_brooklyn",
+      "local_id": "stiffening_truss_b_chords_side_span_brooklyn",
+      "module_id": "manhattan-bridge",
+      "display_name": "stiffening truss b chords side span brooklyn",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "deck_system",
+        "subsystem": "stiffening_trusses",
+        "path": [
+          "deck_system",
+          "stiffening_trusses"
+        ]
+      },
+      "source_basis": [
+        "control_dimension"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-001",
+        "SRC-002",
+        "SRC-011",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "A",
+      "basis_confidence": "A",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-008",
+        "CTL-010",
+        "CTL-022",
+        "CTL-023"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Top and bottom chords of stiffening truss B (south inner) over the side span brooklyn. Depth 24 ft and the 28-40-28 ft transverse spacing are sourced from SRC-002, SRC-011 and SRC-015. Chord member sections are not modelled.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              2537.08,
+              0.0,
+              83.99
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "lines"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          224.028,
+          -6.096,
+          41.148
+        ],
+        "max": [
+          445.008,
+          -6.096,
+          48.4632
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          334.518,
+          -6.096,
+          44.8056
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:stiffening_truss_b_web_side_span_brooklyn",
+      "local_id": "stiffening_truss_b_web_side_span_brooklyn",
+      "module_id": "manhattan-bridge",
+      "display_name": "stiffening truss b web side span brooklyn",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "deck_system",
+        "subsystem": "stiffening_trusses",
+        "path": [
+          "deck_system",
+          "stiffening_trusses"
+        ]
+      },
+      "source_basis": [
+        "control_dimension",
+        "inferred"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-001",
+        "SRC-002",
+        "SRC-011",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "D",
+      "basis_confidence": "D",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-008",
+        "CTL-010",
+        "CTL-022",
+        "CTL-023",
+        "CTL-037",
+        "CTL-015"
+      ],
+      "open_questions": [
+        "OQ-017"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Web members of truss B (south inner) over the side span brooklyn: 39 panels at 18.59 ft. The panel *positions* are sourced, being the unique integer solution to the 628 panel points in CTL-037. The alternating diagonal pattern follows the Warren form named by SRC-002, SRC-011 and SRC-012, but no source gives the diagonal handedness at each panel or whether verticals are present, so the web itself is inferred. See OQ-017.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              2537.08,
+              0.0,
+              83.99
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "lines"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          224.028,
+          -6.096,
+          41.148
+        ],
+        "max": [
+          445.008,
+          -6.096,
+          48.4632
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          334.518,
+          -6.096,
+          44.8056
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:stiffening_truss_c_chords_side_span_brooklyn",
+      "local_id": "stiffening_truss_c_chords_side_span_brooklyn",
+      "module_id": "manhattan-bridge",
+      "display_name": "stiffening truss c chords side span brooklyn",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "deck_system",
+        "subsystem": "stiffening_trusses",
+        "path": [
+          "deck_system",
+          "stiffening_trusses"
+        ]
+      },
+      "source_basis": [
+        "control_dimension"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-001",
+        "SRC-002",
+        "SRC-011",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "A",
+      "basis_confidence": "A",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-008",
+        "CTL-010",
+        "CTL-022",
+        "CTL-023"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Top and bottom chords of stiffening truss C (north inner) over the side span brooklyn. Depth 24 ft and the 28-40-28 ft transverse spacing are sourced from SRC-002, SRC-011 and SRC-015. Chord member sections are not modelled.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              2537.08,
+              0.0,
+              83.99
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "lines"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          224.028,
+          6.096,
+          41.148
+        ],
+        "max": [
+          445.008,
+          6.096,
+          48.4632
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          334.518,
+          6.096,
+          44.8056
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:stiffening_truss_c_web_side_span_brooklyn",
+      "local_id": "stiffening_truss_c_web_side_span_brooklyn",
+      "module_id": "manhattan-bridge",
+      "display_name": "stiffening truss c web side span brooklyn",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "deck_system",
+        "subsystem": "stiffening_trusses",
+        "path": [
+          "deck_system",
+          "stiffening_trusses"
+        ]
+      },
+      "source_basis": [
+        "control_dimension",
+        "inferred"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-001",
+        "SRC-002",
+        "SRC-011",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "D",
+      "basis_confidence": "D",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-008",
+        "CTL-010",
+        "CTL-022",
+        "CTL-023",
+        "CTL-037",
+        "CTL-015"
+      ],
+      "open_questions": [
+        "OQ-017"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Web members of truss C (north inner) over the side span brooklyn: 39 panels at 18.59 ft. The panel *positions* are sourced, being the unique integer solution to the 628 panel points in CTL-037. The alternating diagonal pattern follows the Warren form named by SRC-002, SRC-011 and SRC-012, but no source gives the diagonal handedness at each panel or whether verticals are present, so the web itself is inferred. See OQ-017.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              2537.08,
+              0.0,
+              83.99
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "lines"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          224.028,
+          6.096,
+          41.148
+        ],
+        "max": [
+          445.008,
+          6.096,
+          48.4632
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          334.518,
+          6.096,
+          44.8056
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:stiffening_truss_d_chords_side_span_brooklyn",
+      "local_id": "stiffening_truss_d_chords_side_span_brooklyn",
+      "module_id": "manhattan-bridge",
+      "display_name": "stiffening truss d chords side span brooklyn",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "deck_system",
+        "subsystem": "stiffening_trusses",
+        "path": [
+          "deck_system",
+          "stiffening_trusses"
+        ]
+      },
+      "source_basis": [
+        "control_dimension"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-001",
+        "SRC-002",
+        "SRC-011",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "A",
+      "basis_confidence": "A",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-008",
+        "CTL-010",
+        "CTL-022",
+        "CTL-023"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Top and bottom chords of stiffening truss D (north outer) over the side span brooklyn. Depth 24 ft and the 28-40-28 ft transverse spacing are sourced from SRC-002, SRC-011 and SRC-015. Chord member sections are not modelled.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              2537.08,
+              0.0,
+              83.99
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "lines"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          224.028,
+          14.6304,
+          41.148
+        ],
+        "max": [
+          445.008,
+          14.6304,
+          48.4632
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          334.518,
+          14.6304,
+          44.8056
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:stiffening_truss_d_web_side_span_brooklyn",
+      "local_id": "stiffening_truss_d_web_side_span_brooklyn",
+      "module_id": "manhattan-bridge",
+      "display_name": "stiffening truss d web side span brooklyn",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "deck_system",
+        "subsystem": "stiffening_trusses",
+        "path": [
+          "deck_system",
+          "stiffening_trusses"
+        ]
+      },
+      "source_basis": [
+        "control_dimension",
+        "inferred"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-001",
+        "SRC-002",
+        "SRC-011",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "D",
+      "basis_confidence": "D",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-008",
+        "CTL-010",
+        "CTL-022",
+        "CTL-023",
+        "CTL-037",
+        "CTL-015"
+      ],
+      "open_questions": [
+        "OQ-017"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Web members of truss D (north outer) over the side span brooklyn: 39 panels at 18.59 ft. The panel *positions* are sourced, being the unique integer solution to the 628 panel points in CTL-037. The alternating diagonal pattern follows the Warren form named by SRC-002, SRC-011 and SRC-012, but no source gives the diagonal handedness at each panel or whether verticals are present, so the web itself is inferred. See OQ-017.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              2537.08,
+              0.0,
+              83.99
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "lines"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          224.028,
+          14.6304,
+          41.148
+        ],
+        "max": [
+          445.008,
+          14.6304,
+          48.4632
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          334.518,
+          14.6304,
+          44.8056
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:footwalk_south",
+      "local_id": "footwalk_south",
+      "module_id": "manhattan-bridge",
+      "display_name": "footwalk south",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "deck_system",
+        "subsystem": "lower_roadway",
+        "path": [
+          "deck_system",
+          "lower_roadway"
+        ]
+      },
+      "source_basis": [
+        "control_dimension"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-001",
+        "SRC-002",
+        "SRC-011",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "D",
+      "basis_confidence": "B",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-025",
+        "CTL-023",
+        "CTL-021",
+        "CTL-008",
+        "CTL-104"
+      ],
+      "open_questions": [
+        "OQ-013"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "South footwalk envelope, 10 ft wide (CTL-025), outboard of truss A. Today the south path is the walkway and the north path is the bikeway. Placement follows the 1909 cross-section, which closes to the sourced 120 ft deck width.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              10218.32,
+              34.99,
+              3.44
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "box"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -445.008,
+          -17.6784,
+          42.18432
+        ],
+        "max": [
+          445.008,
+          -14.6304,
+          42.48432
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          0.0,
+          -16.1544,
+          42.3343
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:footwalk_north",
+      "local_id": "footwalk_north",
+      "module_id": "manhattan-bridge",
+      "display_name": "footwalk north",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "deck_system",
+        "subsystem": "lower_roadway",
+        "path": [
+          "deck_system",
+          "lower_roadway"
+        ]
+      },
+      "source_basis": [
+        "control_dimension"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-001",
+        "SRC-002",
+        "SRC-011",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "D",
+      "basis_confidence": "B",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-025",
+        "CTL-023",
+        "CTL-021",
+        "CTL-008",
+        "CTL-104"
+      ],
+      "open_questions": [
+        "OQ-013"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "North footwalk envelope, 10 ft wide (CTL-025), outboard of truss D. Today the south path is the walkway and the north path is the bikeway. Placement follows the 1909 cross-section, which closes to the sourced 120 ft deck width.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              10218.32,
+              34.99,
+              3.44
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "box"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -445.008,
+          14.6304,
+          42.18432
+        ],
+        "max": [
+          445.008,
+          17.6784,
+          42.48432
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          0.0,
+          16.1544,
+          42.3343
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:track_1",
+      "local_id": "track_1",
+      "module_id": "manhattan-bridge",
+      "display_name": "track 1",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "deck_system",
+        "subsystem": "subway_tracks",
+        "path": [
+          "deck_system",
+          "subway_tracks"
+        ]
+      },
+      "source_basis": [
+        "control_dimension",
+        "inferred"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-001",
+        "SRC-002",
+        "SRC-010",
+        "SRC-011",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "D",
+      "basis_confidence": "B",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-017",
+        "CTL-105",
+        "CTL-106",
+        "CTL-022",
+        "CTL-023",
+        "CTL-008",
+        "CTL-104",
+        "CTL-107"
+      ],
+      "open_questions": [
+        "OQ-010",
+        "OQ-013"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Subway track envelope over the suspended length. SRC-011 confirms two tracks in each of the A-B and C-D truss bays, which bounds the transverse position between 20 ft and 48 ft from the centerline; the exact centerline within that bay is still a placeholder, see OQ-010. Approach trackwork is not modelled.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              10218.32,
+              16.48,
+              5.25
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "box"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -445.008,
+          11.77925,
+          42.18432
+        ],
+        "max": [
+          445.008,
+          13.21435,
+          42.64152
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          0.0,
+          12.4968,
+          42.4129
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:track_2",
+      "local_id": "track_2",
+      "module_id": "manhattan-bridge",
+      "display_name": "track 2",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "deck_system",
+        "subsystem": "subway_tracks",
+        "path": [
+          "deck_system",
+          "subway_tracks"
+        ]
+      },
+      "source_basis": [
+        "control_dimension",
+        "inferred"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-001",
+        "SRC-002",
+        "SRC-010",
+        "SRC-011",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "D",
+      "basis_confidence": "B",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-017",
+        "CTL-105",
+        "CTL-106",
+        "CTL-022",
+        "CTL-023",
+        "CTL-008",
+        "CTL-104",
+        "CTL-107"
+      ],
+      "open_questions": [
+        "OQ-010",
+        "OQ-013"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Subway track envelope over the suspended length. SRC-011 confirms two tracks in each of the A-B and C-D truss bays, which bounds the transverse position between 20 ft and 48 ft from the centerline; the exact centerline within that bay is still a placeholder, see OQ-010. Approach trackwork is not modelled.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              10218.32,
+              16.48,
+              5.25
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "box"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -445.008,
+          7.51205,
+          42.18432
+        ],
+        "max": [
+          445.008,
+          8.94715,
+          42.64152
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          0.0,
+          8.2296,
+          42.4129
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:track_3",
+      "local_id": "track_3",
+      "module_id": "manhattan-bridge",
+      "display_name": "track 3",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "deck_system",
+        "subsystem": "subway_tracks",
+        "path": [
+          "deck_system",
+          "subway_tracks"
+        ]
+      },
+      "source_basis": [
+        "control_dimension",
+        "inferred"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-001",
+        "SRC-002",
+        "SRC-010",
+        "SRC-011",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "D",
+      "basis_confidence": "B",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-017",
+        "CTL-105",
+        "CTL-106",
+        "CTL-022",
+        "CTL-023",
+        "CTL-008",
+        "CTL-104",
+        "CTL-107"
+      ],
+      "open_questions": [
+        "OQ-010",
+        "OQ-013"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Subway track envelope over the suspended length. SRC-011 confirms two tracks in each of the A-B and C-D truss bays, which bounds the transverse position between 20 ft and 48 ft from the centerline; the exact centerline within that bay is still a placeholder, see OQ-010. Approach trackwork is not modelled.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              10218.32,
+              16.48,
+              5.25
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "box"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -445.008,
+          -8.94715,
+          42.18432
+        ],
+        "max": [
+          445.008,
+          -7.51205,
+          42.64152
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          0.0,
+          -8.2296,
+          42.4129
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:track_4",
+      "local_id": "track_4",
+      "module_id": "manhattan-bridge",
+      "display_name": "track 4",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "deck_system",
+        "subsystem": "subway_tracks",
+        "path": [
+          "deck_system",
+          "subway_tracks"
+        ]
+      },
+      "source_basis": [
+        "control_dimension",
+        "inferred"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-001",
+        "SRC-002",
+        "SRC-010",
+        "SRC-011",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "D",
+      "basis_confidence": "B",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-017",
+        "CTL-105",
+        "CTL-106",
+        "CTL-022",
+        "CTL-023",
+        "CTL-008",
+        "CTL-104",
+        "CTL-107"
+      ],
+      "open_questions": [
+        "OQ-010",
+        "OQ-013"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Subway track envelope over the suspended length. SRC-011 confirms two tracks in each of the A-B and C-D truss bays, which bounds the transverse position between 20 ft and 48 ft from the centerline; the exact centerline within that bay is still a placeholder, see OQ-010. Approach trackwork is not modelled.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              10218.32,
+              16.48,
+              5.25
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "box"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -445.008,
+          -13.21435,
+          42.18432
+        ],
+        "max": [
+          445.008,
+          -11.77925,
+          42.64152
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          0.0,
+          -12.4968,
+          42.4129
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:manhattan_approach",
+      "local_id": "manhattan_approach",
+      "module_id": "manhattan-bridge",
+      "display_name": "manhattan approach",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "approaches",
+        "path": [
+          "approaches"
+        ]
+      },
+      "source_basis": [
+        "control_dimension",
+        "inferred"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-001",
+        "SRC-002",
+        "SRC-011",
+        "SRC-012",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "D",
+      "basis_confidence": "C",
+      "control_refs": [
+        "CTL-001",
+        "CTL-004",
+        "CTL-039",
+        "CTL-040",
+        "CTL-021",
+        "CTL-034",
+        "CTL-008",
+        "CTL-010",
+        "CTL-103"
+      ],
+      "open_questions": [
+        "OQ-002",
+        "OQ-006",
+        "OQ-013"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Approach deck envelope, drawn level from the outboard face of the anchorage to the approach end station. The length split is now a sourced ratio (OQ-006 mitigated), but grade, plan curvature and the continuous Warren truss structure described by SRC-011 are not modelled.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              6253.28,
+              419.93,
+              10.5
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "box"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -1061.906336,
+          -18.288,
+          48.4632
+        ],
+        "max": [
+          -517.2456,
+          18.288,
+          49.3776
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          -789.576,
+          0.0,
+          48.9204
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:brooklyn_approach",
+      "local_id": "brooklyn_approach",
+      "module_id": "manhattan-bridge",
+      "display_name": "brooklyn approach",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "approaches",
+        "path": [
+          "approaches"
+        ]
+      },
+      "source_basis": [
+        "control_dimension",
+        "inferred"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-001",
+        "SRC-002",
+        "SRC-011",
+        "SRC-012",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "D",
+      "basis_confidence": "C",
+      "control_refs": [
+        "CTL-001",
+        "CTL-004",
+        "CTL-039",
+        "CTL-040",
+        "CTL-021",
+        "CTL-034",
+        "CTL-008",
+        "CTL-010",
+        "CTL-103"
+      ],
+      "open_questions": [
+        "OQ-002",
+        "OQ-006",
+        "OQ-013"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Approach deck envelope, drawn level from the outboard face of the anchorage to the approach end station. The length split is now a sourced ratio (OQ-006 mitigated), but grade, plan curvature and the continuous Warren truss structure described by SRC-011 are not modelled.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              5858.23,
+              419.93,
+              10.5
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "box"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          517.2456,
+          -18.288,
+          48.4632
+        ],
+        "max": [
+          1027.497664,
+          18.288,
+          49.3776
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          772.3716,
+          0.0,
+          48.9204
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "module_id": "manhattan-bridge",
+    "generated_by": "publish_module_contract.py via build_control_skeleton.py@1.0.0",
+    "generated_at": "2026-08-09T17:17:08+00:00",
+    "source_documents": [
+      {
+        "path": "GEOMETRY-CONTROL.md",
+        "sha256": "feb9991c3d1d977c61be4d812fef7752fd3858fe1301223e5f7f670bfeb35707"
+      }
+    ]
+  }
+}

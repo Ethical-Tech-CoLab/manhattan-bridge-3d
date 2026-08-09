@@ -1,0 +1,168 @@
+{
+  "contract_version": "1.0.0",
+  "module_id": "manhattan-bridge",
+  "title": "Manhattan Bridge",
+  "subtitle": "Source-governed control skeleton \u2014 every dimension traces to a registered source",
+  "module_version": "1.0.0",
+  "owner": {
+    "team": "Manhattan Bridge",
+    "repository": "manhattan-bridge-3d"
+  },
+  "authoritative_for": [
+    "bridge geometry",
+    "bridge control dimensions",
+    "bridge component taxonomy",
+    "bridge photogrammetry",
+    "bridge engineering detail"
+  ],
+  "georeference": {
+    "url": "./frames/nyc-harbor-enu.json"
+  },
+  "placement": {
+    "frame": "nyc-harbor-enu",
+    "translation_m": [
+      -150.22,
+      511.26,
+      0.59
+    ],
+    "yaw_deg": 292.633,
+    "scale": 1,
+    "confidence": "C",
+    "provisional": false,
+    "open_questions": [
+      "OQ-009"
+    ],
+    "notes": "RATIFIED BY THE BRIDGE TEAM at module_version 1.0.0. Numerically unchanged from the provisional placement proposed by dumbo-district-3d (DOQ-001), which this module reproduced and audited independently rather than accepting on trust. Azimuth 157.367 deg from north toward Brooklyn is the principal axis of the OpenStreetMap-mapped alignment; refitting the two long edge paths alone gives 157.496 deg and the roadway ways alone give 157.024 deg, so the axis is stable to about +/-0.35 deg, which is +/-6 m of lateral error at the far end of the structure. The translation is the centroid of those mapped points; the ASCE Historic Civil Engineering Landmark coordinate for this bridge falls 11.8 m from it, an independent corroboration from a source unrelated to OpenStreetMap. Confidence is C rather than B because both estimates are derived from mapped alignments rather than survey, and OQ-009 stays open until a geodetic anchor is registered from an archival drawing. The z term of 0.59 m is the mean-high-water to NAVD88 correction and is grade A: independently confirmed against the NOAA CO-OPS API for station 8518750, epoch 1983-2001, which returns MHW 2.445 m and NAVD88 1.848 m on station datum, a difference of 0.597 m. See GEOMETRY-CONTROL.md section 6."
+  },
+  "lod_ladder": {
+    "url": "./bridge/lod.json"
+  },
+  "asset_registry_url": "./bridge/asset-registry.json",
+  "modes": [
+    "inspect",
+    "walk",
+    "map",
+    "tour"
+  ],
+  "proxy": {
+    "asset_id": "urn:d3d:manhattan-bridge:bridge_proxy",
+    "max_level": 2,
+    "notes": "Level-2 proxy, 4,620 triangles. Caps how far a consuming viewer may refine bridge content while the bridge is scenery rather than the subject."
+  },
+  "handoff": {
+    "supported": true,
+    "target_mode": "inspect",
+    "preserve_camera": true,
+    "entry_points": [
+      {
+        "entry_id": "brooklyn_tower",
+        "label": "Inspect the Brooklyn tower",
+        "focus_asset": "urn:d3d:manhattan-bridge:tower_brooklyn_leg_a",
+        "camera": {
+          "position": {
+            "asset": "urn:d3d:manhattan-bridge:tower_brooklyn_leg_a",
+            "anchor": "bbox_center",
+            "offset_m": [
+              40.0,
+              -170.0,
+              30.0
+            ]
+          },
+          "target": {
+            "asset": "urn:d3d:manhattan-bridge:tower_brooklyn_leg_a",
+            "anchor": "bbox_center"
+          },
+          "fov_deg": 50
+        }
+      },
+      {
+        "entry_id": "brooklyn_anchorage",
+        "label": "Inspect the Brooklyn anchorage",
+        "focus_asset": "urn:d3d:manhattan-bridge:brooklyn_anchorage",
+        "camera": {
+          "position": {
+            "asset": "urn:d3d:manhattan-bridge:brooklyn_anchorage",
+            "anchor": "bbox_center",
+            "offset_m": [
+              60.0,
+              -190.0,
+              40.0
+            ]
+          },
+          "target": {
+            "asset": "urn:d3d:manhattan-bridge:brooklyn_anchorage",
+            "anchor": "bbox_center"
+          },
+          "fov_deg": 50
+        }
+      },
+      {
+        "entry_id": "main_span",
+        "label": "Inspect the main span and cables",
+        "focus_asset": "urn:d3d:manhattan-bridge:north_main_cable_1",
+        "camera": {
+          "position": {
+            "asset": "urn:d3d:manhattan-bridge:north_main_cable_1",
+            "anchor": "bbox_center",
+            "offset_m": [
+              0.0,
+              -320.0,
+              90.0
+            ]
+          },
+          "target": {
+            "asset": "urn:d3d:manhattan-bridge:north_main_cable_1",
+            "anchor": "bbox_center"
+          },
+          "fov_deg": 55
+        }
+      }
+    ]
+  },
+  "attribution": [
+    "Manhattan Bridge digital twin: manhattan-bridge-3d, Ethical Tech CoLab, CC BY 4.0",
+    "Provisional placement derived from OpenStreetMap data (c) OpenStreetMap contributors, ODbL"
+  ],
+  "not_implemented_yet": [
+    "no level-1 segmented mesh; the ladder jumps from 0.01 m to 8.0 m",
+    "7 of 69 control values remain placeholders: deck framing depths (OQ-013) and subway track centrelines (OQ-010) await the 1907-1909 contract drawings",
+    "truss web members are grade D; the Warren diagonal handedness at each panel is inferred (OQ-017)",
+    "placement azimuth derives from mapped alignments, not survey; OQ-009 stays open",
+    "no inspect-mode UI bundle is published, so handoff.ui_url is absent and a consuming viewer renders only the shared metadata panel"
+  ],
+  "provenance": {
+    "module_id": "manhattan-bridge",
+    "generated_by": "publish_module_contract.py via build_control_skeleton.py@1.0.0",
+    "generated_at": "2026-08-09T17:17:08+00:00",
+    "source_documents": [
+      {
+        "path": "GEOMETRY-CONTROL.md",
+        "sha256": "feb9991c3d1d977c61be4d812fef7752fd3858fe1301223e5f7f670bfeb35707"
+      },
+      {
+        "path": "SOURCE-REGISTER.md",
+        "sha256": "6a55b3cc775b768ab3a6db40ab50b5647ffbf876c65cccf6678bbb01ad7d6f54"
+      },
+      {
+        "path": "CONFIDENCE-MODEL.md",
+        "sha256": "5f1bd25067e7406e862a51581e3dfe4e7bd7b620a9d80438e904fb2d268f0d72"
+      }
+    ]
+  },
+  "extensions": {
+    "manhattan-bridge": {
+      "ho_scale": {
+        "denominator": 87.1,
+        "note": "HO 1:87.1 is a display scale, never a data scale. placement.scale MUST stay 1 for georeferenced delivery; the HO export is a separate artifact."
+      },
+      "confidence_histogram": {
+        "A": 33,
+        "B": 4,
+        "C": 0,
+        "D": 44
+      },
+      "control_document": "GEOMETRY-CONTROL.md",
+      "placeholder_controls_remaining": 7
+    }
+  }
+}

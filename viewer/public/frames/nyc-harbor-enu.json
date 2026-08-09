@@ -1,0 +1,40 @@
+{
+  "contract_version": "1.0.0",
+  "frame_id": "nyc-harbor-enu",
+  "kind": "enu",
+  "units": "meters",
+  "axes": { "x": "east", "y": "north", "z": "up", "handedness": "right" },
+  "anchor": {
+    "lon": -73.989,
+    "lat": 40.703,
+    "height_m": 0,
+    "vertical_datum": "NAVD88",
+    "horizontal_crs": "EPSG:4326",
+    "rationale": "FROZEN. A round-numbered point near the DUMBO district centroid, chosen so coordinates in this locality stay small and float32 precision stays comfortable in the browser. Not a survey monument: confidence A records that it is exactly defined, not that it was measured. Proposed by dumbo-district-3d (DCTL-001..003) and promoted here as the canonical shared frame. MUST NOT change within contract major version 1: every asset coordinate in every consuming module depends on it."
+  },
+  "vertical_datum_offsets_m": {
+    "NAVD88": 0.0,
+    "MHW": 0.59,
+    "MSL": -0.07,
+    "MLLW": -0.85
+  },
+  "valid_radius_m": 4000.0,
+  "max_planar_error_m": 1.26,
+  "ellipsoid": {
+    "name": "WGS84",
+    "semi_major_axis_m": 6378137.0,
+    "inverse_flattening": 298.257223563
+  },
+  "render_convention": {
+    "gltf_up_axis": "Y",
+    "scene_to_render": "(x, y, z) -> (x, z, -y)"
+  },
+  "source_refs": ["DSRC-005", "DSRC-006"],
+  "confidence": "A",
+  "notes": "Canonical shared frame for the New York Harbour modules. Covers the DUMBO district, both bridges and the far shore within valid_radius_m. The MHW offset of +0.59 m is the correction that reconciles manhattan-bridge-3d, whose geometry is authored against mean high water, with NYC open data, which is NAVD88. Derived from NOAA CO-OPS station 8518750 (The Battery, NY), epoch 1983-2001, where MHW = 2.44 m and NAVD88 = 1.85 m relative to station datum; corroborated at 0.596 m by a NYSAPLS datum sheet for the same station. Any module placing geometry authored against MHW MUST apply it.",
+  "provenance": {
+    "module_id": "shared-contracts",
+    "generated_by": "digital-3d-shared-contracts@1.0.0",
+    "generated_at": "2026-08-09T16:20:00+00:00"
+  }
+}

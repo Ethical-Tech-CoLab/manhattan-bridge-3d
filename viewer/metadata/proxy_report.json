@@ -1,0 +1,26 @@
+{
+  "asset_id": "urn:d3d:manhattan-bridge:bridge_proxy",
+  "level": 2,
+  "max_geometric_error_m": 8.0,
+  "triangle_count": 4620,
+  "byte_size": 137944,
+  "node_count": 7,
+  "bbox_local_m": {
+    "min": [
+      -1061.9063360655737,
+      -27.736800000000002,
+      -28.041600000000003
+    ],
+    "max": [
+      1027.4976639344263,
+      27.736800000000002,
+      98.56669691405095
+    ]
+  },
+  "frame": "manhattan-bridge-local",
+  "vertical_datum": "MHW",
+  "control_document_sha256": "feb9991c3d1d977c61be4d812fef7752fd3858fe1301223e5f7f670bfeb35707",
+  "generated_by": "export_proxy.py via build_control_skeleton.py@1.0.0",
+  "generated_at": "2026-08-09T17:17:07+00:00",
+  "suspender_stride": 4
+}

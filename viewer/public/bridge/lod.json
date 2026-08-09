@@ -1,0 +1,51 @@
+{
+  "contract_version": "1.0.0",
+  "module_id": "manhattan-bridge",
+  "ladder_id": "manhattan-bridge-ladder",
+  "levels": [
+    {
+      "level": 0,
+      "name": "control skeleton",
+      "intent": "inspect",
+      "max_geometric_error_m": 0.01,
+      "representation": "cad_solid",
+      "payload_format": "glb",
+      "triangle_budget": 40000,
+      "selectable": true,
+      "carries_metadata": true,
+      "typical_distance_m": {
+        "min": 0,
+        "max": 400
+      },
+      "notes": "The authoritative control skeleton: 81 addressable parts, each carrying its confidence grade and the control IDs its geometry consumed. Geometric error is the placement tolerance of the control curves themselves, not a claim that every member is modelled; parts still graded D are envelopes and say so."
+    },
+    {
+      "level": 2,
+      "name": "district proxy",
+      "intent": "context",
+      "max_geometric_error_m": 8.0,
+      "representation": "mesh",
+      "payload_format": "glb",
+      "triangle_budget": 6000,
+      "selectable": false,
+      "carries_metadata": false,
+      "typical_distance_m": {
+        "min": 200,
+        "max": null
+      },
+      "notes": "What a pedestrian in DUMBO sees. The deck system is collapsed to a single slab 8.23 m deep, which is what sets the 8.0 m error; towers keep their four sourced tapered legs, and every fourth suspender is retained so the structure still reads as a suspension bridge at street range."
+    }
+  ],
+  "selection": {
+    "policy": "screen_space_error",
+    "default_sse_budget_px": 12,
+    "mode_sse_budget_px": {
+      "inspect": 2,
+      "walk": 12,
+      "map": 48,
+      "tour": 8
+    },
+    "hysteresis": 0.15
+  },
+  "notes": "Level 1 is deliberately absent. Publishing a segmented mesh between 0.01 m and 8.0 m would imply an intermediate representation this module does not yet have; consumers sort by max_geometric_error_m, not by level index, so a gap is honest and harmless."
+}

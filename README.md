@@ -106,9 +106,26 @@ cad/             blender, freecad, rhino-or-step, procedural (the procedural def
 mesh/            raw, cleaned, segmented, lod0_full, lod1_browser, lod2_mobile, glb
 photogrammetry/  image-sets, colmap, meshroom, point-clouds, dense-meshes (empty)
 viewer/          Vite + React + three.js browser viewer
+viewer/public/   the published module contract: bridge-manifest.json, frames/, bridge/, assets/
 scripts/         build and validation pipeline
 tests/           regression and traceability suites
 ```
+
+## Publishing to the shared district contract
+
+This module publishes itself to `digital-3d-shared-contracts` so the neighbouring
+`dumbo-district-3d` twin can render the bridge where it crosses DUMBO. Serve `viewer/public/` at
+the site root; `bridge-manifest.json` is the entry point and everything else is reached from it.
+
+```powershell
+python scripts/export_proxy.py            # level-2 proxy for district range
+python scripts/publish_module_contract.py # manifest, ladder, registry, metadata, frame copy
+node   scripts/validate_contract.mjs      # every document, both deployment layouts
+python scripts/verify_placement.py        # placement vs the district's tile declarations
+```
+
+Elevations are authored against **mean high water** and declared as such; the 0.59 m conversion to
+NAVD88 happens at placement time, from the frozen shared frame. See GEOMETRY-CONTROL.md section 6.
 
 ## Scripts
 
@@ -119,7 +136,12 @@ tests/           regression and traceability suites
 | `control_model.py` | Implemented. Shared parser for GEOMETRY-CONTROL.md. |
 | `normalize_units.py` | Implemented. The single unit-conversion implementation. |
 | `export_gltf.py` | Implemented. Dependency-free glTF 2.0 / GLB writer. |
-| `ingest_sources.py` | Stub. Milestone 5. |
+| `export_proxy.py` | Implemented. Level-2 district proxy, ~4.6k triangles, authored in the module frame. |
+| `publish_module_contract.py` | Implemented. Emits the shared-contract surface: manifest, LOD ladder, asset registry, shared-schema metadata, and a hash-verified copy of the canonical frame. |
+| `validate_contract.mjs` | Implemented. Validates every published document, all 81 metadata records, six cross-document invariants, and URL resolution under both deployment layouts. |
+| `verify_placement.py` | Implemented. Re-derives the occupied tile set from the published GLB and compares it with the consuming district's declarations. Exits non-zero while they disagree. |
+| `check_corridor_geodetic.py` | Implemented. Tests the district's tile declarations against the placement axis, using only sourced coordinates. |
+| `ingest_sources.py` | Stub. Milestone 6. |
 | `import_reference_meshes.py` | Stub. Milestone 6. |
 | `align_mesh_to_control.py` | Stub. Milestone 6. |
 | `segment_components.py` | Stub. Milestone 6. |
