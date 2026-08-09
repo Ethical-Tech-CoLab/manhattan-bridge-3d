@@ -1,0 +1,7 @@
+{
+  "schema_version": "1.0",
+  "model": "control_skeleton",
+  "note": "Viewer annotations are a Milestone 5 feature. An annotation pins a note, a dimension callout or a source citation to a part_id and a point in the prototype coordinate frame. This file is intentionally empty so that the viewer can load it without special-casing a missing file.",
+  "coordinate_frame": "prototype meters, Z-up, origin at the main span midpoint at mean high water",
+  "annotations": []
+}

@@ -1,0 +1,160 @@
+import { useCallback, useEffect, useMemo, useState } from 'react';
+import BridgeViewer from './BridgeViewer';
+import ConfidenceLegend from '../components/ConfidenceLegend';
+import DimensionPanel from '../components/DimensionPanel';
+import MetadataPanel from '../components/MetadataPanel';
+import PartTree from '../components/PartTree';
+import Toolbar from '../components/Toolbar';
+import type { PartsDocument, UnitMode, ViewerConfig } from './model';
+
+export default function App() {
+  const [config, setConfig] = useState<ViewerConfig | null>(null);
+  const [doc, setDoc] = useState<PartsDocument | null>(null);
+  const [error, setError] = useState<string | null>(null);
+
+  const [selectedId, setSelectedId] = useState<string | null>(null);
+  const [hiddenSystems, setHiddenSystems] = useState<Set<string>>(new Set());
+  const [hiddenParts, setHiddenParts] = useState<Set<string>>(new Set());
+  const [confidenceOverlay, setConfidenceOverlay] = useState(false);
+  const [unitMode, setUnitMode] = useState<UnitMode>('prototype');
+  const [panel, setPanel] = useState<'metadata' | 'dimensions'>('metadata');
+  const [focusToken, setFocusToken] = useState(0);
+
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      try {
+        const configResponse = await fetch('model.config.json');
+        if (!configResponse.ok) throw new Error(`model.config.json: ${configResponse.status}`);
+        const loadedConfig: ViewerConfig = await configResponse.json();
+        const metadataResponse = await fetch(loadedConfig.metadataUrl);
+        if (!metadataResponse.ok) throw new Error(`${loadedConfig.metadataUrl}: ${metadataResponse.status}`);
+        const loadedDoc: PartsDocument = await metadataResponse.json();
+        if (cancelled) return;
+        setConfig(loadedConfig);
+        setDoc(loadedDoc);
+      } catch (err) {
+        if (!cancelled) setError(err instanceof Error ? err.message : String(err));
+      }
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  const selectedPart = useMemo(
+    () => doc?.parts.find((part) => part.part_id === selectedId) ?? null,
+    [doc, selectedId],
+  );
+
+  const toggleSystem = useCallback((system: string) => {
+    setHiddenSystems((previous) => {
+      const next = new Set(previous);
+      if (next.has(system)) next.delete(system);
+      else next.add(system);
+      return next;
+    });
+  }, []);
+
+  const togglePart = useCallback((partId: string) => {
+    setHiddenParts((previous) => {
+      const next = new Set(previous);
+      if (next.has(partId)) next.delete(partId);
+      else next.add(partId);
+      return next;
+    });
+  }, []);
+
+  const showAll = useCallback(() => {
+    setHiddenSystems(new Set());
+    setHiddenParts(new Set());
+  }, []);
+
+  const resetView = useCallback(() => {
+    setSelectedId(null);
+    setFocusToken((token) => token + 1);
+  }, []);
+
+  const selectPart = useCallback((partId: string | null) => {
+    setSelectedId(partId);
+    setFocusToken((token) => token + 1);
+  }, []);
+
+  if (error) {
+    return (
+      <div className="fatal">
+        <h1>Viewer could not start</h1>
+        <p>{error}</p>
+        <p>
+          Run <code>python scripts/build_control_skeleton.py</code> from the repository root to
+          generate <code>viewer/public/control_skeleton.glb</code> and{' '}
+          <code>viewer/public/parts.json</code>.
+        </p>
+      </div>
+    );
+  }
+
+  if (!config || !doc) {
+    return <div className="fatal">Loading control skeleton…</div>;
+  }
+
+  return (
+    <div className="app">
+      <Toolbar
+        config={config}
+        unitMode={unitMode}
+        onUnitModeChange={setUnitMode}
+        onResetView={resetView}
+        onShowAll={showAll}
+        panel={panel}
+        onPanelChange={setPanel}
+      />
+      <div className="body">
+        <aside className="left">
+          <PartTree
+            doc={doc}
+            selectedId={selectedId}
+            hiddenSystems={hiddenSystems}
+            hiddenParts={hiddenParts}
+            onSelect={selectPart}
+            onToggleSystem={toggleSystem}
+            onTogglePart={togglePart}
+          />
+          <ConfidenceLegend
+            doc={doc}
+            active={confidenceOverlay}
+            onToggle={() => setConfidenceOverlay((value) => !value)}
+          />
+        </aside>
+        <main className="stage">
+          <BridgeViewer
+            config={config}
+            doc={doc}
+            selectedId={selectedId}
+            hiddenSystems={hiddenSystems}
+            hiddenParts={hiddenParts}
+            confidenceOverlay={confidenceOverlay}
+            onSelect={selectPart}
+            focusToken={focusToken}
+          />
+          <footer className="stage-footer">
+            <span>
+              origin: {doc.coordinate_system.origin} · {doc.coordinate_system.x} ·{' '}
+              {doc.coordinate_system.y} · {doc.coordinate_system.z}
+            </span>
+            <span>
+              built from {doc.control_document.path} @ {doc.control_document.sha256.slice(0, 12)}
+            </span>
+          </footer>
+        </main>
+        <aside className="right">
+          {panel === 'metadata' ? (
+            <MetadataPanel doc={doc} part={selectedPart} unitMode={unitMode} />
+          ) : (
+            <DimensionPanel doc={doc} unitMode={unitMode} />
+          )}
+        </aside>
+      </div>
+    </div>
+  );
+}

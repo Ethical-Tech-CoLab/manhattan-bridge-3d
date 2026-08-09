@@ -1,0 +1,858 @@
+{
+  "schema_version": "1.1",
+  "suite": "geometry_regression",
+  "model": "control_skeleton",
+  "milestone": 2,
+  "description": "Dimensional regression tests for the Manhattan Bridge control skeleton. Expected values are independent restatements of GEOMETRY-CONTROL.md and of the HO table in SCALE-HO.md, so a silent change to either document fails here. Run with: python scripts/validate_dimensions.py",
+  "runner": "scripts/validate_dimensions.py",
+  "inputs": {
+    "control_document": "GEOMETRY-CONTROL.md",
+    "build_report": "viewer/metadata/build_report.json",
+    "parts": "viewer/metadata/parts.json"
+  },
+  "modes": {
+    "assert": "must pass; a failure fails the suite",
+    "report_only": "deviation is recorded, never fails the suite; used where the prototype value has an unresolved open question"
+  },
+  "tests": [
+    {
+      "id": "GRT-001",
+      "title": "Suspended length identity",
+      "kind": "expression",
+      "expr": "main_span + 2 * side_span_each",
+      "expected_expr": "anchorage_to_anchorage_suspended_length",
+      "unit": "m",
+      "tolerance": 1e-06,
+      "mode": "assert",
+      "refs": [
+        "CTL-004",
+        "CTL-005",
+        "CTL-006"
+      ],
+      "rationale": "Internal consistency of the Tier A control set."
+    },
+    {
+      "id": "GRT-002",
+      "title": "Main span in meters",
+      "kind": "control",
+      "key": "main_span",
+      "expected": 448.056,
+      "unit": "m",
+      "tolerance": 1e-06,
+      "mode": "assert",
+      "refs": [
+        "CTL-005"
+      ]
+    },
+    {
+      "id": "GRT-003",
+      "title": "Side span in meters",
+      "kind": "control",
+      "key": "side_span_each",
+      "expected": 220.98,
+      "unit": "m",
+      "tolerance": 1e-06,
+      "mode": "assert",
+      "refs": [
+        "CTL-006"
+      ]
+    },
+    {
+      "id": "GRT-004",
+      "title": "Total bridge and approaches in meters",
+      "kind": "control",
+      "key": "total_bridge_and_approaches_length",
+      "expected": 2089.404,
+      "unit": "m",
+      "tolerance": 1e-06,
+      "mode": "assert",
+      "refs": [
+        "CTL-001"
+      ]
+    },
+    {
+      "id": "GRT-005",
+      "title": "Handoff tower height above MHW is still recorded",
+      "kind": "control",
+      "key": "tower_height_above_mhw",
+      "expected": 98.1456,
+      "unit": "m",
+      "tolerance": 1e-06,
+      "mode": "assert",
+      "refs": [
+        "CTL-007"
+      ],
+      "rationale": "Retained for traceability but no longer drives geometry; CTL-018 does. See CONF-005."
+    },
+    {
+      "id": "GRT-006",
+      "title": "Center clearance above MHW in meters",
+      "kind": "control",
+      "key": "center_clearance_above_mhw",
+      "expected": 41.148,
+      "unit": "m",
+      "tolerance": 1e-06,
+      "mode": "assert",
+      "refs": [
+        "CTL-008"
+      ]
+    },
+    {
+      "id": "GRT-007",
+      "title": "Cable saddle elevation control",
+      "kind": "control",
+      "key": "cable_saddle_elevation",
+      "expected": 98.298,
+      "unit": "m",
+      "tolerance": 1e-06,
+      "mode": "assert",
+      "refs": [
+        "CTL-018"
+      ],
+      "rationale": "322.5 ft, stated directly by SRC-015. Replaced the 330 ft figure previously transmitted through SRC-012, see CONF-005."
+    },
+    {
+      "id": "GRT-008",
+      "title": "Deck overall width",
+      "kind": "control",
+      "key": "deck_overall_width",
+      "expected": 36.576,
+      "unit": "m",
+      "tolerance": 1e-06,
+      "mode": "assert",
+      "refs": [
+        "CTL-021"
+      ],
+      "rationale": "120 ft, sourced from the 1909 cross-section. Was a placeholder at Milestone 1."
+    },
+    {
+      "id": "GRT-009",
+      "title": "Deck width closes against the truss and footwalk layout",
+      "kind": "expression",
+      "expr": "2 * (truss_offset_outer + footwalk_width)",
+      "expected_expr": "deck_overall_width",
+      "unit": "m",
+      "tolerance": 1.25,
+      "mode": "report_only",
+      "refs": [
+        "CTL-021",
+        "CTL-023",
+        "CTL-025"
+      ],
+      "rationale": "Independent cross-source closure check. 2 x (48 ft outer truss centerline + 10 ft footwalk) = 116 ft against the sourced 120 ft deck, leaving a 4 ft residual, about 2 ft per side. That residual is the outboard edge allowance: half the outer truss width plus fascia and railing. Recorded rather than asserted because no source states the edge detail. See OQ-014."
+    },
+    {
+      "id": "GRT-010",
+      "title": "Manhattan tower station",
+      "kind": "station",
+      "station": "STA-TWR-M",
+      "expected": -224.028,
+      "unit": "m",
+      "tolerance": 1e-06,
+      "mode": "assert",
+      "refs": [
+        "CTL-005"
+      ]
+    },
+    {
+      "id": "GRT-011",
+      "title": "Brooklyn tower station",
+      "kind": "station",
+      "station": "STA-TWR-B",
+      "expected": 224.028,
+      "unit": "m",
+      "tolerance": 1e-06,
+      "mode": "assert",
+      "refs": [
+        "CTL-005"
+      ]
+    },
+    {
+      "id": "GRT-012",
+      "title": "Manhattan anchorage cable point station",
+      "kind": "station",
+      "station": "STA-ANC-M",
+      "expected": -445.008,
+      "unit": "m",
+      "tolerance": 1e-06,
+      "mode": "assert",
+      "refs": [
+        "CTL-005",
+        "CTL-006"
+      ]
+    },
+    {
+      "id": "GRT-013",
+      "title": "Brooklyn anchorage cable point station",
+      "kind": "station",
+      "station": "STA-ANC-B",
+      "expected": 445.008,
+      "unit": "m",
+      "tolerance": 1e-06,
+      "mode": "assert",
+      "refs": [
+        "CTL-005",
+        "CTL-006"
+      ]
+    },
+    {
+      "id": "GRT-014",
+      "title": "Origin is the main span midpoint",
+      "kind": "station",
+      "station": "STA-MID",
+      "expected": 0.0,
+      "unit": "m",
+      "tolerance": 1e-09,
+      "mode": "assert",
+      "refs": [
+        "CTL-005"
+      ]
+    },
+    {
+      "id": "GRT-015",
+      "title": "Approach ends are asymmetric, per the sourced ratio",
+      "kind": "expression",
+      "expr": "STA_APPR_END_B + STA_APPR_END_M",
+      "expected": -34.4087,
+      "unit": "m",
+      "tolerance": 0.01,
+      "mode": "assert",
+      "refs": [
+        "CTL-039",
+        "CTL-040"
+      ],
+      "rationale": "A non-zero sum proves the 0.5143 sourced split replaced the Milestone 1 symmetric placeholder. Manhattan is the longer approach, so the sum is negative: approach_total x (1 - 2 x 0.514344) = -34.41 m."
+    },
+    {
+      "id": "GRT-020",
+      "title": "Cable saddle elevation",
+      "kind": "elevation",
+      "elevation": "ELV-SADDLE",
+      "expected": 98.298,
+      "unit": "m",
+      "tolerance": 1e-06,
+      "mode": "assert",
+      "refs": [
+        "CTL-018",
+        "CTL-102"
+      ]
+    },
+    {
+      "id": "GRT-021",
+      "title": "Navigation clearance elevation",
+      "kind": "elevation",
+      "elevation": "ELV-CLEARANCE",
+      "expected": 41.148,
+      "unit": "m",
+      "tolerance": 1e-06,
+      "mode": "assert",
+      "refs": [
+        "CTL-008"
+      ]
+    },
+    {
+      "id": "GRT-022",
+      "title": "Truss top chord equals clearance plus the ACTIVE truss depth",
+      "kind": "elevation",
+      "elevation": "ELV-TRUSS-TOP",
+      "expected": 48.4632,
+      "unit": "m",
+      "tolerance": 1e-06,
+      "mode": "assert",
+      "refs": [
+        "CTL-008",
+        "CTL-010"
+      ],
+      "rationale": "Guards against a silent switch to the 26 ft variant, CONF-002."
+    },
+    {
+      "id": "GRT-023",
+      "title": "Tower foundation descends below the datum",
+      "kind": "elevation",
+      "elevation": "ELV-FOUNDATION",
+      "expected": -28.0416,
+      "unit": "m",
+      "tolerance": 1e-06,
+      "mode": "assert",
+      "refs": [
+        "CTL-031"
+      ],
+      "rationale": "92 ft below MHW. New at Milestone 2; retires OQ-003."
+    },
+    {
+      "id": "GRT-024",
+      "title": "Derived main span sag",
+      "kind": "measure",
+      "measure": "cable_sag_main_span_m",
+      "expected": 48.9204,
+      "unit": "m",
+      "tolerance": 0.001,
+      "mode": "assert",
+      "refs": [
+        "CTL-018",
+        "CTL-008",
+        "CTL-010",
+        "CTL-101"
+      ],
+      "rationale": "160.5 ft. Saddle elevation minus truss top chord minus the minimum suspender length. Moved from 168 ft at Milestone 2 when SRC-015 supplied a directly sourced 322.5 ft saddle."
+    },
+    {
+      "id": "GRT-025",
+      "title": "Derived sag ratio is structurally plausible",
+      "kind": "measure",
+      "measure": "cable_sag_ratio_denominator",
+      "expected": 9.16,
+      "unit": "ratio",
+      "tolerance": 2.16,
+      "mode": "assert",
+      "refs": [
+        "CTL-101"
+      ],
+      "rationale": "Suspension bridge main span sag ratios lie between about 1/7 and 1/12. A derived value outside that band would indicate a control error."
+    },
+    {
+      "id": "GRT-026",
+      "title": "Cable low point clears the truss top chord",
+      "kind": "expression",
+      "expr": "ELV_CABLE_MID - ELV_TRUSS_TOP",
+      "expected": 0.9144,
+      "unit": "m",
+      "tolerance": 1e-06,
+      "mode": "assert",
+      "refs": [
+        "CTL-101"
+      ],
+      "rationale": "Equals the minimum suspender length. A negative result would put the cable through the deck."
+    },
+    {
+      "id": "GRT-027",
+      "title": "Vertical build-up: SRC-016 elevations against the SRC-015 summary height",
+      "kind": "expression",
+      "expr": "ELV_PIER_TOP - ELV_FOUNDATION",
+      "expected_expr": "tower_foundation_to_capstone_height",
+      "unit": "m",
+      "tolerance": 2.5,
+      "mode": "report_only",
+      "refs": [
+        "CTL-030",
+        "CTL-031",
+        "CTL-048"
+      ],
+      "rationale": "The model follows SRC-016's explicit elevations: cutting edge at -92 ft, capstone at +23 ft, so 115 ft overall. SRC-015 independently summarises 123 ft foundation-to-capstone. The recorded deviation is that 8 ft (2.44 m) disagreement between two directly examined period primaries, tracked as OQ-016. This test exists to keep the discrepancy visible until SRC-004 settles it."
+    },
+    {
+      "id": "GRT-028",
+      "title": "Caisson top elevation",
+      "kind": "elevation",
+      "elevation": "ELV-CAISSON-TOP",
+      "expected": -13.5636,
+      "unit": "m",
+      "tolerance": 1e-06,
+      "mode": "assert",
+      "refs": [
+        "CTL-031",
+        "CTL-046"
+      ],
+      "rationale": "44.5 ft below MHW: cutting edge 92 ft down plus the 47.5 ft caisson height stated by SRC-016."
+    },
+    {
+      "id": "GRT-029",
+      "title": "Masonry pier footing is seated between the caisson top and the datum",
+      "kind": "expression",
+      "expr": "ELV_PIER_FOOTING - ELV_CAISSON_TOP",
+      "expected": 3.5052,
+      "unit": "m",
+      "tolerance": 0.001,
+      "mode": "assert",
+      "refs": [
+        "CTL-054",
+        "CTL-046",
+        "CTL-031"
+      ],
+      "rationale": "SRC-016 places the footing seat 33 ft below high water and the caisson top 44.5 ft below, an 11.5 ft interval. A negative result would mean the pier was seated inside the caisson."
+    },
+    {
+      "id": "GRT-030",
+      "title": "Modelled tower spacing equals the main span",
+      "kind": "measure",
+      "measure": "tower_spacing_m",
+      "expected": 448.056,
+      "unit": "m",
+      "tolerance": 1e-06,
+      "mode": "assert",
+      "refs": [
+        "CTL-005"
+      ]
+    },
+    {
+      "id": "GRT-031",
+      "title": "Modelled anchorage spacing equals the suspended length",
+      "kind": "measure",
+      "measure": "anchorage_spacing_m",
+      "expected": 890.016,
+      "unit": "m",
+      "tolerance": 1e-06,
+      "mode": "assert",
+      "refs": [
+        "CTL-004"
+      ]
+    },
+    {
+      "id": "GRT-032",
+      "title": "Model longitudinal extent equals the total bridge and approaches length",
+      "kind": "measure",
+      "measure": "model_length_prototype_m",
+      "expected": 2089.404,
+      "unit": "m",
+      "tolerance": 0.001,
+      "mode": "assert",
+      "refs": [
+        "CTL-001"
+      ]
+    },
+    {
+      "id": "GRT-033",
+      "title": "Model vertical extent spans caisson underside to the top of the cable at the saddle",
+      "kind": "measure",
+      "measure": "model_height_prototype_m",
+      "expected": 126.6088,
+      "unit": "m",
+      "tolerance": 0.002,
+      "mode": "assert",
+      "refs": [
+        "CTL-018",
+        "CTL-031",
+        "CTL-042"
+      ],
+      "rationale": "92 ft below MHW plus 322.5 ft to the saddle plus half the 21.2 in cable diameter, because the cable is drawn as a solid tube whose centreline sits at the saddle elevation."
+    },
+    {
+      "id": "GRT-034",
+      "title": "Model transverse extent equals the anchorage width",
+      "kind": "measure",
+      "measure": "model_width_prototype_m",
+      "expected": 55.4736,
+      "unit": "m",
+      "tolerance": 0.001,
+      "mode": "assert",
+      "refs": [
+        "CTL-035"
+      ],
+      "rationale": "182 ft. The anchorages are the widest element, intentionally wider than the 120 ft deck."
+    },
+    {
+      "id": "GRT-035",
+      "title": "Deck centerline control curve spans the full modelled length",
+      "kind": "measure",
+      "measure": "deck_centerline_length_m",
+      "expected": 2089.404,
+      "unit": "m",
+      "tolerance": 0.001,
+      "mode": "assert",
+      "refs": [
+        "CTL-001"
+      ]
+    },
+    {
+      "id": "GRT-036",
+      "title": "Single main cable developed length against CTL-012",
+      "kind": "measure",
+      "measure": "single_main_cable_polyline_length_m",
+      "expected": 982.6752,
+      "unit": "m",
+      "tolerance": 70.0,
+      "mode": "report_only",
+      "refs": [
+        "CTL-012"
+      ],
+      "rationale": "CTL-012 is the full per-cable length including the run embedded in both anchorages, which the skeleton does not model. The expected residual is roughly 200 ft (about 61 m) of anchorage-embedded cable, consistent with the 110 ft eyebars in SRC-012."
+    },
+    {
+      "id": "GRT-037",
+      "title": "Derived suspender panel pitch",
+      "kind": "measure",
+      "measure": "suspender_pitch_m",
+      "expected": 5.6716,
+      "unit": "m",
+      "tolerance": 0.001,
+      "mode": "assert",
+      "refs": [
+        "CTL-037",
+        "CTL-015"
+      ],
+      "rationale": "18.608 ft, the unique integer solution reproducing 157 panel points per cable. Replaces the Milestone 1 arbitrary 30 ft pitch."
+    },
+    {
+      "id": "GRT-040",
+      "title": "HO total bridge and approaches length",
+      "kind": "ho_conversion",
+      "key": "total_bridge_and_approaches_length",
+      "expected_mm": 23988.6,
+      "tolerance": 0.15,
+      "mode": "assert",
+      "refs": [
+        "CTL-001"
+      ]
+    },
+    {
+      "id": "GRT-041",
+      "title": "HO lower-level abutment to abutment",
+      "kind": "ho_conversion",
+      "key": "lower_level_abutment_to_abutment",
+      "expected_mm": 20261.7,
+      "tolerance": 0.15,
+      "mode": "assert",
+      "refs": [
+        "CTL-002"
+      ]
+    },
+    {
+      "id": "GRT-042",
+      "title": "HO upper roadway portal to portal",
+      "kind": "ho_conversion",
+      "key": "upper_roadway_portal_to_portal",
+      "expected_mm": 21311.5,
+      "tolerance": 0.15,
+      "mode": "assert",
+      "refs": [
+        "CTL-003"
+      ]
+    },
+    {
+      "id": "GRT-043",
+      "title": "HO anchorage to anchorage suspended length",
+      "kind": "ho_conversion",
+      "key": "anchorage_to_anchorage_suspended_length",
+      "expected_mm": 10218.3,
+      "tolerance": 0.15,
+      "mode": "assert",
+      "refs": [
+        "CTL-004"
+      ]
+    },
+    {
+      "id": "GRT-044",
+      "title": "HO main span",
+      "kind": "ho_conversion",
+      "key": "main_span",
+      "expected_mm": 5144.2,
+      "tolerance": 0.15,
+      "mode": "assert",
+      "refs": [
+        "CTL-005"
+      ]
+    },
+    {
+      "id": "GRT-045",
+      "title": "HO side span",
+      "kind": "ho_conversion",
+      "key": "side_span_each",
+      "expected_mm": 2537.1,
+      "tolerance": 0.15,
+      "mode": "assert",
+      "refs": [
+        "CTL-006"
+      ]
+    },
+    {
+      "id": "GRT-046",
+      "title": "HO handoff tower height above MHW",
+      "kind": "ho_conversion",
+      "key": "tower_height_above_mhw",
+      "expected_mm": 1126.8,
+      "tolerance": 0.15,
+      "mode": "assert",
+      "refs": [
+        "CTL-007"
+      ]
+    },
+    {
+      "id": "GRT-047",
+      "title": "HO center clearance above MHW",
+      "kind": "ho_conversion",
+      "key": "center_clearance_above_mhw",
+      "expected_mm": 472.4,
+      "tolerance": 0.15,
+      "mode": "assert",
+      "refs": [
+        "CTL-008"
+      ]
+    },
+    {
+      "id": "GRT-048",
+      "title": "HO roadway width",
+      "kind": "ho_conversion",
+      "key": "roadway_width",
+      "expected_mm": 161.0,
+      "tolerance": 0.15,
+      "mode": "assert",
+      "refs": [
+        "CTL-009"
+      ]
+    },
+    {
+      "id": "GRT-049",
+      "title": "HO stiffening truss depth, ASCE",
+      "kind": "ho_conversion",
+      "key": "stiffening_truss_depth_asce",
+      "expected_mm": 84.0,
+      "tolerance": 0.15,
+      "mode": "assert",
+      "refs": [
+        "CTL-010"
+      ]
+    },
+    {
+      "id": "GRT-050",
+      "title": "HO stiffening truss depth, alternate reference",
+      "kind": "ho_conversion",
+      "key": "stiffening_truss_depth_alt",
+      "expected_mm": 91.0,
+      "tolerance": 0.15,
+      "mode": "assert",
+      "refs": [
+        "CTL-011"
+      ]
+    },
+    {
+      "id": "GRT-051",
+      "title": "HO cable length",
+      "kind": "ho_conversion",
+      "key": "main_cable_length",
+      "expected_mm": 11282.1,
+      "tolerance": 0.15,
+      "mode": "assert",
+      "refs": [
+        "CTL-012"
+      ]
+    },
+    {
+      "id": "GRT-052",
+      "title": "HO main cable diameter, ASCE",
+      "kind": "ho_conversion",
+      "key": "main_cable_diameter_asce",
+      "expected_mm": 6.05,
+      "tolerance": 0.05,
+      "mode": "assert",
+      "refs": [
+        "CTL-013"
+      ]
+    },
+    {
+      "id": "GRT-053",
+      "title": "HO main cable diameter, HAER",
+      "kind": "ho_conversion",
+      "key": "main_cable_diameter_haer",
+      "expected_mm": 6.2,
+      "tolerance": 0.05,
+      "mode": "assert",
+      "refs": [
+        "CTL-014"
+      ]
+    },
+    {
+      "id": "GRT-054",
+      "title": "HO deck overall width",
+      "kind": "ho_conversion",
+      "key": "deck_overall_width",
+      "expected_mm": 419.9,
+      "tolerance": 0.2,
+      "mode": "assert",
+      "refs": [
+        "CTL-021"
+      ],
+      "rationale": "120 ft at 1:87.1."
+    },
+    {
+      "id": "GRT-055",
+      "title": "HO suspender panel pitch is above resin print resolution",
+      "kind": "measure",
+      "measure": "suspender_pitch_m",
+      "expected": 5.6716,
+      "unit": "m",
+      "tolerance": 0.001,
+      "mode": "assert",
+      "refs": [
+        "CTL-037"
+      ],
+      "rationale": "65.1 mm at HO. Recorded here so SCALE-HO.md consumers can see the physical panel pitch."
+    },
+    {
+      "id": "GRT-060",
+      "title": "Every part carries the required metadata fields",
+      "kind": "metadata",
+      "rule": "required_fields",
+      "mode": "assert",
+      "refs": [
+        "CONFIDENCE-MODEL.md section 2"
+      ]
+    },
+    {
+      "id": "GRT-061",
+      "title": "part_id values are unique and lowercase snake_case",
+      "kind": "metadata",
+      "rule": "unique_snake_case_part_ids",
+      "mode": "assert"
+    },
+    {
+      "id": "GRT-062",
+      "title": "Confidence grades are A, B, C or D",
+      "kind": "metadata",
+      "rule": "valid_confidence_grades",
+      "mode": "assert"
+    },
+    {
+      "id": "GRT-063",
+      "title": "source_basis uses only the registered vocabulary",
+      "kind": "metadata",
+      "rule": "source_basis_vocabulary",
+      "mode": "assert"
+    },
+    {
+      "id": "GRT-064",
+      "title": "Weakest-link rule: no part is graded better than the worst control it consumes",
+      "kind": "metadata",
+      "rule": "weakest_link_confidence",
+      "mode": "assert",
+      "refs": [
+        "CONFIDENCE-MODEL.md section 1"
+      ]
+    },
+    {
+      "id": "GRT-065",
+      "title": "Every confidence D part names an open question",
+      "kind": "metadata",
+      "rule": "d_parts_cite_open_question",
+      "mode": "assert"
+    },
+    {
+      "id": "GRT-066",
+      "title": "Milestone 4 part coverage",
+      "kind": "metadata",
+      "rule": "required_part_ids",
+      "required": [
+        "brooklyn_anchorage",
+        "brooklyn_approach",
+        "control_curve_deck_centerline",
+        "footwalk_north",
+        "footwalk_south",
+        "lower_roadway_envelope_main_span",
+        "manhattan_anchorage",
+        "manhattan_approach",
+        "north_main_cable_1",
+        "north_main_cable_2",
+        "reference_bridge_axis",
+        "reference_datum_mhw_plane",
+        "south_main_cable_1",
+        "south_main_cable_2",
+        "station_sta_anc_b",
+        "station_sta_anc_m",
+        "station_sta_appr_end_b",
+        "station_sta_appr_end_m",
+        "station_sta_mid",
+        "station_sta_twr_b",
+        "station_sta_twr_m",
+        "stiffening_truss_a_chords_main_span",
+        "stiffening_truss_a_web_main_span",
+        "stiffening_truss_b_chords_main_span",
+        "stiffening_truss_b_web_main_span",
+        "stiffening_truss_c_chords_main_span",
+        "stiffening_truss_c_web_main_span",
+        "stiffening_truss_d_chords_main_span",
+        "stiffening_truss_d_web_main_span",
+        "suspenders_truss_a",
+        "suspenders_truss_b",
+        "suspenders_truss_c",
+        "suspenders_truss_d",
+        "tower_brooklyn_caisson",
+        "tower_brooklyn_centerline",
+        "tower_brooklyn_leg_a",
+        "tower_brooklyn_pier",
+        "tower_manhattan_bracing",
+        "tower_manhattan_caisson",
+        "tower_manhattan_centerline",
+        "tower_manhattan_leg_a",
+        "tower_manhattan_leg_d",
+        "tower_manhattan_pier",
+        "track_1",
+        "track_2",
+        "track_3",
+        "track_4",
+        "upper_roadway_brooklyn_bound_main_span",
+        "upper_roadway_manhattan_bound_main_span"
+      ],
+      "mode": "assert",
+      "refs": [
+        "AGENT-INSTRUCTIONS.md section 13",
+        "SRC-011 truss designations A-D"
+      ]
+    },
+    {
+      "id": "GRT-067",
+      "title": "Every taxonomy system required by Milestone 1 is populated",
+      "kind": "metadata",
+      "rule": "required_systems",
+      "required": [
+        "reference",
+        "towers",
+        "anchorages",
+        "cables",
+        "suspenders",
+        "deck_system",
+        "approaches"
+      ],
+      "mode": "assert",
+      "refs": [
+        "AGENT-INSTRUCTIONS.md section 6"
+      ]
+    },
+    {
+      "id": "GRT-068",
+      "title": "Grades of representative parts are pinned",
+      "kind": "metadata",
+      "rule": "part_grade_expectations",
+      "expected_grades": {
+        "tower_manhattan_caisson": "A",
+        "tower_brooklyn_caisson": "A",
+        "reference_datum_mhw_plane": "A",
+        "station_sta_twr_m": "A",
+        "tower_manhattan_pier": "A",
+        "manhattan_anchorage": "B",
+        "north_main_cable_1": "D",
+        "track_1": "D",
+        "manhattan_approach": "D",
+        "tower_manhattan_leg_a": "A",
+        "tower_manhattan_bracing": "D",
+        "stiffening_truss_a_chords_main_span": "A",
+        "stiffening_truss_a_web_main_span": "D"
+      },
+      "mode": "assert",
+      "refs": [
+        "CONFIDENCE-MODEL.md section 1"
+      ],
+      "rationale": "Replaces the Milestone 2 blanket ceiling on solid geometry, whose premise no longer holds: the tower caissons and piers are box envelopes whose every dimension comes from directly examined period primaries (SRC-015 and SRC-016), so grade A is correct for them. Pinning representative grades across all four bands is a stronger guard than a ceiling."
+    },
+    {
+      "id": "GRT-069",
+      "title": "Placeholder control census",
+      "kind": "metadata",
+      "rule": "placeholder_control_census",
+      "mode": "report_only",
+      "rationale": "Tracks progress as sources retire placeholders. Milestone 1 closed with 19; Milestone 2 closed with 7."
+    },
+    {
+      "id": "GRT-070",
+      "title": "Placeholder count has not regressed since Milestone 2",
+      "kind": "measure",
+      "measure": "placeholder_control_count",
+      "expected": 7,
+      "unit": "count",
+      "tolerance": 0,
+      "mode": "assert",
+      "refs": [
+        "GEOMETRY-CONTROL.md section 3"
+      ],
+      "rationale": "A ratchet. Adding a placeholder without retiring another fails the suite; retiring one requires updating this expectation downward."
+    }
+  ]
+}

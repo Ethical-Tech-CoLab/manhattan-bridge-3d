@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.py[cod]
+scripts/_selftest.glb
+scripts/*.tmp
+
+# Node / viewer
+node_modules/
+viewer/dist/
+*.log
+
+# Generated model artifacts are intentionally COMMITTED, not ignored:
+#   mesh/glb/*, viewer/public/*.glb, viewer/metadata/*.json,
+#   cad/procedural/control_skeleton_geometry.json, tests/validation_report.json
+# They are reproducible with `python scripts/build_control_skeleton.py`, but are tracked so the
+# viewer runs from a clean clone and so changes to geometry show up in review diffs.
+
+# OS
+Thumbs.db
+.DS_Store

@@ -1,0 +1,117 @@
+{
+  "schema_version": "1.0",
+  "suite": "source_traceability",
+  "model": "control_skeleton",
+  "milestone": 1,
+  "description": "Traceability tests. Every number in the model must be reachable from GEOMETRY-CONTROL.md, and every source cited there must exist in SOURCE-REGISTER.md. Run with: python scripts/validate_dimensions.py",
+  "runner": "scripts/validate_dimensions.py",
+  "inputs": {
+    "control_document": "GEOMETRY-CONTROL.md",
+    "source_register": "SOURCE-REGISTER.md",
+    "parts": "viewer/metadata/parts.json"
+  },
+  "tests": [
+    {
+      "id": "STT-001",
+      "title": "Every source cited by a control exists in the source register",
+      "kind": "traceability",
+      "rule": "cited_sources_registered",
+      "mode": "assert"
+    },
+    {
+      "id": "STT-002",
+      "title": "Every control graded A, B or C cites at least one source",
+      "kind": "traceability",
+      "rule": "graded_controls_have_sources",
+      "mode": "assert",
+      "refs": ["SOURCE-REGISTER.md rule 1"]
+    },
+    {
+      "id": "STT-003",
+      "title": "Every placeholder control cites no source",
+      "kind": "traceability",
+      "rule": "placeholders_have_no_sources",
+      "mode": "assert",
+      "rationale": "A sourced value belongs in the Tier A/B table, not the placeholder table."
+    },
+    {
+      "id": "STT-004",
+      "title": "Every control reference on a part resolves to a control ID",
+      "kind": "traceability",
+      "rule": "part_control_refs_resolve",
+      "mode": "assert"
+    },
+    {
+      "id": "STT-005",
+      "title": "Every open question cited by a part exists in GEOMETRY-CONTROL.md section 5",
+      "kind": "traceability",
+      "rule": "open_questions_registered",
+      "mode": "assert"
+    },
+    {
+      "id": "STT-006",
+      "title": "Every part declares a non-empty source_basis",
+      "kind": "traceability",
+      "rule": "parts_have_source_basis",
+      "mode": "assert"
+    },
+    {
+      "id": "STT-007",
+      "title": "No part claims a drawing, photo, mesh or photogrammetry basis in Milestone 1",
+      "kind": "traceability",
+      "rule": "forbidden_source_basis",
+      "forbidden": ["drawing", "photo", "mesh_reference", "photogrammetry"],
+      "mode": "assert",
+      "rationale": "Milestone 1 imports no external sources. Any such basis would be an unsupported claim."
+    },
+    {
+      "id": "STT-008",
+      "title": "Controls whose sources are all unverified are reported as verification_pending",
+      "kind": "traceability",
+      "rule": "verification_pending_census",
+      "mode": "report_only",
+      "refs": ["SOURCE-REGISTER.md rule 2"]
+    },
+    {
+      "id": "STT-009",
+      "title": "Every registered source that a control depends on appears in the verification queue or is verified",
+      "kind": "traceability",
+      "rule": "cited_sources_have_verification_state",
+      "mode": "assert"
+    },
+    {
+      "id": "STT-010",
+      "title": "Every part is assigned to a system in the handoff taxonomy",
+      "kind": "traceability",
+      "rule": "parts_have_known_system",
+      "known": [
+        "reference",
+        "anchorages",
+        "towers",
+        "cables",
+        "suspenders",
+        "deck_system",
+        "approaches",
+        "details"
+      ],
+      "mode": "assert",
+      "refs": ["AGENT-INSTRUCTIONS.md section 6"]
+    },
+    {
+      "id": "STT-011",
+      "title": "Every part records review_status and last_modified_by_agent",
+      "kind": "traceability",
+      "rule": "parts_have_review_fields",
+      "mode": "assert",
+      "refs": ["AGENT-INSTRUCTIONS.md section 11"]
+    },
+    {
+      "id": "STT-012",
+      "title": "The parts manifest was generated from the current GEOMETRY-CONTROL.md",
+      "kind": "traceability",
+      "rule": "control_document_hash_matches",
+      "mode": "assert",
+      "rationale": "Catches a stale build after an edit to the control document."
+    }
+  ]
+}

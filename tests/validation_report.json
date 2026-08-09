@@ -1,0 +1,740 @@
+{
+  "schema_version": "1.0",
+  "control_document_sha256": "95fc42a95f510c311f69819f9ecc39b76aeb5b1171e263c4e8d698d21fca0396",
+  "built_from_sha256": "95fc42a95f510c311f69819f9ecc39b76aeb5b1171e263c4e8d698d21fca0396",
+  "generated_by_build": "build_control_skeleton.py@1.0.0",
+  "summary": {
+    "pass": 67,
+    "reported": 5,
+    "fail": 0,
+    "error": 0
+  },
+  "results": [
+    {
+      "id": "GRT-001",
+      "title": "Suspended length identity",
+      "suite": "geometry_regression",
+      "mode": "assert",
+      "status": "pass",
+      "detail": "actual 890.016 m, expected 890.016 m, deviation +0",
+      "actual": 890.016,
+      "expected": 890.016,
+      "deviation": 0.0
+    },
+    {
+      "id": "GRT-002",
+      "title": "Main span in meters",
+      "suite": "geometry_regression",
+      "mode": "assert",
+      "status": "pass",
+      "detail": "actual 448.056 m, expected 448.056 m, deviation +5.68e-14",
+      "actual": 448.056,
+      "expected": 448.056,
+      "deviation": 0.0
+    },
+    {
+      "id": "GRT-003",
+      "title": "Side span in meters",
+      "suite": "geometry_regression",
+      "mode": "assert",
+      "status": "pass",
+      "detail": "actual 220.98 m, expected 220.98 m, deviation +2.84e-14",
+      "actual": 220.98,
+      "expected": 220.98,
+      "deviation": 0.0
+    },
+    {
+      "id": "GRT-004",
+      "title": "Total bridge and approaches in meters",
+      "suite": "geometry_regression",
+      "mode": "assert",
+      "status": "pass",
+      "detail": "actual 2089.4 m, expected 2089.4 m, deviation +0",
+      "actual": 2089.404,
+      "expected": 2089.404,
+      "deviation": 0.0
+    },
+    {
+      "id": "GRT-005",
+      "title": "Handoff tower height above MHW is still recorded",
+      "suite": "geometry_regression",
+      "mode": "assert",
+      "status": "pass",
+      "detail": "actual 98.1456 m, expected 98.1456 m, deviation +0",
+      "actual": 98.1456,
+      "expected": 98.1456,
+      "deviation": 0.0
+    },
+    {
+      "id": "GRT-006",
+      "title": "Center clearance above MHW in meters",
+      "suite": "geometry_regression",
+      "mode": "assert",
+      "status": "pass",
+      "detail": "actual 41.148 m, expected 41.148 m, deviation +0",
+      "actual": 41.148,
+      "expected": 41.148,
+      "deviation": 0.0
+    },
+    {
+      "id": "GRT-007",
+      "title": "Cable saddle elevation control",
+      "suite": "geometry_regression",
+      "mode": "assert",
+      "status": "pass",
+      "detail": "actual 98.298 m, expected 98.298 m, deviation +0",
+      "actual": 98.298,
+      "expected": 98.298,
+      "deviation": 0.0
+    },
+    {
+      "id": "GRT-008",
+      "title": "Deck overall width",
+      "suite": "geometry_regression",
+      "mode": "assert",
+      "status": "pass",
+      "detail": "actual 36.576 m, expected 36.576 m, deviation +0",
+      "actual": 36.576,
+      "expected": 36.576,
+      "deviation": 0.0
+    },
+    {
+      "id": "GRT-009",
+      "title": "Deck width closes against the truss and footwalk layout",
+      "suite": "geometry_regression",
+      "mode": "report_only",
+      "status": "reported",
+      "detail": "actual 35.3568 m, reference 36.576 m, deviation -1.2192 m",
+      "actual": 35.3568,
+      "expected": 36.576,
+      "deviation": -1.2192
+    },
+    {
+      "id": "GRT-010",
+      "title": "Manhattan tower station",
+      "suite": "geometry_regression",
+      "mode": "assert",
+      "status": "pass",
+      "detail": "actual -224.028 m, expected -224.028 m, deviation -2.84e-14",
+      "actual": -224.028,
+      "expected": -224.028,
+      "deviation": -0.0
+    },
+    {
+      "id": "GRT-011",
+      "title": "Brooklyn tower station",
+      "suite": "geometry_regression",
+      "mode": "assert",
+      "status": "pass",
+      "detail": "actual 224.028 m, expected 224.028 m, deviation +2.84e-14",
+      "actual": 224.028,
+      "expected": 224.028,
+      "deviation": 0.0
+    },
+    {
+      "id": "GRT-012",
+      "title": "Manhattan anchorage cable point station",
+      "suite": "geometry_regression",
+      "mode": "assert",
+      "status": "pass",
+      "detail": "actual -445.008 m, expected -445.008 m, deviation -5.68e-14",
+      "actual": -445.008,
+      "expected": -445.008,
+      "deviation": -0.0
+    },
+    {
+      "id": "GRT-013",
+      "title": "Brooklyn anchorage cable point station",
+      "suite": "geometry_regression",
+      "mode": "assert",
+      "status": "pass",
+      "detail": "actual 445.008 m, expected 445.008 m, deviation +5.68e-14",
+      "actual": 445.008,
+      "expected": 445.008,
+      "deviation": 0.0
+    },
+    {
+      "id": "GRT-014",
+      "title": "Origin is the main span midpoint",
+      "suite": "geometry_regression",
+      "mode": "assert",
+      "status": "pass",
+      "detail": "actual 0 m, expected 0 m, deviation +0",
+      "actual": 0.0,
+      "expected": 0.0,
+      "deviation": 0.0
+    },
+    {
+      "id": "GRT-015",
+      "title": "Approach ends are asymmetric, per the sourced ratio",
+      "suite": "geometry_regression",
+      "mode": "assert",
+      "status": "pass",
+      "detail": "actual -34.4087 m, expected -34.4087 m, deviation +2.79e-05",
+      "actual": -34.408672131,
+      "expected": -34.4087,
+      "deviation": 2.7869e-05
+    },
+    {
+      "id": "GRT-020",
+      "title": "Cable saddle elevation",
+      "suite": "geometry_regression",
+      "mode": "assert",
+      "status": "pass",
+      "detail": "actual 98.298 m, expected 98.298 m, deviation +0",
+      "actual": 98.298,
+      "expected": 98.298,
+      "deviation": 0.0
+    },
+    {
+      "id": "GRT-021",
+      "title": "Navigation clearance elevation",
+      "suite": "geometry_regression",
+      "mode": "assert",
+      "status": "pass",
+      "detail": "actual 41.148 m, expected 41.148 m, deviation +0",
+      "actual": 41.148,
+      "expected": 41.148,
+      "deviation": 0.0
+    },
+    {
+      "id": "GRT-022",
+      "title": "Truss top chord equals clearance plus the ACTIVE truss depth",
+      "suite": "geometry_regression",
+      "mode": "assert",
+      "status": "pass",
+      "detail": "actual 48.4632 m, expected 48.4632 m, deviation +0",
+      "actual": 48.4632,
+      "expected": 48.4632,
+      "deviation": 0.0
+    },
+    {
+      "id": "GRT-023",
+      "title": "Tower foundation descends below the datum",
+      "suite": "geometry_regression",
+      "mode": "assert",
+      "status": "pass",
+      "detail": "actual -28.0416 m, expected -28.0416 m, deviation -3.55e-15",
+      "actual": -28.0416,
+      "expected": -28.0416,
+      "deviation": -0.0
+    },
+    {
+      "id": "GRT-024",
+      "title": "Derived main span sag",
+      "suite": "geometry_regression",
+      "mode": "assert",
+      "status": "pass",
+      "detail": "actual 48.9204 m, expected 48.9204 m, deviation +0",
+      "actual": 48.9204,
+      "expected": 48.9204,
+      "deviation": 0.0
+    },
+    {
+      "id": "GRT-025",
+      "title": "Derived sag ratio is structurally plausible",
+      "suite": "geometry_regression",
+      "mode": "assert",
+      "status": "pass",
+      "detail": "actual 9.15888 ratio, expected 9.16 ratio, deviation -0.00112",
+      "actual": 9.158878505,
+      "expected": 9.16,
+      "deviation": -0.001121495
+    },
+    {
+      "id": "GRT-026",
+      "title": "Cable low point clears the truss top chord",
+      "suite": "geometry_regression",
+      "mode": "assert",
+      "status": "pass",
+      "detail": "actual 0.9144 m, expected 0.9144 m, deviation +5.55e-16",
+      "actual": 0.9144,
+      "expected": 0.9144,
+      "deviation": 0.0
+    },
+    {
+      "id": "GRT-027",
+      "title": "Vertical build-up: SRC-016 elevations against the SRC-015 summary height",
+      "suite": "geometry_regression",
+      "mode": "report_only",
+      "status": "reported",
+      "detail": "actual 35.052 m, reference 37.4904 m, deviation -2.4384 m",
+      "actual": 35.052,
+      "expected": 37.4904,
+      "deviation": -2.4384
+    },
+    {
+      "id": "GRT-028",
+      "title": "Caisson top elevation",
+      "suite": "geometry_regression",
+      "mode": "assert",
+      "status": "pass",
+      "detail": "actual -13.5636 m, expected -13.5636 m, deviation -1.78e-15",
+      "actual": -13.5636,
+      "expected": -13.5636,
+      "deviation": -0.0
+    },
+    {
+      "id": "GRT-029",
+      "title": "Masonry pier footing is seated between the caisson top and the datum",
+      "suite": "geometry_regression",
+      "mode": "assert",
+      "status": "pass",
+      "detail": "actual 3.5052 m, expected 3.5052 m, deviation +4.44e-16",
+      "actual": 3.5052,
+      "expected": 3.5052,
+      "deviation": 0.0
+    },
+    {
+      "id": "GRT-030",
+      "title": "Modelled tower spacing equals the main span",
+      "suite": "geometry_regression",
+      "mode": "assert",
+      "status": "pass",
+      "detail": "actual 448.056 m, expected 448.056 m, deviation +5.68e-14",
+      "actual": 448.056,
+      "expected": 448.056,
+      "deviation": 0.0
+    },
+    {
+      "id": "GRT-031",
+      "title": "Modelled anchorage spacing equals the suspended length",
+      "suite": "geometry_regression",
+      "mode": "assert",
+      "status": "pass",
+      "detail": "actual 890.016 m, expected 890.016 m, deviation +1.14e-13",
+      "actual": 890.016,
+      "expected": 890.016,
+      "deviation": 0.0
+    },
+    {
+      "id": "GRT-032",
+      "title": "Model longitudinal extent equals the total bridge and approaches length",
+      "suite": "geometry_regression",
+      "mode": "assert",
+      "status": "pass",
+      "detail": "actual 2089.4 m, expected 2089.4 m, deviation +0",
+      "actual": 2089.404,
+      "expected": 2089.404,
+      "deviation": 0.0
+    },
+    {
+      "id": "GRT-033",
+      "title": "Model vertical extent spans caisson underside to the top of the cable at the saddle",
+      "suite": "geometry_regression",
+      "mode": "assert",
+      "status": "pass",
+      "detail": "actual 126.609 m, expected 126.609 m, deviation +4e-05",
+      "actual": 126.60884,
+      "expected": 126.6088,
+      "deviation": 4e-05
+    },
+    {
+      "id": "GRT-034",
+      "title": "Model transverse extent equals the anchorage width",
+      "suite": "geometry_regression",
+      "mode": "assert",
+      "status": "pass",
+      "detail": "actual 55.4736 m, expected 55.4736 m, deviation +7.11e-15",
+      "actual": 55.4736,
+      "expected": 55.4736,
+      "deviation": 0.0
+    },
+    {
+      "id": "GRT-035",
+      "title": "Deck centerline control curve spans the full modelled length",
+      "suite": "geometry_regression",
+      "mode": "assert",
+      "status": "pass",
+      "detail": "actual 2089.4 m, expected 2089.4 m, deviation +0",
+      "actual": 2089.404,
+      "expected": 2089.404,
+      "deviation": 0.0
+    },
+    {
+      "id": "GRT-036",
+      "title": "Single main cable developed length against CTL-012",
+      "suite": "geometry_regression",
+      "mode": "report_only",
+      "status": "reported",
+      "detail": "actual 921.506 m, reference 982.675 m, deviation -61.1695 m",
+      "actual": 921.505678138,
+      "expected": 982.6752,
+      "deviation": -61.169521862
+    },
+    {
+      "id": "GRT-037",
+      "title": "Derived suspender panel pitch",
+      "suite": "geometry_regression",
+      "mode": "assert",
+      "status": "pass",
+      "detail": "actual 5.67159 m, expected 5.6716 m, deviation -5.06e-06",
+      "actual": 5.671594937,
+      "expected": 5.6716,
+      "deviation": -5.063e-06
+    },
+    {
+      "id": "GRT-040",
+      "title": "HO total bridge and approaches length",
+      "suite": "geometry_regression",
+      "mode": "assert",
+      "status": "pass",
+      "detail": "actual 23988.6 , expected 23988.6 , deviation -0.0351",
+      "actual": 23988.564867968,
+      "expected": 23988.6,
+      "deviation": -0.035132032
+    },
+    {
+      "id": "GRT-041",
+      "title": "HO lower-level abutment to abutment",
+      "suite": "geometry_regression",
+      "mode": "assert",
+      "status": "pass",
+      "detail": "actual 20261.7 , expected 20261.7 , deviation -0.0238",
+      "actual": 20261.676234214,
+      "expected": 20261.7,
+      "deviation": -0.023765786
+    },
+    {
+      "id": "GRT-042",
+      "title": "HO upper roadway portal to portal",
+      "suite": "geometry_regression",
+      "mode": "assert",
+      "status": "pass",
+      "detail": "actual 21311.5 , expected 21311.5 , deviation +0.00402",
+      "actual": 21311.50401837,
+      "expected": 21311.5,
+      "deviation": 0.00401837
+    },
+    {
+      "id": "GRT-043",
+      "title": "HO anchorage to anchorage suspended length",
+      "suite": "geometry_regression",
+      "mode": "assert",
+      "status": "pass",
+      "detail": "actual 10218.3 , expected 10218.3 , deviation +0.0238",
+      "actual": 10218.323765786,
+      "expected": 10218.3,
+      "deviation": 0.023765786
+    },
+    {
+      "id": "GRT-044",
+      "title": "HO main span",
+      "suite": "geometry_regression",
+      "mode": "assert",
+      "status": "pass",
+      "detail": "actual 5144.16 , expected 5144.2 , deviation -0.0439",
+      "actual": 5144.156142365,
+      "expected": 5144.2,
+      "deviation": -0.043857635
+    },
+    {
+      "id": "GRT-045",
+      "title": "HO side span",
+      "suite": "geometry_regression",
+      "mode": "assert",
+      "status": "pass",
+      "detail": "actual 2537.08 , expected 2537.1 , deviation -0.0162",
+      "actual": 2537.083811711,
+      "expected": 2537.1,
+      "deviation": -0.016188289
+    },
+    {
+      "id": "GRT-046",
+      "title": "HO handoff tower height above MHW",
+      "suite": "geometry_regression",
+      "mode": "assert",
+      "status": "pass",
+      "detail": "actual 1126.82 , expected 1126.8 , deviation +0.0152",
+      "actual": 1126.815154994,
+      "expected": 1126.8,
+      "deviation": 0.015154994
+    },
+    {
+      "id": "GRT-047",
+      "title": "HO center clearance above MHW",
+      "suite": "geometry_regression",
+      "mode": "assert",
+      "status": "pass",
+      "detail": "actual 472.423 , expected 472.4 , deviation +0.0225",
+      "actual": 472.42250287,
+      "expected": 472.4,
+      "deviation": 0.02250287
+    },
+    {
+      "id": "GRT-048",
+      "title": "HO roadway width",
+      "suite": "geometry_regression",
+      "mode": "assert",
+      "status": "pass",
+      "detail": "actual 160.974 , expected 161 , deviation -0.0264",
+      "actual": 160.973593571,
+      "expected": 161.0,
+      "deviation": -0.026406429
+    },
+    {
+      "id": "GRT-049",
+      "title": "HO stiffening truss depth, ASCE",
+      "suite": "geometry_regression",
+      "mode": "assert",
+      "status": "pass",
+      "detail": "actual 83.9862 , expected 84 , deviation -0.0138",
+      "actual": 83.986222732,
+      "expected": 84.0,
+      "deviation": -0.013777268
+    },
+    {
+      "id": "GRT-050",
+      "title": "HO stiffening truss depth, alternate reference",
+      "suite": "geometry_regression",
+      "mode": "assert",
+      "status": "pass",
+      "detail": "actual 90.9851 , expected 91 , deviation -0.0149",
+      "actual": 90.985074627,
+      "expected": 91.0,
+      "deviation": -0.014925373
+    },
+    {
+      "id": "GRT-051",
+      "title": "HO cable length",
+      "suite": "geometry_regression",
+      "mode": "assert",
+      "status": "pass",
+      "detail": "actual 11282.1 , expected 11282.1 , deviation +0.0493",
+      "actual": 11282.149253731,
+      "expected": 11282.1,
+      "deviation": 0.049253731
+    },
+    {
+      "id": "GRT-052",
+      "title": "HO main cable diameter, ASCE",
+      "suite": "geometry_regression",
+      "mode": "assert",
+      "status": "pass",
+      "detail": "actual 6.05109 , expected 6.05 , deviation +0.00109",
+      "actual": 6.0510907,
+      "expected": 6.05,
+      "deviation": 0.0010907
+    },
+    {
+      "id": "GRT-053",
+      "title": "HO main cable diameter, HAER",
+      "suite": "geometry_regression",
+      "mode": "assert",
+      "status": "pass",
+      "detail": "actual 6.1969 , expected 6.2 , deviation -0.0031",
+      "actual": 6.196900115,
+      "expected": 6.2,
+      "deviation": -0.003099885
+    },
+    {
+      "id": "GRT-054",
+      "title": "HO deck overall width",
+      "suite": "geometry_regression",
+      "mode": "assert",
+      "status": "pass",
+      "detail": "actual 419.931 , expected 419.9 , deviation +0.0311",
+      "actual": 419.931113662,
+      "expected": 419.9,
+      "deviation": 0.031113662
+    },
+    {
+      "id": "GRT-055",
+      "title": "HO suspender panel pitch is above resin print resolution",
+      "suite": "geometry_regression",
+      "mode": "assert",
+      "status": "pass",
+      "detail": "actual 5.67159 m, expected 5.6716 m, deviation -5.06e-06",
+      "actual": 5.671594937,
+      "expected": 5.6716,
+      "deviation": -5.063e-06
+    },
+    {
+      "id": "GRT-060",
+      "title": "Every part carries the required metadata fields",
+      "suite": "geometry_regression",
+      "mode": "assert",
+      "status": "pass",
+      "detail": "81 parts checked against 10 required fields"
+    },
+    {
+      "id": "GRT-061",
+      "title": "part_id values are unique and lowercase snake_case",
+      "suite": "geometry_regression",
+      "mode": "assert",
+      "status": "pass",
+      "detail": "81 unique part_id values"
+    },
+    {
+      "id": "GRT-062",
+      "title": "Confidence grades are A, B, C or D",
+      "suite": "geometry_regression",
+      "mode": "assert",
+      "status": "pass",
+      "detail": "81 parts checked"
+    },
+    {
+      "id": "GRT-063",
+      "title": "source_basis uses only the registered vocabulary",
+      "suite": "geometry_regression",
+      "mode": "assert",
+      "status": "pass",
+      "detail": "vocabulary of 7 terms"
+    },
+    {
+      "id": "GRT-064",
+      "title": "Weakest-link rule: no part is graded better than the worst control it consumes",
+      "suite": "geometry_regression",
+      "mode": "assert",
+      "status": "pass",
+      "detail": "81 parts checked against their control references"
+    },
+    {
+      "id": "GRT-065",
+      "title": "Every confidence D part names an open question",
+      "suite": "geometry_regression",
+      "mode": "assert",
+      "status": "pass",
+      "detail": "44 confidence D parts"
+    },
+    {
+      "id": "GRT-066",
+      "title": "Milestone 4 part coverage",
+      "suite": "geometry_regression",
+      "mode": "assert",
+      "status": "pass",
+      "detail": "49 required part IDs"
+    },
+    {
+      "id": "GRT-067",
+      "title": "Every taxonomy system required by Milestone 1 is populated",
+      "suite": "geometry_regression",
+      "mode": "assert",
+      "status": "pass",
+      "detail": "7 required systems"
+    },
+    {
+      "id": "GRT-068",
+      "title": "Grades of representative parts are pinned",
+      "suite": "geometry_regression",
+      "mode": "assert",
+      "status": "pass",
+      "detail": "13 part grades pinned"
+    },
+    {
+      "id": "GRT-069",
+      "title": "Placeholder control census",
+      "suite": "geometry_regression",
+      "mode": "report_only",
+      "status": "reported",
+      "detail": "7 placeholder controls remain, 62 sourced; 44 of 81 parts are confidence D"
+    },
+    {
+      "id": "GRT-070",
+      "title": "Placeholder count has not regressed since Milestone 2",
+      "suite": "geometry_regression",
+      "mode": "assert",
+      "status": "pass",
+      "detail": "actual 7 count, expected 7 count, deviation +0",
+      "actual": 7.0,
+      "expected": 7.0,
+      "deviation": 0.0
+    },
+    {
+      "id": "STT-001",
+      "title": "Every source cited by a control exists in the source register",
+      "suite": "source_traceability",
+      "mode": "assert",
+      "status": "pass",
+      "detail": "21 registered sources"
+    },
+    {
+      "id": "STT-002",
+      "title": "Every control graded A, B or C cites at least one source",
+      "suite": "source_traceability",
+      "mode": "assert",
+      "status": "pass",
+      "detail": "69 controls"
+    },
+    {
+      "id": "STT-003",
+      "title": "Every placeholder control cites no source",
+      "suite": "source_traceability",
+      "mode": "assert",
+      "status": "pass",
+      "detail": "7 placeholders"
+    },
+    {
+      "id": "STT-004",
+      "title": "Every control reference on a part resolves to a control ID",
+      "suite": "source_traceability",
+      "mode": "assert",
+      "status": "pass",
+      "detail": "547 control references"
+    },
+    {
+      "id": "STT-005",
+      "title": "Every open question cited by a part exists in GEOMETRY-CONTROL.md section 5",
+      "suite": "source_traceability",
+      "mode": "assert",
+      "status": "pass",
+      "detail": "17 registered open questions"
+    },
+    {
+      "id": "STT-006",
+      "title": "Every part declares a non-empty source_basis",
+      "suite": "source_traceability",
+      "mode": "assert",
+      "status": "pass",
+      "detail": "81 parts"
+    },
+    {
+      "id": "STT-007",
+      "title": "No part claims a drawing, photo, mesh or photogrammetry basis in Milestone 1",
+      "suite": "source_traceability",
+      "mode": "assert",
+      "status": "pass",
+      "detail": "forbidden in Milestone 1: ['drawing', 'mesh_reference', 'photo', 'photogrammetry']"
+    },
+    {
+      "id": "STT-008",
+      "title": "Controls whose sources are all unverified are reported as verification_pending",
+      "suite": "source_traceability",
+      "mode": "report_only",
+      "status": "reported",
+      "detail": "1 controls depend only on unverified sources: CTL-017"
+    },
+    {
+      "id": "STT-009",
+      "title": "Every registered source that a control depends on appears in the verification queue or is verified",
+      "suite": "source_traceability",
+      "mode": "assert",
+      "status": "pass",
+      "detail": "21 sources carry a verification state"
+    },
+    {
+      "id": "STT-010",
+      "title": "Every part is assigned to a system in the handoff taxonomy",
+      "suite": "source_traceability",
+      "mode": "assert",
+      "status": "pass",
+      "detail": "taxonomy of 8 systems"
+    },
+    {
+      "id": "STT-011",
+      "title": "Every part records review_status and last_modified_by_agent",
+      "suite": "source_traceability",
+      "mode": "assert",
+      "status": "pass",
+      "detail": "81 parts"
+    },
+    {
+      "id": "STT-012",
+      "title": "The parts manifest was generated from the current GEOMETRY-CONTROL.md",
+      "suite": "source_traceability",
+      "mode": "assert",
+      "status": "pass",
+      "detail": "control document sha256 95fc42a95f51"
+    }
+  ]
+}

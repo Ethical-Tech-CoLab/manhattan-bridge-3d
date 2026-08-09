@@ -1,0 +1,6511 @@
+{
+  "schema_version": "1.0",
+  "model": "control_skeleton",
+  "milestone": 2,
+  "generated_by": "build_control_skeleton.py@1.0.0",
+  "generated_at": "2026-08-09T16:10:42+00:00",
+  "control_document": {
+    "path": "GEOMETRY-CONTROL.md",
+    "sha256": "95fc42a95f510c311f69819f9ecc39b76aeb5b1171e263c4e8d698d21fca0396"
+  },
+  "source_register": "SOURCE-REGISTER.md",
+  "confidence_model": "CONFIDENCE-MODEL.md",
+  "ho_scale_denominator": 87.1,
+  "coordinate_system": {
+    "units": "meters",
+    "origin": "main span midpoint at mean high water",
+    "x": "+X toward Brooklyn",
+    "y": "+Y toward the north side",
+    "z": "+Z up from mean high water",
+    "gltf_note": "the exported GLB root node rotates the Z-up authoring frame into the glTF Y-up frame"
+  },
+  "confidence_colors": {
+    "A": "#2e9e4f",
+    "B": "#3b7dd8",
+    "C": "#d89a3b",
+    "D": "#c4453c"
+  },
+  "taxonomy": {
+    "reference": {
+      "parts": [],
+      "subsystems": {
+        "datum": [
+          "reference_datum_mhw_plane"
+        ],
+        "control_curves": [
+          "reference_bridge_axis",
+          "control_curve_deck_centerline"
+        ],
+        "stations": [
+          "station_sta_mid",
+          "station_sta_twr_m",
+          "station_sta_twr_b",
+          "station_sta_anc_m",
+          "station_sta_anc_b",
+          "station_sta_abut_m",
+          "station_sta_abut_b",
+          "station_sta_portal_m",
+          "station_sta_portal_b",
+          "station_sta_appr_end_m",
+          "station_sta_appr_end_b"
+        ]
+      }
+    },
+    "towers": {
+      "parts": [],
+      "subsystems": {
+        "centerlines": [
+          "tower_manhattan_centerline",
+          "tower_brooklyn_centerline"
+        ],
+        "foundations": [
+          "tower_manhattan_caisson",
+          "tower_manhattan_pier",
+          "tower_brooklyn_caisson",
+          "tower_brooklyn_pier"
+        ],
+        "legs": [
+          "tower_manhattan_leg_a",
+          "tower_manhattan_leg_b",
+          "tower_manhattan_leg_c",
+          "tower_manhattan_leg_d",
+          "tower_manhattan_bracing",
+          "tower_brooklyn_leg_a",
+          "tower_brooklyn_leg_b",
+          "tower_brooklyn_leg_c",
+          "tower_brooklyn_leg_d",
+          "tower_brooklyn_bracing"
+        ]
+      }
+    },
+    "anchorages": {
+      "parts": [
+        "manhattan_anchorage",
+        "brooklyn_anchorage"
+      ],
+      "subsystems": {}
+    },
+    "cables": {
+      "parts": [
+        "south_main_cable_1",
+        "south_main_cable_2",
+        "north_main_cable_2",
+        "north_main_cable_1"
+      ],
+      "subsystems": {}
+    },
+    "suspenders": {
+      "parts": [
+        "suspenders_truss_a",
+        "suspenders_truss_b",
+        "suspenders_truss_c",
+        "suspenders_truss_d"
+      ],
+      "subsystems": {}
+    },
+    "deck_system": {
+      "parts": [],
+      "subsystems": {
+        "upper_roadway": [
+          "upper_roadway_brooklyn_bound_main_span",
+          "upper_roadway_manhattan_bound_main_span",
+          "upper_roadway_brooklyn_bound_side_span_manhattan",
+          "upper_roadway_manhattan_bound_side_span_manhattan",
+          "upper_roadway_brooklyn_bound_side_span_brooklyn",
+          "upper_roadway_manhattan_bound_side_span_brooklyn"
+        ],
+        "lower_roadway": [
+          "lower_roadway_envelope_main_span",
+          "lower_roadway_envelope_side_span_manhattan",
+          "lower_roadway_envelope_side_span_brooklyn",
+          "footwalk_south",
+          "footwalk_north"
+        ],
+        "stiffening_trusses": [
+          "stiffening_truss_a_chords_main_span",
+          "stiffening_truss_a_web_main_span",
+          "stiffening_truss_b_chords_main_span",
+          "stiffening_truss_b_web_main_span",
+          "stiffening_truss_c_chords_main_span",
+          "stiffening_truss_c_web_main_span",
+          "stiffening_truss_d_chords_main_span",
+          "stiffening_truss_d_web_main_span",
+          "stiffening_truss_a_chords_side_span_manhattan",
+          "stiffening_truss_a_web_side_span_manhattan",
+          "stiffening_truss_b_chords_side_span_manhattan",
+          "stiffening_truss_b_web_side_span_manhattan",
+          "stiffening_truss_c_chords_side_span_manhattan",
+          "stiffening_truss_c_web_side_span_manhattan",
+          "stiffening_truss_d_chords_side_span_manhattan",
+          "stiffening_truss_d_web_side_span_manhattan",
+          "stiffening_truss_a_chords_side_span_brooklyn",
+          "stiffening_truss_a_web_side_span_brooklyn",
+          "stiffening_truss_b_chords_side_span_brooklyn",
+          "stiffening_truss_b_web_side_span_brooklyn",
+          "stiffening_truss_c_chords_side_span_brooklyn",
+          "stiffening_truss_c_web_side_span_brooklyn",
+          "stiffening_truss_d_chords_side_span_brooklyn",
+          "stiffening_truss_d_web_side_span_brooklyn"
+        ],
+        "subway_tracks": [
+          "track_1",
+          "track_2",
+          "track_3",
+          "track_4"
+        ]
+      }
+    },
+    "approaches": {
+      "parts": [
+        "manhattan_approach",
+        "brooklyn_approach"
+      ],
+      "subsystems": {}
+    }
+  },
+  "stations": [
+    {
+      "station_id": "STA-MID",
+      "name": "Main span midpoint (origin)",
+      "x_m": 0.0,
+      "confidence": "A",
+      "control_refs": [
+        "CTL-005"
+      ],
+      "notes": "Model origin.",
+      "ho": {
+        "prototype_m": 0.0,
+        "prototype_ft": 0.0,
+        "prototype_in": 0.0,
+        "ho_mm": 0.0,
+        "ho_in": 0.0,
+        "ho_ft": 0.0
+      }
+    },
+    {
+      "station_id": "STA-TWR-M",
+      "name": "Manhattan tower centerline",
+      "x_m": -224.02800000000002,
+      "confidence": "A",
+      "control_refs": [
+        "CTL-005"
+      ],
+      "notes": "",
+      "ho": {
+        "prototype_m": 224.028,
+        "prototype_ft": 735.0,
+        "prototype_in": 8820.0,
+        "ho_mm": 2572.1,
+        "ho_in": 101.26,
+        "ho_ft": 8.44
+      }
+    },
+    {
+      "station_id": "STA-TWR-B",
+      "name": "Brooklyn tower centerline",
+      "x_m": 224.02800000000002,
+      "confidence": "A",
+      "control_refs": [
+        "CTL-005"
+      ],
+      "notes": "",
+      "ho": {
+        "prototype_m": 224.028,
+        "prototype_ft": 735.0,
+        "prototype_in": 8820.0,
+        "ho_mm": 2572.1,
+        "ho_in": 101.26,
+        "ho_ft": 8.44
+      }
+    },
+    {
+      "station_id": "STA-ANC-M",
+      "name": "Manhattan anchorage cable point",
+      "x_m": -445.00800000000004,
+      "confidence": "A",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006"
+      ],
+      "notes": "",
+      "ho": {
+        "prototype_m": 445.008,
+        "prototype_ft": 1460.0,
+        "prototype_in": 17520.0,
+        "ho_mm": 5109.2,
+        "ho_in": 201.15,
+        "ho_ft": 16.76
+      }
+    },
+    {
+      "station_id": "STA-ANC-B",
+      "name": "Brooklyn anchorage cable point",
+      "x_m": 445.00800000000004,
+      "confidence": "A",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006"
+      ],
+      "notes": "",
+      "ho": {
+        "prototype_m": 445.008,
+        "prototype_ft": 1460.0,
+        "prototype_in": 17520.0,
+        "ho_mm": 5109.2,
+        "ho_in": 201.15,
+        "ho_ft": 16.76
+      }
+    },
+    {
+      "station_id": "STA-ABUT-M",
+      "name": "Manhattan lower-level abutment",
+      "x_m": -882.3960000000001,
+      "confidence": "D",
+      "control_refs": [
+        "CTL-002"
+      ],
+      "notes": "Symmetric placement about the main span midpoint is an assumption, see OQ-002.",
+      "ho": {
+        "prototype_m": 882.396,
+        "prototype_ft": 2895.0,
+        "prototype_in": 34740.0,
+        "ho_mm": 10130.8,
+        "ho_in": 398.85,
+        "ho_ft": 33.24
+      }
+    },
+    {
+      "station_id": "STA-ABUT-B",
+      "name": "Brooklyn lower-level abutment",
+      "x_m": 882.3960000000001,
+      "confidence": "D",
+      "control_refs": [
+        "CTL-002"
+      ],
+      "notes": "Symmetric placement about the main span midpoint is an assumption, see OQ-002.",
+      "ho": {
+        "prototype_m": 882.396,
+        "prototype_ft": 2895.0,
+        "prototype_in": 34740.0,
+        "ho_mm": 10130.8,
+        "ho_in": 398.85,
+        "ho_ft": 33.24
+      }
+    },
+    {
+      "station_id": "STA-PORTAL-M",
+      "name": "Manhattan upper roadway portal",
+      "x_m": -928.1160000000001,
+      "confidence": "D",
+      "control_refs": [
+        "CTL-003"
+      ],
+      "notes": "Symmetric placement about the main span midpoint is an assumption, see OQ-002.",
+      "ho": {
+        "prototype_m": 928.116,
+        "prototype_ft": 3045.0,
+        "prototype_in": 36540.0,
+        "ho_mm": 10655.8,
+        "ho_in": 419.52,
+        "ho_ft": 34.96
+      }
+    },
+    {
+      "station_id": "STA-PORTAL-B",
+      "name": "Brooklyn upper roadway portal",
+      "x_m": 928.1160000000001,
+      "confidence": "D",
+      "control_refs": [
+        "CTL-003"
+      ],
+      "notes": "Symmetric placement about the main span midpoint is an assumption, see OQ-002.",
+      "ho": {
+        "prototype_m": 928.116,
+        "prototype_ft": 3045.0,
+        "prototype_in": 36540.0,
+        "ho_mm": 10655.8,
+        "ho_in": 419.52,
+        "ho_ft": 34.96
+      }
+    },
+    {
+      "station_id": "STA-APPR-END-M",
+      "name": "Manhattan approach end",
+      "x_m": -1061.9063360655737,
+      "confidence": "B",
+      "control_refs": [
+        "CTL-001",
+        "CTL-004",
+        "CTL-039",
+        "CTL-040"
+      ],
+      "notes": "Approach split derived from the quoted approach-and-plaza lengths, see OQ-006. The quoted lengths include plazas, so only their ratio is used.",
+      "ho": {
+        "prototype_m": 1061.906336,
+        "prototype_ft": 3483.9447,
+        "prototype_in": 41807.3361,
+        "ho_mm": 12191.8,
+        "ho_in": 479.99,
+        "ho_ft": 40.0
+      }
+    },
+    {
+      "station_id": "STA-APPR-END-B",
+      "name": "Brooklyn approach end",
+      "x_m": 1027.4976639344263,
+      "confidence": "B",
+      "control_refs": [
+        "CTL-001",
+        "CTL-004",
+        "CTL-039",
+        "CTL-040"
+      ],
+      "notes": "Approach split derived from the quoted approach-and-plaza lengths, see OQ-006. The quoted lengths include plazas, so only their ratio is used.",
+      "ho": {
+        "prototype_m": 1027.497664,
+        "prototype_ft": 3371.0553,
+        "prototype_in": 40452.6639,
+        "ho_mm": 11796.8,
+        "ho_in": 464.44,
+        "ho_ft": 38.7
+      }
+    }
+  ],
+  "elevations": [
+    {
+      "elevation_id": "ELV-FOUNDATION",
+      "name": "Underside of tower caisson",
+      "z_m": -28.041600000000003,
+      "confidence": "A",
+      "control_refs": [
+        "CTL-031"
+      ],
+      "notes": "92 ft below mean high water (SRC-015, direct). Retires OQ-003.",
+      "ho": {
+        "prototype_m": -28.0416,
+        "prototype_ft": -92.0,
+        "prototype_in": -1104.0,
+        "ho_mm": -321.9,
+        "ho_in": -12.68,
+        "ho_ft": -1.06
+      }
+    },
+    {
+      "elevation_id": "ELV-DATUM",
+      "name": "Mean high water datum",
+      "z_m": 0.0,
+      "confidence": "A",
+      "control_refs": [],
+      "notes": "Vertical datum, z = 0.",
+      "ho": {
+        "prototype_m": 0.0,
+        "prototype_ft": 0.0,
+        "prototype_in": 0.0,
+        "ho_mm": 0.0,
+        "ho_in": 0.0,
+        "ho_ft": 0.0
+      }
+    },
+    {
+      "elevation_id": "ELV-CAISSON-TOP",
+      "name": "Top of tower caisson",
+      "z_m": -13.563600000000001,
+      "confidence": "A",
+      "control_refs": [
+        "CTL-031",
+        "CTL-046"
+      ],
+      "notes": "Top of the New York caisson (SRC-016). See CONF-013.",
+      "ho": {
+        "prototype_m": -13.5636,
+        "prototype_ft": -44.5,
+        "prototype_in": -534.0,
+        "ho_mm": -155.7,
+        "ho_in": -6.13,
+        "ho_ft": -0.51
+      }
+    },
+    {
+      "elevation_id": "ELV-PIER-FOOTING",
+      "name": "Masonry pier footing seat",
+      "z_m": -10.0584,
+      "confidence": "A",
+      "control_refs": [
+        "CTL-054"
+      ],
+      "notes": "Concrete footing on which the masonry pier is seated (SRC-016).",
+      "ho": {
+        "prototype_m": -10.0584,
+        "prototype_ft": -33.0,
+        "prototype_in": -396.0,
+        "ho_mm": -115.5,
+        "ho_in": -4.55,
+        "ho_ft": -0.38
+      }
+    },
+    {
+      "elevation_id": "ELV-PIER-TOP",
+      "name": "Top of masonry pier",
+      "z_m": 7.010400000000001,
+      "confidence": "A",
+      "control_refs": [
+        "CTL-030"
+      ],
+      "notes": "Pier capstone, base of the steel tower. Stated explicitly by SRC-016, see CONF-009 and OQ-016.",
+      "ho": {
+        "prototype_m": 7.0104,
+        "prototype_ft": 23.0,
+        "prototype_in": 276.0,
+        "ho_mm": 80.5,
+        "ho_in": 3.17,
+        "ho_ft": 0.26
+      }
+    },
+    {
+      "elevation_id": "ELV-CLEARANCE",
+      "name": "Navigation clearance at midspan",
+      "z_m": 41.148,
+      "confidence": "A",
+      "control_refs": [
+        "CTL-008"
+      ],
+      "notes": "Design clearance; SRC-014 surveys 134 ft, see CONF-007.",
+      "ho": {
+        "prototype_m": 41.148,
+        "prototype_ft": 135.0,
+        "prototype_in": 1620.0,
+        "ho_mm": 472.4,
+        "ho_in": 18.6,
+        "ho_ft": 1.55
+      }
+    },
+    {
+      "elevation_id": "ELV-TRUSS-BOTTOM",
+      "name": "Stiffening truss bottom chord",
+      "z_m": 41.148,
+      "confidence": "B",
+      "control_refs": [
+        "CTL-008"
+      ],
+      "notes": "Bottom chord taken at the clearance plane.",
+      "ho": {
+        "prototype_m": 41.148,
+        "prototype_ft": 135.0,
+        "prototype_in": 1620.0,
+        "ho_mm": 472.4,
+        "ho_in": 18.6,
+        "ho_ft": 1.55
+      }
+    },
+    {
+      "elevation_id": "ELV-TRUSS-TOP",
+      "name": "Stiffening truss top chord",
+      "z_m": 48.4632,
+      "confidence": "A",
+      "control_refs": [
+        "CTL-008",
+        "CTL-010"
+      ],
+      "notes": "Both inputs are grade A. CONF-002 is effectively resolved toward 24 ft.",
+      "ho": {
+        "prototype_m": 48.4632,
+        "prototype_ft": 159.0,
+        "prototype_in": 1908.0,
+        "ho_mm": 556.4,
+        "ho_in": 21.91,
+        "ho_ft": 1.83
+      }
+    },
+    {
+      "elevation_id": "ELV-LOWER-DECK",
+      "name": "Lower roadway running surface",
+      "z_m": 42.18432000000001,
+      "confidence": "D",
+      "control_refs": [
+        "CTL-008",
+        "CTL-104"
+      ],
+      "notes": "Placeholder offset above the clearance plane, see OQ-013.",
+      "ho": {
+        "prototype_m": 42.18432,
+        "prototype_ft": 138.4,
+        "prototype_in": 1660.8,
+        "ho_mm": 484.3,
+        "ho_in": 19.07,
+        "ho_ft": 1.59
+      }
+    },
+    {
+      "elevation_id": "ELV-UPPER-DECK",
+      "name": "Upper roadway running surface",
+      "z_m": 49.3776,
+      "confidence": "D",
+      "control_refs": [
+        "CTL-008",
+        "CTL-010",
+        "CTL-103"
+      ],
+      "notes": "Placeholder deck structure depth above the top chord, see OQ-013.",
+      "ho": {
+        "prototype_m": 49.3776,
+        "prototype_ft": 162.0,
+        "prototype_in": 1944.0,
+        "ho_mm": 566.9,
+        "ho_in": 22.32,
+        "ho_ft": 1.86
+      }
+    },
+    {
+      "elevation_id": "ELV-SADDLE",
+      "name": "Main cable saddle seat",
+      "z_m": 98.298,
+      "confidence": "A",
+      "control_refs": [
+        "CTL-018",
+        "CTL-102"
+      ],
+      "notes": "Stated directly by SRC-015: the fixed saddles carrying the main cables are 322.5 ft above mean high water. See CONF-005.",
+      "ho": {
+        "prototype_m": 98.298,
+        "prototype_ft": 322.5,
+        "prototype_in": 3870.0,
+        "ho_mm": 1128.6,
+        "ho_in": 44.43,
+        "ho_ft": 3.7
+      }
+    },
+    {
+      "elevation_id": "ELV-CABLE-MID",
+      "name": "Main cable low point at midspan",
+      "z_m": 49.3776,
+      "confidence": "D",
+      "control_refs": [
+        "CTL-008",
+        "CTL-010",
+        "CTL-101"
+      ],
+      "notes": "Derived: the cable meets the truss top chord at midspan where suspenders are shortest. Only the minimum suspender length remains a placeholder, see OQ-001.",
+      "ho": {
+        "prototype_m": 49.3776,
+        "prototype_ft": 162.0,
+        "prototype_in": 1944.0,
+        "ho_mm": 566.9,
+        "ho_in": 22.32,
+        "ho_ft": 1.86
+      }
+    },
+    {
+      "elevation_id": "ELV-ANCHOR-POINT",
+      "name": "Cable point at the anchorage",
+      "z_m": 41.148,
+      "confidence": "A",
+      "control_refs": [
+        "CTL-036"
+      ],
+      "notes": "Cable enters at the top of the anchorage block.",
+      "ho": {
+        "prototype_m": 41.148,
+        "prototype_ft": 135.0,
+        "prototype_in": 1620.0,
+        "ho_mm": 472.4,
+        "ho_in": 18.6,
+        "ho_ft": 1.55
+      }
+    }
+  ],
+  "controls": [
+    {
+      "control_id": "CTL-001",
+      "key": "total_bridge_and_approaches_length",
+      "value": 6855.0,
+      "unit": "ft",
+      "value_m": 2089.404,
+      "source_ids": [
+        "SRC-000",
+        "SRC-001",
+        "SRC-011",
+        "SRC-013"
+      ],
+      "confidence": "A",
+      "is_placeholder": false,
+      "notes": "Total bridge including approaches, excluding plazas. Corroborated by the 1909 plaque.",
+      "ho": {
+        "prototype_m": 2089.404,
+        "prototype_ft": 6855.0,
+        "prototype_in": 82260.0,
+        "ho_mm": 23988.6,
+        "ho_in": 944.43,
+        "ho_ft": 78.7
+      }
+    },
+    {
+      "control_id": "CTL-002",
+      "key": "lower_level_abutment_to_abutment",
+      "value": 5790.0,
+      "unit": "ft",
+      "value_m": 1764.7920000000001,
+      "source_ids": [
+        "SRC-000",
+        "SRC-001"
+      ],
+      "confidence": "A",
+      "is_placeholder": false,
+      "notes": "See CONF-003; SRC-011 gives 5779 ft. Placement assumed symmetric, see OQ-002.",
+      "ho": {
+        "prototype_m": 1764.792,
+        "prototype_ft": 5790.0,
+        "prototype_in": 69480.0,
+        "ho_mm": 20261.7,
+        "ho_in": 797.7,
+        "ho_ft": 66.48
+      }
+    },
+    {
+      "control_id": "CTL-003",
+      "key": "upper_roadway_portal_to_portal",
+      "value": 6090.0,
+      "unit": "ft",
+      "value_m": 1856.2320000000002,
+      "source_ids": [
+        "SRC-000",
+        "SRC-001"
+      ],
+      "confidence": "A",
+      "is_placeholder": false,
+      "notes": "See CONF-004; SRC-011 gives 6086 ft. Placement assumed symmetric, see OQ-002.",
+      "ho": {
+        "prototype_m": 1856.232,
+        "prototype_ft": 6090.0,
+        "prototype_in": 73080.0,
+        "ho_mm": 21311.5,
+        "ho_in": 839.04,
+        "ho_ft": 69.92
+      }
+    },
+    {
+      "control_id": "CTL-004",
+      "key": "anchorage_to_anchorage_suspended_length",
+      "value": 2920.0,
+      "unit": "ft",
+      "value_m": 890.0160000000001,
+      "source_ids": [
+        "SRC-000",
+        "SRC-001",
+        "SRC-002",
+        "SRC-011"
+      ],
+      "confidence": "A",
+      "is_placeholder": false,
+      "notes": "Suspended length. Consistent with CTL-005 + 2 x CTL-006.",
+      "ho": {
+        "prototype_m": 890.016,
+        "prototype_ft": 2920.0,
+        "prototype_in": 35040.0,
+        "ho_mm": 10218.3,
+        "ho_in": 402.3,
+        "ho_ft": 33.52
+      }
+    },
+    {
+      "control_id": "CTL-005",
+      "key": "main_span",
+      "value": 1470.0,
+      "unit": "ft",
+      "value_m": 448.05600000000004,
+      "source_ids": [
+        "SRC-000",
+        "SRC-002",
+        "SRC-011",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "A",
+      "is_placeholder": false,
+      "notes": "Tower centerline to tower centerline. Confirmed by two period primaries. See CONF-006.",
+      "ho": {
+        "prototype_m": 448.056,
+        "prototype_ft": 1470.0,
+        "prototype_in": 17640.0,
+        "ho_mm": 5144.2,
+        "ho_in": 202.53,
+        "ho_ft": 16.88
+      }
+    },
+    {
+      "control_id": "CTL-006",
+      "key": "side_span_each",
+      "value": 725.0,
+      "unit": "ft",
+      "value_m": 220.98000000000002,
+      "source_ids": [
+        "SRC-000",
+        "SRC-002",
+        "SRC-011",
+        "SRC-015"
+      ],
+      "confidence": "A",
+      "is_placeholder": false,
+      "notes": "Each suspended side span. Confirmed by a period primary.",
+      "ho": {
+        "prototype_m": 220.98,
+        "prototype_ft": 725.0,
+        "prototype_in": 8700.0,
+        "ho_mm": 2537.1,
+        "ho_in": 99.89,
+        "ho_ft": 8.32
+      }
+    },
+    {
+      "control_id": "CTL-007",
+      "key": "tower_height_above_mhw",
+      "value": 322.0,
+      "unit": "ft",
+      "value_m": 98.1456,
+      "source_ids": [
+        "SRC-000",
+        "SRC-001"
+      ],
+      "confidence": "A",
+      "is_placeholder": false,
+      "notes": "Retained as the handoff value. NOT used for geometry; see CTL-018 and CONF-005.",
+      "ho": {
+        "prototype_m": 98.1456,
+        "prototype_ft": 322.0,
+        "prototype_in": 3864.0,
+        "ho_mm": 1126.8,
+        "ho_in": 44.36,
+        "ho_ft": 3.7
+      }
+    },
+    {
+      "control_id": "CTL-008",
+      "key": "center_clearance_above_mhw",
+      "value": 135.0,
+      "unit": "ft",
+      "value_m": 41.148,
+      "source_ids": [
+        "SRC-000",
+        "SRC-001",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "A",
+      "is_placeholder": false,
+      "notes": "Design clearance at midspan, underside of the suspended structure. Confirmed by two period primaries. SRC-014 surveys 134 ft, see CONF-007.",
+      "ho": {
+        "prototype_m": 41.148,
+        "prototype_ft": 135.0,
+        "prototype_in": 1620.0,
+        "ho_mm": 472.4,
+        "ho_in": 18.6,
+        "ho_ft": 1.55
+      }
+    },
+    {
+      "control_id": "CTL-009",
+      "key": "roadway_width",
+      "value": 46.0,
+      "unit": "ft",
+      "value_m": 14.020800000000001,
+      "source_ids": [
+        "SRC-000",
+        "SRC-001"
+      ],
+      "confidence": "A",
+      "is_placeholder": false,
+      "notes": "Resolved by Milestone 2: this is the sum of the two upper roadways (CTL-026 + CTL-027 = 46.5 ft), not a single deck width. Retained for traceability; geometry uses the individual widths.",
+      "ho": {
+        "prototype_m": 14.0208,
+        "prototype_ft": 46.0,
+        "prototype_in": 552.0,
+        "ho_mm": 161.0,
+        "ho_in": 6.34,
+        "ho_ft": 0.53
+      }
+    },
+    {
+      "control_id": "CTL-010",
+      "key": "stiffening_truss_depth_asce",
+      "value": 24.0,
+      "unit": "ft",
+      "value_m": 7.315200000000001,
+      "source_ids": [
+        "SRC-000",
+        "SRC-002",
+        "SRC-011"
+      ],
+      "confidence": "A",
+      "is_placeholder": false,
+      "notes": "ACTIVE truss depth control. Three independent sources agree. See CONF-002.",
+      "ho": {
+        "prototype_m": 7.3152,
+        "prototype_ft": 24.0,
+        "prototype_in": 288.0,
+        "ho_mm": 84.0,
+        "ho_in": 3.31,
+        "ho_ft": 0.28
+      }
+    },
+    {
+      "control_id": "CTL-011",
+      "key": "stiffening_truss_depth_alt",
+      "value": 26.0,
+      "unit": "ft",
+      "value_m": 7.9248,
+      "source_ids": [
+        "SRC-000",
+        "SRC-012"
+      ],
+      "confidence": "B",
+      "is_placeholder": false,
+      "notes": "Alternate reference depth. Recorded, not used for geometry.",
+      "ho": {
+        "prototype_m": 7.9248,
+        "prototype_ft": 26.0,
+        "prototype_in": 312.0,
+        "ho_mm": 91.0,
+        "ho_in": 3.58,
+        "ho_ft": 0.3
+      }
+    },
+    {
+      "control_id": "CTL-012",
+      "key": "main_cable_length",
+      "value": 3224.0,
+      "unit": "ft",
+      "value_m": 982.6752,
+      "source_ids": [
+        "SRC-000",
+        "SRC-001",
+        "SRC-013"
+      ],
+      "confidence": "A",
+      "is_placeholder": false,
+      "notes": "The 1909 plaque states \"length of each of the four cables\". This resolves OQ-005: the figure is per cable and includes the anchorage-embedded run.",
+      "ho": {
+        "prototype_m": 982.6752,
+        "prototype_ft": 3224.0,
+        "prototype_in": 38688.0,
+        "ho_mm": 11282.1,
+        "ho_in": 444.18,
+        "ho_ft": 37.01
+      }
+    },
+    {
+      "control_id": "CTL-013",
+      "key": "main_cable_diameter_asce",
+      "value": 20.75,
+      "unit": "in",
+      "value_m": 0.52705,
+      "source_ids": [
+        "SRC-000",
+        "SRC-002"
+      ],
+      "confidence": "A",
+      "is_placeholder": false,
+      "notes": "See CONF-001.",
+      "ho": {
+        "prototype_m": 0.52705,
+        "prototype_ft": 1.7292,
+        "prototype_in": 20.75,
+        "ho_mm": 6.05,
+        "ho_in": 0.238,
+        "ho_ft": 0.02
+      }
+    },
+    {
+      "control_id": "CTL-014",
+      "key": "main_cable_diameter_haer",
+      "value": 21.25,
+      "unit": "in",
+      "value_m": 0.53975,
+      "source_ids": [
+        "SRC-000",
+        "SRC-015"
+      ],
+      "confidence": "A",
+      "is_placeholder": false,
+      "notes": "**Measured on the wires, excluding wrapping and sheathing** (SRC-015, direct). This qualifier largely explains CONF-001.",
+      "ho": {
+        "prototype_m": 0.53975,
+        "prototype_ft": 1.7708,
+        "prototype_in": 21.25,
+        "ho_mm": 6.2,
+        "ho_in": 0.244,
+        "ho_ft": 0.02
+      }
+    },
+    {
+      "control_id": "CTL-015",
+      "key": "main_cable_count",
+      "value": 4.0,
+      "unit": "count",
+      "value_m": 4.0,
+      "source_ids": [
+        "SRC-002",
+        "SRC-011",
+        "SRC-013",
+        "SRC-015"
+      ],
+      "confidence": "A",
+      "is_placeholder": false,
+      "notes": "",
+      "ho": null
+    },
+    {
+      "control_id": "CTL-016",
+      "key": "subway_track_count",
+      "value": 4.0,
+      "unit": "count",
+      "value_m": 4.0,
+      "source_ids": [
+        "SRC-011",
+        "SRC-012"
+      ],
+      "confidence": "A",
+      "is_placeholder": false,
+      "notes": "Present-day arrangement: two tracks under each of the two upper roadways, all on the lower level. The 1908 design differed, see CONF-011.",
+      "ho": null
+    },
+    {
+      "control_id": "CTL-017",
+      "key": "subway_track_gauge",
+      "value": 4.708333,
+      "unit": "ft",
+      "value_m": 1.4350998984,
+      "source_ids": [
+        "SRC-010"
+      ],
+      "confidence": "B",
+      "is_placeholder": false,
+      "notes": "Standard gauge, 4 ft 8.5 in. Applicability to be confirmed against SRC-004.",
+      "ho": {
+        "prototype_m": 1.4351,
+        "prototype_ft": 4.7083,
+        "prototype_in": 56.5,
+        "ho_mm": 16.5,
+        "ho_in": 0.649,
+        "ho_ft": 0.05
+      }
+    },
+    {
+      "control_id": "CTL-018",
+      "key": "cable_saddle_elevation",
+      "value": 322.5,
+      "unit": "ft",
+      "value_m": 98.298,
+      "source_ids": [
+        "SRC-015"
+      ],
+      "confidence": "A",
+      "is_placeholder": false,
+      "notes": "**ACTIVE saddle control.** SRC-015: the fixed saddles bolted to the tower tops, carrying the main cables, are 322.5 ft above mean high water. Agrees with the handoff's CTL-007. Replaces the 330 ft transmitted figure. See CONF-005.",
+      "ho": {
+        "prototype_m": 98.298,
+        "prototype_ft": 322.5,
+        "prototype_in": 3870.0,
+        "ho_mm": 1128.6,
+        "ho_in": 44.43,
+        "ho_ft": 3.7
+      }
+    },
+    {
+      "control_id": "CTL-019",
+      "key": "tower_height_plaque",
+      "value": 336.0,
+      "unit": "ft",
+      "value_m": 102.4128,
+      "source_ids": [
+        "SRC-013"
+      ],
+      "confidence": "A",
+      "is_placeholder": false,
+      "notes": "\"Height of steel towers above mean high water\" on the 1909 plaque. Recorded, not used for geometry.",
+      "ho": {
+        "prototype_m": 102.4128,
+        "prototype_ft": 336.0,
+        "prototype_in": 4032.0,
+        "ho_mm": 1175.8,
+        "ho_in": 46.29,
+        "ho_ft": 3.86
+      }
+    },
+    {
+      "control_id": "CTL-020",
+      "key": "tower_finial_height",
+      "value": 350.0,
+      "unit": "ft",
+      "value_m": 106.68,
+      "source_ids": [
+        "SRC-012"
+      ],
+      "confidence": "B",
+      "is_placeholder": false,
+      "notes": "Ornamental finials above high water. Recorded, not used for geometry.",
+      "ho": {
+        "prototype_m": 106.68,
+        "prototype_ft": 350.0,
+        "prototype_in": 4200.0,
+        "ho_mm": 1224.8,
+        "ho_in": 48.22,
+        "ho_ft": 4.02
+      }
+    },
+    {
+      "control_id": "CTL-021",
+      "key": "deck_overall_width",
+      "value": 120.0,
+      "unit": "ft",
+      "value_m": 36.576,
+      "source_ids": [
+        "SRC-011",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "A",
+      "is_placeholder": false,
+      "notes": "\"A double-deck structure about 120 feet wide\" (SRC-016); \"the total width of the floor of the bridge will be 120 feet\" (SRC-015).",
+      "ho": {
+        "prototype_m": 36.576,
+        "prototype_ft": 120.0,
+        "prototype_in": 1440.0,
+        "ho_mm": 419.9,
+        "ho_in": 16.53,
+        "ho_ft": 1.38
+      }
+    },
+    {
+      "control_id": "CTL-022",
+      "key": "truss_offset_inner",
+      "value": 20.0,
+      "unit": "ft",
+      "value_m": 6.096,
+      "source_ids": [
+        "SRC-011",
+        "SRC-015"
+      ],
+      "confidence": "A",
+      "is_placeholder": false,
+      "notes": "Trusses B and C. SRC-015: \"a spacing of 40 feet between the inside trusses\", so 20 ft each side of centerline.",
+      "ho": {
+        "prototype_m": 6.096,
+        "prototype_ft": 20.0,
+        "prototype_in": 240.0,
+        "ho_mm": 70.0,
+        "ho_in": 2.76,
+        "ho_ft": 0.23
+      }
+    },
+    {
+      "control_id": "CTL-023",
+      "key": "truss_offset_outer",
+      "value": 48.0,
+      "unit": "ft",
+      "value_m": 14.630400000000002,
+      "source_ids": [
+        "SRC-011",
+        "SRC-015"
+      ],
+      "confidence": "A",
+      "is_placeholder": false,
+      "notes": "Trusses A and D. SRC-015: \"each pair of trusses will measure 28 feet from center to center\", so 20 + 28 ft.",
+      "ho": {
+        "prototype_m": 14.6304,
+        "prototype_ft": 48.0,
+        "prototype_in": 576.0,
+        "ho_mm": 168.0,
+        "ho_in": 6.61,
+        "ho_ft": 0.55
+      }
+    },
+    {
+      "control_id": "CTL-024",
+      "key": "lower_roadway_width",
+      "value": 35.0,
+      "unit": "ft",
+      "value_m": 10.668000000000001,
+      "source_ids": [
+        "SRC-011",
+        "SRC-013",
+        "SRC-015"
+      ],
+      "confidence": "A",
+      "is_placeholder": false,
+      "notes": "SRC-015: \"the central roadway for vehicles 35 feet wide will occupy the center of the bridge on the level of the lower deck of the trusses\".",
+      "ho": {
+        "prototype_m": 10.668,
+        "prototype_ft": 35.0,
+        "prototype_in": 420.0,
+        "ho_mm": 122.5,
+        "ho_in": 4.82,
+        "ho_ft": 0.4
+      }
+    },
+    {
+      "control_id": "CTL-025",
+      "key": "footwalk_width",
+      "value": 10.0,
+      "unit": "ft",
+      "value_m": 3.048,
+      "source_ids": [
+        "SRC-011",
+        "SRC-013",
+        "SRC-015"
+      ],
+      "confidence": "A",
+      "is_placeholder": false,
+      "notes": "SRC-015: \"two footways each 10 feet wide, will be [carried on] the outside of the outer trusses, on cantilever extensions of the floor beams\".",
+      "ho": {
+        "prototype_m": 3.048,
+        "prototype_ft": 10.0,
+        "prototype_in": 120.0,
+        "ho_mm": 35.0,
+        "ho_in": 1.38,
+        "ho_ft": 0.11
+      }
+    },
+    {
+      "control_id": "CTL-026",
+      "key": "upper_roadway_east_width",
+      "value": 24.0,
+      "unit": "ft",
+      "value_m": 7.315200000000001,
+      "source_ids": [
+        "SRC-012"
+      ],
+      "confidence": "B",
+      "is_placeholder": false,
+      "notes": "Manhattan-bound, north-east side, carried on trusses C-D. A later arrangement than SRC-015 describes.",
+      "ho": {
+        "prototype_m": 7.3152,
+        "prototype_ft": 24.0,
+        "prototype_in": 288.0,
+        "ho_mm": 84.0,
+        "ho_in": 3.31,
+        "ho_ft": 0.28
+      }
+    },
+    {
+      "control_id": "CTL-027",
+      "key": "upper_roadway_west_width",
+      "value": 22.5,
+      "unit": "ft",
+      "value_m": 6.8580000000000005,
+      "source_ids": [
+        "SRC-012"
+      ],
+      "confidence": "B",
+      "is_placeholder": false,
+      "notes": "Brooklyn-bound, south-west side, carried on trusses A-B.",
+      "ho": {
+        "prototype_m": 6.858,
+        "prototype_ft": 22.5,
+        "prototype_in": 270.0,
+        "ho_mm": 78.7,
+        "ho_in": 3.1,
+        "ho_ft": 0.26
+      }
+    },
+    {
+      "control_id": "CTL-028",
+      "key": "tower_pier_extent_x",
+      "value": 68.0,
+      "unit": "ft",
+      "value_m": 20.7264,
+      "source_ids": [
+        "SRC-016"
+      ],
+      "confidence": "A",
+      "is_placeholder": false,
+      "notes": "Masonry pier at the capstone, measured along the bridge. \"About 68 feet wide ... on top\" (SRC-016, direct).",
+      "ho": {
+        "prototype_m": 20.7264,
+        "prototype_ft": 68.0,
+        "prototype_in": 816.0,
+        "ho_mm": 238.0,
+        "ho_in": 9.37,
+        "ho_ft": 0.78
+      }
+    },
+    {
+      "control_id": "CTL-029",
+      "key": "tower_pier_extent_y",
+      "value": 134.0,
+      "unit": "ft",
+      "value_m": 40.8432,
+      "source_ids": [
+        "SRC-016"
+      ],
+      "confidence": "A",
+      "is_placeholder": false,
+      "notes": "Masonry pier at the capstone, measured transversely. Slightly wider than the 120 ft deck, as expected.",
+      "ho": {
+        "prototype_m": 40.8432,
+        "prototype_ft": 134.0,
+        "prototype_in": 1608.0,
+        "ho_mm": 468.9,
+        "ho_in": 18.46,
+        "ho_ft": 1.54
+      }
+    },
+    {
+      "control_id": "CTL-030",
+      "key": "tower_pier_top_above_mhw",
+      "value": 23.0,
+      "unit": "ft",
+      "value_m": 7.010400000000001,
+      "source_ids": [
+        "SRC-016"
+      ],
+      "confidence": "A",
+      "is_placeholder": false,
+      "notes": "\"At a height of about 23 feet above mean high tide\" (SRC-016, direct, explicit). Supersedes the 31 ft I derived from SRC-015's summary heights. See CONF-009 and OQ-016.",
+      "ho": {
+        "prototype_m": 7.0104,
+        "prototype_ft": 23.0,
+        "prototype_in": 276.0,
+        "ho_mm": 80.5,
+        "ho_in": 3.17,
+        "ho_ft": 0.26
+      }
+    },
+    {
+      "control_id": "CTL-031",
+      "key": "tower_foundation_depth_below_mhw",
+      "value": 92.0,
+      "unit": "ft",
+      "value_m": 28.041600000000003,
+      "source_ids": [
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "A",
+      "is_placeholder": false,
+      "notes": "\"The cutting edge was sunk to a depth of 92 feet below mean high water\" (SRC-016). Independently confirmed by SRC-015. Retires OQ-003.",
+      "ho": {
+        "prototype_m": 28.0416,
+        "prototype_ft": 92.0,
+        "prototype_in": 1104.0,
+        "ho_mm": 321.9,
+        "ho_in": 12.68,
+        "ho_ft": 1.06
+      }
+    },
+    {
+      "control_id": "CTL-032",
+      "key": "tower_pedestal_extent_x",
+      "value": 18.0,
+      "unit": "ft",
+      "value_m": 5.486400000000001,
+      "source_ids": [
+        "SRC-012"
+      ],
+      "confidence": "B",
+      "is_placeholder": false,
+      "notes": "Steel pedestal, longitudinal. The SRC-015 figure is damaged in OCR (\"158 feet by 43 feet\"), so the transmitted value is retained.",
+      "ho": {
+        "prototype_m": 5.4864,
+        "prototype_ft": 18.0,
+        "prototype_in": 216.0,
+        "ho_mm": 63.0,
+        "ho_in": 2.48,
+        "ho_ft": 0.21
+      }
+    },
+    {
+      "control_id": "CTL-033",
+      "key": "tower_pedestal_extent_y",
+      "value": 43.0,
+      "unit": "ft",
+      "value_m": 13.1064,
+      "source_ids": [
+        "SRC-012",
+        "SRC-015"
+      ],
+      "confidence": "A",
+      "is_placeholder": false,
+      "notes": "Steel pedestal, transverse. Confirmed directly by SRC-015.",
+      "ho": {
+        "prototype_m": 13.1064,
+        "prototype_ft": 43.0,
+        "prototype_in": 516.0,
+        "ho_mm": 150.5,
+        "ho_in": 5.92,
+        "ho_ft": 0.49
+      }
+    },
+    {
+      "control_id": "CTL-034",
+      "key": "anchorage_extent_x",
+      "value": 237.0,
+      "unit": "ft",
+      "value_m": 72.2376,
+      "source_ids": [
+        "SRC-012",
+        "SRC-015"
+      ],
+      "confidence": "A",
+      "is_placeholder": false,
+      "notes": "Anchorage length on the base, confirmed by the SRC-015 plate caption.",
+      "ho": {
+        "prototype_m": 72.2376,
+        "prototype_ft": 237.0,
+        "prototype_in": 2844.0,
+        "ho_mm": 829.4,
+        "ho_in": 32.65,
+        "ho_ft": 2.72
+      }
+    },
+    {
+      "control_id": "CTL-035",
+      "key": "anchorage_extent_y",
+      "value": 182.0,
+      "unit": "ft",
+      "value_m": 55.473600000000005,
+      "source_ids": [
+        "SRC-012"
+      ],
+      "confidence": "B",
+      "is_placeholder": false,
+      "notes": "Anchorage width. The SRC-015 sentence is damaged in OCR (\"covers ... feet 10 inches\"), so the transmitted value is retained.",
+      "ho": {
+        "prototype_m": 55.4736,
+        "prototype_ft": 182.0,
+        "prototype_in": 2184.0,
+        "ho_mm": 636.9,
+        "ho_in": 25.07,
+        "ho_ft": 2.09
+      }
+    },
+    {
+      "control_id": "CTL-036",
+      "key": "anchorage_extent_z",
+      "value": 135.0,
+      "unit": "ft",
+      "value_m": 41.148,
+      "source_ids": [
+        "SRC-012",
+        "SRC-015"
+      ],
+      "confidence": "A",
+      "is_placeholder": false,
+      "notes": "Anchorage height, confirmed by the SRC-015 plate caption.",
+      "ho": {
+        "prototype_m": 41.148,
+        "prototype_ft": 135.0,
+        "prototype_in": 1620.0,
+        "ho_mm": 472.4,
+        "ho_in": 18.6,
+        "ho_ft": 1.55
+      }
+    },
+    {
+      "control_id": "CTL-037",
+      "key": "suspender_panel_points_total",
+      "value": 628.0,
+      "unit": "count",
+      "value_m": 628.0,
+      "source_ids": [
+        "SRC-011"
+      ],
+      "confidence": "A",
+      "is_placeholder": false,
+      "notes": "Panel points across all four cables, from the 2009-2013 suspender replacement contract.",
+      "ho": null
+    },
+    {
+      "control_id": "CTL-038",
+      "key": "suspender_rope_count",
+      "value": 1256.0,
+      "unit": "count",
+      "value_m": 1256.0,
+      "source_ids": [
+        "SRC-011"
+      ],
+      "confidence": "A",
+      "is_placeholder": false,
+      "notes": "Two ropes per panel point.",
+      "ho": null
+    },
+    {
+      "control_id": "CTL-039",
+      "key": "manhattan_approach_and_plaza_length",
+      "value": 2510.0,
+      "unit": "ft",
+      "value_m": 765.048,
+      "source_ids": [
+        "SRC-012"
+      ],
+      "confidence": "B",
+      "is_placeholder": false,
+      "notes": "As quoted when the bridge was built. Used only for the approach length **ratio**, see CTL-119 derivation.",
+      "ho": {
+        "prototype_m": 765.048,
+        "prototype_ft": 2510.0,
+        "prototype_in": 30120.0,
+        "ho_mm": 8783.6,
+        "ho_in": 345.81,
+        "ho_ft": 28.82
+      }
+    },
+    {
+      "control_id": "CTL-040",
+      "key": "brooklyn_approach_and_plaza_length",
+      "value": 2370.0,
+      "unit": "ft",
+      "value_m": 722.3760000000001,
+      "source_ids": [
+        "SRC-012"
+      ],
+      "confidence": "B",
+      "is_placeholder": false,
+      "notes": "As above.",
+      "ho": {
+        "prototype_m": 722.376,
+        "prototype_ft": 2370.0,
+        "prototype_in": 28440.0,
+        "ho_mm": 8293.6,
+        "ho_in": 326.52,
+        "ho_ft": 27.21
+      }
+    },
+    {
+      "control_id": "CTL-041",
+      "key": "cable_wire_count",
+      "value": 9472.0,
+      "unit": "count",
+      "value_m": 9472.0,
+      "source_ids": [
+        "SRC-011",
+        "SRC-015"
+      ],
+      "confidence": "A",
+      "is_placeholder": false,
+      "notes": "37 strands of 256 wires, confirmed by a period primary. See CONF-008.",
+      "ho": null
+    },
+    {
+      "control_id": "CTL-042",
+      "key": "main_cable_diameter_measured",
+      "value": 21.2,
+      "unit": "in",
+      "value_m": 0.53848,
+      "source_ids": [
+        "SRC-011"
+      ],
+      "confidence": "A",
+      "is_placeholder": false,
+      "notes": "Modern measured overall diameter, 55.2 cm. See CONF-001.",
+      "ho": {
+        "prototype_m": 0.53848,
+        "prototype_ft": 1.7667,
+        "prototype_in": 21.2,
+        "ho_mm": 6.18,
+        "ho_in": 0.243,
+        "ho_ft": 0.02
+      }
+    },
+    {
+      "control_id": "CTL-043",
+      "key": "cable_wire_diameter",
+      "value": 0.198,
+      "unit": "in",
+      "value_m": 0.0050292,
+      "source_ids": [
+        "SRC-011"
+      ],
+      "confidence": "A",
+      "is_placeholder": false,
+      "notes": "5 mm, modern measurement. See CONF-010.",
+      "ho": {
+        "prototype_m": 0.005029,
+        "prototype_ft": 0.0165,
+        "prototype_in": 0.198,
+        "ho_mm": 0.06,
+        "ho_in": 0.002,
+        "ho_ft": 0.0
+      }
+    },
+    {
+      "control_id": "CTL-044",
+      "key": "cable_wire_diameter_sa",
+      "value": 0.1875,
+      "unit": "in",
+      "value_m": 0.004762499999999999,
+      "source_ids": [
+        "SRC-015"
+      ],
+      "confidence": "A",
+      "is_placeholder": false,
+      "notes": "3/16 in as designed. See CONF-010. Recorded, not used for geometry.",
+      "ho": {
+        "prototype_m": 0.004762,
+        "prototype_ft": 0.0156,
+        "prototype_in": 0.1875,
+        "ho_mm": 0.05,
+        "ho_in": 0.002,
+        "ho_ft": 0.0
+      }
+    },
+    {
+      "control_id": "CTL-045",
+      "key": "tower_steel_height_1904",
+      "value": 330.0,
+      "unit": "ft",
+      "value_m": 100.584,
+      "source_ids": [
+        "SRC-016"
+      ],
+      "confidence": "A",
+      "is_placeholder": false,
+      "notes": "\"The towers are to be of steel 330 feet high\" (SRC-016, direct). This is the height of the steel tower, **not** the tops of the cables as SRC-012 glossed it. Consistent with a saddle at 322.5 ft sitting below the tower top. Recorded, not used for geometry.",
+      "ho": {
+        "prototype_m": 100.584,
+        "prototype_ft": 330.0,
+        "prototype_in": 3960.0,
+        "ho_mm": 1154.8,
+        "ho_in": 45.46,
+        "ho_ft": 3.79
+      }
+    },
+    {
+      "control_id": "CTL-046",
+      "key": "tower_caisson_height",
+      "value": 47.5,
+      "unit": "ft",
+      "value_m": 14.478000000000002,
+      "source_ids": [
+        "SRC-016"
+      ],
+      "confidence": "A",
+      "is_placeholder": false,
+      "notes": "\"The New York caisson is 78 feet wide, 144 feet long and 47.5 feet high\" (SRC-016, direct). See CONF-013.",
+      "ho": {
+        "prototype_m": 14.478,
+        "prototype_ft": 47.5,
+        "prototype_in": 570.0,
+        "ho_mm": 166.2,
+        "ho_in": 6.54,
+        "ho_ft": 0.55
+      }
+    },
+    {
+      "control_id": "CTL-047",
+      "key": "tower_pier_masonry_height",
+      "value": 67.0,
+      "unit": "ft",
+      "value_m": 20.4216,
+      "source_ids": [
+        "SRC-015"
+      ],
+      "confidence": "A",
+      "is_placeholder": false,
+      "notes": "Solid masonry carried above the caisson (SRC-015). Does not reconcile with the SRC-016 elevations, see OQ-016. Recorded, not used for geometry.",
+      "ho": {
+        "prototype_m": 20.4216,
+        "prototype_ft": 67.0,
+        "prototype_in": 804.0,
+        "ho_mm": 234.5,
+        "ho_in": 9.23,
+        "ho_ft": 0.77
+      }
+    },
+    {
+      "control_id": "CTL-048",
+      "key": "tower_foundation_to_capstone_height",
+      "value": 123.0,
+      "unit": "ft",
+      "value_m": 37.4904,
+      "source_ids": [
+        "SRC-015"
+      ],
+      "confidence": "A",
+      "is_placeholder": false,
+      "notes": "Total height, foundation to pier capstone (SRC-015). Against SRC-016's explicit elevations this would be 115 ft. Recorded, not used for geometry. See OQ-016.",
+      "ho": {
+        "prototype_m": 37.4904,
+        "prototype_ft": 123.0,
+        "prototype_in": 1476.0,
+        "ho_mm": 430.4,
+        "ho_in": 16.95,
+        "ho_ft": 1.41
+      }
+    },
+    {
+      "control_id": "CTL-049",
+      "key": "tower_caisson_extent_x",
+      "value": 78.0,
+      "unit": "ft",
+      "value_m": 23.7744,
+      "source_ids": [
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "A",
+      "is_placeholder": false,
+      "notes": "Foundation footprint along the length of the bridge. Confirmed by both period primaries.",
+      "ho": {
+        "prototype_m": 23.7744,
+        "prototype_ft": 78.0,
+        "prototype_in": 936.0,
+        "ho_mm": 273.0,
+        "ho_in": 10.75,
+        "ho_ft": 0.9
+      }
+    },
+    {
+      "control_id": "CTL-050",
+      "key": "tower_caisson_extent_y",
+      "value": 144.0,
+      "unit": "ft",
+      "value_m": 43.891200000000005,
+      "source_ids": [
+        "SRC-015",
+        "SRC-016"
+      ],
+      "confidence": "A",
+      "is_placeholder": false,
+      "notes": "Foundation footprint measured transversely. Confirmed by both period primaries.",
+      "ho": {
+        "prototype_m": 43.8912,
+        "prototype_ft": 144.0,
+        "prototype_in": 1728.0,
+        "ho_mm": 503.9,
+        "ho_in": 19.84,
+        "ho_ft": 1.65
+      }
+    },
+    {
+      "control_id": "CTL-051",
+      "key": "tower_pedestal_depth",
+      "value": 5.5,
+      "unit": "ft",
+      "value_m": 1.6764000000000001,
+      "source_ids": [
+        "SRC-015"
+      ],
+      "confidence": "A",
+      "is_placeholder": false,
+      "notes": "Wrought-steel pedestal total depth. Recorded, not used for geometry.",
+      "ho": {
+        "prototype_m": 1.6764,
+        "prototype_ft": 5.5,
+        "prototype_in": 66.0,
+        "ho_mm": 19.2,
+        "ho_in": 0.758,
+        "ho_ft": 0.06
+      }
+    },
+    {
+      "control_id": "CTL-052",
+      "key": "anchorage_arch_width",
+      "value": 46.0,
+      "unit": "ft",
+      "value_m": 14.020800000000001,
+      "source_ids": [
+        "SRC-015"
+      ],
+      "confidence": "A",
+      "is_placeholder": false,
+      "notes": "Street thoroughfare arch through each anchorage. Recorded for Milestone 4.",
+      "ho": {
+        "prototype_m": 14.0208,
+        "prototype_ft": 46.0,
+        "prototype_in": 552.0,
+        "ho_mm": 161.0,
+        "ho_in": 6.34,
+        "ho_ft": 0.53
+      }
+    },
+    {
+      "control_id": "CTL-053",
+      "key": "tower_caisson_height_sa",
+      "value": 56.0,
+      "unit": "ft",
+      "value_m": 17.0688,
+      "source_ids": [
+        "SRC-015"
+      ],
+      "confidence": "A",
+      "is_placeholder": false,
+      "notes": "Alternate caisson height. Recorded, not used for geometry. See CONF-013.",
+      "ho": {
+        "prototype_m": 17.0688,
+        "prototype_ft": 56.0,
+        "prototype_in": 672.0,
+        "ho_mm": 196.0,
+        "ho_in": 7.72,
+        "ho_ft": 0.64
+      }
+    },
+    {
+      "control_id": "CTL-054",
+      "key": "tower_pier_footing_below_mhw",
+      "value": 33.0,
+      "unit": "ft",
+      "value_m": 10.0584,
+      "source_ids": [
+        "SRC-016"
+      ],
+      "confidence": "A",
+      "is_placeholder": false,
+      "notes": "Piers \"seated on concrete footings about 33 feet below high water level\". The masonry pier runs from here to the capstone.",
+      "ho": {
+        "prototype_m": 10.0584,
+        "prototype_ft": 33.0,
+        "prototype_in": 396.0,
+        "ho_mm": 115.5,
+        "ho_in": 4.55,
+        "ho_ft": 0.38
+      }
+    },
+    {
+      "control_id": "CTL-055",
+      "key": "tower_rock_depth_min_below_mhw",
+      "value": 100.0,
+      "unit": "ft",
+      "value_m": 30.48,
+      "source_ids": [
+        "SRC-016"
+      ],
+      "confidence": "A",
+      "is_placeholder": false,
+      "notes": "Test borings located rock 100 to 129 ft below MHW. The caisson stopped above it, on dense sand and gravel. Recorded for context.",
+      "ho": {
+        "prototype_m": 30.48,
+        "prototype_ft": 100.0,
+        "prototype_in": 1200.0,
+        "ho_mm": 349.9,
+        "ho_in": 13.78,
+        "ho_ft": 1.15
+      }
+    },
+    {
+      "control_id": "CTL-056",
+      "key": "tower_leg_width_transverse",
+      "value": 5.0,
+      "unit": "ft",
+      "value_m": 1.524,
+      "source_ids": [
+        "SRC-015"
+      ],
+      "confidence": "A",
+      "is_placeholder": false,
+      "notes": "\"Each leg having a uniform width transversely to the axis of the bridge of 5 feet\" (SRC-015, direct).",
+      "ho": {
+        "prototype_m": 1.524,
+        "prototype_ft": 5.0,
+        "prototype_in": 60.0,
+        "ho_mm": 17.5,
+        "ho_in": 0.689,
+        "ho_ft": 0.06
+      }
+    },
+    {
+      "control_id": "CTL-062",
+      "key": "floor_beam_depth",
+      "value": 37.0,
+      "unit": "in",
+      "value_m": 0.9398,
+      "source_ids": [
+        "SRC-012",
+        "SRC-018"
+      ],
+      "confidence": "B",
+      "is_placeholder": false,
+      "notes": "Floor beams under the lower level. Stated by SRC-018 without a citation and by SRC-012 citing a 1930s newspaper account; no engineering primary examined. Used only to ground the CTL-104 placeholder, see OQ-013.",
+      "ho": {
+        "prototype_m": 0.9398,
+        "prototype_ft": 3.0833,
+        "prototype_in": 37.0,
+        "ho_mm": 10.8,
+        "ho_in": 0.425,
+        "ho_ft": 0.04
+      }
+    },
+    {
+      "control_id": "CTL-057",
+      "key": "tower_leg_length_at_base",
+      "value": 32.0,
+      "unit": "ft",
+      "value_m": 9.7536,
+      "source_ids": [
+        "SRC-015"
+      ],
+      "confidence": "A",
+      "is_placeholder": false,
+      "notes": "Leg dimension parallel to the bridge axis at the pedestal. \"Varying from 32 feet at the base to 10 feet at the top.\"",
+      "ho": {
+        "prototype_m": 9.7536,
+        "prototype_ft": 32.0,
+        "prototype_in": 384.0,
+        "ho_mm": 112.0,
+        "ho_in": 4.41,
+        "ho_ft": 0.37
+      }
+    },
+    {
+      "control_id": "CTL-058",
+      "key": "tower_leg_length_at_top",
+      "value": 10.0,
+      "unit": "ft",
+      "value_m": 3.048,
+      "source_ids": [
+        "SRC-015"
+      ],
+      "confidence": "A",
+      "is_placeholder": false,
+      "notes": "Leg dimension parallel to the bridge axis at the tower top.",
+      "ho": {
+        "prototype_m": 3.048,
+        "prototype_ft": 10.0,
+        "prototype_in": 120.0,
+        "ho_mm": 35.0,
+        "ho_in": 1.38,
+        "ho_ft": 0.11
+      }
+    },
+    {
+      "control_id": "CTL-059",
+      "key": "tower_leg_count",
+      "value": 4.0,
+      "unit": "count",
+      "value_m": 4.0,
+      "source_ids": [
+        "SRC-015"
+      ],
+      "confidence": "A",
+      "is_placeholder": false,
+      "notes": "\"Four huge box-section legs heavily braced together.\" The legs stand in the planes of the four stiffening trusses (SRC-015: \"the suspended roadway will consist of four trusses carried in the planes of the legs of the towers\"), so their transverse positions are CTL-022 and CTL-023.",
+      "ho": null
+    },
+    {
+      "control_id": "CTL-060",
+      "key": "tower_diaphragm_depth",
+      "value": 7.5,
+      "unit": "ft",
+      "value_m": 2.286,
+      "source_ids": [
+        "SRC-015"
+      ],
+      "confidence": "B",
+      "is_placeholder": false,
+      "notes": "\"Two intersecting plate-steel diaphragms of a general I section, which are 7.5 feet in depth.\" The OCR reads \"714 feet\", almost certainly 7 1/2. Recorded, not used for geometry.",
+      "ho": {
+        "prototype_m": 2.286,
+        "prototype_ft": 7.5,
+        "prototype_in": 90.0,
+        "ho_mm": 26.2,
+        "ho_in": 1.03,
+        "ho_ft": 0.09
+      }
+    },
+    {
+      "control_id": "CTL-061",
+      "key": "truss_panel_length",
+      "value": 18.6076,
+      "unit": "ft",
+      "value_m": 5.671596480000001,
+      "source_ids": [
+        "SRC-011"
+      ],
+      "confidence": "B",
+      "is_placeholder": false,
+      "notes": "Warren truss panel length, derived from the sourced 628 panel points (CTL-037). Recorded here so the truss webbing and the suspender pitch share one control. See section 4.4.",
+      "ho": {
+        "prototype_m": 5.671596,
+        "prototype_ft": 18.6076,
+        "prototype_in": 223.2912,
+        "ho_mm": 65.1,
+        "ho_in": 2.56,
+        "ho_ft": 0.21
+      }
+    },
+    {
+      "control_id": "CTL-101",
+      "key": "min_suspender_length_at_midspan",
+      "value": 3.0,
+      "unit": "ft",
+      "value_m": 0.9144000000000001,
+      "source_ids": [],
+      "confidence": "D",
+      "is_placeholder": true,
+      "notes": "PLACEHOLDER. Vertical gap between the truss top chord and the main cable at midspan, which is what sets the sag. Bounded above by the fact that the cable must clear the chord and below by zero, so the derived sag is accurate to a few feet. Retired by SRC-004. See OQ-001.",
+      "ho": {
+        "prototype_m": 0.9144,
+        "prototype_ft": 3.0,
+        "prototype_in": 36.0,
+        "ho_mm": 10.5,
+        "ho_in": 0.413,
+        "ho_ft": 0.03
+      }
+    },
+    {
+      "control_id": "CTL-102",
+      "key": "cable_saddle_drop_below_cable_top",
+      "value": 0.0,
+      "unit": "ft",
+      "value_m": 0.0,
+      "source_ids": [],
+      "confidence": "D",
+      "is_placeholder": true,
+      "notes": "PLACEHOLDER. Drop from the top of the cable at the tower (CTL-018) to the cable centerline at the saddle seat. Currently zero, so the model treats CTL-018 as the cable centerline. Retired by SRC-004.",
+      "ho": {
+        "prototype_m": 0.0,
+        "prototype_ft": 0.0,
+        "prototype_in": 0.0,
+        "ho_mm": 0.0,
+        "ho_in": 0.0,
+        "ho_ft": 0.0
+      }
+    },
+    {
+      "control_id": "CTL-103",
+      "key": "upper_deck_structure_depth",
+      "value": 3.0,
+      "unit": "ft",
+      "value_m": 0.9144000000000001,
+      "source_ids": [],
+      "confidence": "D",
+      "is_placeholder": true,
+      "notes": "PLACEHOLDER. Structural depth of the upper roadway deck above the truss top chord. Retired by SRC-004. See OQ-013.",
+      "ho": {
+        "prototype_m": 0.9144,
+        "prototype_ft": 3.0,
+        "prototype_in": 36.0,
+        "ho_mm": 10.5,
+        "ho_in": 0.413,
+        "ho_ft": 0.03
+      }
+    },
+    {
+      "control_id": "CTL-104",
+      "key": "lower_deck_offset_above_clearance",
+      "value": 3.4,
+      "unit": "ft",
+      "value_m": 1.0363200000000001,
+      "source_ids": [],
+      "confidence": "D",
+      "is_placeholder": true,
+      "notes": "PLACEHOLDER, but no longer arbitrary. The floor beams under the lower level are 37 in deep (CTL-062), so the running surface must sit at least that far above the clearance plane; 3.4 ft adds a nominal 4 in of deck. Was a flat 2 ft guess at Milestone 1. Retired by SRC-004. See OQ-013.",
+      "ho": {
+        "prototype_m": 1.03632,
+        "prototype_ft": 3.4,
+        "prototype_in": 40.8,
+        "ho_mm": 11.9,
+        "ho_in": 0.468,
+        "ho_ft": 0.04
+      }
+    },
+    {
+      "control_id": "CTL-105",
+      "key": "subway_track_bay_inner_offset",
+      "value": 27.0,
+      "unit": "ft",
+      "value_m": 8.2296,
+      "source_ids": [],
+      "confidence": "D",
+      "is_placeholder": true,
+      "notes": "PLACEHOLDER. Transverse offset to the innermost track centerline of each side. **Now bounded**: SRC-011 places the tracks between the inner truss (CTL-022, 20 ft) and the outer truss (CTL-023, 48 ft), so this value cannot be far wrong. Retired by SRC-004. See OQ-010.",
+      "ho": {
+        "prototype_m": 8.2296,
+        "prototype_ft": 27.0,
+        "prototype_in": 324.0,
+        "ho_mm": 94.5,
+        "ho_in": 3.72,
+        "ho_ft": 0.31
+      }
+    },
+    {
+      "control_id": "CTL-106",
+      "key": "subway_track_spacing_y",
+      "value": 14.0,
+      "unit": "ft",
+      "value_m": 4.2672,
+      "source_ids": [],
+      "confidence": "D",
+      "is_placeholder": true,
+      "notes": "PLACEHOLDER. Transverse spacing between the two tracks in the same bay. Bounded by the 28 ft truss bay. Retired by SRC-004. See OQ-010.",
+      "ho": {
+        "prototype_m": 4.2672,
+        "prototype_ft": 14.0,
+        "prototype_in": 168.0,
+        "ho_mm": 49.0,
+        "ho_in": 1.93,
+        "ho_ft": 0.16
+      }
+    },
+    {
+      "control_id": "CTL-107",
+      "key": "subway_track_structure_depth",
+      "value": 1.5,
+      "unit": "ft",
+      "value_m": 0.45720000000000005,
+      "source_ids": [],
+      "confidence": "D",
+      "is_placeholder": true,
+      "notes": "PLACEHOLDER. Rail-top height above the lower deck reference plane, used only to separate the track envelope from the deck envelope visually. Retired by SRC-004. See OQ-013.",
+      "ho": {
+        "prototype_m": 0.4572,
+        "prototype_ft": 1.5,
+        "prototype_in": 18.0,
+        "ho_mm": 5.25,
+        "ho_in": 0.207,
+        "ho_ft": 0.02
+      }
+    }
+  ],
+  "measures": {
+    "part_count": 81,
+    "confidence_histogram": {
+      "A": 33,
+      "B": 4,
+      "C": 0,
+      "D": 44
+    },
+    "suspender_segment_count": 516,
+    "suspender_pitch_m": 5.671594936708861,
+    "suspender_pitch_derivation": {
+      "points_per_cable": 157.0,
+      "main_span_panels": 79,
+      "side_span_panels": 39,
+      "pitch_ft": 18.60759493670886,
+      "pitch_m": 5.671594936708861,
+      "note": "Unique integer solution reproducing CTL-037. Replaces the Milestone 1 placeholder pitch."
+    },
+    "model_bbox_prototype_m": {
+      "min": [
+        -1061.9063360655737,
+        -27.736800000000002,
+        -28.041600000000003
+      ],
+      "max": [
+        1027.4976639344263,
+        27.736800000000002,
+        98.56724
+      ]
+    },
+    "model_length_prototype_m": 2089.404,
+    "model_height_prototype_m": 126.60884,
+    "model_width_prototype_m": 55.473600000000005,
+    "single_main_cable_polyline_length_m": 921.5056781379687,
+    "cable_sag_main_span_m": 48.9204,
+    "cable_sag_ratio_denominator": 9.158878504672899,
+    "cable_sag_side_span_derived_m": 11.89957205331112,
+    "deck_centerline_length_m": 2089.404,
+    "tower_spacing_m": 448.05600000000004,
+    "anchorage_spacing_m": 890.0160000000001,
+    "placeholder_control_count": 7,
+    "sourced_control_count": 62
+  },
+  "parts": [
+    {
+      "part_id": "reference_datum_mhw_plane",
+      "system": "reference",
+      "subsystem": "datum",
+      "source_basis": [
+        "control_dimension",
+        "official_facts"
+      ],
+      "confidence": "A",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Visualisation of the z = 0 mean high water datum, drawn to the sourced 120 ft deck width (CTL-021). The datum and its extent are both grade A.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-021"
+      ],
+      "open_questions": [],
+      "basis_confidence": "A",
+      "geometry_kinds": [
+        "quad"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          -445.008,
+          -18.288,
+          0.0
+        ],
+        "max": [
+          445.008,
+          18.288,
+          0.0
+        ],
+        "size": [
+          890.016,
+          36.576,
+          0.0
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          10218.32,
+          419.93,
+          0.0
+        ]
+      }
+    },
+    {
+      "part_id": "reference_bridge_axis",
+      "system": "reference",
+      "subsystem": "control_curves",
+      "source_basis": [
+        "control_dimension"
+      ],
+      "confidence": "A",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Longitudinal bridge axis at the datum, anchorage cable point to anchorage cable point. Real-world azimuth is unregistered, see OQ-009.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006"
+      ],
+      "open_questions": [],
+      "basis_confidence": "A",
+      "geometry_kinds": [
+        "polyline"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          -445.008,
+          0.0,
+          0.0
+        ],
+        "max": [
+          445.008,
+          0.0,
+          0.0
+        ],
+        "size": [
+          890.016,
+          0.0,
+          0.0
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          10218.32,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "part_id": "control_curve_deck_centerline",
+      "system": "reference",
+      "subsystem": "control_curves",
+      "source_basis": [
+        "control_dimension",
+        "inferred"
+      ],
+      "confidence": "D",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Deck centerline control curve at the upper roadway elevation. Drawn level over the full length; approach grades are unregistered and the approach split is a ratio only (OQ-006).",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-008",
+        "CTL-010",
+        "CTL-103",
+        "CTL-001",
+        "CTL-039",
+        "CTL-040"
+      ],
+      "open_questions": [
+        "OQ-002",
+        "OQ-006",
+        "OQ-013"
+      ],
+      "basis_confidence": "A",
+      "geometry_kinds": [
+        "polyline"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          -1061.906336,
+          0.0,
+          49.3776
+        ],
+        "max": [
+          1027.497664,
+          0.0,
+          49.3776
+        ],
+        "size": [
+          2089.404,
+          0.0,
+          0.0
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          23988.56,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "part_id": "station_sta_mid",
+      "system": "reference",
+      "subsystem": "stations",
+      "source_basis": [
+        "control_dimension"
+      ],
+      "confidence": "A",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Main span midpoint (origin). Model origin.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-005"
+      ],
+      "open_questions": [],
+      "basis_confidence": "A",
+      "geometry_kinds": [
+        "lines"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          0.0,
+          -14.6304,
+          0.0
+        ],
+        "max": [
+          0.0,
+          14.6304,
+          98.298
+        ],
+        "size": [
+          0.0,
+          29.2608,
+          98.298
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          0.0,
+          335.94,
+          1128.56
+        ]
+      }
+    },
+    {
+      "part_id": "station_sta_twr_m",
+      "system": "reference",
+      "subsystem": "stations",
+      "source_basis": [
+        "control_dimension"
+      ],
+      "confidence": "A",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Manhattan tower centerline.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-005"
+      ],
+      "open_questions": [],
+      "basis_confidence": "A",
+      "geometry_kinds": [
+        "lines"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          -224.028,
+          -14.6304,
+          0.0
+        ],
+        "max": [
+          -224.028,
+          14.6304,
+          98.298
+        ],
+        "size": [
+          0.0,
+          29.2608,
+          98.298
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          0.0,
+          335.94,
+          1128.56
+        ]
+      }
+    },
+    {
+      "part_id": "station_sta_twr_b",
+      "system": "reference",
+      "subsystem": "stations",
+      "source_basis": [
+        "control_dimension"
+      ],
+      "confidence": "A",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Brooklyn tower centerline.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-005"
+      ],
+      "open_questions": [],
+      "basis_confidence": "A",
+      "geometry_kinds": [
+        "lines"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          224.028,
+          -14.6304,
+          0.0
+        ],
+        "max": [
+          224.028,
+          14.6304,
+          98.298
+        ],
+        "size": [
+          0.0,
+          29.2608,
+          98.298
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          0.0,
+          335.94,
+          1128.56
+        ]
+      }
+    },
+    {
+      "part_id": "station_sta_anc_m",
+      "system": "reference",
+      "subsystem": "stations",
+      "source_basis": [
+        "control_dimension"
+      ],
+      "confidence": "A",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Manhattan anchorage cable point.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006"
+      ],
+      "open_questions": [],
+      "basis_confidence": "A",
+      "geometry_kinds": [
+        "lines"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          -445.008,
+          -14.6304,
+          0.0
+        ],
+        "max": [
+          -445.008,
+          14.6304,
+          98.298
+        ],
+        "size": [
+          0.0,
+          29.2608,
+          98.298
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          0.0,
+          335.94,
+          1128.56
+        ]
+      }
+    },
+    {
+      "part_id": "station_sta_anc_b",
+      "system": "reference",
+      "subsystem": "stations",
+      "source_basis": [
+        "control_dimension"
+      ],
+      "confidence": "A",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Brooklyn anchorage cable point.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006"
+      ],
+      "open_questions": [],
+      "basis_confidence": "A",
+      "geometry_kinds": [
+        "lines"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          445.008,
+          -14.6304,
+          0.0
+        ],
+        "max": [
+          445.008,
+          14.6304,
+          98.298
+        ],
+        "size": [
+          0.0,
+          29.2608,
+          98.298
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          0.0,
+          335.94,
+          1128.56
+        ]
+      }
+    },
+    {
+      "part_id": "station_sta_abut_m",
+      "system": "reference",
+      "subsystem": "stations",
+      "source_basis": [
+        "control_dimension"
+      ],
+      "confidence": "D",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Manhattan lower-level abutment. Symmetric placement about the main span midpoint is an assumption, see OQ-002.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-002"
+      ],
+      "open_questions": [
+        "OQ-002"
+      ],
+      "basis_confidence": "D",
+      "geometry_kinds": [
+        "lines"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          -882.396,
+          -14.6304,
+          0.0
+        ],
+        "max": [
+          -882.396,
+          14.6304,
+          98.298
+        ],
+        "size": [
+          0.0,
+          29.2608,
+          98.298
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          0.0,
+          335.94,
+          1128.56
+        ]
+      }
+    },
+    {
+      "part_id": "station_sta_abut_b",
+      "system": "reference",
+      "subsystem": "stations",
+      "source_basis": [
+        "control_dimension"
+      ],
+      "confidence": "D",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Brooklyn lower-level abutment. Symmetric placement about the main span midpoint is an assumption, see OQ-002.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-002"
+      ],
+      "open_questions": [
+        "OQ-002"
+      ],
+      "basis_confidence": "D",
+      "geometry_kinds": [
+        "lines"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          882.396,
+          -14.6304,
+          0.0
+        ],
+        "max": [
+          882.396,
+          14.6304,
+          98.298
+        ],
+        "size": [
+          0.0,
+          29.2608,
+          98.298
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          0.0,
+          335.94,
+          1128.56
+        ]
+      }
+    },
+    {
+      "part_id": "station_sta_portal_m",
+      "system": "reference",
+      "subsystem": "stations",
+      "source_basis": [
+        "control_dimension"
+      ],
+      "confidence": "D",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Manhattan upper roadway portal. Symmetric placement about the main span midpoint is an assumption, see OQ-002.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-003"
+      ],
+      "open_questions": [
+        "OQ-002"
+      ],
+      "basis_confidence": "D",
+      "geometry_kinds": [
+        "lines"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          -928.116,
+          -14.6304,
+          0.0
+        ],
+        "max": [
+          -928.116,
+          14.6304,
+          98.298
+        ],
+        "size": [
+          0.0,
+          29.2608,
+          98.298
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          0.0,
+          335.94,
+          1128.56
+        ]
+      }
+    },
+    {
+      "part_id": "station_sta_portal_b",
+      "system": "reference",
+      "subsystem": "stations",
+      "source_basis": [
+        "control_dimension"
+      ],
+      "confidence": "D",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Brooklyn upper roadway portal. Symmetric placement about the main span midpoint is an assumption, see OQ-002.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-003"
+      ],
+      "open_questions": [
+        "OQ-002"
+      ],
+      "basis_confidence": "D",
+      "geometry_kinds": [
+        "lines"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          928.116,
+          -14.6304,
+          0.0
+        ],
+        "max": [
+          928.116,
+          14.6304,
+          98.298
+        ],
+        "size": [
+          0.0,
+          29.2608,
+          98.298
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          0.0,
+          335.94,
+          1128.56
+        ]
+      }
+    },
+    {
+      "part_id": "station_sta_appr_end_m",
+      "system": "reference",
+      "subsystem": "stations",
+      "source_basis": [
+        "control_dimension"
+      ],
+      "confidence": "B",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Manhattan approach end. Approach split derived from the quoted approach-and-plaza lengths, see OQ-006. The quoted lengths include plazas, so only their ratio is used.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-001",
+        "CTL-004",
+        "CTL-039",
+        "CTL-040"
+      ],
+      "open_questions": [],
+      "basis_confidence": "B",
+      "geometry_kinds": [
+        "lines"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          -1061.906336,
+          -14.6304,
+          0.0
+        ],
+        "max": [
+          -1061.906336,
+          14.6304,
+          98.298
+        ],
+        "size": [
+          0.0,
+          29.2608,
+          98.298
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          0.0,
+          335.94,
+          1128.56
+        ]
+      }
+    },
+    {
+      "part_id": "station_sta_appr_end_b",
+      "system": "reference",
+      "subsystem": "stations",
+      "source_basis": [
+        "control_dimension"
+      ],
+      "confidence": "B",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Brooklyn approach end. Approach split derived from the quoted approach-and-plaza lengths, see OQ-006. The quoted lengths include plazas, so only their ratio is used.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-001",
+        "CTL-004",
+        "CTL-039",
+        "CTL-040"
+      ],
+      "open_questions": [],
+      "basis_confidence": "B",
+      "geometry_kinds": [
+        "lines"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          1027.497664,
+          -14.6304,
+          0.0
+        ],
+        "max": [
+          1027.497664,
+          14.6304,
+          98.298
+        ],
+        "size": [
+          0.0,
+          29.2608,
+          98.298
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          0.0,
+          335.94,
+          1128.56
+        ]
+      }
+    },
+    {
+      "part_id": "tower_manhattan_centerline",
+      "system": "towers",
+      "subsystem": "centerlines",
+      "source_basis": [
+        "control_dimension"
+      ],
+      "confidence": "A",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Tower centerline from the caisson underside to the cable saddles. Both ends are now stated directly by SRC-015, retiring OQ-003.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-005",
+        "CTL-018",
+        "CTL-031"
+      ],
+      "open_questions": [],
+      "basis_confidence": "A",
+      "geometry_kinds": [
+        "polyline"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          -224.028,
+          0.0,
+          -28.0416
+        ],
+        "max": [
+          -224.028,
+          0.0,
+          98.298
+        ],
+        "size": [
+          0.0,
+          0.0,
+          126.3396
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          0.0,
+          0.0,
+          1450.51
+        ]
+      }
+    },
+    {
+      "part_id": "tower_manhattan_caisson",
+      "system": "towers",
+      "subsystem": "foundations",
+      "source_basis": [
+        "control_dimension"
+      ],
+      "confidence": "A",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Timber-and-concrete caisson envelope, 78 by 144 ft in plan and 47.5 ft high, with its cutting edge 92 ft below mean high water. All extents from SRC-016 directly, the footprint independently confirmed by SRC-015. See CONF-013.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-005",
+        "CTL-049",
+        "CTL-050",
+        "CTL-046",
+        "CTL-031"
+      ],
+      "open_questions": [],
+      "basis_confidence": "A",
+      "geometry_kinds": [
+        "box"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          -235.9152,
+          -21.9456,
+          -28.0416
+        ],
+        "max": [
+          -212.1408,
+          21.9456,
+          -13.5636
+        ],
+        "size": [
+          23.7744,
+          43.8912,
+          14.478
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          272.96,
+          503.92,
+          166.22
+        ]
+      }
+    },
+    {
+      "part_id": "tower_manhattan_pier",
+      "system": "towers",
+      "subsystem": "foundations",
+      "source_basis": [
+        "control_dimension"
+      ],
+      "confidence": "A",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Masonry pier envelope from the caisson top to the capstone 23 ft above mean high water. Plan (68 by 134 ft on top) and capstone elevation are both stated explicitly by SRC-016. The pier is drawn from the caisson top rather than from its footing seat at -33 ft, so the envelope is conservative. See OQ-016.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-005",
+        "CTL-028",
+        "CTL-029",
+        "CTL-030",
+        "CTL-046",
+        "CTL-031"
+      ],
+      "open_questions": [
+        "OQ-016"
+      ],
+      "basis_confidence": "A",
+      "geometry_kinds": [
+        "box"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          -234.3912,
+          -20.4216,
+          -13.5636
+        ],
+        "max": [
+          -213.6648,
+          20.4216,
+          7.0104
+        ],
+        "size": [
+          20.7264,
+          40.8432,
+          20.574
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          237.96,
+          468.92,
+          236.21
+        ]
+      }
+    },
+    {
+      "part_id": "tower_manhattan_leg_a",
+      "system": "towers",
+      "subsystem": "legs",
+      "source_basis": [
+        "control_dimension"
+      ],
+      "confidence": "A",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Box-section tower leg in the plane of truss A (south outer). SRC-015: four legs, each 5 ft wide transversely, tapering from 32 ft to 10 ft parallel to the bridge axis, and the trusses are carried in the planes of the legs. Straight taper assumed between the two stated end dimensions.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-005",
+        "CTL-018",
+        "CTL-030",
+        "CTL-056",
+        "CTL-057",
+        "CTL-058",
+        "CTL-022",
+        "CTL-023"
+      ],
+      "open_questions": [],
+      "basis_confidence": "A",
+      "geometry_kinds": [
+        "prism"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          -228.9048,
+          -15.3924,
+          7.0104
+        ],
+        "max": [
+          -219.1512,
+          -13.8684,
+          98.298
+        ],
+        "size": [
+          9.7536,
+          1.524,
+          91.2876
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          111.98,
+          17.5,
+          1048.08
+        ]
+      }
+    },
+    {
+      "part_id": "tower_manhattan_leg_b",
+      "system": "towers",
+      "subsystem": "legs",
+      "source_basis": [
+        "control_dimension"
+      ],
+      "confidence": "A",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Box-section tower leg in the plane of truss B (south inner). SRC-015: four legs, each 5 ft wide transversely, tapering from 32 ft to 10 ft parallel to the bridge axis, and the trusses are carried in the planes of the legs. Straight taper assumed between the two stated end dimensions.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-005",
+        "CTL-018",
+        "CTL-030",
+        "CTL-056",
+        "CTL-057",
+        "CTL-058",
+        "CTL-022",
+        "CTL-023"
+      ],
+      "open_questions": [],
+      "basis_confidence": "A",
+      "geometry_kinds": [
+        "prism"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          -228.9048,
+          -6.858,
+          7.0104
+        ],
+        "max": [
+          -219.1512,
+          -5.334,
+          98.298
+        ],
+        "size": [
+          9.7536,
+          1.524,
+          91.2876
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          111.98,
+          17.5,
+          1048.08
+        ]
+      }
+    },
+    {
+      "part_id": "tower_manhattan_leg_c",
+      "system": "towers",
+      "subsystem": "legs",
+      "source_basis": [
+        "control_dimension"
+      ],
+      "confidence": "A",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Box-section tower leg in the plane of truss C (north inner). SRC-015: four legs, each 5 ft wide transversely, tapering from 32 ft to 10 ft parallel to the bridge axis, and the trusses are carried in the planes of the legs. Straight taper assumed between the two stated end dimensions.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-005",
+        "CTL-018",
+        "CTL-030",
+        "CTL-056",
+        "CTL-057",
+        "CTL-058",
+        "CTL-022",
+        "CTL-023"
+      ],
+      "open_questions": [],
+      "basis_confidence": "A",
+      "geometry_kinds": [
+        "prism"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          -228.9048,
+          5.334,
+          7.0104
+        ],
+        "max": [
+          -219.1512,
+          6.858,
+          98.298
+        ],
+        "size": [
+          9.7536,
+          1.524,
+          91.2876
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          111.98,
+          17.5,
+          1048.08
+        ]
+      }
+    },
+    {
+      "part_id": "tower_manhattan_leg_d",
+      "system": "towers",
+      "subsystem": "legs",
+      "source_basis": [
+        "control_dimension"
+      ],
+      "confidence": "A",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Box-section tower leg in the plane of truss D (north outer). SRC-015: four legs, each 5 ft wide transversely, tapering from 32 ft to 10 ft parallel to the bridge axis, and the trusses are carried in the planes of the legs. Straight taper assumed between the two stated end dimensions.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-005",
+        "CTL-018",
+        "CTL-030",
+        "CTL-056",
+        "CTL-057",
+        "CTL-058",
+        "CTL-022",
+        "CTL-023"
+      ],
+      "open_questions": [],
+      "basis_confidence": "A",
+      "geometry_kinds": [
+        "prism"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          -228.9048,
+          13.8684,
+          7.0104
+        ],
+        "max": [
+          -219.1512,
+          15.3924,
+          98.298
+        ],
+        "size": [
+          9.7536,
+          1.524,
+          91.2876
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          111.98,
+          17.5,
+          1048.08
+        ]
+      }
+    },
+    {
+      "part_id": "tower_manhattan_bracing",
+      "system": "towers",
+      "subsystem": "legs",
+      "source_basis": [
+        "control_dimension",
+        "inferred"
+      ],
+      "confidence": "D",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Transverse bracing between the tower legs. SRC-015 states the legs are 'heavily braced together' and a 1904 account describes a 'great open arch' at the centre, but no source gives the panel levels or the arch profile, so the number and elevation of these struts are placeholders. See OQ-007.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-005",
+        "CTL-018",
+        "CTL-030",
+        "CTL-022",
+        "CTL-023"
+      ],
+      "open_questions": [
+        "OQ-007"
+      ],
+      "basis_confidence": "D",
+      "geometry_kinds": [
+        "lines"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          -224.028,
+          -14.6304,
+          32.570928
+        ],
+        "max": [
+          -224.028,
+          14.6304,
+          95.559372
+        ],
+        "size": [
+          0.0,
+          29.2608,
+          62.988444
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          0.0,
+          335.94,
+          723.17
+        ]
+      }
+    },
+    {
+      "part_id": "tower_brooklyn_centerline",
+      "system": "towers",
+      "subsystem": "centerlines",
+      "source_basis": [
+        "control_dimension"
+      ],
+      "confidence": "A",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Tower centerline from the caisson underside to the cable saddles. Both ends are now stated directly by SRC-015, retiring OQ-003.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-005",
+        "CTL-018",
+        "CTL-031"
+      ],
+      "open_questions": [],
+      "basis_confidence": "A",
+      "geometry_kinds": [
+        "polyline"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          224.028,
+          0.0,
+          -28.0416
+        ],
+        "max": [
+          224.028,
+          0.0,
+          98.298
+        ],
+        "size": [
+          0.0,
+          0.0,
+          126.3396
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          0.0,
+          0.0,
+          1450.51
+        ]
+      }
+    },
+    {
+      "part_id": "tower_brooklyn_caisson",
+      "system": "towers",
+      "subsystem": "foundations",
+      "source_basis": [
+        "control_dimension"
+      ],
+      "confidence": "A",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Timber-and-concrete caisson envelope, 78 by 144 ft in plan and 47.5 ft high, with its cutting edge 92 ft below mean high water. All extents from SRC-016 directly, the footprint independently confirmed by SRC-015. See CONF-013.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-005",
+        "CTL-049",
+        "CTL-050",
+        "CTL-046",
+        "CTL-031"
+      ],
+      "open_questions": [],
+      "basis_confidence": "A",
+      "geometry_kinds": [
+        "box"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          212.1408,
+          -21.9456,
+          -28.0416
+        ],
+        "max": [
+          235.9152,
+          21.9456,
+          -13.5636
+        ],
+        "size": [
+          23.7744,
+          43.8912,
+          14.478
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          272.96,
+          503.92,
+          166.22
+        ]
+      }
+    },
+    {
+      "part_id": "tower_brooklyn_pier",
+      "system": "towers",
+      "subsystem": "foundations",
+      "source_basis": [
+        "control_dimension"
+      ],
+      "confidence": "A",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Masonry pier envelope from the caisson top to the capstone 23 ft above mean high water. Plan (68 by 134 ft on top) and capstone elevation are both stated explicitly by SRC-016. The pier is drawn from the caisson top rather than from its footing seat at -33 ft, so the envelope is conservative. See OQ-016.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-005",
+        "CTL-028",
+        "CTL-029",
+        "CTL-030",
+        "CTL-046",
+        "CTL-031"
+      ],
+      "open_questions": [
+        "OQ-016"
+      ],
+      "basis_confidence": "A",
+      "geometry_kinds": [
+        "box"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          213.6648,
+          -20.4216,
+          -13.5636
+        ],
+        "max": [
+          234.3912,
+          20.4216,
+          7.0104
+        ],
+        "size": [
+          20.7264,
+          40.8432,
+          20.574
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          237.96,
+          468.92,
+          236.21
+        ]
+      }
+    },
+    {
+      "part_id": "tower_brooklyn_leg_a",
+      "system": "towers",
+      "subsystem": "legs",
+      "source_basis": [
+        "control_dimension"
+      ],
+      "confidence": "A",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Box-section tower leg in the plane of truss A (south outer). SRC-015: four legs, each 5 ft wide transversely, tapering from 32 ft to 10 ft parallel to the bridge axis, and the trusses are carried in the planes of the legs. Straight taper assumed between the two stated end dimensions.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-005",
+        "CTL-018",
+        "CTL-030",
+        "CTL-056",
+        "CTL-057",
+        "CTL-058",
+        "CTL-022",
+        "CTL-023"
+      ],
+      "open_questions": [],
+      "basis_confidence": "A",
+      "geometry_kinds": [
+        "prism"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          219.1512,
+          -15.3924,
+          7.0104
+        ],
+        "max": [
+          228.9048,
+          -13.8684,
+          98.298
+        ],
+        "size": [
+          9.7536,
+          1.524,
+          91.2876
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          111.98,
+          17.5,
+          1048.08
+        ]
+      }
+    },
+    {
+      "part_id": "tower_brooklyn_leg_b",
+      "system": "towers",
+      "subsystem": "legs",
+      "source_basis": [
+        "control_dimension"
+      ],
+      "confidence": "A",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Box-section tower leg in the plane of truss B (south inner). SRC-015: four legs, each 5 ft wide transversely, tapering from 32 ft to 10 ft parallel to the bridge axis, and the trusses are carried in the planes of the legs. Straight taper assumed between the two stated end dimensions.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-005",
+        "CTL-018",
+        "CTL-030",
+        "CTL-056",
+        "CTL-057",
+        "CTL-058",
+        "CTL-022",
+        "CTL-023"
+      ],
+      "open_questions": [],
+      "basis_confidence": "A",
+      "geometry_kinds": [
+        "prism"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          219.1512,
+          -6.858,
+          7.0104
+        ],
+        "max": [
+          228.9048,
+          -5.334,
+          98.298
+        ],
+        "size": [
+          9.7536,
+          1.524,
+          91.2876
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          111.98,
+          17.5,
+          1048.08
+        ]
+      }
+    },
+    {
+      "part_id": "tower_brooklyn_leg_c",
+      "system": "towers",
+      "subsystem": "legs",
+      "source_basis": [
+        "control_dimension"
+      ],
+      "confidence": "A",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Box-section tower leg in the plane of truss C (north inner). SRC-015: four legs, each 5 ft wide transversely, tapering from 32 ft to 10 ft parallel to the bridge axis, and the trusses are carried in the planes of the legs. Straight taper assumed between the two stated end dimensions.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-005",
+        "CTL-018",
+        "CTL-030",
+        "CTL-056",
+        "CTL-057",
+        "CTL-058",
+        "CTL-022",
+        "CTL-023"
+      ],
+      "open_questions": [],
+      "basis_confidence": "A",
+      "geometry_kinds": [
+        "prism"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          219.1512,
+          5.334,
+          7.0104
+        ],
+        "max": [
+          228.9048,
+          6.858,
+          98.298
+        ],
+        "size": [
+          9.7536,
+          1.524,
+          91.2876
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          111.98,
+          17.5,
+          1048.08
+        ]
+      }
+    },
+    {
+      "part_id": "tower_brooklyn_leg_d",
+      "system": "towers",
+      "subsystem": "legs",
+      "source_basis": [
+        "control_dimension"
+      ],
+      "confidence": "A",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Box-section tower leg in the plane of truss D (north outer). SRC-015: four legs, each 5 ft wide transversely, tapering from 32 ft to 10 ft parallel to the bridge axis, and the trusses are carried in the planes of the legs. Straight taper assumed between the two stated end dimensions.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-005",
+        "CTL-018",
+        "CTL-030",
+        "CTL-056",
+        "CTL-057",
+        "CTL-058",
+        "CTL-022",
+        "CTL-023"
+      ],
+      "open_questions": [],
+      "basis_confidence": "A",
+      "geometry_kinds": [
+        "prism"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          219.1512,
+          13.8684,
+          7.0104
+        ],
+        "max": [
+          228.9048,
+          15.3924,
+          98.298
+        ],
+        "size": [
+          9.7536,
+          1.524,
+          91.2876
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          111.98,
+          17.5,
+          1048.08
+        ]
+      }
+    },
+    {
+      "part_id": "tower_brooklyn_bracing",
+      "system": "towers",
+      "subsystem": "legs",
+      "source_basis": [
+        "control_dimension",
+        "inferred"
+      ],
+      "confidence": "D",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Transverse bracing between the tower legs. SRC-015 states the legs are 'heavily braced together' and a 1904 account describes a 'great open arch' at the centre, but no source gives the panel levels or the arch profile, so the number and elevation of these struts are placeholders. See OQ-007.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-005",
+        "CTL-018",
+        "CTL-030",
+        "CTL-022",
+        "CTL-023"
+      ],
+      "open_questions": [
+        "OQ-007"
+      ],
+      "basis_confidence": "D",
+      "geometry_kinds": [
+        "lines"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          224.028,
+          -14.6304,
+          32.570928
+        ],
+        "max": [
+          224.028,
+          14.6304,
+          95.559372
+        ],
+        "size": [
+          0.0,
+          29.2608,
+          62.988444
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          0.0,
+          335.94,
+          723.17
+        ]
+      }
+    },
+    {
+      "part_id": "manhattan_anchorage",
+      "system": "anchorages",
+      "subsystem": null,
+      "source_basis": [
+        "control_dimension"
+      ],
+      "confidence": "B",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Anchorage envelope, 237 ft long by 182 ft wide by 135 ft tall, all sourced (CTL-034/035/036), retiring OQ-008. Extends outboard from the cable point. The Cherry Street and Water Street arches are not modelled.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-034",
+        "CTL-035",
+        "CTL-036"
+      ],
+      "open_questions": [],
+      "basis_confidence": "B",
+      "geometry_kinds": [
+        "box"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          -517.2456,
+          -27.7368,
+          0.0
+        ],
+        "max": [
+          -445.008,
+          27.7368,
+          41.148
+        ],
+        "size": [
+          72.2376,
+          55.4736,
+          41.148
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          829.36,
+          636.9,
+          472.42
+        ]
+      }
+    },
+    {
+      "part_id": "brooklyn_anchorage",
+      "system": "anchorages",
+      "subsystem": null,
+      "source_basis": [
+        "control_dimension"
+      ],
+      "confidence": "B",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Anchorage envelope, 237 ft long by 182 ft wide by 135 ft tall, all sourced (CTL-034/035/036), retiring OQ-008. Extends outboard from the cable point. The Cherry Street and Water Street arches are not modelled.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-034",
+        "CTL-035",
+        "CTL-036"
+      ],
+      "open_questions": [],
+      "basis_confidence": "B",
+      "geometry_kinds": [
+        "box"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          445.008,
+          -27.7368,
+          0.0
+        ],
+        "max": [
+          517.2456,
+          27.7368,
+          41.148
+        ],
+        "size": [
+          72.2376,
+          55.4736,
+          41.148
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          829.36,
+          636.9,
+          472.42
+        ]
+      }
+    },
+    {
+      "part_id": "south_main_cable_1",
+      "system": "cables",
+      "subsystem": null,
+      "source_basis": [
+        "control_dimension",
+        "inferred"
+      ],
+      "confidence": "D",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Main cable over truss A (south outer), drawn at its sourced diameter of 21.2 in. SRC-011 measures 21.2 in overall and SRC-015 states 21.25 in on the wires excluding wrapping, so the two agree to within 0.05 in and the thickness is no longer speculative. Saddle and anchorage elevations are sourced; the sag is derived from the truss top chord, see OQ-001.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-018",
+        "CTL-102",
+        "CTL-101",
+        "CTL-008",
+        "CTL-010",
+        "CTL-022",
+        "CTL-023",
+        "CTL-036",
+        "CTL-042"
+      ],
+      "open_questions": [
+        "OQ-001"
+      ],
+      "basis_confidence": "B",
+      "geometry_kinds": [
+        "tube"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          -445.27724,
+          -14.89964,
+          40.87876
+        ],
+        "max": [
+          445.27724,
+          -14.36116,
+          98.56724
+        ],
+        "size": [
+          890.55448,
+          0.53848,
+          57.68848
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          10224.51,
+          6.18,
+          662.32
+        ]
+      }
+    },
+    {
+      "part_id": "south_main_cable_2",
+      "system": "cables",
+      "subsystem": null,
+      "source_basis": [
+        "control_dimension",
+        "inferred"
+      ],
+      "confidence": "D",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Main cable over truss B (south inner), drawn at its sourced diameter of 21.2 in. SRC-011 measures 21.2 in overall and SRC-015 states 21.25 in on the wires excluding wrapping, so the two agree to within 0.05 in and the thickness is no longer speculative. Saddle and anchorage elevations are sourced; the sag is derived from the truss top chord, see OQ-001.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-018",
+        "CTL-102",
+        "CTL-101",
+        "CTL-008",
+        "CTL-010",
+        "CTL-022",
+        "CTL-023",
+        "CTL-036",
+        "CTL-042"
+      ],
+      "open_questions": [
+        "OQ-001"
+      ],
+      "basis_confidence": "B",
+      "geometry_kinds": [
+        "tube"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          -445.27724,
+          -6.36524,
+          40.87876
+        ],
+        "max": [
+          445.27724,
+          -5.82676,
+          98.56724
+        ],
+        "size": [
+          890.55448,
+          0.53848,
+          57.68848
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          10224.51,
+          6.18,
+          662.32
+        ]
+      }
+    },
+    {
+      "part_id": "north_main_cable_2",
+      "system": "cables",
+      "subsystem": null,
+      "source_basis": [
+        "control_dimension",
+        "inferred"
+      ],
+      "confidence": "D",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Main cable over truss C (north inner), drawn at its sourced diameter of 21.2 in. SRC-011 measures 21.2 in overall and SRC-015 states 21.25 in on the wires excluding wrapping, so the two agree to within 0.05 in and the thickness is no longer speculative. Saddle and anchorage elevations are sourced; the sag is derived from the truss top chord, see OQ-001.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-018",
+        "CTL-102",
+        "CTL-101",
+        "CTL-008",
+        "CTL-010",
+        "CTL-022",
+        "CTL-023",
+        "CTL-036",
+        "CTL-042"
+      ],
+      "open_questions": [
+        "OQ-001"
+      ],
+      "basis_confidence": "B",
+      "geometry_kinds": [
+        "tube"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          -445.27724,
+          5.82676,
+          40.87876
+        ],
+        "max": [
+          445.27724,
+          6.36524,
+          98.56724
+        ],
+        "size": [
+          890.55448,
+          0.53848,
+          57.68848
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          10224.51,
+          6.18,
+          662.32
+        ]
+      }
+    },
+    {
+      "part_id": "north_main_cable_1",
+      "system": "cables",
+      "subsystem": null,
+      "source_basis": [
+        "control_dimension",
+        "inferred"
+      ],
+      "confidence": "D",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Main cable over truss D (north outer), drawn at its sourced diameter of 21.2 in. SRC-011 measures 21.2 in overall and SRC-015 states 21.25 in on the wires excluding wrapping, so the two agree to within 0.05 in and the thickness is no longer speculative. Saddle and anchorage elevations are sourced; the sag is derived from the truss top chord, see OQ-001.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-018",
+        "CTL-102",
+        "CTL-101",
+        "CTL-008",
+        "CTL-010",
+        "CTL-022",
+        "CTL-023",
+        "CTL-036",
+        "CTL-042"
+      ],
+      "open_questions": [
+        "OQ-001"
+      ],
+      "basis_confidence": "B",
+      "geometry_kinds": [
+        "tube"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          -445.27724,
+          14.36116,
+          40.87876
+        ],
+        "max": [
+          445.27724,
+          14.89964,
+          98.56724
+        ],
+        "size": [
+          890.55448,
+          0.53848,
+          57.68848
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          10224.51,
+          6.18,
+          662.32
+        ]
+      }
+    },
+    {
+      "part_id": "suspenders_truss_a",
+      "system": "suspenders",
+      "subsystem": null,
+      "source_basis": [
+        "control_dimension",
+        "inferred"
+      ],
+      "confidence": "D",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Suspender set on truss A (south outer), grouped as one addressable part. Pitch is derived from the sourced 628 panel points (CTL-037): 79 panels in the main span and 39 in each side span at 18.608 ft, the unique integer solution. Two ropes per panel point (CTL-038) are not modelled individually.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-018",
+        "CTL-102",
+        "CTL-101",
+        "CTL-008",
+        "CTL-010",
+        "CTL-022",
+        "CTL-023",
+        "CTL-036",
+        "CTL-037",
+        "CTL-015",
+        "CTL-038"
+      ],
+      "open_questions": [
+        "OQ-001"
+      ],
+      "basis_confidence": "B",
+      "geometry_kinds": [
+        "lines"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          -374.325266,
+          -14.6304,
+          48.4632
+        ],
+        "max": [
+          374.325266,
+          -14.6304,
+          94.653074
+        ],
+        "size": [
+          748.650532,
+          0.0,
+          46.189874
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          8595.3,
+          0.0,
+          530.31
+        ]
+      }
+    },
+    {
+      "part_id": "suspenders_truss_b",
+      "system": "suspenders",
+      "subsystem": null,
+      "source_basis": [
+        "control_dimension",
+        "inferred"
+      ],
+      "confidence": "D",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Suspender set on truss B (south inner), grouped as one addressable part. Pitch is derived from the sourced 628 panel points (CTL-037): 79 panels in the main span and 39 in each side span at 18.608 ft, the unique integer solution. Two ropes per panel point (CTL-038) are not modelled individually.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-018",
+        "CTL-102",
+        "CTL-101",
+        "CTL-008",
+        "CTL-010",
+        "CTL-022",
+        "CTL-023",
+        "CTL-036",
+        "CTL-037",
+        "CTL-015",
+        "CTL-038"
+      ],
+      "open_questions": [
+        "OQ-001"
+      ],
+      "basis_confidence": "B",
+      "geometry_kinds": [
+        "lines"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          -374.325266,
+          -6.096,
+          48.4632
+        ],
+        "max": [
+          374.325266,
+          -6.096,
+          94.653074
+        ],
+        "size": [
+          748.650532,
+          0.0,
+          46.189874
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          8595.3,
+          0.0,
+          530.31
+        ]
+      }
+    },
+    {
+      "part_id": "suspenders_truss_c",
+      "system": "suspenders",
+      "subsystem": null,
+      "source_basis": [
+        "control_dimension",
+        "inferred"
+      ],
+      "confidence": "D",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Suspender set on truss C (north inner), grouped as one addressable part. Pitch is derived from the sourced 628 panel points (CTL-037): 79 panels in the main span and 39 in each side span at 18.608 ft, the unique integer solution. Two ropes per panel point (CTL-038) are not modelled individually.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-018",
+        "CTL-102",
+        "CTL-101",
+        "CTL-008",
+        "CTL-010",
+        "CTL-022",
+        "CTL-023",
+        "CTL-036",
+        "CTL-037",
+        "CTL-015",
+        "CTL-038"
+      ],
+      "open_questions": [
+        "OQ-001"
+      ],
+      "basis_confidence": "B",
+      "geometry_kinds": [
+        "lines"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          -374.325266,
+          6.096,
+          48.4632
+        ],
+        "max": [
+          374.325266,
+          6.096,
+          94.653074
+        ],
+        "size": [
+          748.650532,
+          0.0,
+          46.189874
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          8595.3,
+          0.0,
+          530.31
+        ]
+      }
+    },
+    {
+      "part_id": "suspenders_truss_d",
+      "system": "suspenders",
+      "subsystem": null,
+      "source_basis": [
+        "control_dimension",
+        "inferred"
+      ],
+      "confidence": "D",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Suspender set on truss D (north outer), grouped as one addressable part. Pitch is derived from the sourced 628 panel points (CTL-037): 79 panels in the main span and 39 in each side span at 18.608 ft, the unique integer solution. Two ropes per panel point (CTL-038) are not modelled individually.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-018",
+        "CTL-102",
+        "CTL-101",
+        "CTL-008",
+        "CTL-010",
+        "CTL-022",
+        "CTL-023",
+        "CTL-036",
+        "CTL-037",
+        "CTL-015",
+        "CTL-038"
+      ],
+      "open_questions": [
+        "OQ-001"
+      ],
+      "basis_confidence": "B",
+      "geometry_kinds": [
+        "lines"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          -374.325266,
+          14.6304,
+          48.4632
+        ],
+        "max": [
+          374.325266,
+          14.6304,
+          94.653074
+        ],
+        "size": [
+          748.650532,
+          0.0,
+          46.189874
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          8595.3,
+          0.0,
+          530.31
+        ]
+      }
+    },
+    {
+      "part_id": "upper_roadway_brooklyn_bound_main_span",
+      "system": "deck_system",
+      "subsystem": "upper_roadway",
+      "source_basis": [
+        "control_dimension"
+      ],
+      "confidence": "D",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Upper roadway envelope, west, over trusses A-B, over the main span. SRC-011 states the upper levels rest on trusses A-B and C-D, so the roadways are offset from the centerline. Width is sourced; only the deck structure depth is a placeholder (OQ-013).",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-026",
+        "CTL-027",
+        "CTL-022",
+        "CTL-023",
+        "CTL-008",
+        "CTL-010",
+        "CTL-103"
+      ],
+      "open_questions": [
+        "OQ-013"
+      ],
+      "basis_confidence": "B",
+      "geometry_kinds": [
+        "box"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          -224.028,
+          -13.7922,
+          48.4632
+        ],
+        "max": [
+          224.028,
+          -6.9342,
+          49.3776
+        ],
+        "size": [
+          448.056,
+          6.858,
+          0.9144
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          5144.16,
+          78.74,
+          10.5
+        ]
+      }
+    },
+    {
+      "part_id": "upper_roadway_manhattan_bound_main_span",
+      "system": "deck_system",
+      "subsystem": "upper_roadway",
+      "source_basis": [
+        "control_dimension"
+      ],
+      "confidence": "D",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Upper roadway envelope, east, over trusses C-D, over the main span. SRC-011 states the upper levels rest on trusses A-B and C-D, so the roadways are offset from the centerline. Width is sourced; only the deck structure depth is a placeholder (OQ-013).",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-026",
+        "CTL-027",
+        "CTL-022",
+        "CTL-023",
+        "CTL-008",
+        "CTL-010",
+        "CTL-103"
+      ],
+      "open_questions": [
+        "OQ-013"
+      ],
+      "basis_confidence": "B",
+      "geometry_kinds": [
+        "box"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          -224.028,
+          6.7056,
+          48.4632
+        ],
+        "max": [
+          224.028,
+          14.0208,
+          49.3776
+        ],
+        "size": [
+          448.056,
+          7.3152,
+          0.9144
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          5144.16,
+          83.99,
+          10.5
+        ]
+      }
+    },
+    {
+      "part_id": "lower_roadway_envelope_main_span",
+      "system": "deck_system",
+      "subsystem": "lower_roadway",
+      "source_basis": [
+        "control_dimension"
+      ],
+      "confidence": "D",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Lower roadway envelope over the main span, centered on the bridge centerline at the sourced 35 ft width (CTL-024, 1909 cross-section).",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-024",
+        "CTL-008",
+        "CTL-104"
+      ],
+      "open_questions": [
+        "OQ-013"
+      ],
+      "basis_confidence": "B",
+      "geometry_kinds": [
+        "box"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          -224.028,
+          -5.334,
+          41.148
+        ],
+        "max": [
+          224.028,
+          5.334,
+          42.18432
+        ],
+        "size": [
+          448.056,
+          10.668,
+          1.03632
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          5144.16,
+          122.48,
+          11.9
+        ]
+      }
+    },
+    {
+      "part_id": "stiffening_truss_a_chords_main_span",
+      "system": "deck_system",
+      "subsystem": "stiffening_trusses",
+      "source_basis": [
+        "control_dimension"
+      ],
+      "confidence": "A",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Top and bottom chords of stiffening truss A (south outer) over the main span. Depth 24 ft and the 28-40-28 ft transverse spacing are sourced from SRC-002, SRC-011 and SRC-015. Chord member sections are not modelled.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-008",
+        "CTL-010",
+        "CTL-022",
+        "CTL-023"
+      ],
+      "open_questions": [],
+      "basis_confidence": "A",
+      "geometry_kinds": [
+        "lines"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          -224.028,
+          -14.6304,
+          41.148
+        ],
+        "max": [
+          224.028,
+          -14.6304,
+          48.4632
+        ],
+        "size": [
+          448.056,
+          0.0,
+          7.3152
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          5144.16,
+          0.0,
+          83.99
+        ]
+      }
+    },
+    {
+      "part_id": "stiffening_truss_a_web_main_span",
+      "system": "deck_system",
+      "subsystem": "stiffening_trusses",
+      "source_basis": [
+        "control_dimension",
+        "inferred"
+      ],
+      "confidence": "D",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Web members of truss A (south outer) over the main span: 79 panels at 18.61 ft. The panel *positions* are sourced, being the unique integer solution to the 628 panel points in CTL-037. The alternating diagonal pattern follows the Warren form named by SRC-002, SRC-011 and SRC-012, but no source gives the diagonal handedness at each panel or whether verticals are present, so the web itself is inferred. See OQ-017.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-008",
+        "CTL-010",
+        "CTL-022",
+        "CTL-023",
+        "CTL-037",
+        "CTL-015"
+      ],
+      "open_questions": [
+        "OQ-017"
+      ],
+      "basis_confidence": "D",
+      "geometry_kinds": [
+        "lines"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          -224.028,
+          -14.6304,
+          41.148
+        ],
+        "max": [
+          224.028,
+          -14.6304,
+          48.4632
+        ],
+        "size": [
+          448.056,
+          0.0,
+          7.3152
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          5144.16,
+          0.0,
+          83.99
+        ]
+      }
+    },
+    {
+      "part_id": "stiffening_truss_b_chords_main_span",
+      "system": "deck_system",
+      "subsystem": "stiffening_trusses",
+      "source_basis": [
+        "control_dimension"
+      ],
+      "confidence": "A",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Top and bottom chords of stiffening truss B (south inner) over the main span. Depth 24 ft and the 28-40-28 ft transverse spacing are sourced from SRC-002, SRC-011 and SRC-015. Chord member sections are not modelled.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-008",
+        "CTL-010",
+        "CTL-022",
+        "CTL-023"
+      ],
+      "open_questions": [],
+      "basis_confidence": "A",
+      "geometry_kinds": [
+        "lines"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          -224.028,
+          -6.096,
+          41.148
+        ],
+        "max": [
+          224.028,
+          -6.096,
+          48.4632
+        ],
+        "size": [
+          448.056,
+          0.0,
+          7.3152
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          5144.16,
+          0.0,
+          83.99
+        ]
+      }
+    },
+    {
+      "part_id": "stiffening_truss_b_web_main_span",
+      "system": "deck_system",
+      "subsystem": "stiffening_trusses",
+      "source_basis": [
+        "control_dimension",
+        "inferred"
+      ],
+      "confidence": "D",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Web members of truss B (south inner) over the main span: 79 panels at 18.61 ft. The panel *positions* are sourced, being the unique integer solution to the 628 panel points in CTL-037. The alternating diagonal pattern follows the Warren form named by SRC-002, SRC-011 and SRC-012, but no source gives the diagonal handedness at each panel or whether verticals are present, so the web itself is inferred. See OQ-017.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-008",
+        "CTL-010",
+        "CTL-022",
+        "CTL-023",
+        "CTL-037",
+        "CTL-015"
+      ],
+      "open_questions": [
+        "OQ-017"
+      ],
+      "basis_confidence": "D",
+      "geometry_kinds": [
+        "lines"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          -224.028,
+          -6.096,
+          41.148
+        ],
+        "max": [
+          224.028,
+          -6.096,
+          48.4632
+        ],
+        "size": [
+          448.056,
+          0.0,
+          7.3152
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          5144.16,
+          0.0,
+          83.99
+        ]
+      }
+    },
+    {
+      "part_id": "stiffening_truss_c_chords_main_span",
+      "system": "deck_system",
+      "subsystem": "stiffening_trusses",
+      "source_basis": [
+        "control_dimension"
+      ],
+      "confidence": "A",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Top and bottom chords of stiffening truss C (north inner) over the main span. Depth 24 ft and the 28-40-28 ft transverse spacing are sourced from SRC-002, SRC-011 and SRC-015. Chord member sections are not modelled.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-008",
+        "CTL-010",
+        "CTL-022",
+        "CTL-023"
+      ],
+      "open_questions": [],
+      "basis_confidence": "A",
+      "geometry_kinds": [
+        "lines"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          -224.028,
+          6.096,
+          41.148
+        ],
+        "max": [
+          224.028,
+          6.096,
+          48.4632
+        ],
+        "size": [
+          448.056,
+          0.0,
+          7.3152
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          5144.16,
+          0.0,
+          83.99
+        ]
+      }
+    },
+    {
+      "part_id": "stiffening_truss_c_web_main_span",
+      "system": "deck_system",
+      "subsystem": "stiffening_trusses",
+      "source_basis": [
+        "control_dimension",
+        "inferred"
+      ],
+      "confidence": "D",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Web members of truss C (north inner) over the main span: 79 panels at 18.61 ft. The panel *positions* are sourced, being the unique integer solution to the 628 panel points in CTL-037. The alternating diagonal pattern follows the Warren form named by SRC-002, SRC-011 and SRC-012, but no source gives the diagonal handedness at each panel or whether verticals are present, so the web itself is inferred. See OQ-017.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-008",
+        "CTL-010",
+        "CTL-022",
+        "CTL-023",
+        "CTL-037",
+        "CTL-015"
+      ],
+      "open_questions": [
+        "OQ-017"
+      ],
+      "basis_confidence": "D",
+      "geometry_kinds": [
+        "lines"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          -224.028,
+          6.096,
+          41.148
+        ],
+        "max": [
+          224.028,
+          6.096,
+          48.4632
+        ],
+        "size": [
+          448.056,
+          0.0,
+          7.3152
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          5144.16,
+          0.0,
+          83.99
+        ]
+      }
+    },
+    {
+      "part_id": "stiffening_truss_d_chords_main_span",
+      "system": "deck_system",
+      "subsystem": "stiffening_trusses",
+      "source_basis": [
+        "control_dimension"
+      ],
+      "confidence": "A",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Top and bottom chords of stiffening truss D (north outer) over the main span. Depth 24 ft and the 28-40-28 ft transverse spacing are sourced from SRC-002, SRC-011 and SRC-015. Chord member sections are not modelled.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-008",
+        "CTL-010",
+        "CTL-022",
+        "CTL-023"
+      ],
+      "open_questions": [],
+      "basis_confidence": "A",
+      "geometry_kinds": [
+        "lines"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          -224.028,
+          14.6304,
+          41.148
+        ],
+        "max": [
+          224.028,
+          14.6304,
+          48.4632
+        ],
+        "size": [
+          448.056,
+          0.0,
+          7.3152
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          5144.16,
+          0.0,
+          83.99
+        ]
+      }
+    },
+    {
+      "part_id": "stiffening_truss_d_web_main_span",
+      "system": "deck_system",
+      "subsystem": "stiffening_trusses",
+      "source_basis": [
+        "control_dimension",
+        "inferred"
+      ],
+      "confidence": "D",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Web members of truss D (north outer) over the main span: 79 panels at 18.61 ft. The panel *positions* are sourced, being the unique integer solution to the 628 panel points in CTL-037. The alternating diagonal pattern follows the Warren form named by SRC-002, SRC-011 and SRC-012, but no source gives the diagonal handedness at each panel or whether verticals are present, so the web itself is inferred. See OQ-017.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-008",
+        "CTL-010",
+        "CTL-022",
+        "CTL-023",
+        "CTL-037",
+        "CTL-015"
+      ],
+      "open_questions": [
+        "OQ-017"
+      ],
+      "basis_confidence": "D",
+      "geometry_kinds": [
+        "lines"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          -224.028,
+          14.6304,
+          41.148
+        ],
+        "max": [
+          224.028,
+          14.6304,
+          48.4632
+        ],
+        "size": [
+          448.056,
+          0.0,
+          7.3152
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          5144.16,
+          0.0,
+          83.99
+        ]
+      }
+    },
+    {
+      "part_id": "upper_roadway_brooklyn_bound_side_span_manhattan",
+      "system": "deck_system",
+      "subsystem": "upper_roadway",
+      "source_basis": [
+        "control_dimension"
+      ],
+      "confidence": "D",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Upper roadway envelope, west, over trusses A-B, over the side span manhattan. SRC-011 states the upper levels rest on trusses A-B and C-D, so the roadways are offset from the centerline. Width is sourced; only the deck structure depth is a placeholder (OQ-013).",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-026",
+        "CTL-027",
+        "CTL-022",
+        "CTL-023",
+        "CTL-008",
+        "CTL-010",
+        "CTL-103"
+      ],
+      "open_questions": [
+        "OQ-013"
+      ],
+      "basis_confidence": "B",
+      "geometry_kinds": [
+        "box"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          -445.008,
+          -13.7922,
+          48.4632
+        ],
+        "max": [
+          -224.028,
+          -6.9342,
+          49.3776
+        ],
+        "size": [
+          220.98,
+          6.858,
+          0.9144
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          2537.08,
+          78.74,
+          10.5
+        ]
+      }
+    },
+    {
+      "part_id": "upper_roadway_manhattan_bound_side_span_manhattan",
+      "system": "deck_system",
+      "subsystem": "upper_roadway",
+      "source_basis": [
+        "control_dimension"
+      ],
+      "confidence": "D",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Upper roadway envelope, east, over trusses C-D, over the side span manhattan. SRC-011 states the upper levels rest on trusses A-B and C-D, so the roadways are offset from the centerline. Width is sourced; only the deck structure depth is a placeholder (OQ-013).",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-026",
+        "CTL-027",
+        "CTL-022",
+        "CTL-023",
+        "CTL-008",
+        "CTL-010",
+        "CTL-103"
+      ],
+      "open_questions": [
+        "OQ-013"
+      ],
+      "basis_confidence": "B",
+      "geometry_kinds": [
+        "box"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          -445.008,
+          6.7056,
+          48.4632
+        ],
+        "max": [
+          -224.028,
+          14.0208,
+          49.3776
+        ],
+        "size": [
+          220.98,
+          7.3152,
+          0.9144
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          2537.08,
+          83.99,
+          10.5
+        ]
+      }
+    },
+    {
+      "part_id": "lower_roadway_envelope_side_span_manhattan",
+      "system": "deck_system",
+      "subsystem": "lower_roadway",
+      "source_basis": [
+        "control_dimension"
+      ],
+      "confidence": "D",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Lower roadway envelope over the side span manhattan, centered on the bridge centerline at the sourced 35 ft width (CTL-024, 1909 cross-section).",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-024",
+        "CTL-008",
+        "CTL-104"
+      ],
+      "open_questions": [
+        "OQ-013"
+      ],
+      "basis_confidence": "B",
+      "geometry_kinds": [
+        "box"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          -445.008,
+          -5.334,
+          41.148
+        ],
+        "max": [
+          -224.028,
+          5.334,
+          42.18432
+        ],
+        "size": [
+          220.98,
+          10.668,
+          1.03632
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          2537.08,
+          122.48,
+          11.9
+        ]
+      }
+    },
+    {
+      "part_id": "stiffening_truss_a_chords_side_span_manhattan",
+      "system": "deck_system",
+      "subsystem": "stiffening_trusses",
+      "source_basis": [
+        "control_dimension"
+      ],
+      "confidence": "A",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Top and bottom chords of stiffening truss A (south outer) over the side span manhattan. Depth 24 ft and the 28-40-28 ft transverse spacing are sourced from SRC-002, SRC-011 and SRC-015. Chord member sections are not modelled.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-008",
+        "CTL-010",
+        "CTL-022",
+        "CTL-023"
+      ],
+      "open_questions": [],
+      "basis_confidence": "A",
+      "geometry_kinds": [
+        "lines"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          -445.008,
+          -14.6304,
+          41.148
+        ],
+        "max": [
+          -224.028,
+          -14.6304,
+          48.4632
+        ],
+        "size": [
+          220.98,
+          0.0,
+          7.3152
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          2537.08,
+          0.0,
+          83.99
+        ]
+      }
+    },
+    {
+      "part_id": "stiffening_truss_a_web_side_span_manhattan",
+      "system": "deck_system",
+      "subsystem": "stiffening_trusses",
+      "source_basis": [
+        "control_dimension",
+        "inferred"
+      ],
+      "confidence": "D",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Web members of truss A (south outer) over the side span manhattan: 39 panels at 18.59 ft. The panel *positions* are sourced, being the unique integer solution to the 628 panel points in CTL-037. The alternating diagonal pattern follows the Warren form named by SRC-002, SRC-011 and SRC-012, but no source gives the diagonal handedness at each panel or whether verticals are present, so the web itself is inferred. See OQ-017.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-008",
+        "CTL-010",
+        "CTL-022",
+        "CTL-023",
+        "CTL-037",
+        "CTL-015"
+      ],
+      "open_questions": [
+        "OQ-017"
+      ],
+      "basis_confidence": "D",
+      "geometry_kinds": [
+        "lines"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          -445.008,
+          -14.6304,
+          41.148
+        ],
+        "max": [
+          -224.028,
+          -14.6304,
+          48.4632
+        ],
+        "size": [
+          220.98,
+          0.0,
+          7.3152
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          2537.08,
+          0.0,
+          83.99
+        ]
+      }
+    },
+    {
+      "part_id": "stiffening_truss_b_chords_side_span_manhattan",
+      "system": "deck_system",
+      "subsystem": "stiffening_trusses",
+      "source_basis": [
+        "control_dimension"
+      ],
+      "confidence": "A",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Top and bottom chords of stiffening truss B (south inner) over the side span manhattan. Depth 24 ft and the 28-40-28 ft transverse spacing are sourced from SRC-002, SRC-011 and SRC-015. Chord member sections are not modelled.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-008",
+        "CTL-010",
+        "CTL-022",
+        "CTL-023"
+      ],
+      "open_questions": [],
+      "basis_confidence": "A",
+      "geometry_kinds": [
+        "lines"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          -445.008,
+          -6.096,
+          41.148
+        ],
+        "max": [
+          -224.028,
+          -6.096,
+          48.4632
+        ],
+        "size": [
+          220.98,
+          0.0,
+          7.3152
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          2537.08,
+          0.0,
+          83.99
+        ]
+      }
+    },
+    {
+      "part_id": "stiffening_truss_b_web_side_span_manhattan",
+      "system": "deck_system",
+      "subsystem": "stiffening_trusses",
+      "source_basis": [
+        "control_dimension",
+        "inferred"
+      ],
+      "confidence": "D",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Web members of truss B (south inner) over the side span manhattan: 39 panels at 18.59 ft. The panel *positions* are sourced, being the unique integer solution to the 628 panel points in CTL-037. The alternating diagonal pattern follows the Warren form named by SRC-002, SRC-011 and SRC-012, but no source gives the diagonal handedness at each panel or whether verticals are present, so the web itself is inferred. See OQ-017.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-008",
+        "CTL-010",
+        "CTL-022",
+        "CTL-023",
+        "CTL-037",
+        "CTL-015"
+      ],
+      "open_questions": [
+        "OQ-017"
+      ],
+      "basis_confidence": "D",
+      "geometry_kinds": [
+        "lines"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          -445.008,
+          -6.096,
+          41.148
+        ],
+        "max": [
+          -224.028,
+          -6.096,
+          48.4632
+        ],
+        "size": [
+          220.98,
+          0.0,
+          7.3152
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          2537.08,
+          0.0,
+          83.99
+        ]
+      }
+    },
+    {
+      "part_id": "stiffening_truss_c_chords_side_span_manhattan",
+      "system": "deck_system",
+      "subsystem": "stiffening_trusses",
+      "source_basis": [
+        "control_dimension"
+      ],
+      "confidence": "A",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Top and bottom chords of stiffening truss C (north inner) over the side span manhattan. Depth 24 ft and the 28-40-28 ft transverse spacing are sourced from SRC-002, SRC-011 and SRC-015. Chord member sections are not modelled.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-008",
+        "CTL-010",
+        "CTL-022",
+        "CTL-023"
+      ],
+      "open_questions": [],
+      "basis_confidence": "A",
+      "geometry_kinds": [
+        "lines"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          -445.008,
+          6.096,
+          41.148
+        ],
+        "max": [
+          -224.028,
+          6.096,
+          48.4632
+        ],
+        "size": [
+          220.98,
+          0.0,
+          7.3152
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          2537.08,
+          0.0,
+          83.99
+        ]
+      }
+    },
+    {
+      "part_id": "stiffening_truss_c_web_side_span_manhattan",
+      "system": "deck_system",
+      "subsystem": "stiffening_trusses",
+      "source_basis": [
+        "control_dimension",
+        "inferred"
+      ],
+      "confidence": "D",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Web members of truss C (north inner) over the side span manhattan: 39 panels at 18.59 ft. The panel *positions* are sourced, being the unique integer solution to the 628 panel points in CTL-037. The alternating diagonal pattern follows the Warren form named by SRC-002, SRC-011 and SRC-012, but no source gives the diagonal handedness at each panel or whether verticals are present, so the web itself is inferred. See OQ-017.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-008",
+        "CTL-010",
+        "CTL-022",
+        "CTL-023",
+        "CTL-037",
+        "CTL-015"
+      ],
+      "open_questions": [
+        "OQ-017"
+      ],
+      "basis_confidence": "D",
+      "geometry_kinds": [
+        "lines"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          -445.008,
+          6.096,
+          41.148
+        ],
+        "max": [
+          -224.028,
+          6.096,
+          48.4632
+        ],
+        "size": [
+          220.98,
+          0.0,
+          7.3152
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          2537.08,
+          0.0,
+          83.99
+        ]
+      }
+    },
+    {
+      "part_id": "stiffening_truss_d_chords_side_span_manhattan",
+      "system": "deck_system",
+      "subsystem": "stiffening_trusses",
+      "source_basis": [
+        "control_dimension"
+      ],
+      "confidence": "A",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Top and bottom chords of stiffening truss D (north outer) over the side span manhattan. Depth 24 ft and the 28-40-28 ft transverse spacing are sourced from SRC-002, SRC-011 and SRC-015. Chord member sections are not modelled.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-008",
+        "CTL-010",
+        "CTL-022",
+        "CTL-023"
+      ],
+      "open_questions": [],
+      "basis_confidence": "A",
+      "geometry_kinds": [
+        "lines"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          -445.008,
+          14.6304,
+          41.148
+        ],
+        "max": [
+          -224.028,
+          14.6304,
+          48.4632
+        ],
+        "size": [
+          220.98,
+          0.0,
+          7.3152
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          2537.08,
+          0.0,
+          83.99
+        ]
+      }
+    },
+    {
+      "part_id": "stiffening_truss_d_web_side_span_manhattan",
+      "system": "deck_system",
+      "subsystem": "stiffening_trusses",
+      "source_basis": [
+        "control_dimension",
+        "inferred"
+      ],
+      "confidence": "D",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Web members of truss D (north outer) over the side span manhattan: 39 panels at 18.59 ft. The panel *positions* are sourced, being the unique integer solution to the 628 panel points in CTL-037. The alternating diagonal pattern follows the Warren form named by SRC-002, SRC-011 and SRC-012, but no source gives the diagonal handedness at each panel or whether verticals are present, so the web itself is inferred. See OQ-017.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-008",
+        "CTL-010",
+        "CTL-022",
+        "CTL-023",
+        "CTL-037",
+        "CTL-015"
+      ],
+      "open_questions": [
+        "OQ-017"
+      ],
+      "basis_confidence": "D",
+      "geometry_kinds": [
+        "lines"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          -445.008,
+          14.6304,
+          41.148
+        ],
+        "max": [
+          -224.028,
+          14.6304,
+          48.4632
+        ],
+        "size": [
+          220.98,
+          0.0,
+          7.3152
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          2537.08,
+          0.0,
+          83.99
+        ]
+      }
+    },
+    {
+      "part_id": "upper_roadway_brooklyn_bound_side_span_brooklyn",
+      "system": "deck_system",
+      "subsystem": "upper_roadway",
+      "source_basis": [
+        "control_dimension"
+      ],
+      "confidence": "D",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Upper roadway envelope, west, over trusses A-B, over the side span brooklyn. SRC-011 states the upper levels rest on trusses A-B and C-D, so the roadways are offset from the centerline. Width is sourced; only the deck structure depth is a placeholder (OQ-013).",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-026",
+        "CTL-027",
+        "CTL-022",
+        "CTL-023",
+        "CTL-008",
+        "CTL-010",
+        "CTL-103"
+      ],
+      "open_questions": [
+        "OQ-013"
+      ],
+      "basis_confidence": "B",
+      "geometry_kinds": [
+        "box"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          224.028,
+          -13.7922,
+          48.4632
+        ],
+        "max": [
+          445.008,
+          -6.9342,
+          49.3776
+        ],
+        "size": [
+          220.98,
+          6.858,
+          0.9144
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          2537.08,
+          78.74,
+          10.5
+        ]
+      }
+    },
+    {
+      "part_id": "upper_roadway_manhattan_bound_side_span_brooklyn",
+      "system": "deck_system",
+      "subsystem": "upper_roadway",
+      "source_basis": [
+        "control_dimension"
+      ],
+      "confidence": "D",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Upper roadway envelope, east, over trusses C-D, over the side span brooklyn. SRC-011 states the upper levels rest on trusses A-B and C-D, so the roadways are offset from the centerline. Width is sourced; only the deck structure depth is a placeholder (OQ-013).",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-026",
+        "CTL-027",
+        "CTL-022",
+        "CTL-023",
+        "CTL-008",
+        "CTL-010",
+        "CTL-103"
+      ],
+      "open_questions": [
+        "OQ-013"
+      ],
+      "basis_confidence": "B",
+      "geometry_kinds": [
+        "box"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          224.028,
+          6.7056,
+          48.4632
+        ],
+        "max": [
+          445.008,
+          14.0208,
+          49.3776
+        ],
+        "size": [
+          220.98,
+          7.3152,
+          0.9144
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          2537.08,
+          83.99,
+          10.5
+        ]
+      }
+    },
+    {
+      "part_id": "lower_roadway_envelope_side_span_brooklyn",
+      "system": "deck_system",
+      "subsystem": "lower_roadway",
+      "source_basis": [
+        "control_dimension"
+      ],
+      "confidence": "D",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Lower roadway envelope over the side span brooklyn, centered on the bridge centerline at the sourced 35 ft width (CTL-024, 1909 cross-section).",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-024",
+        "CTL-008",
+        "CTL-104"
+      ],
+      "open_questions": [
+        "OQ-013"
+      ],
+      "basis_confidence": "B",
+      "geometry_kinds": [
+        "box"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          224.028,
+          -5.334,
+          41.148
+        ],
+        "max": [
+          445.008,
+          5.334,
+          42.18432
+        ],
+        "size": [
+          220.98,
+          10.668,
+          1.03632
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          2537.08,
+          122.48,
+          11.9
+        ]
+      }
+    },
+    {
+      "part_id": "stiffening_truss_a_chords_side_span_brooklyn",
+      "system": "deck_system",
+      "subsystem": "stiffening_trusses",
+      "source_basis": [
+        "control_dimension"
+      ],
+      "confidence": "A",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Top and bottom chords of stiffening truss A (south outer) over the side span brooklyn. Depth 24 ft and the 28-40-28 ft transverse spacing are sourced from SRC-002, SRC-011 and SRC-015. Chord member sections are not modelled.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-008",
+        "CTL-010",
+        "CTL-022",
+        "CTL-023"
+      ],
+      "open_questions": [],
+      "basis_confidence": "A",
+      "geometry_kinds": [
+        "lines"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          224.028,
+          -14.6304,
+          41.148
+        ],
+        "max": [
+          445.008,
+          -14.6304,
+          48.4632
+        ],
+        "size": [
+          220.98,
+          0.0,
+          7.3152
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          2537.08,
+          0.0,
+          83.99
+        ]
+      }
+    },
+    {
+      "part_id": "stiffening_truss_a_web_side_span_brooklyn",
+      "system": "deck_system",
+      "subsystem": "stiffening_trusses",
+      "source_basis": [
+        "control_dimension",
+        "inferred"
+      ],
+      "confidence": "D",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Web members of truss A (south outer) over the side span brooklyn: 39 panels at 18.59 ft. The panel *positions* are sourced, being the unique integer solution to the 628 panel points in CTL-037. The alternating diagonal pattern follows the Warren form named by SRC-002, SRC-011 and SRC-012, but no source gives the diagonal handedness at each panel or whether verticals are present, so the web itself is inferred. See OQ-017.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-008",
+        "CTL-010",
+        "CTL-022",
+        "CTL-023",
+        "CTL-037",
+        "CTL-015"
+      ],
+      "open_questions": [
+        "OQ-017"
+      ],
+      "basis_confidence": "D",
+      "geometry_kinds": [
+        "lines"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          224.028,
+          -14.6304,
+          41.148
+        ],
+        "max": [
+          445.008,
+          -14.6304,
+          48.4632
+        ],
+        "size": [
+          220.98,
+          0.0,
+          7.3152
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          2537.08,
+          0.0,
+          83.99
+        ]
+      }
+    },
+    {
+      "part_id": "stiffening_truss_b_chords_side_span_brooklyn",
+      "system": "deck_system",
+      "subsystem": "stiffening_trusses",
+      "source_basis": [
+        "control_dimension"
+      ],
+      "confidence": "A",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Top and bottom chords of stiffening truss B (south inner) over the side span brooklyn. Depth 24 ft and the 28-40-28 ft transverse spacing are sourced from SRC-002, SRC-011 and SRC-015. Chord member sections are not modelled.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-008",
+        "CTL-010",
+        "CTL-022",
+        "CTL-023"
+      ],
+      "open_questions": [],
+      "basis_confidence": "A",
+      "geometry_kinds": [
+        "lines"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          224.028,
+          -6.096,
+          41.148
+        ],
+        "max": [
+          445.008,
+          -6.096,
+          48.4632
+        ],
+        "size": [
+          220.98,
+          0.0,
+          7.3152
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          2537.08,
+          0.0,
+          83.99
+        ]
+      }
+    },
+    {
+      "part_id": "stiffening_truss_b_web_side_span_brooklyn",
+      "system": "deck_system",
+      "subsystem": "stiffening_trusses",
+      "source_basis": [
+        "control_dimension",
+        "inferred"
+      ],
+      "confidence": "D",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Web members of truss B (south inner) over the side span brooklyn: 39 panels at 18.59 ft. The panel *positions* are sourced, being the unique integer solution to the 628 panel points in CTL-037. The alternating diagonal pattern follows the Warren form named by SRC-002, SRC-011 and SRC-012, but no source gives the diagonal handedness at each panel or whether verticals are present, so the web itself is inferred. See OQ-017.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-008",
+        "CTL-010",
+        "CTL-022",
+        "CTL-023",
+        "CTL-037",
+        "CTL-015"
+      ],
+      "open_questions": [
+        "OQ-017"
+      ],
+      "basis_confidence": "D",
+      "geometry_kinds": [
+        "lines"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          224.028,
+          -6.096,
+          41.148
+        ],
+        "max": [
+          445.008,
+          -6.096,
+          48.4632
+        ],
+        "size": [
+          220.98,
+          0.0,
+          7.3152
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          2537.08,
+          0.0,
+          83.99
+        ]
+      }
+    },
+    {
+      "part_id": "stiffening_truss_c_chords_side_span_brooklyn",
+      "system": "deck_system",
+      "subsystem": "stiffening_trusses",
+      "source_basis": [
+        "control_dimension"
+      ],
+      "confidence": "A",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Top and bottom chords of stiffening truss C (north inner) over the side span brooklyn. Depth 24 ft and the 28-40-28 ft transverse spacing are sourced from SRC-002, SRC-011 and SRC-015. Chord member sections are not modelled.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-008",
+        "CTL-010",
+        "CTL-022",
+        "CTL-023"
+      ],
+      "open_questions": [],
+      "basis_confidence": "A",
+      "geometry_kinds": [
+        "lines"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          224.028,
+          6.096,
+          41.148
+        ],
+        "max": [
+          445.008,
+          6.096,
+          48.4632
+        ],
+        "size": [
+          220.98,
+          0.0,
+          7.3152
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          2537.08,
+          0.0,
+          83.99
+        ]
+      }
+    },
+    {
+      "part_id": "stiffening_truss_c_web_side_span_brooklyn",
+      "system": "deck_system",
+      "subsystem": "stiffening_trusses",
+      "source_basis": [
+        "control_dimension",
+        "inferred"
+      ],
+      "confidence": "D",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Web members of truss C (north inner) over the side span brooklyn: 39 panels at 18.59 ft. The panel *positions* are sourced, being the unique integer solution to the 628 panel points in CTL-037. The alternating diagonal pattern follows the Warren form named by SRC-002, SRC-011 and SRC-012, but no source gives the diagonal handedness at each panel or whether verticals are present, so the web itself is inferred. See OQ-017.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-008",
+        "CTL-010",
+        "CTL-022",
+        "CTL-023",
+        "CTL-037",
+        "CTL-015"
+      ],
+      "open_questions": [
+        "OQ-017"
+      ],
+      "basis_confidence": "D",
+      "geometry_kinds": [
+        "lines"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          224.028,
+          6.096,
+          41.148
+        ],
+        "max": [
+          445.008,
+          6.096,
+          48.4632
+        ],
+        "size": [
+          220.98,
+          0.0,
+          7.3152
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          2537.08,
+          0.0,
+          83.99
+        ]
+      }
+    },
+    {
+      "part_id": "stiffening_truss_d_chords_side_span_brooklyn",
+      "system": "deck_system",
+      "subsystem": "stiffening_trusses",
+      "source_basis": [
+        "control_dimension"
+      ],
+      "confidence": "A",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Top and bottom chords of stiffening truss D (north outer) over the side span brooklyn. Depth 24 ft and the 28-40-28 ft transverse spacing are sourced from SRC-002, SRC-011 and SRC-015. Chord member sections are not modelled.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-008",
+        "CTL-010",
+        "CTL-022",
+        "CTL-023"
+      ],
+      "open_questions": [],
+      "basis_confidence": "A",
+      "geometry_kinds": [
+        "lines"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          224.028,
+          14.6304,
+          41.148
+        ],
+        "max": [
+          445.008,
+          14.6304,
+          48.4632
+        ],
+        "size": [
+          220.98,
+          0.0,
+          7.3152
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          2537.08,
+          0.0,
+          83.99
+        ]
+      }
+    },
+    {
+      "part_id": "stiffening_truss_d_web_side_span_brooklyn",
+      "system": "deck_system",
+      "subsystem": "stiffening_trusses",
+      "source_basis": [
+        "control_dimension",
+        "inferred"
+      ],
+      "confidence": "D",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Web members of truss D (north outer) over the side span brooklyn: 39 panels at 18.59 ft. The panel *positions* are sourced, being the unique integer solution to the 628 panel points in CTL-037. The alternating diagonal pattern follows the Warren form named by SRC-002, SRC-011 and SRC-012, but no source gives the diagonal handedness at each panel or whether verticals are present, so the web itself is inferred. See OQ-017.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-008",
+        "CTL-010",
+        "CTL-022",
+        "CTL-023",
+        "CTL-037",
+        "CTL-015"
+      ],
+      "open_questions": [
+        "OQ-017"
+      ],
+      "basis_confidence": "D",
+      "geometry_kinds": [
+        "lines"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          224.028,
+          14.6304,
+          41.148
+        ],
+        "max": [
+          445.008,
+          14.6304,
+          48.4632
+        ],
+        "size": [
+          220.98,
+          0.0,
+          7.3152
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          2537.08,
+          0.0,
+          83.99
+        ]
+      }
+    },
+    {
+      "part_id": "footwalk_south",
+      "system": "deck_system",
+      "subsystem": "lower_roadway",
+      "source_basis": [
+        "control_dimension"
+      ],
+      "confidence": "D",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "South footwalk envelope, 10 ft wide (CTL-025), outboard of truss A. Today the south path is the walkway and the north path is the bikeway. Placement follows the 1909 cross-section, which closes to the sourced 120 ft deck width.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-025",
+        "CTL-023",
+        "CTL-021",
+        "CTL-008",
+        "CTL-104"
+      ],
+      "open_questions": [
+        "OQ-013"
+      ],
+      "basis_confidence": "B",
+      "geometry_kinds": [
+        "box"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          -445.008,
+          -17.6784,
+          42.18432
+        ],
+        "max": [
+          445.008,
+          -14.6304,
+          42.48432
+        ],
+        "size": [
+          890.016,
+          3.048,
+          0.3
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          10218.32,
+          34.99,
+          3.44
+        ]
+      }
+    },
+    {
+      "part_id": "footwalk_north",
+      "system": "deck_system",
+      "subsystem": "lower_roadway",
+      "source_basis": [
+        "control_dimension"
+      ],
+      "confidence": "D",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "North footwalk envelope, 10 ft wide (CTL-025), outboard of truss D. Today the south path is the walkway and the north path is the bikeway. Placement follows the 1909 cross-section, which closes to the sourced 120 ft deck width.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-025",
+        "CTL-023",
+        "CTL-021",
+        "CTL-008",
+        "CTL-104"
+      ],
+      "open_questions": [
+        "OQ-013"
+      ],
+      "basis_confidence": "B",
+      "geometry_kinds": [
+        "box"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          -445.008,
+          14.6304,
+          42.18432
+        ],
+        "max": [
+          445.008,
+          17.6784,
+          42.48432
+        ],
+        "size": [
+          890.016,
+          3.048,
+          0.3
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          10218.32,
+          34.99,
+          3.44
+        ]
+      }
+    },
+    {
+      "part_id": "track_1",
+      "system": "deck_system",
+      "subsystem": "subway_tracks",
+      "source_basis": [
+        "control_dimension",
+        "inferred"
+      ],
+      "confidence": "D",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Subway track envelope over the suspended length. SRC-011 confirms two tracks in each of the A-B and C-D truss bays, which bounds the transverse position between 20 ft and 48 ft from the centerline; the exact centerline within that bay is still a placeholder, see OQ-010. Approach trackwork is not modelled.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-017",
+        "CTL-105",
+        "CTL-106",
+        "CTL-022",
+        "CTL-023",
+        "CTL-008",
+        "CTL-104",
+        "CTL-107"
+      ],
+      "open_questions": [
+        "OQ-010",
+        "OQ-013"
+      ],
+      "basis_confidence": "B",
+      "geometry_kinds": [
+        "box"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          -445.008,
+          11.77925,
+          42.18432
+        ],
+        "max": [
+          445.008,
+          13.21435,
+          42.64152
+        ],
+        "size": [
+          890.016,
+          1.4351,
+          0.4572
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          10218.32,
+          16.48,
+          5.25
+        ]
+      }
+    },
+    {
+      "part_id": "track_2",
+      "system": "deck_system",
+      "subsystem": "subway_tracks",
+      "source_basis": [
+        "control_dimension",
+        "inferred"
+      ],
+      "confidence": "D",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Subway track envelope over the suspended length. SRC-011 confirms two tracks in each of the A-B and C-D truss bays, which bounds the transverse position between 20 ft and 48 ft from the centerline; the exact centerline within that bay is still a placeholder, see OQ-010. Approach trackwork is not modelled.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-017",
+        "CTL-105",
+        "CTL-106",
+        "CTL-022",
+        "CTL-023",
+        "CTL-008",
+        "CTL-104",
+        "CTL-107"
+      ],
+      "open_questions": [
+        "OQ-010",
+        "OQ-013"
+      ],
+      "basis_confidence": "B",
+      "geometry_kinds": [
+        "box"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          -445.008,
+          7.51205,
+          42.18432
+        ],
+        "max": [
+          445.008,
+          8.94715,
+          42.64152
+        ],
+        "size": [
+          890.016,
+          1.4351,
+          0.4572
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          10218.32,
+          16.48,
+          5.25
+        ]
+      }
+    },
+    {
+      "part_id": "track_3",
+      "system": "deck_system",
+      "subsystem": "subway_tracks",
+      "source_basis": [
+        "control_dimension",
+        "inferred"
+      ],
+      "confidence": "D",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Subway track envelope over the suspended length. SRC-011 confirms two tracks in each of the A-B and C-D truss bays, which bounds the transverse position between 20 ft and 48 ft from the centerline; the exact centerline within that bay is still a placeholder, see OQ-010. Approach trackwork is not modelled.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-017",
+        "CTL-105",
+        "CTL-106",
+        "CTL-022",
+        "CTL-023",
+        "CTL-008",
+        "CTL-104",
+        "CTL-107"
+      ],
+      "open_questions": [
+        "OQ-010",
+        "OQ-013"
+      ],
+      "basis_confidence": "B",
+      "geometry_kinds": [
+        "box"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          -445.008,
+          -8.94715,
+          42.18432
+        ],
+        "max": [
+          445.008,
+          -7.51205,
+          42.64152
+        ],
+        "size": [
+          890.016,
+          1.4351,
+          0.4572
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          10218.32,
+          16.48,
+          5.25
+        ]
+      }
+    },
+    {
+      "part_id": "track_4",
+      "system": "deck_system",
+      "subsystem": "subway_tracks",
+      "source_basis": [
+        "control_dimension",
+        "inferred"
+      ],
+      "confidence": "D",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Subway track envelope over the suspended length. SRC-011 confirms two tracks in each of the A-B and C-D truss bays, which bounds the transverse position between 20 ft and 48 ft from the centerline; the exact centerline within that bay is still a placeholder, see OQ-010. Approach trackwork is not modelled.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-017",
+        "CTL-105",
+        "CTL-106",
+        "CTL-022",
+        "CTL-023",
+        "CTL-008",
+        "CTL-104",
+        "CTL-107"
+      ],
+      "open_questions": [
+        "OQ-010",
+        "OQ-013"
+      ],
+      "basis_confidence": "B",
+      "geometry_kinds": [
+        "box"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          -445.008,
+          -13.21435,
+          42.18432
+        ],
+        "max": [
+          445.008,
+          -11.77925,
+          42.64152
+        ],
+        "size": [
+          890.016,
+          1.4351,
+          0.4572
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          10218.32,
+          16.48,
+          5.25
+        ]
+      }
+    },
+    {
+      "part_id": "manhattan_approach",
+      "system": "approaches",
+      "subsystem": null,
+      "source_basis": [
+        "control_dimension",
+        "inferred"
+      ],
+      "confidence": "D",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Approach deck envelope, drawn level from the outboard face of the anchorage to the approach end station. The length split is now a sourced ratio (OQ-006 mitigated), but grade, plan curvature and the continuous Warren truss structure described by SRC-011 are not modelled.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-001",
+        "CTL-004",
+        "CTL-039",
+        "CTL-040",
+        "CTL-021",
+        "CTL-034",
+        "CTL-008",
+        "CTL-010",
+        "CTL-103"
+      ],
+      "open_questions": [
+        "OQ-002",
+        "OQ-006",
+        "OQ-013"
+      ],
+      "basis_confidence": "C",
+      "geometry_kinds": [
+        "box"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          -1061.906336,
+          -18.288,
+          48.4632
+        ],
+        "max": [
+          -517.2456,
+          18.288,
+          49.3776
+        ],
+        "size": [
+          544.660736,
+          36.576,
+          0.9144
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          6253.28,
+          419.93,
+          10.5
+        ]
+      }
+    },
+    {
+      "part_id": "brooklyn_approach",
+      "system": "approaches",
+      "subsystem": null,
+      "source_basis": [
+        "control_dimension",
+        "inferred"
+      ],
+      "confidence": "D",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Approach deck envelope, drawn level from the outboard face of the anchorage to the approach end station. The length split is now a sourced ratio (OQ-006 mitigated), but grade, plan curvature and the continuous Warren truss structure described by SRC-011 are not modelled.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-001",
+        "CTL-004",
+        "CTL-039",
+        "CTL-040",
+        "CTL-021",
+        "CTL-034",
+        "CTL-008",
+        "CTL-010",
+        "CTL-103"
+      ],
+      "open_questions": [
+        "OQ-002",
+        "OQ-006",
+        "OQ-013"
+      ],
+      "basis_confidence": "C",
+      "geometry_kinds": [
+        "box"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          517.2456,
+          -18.288,
+          48.4632
+        ],
+        "max": [
+          1027.497664,
+          18.288,
+          49.3776
+        ],
+        "size": [
+          510.252064,
+          36.576,
+          0.9144
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          5858.23,
+          419.93,
+          10.5
+        ]
+      }
+    }
+  ]
+}

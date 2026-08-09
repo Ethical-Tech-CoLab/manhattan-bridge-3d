@@ -1,0 +1,487 @@
+:root {
+  --bg: #0d1117;
+  --panel: #161b22;
+  --panel-2: #1c232c;
+  --border: #2b333d;
+  --text: #d7dee6;
+  --muted: #8b98a5;
+  --accent: #ffd166;
+  --conf-a: #2e9e4f;
+  --conf-b: #3b7dd8;
+  --conf-c: #d89a3b;
+  --conf-d: #c4453c;
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font: 13px/1.45 "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+
+code,
+.mono {
+  font-family: "Cascadia Mono", ui-monospace, Consolas, monospace;
+  font-size: 12px;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.fatal {
+  padding: 32px;
+  max-width: 720px;
+}
+
+/* ---------------------------------------------------------------- toolbar */
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--border);
+  background: var(--panel);
+}
+
+.toolbar h1 {
+  font-size: 15px;
+  margin: 0;
+  letter-spacing: 0.02em;
+}
+
+.toolbar .title p {
+  margin: 2px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.toolbar .controls {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+button {
+  background: var(--panel-2);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font: inherit;
+}
+
+button:hover {
+  border-color: var(--accent);
+}
+
+.segmented {
+  display: inline-flex;
+}
+
+.segmented button {
+  border-radius: 0;
+  border-right-width: 0;
+}
+
+.segmented button:first-child {
+  border-radius: 4px 0 0 4px;
+}
+
+.segmented button:last-child {
+  border-radius: 0 4px 4px 0;
+  border-right-width: 1px;
+}
+
+.segmented button.active {
+  background: var(--accent);
+  color: #17202a;
+  font-weight: 600;
+}
+
+/* ------------------------------------------------------------------ layout */
+
+.body {
+  display: grid;
+  grid-template-columns: 300px minmax(0, 1fr) 380px;
+  flex: 1;
+  min-height: 0;
+}
+
+/* The 3D stage must never be squeezed out on narrow windows. */
+@media (max-width: 1400px) {
+  .body {
+    grid-template-columns: 240px minmax(0, 1fr) 300px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .body {
+    grid-template-columns: 200px minmax(0, 1fr) 260px;
+  }
+}
+
+aside {
+  overflow-y: auto;
+  background: var(--panel);
+}
+
+aside.left {
+  border-right: 1px solid var(--border);
+}
+
+aside.right {
+  border-left: 1px solid var(--border);
+}
+
+.stage {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+}
+
+/* React Three Fiber measures its container with a ResizeObserver. If that container's height comes
+   from flex resolution, the first measurement can be zero and the Canvas never initialises. Giving
+   the host a definite absolutely-positioned box removes the race. */
+.canvas-host {
+  position: relative;
+  flex: 1 1 auto;
+  min-height: 0;
+  width: 100%;
+}
+
+.canvas-host > canvas {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.canvas-error {
+  position: absolute;
+  z-index: 5;
+  top: 12px;
+  left: 12px;
+  right: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 10px 12px;
+  border: 1px solid var(--conf-d);
+  border-radius: 4px;
+  background: #2a1512;
+  font-size: 12px;
+}
+
+.stage canvas {
+  display: block;
+}
+
+.stage-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 6px 12px;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 11px;
+  background: var(--panel);
+}
+
+/* -------------------------------------------------------------- part tree */
+
+.tree section {
+  border-bottom: 1px solid var(--border);
+  padding: 8px 10px 10px;
+}
+
+.tree header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tree h3 {
+  margin: 0;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  flex: 1;
+}
+
+.tree h4 {
+  margin: 8px 0 2px;
+  font-size: 11px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.tree .count {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.tree ul {
+  list-style: none;
+  margin: 4px 0 0;
+  padding: 0;
+}
+
+.part-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.part-row button {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: 1px solid transparent;
+  padding: 2px 4px;
+  text-align: left;
+  overflow: hidden;
+}
+
+.part-row .part-name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.part-row.selected button {
+  background: var(--panel-2);
+  border-color: var(--accent);
+}
+
+.part-row.hidden button,
+.system.hidden h3 {
+  opacity: 0.45;
+}
+
+/* ------------------------------------------------------------------ badges */
+
+.badge,
+.chip {
+  display: inline-block;
+  border-radius: 3px;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1;
+  padding: 3px 4px;
+  color: #0d1117;
+}
+
+.chip {
+  font-weight: 600;
+  margin: 0 3px 3px 0;
+  padding: 3px 5px;
+}
+
+.badge-A,
+.chip-A {
+  background: var(--conf-a);
+  color: #071b0e;
+}
+
+.badge-B,
+.chip-B {
+  background: var(--conf-b);
+  color: #05122a;
+}
+
+.badge-C,
+.chip-C {
+  background: var(--conf-c);
+  color: #201503;
+}
+
+.badge-D,
+.chip-D {
+  background: var(--conf-d);
+  color: #240705;
+}
+
+/* ------------------------------------------------------------------ legend */
+
+.legend {
+  padding: 10px;
+}
+
+.legend header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.legend h3 {
+  margin: 0;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+
+.legend ul {
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 0;
+}
+
+.legend li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 2px 0;
+}
+
+.legend .legend-label {
+  flex: 1;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.swatch {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+}
+
+.switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+/* ------------------------------------------------------------------ panels */
+
+.panel {
+  padding: 14px;
+}
+
+.panel h2 {
+  margin: 0 0 8px;
+  font-size: 14px;
+  word-break: break-word;
+}
+
+.panel h3 {
+  margin: 18px 0 6px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+
+.confidence-banner {
+  padding: 6px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #0d1117;
+}
+
+.conf-A {
+  background: var(--conf-a);
+}
+
+.conf-B {
+  background: var(--conf-b);
+}
+
+.conf-C {
+  background: var(--conf-c);
+}
+
+.conf-D {
+  background: var(--conf-d);
+}
+
+.panel dl {
+  display: grid;
+  grid-template-columns: 108px 1fr;
+  gap: 6px 10px;
+  margin: 0;
+}
+
+.panel dt {
+  color: var(--muted);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.panel dd {
+  margin: 0;
+  word-break: break-word;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.dims {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.dims th {
+  text-align: left;
+  color: var(--muted);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border-bottom: 1px solid var(--border);
+  padding: 4px 4px;
+}
+
+.dims td {
+  padding: 3px 4px;
+  border-bottom: 1px solid #21272f;
+  vertical-align: top;
+}
+
+.footnote {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.placeholder-list {
+  list-style: none;
+  margin: 6px 0 0;
+  padding: 0;
+  font-size: 12px;
+}
+
+.placeholder-list li {
+  padding: 2px 0;
+}
