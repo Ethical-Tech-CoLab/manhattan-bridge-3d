@@ -1,6 +1,6 @@
 {
   "title": "Manhattan Bridge — Control Skeleton",
-  "subtitle": "Milestone 3 · primary sources examined",
+  "subtitle": "Milestone 5 · published to the shared district contract",
   "modelUrl": "control_skeleton.glb",
   "metadataUrl": "parts.json",
   "scaleDenominator": 87.1,
@@ -22,9 +22,10 @@
     "scaleReference": "SCALE-HO.md"
   },
   "notImplementedYet": [
-    "LOD switching (Milestone 5)",
-    "exploded part schematic view (Milestone 5)",
-    "archival drawing overlay (Milestone 3)",
-    "photogrammetry point cloud overlay (Milestone 3)"
+    "LOD switching (Milestone 6)",
+    "exploded part schematic view (Milestone 6)",
+    "archival drawing overlay — awaits the NYCDOT contract drawings",
+    "photogrammetry point cloud overlay — awaits a walkway-level image set",
+    "no level-1 segmented mesh; the published ladder jumps from 0.01 m to 8.0 m"
   ]
 }
