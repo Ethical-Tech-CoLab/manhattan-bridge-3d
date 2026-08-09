@@ -19,8 +19,8 @@ the open question that would retire it.
 | [SOURCE-REGISTER.md](SOURCE-REGISTER.md) | Every source that may influence geometry, its verification state, and the open conflicts. |
 | [CONFIDENCE-MODEL.md](CONFIDENCE-MODEL.md) | Grades A–D, the weakest-link rule, and the metadata contract every part must satisfy. |
 | [SCALE-HO.md](SCALE-HO.md) | 1:87.1 reporting scale and what it implies physically. |
-| [AGENT-INSTRUCTIONS.md](AGENT-INSTRUCTIONS.md) | The original build handoff and milestone plan. |
-| [starter/AGENT-INSTRUCTIONS.md](starter/AGENT-INSTRUCTIONS.md) | **Starting a sibling bridge?** A drop-in brief carrying the method, the verified HAER source landscape for all three East River bridges, and every trap this project hit. |
+| [AGENT-INSTRUCTIONS.md](AGENT-INSTRUCTIONS.md) | The original build handoff and milestone plan for this bridge. |
+| [HOW-TO-DESIGN.md](HOW-TO-DESIGN.md) | **Starting a sibling bridge?** The transferable method — governance model, the three grading axes, the verified HAER source landscape for all three East River bridges, and every trap this project hit. |
 
 ## Quick start
 

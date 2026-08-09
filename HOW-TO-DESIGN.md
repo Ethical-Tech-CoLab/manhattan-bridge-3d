@@ -1,12 +1,42 @@
-# Bridge Digital Twin — Agent Instructions
+# How to Design a Source-Governed Bridge Digital Twin
 
-**This file is the starting brief for a new source-governed bridge model.** It was written after
-building [manhattan-bridge-3d](https://github.com/Ethical-Tech-CoLab/manhattan-bridge-3d) through
-seven milestones, and it carries the method, the tooling shape, the verified source landscape for
-the neighbouring East River bridges, and — most usefully — the mistakes, with what each one cost.
+**Best practices for starting a new bridge model** — written for the Brooklyn Bridge and
+Williamsburg Bridge efforts, but specific to neither.
 
-Copy this file to the root of the new repository as `AGENT-INSTRUCTIONS.md`, delete the sections
-that do not apply to your bridge, and start at [§14](#14-day-one-checklist).
+This is the transferable method distilled from building
+[manhattan-bridge-3d](https://github.com/Ethical-Tech-CoLab/manhattan-bridge-3d) through seven
+milestones: the governance model, the tooling shape, the verified source landscape for all three
+East River bridges, and — most usefully — the mistakes, with what each one cost.
+
+> **This is not the same thing as `AGENT-INSTRUCTIONS.md`.** That file is a *repository-specific*
+> build brief: what to build, for which bridge, in what order. This file is the *method* that
+> outlives any one repository. A new bridge repo wants both — its own `AGENT-INSTRUCTIONS.md`
+> naming its bridge and milestones, plus a copy of this document.
+
+## Using this in a new repository
+
+```powershell
+# from the new repository root
+Copy-Item ..\manhattan-bridge-3d\HOW-TO-DESIGN.md .\HOW-TO-DESIGN.md
+```
+
+Then write that repo's own `AGENT-INSTRUCTIONS.md` and work through the
+[day one checklist](#14-day-one-checklist).
+
+**Three scripts are worth porting as-is.** They are bridge-agnostic, dependency-free, and carry the
+parsing contract that makes the governance rules enforceable rather than aspirational:
+
+| From this repo | What it gives you |
+|---|---|
+| [scripts/control_model.py](scripts/control_model.py) | Parses the control document; rejects a graded row with no source, and a placeholder that cites one |
+| [scripts/normalize_units.py](scripts/normalize_units.py) | The single unit-conversion implementation |
+| [scripts/export_gltf.py](scripts/export_gltf.py) | glTF 2.0 / GLB writer with no third-party dependencies |
+
+**What this guide will not do for you.** It carries the method and the traps, not the dimensions.
+Every number in a new repository has to be sourced there from scratch — which is exactly why the
+Manhattan Bridge's figures are registered in [SOURCE-REGISTER.md](SOURCE-REGISTER.md) as a
+**negative control**. Three similar East River suspension bridges are the most likely way this
+programme produces a confident wrong number.
 
 ---
 
@@ -355,7 +385,8 @@ GEOMETRY-CONTROL.md      the single source of truth
 SOURCE-REGISTER.md       every source, with verification state and conflicts
 CONFIDENCE-MODEL.md      what A/B/C/D mean and how a part inherits its grade
 SCALE-HO.md              display-scale reference, if modelling for a physical scale
-AGENT-INSTRUCTIONS.md    this file
+AGENT-INSTRUCTIONS.md    the build brief for THIS bridge: scope, milestones, deliverables
+HOW-TO-DESIGN.md         this file: the transferable method, copied in from a sibling repo
 scripts/                 build and validation pipeline
 tests/                   geometry regression + source traceability suites
 viewer/                  browser viewer; viewer/public is the published contract surface
@@ -368,7 +399,8 @@ photogrammetry/          capture inputs, when they exist
 
 ## 14. Day one checklist
 
-1. Copy this file in as `AGENT-INSTRUCTIONS.md`. Trim what does not apply.
+1. Copy this file in as `HOW-TO-DESIGN.md`, and write a separate `AGENT-INSTRUCTIONS.md` naming
+   your bridge, its scope and its milestones. Keep the two distinct: method here, brief there.
 2. Create `SOURCE-REGISTER.md`. **Register the other two bridges as negative controls immediately.**
 3. Create `CONFIDENCE-MODEL.md` — define `A`/`B`/`C`/`D` and the weakest-link inheritance rule.
 4. Create `GEOMETRY-CONTROL.md` with the table skeletons from §6. It is fine for every row to be
