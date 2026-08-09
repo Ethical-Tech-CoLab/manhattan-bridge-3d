@@ -133,7 +133,7 @@
   "provenance": {
     "module_id": "manhattan-bridge",
     "generated_by": "publish_module_contract.py via build_control_skeleton.py@1.0.0",
-    "generated_at": "2026-08-09T17:17:08+00:00",
+    "generated_at": "2026-08-09T17:35:56+00:00",
     "source_documents": [
       {
         "path": "GEOMETRY-CONTROL.md",
@@ -154,6 +154,12 @@
       "ho_scale": {
         "denominator": 87.1,
         "note": "HO 1:87.1 is a display scale, never a data scale. placement.scale MUST stay 1 for georeferenced delivery; the HO export is a separate artifact."
+      },
+      "authoring": {
+        "vertical_datum": "MHW",
+        "note": "Elevations are authored against mean high water because the period sources state them that way; converting at authoring time would bake a derived number into the sourced geometry. The conversion to the frame's NAVD88 happens at placement time via placement.translation_m[2].",
+        "offset_to_navd88_m": 0.59,
+        "offset_basis": "Taken from vertical_datum_offsets_m in the frozen canonical frame. NOAA CO-OPS station 8518750, epoch 1983-2001, gives MHW 2.445 m and NAVD88 1.848 m on station datum, a difference of 0.597 m. The frame value is used in preference to the measured one because it is frozen for contract major version 1 and cross-module consistency matters more than 7 mm, which is two orders of magnitude below the accuracy of the footprint data these elevations must agree with."
       },
       "confidence_histogram": {
         "A": 33,

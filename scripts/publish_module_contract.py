@@ -291,7 +291,31 @@ def build_asset_registry(model, parts_doc: dict[str, Any], proxy_report: dict[st
     }
 
 
-def build_manifest(model, sk) -> dict[str, Any]:
+def confidence_histogram(parts_doc) -> dict[str, int]:
+    """Grade counts taken from the built parts, never hand-maintained.
+
+    A hardcoded histogram silently becomes a false claim the moment a control changes grade, and
+    it is exactly the kind of number a reader would trust without checking.
+    """
+    counts = {"A": 0, "B": 0, "C": 0, "D": 0}
+    for part in parts_doc["parts"]:
+        grade = part.get("confidence")
+        if grade in counts:
+            counts[grade] += 1
+    return counts
+
+
+def placeholder_count(model) -> int:
+    """How many control values are still placeholders rather than sourced dimensions.
+
+    Reads the attribute directly rather than via getattr with a default: if the control model is
+    ever renamed, this must break loudly instead of quietly publishing "0 placeholders remain",
+    which is precisely the kind of false reassurance this project exists to prevent.
+    """
+    return sum(1 for c in model.controls.values() if c.is_placeholder)
+
+
+def build_manifest(model, parts_doc) -> dict[str, Any]:
     return {
         "contract_version": CONTRACT_VERSION,
         "module_id": MODULE_ID,
@@ -437,9 +461,33 @@ def build_manifest(model, sk) -> dict[str, Any]:
                         "1 for georeferenced delivery; the HO export is a separate artifact."
                     ),
                 },
-                "confidence_histogram": {"A": 33, "B": 4, "C": 0, "D": 44},
+                # The shared module-manifest schema has no vertical_datum field, and the
+                # georeference must stay a byte-identical reference to the frozen canonical frame
+                # rather than an inlined copy, so the authored datum is declared here. Every
+                # elevation this module publishes shares it, which is why it is stated once at
+                # module level instead of repeated across 81 metadata records.
+                "authoring": {
+                    "vertical_datum": "MHW",
+                    "note": (
+                        "Elevations are authored against mean high water because the period "
+                        "sources state them that way; converting at authoring time would bake a "
+                        "derived number into the sourced geometry. The conversion to the frame's "
+                        "NAVD88 happens at placement time via placement.translation_m[2]."
+                    ),
+                    "offset_to_navd88_m": 0.59,
+                    "offset_basis": (
+                        "Taken from vertical_datum_offsets_m in the frozen canonical frame. NOAA "
+                        "CO-OPS station 8518750, epoch 1983-2001, gives MHW 2.445 m and NAVD88 "
+                        "1.848 m on station datum, a difference of 0.597 m. The frame value is "
+                        "used in preference to the measured one because it is frozen for contract "
+                        "major version 1 and cross-module consistency matters more than 7 mm, "
+                        "which is two orders of magnitude below the accuracy of the footprint "
+                        "data these elevations must agree with."
+                    ),
+                },
+                "confidence_histogram": confidence_histogram(parts_doc),
                 "control_document": "GEOMETRY-CONTROL.md",
-                "placeholder_controls_remaining": 7,
+                "placeholder_controls_remaining": placeholder_count(model),
             }
         },
     }
@@ -486,7 +534,7 @@ def main(argv: Sequence[str] | None = None) -> int:
         bridge_dir / "lod.json": build_lod(model),
         bridge_dir / "asset-registry.json": build_asset_registry(model, parts_doc, proxy_report),
         bridge_dir / "metadata.json": metadata,
-        public / "bridge-manifest.json": build_manifest(model, sk),
+        public / "bridge-manifest.json": build_manifest(model, parts_doc),
     }
     for path, payload in outputs.items():
         path.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")

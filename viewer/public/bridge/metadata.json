@@ -6596,7 +6596,7 @@
   "provenance": {
     "module_id": "manhattan-bridge",
     "generated_by": "publish_module_contract.py via build_control_skeleton.py@1.0.0",
-    "generated_at": "2026-08-09T17:17:08+00:00",
+    "generated_at": "2026-08-09T17:35:56+00:00",
     "source_documents": [
       {
         "path": "GEOMETRY-CONTROL.md",
