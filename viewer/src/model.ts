@@ -144,6 +144,78 @@ export const CONFIDENCE_LABELS: Record<Confidence, string> = {
 
 export type UnitMode = 'prototype' | 'ho';
 
+/** Named camera set-ups. `iso` keeps the perspective camera; the rest are true orthographic. */
+export type ViewMode = 'iso' | 'section' | 'elevation' | 'plan' | 'under';
+
+export interface ViewPreset {
+  label: string;
+  description: string;
+  orthographic: boolean;
+  /**
+   * Unit vector from the look-at target toward the camera, in **render space** (glTF Y-up).
+   * The authoring frame is Z-up, and the exporter rotates it, so: scene +X is render +X,
+   * scene +Y (north) is render -Z, and scene +Z (up) is render +Y.
+   */
+  direction: [number, number, number];
+  up: [number, number, number];
+}
+
+export const VIEW_PRESETS: Record<ViewMode, ViewPreset> = {
+  iso: {
+    label: 'Iso',
+    description: 'Free perspective view. The only mode where distance foreshortens, so lengths cannot be measured off the screen.',
+    orthographic: false,
+    direction: [0, 0, 1],
+    up: [0, 1, 0],
+  },
+  section: {
+    label: 'Section',
+    description: 'Looking along the bridge axis from Brooklyn. The transverse arrangement of decks, trusses and tracks, which is the most informative single view of a deck this complicated.',
+    orthographic: true,
+    direction: [1, 0, 0],
+    up: [0, 1, 0],
+  },
+  elevation: {
+    label: 'Elevation',
+    description: 'Looking at the south face. Cable sag, tower height and the approach profile read true.',
+    orthographic: true,
+    direction: [0, 0, 1],
+    up: [0, 1, 0],
+  },
+  plan: {
+    label: 'Plan',
+    description: 'Looking straight down. Deck widths and the anchorage footprints read true.',
+    orthographic: true,
+    direction: [0, 1, 0],
+    up: [0, 0, -1],
+  },
+  under: {
+    label: 'Under',
+    description: 'Looking straight up from beneath. The floor system is what a person standing in DUMBO actually sees.',
+    orthographic: true,
+    direction: [0, -1, 0],
+    up: [0, 0, 1],
+  },
+};
+
+export const VIEW_ORDER: ViewMode[] = ['iso', 'section', 'elevation', 'plan', 'under'];
+
+/**
+ * Choose a round bar length that occupies roughly `targetPx` on screen.
+ *
+ * Returns metres. Steps through 1, 2, 5 x 10^n so the printed number is always readable, which is
+ * the whole point of a scale bar: an arbitrary 137 m bar is harder to reason about than a 100 m one.
+ */
+export function niceScaleLength(metresPerPixel: number, targetPx = 130): number {
+  const raw = metresPerPixel * targetPx;
+  if (!Number.isFinite(raw) || raw <= 0) return 1;
+  const exponent = Math.floor(Math.log10(raw));
+  const decade = Math.pow(10, exponent);
+  const mantissa = raw / decade;
+  const step = mantissa >= 5 ? 5 : mantissa >= 2 ? 2 : 1;
+  return step * decade;
+}
+
 /**
  * How the shape and position of an element are known, kept independent of how thoroughly its
  * source was read. Adopted from SRC-018 (manhattan-bridge-noise-dumbo, VISUAL-MODEL-FRAMEWORK.md

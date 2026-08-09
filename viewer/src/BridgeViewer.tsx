@@ -2,8 +2,8 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
-import type { Confidence, PartMetadata, PartsDocument, ViewerConfig } from './model';
-import { MATERIAL_APPEARANCE, PROVENANCE_STYLE } from './model';
+import type { Confidence, PartMetadata, PartsDocument, ViewMode, ViewerConfig } from './model';
+import { MATERIAL_APPEARANCE, PROVENANCE_STYLE, VIEW_PRESETS } from './model';
 
 /**
  * BridgeViewer renders any source-governed GLB whose part nodes carry metadata in glTF `extras`.
@@ -27,6 +27,9 @@ export interface BridgeViewerProps {
   hiddenProvenance: Set<string>;
   /** Bumped by the shell whenever the surrounding layout changes, e.g. a panel collapses. */
   layoutToken: number;
+  viewMode: ViewMode;
+  /** Reports metres-per-pixel of the active camera so the shell can draw a scale bar. */
+  onScaleChange: (metresPerPixel: number) => void;
   onSelect: (partId: string | null) => void;
   focusToken: number;
 }
@@ -42,6 +45,8 @@ interface Viewer {
   renderer: THREE.WebGLRenderer;
   scene: THREE.Scene;
   camera: THREE.PerspectiveCamera;
+  orthoCamera: THREE.OrthographicCamera;
+  activeCamera: THREE.Camera;
   controls: OrbitControls;
   raycaster: THREE.Raycaster;
   parts: RenderablePart[];
@@ -197,6 +202,8 @@ export default function BridgeViewer(props: BridgeViewerProps) {
     provenanceOutlines,
     hiddenProvenance,
     layoutToken,
+    viewMode,
+    onScaleChange,
     onSelect,
   } = props;
   const hostRef = useRef<HTMLDivElement | null>(null);
@@ -206,6 +213,8 @@ export default function BridgeViewer(props: BridgeViewerProps) {
   const [error, setError] = useState<string | null>(null);
 
   onSelectRef.current = onSelect;
+  const onScaleChangeRef = useRef(onScaleChange);
+  onScaleChangeRef.current = onScaleChange;
 
   // ------------------------------------------------------------------ lifecycle
   useEffect(() => {
@@ -222,6 +231,11 @@ export default function BridgeViewer(props: BridgeViewerProps) {
       config.camera.far,
     );
     camera.position.set(...config.camera.position);
+
+    // A true orthographic camera, not a long-lens perspective. Engineering views have to be
+    // measurable off the screen, and only a parallel projection makes a scale bar honest
+    // everywhere in the frame rather than just at the target distance.
+    const orthoCamera = new THREE.OrthographicCamera(-1, 1, 1, -1, -60000, 60000);
 
     const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: false });
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
@@ -250,6 +264,8 @@ export default function BridgeViewer(props: BridgeViewerProps) {
       renderer,
       scene,
       camera,
+      orthoCamera,
+      activeCamera: camera,
       controls,
       raycaster,
       parts: [],
@@ -266,6 +282,13 @@ export default function BridgeViewer(props: BridgeViewerProps) {
       renderer.setSize(width, height, false);
       camera.aspect = width / height;
       camera.updateProjectionMatrix();
+      // The orthographic frustum has no aspect of its own: it must be rebuilt from the current
+      // half-height so that a metre is the same number of pixels horizontally and vertically.
+      const halfH = (orthoCamera.top - orthoCamera.bottom) / 2 || 1;
+      const halfW = halfH * (width / height);
+      orthoCamera.left = -halfW;
+      orthoCamera.right = halfW;
+      orthoCamera.updateProjectionMatrix();
     };
     resize();
     const observer = new ResizeObserver(resize);
@@ -276,7 +299,7 @@ export default function BridgeViewer(props: BridgeViewerProps) {
     // on to deliver promptly in every environment -- can force the reconciliation directly.
     viewer.resize = () => {
       resize();
-      renderer.render(scene, camera);
+      renderer.render(scene, viewer.activeCamera);
     };
 
     /**
@@ -295,6 +318,11 @@ export default function BridgeViewer(props: BridgeViewerProps) {
         renderer.setSize(width, height, false);
         camera.aspect = width / height;
         camera.updateProjectionMatrix();
+        const halfH = (orthoCamera.top - orthoCamera.bottom) / 2 || 1;
+        const halfW = halfH * (width / height);
+        orthoCamera.left = -halfW;
+        orthoCamera.right = halfW;
+        orthoCamera.updateProjectionMatrix();
       }
     };
 
@@ -303,7 +331,7 @@ export default function BridgeViewer(props: BridgeViewerProps) {
       frameId = requestAnimationFrame(animate);
       syncSize();
       controls.update();
-      renderer.render(scene, camera);
+      renderer.render(scene, viewer.activeCamera);
     };
     animate();
 
@@ -336,7 +364,7 @@ export default function BridgeViewer(props: BridgeViewerProps) {
       const rect = renderer.domElement.getBoundingClientRect();
       pointer.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
       pointer.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
-      raycaster.setFromCamera(pointer, camera);
+      raycaster.setFromCamera(pointer, viewer.activeCamera);
       const visible = viewer.parts.filter((p) => p.root.visible);
       const hits = raycaster.intersectObjects(
         visible.flatMap((p) => p.renderables),
@@ -494,6 +522,97 @@ export default function BridgeViewer(props: BridgeViewerProps) {
     if (!viewer || !ready) return;
     viewer.resize();
   }, [ready, layoutToken]);
+
+  // ------------------------------------------------------------------ view mode
+  useEffect(() => {
+    const viewer = viewerRef.current;
+    if (!viewer || !ready) return;
+    const preset = VIEW_PRESETS[viewMode];
+    const { camera, orthoCamera, controls, renderer, scene } = viewer;
+    const frame = framingBox(doc);
+    const centre = frame ? frame.center : new THREE.Vector3();
+
+    if (!preset.orthographic) {
+      viewer.activeCamera = camera;
+      controls.object = camera;
+      frameCamera(viewer, config, doc);
+    } else {
+      // Size the frustum to the model's extent as seen from this direction, so switching views
+      // always lands on something sensible rather than on an empty frame.
+      const dir = new THREE.Vector3(...preset.direction).normalize();
+      const up = new THREE.Vector3(...preset.up).normalize();
+      const right = new THREE.Vector3().crossVectors(dir, up).normalize();
+
+      let halfW = 1;
+      let halfH = 1;
+      if (frame) {
+        const offset = new THREE.Vector3();
+        for (const corner of frame.corners) {
+          offset.copy(corner).sub(centre);
+          halfW = Math.max(halfW, Math.abs(offset.dot(right)));
+          halfH = Math.max(halfH, Math.abs(offset.dot(up)));
+        }
+      }
+      const pad = config.framePadding ?? 1.05;
+      halfW *= pad;
+      halfH *= pad;
+
+      const canvas = renderer.domElement;
+      const aspect = Math.max(1e-6, canvas.clientWidth / Math.max(1, canvas.clientHeight));
+      // Grow whichever axis is too small, never shrink one, or the model would be cropped.
+      if (halfW / halfH > aspect) halfH = halfW / aspect;
+      else halfW = halfH * aspect;
+
+      orthoCamera.left = -halfW;
+      orthoCamera.right = halfW;
+      orthoCamera.top = halfH;
+      orthoCamera.bottom = -halfH;
+      orthoCamera.up.copy(up);
+      orthoCamera.position.copy(centre).addScaledVector(dir, 8000);
+      orthoCamera.lookAt(centre);
+      orthoCamera.zoom = 1;
+      orthoCamera.updateProjectionMatrix();
+
+      viewer.activeCamera = orthoCamera;
+      controls.object = orthoCamera;
+      controls.target.copy(centre);
+      controls.update();
+      // Re-derive the horizontal half-width from the canvas as it actually is. The aspect read
+      // above can be stale on the first switch after a layout change, which produced a frustum an
+      // order of magnitude too wide and a scale bar to match.
+      viewer.resize();
+    }
+    renderer.render(scene, viewer.activeCamera);
+  }, [ready, viewMode, config, doc]);
+
+  // ------------------------------------------------- scale reporting for the scale bar
+  useEffect(() => {
+    const viewer = viewerRef.current;
+    if (!viewer || !ready) return;
+    const { controls, renderer } = viewer;
+
+    const report = () => {
+      const canvas = renderer.domElement;
+      const height = Math.max(1, canvas.clientHeight);
+      const active = viewer.activeCamera;
+      let metresPerPixel: number;
+      if ((active as THREE.OrthographicCamera).isOrthographicCamera) {
+        const ortho = active as THREE.OrthographicCamera;
+        metresPerPixel = (ortho.top - ortho.bottom) / ortho.zoom / height;
+      } else {
+        // Perspective scale is only true at the orbit target's depth, which is why the shell
+        // labels it as approximate in this mode.
+        const persp = active as THREE.PerspectiveCamera;
+        const distance = persp.position.distanceTo(controls.target);
+        metresPerPixel = (2 * distance * Math.tan((persp.fov * Math.PI) / 360)) / height;
+      }
+      onScaleChangeRef.current(metresPerPixel);
+    };
+
+    report();
+    controls.addEventListener('change', report);
+    return () => controls.removeEventListener('change', report);
+  }, [ready, viewMode, layoutToken, doc]);
 
   const retry = useCallback(() => window.location.reload(), []);
 

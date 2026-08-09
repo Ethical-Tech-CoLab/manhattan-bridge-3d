@@ -715,3 +715,72 @@ aside.is-collapsed > *:not(.panel-toggle):not(.panel-rail) {
 aside.is-collapsed {
   overflow: hidden;
 }
+
+/* ---------------------------------------------------- view bar and scale bar */
+
+.view-bar {
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+  pointer-events: none;
+}
+
+.view-modes {
+  display: flex;
+  gap: 2px;
+  padding: 3px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: rgba(16, 23, 31, 0.86);
+  pointer-events: auto;
+}
+
+.view-modes button {
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+  color: #9fb0c2;
+  font-size: 11.5px;
+  padding: 4px 9px;
+  cursor: pointer;
+}
+
+.view-modes button:hover {
+  color: #e6edf5;
+  background: #1d2a38;
+}
+
+.view-modes button.active {
+  background: var(--accent, #ffd166);
+  color: #17202a;
+  font-weight: 600;
+}
+
+.scale-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 5px 8px;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  background: rgba(16, 23, 31, 0.86);
+  pointer-events: auto;
+}
+
+.scale-bar-rule {
+  height: 7px;
+  border: 1px solid #cdd8e4;
+  border-top: 0;
+}
+
+.scale-bar span {
+  font-size: 10.5px;
+  font-variant-numeric: tabular-nums;
+  color: #b8c5d3;
+  white-space: nowrap;
+}

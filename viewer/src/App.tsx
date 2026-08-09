@@ -6,7 +6,8 @@ import MetadataPanel from '../components/MetadataPanel';
 import PartTree from '../components/PartTree';
 import ProvenancePanel from '../components/ProvenancePanel';
 import Toolbar from '../components/Toolbar';
-import type { GeometryProvenance, PartsDocument, UnitMode, ViewerConfig } from './model';
+import ViewBar from '../components/ViewBar';
+import type { GeometryProvenance, PartsDocument, UnitMode, ViewMode, ViewerConfig } from './model';
 
 export default function App() {
   const [config, setConfig] = useState<ViewerConfig | null>(null);
@@ -28,6 +29,8 @@ export default function App() {
   // Bumped on every layout change so the viewer can resize its drawing buffer deterministically,
   // rather than depending on the browser to report the CSS grid column change in time.
   const layoutToken = (leftCollapsed ? 1 : 0) + (rightCollapsed ? 2 : 0);
+  const [viewMode, setViewMode] = useState<ViewMode>('iso');
+  const [metresPerPixel, setMetresPerPixel] = useState(1);
 
   useEffect(() => {
     let cancelled = false;
@@ -185,6 +188,13 @@ export default function App() {
           </div>
         </aside>
         <main className="stage">
+          <ViewBar
+            mode={viewMode}
+            onModeChange={setViewMode}
+            metresPerPixel={metresPerPixel}
+            unitMode={unitMode}
+            scaleDenominator={doc.ho_scale_denominator}
+          />
           <BridgeViewer
             config={config}
             doc={doc}
@@ -196,6 +206,8 @@ export default function App() {
             provenanceOutlines={provenanceOutlines}
             hiddenProvenance={hiddenProvenance}
             layoutToken={layoutToken}
+            viewMode={viewMode}
+            onScaleChange={setMetresPerPixel}
             onSelect={selectPart}
             focusToken={focusToken}
           />

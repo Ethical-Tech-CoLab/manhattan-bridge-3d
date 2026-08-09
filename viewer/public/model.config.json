@@ -1,6 +1,6 @@
 {
   "title": "Manhattan Bridge — Control Skeleton",
-  "subtitle": "Milestone 6 · approaches connected, materials sourced",
+  "subtitle": "Milestone 7 · continuous deck, orthographic views, scale bar",
   "modelUrl": "control_skeleton.glb",
   "metadataUrl": "parts.json",
   "scaleDenominator": 87.1,
@@ -22,8 +22,9 @@
     "scaleReference": "SCALE-HO.md"
   },
   "notImplementedYet": [
-    "LOD switching (Milestone 6)",
-    "exploded part schematic view (Milestone 6)",
+    "LOD switching (Milestone 8)",
+    "exploded part schematic view (Milestone 8)",
+    "leader-line callouts naming components in the render",
     "archival drawing overlay — awaits the NYCDOT contract drawings",
     "photogrammetry point cloud overlay — awaits a walkway-level image set",
     "no level-1 segmented mesh; the published ladder jumps from 0.01 m to 8.0 m"
