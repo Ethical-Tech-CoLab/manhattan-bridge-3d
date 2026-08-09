@@ -153,6 +153,23 @@ button:hover {
   }
 }
 
+/*
+ * Below this the two panels together would leave the stage a sliver, so they fall back to their
+ * collapsed rails and the model keeps the window. This honours the rule stated above rather than
+ * letting it quietly stop applying at the bottom of the range.
+ */
+@media (max-width: 900px) {
+  .body {
+    --left-w: 34px;
+    --right-w: 34px;
+  }
+
+  aside.left > *:not(.panel-toggle):not(.panel-rail),
+  aside.right > *:not(.panel-toggle):not(.panel-rail) {
+    display: none;
+  }
+}
+
 aside {
   overflow-y: auto;
   background: var(--panel);
