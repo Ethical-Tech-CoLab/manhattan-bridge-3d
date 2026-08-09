@@ -3,7 +3,7 @@
   "model": "control_skeleton",
   "milestone": 2,
   "generated_by": "build_control_skeleton.py@1.0.0",
-  "generated_at": "2026-08-09T19:20:16+00:00",
+  "generated_at": "2026-08-09T19:50:26+00:00",
   "control_document": {
     "path": "GEOMETRY-CONTROL.md",
     "sha256": "e39fc87625f03ec1f963cc5b955404b9671a2e9aca6fab30b85309eb31130575"
@@ -2192,7 +2192,8 @@
     "parts_measured": 0,
     "parts_documented": 37,
     "parts_assumed": 2,
-    "parts_without_provenance": 0
+    "parts_without_provenance": 0,
+    "deck_longitudinal_gap_m": 0.0
   },
   "parts": [
     {
@@ -6718,7 +6719,7 @@
       "confidence": "D",
       "prototype_units": "meters",
       "ho_scale_units": "millimeters",
-      "notes": "Subway track envelope over the suspended length. SRC-011 confirms two tracks in each of the A-B and C-D truss bays, which bounds the transverse position between 20 ft and 48 ft from the centerline; the exact centerline within that bay is still a placeholder, see OQ-010. Approach trackwork is not modelled.",
+      "notes": "Subway track envelope over the suspended length. SRC-011 confirms two tracks in each of the A-B and C-D truss bays, which bounds the transverse position between 20 ft and 48 ft from the centerline; the exact centerline within that bay is still a placeholder, see OQ-010. The approach trackwork is a separate part per side, continuous with this one through the anchorage.",
       "scale": "1:1 prototype, HO 1:87.1",
       "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
       "review_status": "unreviewed",
@@ -6783,7 +6784,7 @@
       "confidence": "D",
       "prototype_units": "meters",
       "ho_scale_units": "millimeters",
-      "notes": "Subway track envelope over the suspended length. SRC-011 confirms two tracks in each of the A-B and C-D truss bays, which bounds the transverse position between 20 ft and 48 ft from the centerline; the exact centerline within that bay is still a placeholder, see OQ-010. Approach trackwork is not modelled.",
+      "notes": "Subway track envelope over the suspended length. SRC-011 confirms two tracks in each of the A-B and C-D truss bays, which bounds the transverse position between 20 ft and 48 ft from the centerline; the exact centerline within that bay is still a placeholder, see OQ-010. The approach trackwork is a separate part per side, continuous with this one through the anchorage.",
       "scale": "1:1 prototype, HO 1:87.1",
       "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
       "review_status": "unreviewed",
@@ -6848,7 +6849,7 @@
       "confidence": "D",
       "prototype_units": "meters",
       "ho_scale_units": "millimeters",
-      "notes": "Subway track envelope over the suspended length. SRC-011 confirms two tracks in each of the A-B and C-D truss bays, which bounds the transverse position between 20 ft and 48 ft from the centerline; the exact centerline within that bay is still a placeholder, see OQ-010. Approach trackwork is not modelled.",
+      "notes": "Subway track envelope over the suspended length. SRC-011 confirms two tracks in each of the A-B and C-D truss bays, which bounds the transverse position between 20 ft and 48 ft from the centerline; the exact centerline within that bay is still a placeholder, see OQ-010. The approach trackwork is a separate part per side, continuous with this one through the anchorage.",
       "scale": "1:1 prototype, HO 1:87.1",
       "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
       "review_status": "unreviewed",
@@ -6913,7 +6914,7 @@
       "confidence": "D",
       "prototype_units": "meters",
       "ho_scale_units": "millimeters",
-      "notes": "Subway track envelope over the suspended length. SRC-011 confirms two tracks in each of the A-B and C-D truss bays, which bounds the transverse position between 20 ft and 48 ft from the centerline; the exact centerline within that bay is still a placeholder, see OQ-010. Approach trackwork is not modelled.",
+      "notes": "Subway track envelope over the suspended length. SRC-011 confirms two tracks in each of the A-B and C-D truss bays, which bounds the transverse position between 20 ft and 48 ft from the centerline; the exact centerline within that bay is still a placeholder, see OQ-010. The approach trackwork is a separate part per side, continuous with this one through the anchorage.",
       "scale": "1:1 prototype, HO 1:87.1",
       "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
       "review_status": "unreviewed",
@@ -6978,7 +6979,7 @@
       "confidence": "D",
       "prototype_units": "meters",
       "ho_scale_units": "millimeters",
-      "notes": "Lower level carried from the outboard face of the anchorage to the abutment. The extent is sourced: CTL-002 puts the lower level's abutments 5790 ft apart, which is grade A, so this deck exists and reaches this station. Its structural depth and its grade down to street level are not sourced; it is drawn level because inventing a gradient would be worse than admitting there is none. See OQ-020.",
+      "notes": "Lower level carried from the anchorage cable point, through the anchorage, to the abutment. The extent is sourced: CTL-002 puts the lower level's abutments 5790 ft apart, which is grade A, and describes it as continuous, so this deck must not break at the anchorage. Its structural depth and its grade down to street level are not sourced; it is drawn level because inventing a gradient would be worse than admitting there is none. The anchorage is drawn as a solid envelope, so the thoroughfare arch of CTL-052 is not cut through it and this deck is hidden where it passes inside. See OQ-020.",
       "scale": "1:1 prototype, HO 1:87.1",
       "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
       "review_status": "unreviewed",
@@ -7016,19 +7017,19 @@
           39.13632
         ],
         "max": [
-          -517.2456,
+          -445.008,
           18.288,
           42.18432
         ],
         "size": [
-          365.1504,
+          437.388,
           36.576,
           3.048
         ]
       },
       "bbox_ho_mm": {
         "size": [
-          4192.31,
+          5021.68,
           419.93,
           34.99
         ]
@@ -7045,7 +7046,7 @@
       "confidence": "D",
       "prototype_units": "meters",
       "ho_scale_units": "millimeters",
-      "notes": "Upper roadway carried from the anchorage to the portal. CTL-003 puts the portals 6090 ft apart, grade A, which is 300 ft further out than the lower level's abutments - the upper roadway genuinely runs past the end of the lower level. Drawn level; see OQ-020.",
+      "notes": "Upper roadway carried from the anchorage cable point, through the anchorage, to the portal. CTL-003 puts the portals 6090 ft apart, grade A, which is 300 ft further out than the lower level's abutments - the upper roadway genuinely runs past the end of the lower level. Drawn level; see OQ-020.",
       "scale": "1:1 prototype, HO 1:87.1",
       "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
       "review_status": "unreviewed",
@@ -7082,19 +7083,19 @@
           48.4632
         ],
         "max": [
-          -517.2456,
+          -445.008,
           18.288,
           49.3776
         ],
         "size": [
-          410.8704,
+          483.108,
           36.576,
           0.9144
         ]
       },
       "bbox_ho_mm": {
         "size": [
-          4717.23,
+          5546.59,
           419.93,
           10.5
         ]
@@ -7111,7 +7112,7 @@
       "confidence": "D",
       "prototype_units": "meters",
       "ho_scale_units": "millimeters",
-      "notes": "track_1 continued across the manhattan approach to the abutment. The four tracks have to reach the subway portals, so ending them at the anchorage was a modelling artefact rather than a statement about the bridge. The transverse centreline remains the OQ-010 placeholder and the approach trackwork alignment is unregistered; see OQ-020.",
+      "notes": "track_1 continued from the anchorage cable point, through the anchorage, across the manhattan approach to the abutment. The four tracks have to reach the subway portals, so ending them at the anchorage was a modelling artefact rather than a statement about the bridge. The transverse centreline remains the OQ-010 placeholder and the approach trackwork alignment is unregistered; see OQ-020.",
       "scale": "1:1 prototype, HO 1:87.1",
       "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
       "review_status": "unreviewed",
@@ -7151,19 +7152,19 @@
           42.18432
         ],
         "max": [
-          -517.2456,
+          -445.008,
           13.21435,
           42.64152
         ],
         "size": [
-          365.1504,
+          437.388,
           1.4351,
           0.4572
         ]
       },
       "bbox_ho_mm": {
         "size": [
-          4192.31,
+          5021.68,
           16.48,
           5.25
         ]
@@ -7180,7 +7181,7 @@
       "confidence": "D",
       "prototype_units": "meters",
       "ho_scale_units": "millimeters",
-      "notes": "track_2 continued across the manhattan approach to the abutment. The four tracks have to reach the subway portals, so ending them at the anchorage was a modelling artefact rather than a statement about the bridge. The transverse centreline remains the OQ-010 placeholder and the approach trackwork alignment is unregistered; see OQ-020.",
+      "notes": "track_2 continued from the anchorage cable point, through the anchorage, across the manhattan approach to the abutment. The four tracks have to reach the subway portals, so ending them at the anchorage was a modelling artefact rather than a statement about the bridge. The transverse centreline remains the OQ-010 placeholder and the approach trackwork alignment is unregistered; see OQ-020.",
       "scale": "1:1 prototype, HO 1:87.1",
       "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
       "review_status": "unreviewed",
@@ -7220,19 +7221,19 @@
           42.18432
         ],
         "max": [
-          -517.2456,
+          -445.008,
           8.94715,
           42.64152
         ],
         "size": [
-          365.1504,
+          437.388,
           1.4351,
           0.4572
         ]
       },
       "bbox_ho_mm": {
         "size": [
-          4192.31,
+          5021.68,
           16.48,
           5.25
         ]
@@ -7249,7 +7250,7 @@
       "confidence": "D",
       "prototype_units": "meters",
       "ho_scale_units": "millimeters",
-      "notes": "track_3 continued across the manhattan approach to the abutment. The four tracks have to reach the subway portals, so ending them at the anchorage was a modelling artefact rather than a statement about the bridge. The transverse centreline remains the OQ-010 placeholder and the approach trackwork alignment is unregistered; see OQ-020.",
+      "notes": "track_3 continued from the anchorage cable point, through the anchorage, across the manhattan approach to the abutment. The four tracks have to reach the subway portals, so ending them at the anchorage was a modelling artefact rather than a statement about the bridge. The transverse centreline remains the OQ-010 placeholder and the approach trackwork alignment is unregistered; see OQ-020.",
       "scale": "1:1 prototype, HO 1:87.1",
       "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
       "review_status": "unreviewed",
@@ -7289,19 +7290,19 @@
           42.18432
         ],
         "max": [
-          -517.2456,
+          -445.008,
           -7.51205,
           42.64152
         ],
         "size": [
-          365.1504,
+          437.388,
           1.4351,
           0.4572
         ]
       },
       "bbox_ho_mm": {
         "size": [
-          4192.31,
+          5021.68,
           16.48,
           5.25
         ]
@@ -7318,7 +7319,7 @@
       "confidence": "D",
       "prototype_units": "meters",
       "ho_scale_units": "millimeters",
-      "notes": "track_4 continued across the manhattan approach to the abutment. The four tracks have to reach the subway portals, so ending them at the anchorage was a modelling artefact rather than a statement about the bridge. The transverse centreline remains the OQ-010 placeholder and the approach trackwork alignment is unregistered; see OQ-020.",
+      "notes": "track_4 continued from the anchorage cable point, through the anchorage, across the manhattan approach to the abutment. The four tracks have to reach the subway portals, so ending them at the anchorage was a modelling artefact rather than a statement about the bridge. The transverse centreline remains the OQ-010 placeholder and the approach trackwork alignment is unregistered; see OQ-020.",
       "scale": "1:1 prototype, HO 1:87.1",
       "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
       "review_status": "unreviewed",
@@ -7358,19 +7359,19 @@
           42.18432
         ],
         "max": [
-          -517.2456,
+          -445.008,
           -11.77925,
           42.64152
         ],
         "size": [
-          365.1504,
+          437.388,
           1.4351,
           0.4572
         ]
       },
       "bbox_ho_mm": {
         "size": [
-          4192.31,
+          5021.68,
           16.48,
           5.25
         ]
@@ -7520,7 +7521,7 @@
       "confidence": "D",
       "prototype_units": "meters",
       "ho_scale_units": "millimeters",
-      "notes": "Lower level carried from the outboard face of the anchorage to the abutment. The extent is sourced: CTL-002 puts the lower level's abutments 5790 ft apart, which is grade A, so this deck exists and reaches this station. Its structural depth and its grade down to street level are not sourced; it is drawn level because inventing a gradient would be worse than admitting there is none. See OQ-020.",
+      "notes": "Lower level carried from the anchorage cable point, through the anchorage, to the abutment. The extent is sourced: CTL-002 puts the lower level's abutments 5790 ft apart, which is grade A, and describes it as continuous, so this deck must not break at the anchorage. Its structural depth and its grade down to street level are not sourced; it is drawn level because inventing a gradient would be worse than admitting there is none. The anchorage is drawn as a solid envelope, so the thoroughfare arch of CTL-052 is not cut through it and this deck is hidden where it passes inside. See OQ-020.",
       "scale": "1:1 prototype, HO 1:87.1",
       "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
       "review_status": "unreviewed",
@@ -7553,7 +7554,7 @@
       ],
       "bbox_prototype_m": {
         "min": [
-          517.2456,
+          445.008,
           -18.288,
           39.13632
         ],
@@ -7563,14 +7564,14 @@
           42.18432
         ],
         "size": [
-          365.1504,
+          437.388,
           36.576,
           3.048
         ]
       },
       "bbox_ho_mm": {
         "size": [
-          4192.31,
+          5021.68,
           419.93,
           34.99
         ]
@@ -7587,7 +7588,7 @@
       "confidence": "D",
       "prototype_units": "meters",
       "ho_scale_units": "millimeters",
-      "notes": "Upper roadway carried from the anchorage to the portal. CTL-003 puts the portals 6090 ft apart, grade A, which is 300 ft further out than the lower level's abutments - the upper roadway genuinely runs past the end of the lower level. Drawn level; see OQ-020.",
+      "notes": "Upper roadway carried from the anchorage cable point, through the anchorage, to the portal. CTL-003 puts the portals 6090 ft apart, grade A, which is 300 ft further out than the lower level's abutments - the upper roadway genuinely runs past the end of the lower level. Drawn level; see OQ-020.",
       "scale": "1:1 prototype, HO 1:87.1",
       "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
       "review_status": "unreviewed",
@@ -7619,7 +7620,7 @@
       ],
       "bbox_prototype_m": {
         "min": [
-          517.2456,
+          445.008,
           -18.288,
           48.4632
         ],
@@ -7629,14 +7630,14 @@
           49.3776
         ],
         "size": [
-          410.8704,
+          483.108,
           36.576,
           0.9144
         ]
       },
       "bbox_ho_mm": {
         "size": [
-          4717.23,
+          5546.59,
           419.93,
           10.5
         ]
@@ -7653,7 +7654,7 @@
       "confidence": "D",
       "prototype_units": "meters",
       "ho_scale_units": "millimeters",
-      "notes": "track_1 continued across the brooklyn approach to the abutment. The four tracks have to reach the subway portals, so ending them at the anchorage was a modelling artefact rather than a statement about the bridge. The transverse centreline remains the OQ-010 placeholder and the approach trackwork alignment is unregistered; see OQ-020.",
+      "notes": "track_1 continued from the anchorage cable point, through the anchorage, across the brooklyn approach to the abutment. The four tracks have to reach the subway portals, so ending them at the anchorage was a modelling artefact rather than a statement about the bridge. The transverse centreline remains the OQ-010 placeholder and the approach trackwork alignment is unregistered; see OQ-020.",
       "scale": "1:1 prototype, HO 1:87.1",
       "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
       "review_status": "unreviewed",
@@ -7688,7 +7689,7 @@
       ],
       "bbox_prototype_m": {
         "min": [
-          517.2456,
+          445.008,
           11.77925,
           42.18432
         ],
@@ -7698,14 +7699,14 @@
           42.64152
         ],
         "size": [
-          365.1504,
+          437.388,
           1.4351,
           0.4572
         ]
       },
       "bbox_ho_mm": {
         "size": [
-          4192.31,
+          5021.68,
           16.48,
           5.25
         ]
@@ -7722,7 +7723,7 @@
       "confidence": "D",
       "prototype_units": "meters",
       "ho_scale_units": "millimeters",
-      "notes": "track_2 continued across the brooklyn approach to the abutment. The four tracks have to reach the subway portals, so ending them at the anchorage was a modelling artefact rather than a statement about the bridge. The transverse centreline remains the OQ-010 placeholder and the approach trackwork alignment is unregistered; see OQ-020.",
+      "notes": "track_2 continued from the anchorage cable point, through the anchorage, across the brooklyn approach to the abutment. The four tracks have to reach the subway portals, so ending them at the anchorage was a modelling artefact rather than a statement about the bridge. The transverse centreline remains the OQ-010 placeholder and the approach trackwork alignment is unregistered; see OQ-020.",
       "scale": "1:1 prototype, HO 1:87.1",
       "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
       "review_status": "unreviewed",
@@ -7757,7 +7758,7 @@
       ],
       "bbox_prototype_m": {
         "min": [
-          517.2456,
+          445.008,
           7.51205,
           42.18432
         ],
@@ -7767,14 +7768,14 @@
           42.64152
         ],
         "size": [
-          365.1504,
+          437.388,
           1.4351,
           0.4572
         ]
       },
       "bbox_ho_mm": {
         "size": [
-          4192.31,
+          5021.68,
           16.48,
           5.25
         ]
@@ -7791,7 +7792,7 @@
       "confidence": "D",
       "prototype_units": "meters",
       "ho_scale_units": "millimeters",
-      "notes": "track_3 continued across the brooklyn approach to the abutment. The four tracks have to reach the subway portals, so ending them at the anchorage was a modelling artefact rather than a statement about the bridge. The transverse centreline remains the OQ-010 placeholder and the approach trackwork alignment is unregistered; see OQ-020.",
+      "notes": "track_3 continued from the anchorage cable point, through the anchorage, across the brooklyn approach to the abutment. The four tracks have to reach the subway portals, so ending them at the anchorage was a modelling artefact rather than a statement about the bridge. The transverse centreline remains the OQ-010 placeholder and the approach trackwork alignment is unregistered; see OQ-020.",
       "scale": "1:1 prototype, HO 1:87.1",
       "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
       "review_status": "unreviewed",
@@ -7826,7 +7827,7 @@
       ],
       "bbox_prototype_m": {
         "min": [
-          517.2456,
+          445.008,
           -8.94715,
           42.18432
         ],
@@ -7836,14 +7837,14 @@
           42.64152
         ],
         "size": [
-          365.1504,
+          437.388,
           1.4351,
           0.4572
         ]
       },
       "bbox_ho_mm": {
         "size": [
-          4192.31,
+          5021.68,
           16.48,
           5.25
         ]
@@ -7860,7 +7861,7 @@
       "confidence": "D",
       "prototype_units": "meters",
       "ho_scale_units": "millimeters",
-      "notes": "track_4 continued across the brooklyn approach to the abutment. The four tracks have to reach the subway portals, so ending them at the anchorage was a modelling artefact rather than a statement about the bridge. The transverse centreline remains the OQ-010 placeholder and the approach trackwork alignment is unregistered; see OQ-020.",
+      "notes": "track_4 continued from the anchorage cable point, through the anchorage, across the brooklyn approach to the abutment. The four tracks have to reach the subway portals, so ending them at the anchorage was a modelling artefact rather than a statement about the bridge. The transverse centreline remains the OQ-010 placeholder and the approach trackwork alignment is unregistered; see OQ-020.",
       "scale": "1:1 prototype, HO 1:87.1",
       "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
       "review_status": "unreviewed",
@@ -7895,7 +7896,7 @@
       ],
       "bbox_prototype_m": {
         "min": [
-          517.2456,
+          445.008,
           -13.21435,
           42.18432
         ],
@@ -7905,14 +7906,14 @@
           42.64152
         ],
         "size": [
-          365.1504,
+          437.388,
           1.4351,
           0.4572
         ]
       },
       "bbox_ho_mm": {
         "size": [
-          4192.31,
+          5021.68,
           16.48,
           5.25
         ]

@@ -21,6 +21,6 @@
   "vertical_datum": "MHW",
   "control_document_sha256": "e39fc87625f03ec1f963cc5b955404b9671a2e9aca6fab30b85309eb31130575",
   "generated_by": "export_proxy.py via build_control_skeleton.py@1.0.0",
-  "generated_at": "2026-08-09T19:20:17+00:00",
+  "generated_at": "2026-08-09T20:06:22+00:00",
   "suspender_stride": 4
 }

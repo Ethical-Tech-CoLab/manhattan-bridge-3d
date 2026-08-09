@@ -4,7 +4,7 @@
   "built_from_sha256": "e39fc87625f03ec1f963cc5b955404b9671a2e9aca6fab30b85309eb31130575",
   "generated_by_build": "build_control_skeleton.py@1.0.0",
   "summary": {
-    "pass": 73,
+    "pass": 74,
     "reported": 5,
     "fail": 0,
     "error": 0
@@ -704,6 +704,17 @@
       "detail": "actual 2 count, expected 2 count, deviation +0",
       "actual": 2.0,
       "expected": 2.0,
+      "deviation": 0.0
+    },
+    {
+      "id": "GRT-077",
+      "title": "The lower level is continuous through the anchorages",
+      "suite": "geometry_regression",
+      "mode": "assert",
+      "status": "pass",
+      "detail": "actual 0 m, expected 0 m, deviation +0",
+      "actual": 0.0,
+      "expected": 0.0,
       "deviation": 0.0
     },
     {

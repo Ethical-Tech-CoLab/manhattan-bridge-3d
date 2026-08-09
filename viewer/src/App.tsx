@@ -23,6 +23,11 @@ export default function App() {
   const [unitMode, setUnitMode] = useState<UnitMode>('prototype');
   const [panel, setPanel] = useState<'metadata' | 'dimensions'>('metadata');
   const [focusToken, setFocusToken] = useState(0);
+  const [leftCollapsed, setLeftCollapsed] = useState(false);
+  const [rightCollapsed, setRightCollapsed] = useState(false);
+  // Bumped on every layout change so the viewer can resize its drawing buffer deterministically,
+  // rather than depending on the browser to report the CSS grid column change in time.
+  const layoutToken = (leftCollapsed ? 1 : 0) + (rightCollapsed ? 2 : 0);
 
   useEffect(() => {
     let cancelled = false;
@@ -122,8 +127,26 @@ export default function App() {
         panel={panel}
         onPanelChange={setPanel}
       />
-      <div className="body">
-        <aside className="left">
+      <div
+        className={`body${leftCollapsed ? ' left-collapsed' : ''}${
+          rightCollapsed ? ' right-collapsed' : ''
+        }`}
+      >
+        <aside className={`left${leftCollapsed ? ' is-collapsed' : ''}`}>
+          <button
+            type="button"
+            className="panel-toggle"
+            onClick={() => setLeftCollapsed((value) => !value)}
+            title={leftCollapsed ? 'Show the control skeleton panel' : 'Hide the control skeleton panel'}
+            aria-expanded={!leftCollapsed}
+          >
+            {leftCollapsed ? '›' : '‹'}
+          </button>
+          {leftCollapsed && (
+            <div className="panel-rail">
+              <span>control skeleton</span>
+            </div>
+          )}
           <ProvenancePanel
             doc={doc}
             outlines={provenanceOutlines}
@@ -172,6 +195,7 @@ export default function App() {
             materialMode={materialMode}
             provenanceOutlines={provenanceOutlines}
             hiddenProvenance={hiddenProvenance}
+            layoutToken={layoutToken}
             onSelect={selectPart}
             focusToken={focusToken}
           />
@@ -185,7 +209,21 @@ export default function App() {
             </span>
           </footer>
         </main>
-        <aside className="right">
+        <aside className={`right${rightCollapsed ? ' is-collapsed' : ''}`}>
+          <button
+            type="button"
+            className="panel-toggle"
+            onClick={() => setRightCollapsed((value) => !value)}
+            title={rightCollapsed ? 'Show the part metadata panel' : 'Hide the part metadata panel'}
+            aria-expanded={!rightCollapsed}
+          >
+            {rightCollapsed ? '‹' : '›'}
+          </button>
+          {rightCollapsed && (
+            <div className="panel-rail">
+              <span>{panel === 'metadata' ? 'part metadata' : 'dimensions'}</span>
+            </div>
+          )}
           {panel === 'metadata' ? (
             <MetadataPanel doc={doc} part={selectedPart} unitMode={unitMode} />
           ) : (

@@ -25,6 +25,8 @@ export interface BridgeViewerProps {
   materialMode: boolean;
   provenanceOutlines: boolean;
   hiddenProvenance: Set<string>;
+  /** Bumped by the shell whenever the surrounding layout changes, e.g. a panel collapses. */
+  layoutToken: number;
   onSelect: (partId: string | null) => void;
   focusToken: number;
 }
@@ -44,6 +46,8 @@ interface Viewer {
   raycaster: THREE.Raycaster;
   parts: RenderablePart[];
   selectionHelper: THREE.Box3Helper | null;
+  /** Reconcile the drawing buffer with the element, and render one frame immediately. */
+  resize: () => void;
   dispose: () => void;
 }
 
@@ -192,6 +196,7 @@ export default function BridgeViewer(props: BridgeViewerProps) {
     materialMode,
     provenanceOutlines,
     hiddenProvenance,
+    layoutToken,
     onSelect,
   } = props;
   const hostRef = useRef<HTMLDivElement | null>(null);
@@ -221,6 +226,7 @@ export default function BridgeViewer(props: BridgeViewerProps) {
     const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: false });
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     host.appendChild(renderer.domElement);
+    const canvas = renderer.domElement;
 
     scene.add(new THREE.HemisphereLight(0xcfe4ff, 0x20262e, 1.1));
     scene.add(new THREE.AmbientLight(0xffffff, 0.55));
@@ -248,6 +254,7 @@ export default function BridgeViewer(props: BridgeViewerProps) {
       raycaster,
       parts: [],
       selectionHelper: null,
+      resize: () => undefined,
       dispose: () => undefined,
     };
     viewerRef.current = viewer;
@@ -264,9 +271,37 @@ export default function BridgeViewer(props: BridgeViewerProps) {
     const observer = new ResizeObserver(resize);
     observer.observe(host);
 
+    // Also exposed so a layout change the browser does not report -- collapsing a side panel only
+    // alters a CSS grid column, and neither ResizeObserver nor requestAnimationFrame can be relied
+    // on to deliver promptly in every environment -- can force the reconciliation directly.
+    viewer.resize = () => {
+      resize();
+      renderer.render(scene, camera);
+    };
+
+    /**
+     * Reconcile the drawing buffer with the element every frame.
+     *
+     * ResizeObserver alone proved unreliable here: collapsing a side panel changes a CSS grid
+     * column, and the canvas element resized without the observer delivering a callback in time,
+     * leaving a 760 px buffer stretched across a 1372 px element. Comparing the two directly each
+     * frame costs a couple of property reads and cannot miss a resize whatever caused it.
+     */
+    const syncSize = () => {
+      const width = Math.max(1, Math.floor(canvas.clientWidth));
+      const height = Math.max(1, Math.floor(canvas.clientHeight));
+      const ratio = renderer.getPixelRatio();
+      if (canvas.width !== Math.floor(width * ratio) || canvas.height !== Math.floor(height * ratio)) {
+        renderer.setSize(width, height, false);
+        camera.aspect = width / height;
+        camera.updateProjectionMatrix();
+      }
+    };
+
     let frameId = 0;
     const animate = () => {
       frameId = requestAnimationFrame(animate);
+      syncSize();
       controls.update();
       renderer.render(scene, camera);
     };
@@ -451,6 +486,14 @@ export default function BridgeViewer(props: BridgeViewerProps) {
     viewer.controls.target.set((minX + maxX) / 2, (minZ + maxZ) / 2, -(minY + maxY) / 2);
     viewer.controls.update();
   }, [ready, props.focusToken, selectedId, config, doc]);
+
+  // The shell changed the layout around us. Reconcile immediately rather than waiting for the
+  // browser to notice, so the render fills the new box on the very next paint.
+  useEffect(() => {
+    const viewer = viewerRef.current;
+    if (!viewer || !ready) return;
+    viewer.resize();
+  }, [ready, layoutToken]);
 
   const retry = useCallback(() => window.location.reload(), []);
 

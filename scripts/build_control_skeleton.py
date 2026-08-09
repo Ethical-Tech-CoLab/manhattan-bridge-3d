@@ -1256,7 +1256,8 @@ def build_parts(model: ControlModel, sk: Skeleton) -> list[Part]:
                     "Subway track envelope over the suspended length. SRC-011 confirms two tracks in "
                     "each of the A-B and C-D truss bays, which bounds the transverse position between "
                     "20 ft and 48 ft from the centerline; the exact centerline within that bay is "
-                    "still a placeholder, see OQ-010. Approach trackwork is not modelled."
+                    "still a placeholder, see OQ-010. The approach trackwork is a separate part "
+                    "per side, continuous with this one through the anchorage."
                 ),
                 geometry=[
                     box(
@@ -1302,8 +1303,16 @@ def build_parts(model: ControlModel, sk: Skeleton) -> list[Part]:
         lower_end = direction * abut_x
         upper_end = direction * portal_x
 
+        # The decks and trackwork begin at the anchorage *cable point*, not at its outboard face.
+        # Starting them at the face left a 72.2 m gap per side -- the anchorage's own length -- in
+        # which the roadway and all four tracks simply stopped and resumed, which is visible as a
+        # break in the render and contradicts CTL-002: the lower level is continuous from abutment
+        # to abutment. The roadways and tracks pass *through* the anchorage, which is why CTL-052
+        # registers a 46 ft thoroughfare arch through each one.
+        deck_inner_x = sk.x(station_id)
+
         # Lower level: carries the four tracks and the lower roadway out to the sourced abutment.
-        lo0, lo1 = sorted((inner_x, lower_end))
+        lo0, lo1 = sorted((deck_inner_x, lower_end))
         parts.append(
             Part(
                 part_id=f"{side}_approach_lower_deck",
@@ -1314,12 +1323,14 @@ def build_parts(model: ControlModel, sk: Skeleton) -> list[Part]:
                 control_refs=approach_extent_refs + ids("approach_girder_depth", "lower_deck_offset_above_clearance"),
                 open_questions=["OQ-002", "OQ-013", "OQ-020"],
                 notes=(
-                    "Lower level carried from the outboard face of the anchorage to the abutment. "
-                    "The extent is sourced: CTL-002 puts the lower level's abutments 5790 ft apart, "
-                    "which is grade A, so this deck exists and reaches this station. Its structural "
-                    "depth and its grade down to street level are not sourced; it is drawn level "
-                    "because inventing a gradient would be worse than admitting there is none. "
-                    "See OQ-020."
+                    "Lower level carried from the anchorage cable point, through the anchorage, to "
+                    "the abutment. The extent is sourced: CTL-002 puts the lower level's abutments "
+                    "5790 ft apart, which is grade A, and describes it as continuous, so this deck "
+                    "must not break at the anchorage. Its structural depth and its grade down to "
+                    "street level are not sourced; it is drawn level because inventing a gradient "
+                    "would be worse than admitting there is none. The anchorage is drawn as a solid "
+                    "envelope, so the thoroughfare arch of CTL-052 is not cut through it and this "
+                    "deck is hidden where it passes inside. See OQ-020."
                 ),
                 geometry=[box((lo0, -deck_half_w, lower_deck - girder_depth), (lo1, deck_half_w, lower_deck))],
                 style="approach_solid",
@@ -1327,7 +1338,7 @@ def build_parts(model: ControlModel, sk: Skeleton) -> list[Part]:
         )
 
         # Upper roadway: continues past the abutment to the sourced portal.
-        up0, up1 = sorted((inner_x, upper_end))
+        up0, up1 = sorted((deck_inner_x, upper_end))
         parts.append(
             Part(
                 part_id=f"{side}_approach_upper_deck",
@@ -1338,10 +1349,10 @@ def build_parts(model: ControlModel, sk: Skeleton) -> list[Part]:
                 control_refs=approach_extent_refs + ids("upper_deck_structure_depth"),
                 open_questions=["OQ-002", "OQ-013", "OQ-020"],
                 notes=(
-                    "Upper roadway carried from the anchorage to the portal. CTL-003 puts the "
-                    "portals 6090 ft apart, grade A, which is 300 ft further out than the lower "
-                    "level's abutments - the upper roadway genuinely runs past the end of the lower "
-                    "level. Drawn level; see OQ-020."
+                    "Upper roadway carried from the anchorage cable point, through the anchorage, "
+                    "to the portal. CTL-003 puts the portals 6090 ft apart, grade A, which is 300 "
+                    "ft further out than the lower level's abutments - the upper roadway genuinely "
+                    "runs past the end of the lower level. Drawn level; see OQ-020."
                 ),
                 geometry=[box((up0, -deck_half_w, upper_deck - m("upper_deck_structure_depth")),
                               (up1, deck_half_w, upper_deck))],
@@ -1365,9 +1376,10 @@ def build_parts(model: ControlModel, sk: Skeleton) -> list[Part]:
                     ),
                     open_questions=["OQ-010", "OQ-013", "OQ-020"],
                     notes=(
-                        f"{track_id} continued across the {side} approach to the abutment. The four "
-                        "tracks have to reach the subway portals, so ending them at the anchorage "
-                        "was a modelling artefact rather than a statement about the bridge. The "
+                        f"{track_id} continued from the anchorage cable point, through the "
+                        f"anchorage, across the {side} approach to the abutment. The four tracks "
+                        "have to reach the subway portals, so ending them at the anchorage was a "
+                        "modelling artefact rather than a statement about the bridge. The "
                         "transverse centreline remains the OQ-010 placeholder and the approach "
                         "trackwork alignment is unregistered; see OQ-020."
                     ),
@@ -1631,7 +1643,40 @@ def compute_measures(parts: Sequence[Part], model: ControlModel, sk: Skeleton) -
         "parts_documented": sum(1 for p in parts if p.geometry_provenance == "DOCUMENTED"),
         "parts_assumed": sum(1 for p in parts if p.geometry_provenance == "ASSUMED"),
         "parts_without_provenance": sum(1 for p in parts if not p.geometry_provenance),
+        # Largest longitudinal hole in the lower-level chain. Merges the x-intervals of every part
+        # that carries the lower level and reports the biggest gap between consecutive runs, so a
+        # break anywhere along the bridge is caught rather than only the one that was noticed.
+        "deck_longitudinal_gap_m": _largest_longitudinal_gap(parts),
     }
+
+
+def _largest_longitudinal_gap(parts: Sequence[Part]) -> float:
+    """The widest break in the chain of parts that carry the lower level.
+
+    The lower level is the continuous one: CTL-002 states it runs abutment to abutment. The upper
+    roadway runs further still, to the portals, but it is carried by the same chain out to the
+    abutment, so testing the lower level is the stricter check.
+    """
+    intervals: list[tuple[float, float]] = []
+    for part in parts:
+        carries_lower_level = (
+            part.subsystem in {"lower_roadway", "subway_tracks"}
+            or part.part_id.endswith("_approach_lower_deck")
+        )
+        if not carries_lower_level:
+            continue
+        bbox = part.bbox()
+        intervals.append((bbox["min"][0], bbox["max"][0]))
+    if not intervals:
+        return 0.0
+
+    intervals.sort()
+    largest = 0.0
+    reach = intervals[0][1]
+    for start, end in intervals[1:]:
+        largest = max(largest, start - reach)
+        reach = max(reach, end)
+    return round(max(largest, 0.0), 6)
 
 
 def write_json(path: Path, payload: Any) -> Path:
