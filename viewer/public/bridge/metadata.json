@@ -8461,11 +8461,11 @@
   "provenance": {
     "module_id": "manhattan-bridge",
     "generated_by": "publish_module_contract.py via build_control_skeleton.py@1.0.0",
-    "generated_at": "2026-08-09T20:06:22+00:00",
+    "generated_at": "2026-08-09T22:08:42+00:00",
     "source_documents": [
       {
         "path": "GEOMETRY-CONTROL.md",
-        "sha256": "e39fc87625f03ec1f963cc5b955404b9671a2e9aca6fab30b85309eb31130575"
+        "sha256": "356263280ac96281d5a0d5cf72f952c16ea3ac537ac52301aa6eecc806645187"
       }
     ]
   }

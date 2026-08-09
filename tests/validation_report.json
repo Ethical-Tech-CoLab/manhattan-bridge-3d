@@ -1,11 +1,11 @@
 {
   "schema_version": "1.0",
-  "control_document_sha256": "e39fc87625f03ec1f963cc5b955404b9671a2e9aca6fab30b85309eb31130575",
-  "built_from_sha256": "e39fc87625f03ec1f963cc5b955404b9671a2e9aca6fab30b85309eb31130575",
+  "control_document_sha256": "356263280ac96281d5a0d5cf72f952c16ea3ac537ac52301aa6eecc806645187",
+  "built_from_sha256": "356263280ac96281d5a0d5cf72f952c16ea3ac537ac52301aa6eecc806645187",
   "generated_by_build": "build_control_skeleton.py@1.0.0",
   "summary": {
     "pass": 74,
-    "reported": 5,
+    "reported": 6,
     "fail": 0,
     "error": 0
   },
@@ -718,6 +718,16 @@
       "deviation": 0.0
     },
     {
+      "id": "GRT-078",
+      "title": "The presentation layer has not moved any geometry",
+      "suite": "geometry_regression",
+      "mode": "report",
+      "status": "reported",
+      "detail": "geometry_fingerprint = sha256:0b7910732ce9556c",
+      "actual": "sha256:0b7910732ce9556c",
+      "expected": "sha256:pinned"
+    },
+    {
       "id": "STT-001",
       "title": "Every source cited by a control exists in the source register",
       "suite": "source_traceability",
@@ -755,7 +765,7 @@
       "suite": "source_traceability",
       "mode": "assert",
       "status": "pass",
-      "detail": "20 registered open questions"
+      "detail": "22 registered open questions"
     },
     {
       "id": "STT-006",
@@ -811,7 +821,7 @@
       "suite": "source_traceability",
       "mode": "assert",
       "status": "pass",
-      "detail": "control document sha256 e39fc87625f0"
+      "detail": "control document sha256 356263280ac9"
     }
   ]
 }

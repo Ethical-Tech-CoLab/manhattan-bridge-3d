@@ -25,6 +25,7 @@ that would retire it.
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import math
 import shutil
@@ -1647,7 +1648,20 @@ def compute_measures(parts: Sequence[Part], model: ControlModel, sk: Skeleton) -
         # that carries the lower level and reports the biggest gap between consecutive runs, so a
         # break anywhere along the bridge is caught rather than only the one that was noticed.
         "deck_longitudinal_gap_m": _largest_longitudinal_gap(parts),
+        # Digest over every emitted vertex. CONFIDENCE-MODEL.md section 7 claims the presentation
+        # layer never moves geometry; this is what makes that claim checkable rather than merely
+        # asserted, by making any vertex change visible in the validation report (GRT-078).
+        "geometry_fingerprint": _geometry_fingerprint(parts),
     }
+
+
+def _geometry_fingerprint(parts: Sequence[Part]) -> str:
+    digest = hashlib.sha256()
+    for part in sorted(parts, key=lambda p: p.part_id):
+        digest.update(part.part_id.encode("utf-8"))
+        for point in part.points():
+            digest.update(f"{point[0]:.6f},{point[1]:.6f},{point[2]:.6f};".encode("ascii"))
+    return f"sha256:{digest.hexdigest()[:16]}"
 
 
 def _largest_longitudinal_gap(parts: Sequence[Part]) -> float:

@@ -192,3 +192,53 @@ Ranked by cost, cheapest first:
    and it is the one capture that could plausibly reach `OQ-013`.
 3. **`SfM` with scale control** — a survey target, or any control dimension physically measured on
    site. This is what makes `MEASURED` non-zero for the first time.
+
+---
+
+## 7. The presentation layer
+
+A render can be improved in two entirely different ways, and keeping them apart is what lets this
+project make the model look better while its dimensions are still uncertain.
+
+| | Changes geometry? | Governed by |
+|---|---|---|
+| **Evidence layer** | Yes | Controls, sources, grades. Nothing enters without a source. |
+| **Presentation layer** | **No, ever** | This section. Lighting, sky, water, haze, surface finish. |
+
+**The rule.** A presentation change may alter how a surface is *lit, shaded or coloured*. It may not
+alter where that surface *is*, how large it is, or how many of them there are. Anything that moves a
+vertex is geometry and goes through `GEOMETRY-CONTROL.md` like everything else.
+
+That boundary is testable, and `GRT-078` tests it: the mesh a presentation change produces must be
+byte-identical to the mesh before it. A commit that improves the look and shifts the geometry fails.
+
+### 7.1 What the presentation layer may assume
+
+Some scene furniture is not a claim about the bridge at all, and some quietly is. The distinction:
+
+| Element | Status |
+|---|---|
+| Sky, haze, exposure, tone | **Not a claim.** No source needed. |
+| A water plane at `z = 0` | **Sourced, and worth stating.** `z = 0` is mean high water, a registered datum, so a water plane sits exactly where the datum says. It is the one piece of scene furniture that is dimensionally honest. |
+| Surface finish per material | **Governed by section 7's material table**, which is graded. Stone looks like stone because `MAT-001` says masonry, not because it looked better. |
+| Ground, terrain, buildings | **Not modelled here, deliberately.** Those belong to `dumbo-district-3d`. Drawing our own would duplicate another module's data and put two answers in the world. |
+| Texture photographs mapped onto surfaces | **Not adopted.** See 7.2. |
+
+### 7.2 Why photographic textures are not used
+
+It is tempting to project the HAER tower photograph onto the tower. It is refused, for a reason that
+matters more than it first appears: a photographic texture carries *apparent detail the geometry
+does not have*. Rivet lines, lattice bracing and arch openings would appear on a surface that is
+modelled as a plain tapered box. A reader cannot tell painted detail from modelled detail, and the
+confidence overlay cannot mark it, because there is no part to mark.
+
+So photographs are used as **reference** — to check proportion and to decide material — and are shown
+in the viewer *beside* the model, never *on* it. When the arch openings are sourced they will be
+modelled as geometry, graded, and rendered like everything else.
+
+### 7.3 The obligation this creates
+
+Any visual improvement made ahead of the survey is a loan against future work, and loans get
+recorded. `OQ-021` tracks it: every presentation-layer decision that stands in for missing evidence
+is listed there, with what would retire it. The viewer states the same thing on screen rather than
+only in this document, because a render travels further than a methods section.

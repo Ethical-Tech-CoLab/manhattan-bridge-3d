@@ -1,6 +1,6 @@
 {
   "title": "Manhattan Bridge — Control Skeleton",
-  "subtitle": "Milestone 7 · continuous deck, orthographic views, scale bar",
+  "subtitle": "Milestone 8 · presentation layer, sourced field imagery",
   "modelUrl": "control_skeleton.glb",
   "metadataUrl": "parts.json",
   "scaleDenominator": 87.1,
@@ -8,13 +8,13 @@
   "background": "#0d1117",
   "lineRaycastThreshold": 4,
   "camera": {
-    "position": [1850, 430, 620],
+    "position": [1650, 330, 560],
     "target": [0, 45, 0],
     "near": 0.5,
-    "far": 30000,
-    "fov": 42
+    "far": 60000,
+    "fov": 40
   },
-  "framePadding": 0.92,
+  "framePadding": 0.78,
   "governance": {
     "controlDocument": "GEOMETRY-CONTROL.md",
     "sourceRegister": "SOURCE-REGISTER.md",

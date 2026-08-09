@@ -6,6 +6,7 @@ import MetadataPanel from '../components/MetadataPanel';
 import PartTree from '../components/PartTree';
 import ProvenancePanel from '../components/ProvenancePanel';
 import Toolbar from '../components/Toolbar';
+import PresentationNotice from '../components/PresentationNotice';
 import ViewBar from '../components/ViewBar';
 import type { GeometryProvenance, PartsDocument, UnitMode, ViewMode, ViewerConfig } from './model';
 
@@ -211,6 +212,7 @@ export default function App() {
             onSelect={selectPart}
             focusToken={focusToken}
           />
+          <PresentationNotice doc={doc} active={materialMode && !confidenceOverlay} />
           <footer className="stage-footer">
             <span>
               origin: {doc.coordinate_system.origin} · {doc.coordinate_system.x} ·{' '}

@@ -801,3 +801,39 @@ aside.is-collapsed {
   color: #b8c5d3;
   white-space: nowrap;
 }
+
+.presentation-notice {
+  position: absolute;
+  right: 12px;
+  bottom: 52px;
+  z-index: 4;
+  max-width: 280px;
+  padding: 9px 11px;
+  border: 1px solid #3c4a5a;
+  border-left: 3px solid #d89a3b;
+  border-radius: 5px;
+  background: rgba(16, 23, 31, 0.9);
+}
+
+.presentation-notice strong {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #d89a3b;
+  margin-bottom: 5px;
+}
+
+.presentation-notice p {
+  margin: 0 0 6px;
+  font-size: 10.5px;
+  line-height: 1.45;
+  color: #a8b6c4;
+}
+
+.presentation-notice p:last-child { margin-bottom: 0; }
+
+.presentation-notice code {
+  font-size: 10px;
+  color: #cfd9e4;
+}

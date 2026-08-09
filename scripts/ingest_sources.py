@@ -164,12 +164,24 @@ def ingest(args: argparse.Namespace) -> int:
         )
     if args.image_set and args.image_set not in IMAGE_SETS:
         raise IngestError(f"{args.image_set!r} is not a known image set")
-    try:
-        observed = dt.date.fromisoformat(args.observed)
-    except ValueError as exc:
-        raise IngestError("--observed must be an ISO date, e.g. 2024-06-11") from exc
-    if observed > dt.date.today():
-        raise IngestError(f"observation date {observed} is in the future")
+    # "unknown" is a first-class answer. An earlier version of this script demanded an ISO date
+    # with no way out, and the first real ingest fabricated one for an undated archival photograph
+    # -- a required field with no "unknown" option does not produce knowledge, it produces
+    # invention. Unknown dates are recorded as such and reported by --verify, so they stay visible
+    # instead of being laundered into a plausible-looking number.
+    if args.observed.strip().lower() in {"unknown", "unk", "?"}:
+        observed_value = "unknown"
+    else:
+        try:
+            observed = dt.date.fromisoformat(args.observed)
+        except ValueError as exc:
+            raise IngestError(
+                "--observed must be an ISO date such as 2024-06-11, or the literal 'unknown'. "
+                "Do not guess: an invented date is worse than an absent one."
+            ) from exc
+        if observed > dt.date.today():
+            raise IngestError(f"observation date {observed} is in the future")
+        observed_value = observed.isoformat()
 
     digest = sha256_file(source_path)
     manifest = load_manifest()
@@ -205,7 +217,7 @@ def ingest(args: argparse.Namespace) -> int:
         "licence": args.licence,
         "attribution": args.attribution,
         "url": args.url,
-        "observed_date": observed.isoformat(),
+        "observed_date": observed_value,
         "retrieved_date": dt.date.today().isoformat(),
         "sha256": digest,
         "byte_size": source_path.stat().st_size,
@@ -253,7 +265,14 @@ def verify() -> int:
             bad += 1
 
     covered = {a["image_set"] for a in assets if a["image_set"]}
+    undated = [a for a in assets if a.get("observed_date") == "unknown"]
     print(f"{len(assets)} asset(s) ingested; {bad} problem(s)")
+    if undated:
+        print(f"{len(undated)} asset(s) have an UNKNOWN observation date:")
+        for asset in undated:
+            print(f"  ? {asset['original_name']}  ({asset['source_id']})")
+        print("  An undated source cannot support a claim about present condition. Date them or")
+        print("  keep any derived geometry at ASSUMED; see CONFIDENCE-MODEL.md section 6.3.")
     print(f"coverage: {len(covered)} of {len(IMAGE_SETS)} image sets have at least one asset")
     for name in IMAGE_SETS:
         print(f"  [{'x' if name in covered else ' '}] {name}")

@@ -955,6 +955,20 @@
         "CTL-052"
       ],
       "rationale": "CTL-002 describes the lower level as running abutment to abutment, so it cannot break. Until Milestone 7 the approach decks and all four tracks started at the anchorage's outboard face rather than its cable point, leaving a 72.2 m hole per side — the anchorage's own length — where the roadway and rails simply stopped and resumed. The roadways pass through the anchorage, which is why CTL-052 registers a 46 ft thoroughfare arch through each one. This measures the largest longitudinal gap in the lower-level chain and asserts it is closed."
+    },
+    {
+      "id": "GRT-078",
+      "title": "The presentation layer has not moved any geometry",
+      "kind": "measure",
+      "measure": "geometry_fingerprint",
+      "expected": "sha256:pinned",
+      "unit": "digest",
+      "tolerance": 0,
+      "mode": "report",
+      "refs": [
+        "CONFIDENCE-MODEL.md section 7"
+      ],
+      "rationale": "CONFIDENCE-MODEL.md section 7 draws a hard line: a presentation change may alter how a surface is lit, shaded or coloured, and may never move a vertex. That claim is only worth making if it is checked. This reports a digest over every emitted vertex, so a commit whose stated purpose is visual but which also shifts geometry shows up as a changed fingerprint in the validation report. Report-only, because legitimate geometry work changes it on purpose; the point is that the change is never silent."
     }
   ]
 }

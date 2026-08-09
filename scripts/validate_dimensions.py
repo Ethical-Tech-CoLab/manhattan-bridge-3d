@@ -196,7 +196,22 @@ def run_numeric(test: dict[str, Any], ctx: Context, suite: str) -> Result:
     elif kind == "elevation":
         actual = ctx.build_report["elevations"][test["elevation"]]
     elif kind == "measure":
-        actual = float(ctx.build_report["measures"][test["measure"]])
+        raw = ctx.build_report["measures"][test["measure"]]
+        # A digest is a measure but not a number. Report it verbatim rather than coercing it,
+        # which is what an earlier version did -- and it errored rather than reporting, so the
+        # check silently stopped covering anything.
+        if isinstance(raw, str):
+            return Result(
+                test_id=test["id"],
+                title=test["title"],
+                suite=suite,
+                mode=test.get("mode", "report"),
+                status="reported",
+                detail=f"{test['measure']} = {raw}",
+                actual=raw,
+                expected=test.get("expected"),
+            )
+        actual = float(raw)
     elif kind == "expression":
         actual = safe_eval(test["expr"], ns)
     elif kind == "ho_conversion":

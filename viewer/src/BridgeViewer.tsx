@@ -56,6 +56,8 @@ interface Viewer {
   dispose: () => void;
 }
 
+const PRESENTATION_FOG = new THREE.FogExp2(new THREE.Color('#93a8bd'), 0.000055);
+
 const SELECTION_COLOR = new THREE.Color('#ffffff');
 const SELECTION_BOX_COLOR = new THREE.Color('#ffd166');
 
@@ -211,6 +213,7 @@ export default function BridgeViewer(props: BridgeViewerProps) {
   const onSelectRef = useRef(onSelect);
   const [ready, setReady] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const environmentRef = useRef<THREE.Group | null>(null);
 
   onSelectRef.current = onSelect;
   const onScaleChangeRef = useRef(onScaleChange);
@@ -239,17 +242,90 @@ export default function BridgeViewer(props: BridgeViewerProps) {
 
     const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: false });
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.outputColorSpace = THREE.SRGBColorSpace;
+    renderer.toneMapping = THREE.ACESFilmicToneMapping;
+    renderer.toneMappingExposure = 1.05;
     host.appendChild(renderer.domElement);
     const canvas = renderer.domElement;
 
-    scene.add(new THREE.HemisphereLight(0xcfe4ff, 0x20262e, 1.1));
-    scene.add(new THREE.AmbientLight(0xffffff, 0.55));
-    const key = new THREE.DirectionalLight(0xffffff, 1.9);
-    key.position.set(600, 900, 500);
+    // ---------------------------------------------------------------- presentation layer
+    //
+    // Everything between here and the controls is lighting and scene furniture. Per
+    // CONFIDENCE-MODEL.md section 7 it may change how a surface is lit, shaded or coloured, and may
+    // not move a vertex. GRT-078 asserts that boundary against the exported mesh.
+    const environment = new THREE.Group();
+    environment.name = 'presentation_environment';
+    environment.userData.presentationOnly = true;
+    scene.add(environment);
+    environmentRef.current = environment;
+
+    // Sky. A large inverted sphere with a vertical gradient, which reads as atmosphere without
+    // pretending to be a measured sky or a real time of day.
+    const sky = new THREE.Mesh(
+      new THREE.SphereGeometry(24000, 32, 16),
+      new THREE.ShaderMaterial({
+        side: THREE.BackSide,
+        depthWrite: false,
+        uniforms: {
+          top: { value: new THREE.Color('#2b4568') },
+          bottom: { value: new THREE.Color('#8fa4b8') },
+        },
+        vertexShader: `
+          varying float vH;
+          void main() {
+            vec4 world = modelMatrix * vec4(position, 1.0);
+            vH = normalize(world.xyz).y;
+            gl_Position = projectionMatrix * viewMatrix * world;
+          }`,
+        fragmentShader: `
+          uniform vec3 top; uniform vec3 bottom; varying float vH;
+          void main() {
+            gl_FragColor = vec4(mix(bottom, top, smoothstep(-0.05, 0.55, vH)), 1.0);
+          }`,
+      }),
+    );
+    sky.name = 'presentation_sky';
+    environment.add(sky);
+
+    // Water at the mean-high-water datum. This is the one piece of scene furniture that is
+    // dimensionally honest: z = 0 in the authoring frame IS mean high water, a registered datum, so
+    // the plane sits exactly where the datum says and the towers meet it correctly.
+    //
+    // Deliberately rough and barely metallic. A low-roughness, high-metalness plane behaves as a
+    // mirror and throws a blown-out specular streak across the whole frame, which drowns the
+    // structure -- the subject of the image -- in scene furniture.
+    const water = new THREE.Mesh(
+      new THREE.PlaneGeometry(30000, 30000),
+      new THREE.MeshStandardMaterial({
+        color: new THREE.Color('#33485a'),
+        roughness: 0.88,
+        metalness: 0.06,
+        transparent: true,
+        opacity: 0.95,
+      }),
+    );
+    water.name = 'presentation_water_mhw';
+    water.rotation.x = -Math.PI / 2;
+    water.position.y = 0;
+    environment.add(water);
+
+    // Haze. A 2 km structure needs aerial perspective or the far end reads as near, and the
+    // reference photography (SRC-018) shows exactly this over the East River.
+    scene.fog = PRESENTATION_FOG;
+
+    scene.add(new THREE.HemisphereLight(0xdce9f7, 0x2a3038, 1.0));
+    scene.add(new THREE.AmbientLight(0xffffff, 0.32));
+    const key = new THREE.DirectionalLight(0xfff3e2, 2.3);
+    key.position.set(900, 1100, 700);
     scene.add(key);
-    const fill = new THREE.DirectionalLight(0xffffff, 0.7);
-    fill.position.set(-700, 400, -600);
+    const fill = new THREE.DirectionalLight(0xcfe0f5, 0.85);
+    fill.position.set(-800, 350, -700);
     scene.add(fill);
+    // A dim upward light so the underside reads at all. The underside is what a person in DUMBO
+    // actually sees, and with only overhead light it renders as a black slab.
+    const bounce = new THREE.DirectionalLight(0x93a7b8, 0.5);
+    bounce.position.set(0, -600, 200);
+    scene.add(bounce);
 
     const controls = new OrbitControls(camera, renderer.domElement);
     controls.enableDamping = true;
@@ -406,8 +482,16 @@ export default function BridgeViewer(props: BridgeViewerProps) {
     if (!viewer || !ready) return;
     const metadataById = new Map(doc.parts.map((part) => [part.part_id, part]));
 
+    // The environment is presentation only, so it steps aside for the two governance views: the
+    // confidence overlay and the schematic (materials-off) view both want a neutral field, not a
+    // sky. Fog goes with it, because haze over a schematic reads as data loss.
+    const env = environmentRef.current;
+    if (env) env.visible = materialMode && !confidenceOverlay;
+    viewer.scene.fog = env && env.visible ? PRESENTATION_FOG : null;
+
     viewer.parts.forEach((part) => {
       const meta = metadataById.get(part.id);
+
       // SRC-018 section 5.5 is explicit that the provenance filter must hide rather than fade:
       // "a faded outline is still a shape a reader will trace, and the honest experience of
       // switching both off on this project is an empty frame."
