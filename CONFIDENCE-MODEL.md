@@ -242,3 +242,32 @@ Any visual improvement made ahead of the survey is a loan against future work, a
 recorded. `OQ-021` tracks it: every presentation-layer decision that stands in for missing evidence
 is listed there, with what would retire it. The viewer states the same thing on screen rather than
 only in this document, because a render travels further than a methods section.
+
+### 6.5 Licensing is a gate on display, not only on storage
+
+Storage and display are different permissions and conflating them is how an all-rights-reserved
+image ends up on a public page. Every ingested asset therefore records `display_permitted`
+separately from `stored_copy`, so a viewer gallery reading the manifest can tell "cite this" from
+"you may show this" rather than re-deriving it from a licence string.
+
+**The worked example is HistoricBridges.org, SRC-005.** It is the most thorough photographic
+documentation of this bridge available, and none of it may be used here. Its terms, read directly
+from `historicbridges.org/info/about/`, require written permission secured before publication,
+confirmed by a Letter of Agreement and an invoice, at a website fee of $50.00 per image, and grant
+permission for **"one-time, one edition use only"** with **"all rights ... reserved in full"**.
+
+The fee is not the obstacle. **One-edition permission cannot be satisfied by an open repository at
+all**, because anyone may fork and redistribute it, which is precisely what CC BY 4.0 invites. No
+payment would fix that, so the question is closed rather than deferred.
+
+What remains permitted, and what this project does instead:
+
+- **Link to the gallery.** Linking is not reproduction. `SOURCE-REGISTER.md` carries the URL and
+  the viewer offers it as an outbound reference.
+- **Use the data on the same site that is not theirs to license.** The National Bridge Inventory
+  sheet at that domain is federal data submitted by NYSDOT to FHWA. The *form layout* is
+  HistoricBridges.org's; the *data* is public domain. Registered separately as SRC-024 for exactly
+  that reason, and it turned out to be the more valuable half.
+- **Look at the photographs while modelling.** Reading a source and republishing it are different
+  acts. Proportions checked against a copyrighted photograph are fine; the photograph does not come
+  with them.

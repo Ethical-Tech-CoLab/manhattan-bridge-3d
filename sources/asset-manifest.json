@@ -5,7 +5,7 @@
       "source_id": "SRC-018",
       "kind": "photo",
       "image_set": "image-set-001-main-towers",
-      "coverage": "Manhattan-side tower from the north-west: four-column steel tower, arch openings, ornamental finials, coursed masonry pier",
+      "coverage": "Manhattan-side tower: four-column steel tower, two arch openings, finials, coursed masonry pier",
       "use": "visual_reference",
       "licence": "CC BY 4.0",
       "attribution": "HAER NY-127-7, Historic American Engineering Record, Library of Congress; retrieved via Ethical Tech CoLab manhattan-bridge-noise-dumbo, CC BY 4.0",
@@ -16,6 +16,7 @@
       "byte_size": 138786,
       "original_name": "haer-ny-127-7.jpg",
       "stored_copy": true,
+      "display_permitted": true,
       "stored_as": "sources/photos/image-set-001-main-towers/SRC-018-332346b3dc1e.jpg",
       "camera_metadata_available": false,
       "quality": "high"
@@ -24,7 +25,7 @@
       "source_id": "SRC-018",
       "kind": "photo",
       "image_set": "image-set-006-pedestrian-path",
-      "coverage": "Washington Street at street level, evening; bridge overhead. GPS 40.702069, -73.989732, Galaxy S23+",
+      "coverage": "Washington Street at street level, evening. GPS 40.702069, -73.989732",
       "use": "visual_reference",
       "licence": "CC BY 4.0",
       "attribution": "Ethical Tech CoLab, manhattan-bridge-noise-dumbo pedestrian site visits, CC BY 4.0",
@@ -35,6 +36,7 @@
       "byte_size": 652281,
       "original_name": "20260803_190055.jpg",
       "stored_copy": true,
+      "display_permitted": true,
       "stored_as": "sources/photos/image-set-006-pedestrian-path/SRC-018-548500230b72.jpg",
       "camera_metadata_available": true,
       "quality": "high"
@@ -54,6 +56,7 @@
       "byte_size": 835523,
       "original_name": "20260803_190152.jpg",
       "stored_copy": true,
+      "display_permitted": true,
       "stored_as": "sources/photos/image-set-006-pedestrian-path/SRC-018-551642183fa0.jpg",
       "camera_metadata_available": true,
       "quality": "high"
@@ -73,6 +76,7 @@
       "byte_size": 528436,
       "original_name": "grassy-knoll-20260804_120225.jpg",
       "stored_copy": true,
+      "display_permitted": true,
       "stored_as": "sources/photos/image-set-008-approach-spans/SRC-018-3943aec4c91d.jpg",
       "camera_metadata_available": true,
       "quality": "high"

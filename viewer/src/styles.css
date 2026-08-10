@@ -837,3 +837,66 @@ aside.is-collapsed {
   font-size: 10px;
   color: #cfd9e4;
 }
+
+/* ------------------------------------------------------- reference panel */
+
+.reference-panel {
+  border-top: 1px solid #1e2733;
+}
+
+.reference-toggle {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 11px 14px;
+  border: 0;
+  background: transparent;
+  color: #9fb0c2;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.reference-toggle:hover { color: #e6edf5; }
+
+.reference-body { padding: 0 14px 12px; }
+
+.reference-intro {
+  margin: 0 0 9px;
+  font-size: 10.5px;
+  line-height: 1.45;
+  color: #7d8b9b;
+}
+
+.reference-body ul { list-style: none; margin: 0; padding: 0; }
+
+.reference-body li { margin-bottom: 10px; }
+
+.reference-body a {
+  font-size: 11.5px;
+  color: #8fd0f0;
+  text-decoration: none;
+}
+
+.reference-body a:hover { text-decoration: underline; }
+
+.reference-body li p {
+  margin: 3px 0 0;
+  font-size: 10px;
+  line-height: 1.42;
+  color: #6f7d8d;
+}
+
+.reference-flag {
+  margin-left: 6px;
+  padding: 1px 5px;
+  border: 1px solid #7a4a4a;
+  border-radius: 3px;
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #d98b8b;
+  white-space: nowrap;
+}

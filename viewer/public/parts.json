@@ -3,10 +3,10 @@
   "model": "control_skeleton",
   "milestone": 2,
   "generated_by": "build_control_skeleton.py@1.0.0",
-  "generated_at": "2026-08-09T23:44:26+00:00",
+  "generated_at": "2026-08-10T01:39:39+00:00",
   "control_document": {
     "path": "GEOMETRY-CONTROL.md",
-    "sha256": "83ba243db2dffb0802dd63f5095b85ca1f06459a1fa4da6bdf4529800c6e17e4"
+    "sha256": "9668b9f504f7d8975b24521eca7c0b28257f15eff0d738e58f2b246189d8c6cf"
   },
   "source_register": "SOURCE-REGISTER.md",
   "confidence_model": "CONFIDENCE-MODEL.md",
@@ -751,11 +751,12 @@
         "SRC-011",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "A",
       "is_placeholder": false,
-      "notes": "Tower centerline to tower centerline. Confirmed by two period primaries. See CONF-006.",
+      "notes": "**Corroborated in 2010 by federal inventory data**: SRC-024 records the maximum span as 448 m = 1469.8 ft, agreeing to 0.01 percent with a source a century newer than the period primaries. Tower centerline to tower centerline. Confirmed by two period primaries. See CONF-006.",
       "ho": {
         "prototype_m": 448.056,
         "prototype_ft": 1470.0,
@@ -822,7 +823,8 @@
         "SRC-001",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "A",
       "is_placeholder": false,
@@ -2192,6 +2194,27 @@
         "ho_in": 3.79,
         "ho_ft": 0.32
       }
+    },
+    {
+      "control_id": "CTL-114",
+      "key": "navigation_horizontal_clearance",
+      "value": 1230.0,
+      "unit": "ft",
+      "value_m": 374.904,
+      "source_ids": [
+        "SRC-024"
+      ],
+      "confidence": "A",
+      "is_placeholder": false,
+      "notes": "Federal navigation clearance between the tower piers, 374.9 m. Not the same quantity as CTL-005: the main span is measured tower centreline to centreline, while this is the clear water opening, so the 240 ft difference is the two piers plus their standoff. Recorded; not yet used for geometry.",
+      "ho": {
+        "prototype_m": 374.904,
+        "prototype_ft": 1230.0,
+        "prototype_in": 14760.0,
+        "ho_mm": 4304.3,
+        "ho_in": 169.46,
+        "ho_ft": 14.12
+      }
     }
   ],
   "measures": {
@@ -2235,7 +2258,7 @@
     "tower_spacing_m": 448.05600000000004,
     "anchorage_spacing_m": 890.0160000000001,
     "placeholder_control_count": 12,
-    "sourced_control_count": 63,
+    "sourced_control_count": 64,
     "approach_lower_deck_outer_x": 882.3960000000001,
     "approach_upper_deck_outer_x": 928.1160000000001,
     "parts_without_material": 0,
@@ -4371,8 +4394,11 @@
       "geometry_provenance": "DOCUMENTED",
       "material": "masonry",
       "material_id": "MAT-010",
-      "material_confidence": "D",
-      "material_sources": [],
+      "material_confidence": "B",
+      "material_sources": [
+        "SRC-005",
+        "SRC-018"
+      ],
       "geometry_kinds": [
         "box"
       ],
@@ -4427,8 +4453,11 @@
       "geometry_provenance": "DOCUMENTED",
       "material": "masonry",
       "material_id": "MAT-010",
-      "material_confidence": "D",
-      "material_sources": [],
+      "material_confidence": "B",
+      "material_sources": [
+        "SRC-005",
+        "SRC-018"
+      ],
       "geometry_kinds": [
         "box"
       ],
@@ -5257,7 +5286,7 @@
       "confidence": "D",
       "prototype_units": "meters",
       "ho_scale_units": "millimeters",
-      "notes": "Web members of truss A (south outer) over the main span: 79 panels at 18.61 ft. The panel *positions* are sourced, being the unique integer solution to the 628 panel points in CTL-037. The alternating diagonal pattern follows the Warren form named by SRC-002, SRC-011 and SRC-012, but no source gives the diagonal handedness at each panel or whether verticals are present, so the web itself is inferred. See OQ-017.",
+      "notes": "Web members of truss A (south outer) over the main span: 79 panels at 18.61 ft. The panel *positions* are sourced, being the unique integer solution to the 628 panel points in CTL-037. The alternating diagonal pattern follows the Warren form named by SRC-002, SRC-011 and SRC-012. SRC-005 photographs confirm verticals ARE present at the panel points and that the diagonals are built-up riveted members with lattice bracing, so the arrangement drawn here is corroborated; the handedness at each panel and the member sections remain unsourced. See OQ-017.",
       "scale": "1:1 prototype, HO 1:87.1",
       "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
       "review_status": "unreviewed",
@@ -5380,7 +5409,7 @@
       "confidence": "D",
       "prototype_units": "meters",
       "ho_scale_units": "millimeters",
-      "notes": "Web members of truss B (south inner) over the main span: 79 panels at 18.61 ft. The panel *positions* are sourced, being the unique integer solution to the 628 panel points in CTL-037. The alternating diagonal pattern follows the Warren form named by SRC-002, SRC-011 and SRC-012, but no source gives the diagonal handedness at each panel or whether verticals are present, so the web itself is inferred. See OQ-017.",
+      "notes": "Web members of truss B (south inner) over the main span: 79 panels at 18.61 ft. The panel *positions* are sourced, being the unique integer solution to the 628 panel points in CTL-037. The alternating diagonal pattern follows the Warren form named by SRC-002, SRC-011 and SRC-012. SRC-005 photographs confirm verticals ARE present at the panel points and that the diagonals are built-up riveted members with lattice bracing, so the arrangement drawn here is corroborated; the handedness at each panel and the member sections remain unsourced. See OQ-017.",
       "scale": "1:1 prototype, HO 1:87.1",
       "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
       "review_status": "unreviewed",
@@ -5503,7 +5532,7 @@
       "confidence": "D",
       "prototype_units": "meters",
       "ho_scale_units": "millimeters",
-      "notes": "Web members of truss C (north inner) over the main span: 79 panels at 18.61 ft. The panel *positions* are sourced, being the unique integer solution to the 628 panel points in CTL-037. The alternating diagonal pattern follows the Warren form named by SRC-002, SRC-011 and SRC-012, but no source gives the diagonal handedness at each panel or whether verticals are present, so the web itself is inferred. See OQ-017.",
+      "notes": "Web members of truss C (north inner) over the main span: 79 panels at 18.61 ft. The panel *positions* are sourced, being the unique integer solution to the 628 panel points in CTL-037. The alternating diagonal pattern follows the Warren form named by SRC-002, SRC-011 and SRC-012. SRC-005 photographs confirm verticals ARE present at the panel points and that the diagonals are built-up riveted members with lattice bracing, so the arrangement drawn here is corroborated; the handedness at each panel and the member sections remain unsourced. See OQ-017.",
       "scale": "1:1 prototype, HO 1:87.1",
       "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
       "review_status": "unreviewed",
@@ -5626,7 +5655,7 @@
       "confidence": "D",
       "prototype_units": "meters",
       "ho_scale_units": "millimeters",
-      "notes": "Web members of truss D (north outer) over the main span: 79 panels at 18.61 ft. The panel *positions* are sourced, being the unique integer solution to the 628 panel points in CTL-037. The alternating diagonal pattern follows the Warren form named by SRC-002, SRC-011 and SRC-012, but no source gives the diagonal handedness at each panel or whether verticals are present, so the web itself is inferred. See OQ-017.",
+      "notes": "Web members of truss D (north outer) over the main span: 79 panels at 18.61 ft. The panel *positions* are sourced, being the unique integer solution to the 628 panel points in CTL-037. The alternating diagonal pattern follows the Warren form named by SRC-002, SRC-011 and SRC-012. SRC-005 photographs confirm verticals ARE present at the panel points and that the diagonals are built-up riveted members with lattice bracing, so the arrangement drawn here is corroborated; the handedness at each panel and the member sections remain unsourced. See OQ-017.",
       "scale": "1:1 prototype, HO 1:87.1",
       "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
       "review_status": "unreviewed",
@@ -5931,7 +5960,7 @@
       "confidence": "D",
       "prototype_units": "meters",
       "ho_scale_units": "millimeters",
-      "notes": "Web members of truss A (south outer) over the side span manhattan: 39 panels at 18.59 ft. The panel *positions* are sourced, being the unique integer solution to the 628 panel points in CTL-037. The alternating diagonal pattern follows the Warren form named by SRC-002, SRC-011 and SRC-012, but no source gives the diagonal handedness at each panel or whether verticals are present, so the web itself is inferred. See OQ-017.",
+      "notes": "Web members of truss A (south outer) over the side span manhattan: 39 panels at 18.59 ft. The panel *positions* are sourced, being the unique integer solution to the 628 panel points in CTL-037. The alternating diagonal pattern follows the Warren form named by SRC-002, SRC-011 and SRC-012. SRC-005 photographs confirm verticals ARE present at the panel points and that the diagonals are built-up riveted members with lattice bracing, so the arrangement drawn here is corroborated; the handedness at each panel and the member sections remain unsourced. See OQ-017.",
       "scale": "1:1 prototype, HO 1:87.1",
       "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
       "review_status": "unreviewed",
@@ -6054,7 +6083,7 @@
       "confidence": "D",
       "prototype_units": "meters",
       "ho_scale_units": "millimeters",
-      "notes": "Web members of truss B (south inner) over the side span manhattan: 39 panels at 18.59 ft. The panel *positions* are sourced, being the unique integer solution to the 628 panel points in CTL-037. The alternating diagonal pattern follows the Warren form named by SRC-002, SRC-011 and SRC-012, but no source gives the diagonal handedness at each panel or whether verticals are present, so the web itself is inferred. See OQ-017.",
+      "notes": "Web members of truss B (south inner) over the side span manhattan: 39 panels at 18.59 ft. The panel *positions* are sourced, being the unique integer solution to the 628 panel points in CTL-037. The alternating diagonal pattern follows the Warren form named by SRC-002, SRC-011 and SRC-012. SRC-005 photographs confirm verticals ARE present at the panel points and that the diagonals are built-up riveted members with lattice bracing, so the arrangement drawn here is corroborated; the handedness at each panel and the member sections remain unsourced. See OQ-017.",
       "scale": "1:1 prototype, HO 1:87.1",
       "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
       "review_status": "unreviewed",
@@ -6177,7 +6206,7 @@
       "confidence": "D",
       "prototype_units": "meters",
       "ho_scale_units": "millimeters",
-      "notes": "Web members of truss C (north inner) over the side span manhattan: 39 panels at 18.59 ft. The panel *positions* are sourced, being the unique integer solution to the 628 panel points in CTL-037. The alternating diagonal pattern follows the Warren form named by SRC-002, SRC-011 and SRC-012, but no source gives the diagonal handedness at each panel or whether verticals are present, so the web itself is inferred. See OQ-017.",
+      "notes": "Web members of truss C (north inner) over the side span manhattan: 39 panels at 18.59 ft. The panel *positions* are sourced, being the unique integer solution to the 628 panel points in CTL-037. The alternating diagonal pattern follows the Warren form named by SRC-002, SRC-011 and SRC-012. SRC-005 photographs confirm verticals ARE present at the panel points and that the diagonals are built-up riveted members with lattice bracing, so the arrangement drawn here is corroborated; the handedness at each panel and the member sections remain unsourced. See OQ-017.",
       "scale": "1:1 prototype, HO 1:87.1",
       "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
       "review_status": "unreviewed",
@@ -6300,7 +6329,7 @@
       "confidence": "D",
       "prototype_units": "meters",
       "ho_scale_units": "millimeters",
-      "notes": "Web members of truss D (north outer) over the side span manhattan: 39 panels at 18.59 ft. The panel *positions* are sourced, being the unique integer solution to the 628 panel points in CTL-037. The alternating diagonal pattern follows the Warren form named by SRC-002, SRC-011 and SRC-012, but no source gives the diagonal handedness at each panel or whether verticals are present, so the web itself is inferred. See OQ-017.",
+      "notes": "Web members of truss D (north outer) over the side span manhattan: 39 panels at 18.59 ft. The panel *positions* are sourced, being the unique integer solution to the 628 panel points in CTL-037. The alternating diagonal pattern follows the Warren form named by SRC-002, SRC-011 and SRC-012. SRC-005 photographs confirm verticals ARE present at the panel points and that the diagonals are built-up riveted members with lattice bracing, so the arrangement drawn here is corroborated; the handedness at each panel and the member sections remain unsourced. See OQ-017.",
       "scale": "1:1 prototype, HO 1:87.1",
       "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
       "review_status": "unreviewed",
@@ -6605,7 +6634,7 @@
       "confidence": "D",
       "prototype_units": "meters",
       "ho_scale_units": "millimeters",
-      "notes": "Web members of truss A (south outer) over the side span brooklyn: 39 panels at 18.59 ft. The panel *positions* are sourced, being the unique integer solution to the 628 panel points in CTL-037. The alternating diagonal pattern follows the Warren form named by SRC-002, SRC-011 and SRC-012, but no source gives the diagonal handedness at each panel or whether verticals are present, so the web itself is inferred. See OQ-017.",
+      "notes": "Web members of truss A (south outer) over the side span brooklyn: 39 panels at 18.59 ft. The panel *positions* are sourced, being the unique integer solution to the 628 panel points in CTL-037. The alternating diagonal pattern follows the Warren form named by SRC-002, SRC-011 and SRC-012. SRC-005 photographs confirm verticals ARE present at the panel points and that the diagonals are built-up riveted members with lattice bracing, so the arrangement drawn here is corroborated; the handedness at each panel and the member sections remain unsourced. See OQ-017.",
       "scale": "1:1 prototype, HO 1:87.1",
       "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
       "review_status": "unreviewed",
@@ -6728,7 +6757,7 @@
       "confidence": "D",
       "prototype_units": "meters",
       "ho_scale_units": "millimeters",
-      "notes": "Web members of truss B (south inner) over the side span brooklyn: 39 panels at 18.59 ft. The panel *positions* are sourced, being the unique integer solution to the 628 panel points in CTL-037. The alternating diagonal pattern follows the Warren form named by SRC-002, SRC-011 and SRC-012, but no source gives the diagonal handedness at each panel or whether verticals are present, so the web itself is inferred. See OQ-017.",
+      "notes": "Web members of truss B (south inner) over the side span brooklyn: 39 panels at 18.59 ft. The panel *positions* are sourced, being the unique integer solution to the 628 panel points in CTL-037. The alternating diagonal pattern follows the Warren form named by SRC-002, SRC-011 and SRC-012. SRC-005 photographs confirm verticals ARE present at the panel points and that the diagonals are built-up riveted members with lattice bracing, so the arrangement drawn here is corroborated; the handedness at each panel and the member sections remain unsourced. See OQ-017.",
       "scale": "1:1 prototype, HO 1:87.1",
       "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
       "review_status": "unreviewed",
@@ -6851,7 +6880,7 @@
       "confidence": "D",
       "prototype_units": "meters",
       "ho_scale_units": "millimeters",
-      "notes": "Web members of truss C (north inner) over the side span brooklyn: 39 panels at 18.59 ft. The panel *positions* are sourced, being the unique integer solution to the 628 panel points in CTL-037. The alternating diagonal pattern follows the Warren form named by SRC-002, SRC-011 and SRC-012, but no source gives the diagonal handedness at each panel or whether verticals are present, so the web itself is inferred. See OQ-017.",
+      "notes": "Web members of truss C (north inner) over the side span brooklyn: 39 panels at 18.59 ft. The panel *positions* are sourced, being the unique integer solution to the 628 panel points in CTL-037. The alternating diagonal pattern follows the Warren form named by SRC-002, SRC-011 and SRC-012. SRC-005 photographs confirm verticals ARE present at the panel points and that the diagonals are built-up riveted members with lattice bracing, so the arrangement drawn here is corroborated; the handedness at each panel and the member sections remain unsourced. See OQ-017.",
       "scale": "1:1 prototype, HO 1:87.1",
       "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
       "review_status": "unreviewed",
@@ -6974,7 +7003,7 @@
       "confidence": "D",
       "prototype_units": "meters",
       "ho_scale_units": "millimeters",
-      "notes": "Web members of truss D (north outer) over the side span brooklyn: 39 panels at 18.59 ft. The panel *positions* are sourced, being the unique integer solution to the 628 panel points in CTL-037. The alternating diagonal pattern follows the Warren form named by SRC-002, SRC-011 and SRC-012, but no source gives the diagonal handedness at each panel or whether verticals are present, so the web itself is inferred. See OQ-017.",
+      "notes": "Web members of truss D (north outer) over the side span brooklyn: 39 panels at 18.59 ft. The panel *positions* are sourced, being the unique integer solution to the 628 panel points in CTL-037. The alternating diagonal pattern follows the Warren form named by SRC-002, SRC-011 and SRC-012. SRC-005 photographs confirm verticals ARE present at the panel points and that the diagonals are built-up riveted members with lattice bracing, so the arrangement drawn here is corroborated; the handedness at each panel and the member sections remain unsourced. See OQ-017.",
       "scale": "1:1 prototype, HO 1:87.1",
       "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
       "review_status": "unreviewed",

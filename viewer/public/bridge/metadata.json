@@ -26,7 +26,8 @@
         "SRC-011",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "A",
       "basis_confidence": "A",
@@ -106,7 +107,8 @@
         "SRC-011",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "A",
       "basis_confidence": "A",
@@ -188,7 +190,8 @@
         "SRC-012",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "D",
       "basis_confidence": "A",
@@ -276,7 +279,8 @@
         "SRC-011",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "A",
       "basis_confidence": "A",
@@ -354,7 +358,8 @@
         "SRC-011",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "A",
       "basis_confidence": "A",
@@ -432,7 +437,8 @@
         "SRC-011",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "A",
       "basis_confidence": "A",
@@ -510,7 +516,8 @@
         "SRC-011",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "A",
       "basis_confidence": "A",
@@ -589,7 +596,8 @@
         "SRC-011",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "A",
       "basis_confidence": "A",
@@ -1138,7 +1146,8 @@
         "SRC-011",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "A",
       "basis_confidence": "A",
@@ -1218,7 +1227,8 @@
         "SRC-011",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "A",
       "basis_confidence": "A",
@@ -1300,7 +1310,8 @@
         "SRC-011",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "A",
       "basis_confidence": "A",
@@ -1388,7 +1399,8 @@
         "SRC-011",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "A",
       "basis_confidence": "A",
@@ -1475,7 +1487,8 @@
         "SRC-011",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "A",
       "basis_confidence": "A",
@@ -1562,7 +1575,8 @@
         "SRC-011",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "A",
       "basis_confidence": "A",
@@ -1649,7 +1663,8 @@
         "SRC-011",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "A",
       "basis_confidence": "A",
@@ -1737,7 +1752,8 @@
         "SRC-011",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "D",
       "basis_confidence": "D",
@@ -1826,7 +1842,8 @@
         "SRC-011",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "D",
       "basis_confidence": "D",
@@ -1918,7 +1935,8 @@
         "SRC-011",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "D",
       "basis_confidence": "D",
@@ -2010,7 +2028,8 @@
         "SRC-012",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "D",
       "basis_confidence": "D",
@@ -2097,7 +2116,8 @@
         "SRC-011",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "A",
       "basis_confidence": "A",
@@ -2177,7 +2197,8 @@
         "SRC-011",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "A",
       "basis_confidence": "A",
@@ -2259,7 +2280,8 @@
         "SRC-011",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "A",
       "basis_confidence": "A",
@@ -2347,7 +2369,8 @@
         "SRC-011",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "A",
       "basis_confidence": "A",
@@ -2434,7 +2457,8 @@
         "SRC-011",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "A",
       "basis_confidence": "A",
@@ -2521,7 +2545,8 @@
         "SRC-011",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "A",
       "basis_confidence": "A",
@@ -2608,7 +2633,8 @@
         "SRC-011",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "A",
       "basis_confidence": "A",
@@ -2696,7 +2722,8 @@
         "SRC-011",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "D",
       "basis_confidence": "D",
@@ -2785,7 +2812,8 @@
         "SRC-011",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "D",
       "basis_confidence": "D",
@@ -2877,7 +2905,8 @@
         "SRC-011",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "D",
       "basis_confidence": "D",
@@ -2969,7 +2998,8 @@
         "SRC-012",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "D",
       "basis_confidence": "D",
@@ -3055,7 +3085,8 @@
         "SRC-012",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "B",
       "basis_confidence": "B",
@@ -3088,8 +3119,11 @@
           "geometry_provenance": "DOCUMENTED",
           "material": "masonry",
           "material_id": "MAT-010",
-          "material_confidence": "D",
-          "material_sources": []
+          "material_confidence": "B",
+          "material_sources": [
+            "SRC-005",
+            "SRC-018"
+          ]
         }
       },
       "bbox": {
@@ -3136,7 +3170,8 @@
         "SRC-012",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "B",
       "basis_confidence": "B",
@@ -3169,8 +3204,11 @@
           "geometry_provenance": "DOCUMENTED",
           "material": "masonry",
           "material_id": "MAT-010",
-          "material_confidence": "D",
-          "material_sources": []
+          "material_confidence": "B",
+          "material_sources": [
+            "SRC-005",
+            "SRC-018"
+          ]
         }
       },
       "bbox": {
@@ -3219,7 +3257,8 @@
         "SRC-012",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "D",
       "basis_confidence": "B",
@@ -3314,7 +3353,8 @@
         "SRC-012",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "D",
       "basis_confidence": "B",
@@ -3409,7 +3449,8 @@
         "SRC-012",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "D",
       "basis_confidence": "B",
@@ -3504,7 +3545,8 @@
         "SRC-012",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "D",
       "basis_confidence": "B",
@@ -3599,7 +3641,8 @@
         "SRC-012",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "D",
       "basis_confidence": "B",
@@ -3695,7 +3738,8 @@
         "SRC-012",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "D",
       "basis_confidence": "B",
@@ -3791,7 +3835,8 @@
         "SRC-012",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "D",
       "basis_confidence": "B",
@@ -3887,7 +3932,8 @@
         "SRC-012",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "D",
       "basis_confidence": "B",
@@ -3984,7 +4030,8 @@
         "SRC-012",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "D",
       "basis_confidence": "B",
@@ -4075,7 +4122,8 @@
         "SRC-012",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "D",
       "basis_confidence": "B",
@@ -4165,7 +4213,8 @@
         "SRC-011",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "D",
       "basis_confidence": "B",
@@ -4251,7 +4300,8 @@
         "SRC-011",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "A",
       "basis_confidence": "A",
@@ -4338,7 +4388,8 @@
         "SRC-011",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "D",
       "basis_confidence": "D",
@@ -4358,7 +4409,7 @@
       "review_status": "unreviewed",
       "last_modified_by": "build_control_skeleton.py@1.0.0",
       "units": "meters",
-      "notes": "Web members of truss A (south outer) over the main span: 79 panels at 18.61 ft. The panel *positions* are sourced, being the unique integer solution to the 628 panel points in CTL-037. The alternating diagonal pattern follows the Warren form named by SRC-002, SRC-011 and SRC-012, but no source gives the diagonal handedness at each panel or whether verticals are present, so the web itself is inferred. See OQ-017.",
+      "notes": "Web members of truss A (south outer) over the main span: 79 panels at 18.61 ft. The panel *positions* are sourced, being the unique integer solution to the 628 panel points in CTL-037. The alternating diagonal pattern follows the Warren form named by SRC-002, SRC-011 and SRC-012. SRC-005 photographs confirm verticals ARE present at the panel points and that the diagonals are built-up riveted members with lattice bracing, so the arrangement drawn here is corroborated; the handedness at each panel and the member sections remain unsourced. See OQ-017.",
       "extensions": {
         "manhattan-bridge": {
           "prototype_units": "meters",
@@ -4429,7 +4480,8 @@
         "SRC-011",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "A",
       "basis_confidence": "A",
@@ -4516,7 +4568,8 @@
         "SRC-011",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "D",
       "basis_confidence": "D",
@@ -4536,7 +4589,7 @@
       "review_status": "unreviewed",
       "last_modified_by": "build_control_skeleton.py@1.0.0",
       "units": "meters",
-      "notes": "Web members of truss B (south inner) over the main span: 79 panels at 18.61 ft. The panel *positions* are sourced, being the unique integer solution to the 628 panel points in CTL-037. The alternating diagonal pattern follows the Warren form named by SRC-002, SRC-011 and SRC-012, but no source gives the diagonal handedness at each panel or whether verticals are present, so the web itself is inferred. See OQ-017.",
+      "notes": "Web members of truss B (south inner) over the main span: 79 panels at 18.61 ft. The panel *positions* are sourced, being the unique integer solution to the 628 panel points in CTL-037. The alternating diagonal pattern follows the Warren form named by SRC-002, SRC-011 and SRC-012. SRC-005 photographs confirm verticals ARE present at the panel points and that the diagonals are built-up riveted members with lattice bracing, so the arrangement drawn here is corroborated; the handedness at each panel and the member sections remain unsourced. See OQ-017.",
       "extensions": {
         "manhattan-bridge": {
           "prototype_units": "meters",
@@ -4607,7 +4660,8 @@
         "SRC-011",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "A",
       "basis_confidence": "A",
@@ -4694,7 +4748,8 @@
         "SRC-011",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "D",
       "basis_confidence": "D",
@@ -4714,7 +4769,7 @@
       "review_status": "unreviewed",
       "last_modified_by": "build_control_skeleton.py@1.0.0",
       "units": "meters",
-      "notes": "Web members of truss C (north inner) over the main span: 79 panels at 18.61 ft. The panel *positions* are sourced, being the unique integer solution to the 628 panel points in CTL-037. The alternating diagonal pattern follows the Warren form named by SRC-002, SRC-011 and SRC-012, but no source gives the diagonal handedness at each panel or whether verticals are present, so the web itself is inferred. See OQ-017.",
+      "notes": "Web members of truss C (north inner) over the main span: 79 panels at 18.61 ft. The panel *positions* are sourced, being the unique integer solution to the 628 panel points in CTL-037. The alternating diagonal pattern follows the Warren form named by SRC-002, SRC-011 and SRC-012. SRC-005 photographs confirm verticals ARE present at the panel points and that the diagonals are built-up riveted members with lattice bracing, so the arrangement drawn here is corroborated; the handedness at each panel and the member sections remain unsourced. See OQ-017.",
       "extensions": {
         "manhattan-bridge": {
           "prototype_units": "meters",
@@ -4785,7 +4840,8 @@
         "SRC-011",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "A",
       "basis_confidence": "A",
@@ -4872,7 +4928,8 @@
         "SRC-011",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "D",
       "basis_confidence": "D",
@@ -4892,7 +4949,7 @@
       "review_status": "unreviewed",
       "last_modified_by": "build_control_skeleton.py@1.0.0",
       "units": "meters",
-      "notes": "Web members of truss D (north outer) over the main span: 79 panels at 18.61 ft. The panel *positions* are sourced, being the unique integer solution to the 628 panel points in CTL-037. The alternating diagonal pattern follows the Warren form named by SRC-002, SRC-011 and SRC-012, but no source gives the diagonal handedness at each panel or whether verticals are present, so the web itself is inferred. See OQ-017.",
+      "notes": "Web members of truss D (north outer) over the main span: 79 panels at 18.61 ft. The panel *positions* are sourced, being the unique integer solution to the 628 panel points in CTL-037. The alternating diagonal pattern follows the Warren form named by SRC-002, SRC-011 and SRC-012. SRC-005 photographs confirm verticals ARE present at the panel points and that the diagonals are built-up riveted members with lattice bracing, so the arrangement drawn here is corroborated; the handedness at each panel and the member sections remain unsourced. See OQ-017.",
       "extensions": {
         "manhattan-bridge": {
           "prototype_units": "meters",
@@ -4964,7 +5021,8 @@
         "SRC-012",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "D",
       "basis_confidence": "B",
@@ -5055,7 +5113,8 @@
         "SRC-012",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "D",
       "basis_confidence": "B",
@@ -5145,7 +5204,8 @@
         "SRC-011",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "D",
       "basis_confidence": "B",
@@ -5231,7 +5291,8 @@
         "SRC-011",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "A",
       "basis_confidence": "A",
@@ -5318,7 +5379,8 @@
         "SRC-011",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "D",
       "basis_confidence": "D",
@@ -5338,7 +5400,7 @@
       "review_status": "unreviewed",
       "last_modified_by": "build_control_skeleton.py@1.0.0",
       "units": "meters",
-      "notes": "Web members of truss A (south outer) over the side span manhattan: 39 panels at 18.59 ft. The panel *positions* are sourced, being the unique integer solution to the 628 panel points in CTL-037. The alternating diagonal pattern follows the Warren form named by SRC-002, SRC-011 and SRC-012, but no source gives the diagonal handedness at each panel or whether verticals are present, so the web itself is inferred. See OQ-017.",
+      "notes": "Web members of truss A (south outer) over the side span manhattan: 39 panels at 18.59 ft. The panel *positions* are sourced, being the unique integer solution to the 628 panel points in CTL-037. The alternating diagonal pattern follows the Warren form named by SRC-002, SRC-011 and SRC-012. SRC-005 photographs confirm verticals ARE present at the panel points and that the diagonals are built-up riveted members with lattice bracing, so the arrangement drawn here is corroborated; the handedness at each panel and the member sections remain unsourced. See OQ-017.",
       "extensions": {
         "manhattan-bridge": {
           "prototype_units": "meters",
@@ -5409,7 +5471,8 @@
         "SRC-011",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "A",
       "basis_confidence": "A",
@@ -5496,7 +5559,8 @@
         "SRC-011",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "D",
       "basis_confidence": "D",
@@ -5516,7 +5580,7 @@
       "review_status": "unreviewed",
       "last_modified_by": "build_control_skeleton.py@1.0.0",
       "units": "meters",
-      "notes": "Web members of truss B (south inner) over the side span manhattan: 39 panels at 18.59 ft. The panel *positions* are sourced, being the unique integer solution to the 628 panel points in CTL-037. The alternating diagonal pattern follows the Warren form named by SRC-002, SRC-011 and SRC-012, but no source gives the diagonal handedness at each panel or whether verticals are present, so the web itself is inferred. See OQ-017.",
+      "notes": "Web members of truss B (south inner) over the side span manhattan: 39 panels at 18.59 ft. The panel *positions* are sourced, being the unique integer solution to the 628 panel points in CTL-037. The alternating diagonal pattern follows the Warren form named by SRC-002, SRC-011 and SRC-012. SRC-005 photographs confirm verticals ARE present at the panel points and that the diagonals are built-up riveted members with lattice bracing, so the arrangement drawn here is corroborated; the handedness at each panel and the member sections remain unsourced. See OQ-017.",
       "extensions": {
         "manhattan-bridge": {
           "prototype_units": "meters",
@@ -5587,7 +5651,8 @@
         "SRC-011",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "A",
       "basis_confidence": "A",
@@ -5674,7 +5739,8 @@
         "SRC-011",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "D",
       "basis_confidence": "D",
@@ -5694,7 +5760,7 @@
       "review_status": "unreviewed",
       "last_modified_by": "build_control_skeleton.py@1.0.0",
       "units": "meters",
-      "notes": "Web members of truss C (north inner) over the side span manhattan: 39 panels at 18.59 ft. The panel *positions* are sourced, being the unique integer solution to the 628 panel points in CTL-037. The alternating diagonal pattern follows the Warren form named by SRC-002, SRC-011 and SRC-012, but no source gives the diagonal handedness at each panel or whether verticals are present, so the web itself is inferred. See OQ-017.",
+      "notes": "Web members of truss C (north inner) over the side span manhattan: 39 panels at 18.59 ft. The panel *positions* are sourced, being the unique integer solution to the 628 panel points in CTL-037. The alternating diagonal pattern follows the Warren form named by SRC-002, SRC-011 and SRC-012. SRC-005 photographs confirm verticals ARE present at the panel points and that the diagonals are built-up riveted members with lattice bracing, so the arrangement drawn here is corroborated; the handedness at each panel and the member sections remain unsourced. See OQ-017.",
       "extensions": {
         "manhattan-bridge": {
           "prototype_units": "meters",
@@ -5765,7 +5831,8 @@
         "SRC-011",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "A",
       "basis_confidence": "A",
@@ -5852,7 +5919,8 @@
         "SRC-011",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "D",
       "basis_confidence": "D",
@@ -5872,7 +5940,7 @@
       "review_status": "unreviewed",
       "last_modified_by": "build_control_skeleton.py@1.0.0",
       "units": "meters",
-      "notes": "Web members of truss D (north outer) over the side span manhattan: 39 panels at 18.59 ft. The panel *positions* are sourced, being the unique integer solution to the 628 panel points in CTL-037. The alternating diagonal pattern follows the Warren form named by SRC-002, SRC-011 and SRC-012, but no source gives the diagonal handedness at each panel or whether verticals are present, so the web itself is inferred. See OQ-017.",
+      "notes": "Web members of truss D (north outer) over the side span manhattan: 39 panels at 18.59 ft. The panel *positions* are sourced, being the unique integer solution to the 628 panel points in CTL-037. The alternating diagonal pattern follows the Warren form named by SRC-002, SRC-011 and SRC-012. SRC-005 photographs confirm verticals ARE present at the panel points and that the diagonals are built-up riveted members with lattice bracing, so the arrangement drawn here is corroborated; the handedness at each panel and the member sections remain unsourced. See OQ-017.",
       "extensions": {
         "manhattan-bridge": {
           "prototype_units": "meters",
@@ -5944,7 +6012,8 @@
         "SRC-012",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "D",
       "basis_confidence": "B",
@@ -6035,7 +6104,8 @@
         "SRC-012",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "D",
       "basis_confidence": "B",
@@ -6125,7 +6195,8 @@
         "SRC-011",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "D",
       "basis_confidence": "B",
@@ -6211,7 +6282,8 @@
         "SRC-011",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "A",
       "basis_confidence": "A",
@@ -6298,7 +6370,8 @@
         "SRC-011",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "D",
       "basis_confidence": "D",
@@ -6318,7 +6391,7 @@
       "review_status": "unreviewed",
       "last_modified_by": "build_control_skeleton.py@1.0.0",
       "units": "meters",
-      "notes": "Web members of truss A (south outer) over the side span brooklyn: 39 panels at 18.59 ft. The panel *positions* are sourced, being the unique integer solution to the 628 panel points in CTL-037. The alternating diagonal pattern follows the Warren form named by SRC-002, SRC-011 and SRC-012, but no source gives the diagonal handedness at each panel or whether verticals are present, so the web itself is inferred. See OQ-017.",
+      "notes": "Web members of truss A (south outer) over the side span brooklyn: 39 panels at 18.59 ft. The panel *positions* are sourced, being the unique integer solution to the 628 panel points in CTL-037. The alternating diagonal pattern follows the Warren form named by SRC-002, SRC-011 and SRC-012. SRC-005 photographs confirm verticals ARE present at the panel points and that the diagonals are built-up riveted members with lattice bracing, so the arrangement drawn here is corroborated; the handedness at each panel and the member sections remain unsourced. See OQ-017.",
       "extensions": {
         "manhattan-bridge": {
           "prototype_units": "meters",
@@ -6389,7 +6462,8 @@
         "SRC-011",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "A",
       "basis_confidence": "A",
@@ -6476,7 +6550,8 @@
         "SRC-011",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "D",
       "basis_confidence": "D",
@@ -6496,7 +6571,7 @@
       "review_status": "unreviewed",
       "last_modified_by": "build_control_skeleton.py@1.0.0",
       "units": "meters",
-      "notes": "Web members of truss B (south inner) over the side span brooklyn: 39 panels at 18.59 ft. The panel *positions* are sourced, being the unique integer solution to the 628 panel points in CTL-037. The alternating diagonal pattern follows the Warren form named by SRC-002, SRC-011 and SRC-012, but no source gives the diagonal handedness at each panel or whether verticals are present, so the web itself is inferred. See OQ-017.",
+      "notes": "Web members of truss B (south inner) over the side span brooklyn: 39 panels at 18.59 ft. The panel *positions* are sourced, being the unique integer solution to the 628 panel points in CTL-037. The alternating diagonal pattern follows the Warren form named by SRC-002, SRC-011 and SRC-012. SRC-005 photographs confirm verticals ARE present at the panel points and that the diagonals are built-up riveted members with lattice bracing, so the arrangement drawn here is corroborated; the handedness at each panel and the member sections remain unsourced. See OQ-017.",
       "extensions": {
         "manhattan-bridge": {
           "prototype_units": "meters",
@@ -6567,7 +6642,8 @@
         "SRC-011",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "A",
       "basis_confidence": "A",
@@ -6654,7 +6730,8 @@
         "SRC-011",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "D",
       "basis_confidence": "D",
@@ -6674,7 +6751,7 @@
       "review_status": "unreviewed",
       "last_modified_by": "build_control_skeleton.py@1.0.0",
       "units": "meters",
-      "notes": "Web members of truss C (north inner) over the side span brooklyn: 39 panels at 18.59 ft. The panel *positions* are sourced, being the unique integer solution to the 628 panel points in CTL-037. The alternating diagonal pattern follows the Warren form named by SRC-002, SRC-011 and SRC-012, but no source gives the diagonal handedness at each panel or whether verticals are present, so the web itself is inferred. See OQ-017.",
+      "notes": "Web members of truss C (north inner) over the side span brooklyn: 39 panels at 18.59 ft. The panel *positions* are sourced, being the unique integer solution to the 628 panel points in CTL-037. The alternating diagonal pattern follows the Warren form named by SRC-002, SRC-011 and SRC-012. SRC-005 photographs confirm verticals ARE present at the panel points and that the diagonals are built-up riveted members with lattice bracing, so the arrangement drawn here is corroborated; the handedness at each panel and the member sections remain unsourced. See OQ-017.",
       "extensions": {
         "manhattan-bridge": {
           "prototype_units": "meters",
@@ -6745,7 +6822,8 @@
         "SRC-011",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "A",
       "basis_confidence": "A",
@@ -6832,7 +6910,8 @@
         "SRC-011",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "D",
       "basis_confidence": "D",
@@ -6852,7 +6931,7 @@
       "review_status": "unreviewed",
       "last_modified_by": "build_control_skeleton.py@1.0.0",
       "units": "meters",
-      "notes": "Web members of truss D (north outer) over the side span brooklyn: 39 panels at 18.59 ft. The panel *positions* are sourced, being the unique integer solution to the 628 panel points in CTL-037. The alternating diagonal pattern follows the Warren form named by SRC-002, SRC-011 and SRC-012, but no source gives the diagonal handedness at each panel or whether verticals are present, so the web itself is inferred. See OQ-017.",
+      "notes": "Web members of truss D (north outer) over the side span brooklyn: 39 panels at 18.59 ft. The panel *positions* are sourced, being the unique integer solution to the 628 panel points in CTL-037. The alternating diagonal pattern follows the Warren form named by SRC-002, SRC-011 and SRC-012. SRC-005 photographs confirm verticals ARE present at the panel points and that the diagonals are built-up riveted members with lattice bracing, so the arrangement drawn here is corroborated; the handedness at each panel and the member sections remain unsourced. See OQ-017.",
       "extensions": {
         "manhattan-bridge": {
           "prototype_units": "meters",
@@ -6923,7 +7002,8 @@
         "SRC-011",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "D",
       "basis_confidence": "B",
@@ -7011,7 +7091,8 @@
         "SRC-011",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "D",
       "basis_confidence": "B",
@@ -7101,7 +7182,8 @@
         "SRC-011",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "D",
       "basis_confidence": "B",
@@ -7195,7 +7277,8 @@
         "SRC-011",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "D",
       "basis_confidence": "B",
@@ -7289,7 +7372,8 @@
         "SRC-011",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "D",
       "basis_confidence": "B",
@@ -7383,7 +7467,8 @@
         "SRC-011",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "D",
       "basis_confidence": "B",
@@ -7477,7 +7562,8 @@
         "SRC-012",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "D",
       "basis_confidence": "C",
@@ -7573,7 +7659,8 @@
         "SRC-012",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "D",
       "basis_confidence": "C",
@@ -7669,7 +7756,8 @@
         "SRC-012",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "D",
       "basis_confidence": "C",
@@ -7768,7 +7856,8 @@
         "SRC-012",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "D",
       "basis_confidence": "C",
@@ -7867,7 +7956,8 @@
         "SRC-012",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "D",
       "basis_confidence": "C",
@@ -7966,7 +8056,8 @@
         "SRC-012",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "D",
       "basis_confidence": "C",
@@ -8063,7 +8154,8 @@
         "SRC-012",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "D",
       "basis_confidence": "D",
@@ -8156,7 +8248,8 @@
         "SRC-012",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "D",
       "basis_confidence": "C",
@@ -8253,7 +8346,8 @@
         "SRC-012",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "D",
       "basis_confidence": "C",
@@ -8349,7 +8443,8 @@
         "SRC-012",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "D",
       "basis_confidence": "C",
@@ -8445,7 +8540,8 @@
         "SRC-012",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "D",
       "basis_confidence": "C",
@@ -8544,7 +8640,8 @@
         "SRC-012",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "D",
       "basis_confidence": "C",
@@ -8643,7 +8740,8 @@
         "SRC-012",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "D",
       "basis_confidence": "C",
@@ -8742,7 +8840,8 @@
         "SRC-012",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "D",
       "basis_confidence": "C",
@@ -8839,7 +8938,8 @@
         "SRC-012",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "D",
       "basis_confidence": "D",
@@ -8932,7 +9032,8 @@
         "SRC-012",
         "SRC-013",
         "SRC-015",
-        "SRC-016"
+        "SRC-016",
+        "SRC-024"
       ],
       "confidence": "D",
       "basis_confidence": "C",
@@ -9007,11 +9108,11 @@
   "provenance": {
     "module_id": "manhattan-bridge",
     "generated_by": "publish_module_contract.py via build_control_skeleton.py@1.0.0",
-    "generated_at": "2026-08-10T00:33:00+00:00",
+    "generated_at": "2026-08-10T01:40:27+00:00",
     "source_documents": [
       {
         "path": "GEOMETRY-CONTROL.md",
-        "sha256": "83ba243db2dffb0802dd63f5095b85ca1f06459a1fa4da6bdf4529800c6e17e4"
+        "sha256": "9668b9f504f7d8975b24521eca7c0b28257f15eff0d738e58f2b246189d8c6cf"
       }
     ]
   }

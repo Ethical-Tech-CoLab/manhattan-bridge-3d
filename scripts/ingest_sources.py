@@ -138,6 +138,7 @@ def write_licence_record(asset: dict) -> Path:
                 f"- **Observed on**: {asset['observed_date']}",
                 f"- **SHA-256**: `{asset['sha256']}`",
                 f"- **Stored in repository**: {asset['stored_copy']}",
+                f"- **May be displayed**: {asset['display_permitted']}",
                 f"- **Stored as**: {asset['stored_as']}",
                 "",
                 "The observation date is the date the photograph or video records, not the date it",
@@ -193,6 +194,17 @@ def ingest(args: argparse.Namespace) -> int:
     licence_key = args.licence.strip().lower()
     redistributable = any(licence_key.startswith(ok) for ok in REDISTRIBUTABLE)
 
+    # Storage and display are different permissions, and conflating them is how an
+    # all-rights-reserved image ends up on a public page. A viewer gallery that reads this manifest
+    # must be able to tell "cite this" from "you may show this", so the answer is recorded per
+    # asset rather than re-derived from the licence string by whatever consumes it later.
+    #
+    # SRC-005 is the case in point: HistoricBridges.org grants publication only by written Letter of
+    # Agreement, per image, for "one-time, one edition use only" -- which no open repository can
+    # satisfy, because anyone may fork it. Linking to the gallery is unaffected and is what this
+    # project does instead.
+    display_permitted = redistributable
+
     stored_as = None
     if redistributable:
         target_dir = KINDS[args.kind]
@@ -223,6 +235,7 @@ def ingest(args: argparse.Namespace) -> int:
         "byte_size": source_path.stat().st_size,
         "original_name": source_path.name,
         "stored_copy": bool(stored_as),
+        "display_permitted": display_permitted,
         "stored_as": stored_as or f"(by reference) {args.url or source_path.name}",
         "camera_metadata_available": bool(args.exif),
         "quality": args.quality,
@@ -236,6 +249,7 @@ def ingest(args: argparse.Namespace) -> int:
     print(f"  observed  : {asset['observed_date']}")
     print(f"  sha256    : {digest[:16]}...")
     print(f"  stored as : {asset['stored_as']}")
+    print(f"  display   : {'permitted' if display_permitted else 'NOT PERMITTED - cite by link only'}")
     print(f"  licence   : {licence_record.relative_to(REPO)}")
     print(f"  manifest  : {len(manifest['assets'])} asset(s) total")
     print()
@@ -266,7 +280,12 @@ def verify() -> int:
 
     covered = {a["image_set"] for a in assets if a["image_set"]}
     undated = [a for a in assets if a.get("observed_date") == "unknown"]
+    restricted = [a for a in assets if not a.get("display_permitted", False)]
     print(f"{len(assets)} asset(s) ingested; {bad} problem(s)")
+    if restricted:
+        print(f"{len(restricted)} asset(s) may NOT be displayed, only cited by link:")
+        for asset in restricted:
+            print(f"  ! {asset['original_name']}  ({asset['source_id']}, {asset['licence']})")
     if undated:
         print(f"{len(undated)} asset(s) have an UNKNOWN observation date:")
         for asset in undated:

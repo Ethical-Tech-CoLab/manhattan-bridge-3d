@@ -1321,9 +1321,11 @@ def build_parts(model: ControlModel, sk: Skeleton) -> list[Part]:
                         f"{segment_name.replace('_', ' ')}: {n_panels} panels at "
                         f"{panel / 0.3048:.2f} ft. The panel *positions* are sourced, being the unique "
                         "integer solution to the 628 panel points in CTL-037. The alternating diagonal "
-                        "pattern follows the Warren form named by SRC-002, SRC-011 and SRC-012, but no "
-                        "source gives the diagonal handedness at each panel or whether verticals are "
-                        "present, so the web itself is inferred. See OQ-017."
+                        "pattern follows the Warren form named by SRC-002, SRC-011 and SRC-012. "
+                        "SRC-005 photographs confirm verticals ARE present at the panel points and "
+                        "that the diagonals are built-up riveted members with lattice bracing, so "
+                        "the arrangement drawn here is corroborated; the handedness at each panel "
+                        "and the member sections remain unsourced. See OQ-017."
                     ),
                     geometry=[lines(web)],
                     style="truss_web",

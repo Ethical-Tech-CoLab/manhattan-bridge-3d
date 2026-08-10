@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "control_document_sha256": "83ba243db2dffb0802dd63f5095b85ca1f06459a1fa4da6bdf4529800c6e17e4",
-  "built_from_sha256": "83ba243db2dffb0802dd63f5095b85ca1f06459a1fa4da6bdf4529800c6e17e4",
+  "control_document_sha256": "9668b9f504f7d8975b24521eca7c0b28257f15eff0d738e58f2b246189d8c6cf",
+  "built_from_sha256": "9668b9f504f7d8975b24521eca7c0b28257f15eff0d738e58f2b246189d8c6cf",
   "generated_by_build": "build_control_skeleton.py@1.0.0",
   "summary": {
     "pass": 74,
@@ -627,7 +627,7 @@
       "suite": "geometry_regression",
       "mode": "report_only",
       "status": "reported",
-      "detail": "12 placeholder controls remain, 63 sourced; 64 of 101 parts are confidence D"
+      "detail": "12 placeholder controls remain, 64 sourced; 64 of 101 parts are confidence D"
     },
     {
       "id": "GRT-070",
@@ -733,7 +733,7 @@
       "suite": "source_traceability",
       "mode": "assert",
       "status": "pass",
-      "detail": "24 registered sources"
+      "detail": "25 registered sources"
     },
     {
       "id": "STT-002",
@@ -741,7 +741,7 @@
       "suite": "source_traceability",
       "mode": "assert",
       "status": "pass",
-      "detail": "75 controls"
+      "detail": "76 controls"
     },
     {
       "id": "STT-003",
@@ -797,7 +797,7 @@
       "suite": "source_traceability",
       "mode": "assert",
       "status": "pass",
-      "detail": "24 sources carry a verification state"
+      "detail": "25 sources carry a verification state"
     },
     {
       "id": "STT-010",
@@ -821,7 +821,7 @@
       "suite": "source_traceability",
       "mode": "assert",
       "status": "pass",
-      "detail": "control document sha256 83ba243db2df"
+      "detail": "control document sha256 9668b9f504f7"
     }
   ]
 }

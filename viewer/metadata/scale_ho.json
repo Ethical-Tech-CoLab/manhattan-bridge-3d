@@ -3,10 +3,10 @@
   "model": "control_skeleton",
   "milestone": 2,
   "generated_by": "build_control_skeleton.py@1.0.0",
-  "generated_at": "2026-08-09T23:44:26+00:00",
+  "generated_at": "2026-08-10T01:39:39+00:00",
   "control_document": {
     "path": "GEOMETRY-CONTROL.md",
-    "sha256": "83ba243db2dffb0802dd63f5095b85ca1f06459a1fa4da6bdf4529800c6e17e4"
+    "sha256": "9668b9f504f7d8975b24521eca7c0b28257f15eff0d738e58f2b246189d8c6cf"
   },
   "source_register": "SOURCE-REGISTER.md",
   "confidence_model": "CONFIDENCE-MODEL.md",
@@ -816,6 +816,18 @@
       "ho_mm": 96.2,
       "ho_in": 3.79,
       "ho_ft": 0.32
+    },
+    {
+      "control_id": "CTL-114",
+      "key": "navigation_horizontal_clearance",
+      "prototype": "1230 ft",
+      "confidence": "A",
+      "prototype_m": 374.904,
+      "prototype_ft": 1230.0,
+      "prototype_in": 14760.0,
+      "ho_mm": 4304.3,
+      "ho_in": 169.46,
+      "ho_ft": 14.12
     }
   ]
 }

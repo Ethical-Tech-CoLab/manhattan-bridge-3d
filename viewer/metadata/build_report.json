@@ -3,10 +3,10 @@
   "model": "control_skeleton",
   "milestone": 2,
   "generated_by": "build_control_skeleton.py@1.0.0",
-  "generated_at": "2026-08-09T23:44:26+00:00",
+  "generated_at": "2026-08-10T01:39:39+00:00",
   "control_document": {
     "path": "GEOMETRY-CONTROL.md",
-    "sha256": "83ba243db2dffb0802dd63f5095b85ca1f06459a1fa4da6bdf4529800c6e17e4"
+    "sha256": "9668b9f504f7d8975b24521eca7c0b28257f15eff0d738e58f2b246189d8c6cf"
   },
   "source_register": "SOURCE-REGISTER.md",
   "confidence_model": "CONFIDENCE-MODEL.md",
@@ -120,7 +120,8 @@
     "approach_girder_depth": 3.048,
     "tower_arch_height_to_width_ratio": 3.3,
     "tower_arch_head_rise_fraction": 0.5,
-    "tower_finial_top_above_saddle": 8.382
+    "tower_finial_top_above_saddle": 8.382,
+    "navigation_horizontal_clearance": 374.904
   },
   "controls_raw": {
     "total_bridge_and_approaches_length": 6855.0,
@@ -197,7 +198,8 @@
     "approach_girder_depth": 10.0,
     "tower_arch_height_to_width_ratio": 3.3,
     "tower_arch_head_rise_fraction": 0.5,
-    "tower_finial_top_above_saddle": 27.5
+    "tower_finial_top_above_saddle": 27.5,
+    "navigation_horizontal_clearance": 1230.0
   },
   "control_confidence": {
     "total_bridge_and_approaches_length": "A",
@@ -274,7 +276,8 @@
     "approach_girder_depth": "D",
     "tower_arch_height_to_width_ratio": "D",
     "tower_arch_head_rise_fraction": "D",
-    "tower_finial_top_above_saddle": "B"
+    "tower_finial_top_above_saddle": "B",
+    "navigation_horizontal_clearance": "A"
   },
   "measures": {
     "part_count": 101,
@@ -317,7 +320,7 @@
     "tower_spacing_m": 448.05600000000004,
     "anchorage_spacing_m": 890.0160000000001,
     "placeholder_control_count": 12,
-    "sourced_control_count": 63,
+    "sourced_control_count": 64,
     "approach_lower_deck_outer_x": 882.3960000000001,
     "approach_upper_deck_outer_x": 928.1160000000001,
     "parts_without_material": 0,

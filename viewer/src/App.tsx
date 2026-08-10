@@ -5,6 +5,7 @@ import DimensionPanel from '../components/DimensionPanel';
 import MetadataPanel from '../components/MetadataPanel';
 import PartTree from '../components/PartTree';
 import ProvenancePanel from '../components/ProvenancePanel';
+import ReferencePanel from '../components/ReferencePanel';
 import Toolbar from '../components/Toolbar';
 import PresentationNotice from '../components/PresentationNotice';
 import ViewBar from '../components/ViewBar';
@@ -172,6 +173,7 @@ export default function App() {
             active={confidenceOverlay}
             onToggle={() => setConfidenceOverlay((value) => !value)}
           />
+          <ReferencePanel />
           <div className="material-toggle">
             <label>
               <input
