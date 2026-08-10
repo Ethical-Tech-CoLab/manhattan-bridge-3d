@@ -1,0 +1,27 @@
+# Normalise line endings, because this repository hashes its own source documents.
+#
+# GEOMETRY-CONTROL.md is hashed into every build output, and a regression test (STT-012) fails when
+# the parts manifest was built from a different hash. That is a deliberate guard against editing the
+# control document and forgetting to rebuild.
+#
+# Without this file, Git's autocrlf gives a Windows checkout CRLF line endings while the committed
+# blob and every Linux checkout keep LF. The same document then hashes two different ways, so the
+# provenance recorded by a local build and by CI disagree for a reason that has nothing to do with
+# the geometry. Forcing LF in the working tree makes the hash a property of the content alone.
+*.md text eol=lf
+*.py text eol=lf
+*.json text eol=lf
+*.mjs text eol=lf
+*.js text eol=lf
+*.ts text eol=lf
+*.tsx text eol=lf
+*.css text eol=lf
+*.html text eol=lf
+*.yml text eol=lf
+
+# Binary artifacts must never be line-ending converted; doing so corrupts them.
+*.glb binary
+*.jpg binary
+*.jpeg binary
+*.png binary
+*.pdf binary
