@@ -1,0 +1,89 @@
+# Build the browser viewer and publish it to GitHub Pages.
+#
+# The point is reviewability: every push to main republishes, so the live model is always the model
+# the tests just passed against, and a reviewer never has to clone and build to see the geometry.
+#
+# The build regenerates the model from GEOMETRY-CONTROL.md rather than trusting the committed GLB,
+# and validates before it publishes. That ordering matters: the site cannot show geometry that
+# fails its own suite, and it catches the case where someone edits the control document and forgets
+# to rebuild.
+
+name: Publish viewer to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Let an in-flight deploy finish rather than cancelling it, so a rapid series of pushes still ends
+# with the newest commit live.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+          cache-dependency-path: viewer/package-lock.json
+
+      # Rebuild from the control document. The pipeline is dependency-free by design, so there is
+      # nothing to install for this step.
+      - name: Rebuild the model from GEOMETRY-CONTROL.md
+        run: |
+          python scripts/build_control_skeleton.py
+          python scripts/export_proxy.py
+          python scripts/publish_module_contract.py
+
+      # Publishing geometry that fails its own regression suite would defeat the purpose of the
+      # suite, so validation gates the deploy.
+      - name: Validate
+        run: |
+          python scripts/validate_dimensions.py
+          node scripts/validate_contract.mjs
+
+      - name: Install viewer dependencies
+        working-directory: viewer
+        run: npm ci
+
+      # Pages serves a project site from /<repo>/, not from /. Vite needs that as its base or every
+      # bundled asset URL 404s. The runtime data files are fetched with document-relative URLs, so
+      # they need no equivalent adjustment.
+      - name: Build viewer
+        working-directory: viewer
+        run: npm run build -- --base="/${GITHUB_REPOSITORY#*/}/"
+
+      # GitHub Pages has no directory index for deep links and the viewer is a single page, so a
+      # 404 copy of index.html keeps refreshes and shared URLs working.
+      - name: Add SPA fallback
+        run: cp viewer/dist/index.html viewer/dist/404.html
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: viewer/dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

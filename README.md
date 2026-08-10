@@ -11,6 +11,11 @@ and marketplace meshes are secondary visual references only. Nothing here invent
 anything without a registered source is tagged confidence `D`, named as a placeholder, and linked to
 the open question that would retire it.
 
+**Live viewer:** <https://ethical-tech-colab.github.io/manhattan-bridge-3d/>
+
+Rebuilt and republished from `GEOMETRY-CONTROL.md` on every push to `main`, and the deploy is gated
+on the regression suite, so the published model is always one that passed its own tests.
+
 ## Read these first
 
 | Document | What it governs |
