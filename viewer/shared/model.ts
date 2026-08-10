@@ -141,6 +141,8 @@ export interface ViewerConfig {
    */
   referenceViewsUrl?: string;
   photoManifestUrl?: string;
+  /** The human-in-the-loop photograph audit, if this module has run one. */
+  photoAudit?: PhotoAudit;
   notImplementedYet: string[];
 }
 
@@ -387,4 +389,20 @@ export interface Reference {
   note: string;
   /** True when the source may be linked but neither copied nor displayed here. */
   restricted?: boolean;
+}
+
+/**
+ * The human-in-the-loop photograph audit published by a module, if it has run one.
+ *
+ * Counts are optional and deliberately honest: `reviewed` below `total` is shown as "still
+ * auto-screened" rather than rounded away, because an unreviewed record is weaker evidence and the
+ * viewer should say so.
+ */
+export interface PhotoAudit {
+  /** Relative to the viewer root, or absolute. Must resolve -- a module with no audit omits this. */
+  url: string;
+  label?: string;
+  note?: string;
+  reviewed?: number;
+  total?: number;
 }

@@ -14,6 +14,7 @@ export { default as DimensionPanel } from './components/DimensionPanel';
 export { default as MetadataPanel } from './components/MetadataPanel';
 export { default as PartTree } from './components/PartTree';
 export { PhotoGallery, usePhotoManifest } from './components/PhotoGallery';
+export { default as PhotoAuditPanel } from './components/PhotoAuditPanel';
 export { default as PresentationNotice } from './components/PresentationNotice';
 export { default as ProvenancePanel } from './components/ProvenancePanel';
 export { default as ReferencePanel } from './components/ReferencePanel';

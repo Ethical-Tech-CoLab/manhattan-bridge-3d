@@ -7,6 +7,7 @@ import DimensionPanel from './components/DimensionPanel';
 import MetadataPanel from './components/MetadataPanel';
 import PartTree from './components/PartTree';
 import { PhotoGallery, usePhotoManifest } from './components/PhotoGallery';
+import PhotoAuditPanel from './components/PhotoAuditPanel';
 import ProvenancePanel from './components/ProvenancePanel';
 import ReferencePanel from './components/ReferencePanel';
 import Toolbar from './components/Toolbar';
@@ -219,6 +220,7 @@ export default function App() {
             onToggle={() => setConfidenceOverlay((value) => !value)}
           />
           <ReferencePanel references={config.references ?? []} />
+          <PhotoAuditPanel audit={config.photoAudit} />
           {refs && (
             <ComparePanel
               doc={refs}

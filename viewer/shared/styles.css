@@ -1130,3 +1130,58 @@ aside.is-collapsed {
   font-size: 20px;
   cursor: pointer;
 }
+/* --------------------------------------------------------------------------
+   Human-in-the-loop photograph audit link. Mounts only when the module
+   publishes photoAudit in model.config.json, so it never points at a 404.
+   -------------------------------------------------------------------------- */
+
+.audit-panel {
+  border: 1px solid #22304a;
+  border-radius: 4px;
+  padding: 8px 10px;
+  margin-top: 8px;
+  background: rgba(18, 26, 40, 0.6);
+}
+
+.audit-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  color: #7fd1ff;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.audit-link:hover {
+  text-decoration: underline;
+}
+
+.audit-arrow {
+  flex: 0 0 auto;
+  opacity: 0.8;
+}
+
+.audit-counts {
+  margin: 6px 0 0;
+  font-size: 11px;
+  color: #cfd6e4;
+}
+
+.audit-counts strong {
+  color: #eaf6ff;
+}
+
+.audit-pending {
+  color: #e8b339;
+}
+
+.audit-note {
+  margin: 4px 0 0;
+  font-size: 11px;
+  line-height: 1.4;
+  color: #8b949e;
+}
