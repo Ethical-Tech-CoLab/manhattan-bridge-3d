@@ -1,17 +1,19 @@
 # Manhattan Bridge Digital Twin
 
+**▶ [View the model in your browser](https://ethical-tech-colab.github.io/manhattan-bridge-3d/)** ·
+**[🔍 Photograph audit](https://ethical-tech-colab.github.io/manhattan-bridge-3d/review/)** — 253
+openly-licensed photographs, **0 reviewed so far**, every one still `auto_screened`
+
 A source-governed, part-addressable digital twin of the Manhattan Bridge for browser rendering and
 HO-scale (1:87.1) study.
 
-**Current state: Milestone 6 — approaches connected to their sourced stations, materials graded and rendered.**
+**Current state: Milestone 10 — anchorage thoroughfare arch modelled; 103 parts, 74 tests passing.**
 
 The governing rule, from [AGENT-INSTRUCTIONS.md](AGENT-INSTRUCTIONS.md): no existing 3D model is
 authoritative. Official dimensions and archival drawings are the control geometry. Photogrammetry
 and marketplace meshes are secondary visual references only. Nothing here invents a dimension:
 anything without a registered source is tagged confidence `D`, named as a placeholder, and linked to
 the open question that would retire it.
-
-**Live viewer:** <https://ethical-tech-colab.github.io/manhattan-bridge-3d/>
 
 Rebuilt and republished from `GEOMETRY-CONTROL.md` on every push to `main`, and the deploy is gated
 on the regression suite, so the published model is always one that passed its own tests.
