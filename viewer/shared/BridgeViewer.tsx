@@ -2,7 +2,7 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
-import type { Confidence, PartMetadata, PartsDocument, ViewMode, ViewerConfig } from './model';
+import type { Confidence, PartMetadata, PartsDocument, ReferenceCamera, ViewMode, ViewerConfig } from './model';
 import { MATERIAL_APPEARANCE, PROVENANCE_STYLE, VIEW_PRESETS } from './model';
 
 /**
@@ -32,6 +32,15 @@ export interface BridgeViewerProps {
   onScaleChange: (metresPerPixel: number) => void;
   onSelect: (partId: string | null) => void;
   focusToken: number;
+  /**
+   * Optional reference-photograph pose. Modules that publish reference-views.json can fly the
+   * camera to a stated viewpoint for side-by-side comparison. Every such pose is author-set --
+   * no source records where a photographer stood -- so this only ever moves the camera and never
+   * touches geometry.
+   */
+  pose?: ReferenceCamera | null;
+  /** Bumped by the shell to re-apply the same pose after the reader has nudged it. */
+  poseNonce?: number;
 }
 
 interface RenderablePart {
@@ -606,6 +615,25 @@ export default function BridgeViewer(props: BridgeViewerProps) {
     if (!viewer || !ready) return;
     viewer.resize();
   }, [ready, layoutToken]);
+
+  // ---------------------------------------------------- reference-photograph pose
+  // Only runs for modules that publish reference views. The pose is applied to the perspective
+  // camera because a photograph is a perspective image; an orthographic view mode is left alone.
+  useEffect(() => {
+    const viewer = viewerRef.current;
+    const pose = props.pose;
+    if (!viewer || !ready || !pose) return;
+    const { camera, controls } = viewer;
+    camera.position.set(...pose.position);
+    camera.up.set(...pose.up);
+    if (pose.fov_y_deg) camera.fov = pose.fov_y_deg;
+    camera.updateProjectionMatrix();
+    controls.target.set(...pose.target);
+    viewer.activeCamera = camera;
+    controls.object = camera;
+    controls.update();
+    viewer.renderer.render(viewer.scene, camera);
+  }, [ready, props.pose, props.poseNonce]);
 
   // ------------------------------------------------------------------ view mode
   useEffect(() => {

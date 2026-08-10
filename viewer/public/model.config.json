@@ -1,6 +1,6 @@
 {
-  "title": "Manhattan Bridge — Control Skeleton",
-  "subtitle": "Milestone 8 · presentation layer, sourced field imagery",
+  "title": "Manhattan Bridge \u2014 Control Skeleton",
+  "subtitle": "Milestone 8 \u00b7 presentation layer, sourced field imagery",
   "modelUrl": "control_skeleton.glb",
   "metadataUrl": "parts.json",
   "scaleDenominator": 87.1,
@@ -8,8 +8,16 @@
   "background": "#0d1117",
   "lineRaycastThreshold": 4,
   "camera": {
-    "position": [1650, 330, 560],
-    "target": [0, 45, 0],
+    "position": [
+      1650,
+      330,
+      560
+    ],
+    "target": [
+      0,
+      45,
+      0
+    ],
     "near": 0.5,
     "far": 60000,
     "fov": 40
@@ -25,8 +33,26 @@
     "LOD switching (Milestone 8)",
     "exploded part schematic view (Milestone 8)",
     "leader-line callouts naming components in the render",
-    "archival drawing overlay — awaits the NYCDOT contract drawings",
-    "photogrammetry point cloud overlay — awaits a walkway-level image set",
+    "archival drawing overlay \u2014 awaits the NYCDOT contract drawings",
+    "photogrammetry point cloud overlay \u2014 awaits a walkway-level image set",
     "no level-1 segmented mesh; the published ladder jumps from 0.01 m to 8.0 m"
+  ],
+  "references": [
+    {
+      "label": "HistoricBridges.org \u2014 Manhattan Bridge photo gallery",
+      "url": "https://historicbridges.org/bridges/browser/photosviewer.php?bridgebrowser=newyork/manhattan/&gallerynum=2&gallerysize=2",
+      "note": "The most thorough modern detail photography of this bridge. All rights reserved; opens on their site because these images may not be copied here.",
+      "restricted": true
+    },
+    {
+      "label": "National Bridge Inventory data sheet \u2014 structure 36-2240027",
+      "url": "https://historicbridges.org/newyork/manhattan/nbisheet.pdf",
+      "note": "Federal inventory data, 2010, inspected November 2008. Public domain. Independently corroborates the main span and the navigation clearance; registered as SRC-024."
+    },
+    {
+      "label": "HAER survey NY-164 (item ny0980), Library of Congress",
+      "url": "https://www.loc.gov/pictures/item/ny0980/",
+      "note": "Eleven photographs and no measured drawings \u2014 the gap that leaves this model dependent on period text. See OQ-022 on the NY-127 caption discrepancy."
+    }
   ]
 }

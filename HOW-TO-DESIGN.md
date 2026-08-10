@@ -383,6 +383,41 @@ is cheap and it surfaces coordinate-frame disagreements while they are still the
   Manhattan Bridge the ASCE landmark plaque coordinate — which played no part in deriving the
   placement — landed 10.5 m from the proposed origin, which justified raising it from grade D to C.
 
+### Do not fork the viewer
+
+The single most expensive mistake made across these three bridge repositories was letting each grow
+its own copy of the viewer. It never looked like a mistake while it was happening — every change was
+small, local and justified. When the three were finally compared by hashing every viewer source
+file, **only 2 of 23 files still matched**.
+
+The cost was not duplicated code. It was divided features. Manhattan had a dimension panel, a view
+bar and a presentation notice; Brooklyn had a compare-against-the-record panel; Williamsburg had a
+photograph gallery and no provenance panel at all. Each bridge had something the other two could not
+use, and a reader comparing two bridges was comparing two different tools.
+
+So: **use `@d3d/bridge-viewer-ui` from `digital-3d-shared-contracts` and never edit your copy.**
+
+```powershell
+node ../digital-3d-shared-contracts/tools/sync_viewer_ui.mjs --to .
+node scripts/check_viewer_sync.mjs      # wire this into your Pages workflow
+```
+
+Two things make this stick, and both matter:
+
+1. **The check has to be mechanical.** `check_viewer_sync.mjs` rehashes the vendored files against
+   the manifest that shipped with them and fails the build on any local edit. Prove it fails before
+   you trust it — add a stray comment to a shared file and watch the build go red.
+2. **New behaviour goes in the shell, gated on data.** A panel mounts only when the module publishes
+   the evidence document it needs, so a bridge with no reference photography simply has no compare
+   panel. That is a statement about its sources, not a missing feature — and it is what lets one
+   viewer serve bridges whose evidence differs without anyone reaching for a fork.
+
+The deeper lesson is that **the viewers forked because the data forked**. Three build scripts emitted
+three document shapes, so three viewers grew to read them. Unifying the UI while keeping three data
+shapes would only move the fork into three adapters. Emit the shared `PartsDocument` contract from
+your build script on day one — it is the same discipline you already apply to dimensions, and it is
+far cheaper now than later. See `VIEWER-ADOPTION.md` in the shared repository.
+
 ---
 
 ## 13. Repository structure

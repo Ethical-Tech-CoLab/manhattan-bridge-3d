@@ -900,3 +900,233 @@ aside.is-collapsed {
   color: #d98b8b;
   white-space: nowrap;
 }
+
+/* ===========================================================================
+   Optional evidence features.
+
+   Compare-against-the-record (reference-views.json) and the photograph rail
+   (photos.json). Both mount only when the module publishes the data, so these
+   rules are inert for a module that ships neither.
+   ========================================================================= */
+
+.compare-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 6;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.compare-layer .overlay-image {
+  max-width: 100%;
+  max-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.compare-layer .overlay-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.compare-layer.split {
+  align-items: stretch;
+  justify-content: flex-start;
+}
+
+.compare-layer .split-pane.reference {
+  position: relative;
+  overflow: hidden;
+  background: #0b0e13;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.compare-layer .split-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.compare-layer .split-handle {
+  width: 6px;
+  cursor: col-resize;
+  background: #7fd1ff;
+  pointer-events: auto;
+  flex: 0 0 auto;
+}
+
+.compare-layer .stage-credit {
+  position: absolute;
+  left: 8px;
+  bottom: 8px;
+  margin: 0;
+  font-size: 11px;
+  color: #cfd6e4;
+  background: rgba(8, 11, 16, 0.72);
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+.panel.compare .cmp-modes {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 8px;
+}
+
+.panel.compare .cmp-modes button.on {
+  background: #1d4e6b;
+  color: #eaf6ff;
+}
+
+.panel.compare .cmp-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 4px;
+}
+
+.panel.compare .cmp-item {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: 1px solid transparent;
+  cursor: pointer;
+  color: inherit;
+}
+
+.panel.compare .cmp-item.selected {
+  border-color: #7fd1ff;
+}
+
+.panel.compare .cmp-item img {
+  width: 44px;
+  height: 32px;
+  object-fit: cover;
+  flex: 0 0 auto;
+}
+
+.panel.compare .cmp-item-text {
+  display: flex;
+  flex-direction: column;
+  font-size: 11px;
+  line-height: 1.3;
+}
+
+.panel.compare .cmp-slider {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+}
+
+.panel.compare .cmp-slider input {
+  flex: 1 1 auto;
+}
+
+.panel.compare .cmp-buttons {
+  display: flex;
+  gap: 4px;
+  margin-top: 6px;
+}
+
+.photo-rail {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 7;
+  background: rgba(8, 11, 16, 0.9);
+  border-top: 1px solid #22304a;
+  padding: 4px 8px 6px;
+}
+
+.photo-rail-head {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: #cfd6e4;
+  margin-bottom: 4px;
+}
+
+.photo-strip {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+}
+
+.photo-strip .thumb {
+  position: relative;
+  flex: 0 0 auto;
+  background: none;
+  border: 1px solid #22304a;
+  padding: 0;
+  cursor: pointer;
+}
+
+.photo-strip .thumb.on {
+  border-color: #7fd1ff;
+}
+
+.photo-strip .thumb img {
+  display: block;
+  width: 76px;
+  height: 54px;
+  object-fit: cover;
+}
+
+.photo-strip .thumb-id {
+  position: absolute;
+  left: 2px;
+  bottom: 2px;
+  font-size: 9px;
+  background: rgba(8, 11, 16, 0.8);
+  padding: 0 3px;
+  color: #eaf6ff;
+}
+
+.photo-pane {
+  position: absolute;
+  inset: 24px;
+  z-index: 8;
+  margin: 0;
+  background: rgba(8, 11, 16, 0.97);
+  border: 1px solid #22304a;
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  overflow: auto;
+}
+
+.photo-pane img {
+  max-width: 100%;
+  max-height: 70%;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+.photo-pane figcaption {
+  font-size: 12px;
+  color: #cfd6e4;
+  margin-top: 8px;
+}
+
+.photo-close {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  background: none;
+  border: none;
+  color: #eaf6ff;
+  font-size: 20px;
+  cursor: pointer;
+}

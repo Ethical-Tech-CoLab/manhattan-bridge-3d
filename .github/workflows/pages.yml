@@ -57,6 +57,12 @@ jobs:
           python scripts/validate_dimensions.py
           node scripts/validate_contract.mjs
 
+      # The inspect shell is owned by digital-3d-shared-contracts and vendored into viewer/shared.
+      # This check needs only this repository, so unlike the schema validator above it never has to
+      # skip -- and a control that skips is not a control. It fails the deploy on any local edit.
+      - name: Check the shared viewer has not been forked
+        run: node scripts/check_viewer_sync.mjs
+
       - name: Install viewer dependencies
         working-directory: viewer
         run: npm ci

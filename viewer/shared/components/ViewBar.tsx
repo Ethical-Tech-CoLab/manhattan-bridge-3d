@@ -1,5 +1,5 @@
-import type { ViewMode } from '../src/model';
-import { VIEW_ORDER, VIEW_PRESETS, niceScaleLength } from '../src/model';
+import type { ViewMode } from '../model';
+import { VIEW_ORDER, VIEW_PRESETS, niceScaleLength } from '../model';
 
 interface ViewBarProps {
   mode: ViewMode;

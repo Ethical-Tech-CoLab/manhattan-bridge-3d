@@ -1,5 +1,5 @@
-import type { Confidence, PartMetadata, PartsDocument } from '../src/model';
-import { CONFIDENCE_LABELS } from '../src/model';
+import type { Confidence, PartMetadata, PartsDocument } from '../model';
+import { CONFIDENCE_LABELS } from '../model';
 
 interface PartTreeProps {
   doc: PartsDocument;

@@ -25,3 +25,6 @@
 *.jpeg binary
 *.png binary
 *.pdf binary
+
+# Hash manifests are compared byte-for-byte by the viewer drift check.
+*.sha256 text eol=lf

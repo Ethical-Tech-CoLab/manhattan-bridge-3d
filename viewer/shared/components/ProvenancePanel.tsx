@@ -1,5 +1,5 @@
-import type { GeometryProvenance, PartsDocument } from '../src/model';
-import { PROVENANCE_ORDER, PROVENANCE_STYLE } from '../src/model';
+import type { GeometryProvenance, PartsDocument } from '../model';
+import { PROVENANCE_ORDER, PROVENANCE_STYLE } from '../model';
 
 interface ProvenancePanelProps {
   doc: PartsDocument;

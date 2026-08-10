@@ -1,5 +1,5 @@
-import type { ControlEntry, PartMetadata, PartsDocument, UnitMode } from '../src/model';
-import { CONFIDENCE_LABELS, MATERIAL_APPEARANCE, PROVENANCE_STYLE, formatLength } from '../src/model';
+import type { ControlEntry, PartMetadata, PartsDocument, UnitMode } from '../model';
+import { CONFIDENCE_LABELS, MATERIAL_APPEARANCE, PROVENANCE_STYLE, formatLength } from '../model';
 
 interface MetadataPanelProps {
   doc: PartsDocument;

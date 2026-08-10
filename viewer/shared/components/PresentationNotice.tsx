@@ -1,4 +1,4 @@
-import type { PartsDocument } from '../src/model';
+import type { PartsDocument } from '../model';
 
 interface PresentationNoticeProps {
   doc: PartsDocument;

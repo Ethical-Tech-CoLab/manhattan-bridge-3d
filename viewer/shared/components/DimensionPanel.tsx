@@ -1,5 +1,5 @@
-import type { PartsDocument, UnitMode } from '../src/model';
-import { formatLength } from '../src/model';
+import type { PartsDocument, UnitMode } from '../model';
+import { formatLength } from '../model';
 
 interface DimensionPanelProps {
   doc: PartsDocument;

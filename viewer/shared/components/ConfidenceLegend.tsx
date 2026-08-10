@@ -1,5 +1,5 @@
-import type { Confidence, PartsDocument } from '../src/model';
-import { CONFIDENCE_LABELS } from '../src/model';
+import type { Confidence, PartsDocument } from '../model';
+import { CONFIDENCE_LABELS } from '../model';
 
 interface ConfidenceLegendProps {
   doc: PartsDocument;

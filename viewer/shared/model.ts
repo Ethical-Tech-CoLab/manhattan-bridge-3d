@@ -132,6 +132,15 @@ export interface ViewerConfig {
   /** Multiplier applied to the auto-framed camera distance. Defaults to 1.2. */
   framePadding?: number;
   governance: Record<string, string>;
+  /** Outbound references for this bridge. Data, not code: the viewer is shared, the sources are not. */
+  references?: Reference[];
+  /**
+   * Optional evidence documents. Each is a URL relative to the viewer root; when a module omits one,
+   * the corresponding panel is not rendered at all. Absence is a fact about the module's sources,
+   * not a missing feature, so the viewer says nothing rather than showing an empty shelf.
+   */
+  referenceViewsUrl?: string;
+  photoManifestUrl?: string;
   notImplementedYet: string[];
 }
 
@@ -297,4 +306,85 @@ export function formatLength(meters: number, mode: UnitMode, scaleDenominator: n
 
 export function partLabel(part: PartMetadata): string {
   return part.part_id.replace(/_/g, ' ');
+}
+
+/* ---------------------------------------------------------------------------
+ * Optional feature contracts.
+ *
+ * The viewer is shared by every bridge module, but not every module ships every kind of evidence.
+ * These types describe data a module MAY publish; each corresponding panel mounts only when the
+ * data is present. A module that has no reference imagery simply has no compare panel, and that is
+ * a statement about its sources rather than a missing feature.
+ * ------------------------------------------------------------------------- */
+
+export interface ReferenceCamera {
+  projection: 'perspective' | 'orthographic';
+  position: [number, number, number];
+  target: [number, number, number];
+  up: [number, number, number];
+  fov_y_deg?: number;
+  ortho_height_m?: number;
+}
+
+export interface ReferenceView {
+  id: string;
+  title: string;
+  subtitle?: string;
+  kind: 'drawing' | 'photograph';
+  image: string;
+  source_id: string;
+  credit: string;
+  license: string;
+  source_url?: string;
+  camera: ReferenceCamera;
+  pose_confidence: Confidence;
+  notes?: string;
+}
+
+export interface ReferenceLink {
+  id: string;
+  title: string;
+  publisher: string;
+  url: string;
+  license: string;
+  source_id: string;
+  notes?: string;
+}
+
+export interface ReferenceViewsDocument {
+  contract_version: string;
+  kind: 'reference-views';
+  module: string;
+  description?: string;
+  pose_disclaimer: string;
+  views: ReferenceView[];
+  /**
+   * Reference material that may NOT be redistributed. Linked out rather than embedded, so a
+   * copyrighted gallery can still be part of the review path without being copied.
+   */
+  links?: ReferenceLink[];
+}
+
+export type CompareMode = 'off' | 'overlay' | 'split';
+
+export interface Nudge {
+  scale: number;
+  dx: number;
+  dy: number;
+  opacity: number;
+}
+
+/**
+ * Alignment starts unmodified and half-transparent. Every compare pose in every module is
+ * author-set, so the reader is expected to move it; the identity is a starting point, not a claim.
+ */
+export const NUDGE_IDENTITY: Nudge = { scale: 1, dx: 0, dy: 0, opacity: 0.5 };
+
+/** Outbound reference, shown by ReferencePanel. Supplied per module through model.config.json. */
+export interface Reference {
+  label: string;
+  url: string;
+  note: string;
+  /** True when the source may be linked but neither copied nor displayed here. */
+  restricted?: boolean;
 }

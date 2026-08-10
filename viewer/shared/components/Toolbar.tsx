@@ -1,4 +1,4 @@
-import type { UnitMode, ViewerConfig } from '../src/model';
+import type { UnitMode, ViewerConfig } from '../model';
 
 interface ToolbarProps {
   config: ViewerConfig;

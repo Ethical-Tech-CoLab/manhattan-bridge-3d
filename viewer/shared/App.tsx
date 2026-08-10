@@ -1,15 +1,29 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import BridgeViewer from './BridgeViewer';
-import ConfidenceLegend from '../components/ConfidenceLegend';
-import DimensionPanel from '../components/DimensionPanel';
-import MetadataPanel from '../components/MetadataPanel';
-import PartTree from '../components/PartTree';
-import ProvenancePanel from '../components/ProvenancePanel';
-import ReferencePanel from '../components/ReferencePanel';
-import Toolbar from '../components/Toolbar';
-import PresentationNotice from '../components/PresentationNotice';
-import ViewBar from '../components/ViewBar';
-import type { GeometryProvenance, PartsDocument, UnitMode, ViewMode, ViewerConfig } from './model';
+import ComparePanel from './components/ComparePanel';
+import CompareStage from './components/CompareStage';
+import ConfidenceLegend from './components/ConfidenceLegend';
+import DimensionPanel from './components/DimensionPanel';
+import MetadataPanel from './components/MetadataPanel';
+import PartTree from './components/PartTree';
+import { PhotoGallery, usePhotoManifest } from './components/PhotoGallery';
+import ProvenancePanel from './components/ProvenancePanel';
+import ReferencePanel from './components/ReferencePanel';
+import Toolbar from './components/Toolbar';
+import PresentationNotice from './components/PresentationNotice';
+import ViewBar from './components/ViewBar';
+import { NUDGE_IDENTITY } from './model';
+import type {
+  CompareMode,
+  GeometryProvenance,
+  Nudge,
+  PartsDocument,
+  ReferenceView,
+  ReferenceViewsDocument,
+  UnitMode,
+  ViewMode,
+  ViewerConfig,
+} from './model';
 
 export default function App() {
   const [config, setConfig] = useState<ViewerConfig | null>(null);
@@ -34,6 +48,16 @@ export default function App() {
   const [viewMode, setViewMode] = useState<ViewMode>('iso');
   const [metresPerPixel, setMetresPerPixel] = useState(1);
 
+  // Optional evidence features. Both stay null for a module that publishes neither, and the
+  // corresponding panels are then never mounted.
+  const [refs, setRefs] = useState<ReferenceViewsDocument | null>(null);
+  const [activeRef, setActiveRef] = useState<ReferenceView | null>(null);
+  const [compareMode, setCompareMode] = useState<CompareMode>('off');
+  const [nudge, setNudge] = useState<Nudge>(NUDGE_IDENTITY);
+  const [poseNonce, setPoseNonce] = useState(0);
+  const [photoId, setPhotoId] = useState<string | null>(null);
+  const photos = usePhotoManifest(config?.photoManifestUrl);
+
   useEffect(() => {
     let cancelled = false;
     (async () => {
@@ -47,6 +71,16 @@ export default function App() {
         if (cancelled) return;
         setConfig(loadedConfig);
         setDoc(loadedDoc);
+        // Reference imagery is optional and must never block the model from loading: a module
+        // that ships none simply has no compare panel.
+        if (loadedConfig.referenceViewsUrl) {
+          try {
+            const refsResponse = await fetch(loadedConfig.referenceViewsUrl);
+            if (refsResponse.ok && !cancelled) setRefs(await refsResponse.json());
+          } catch {
+            /* optional */
+          }
+        }
       } catch (err) {
         if (!cancelled) setError(err instanceof Error ? err.message : String(err));
       }
@@ -101,6 +135,17 @@ export default function App() {
   const selectPart = useCallback((partId: string | null) => {
     setSelectedId(partId);
     setFocusToken((token) => token + 1);
+  }, []);
+
+  const pickRef = useCallback((view: ReferenceView | null) => {
+    setActiveRef(view);
+    setNudge(NUDGE_IDENTITY);
+    if (view) {
+      setPoseNonce((n) => n + 1);
+      setCompareMode((mode) => (mode === 'off' ? 'overlay' : mode));
+    } else {
+      setCompareMode('off');
+    }
   }, []);
 
   if (error) {
@@ -173,7 +218,20 @@ export default function App() {
             active={confidenceOverlay}
             onToggle={() => setConfidenceOverlay((value) => !value)}
           />
-          <ReferencePanel />
+          <ReferencePanel references={config.references ?? []} />
+          {refs && (
+            <ComparePanel
+              doc={refs}
+              activeId={activeRef?.id ?? null}
+              mode={compareMode}
+              nudge={nudge}
+              onPick={pickRef}
+              onMode={setCompareMode}
+              onNudge={(patch) => setNudge((n) => ({ ...n, ...patch }))}
+              onRecall={() => setPoseNonce((n) => n + 1)}
+              onReset={() => setNudge(NUDGE_IDENTITY)}
+            />
+          )}
           <div className="material-toggle">
             <label>
               <input
@@ -213,7 +271,15 @@ export default function App() {
             onScaleChange={setMetresPerPixel}
             onSelect={selectPart}
             focusToken={focusToken}
+            pose={activeRef?.camera ?? null}
+            poseNonce={poseNonce}
           />
+          {activeRef && compareMode !== 'off' && (
+            <CompareStage view={activeRef} mode={compareMode} nudge={nudge} />
+          )}
+          {photos && (
+            <PhotoGallery manifest={photos} selectedId={photoId} onSelect={setPhotoId} />
+          )}
           <PresentationNotice doc={doc} active={materialMode && !confidenceOverlay} />
           <footer className="stage-footer">
             <span>
