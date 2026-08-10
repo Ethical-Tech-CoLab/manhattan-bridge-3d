@@ -3,10 +3,10 @@
   "model": "control_skeleton",
   "milestone": 2,
   "generated_by": "build_control_skeleton.py@1.0.0",
-  "generated_at": "2026-08-10T01:55:46+00:00",
+  "generated_at": "2026-08-10T17:00:47+00:00",
   "control_document": {
     "path": "GEOMETRY-CONTROL.md",
-    "sha256": "9668b9f504f7d8975b24521eca7c0b28257f15eff0d738e58f2b246189d8c6cf"
+    "sha256": "a89f7d5ebd2630b80efe6d7d50a1a3c50a4ee8541f29aaf8775d2075db7a6159"
   },
   "source_register": "SOURCE-REGISTER.md",
   "confidence_model": "CONFIDENCE-MODEL.md",
@@ -121,6 +121,8 @@
     "tower_arch_height_to_width_ratio": 3.3,
     "tower_arch_head_rise_fraction": 0.5,
     "tower_finial_top_above_saddle": 8.382,
+    "anchorage_arch_springing_height": 9.144,
+    "anchorage_arch_jamb_width": 3.6576000000000004,
     "navigation_horizontal_clearance": 374.904
   },
   "controls_raw": {
@@ -199,6 +201,8 @@
     "tower_arch_height_to_width_ratio": 3.3,
     "tower_arch_head_rise_fraction": 0.5,
     "tower_finial_top_above_saddle": 27.5,
+    "anchorage_arch_springing_height": 30.0,
+    "anchorage_arch_jamb_width": 12.0,
     "navigation_horizontal_clearance": 1230.0
   },
   "control_confidence": {
@@ -277,15 +281,17 @@
     "tower_arch_height_to_width_ratio": "D",
     "tower_arch_head_rise_fraction": "D",
     "tower_finial_top_above_saddle": "B",
+    "anchorage_arch_springing_height": "D",
+    "anchorage_arch_jamb_width": "D",
     "navigation_horizontal_clearance": "A"
   },
   "measures": {
-    "part_count": 101,
+    "part_count": 103,
     "confidence_histogram": {
       "A": 33,
       "B": 4,
       "C": 0,
-      "D": 64
+      "D": 66
     },
     "suspender_segment_count": 516,
     "suspender_pitch_m": 5.671594936708861,
@@ -319,7 +325,7 @@
     "deck_centerline_length_m": 2089.404,
     "tower_spacing_m": 448.05600000000004,
     "anchorage_spacing_m": 890.0160000000001,
-    "placeholder_control_count": 12,
+    "placeholder_control_count": 14,
     "sourced_control_count": 64,
     "approach_lower_deck_outer_x": 882.3960000000001,
     "approach_upper_deck_outer_x": 928.1160000000001,
@@ -327,7 +333,7 @@
     "geometry_provenance_tally": {
       "MEASURED": 0,
       "DOCUMENTED": 37,
-      "INFERRED": 60,
+      "INFERRED": 62,
       "ASSUMED": 4
     },
     "parts_measured": 0,
@@ -335,7 +341,7 @@
     "parts_assumed": 4,
     "parts_without_provenance": 0,
     "deck_longitudinal_gap_m": 0.0,
-    "geometry_fingerprint": "sha256:cbf0c6528d9c357f"
+    "geometry_fingerprint": "sha256:9e5e7c28f10ff515"
   },
   "outputs": {
     "glb": "mesh/glb/control_skeleton.glb",

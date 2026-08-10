@@ -845,14 +845,14 @@
       "title": "Placeholder count has not regressed since Milestone 2",
       "kind": "measure",
       "measure": "placeholder_control_count",
-      "expected": 12,
+      "expected": 14,
       "unit": "count",
       "tolerance": 0,
       "mode": "assert",
       "refs": [
         "GEOMETRY-CONTROL.md section 3"
       ],
-      "rationale": "A ratchet. Adding a placeholder without retiring another fails the suite. Raised 10 -> 12 at Milestone 8 for CTL-111 and CTL-112, the tower arch proportion and head rise. An argued increase: the towers were previously plain tapered boxes, silently omitting the two large arch openings SRC-018's photograph shows on every tower. Modelling them makes two specific unknowns countable where the whole opening was previously absent. CTL-113, the finial height, is NOT a placeholder: it is derived from CTL-020 and CTL-018, both registered."
+      "rationale": "A ratchet. Adding a placeholder without retiring another fails the suite. Raised 12 -> 14 at Milestone 10 for CTL-115 and CTL-116, the anchorage arch springing height and jamb thickness. An argued increase: the anchorages were plain blocks, silently omitting the street thoroughfare arch that CTL-052 has registered at 46 ft since Milestone 4 and that SRC-005 photographs show carrying a street. Modelling it makes two narrow unknowns countable where a whole sourced opening was previously absent. Note what is NOT a placeholder: the opening width is CTL-052 at grade A, and a semicircular head means the rise equals the half-width, so the crown is derived rather than guessed."
     },
     {
       "id": "GRT-071",

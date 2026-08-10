@@ -133,19 +133,19 @@
   "provenance": {
     "module_id": "manhattan-bridge",
     "generated_by": "publish_module_contract.py via build_control_skeleton.py@1.0.0",
-    "generated_at": "2026-08-10T01:40:27+00:00",
+    "generated_at": "2026-08-10T17:00:52+00:00",
     "source_documents": [
       {
         "path": "GEOMETRY-CONTROL.md",
-        "sha256": "9668b9f504f7d8975b24521eca7c0b28257f15eff0d738e58f2b246189d8c6cf"
+        "sha256": "a89f7d5ebd2630b80efe6d7d50a1a3c50a4ee8541f29aaf8775d2075db7a6159"
       },
       {
         "path": "SOURCE-REGISTER.md",
-        "sha256": "05c75cc2e163c298d08ff9f10a0fd1a28c8451d7000b7a75fed32a811babfbac"
+        "sha256": "8f1ae43a44a47fa3033e176b4b3e26eb50ed11ebc53411fe922b19843e832470"
       },
       {
         "path": "CONFIDENCE-MODEL.md",
-        "sha256": "1f8914bcbad5291a30d24aaed88b0e636a181f2a22faeffc441dd850e2891bb0"
+        "sha256": "e01220b4ad5b4649dcd8e6c3cdf71cbacfa0e0d3e37090449a8141d6c05de9f7"
       }
     ]
   },
@@ -165,10 +165,10 @@
         "A": 33,
         "B": 4,
         "C": 0,
-        "D": 64
+        "D": 66
       },
       "control_document": "GEOMETRY-CONTROL.md",
-      "placeholder_controls_remaining": 12
+      "placeholder_controls_remaining": 14
     }
   }
 }

@@ -35,7 +35,7 @@
           "byte_size": 137944,
           "triangle_count": 4620,
           "max_geometric_error_m": 8.0,
-          "sha256": "afef99ac8e63f8f74ed209cd658c4d8e51d3f1a99638f89b53dd0c1baf4add42"
+          "sha256": "c85b4dcd082400102d17a650d57a6d2c74e3cf4aef5f6fa711ec03931811eed4"
         }
       ]
     },
@@ -52,9 +52,9 @@
           "level": 0,
           "url": "assets/bridge.lod0.glb",
           "format": "glb",
-          "byte_size": 900356,
+          "byte_size": 976056,
           "max_geometric_error_m": 0.01,
-          "sha256": "044d878dbe843cca4eb21b979a2050375ff8a9997914070d71aad33f48b9c105"
+          "sha256": "d14c2e084dd36923f7260eef7e0f2f3ceb678e62659495e4aa44790899c6f64a"
         }
       ]
     },
@@ -1058,6 +1058,33 @@
       ]
     },
     {
+      "asset_id": "urn:d3d:manhattan-bridge:manhattan_anchorage_arch",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -488.1372,
+          -27.7368,
+          9.144
+        ],
+        "max": [
+          -474.1164,
+          27.7368,
+          16.1544
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "manhattan_anchorage_arch",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
       "asset_id": "urn:d3d:manhattan-bridge:brooklyn_anchorage",
       "kind": "single",
       "metadata_url": "bridge/metadata.json",
@@ -1080,6 +1107,33 @@
           "url": "assets/bridge.lod0.glb",
           "format": "glb",
           "node_name": "brooklyn_anchorage",
+          "max_geometric_error_m": 0.01
+        }
+      ]
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:brooklyn_anchorage_arch",
+      "kind": "single",
+      "metadata_url": "bridge/metadata.json",
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          474.1164,
+          -27.7368,
+          9.144
+        ],
+        "max": [
+          488.1372,
+          27.7368,
+          16.1544
+        ]
+      },
+      "variants": [
+        {
+          "level": 0,
+          "url": "assets/bridge.lod0.glb",
+          "format": "glb",
+          "node_name": "brooklyn_anchorage_arch",
           "max_geometric_error_m": 0.01
         }
       ]
@@ -2789,11 +2843,11 @@
   "provenance": {
     "module_id": "manhattan-bridge",
     "generated_by": "publish_module_contract.py via build_control_skeleton.py@1.0.0",
-    "generated_at": "2026-08-10T01:40:27+00:00",
+    "generated_at": "2026-08-10T17:00:52+00:00",
     "source_documents": [
       {
         "path": "GEOMETRY-CONTROL.md",
-        "sha256": "9668b9f504f7d8975b24521eca7c0b28257f15eff0d738e58f2b246189d8c6cf"
+        "sha256": "a89f7d5ebd2630b80efe6d7d50a1a3c50a4ee8541f29aaf8775d2075db7a6159"
       }
     ]
   }

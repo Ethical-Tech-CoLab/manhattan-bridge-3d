@@ -3,10 +3,10 @@
   "model": "control_skeleton",
   "milestone": 2,
   "generated_by": "build_control_skeleton.py@1.0.0",
-  "generated_at": "2026-08-10T01:55:46+00:00",
+  "generated_at": "2026-08-10T17:00:47+00:00",
   "control_document": {
     "path": "GEOMETRY-CONTROL.md",
-    "sha256": "9668b9f504f7d8975b24521eca7c0b28257f15eff0d738e58f2b246189d8c6cf"
+    "sha256": "a89f7d5ebd2630b80efe6d7d50a1a3c50a4ee8541f29aaf8775d2075db7a6159"
   },
   "source_register": "SOURCE-REGISTER.md",
   "confidence_model": "CONFIDENCE-MODEL.md",
@@ -816,6 +816,30 @@
       "ho_mm": 96.2,
       "ho_in": 3.79,
       "ho_ft": 0.32
+    },
+    {
+      "control_id": "CTL-115",
+      "key": "anchorage_arch_springing_height",
+      "prototype": "30 ft",
+      "confidence": "D",
+      "prototype_m": 9.144,
+      "prototype_ft": 30.0,
+      "prototype_in": 360.0,
+      "ho_mm": 105.0,
+      "ho_in": 4.13,
+      "ho_ft": 0.34
+    },
+    {
+      "control_id": "CTL-116",
+      "key": "anchorage_arch_jamb_width",
+      "prototype": "12 ft",
+      "confidence": "D",
+      "prototype_m": 3.6576,
+      "prototype_ft": 12.0,
+      "prototype_in": 144.0,
+      "ho_mm": 42.0,
+      "ho_in": 1.65,
+      "ho_ft": 0.14
     },
     {
       "control_id": "CTL-114",

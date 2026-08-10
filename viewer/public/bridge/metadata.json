@@ -3100,7 +3100,7 @@
       "review_status": "unreviewed",
       "last_modified_by": "build_control_skeleton.py@1.0.0",
       "units": "meters",
-      "notes": "Anchorage envelope, 237 ft long by 182 ft wide by 135 ft tall, all sourced (CTL-034/035/036), retiring OQ-008. Extends outboard from the cable point. The Cherry Street and Water Street arches are not modelled.",
+      "notes": "Anchorage envelope, 237 ft long by 182 ft wide by 135 ft tall, all sourced (CTL-034/035/036), retiring OQ-008. Extends outboard from the cable point. Drawn in three segments -- either side of the thoroughfare arch and above its crown -- so the street opening registered by CTL-052 is a real void rather than a shape buried inside a solid block. The envelope and its sourced extent are unchanged; only the subdivision differs. Deliberately does NOT cite the arch placeholders: this part's three dimensions are all grade A/B, and the weakest-link rule would otherwise drag a fully sourced envelope down to D because of where a doorway was cut in it. The arch itself carries those references, and its own grade. The Cherry Street and Water Street arches are not separately modelled.",
       "extensions": {
         "manhattan-bridge": {
           "prototype_units": "meters",
@@ -3149,6 +3149,99 @@
       }
     },
     {
+      "asset_id": "urn:d3d:manhattan-bridge:manhattan_anchorage_arch",
+      "local_id": "manhattan_anchorage_arch",
+      "module_id": "manhattan-bridge",
+      "display_name": "manhattan anchorage arch",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "anchorages",
+        "subsystem": "thoroughfare",
+        "path": [
+          "anchorages",
+          "thoroughfare"
+        ]
+      },
+      "source_basis": [
+        "control_dimension",
+        "photo",
+        "inferred"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-002",
+        "SRC-011",
+        "SRC-012",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016",
+        "SRC-024"
+      ],
+      "confidence": "D",
+      "basis_confidence": "C",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-034",
+        "CTL-035",
+        "CTL-052",
+        "CTL-115"
+      ],
+      "open_questions": [
+        "OQ-024"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Street thoroughfare arch through the anchorage. Better sourced than the tower arches: the opening WIDTH is CTL-052, 46 ft, grade A from a directly examined period primary, and a semicircular head means the rise follows from the width rather than being chosen. SRC-005's view under the south anchorage arch shows exactly this form in dressed coursed ashlar. What is not sourced is the springing height and the jamb thickness, so those are placeholders and the part is graded C. The vault runs transversely because the street passes through the short dimension. Modelled as a spandrel, not a cut hole, so it is selectable and gradeable. See OQ-024.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              160.97,
+              636.9,
+              80.49
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "box"
+          ],
+          "geometry_provenance": "INFERRED",
+          "material": "masonry",
+          "material_id": "MAT-022",
+          "material_confidence": "B",
+          "material_sources": [
+            "SRC-005",
+            "SRC-015"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          -488.1372,
+          -27.7368,
+          9.144
+        ],
+        "max": [
+          -474.1164,
+          27.7368,
+          16.1544
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          -481.1268,
+          0.0,
+          12.6492
+        ]
+      }
+    },
+    {
       "asset_id": "urn:d3d:manhattan-bridge:brooklyn_anchorage",
       "local_id": "brooklyn_anchorage",
       "module_id": "manhattan-bridge",
@@ -3185,7 +3278,7 @@
       "review_status": "unreviewed",
       "last_modified_by": "build_control_skeleton.py@1.0.0",
       "units": "meters",
-      "notes": "Anchorage envelope, 237 ft long by 182 ft wide by 135 ft tall, all sourced (CTL-034/035/036), retiring OQ-008. Extends outboard from the cable point. The Cherry Street and Water Street arches are not modelled.",
+      "notes": "Anchorage envelope, 237 ft long by 182 ft wide by 135 ft tall, all sourced (CTL-034/035/036), retiring OQ-008. Extends outboard from the cable point. Drawn in three segments -- either side of the thoroughfare arch and above its crown -- so the street opening registered by CTL-052 is a real void rather than a shape buried inside a solid block. The envelope and its sourced extent are unchanged; only the subdivision differs. Deliberately does NOT cite the arch placeholders: this part's three dimensions are all grade A/B, and the weakest-link rule would otherwise drag a fully sourced envelope down to D because of where a doorway was cut in it. The arch itself carries those references, and its own grade. The Cherry Street and Water Street arches are not separately modelled.",
       "extensions": {
         "manhattan-bridge": {
           "prototype_units": "meters",
@@ -3230,6 +3323,99 @@
           481.1268,
           0.0,
           20.574
+        ]
+      }
+    },
+    {
+      "asset_id": "urn:d3d:manhattan-bridge:brooklyn_anchorage_arch",
+      "local_id": "brooklyn_anchorage_arch",
+      "module_id": "manhattan-bridge",
+      "display_name": "brooklyn anchorage arch",
+      "category": "bridge_component",
+      "taxonomy": {
+        "system": "anchorages",
+        "subsystem": "thoroughfare",
+        "path": [
+          "anchorages",
+          "thoroughfare"
+        ]
+      },
+      "source_basis": [
+        "control_dimension",
+        "photo",
+        "inferred"
+      ],
+      "source_refs": [
+        "SRC-000",
+        "SRC-002",
+        "SRC-011",
+        "SRC-012",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016",
+        "SRC-024"
+      ],
+      "confidence": "D",
+      "basis_confidence": "C",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-034",
+        "CTL-035",
+        "CTL-052",
+        "CTL-115"
+      ],
+      "open_questions": [
+        "OQ-024"
+      ],
+      "review_status": "unreviewed",
+      "last_modified_by": "build_control_skeleton.py@1.0.0",
+      "units": "meters",
+      "notes": "Street thoroughfare arch through the anchorage. Better sourced than the tower arches: the opening WIDTH is CTL-052, 46 ft, grade A from a directly examined period primary, and a semicircular head means the rise follows from the width rather than being chosen. SRC-005's view under the south anchorage arch shows exactly this form in dressed coursed ashlar. What is not sourced is the springing height and the jamb thickness, so those are placeholders and the part is graded C. The vault runs transversely because the street passes through the short dimension. Modelled as a spandrel, not a cut hole, so it is selectable and gradeable. See OQ-024.",
+      "extensions": {
+        "manhattan-bridge": {
+          "prototype_units": "meters",
+          "ho_scale_units": "millimeters",
+          "bbox_ho_mm": {
+            "size": [
+              160.97,
+              636.9,
+              80.49
+            ]
+          },
+          "scale": "1:1 prototype, HO 1:87.1",
+          "geometry_kinds": [
+            "box"
+          ],
+          "geometry_provenance": "INFERRED",
+          "material": "masonry",
+          "material_id": "MAT-022",
+          "material_confidence": "B",
+          "material_sources": [
+            "SRC-005",
+            "SRC-015"
+          ]
+        }
+      },
+      "bbox": {
+        "frame": "manhattan-bridge-local",
+        "min": [
+          474.1164,
+          -27.7368,
+          9.144
+        ],
+        "max": [
+          488.1372,
+          27.7368,
+          16.1544
+        ]
+      },
+      "anchor": {
+        "frame": "manhattan-bridge-local",
+        "xyz": [
+          481.1268,
+          0.0,
+          12.6492
         ]
       }
     },
@@ -9108,11 +9294,11 @@
   "provenance": {
     "module_id": "manhattan-bridge",
     "generated_by": "publish_module_contract.py via build_control_skeleton.py@1.0.0",
-    "generated_at": "2026-08-10T01:40:27+00:00",
+    "generated_at": "2026-08-10T17:00:52+00:00",
     "source_documents": [
       {
         "path": "GEOMETRY-CONTROL.md",
-        "sha256": "9668b9f504f7d8975b24521eca7c0b28257f15eff0d738e58f2b246189d8c6cf"
+        "sha256": "a89f7d5ebd2630b80efe6d7d50a1a3c50a4ee8541f29aaf8775d2075db7a6159"
       }
     ]
   }

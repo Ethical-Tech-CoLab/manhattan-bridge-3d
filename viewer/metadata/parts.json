@@ -3,10 +3,10 @@
   "model": "control_skeleton",
   "milestone": 2,
   "generated_by": "build_control_skeleton.py@1.0.0",
-  "generated_at": "2026-08-10T01:55:46+00:00",
+  "generated_at": "2026-08-10T17:00:47+00:00",
   "control_document": {
     "path": "GEOMETRY-CONTROL.md",
-    "sha256": "9668b9f504f7d8975b24521eca7c0b28257f15eff0d738e58f2b246189d8c6cf"
+    "sha256": "a89f7d5ebd2630b80efe6d7d50a1a3c50a4ee8541f29aaf8775d2075db7a6159"
   },
   "source_register": "SOURCE-REGISTER.md",
   "confidence_model": "CONFIDENCE-MODEL.md",
@@ -93,7 +93,12 @@
         "manhattan_anchorage",
         "brooklyn_anchorage"
       ],
-      "subsystems": {}
+      "subsystems": {
+        "thoroughfare": [
+          "manhattan_anchorage_arch",
+          "brooklyn_anchorage_arch"
+        ]
+      }
     },
     "cables": {
       "parts": [
@@ -2196,6 +2201,44 @@
       }
     },
     {
+      "control_id": "CTL-115",
+      "key": "anchorage_arch_springing_height",
+      "value": 30.0,
+      "unit": "ft",
+      "value_m": 9.144,
+      "source_ids": [],
+      "confidence": "D",
+      "is_placeholder": true,
+      "notes": "PLACEHOLDER. Height at which the semicircular head of the anchorage thoroughfare arch springs from its jambs. SRC-005's view under the arch shows a tall opening carrying a street with buildings visible through it, which bounds this loosely but does not measure it. Note the head itself is NOT a placeholder: a semicircular vault has rise = half-width, so CTL-052 fixes the crown once the springing is set. See OQ-024.",
+      "ho": {
+        "prototype_m": 9.144,
+        "prototype_ft": 30.0,
+        "prototype_in": 360.0,
+        "ho_mm": 105.0,
+        "ho_in": 4.13,
+        "ho_ft": 0.34
+      }
+    },
+    {
+      "control_id": "CTL-116",
+      "key": "anchorage_arch_jamb_width",
+      "value": 12.0,
+      "unit": "ft",
+      "value_m": 3.6576000000000004,
+      "source_ids": [],
+      "confidence": "D",
+      "is_placeholder": true,
+      "notes": "PLACEHOLDER. Thickness of the masonry jamb either side of the opening. Affects only how heavy the arch reads, not where anything else sits. See OQ-024.",
+      "ho": {
+        "prototype_m": 3.6576,
+        "prototype_ft": 12.0,
+        "prototype_in": 144.0,
+        "ho_mm": 42.0,
+        "ho_in": 1.65,
+        "ho_ft": 0.14
+      }
+    },
+    {
       "control_id": "CTL-114",
       "key": "navigation_horizontal_clearance",
       "value": 1230.0,
@@ -2218,12 +2261,12 @@
     }
   ],
   "measures": {
-    "part_count": 101,
+    "part_count": 103,
     "confidence_histogram": {
       "A": 33,
       "B": 4,
       "C": 0,
-      "D": 64
+      "D": 66
     },
     "suspender_segment_count": 516,
     "suspender_pitch_m": 5.671594936708861,
@@ -2257,7 +2300,7 @@
     "deck_centerline_length_m": 2089.404,
     "tower_spacing_m": 448.05600000000004,
     "anchorage_spacing_m": 890.0160000000001,
-    "placeholder_control_count": 12,
+    "placeholder_control_count": 14,
     "sourced_control_count": 64,
     "approach_lower_deck_outer_x": 882.3960000000001,
     "approach_upper_deck_outer_x": 928.1160000000001,
@@ -2265,7 +2308,7 @@
     "geometry_provenance_tally": {
       "MEASURED": 0,
       "DOCUMENTED": 37,
-      "INFERRED": 60,
+      "INFERRED": 62,
       "ASSUMED": 4
     },
     "parts_measured": 0,
@@ -2273,7 +2316,7 @@
     "parts_assumed": 4,
     "parts_without_provenance": 0,
     "deck_longitudinal_gap_m": 0.0,
-    "geometry_fingerprint": "sha256:cbf0c6528d9c357f"
+    "geometry_fingerprint": "sha256:9e5e7c28f10ff515"
   },
   "parts": [
     {
@@ -4378,7 +4421,7 @@
       "confidence": "B",
       "prototype_units": "meters",
       "ho_scale_units": "millimeters",
-      "notes": "Anchorage envelope, 237 ft long by 182 ft wide by 135 ft tall, all sourced (CTL-034/035/036), retiring OQ-008. Extends outboard from the cable point. The Cherry Street and Water Street arches are not modelled.",
+      "notes": "Anchorage envelope, 237 ft long by 182 ft wide by 135 ft tall, all sourced (CTL-034/035/036), retiring OQ-008. Extends outboard from the cable point. Drawn in three segments -- either side of the thoroughfare arch and above its crown -- so the street opening registered by CTL-052 is a real void rather than a shape buried inside a solid block. The envelope and its sourced extent are unchanged; only the subdivision differs. Deliberately does NOT cite the arch placeholders: this part's three dimensions are all grade A/B, and the weakest-link rule would otherwise drag a fully sourced envelope down to D because of where a doorway was cut in it. The arch itself carries those references, and its own grade. The Cherry Street and Water Street arches are not separately modelled.",
       "scale": "1:1 prototype, HO 1:87.1",
       "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
       "review_status": "unreviewed",
@@ -4428,6 +4471,70 @@
       }
     },
     {
+      "part_id": "manhattan_anchorage_arch",
+      "system": "anchorages",
+      "subsystem": "thoroughfare",
+      "source_basis": [
+        "control_dimension",
+        "photo",
+        "inferred"
+      ],
+      "confidence": "D",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Street thoroughfare arch through the anchorage. Better sourced than the tower arches: the opening WIDTH is CTL-052, 46 ft, grade A from a directly examined period primary, and a semicircular head means the rise follows from the width rather than being chosen. SRC-005's view under the south anchorage arch shows exactly this form in dressed coursed ashlar. What is not sourced is the springing height and the jamb thickness, so those are placeholders and the part is graded C. The vault runs transversely because the street passes through the short dimension. Modelled as a spandrel, not a cut hole, so it is selectable and gradeable. See OQ-024.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-034",
+        "CTL-035",
+        "CTL-052",
+        "CTL-115"
+      ],
+      "open_questions": [
+        "OQ-024"
+      ],
+      "basis_confidence": "C",
+      "geometry_provenance": "INFERRED",
+      "material": "masonry",
+      "material_id": "MAT-022",
+      "material_confidence": "B",
+      "material_sources": [
+        "SRC-005",
+        "SRC-015"
+      ],
+      "geometry_kinds": [
+        "box"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          -488.1372,
+          -27.7368,
+          9.144
+        ],
+        "max": [
+          -474.1164,
+          27.7368,
+          16.1544
+        ],
+        "size": [
+          14.0208,
+          55.4736,
+          7.0104
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          160.97,
+          636.9,
+          80.49
+        ]
+      }
+    },
+    {
       "part_id": "brooklyn_anchorage",
       "system": "anchorages",
       "subsystem": null,
@@ -4437,7 +4544,7 @@
       "confidence": "B",
       "prototype_units": "meters",
       "ho_scale_units": "millimeters",
-      "notes": "Anchorage envelope, 237 ft long by 182 ft wide by 135 ft tall, all sourced (CTL-034/035/036), retiring OQ-008. Extends outboard from the cable point. The Cherry Street and Water Street arches are not modelled.",
+      "notes": "Anchorage envelope, 237 ft long by 182 ft wide by 135 ft tall, all sourced (CTL-034/035/036), retiring OQ-008. Extends outboard from the cable point. Drawn in three segments -- either side of the thoroughfare arch and above its crown -- so the street opening registered by CTL-052 is a real void rather than a shape buried inside a solid block. The envelope and its sourced extent are unchanged; only the subdivision differs. Deliberately does NOT cite the arch placeholders: this part's three dimensions are all grade A/B, and the weakest-link rule would otherwise drag a fully sourced envelope down to D because of where a doorway was cut in it. The arch itself carries those references, and its own grade. The Cherry Street and Water Street arches are not separately modelled.",
       "scale": "1:1 prototype, HO 1:87.1",
       "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
       "review_status": "unreviewed",
@@ -4483,6 +4590,70 @@
           829.36,
           636.9,
           472.42
+        ]
+      }
+    },
+    {
+      "part_id": "brooklyn_anchorage_arch",
+      "system": "anchorages",
+      "subsystem": "thoroughfare",
+      "source_basis": [
+        "control_dimension",
+        "photo",
+        "inferred"
+      ],
+      "confidence": "D",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Street thoroughfare arch through the anchorage. Better sourced than the tower arches: the opening WIDTH is CTL-052, 46 ft, grade A from a directly examined period primary, and a semicircular head means the rise follows from the width rather than being chosen. SRC-005's view under the south anchorage arch shows exactly this form in dressed coursed ashlar. What is not sourced is the springing height and the jamb thickness, so those are placeholders and the part is graded C. The vault runs transversely because the street passes through the short dimension. Modelled as a spandrel, not a cut hole, so it is selectable and gradeable. See OQ-024.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-034",
+        "CTL-035",
+        "CTL-052",
+        "CTL-115"
+      ],
+      "open_questions": [
+        "OQ-024"
+      ],
+      "basis_confidence": "C",
+      "geometry_provenance": "INFERRED",
+      "material": "masonry",
+      "material_id": "MAT-022",
+      "material_confidence": "B",
+      "material_sources": [
+        "SRC-005",
+        "SRC-015"
+      ],
+      "geometry_kinds": [
+        "box"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          474.1164,
+          -27.7368,
+          9.144
+        ],
+        "max": [
+          488.1372,
+          27.7368,
+          16.1544
+        ],
+        "size": [
+          14.0208,
+          55.4736,
+          7.0104
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          160.97,
+          636.9,
+          80.49
         ]
       }
     },

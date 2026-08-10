@@ -3,10 +3,10 @@
   "model": "control_skeleton",
   "milestone": 2,
   "generated_by": "build_control_skeleton.py@1.0.0",
-  "generated_at": "2026-08-10T01:55:46+00:00",
+  "generated_at": "2026-08-10T17:00:47+00:00",
   "control_document": {
     "path": "GEOMETRY-CONTROL.md",
-    "sha256": "9668b9f504f7d8975b24521eca7c0b28257f15eff0d738e58f2b246189d8c6cf"
+    "sha256": "a89f7d5ebd2630b80efe6d7d50a1a3c50a4ee8541f29aaf8775d2075db7a6159"
   },
   "source_register": "SOURCE-REGISTER.md",
   "confidence_model": "CONFIDENCE-MODEL.md",
@@ -5500,7 +5500,7 @@
       "confidence": "B",
       "prototype_units": "meters",
       "ho_scale_units": "millimeters",
-      "notes": "Anchorage envelope, 237 ft long by 182 ft wide by 135 ft tall, all sourced (CTL-034/035/036), retiring OQ-008. Extends outboard from the cable point. The Cherry Street and Water Street arches are not modelled.",
+      "notes": "Anchorage envelope, 237 ft long by 182 ft wide by 135 ft tall, all sourced (CTL-034/035/036), retiring OQ-008. Extends outboard from the cable point. Drawn in three segments -- either side of the thoroughfare arch and above its crown -- so the street opening registered by CTL-052 is a real void rather than a shape buried inside a solid block. The envelope and its sourced extent are unchanged; only the subdivision differs. Deliberately does NOT cite the arch placeholders: this part's three dimensions are all grade A/B, and the weakest-link rule would otherwise drag a fully sourced envelope down to D because of where a doorway was cut in it. The arch itself carries those references, and its own grade. The Cherry Street and Water Street arches are not separately modelled.",
       "scale": "1:1 prototype, HO 1:87.1",
       "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
       "review_status": "unreviewed",
@@ -5558,9 +5558,414 @@
             0.0
           ],
           "max": [
+            -488.13720000000006,
+            27.736800000000002,
+            41.148
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            -474.11640000000006,
+            -27.736800000000002,
+            0.0
+          ],
+          "max": [
             -445.00800000000004,
             27.736800000000002,
             41.148
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            -488.13720000000006,
+            -27.736800000000002,
+            16.154400000000003
+          ],
+          "max": [
+            -474.11640000000006,
+            27.736800000000002,
+            41.148
+          ]
+        }
+      ]
+    },
+    {
+      "part_id": "manhattan_anchorage_arch",
+      "system": "anchorages",
+      "subsystem": "thoroughfare",
+      "source_basis": [
+        "control_dimension",
+        "photo",
+        "inferred"
+      ],
+      "confidence": "D",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Street thoroughfare arch through the anchorage. Better sourced than the tower arches: the opening WIDTH is CTL-052, 46 ft, grade A from a directly examined period primary, and a semicircular head means the rise follows from the width rather than being chosen. SRC-005's view under the south anchorage arch shows exactly this form in dressed coursed ashlar. What is not sourced is the springing height and the jamb thickness, so those are placeholders and the part is graded C. The vault runs transversely because the street passes through the short dimension. Modelled as a spandrel, not a cut hole, so it is selectable and gradeable. See OQ-024.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-034",
+        "CTL-035",
+        "CTL-052",
+        "CTL-115"
+      ],
+      "open_questions": [
+        "OQ-024"
+      ],
+      "basis_confidence": "C",
+      "geometry_provenance": "INFERRED",
+      "material": "masonry",
+      "material_id": "MAT-022",
+      "material_confidence": "B",
+      "material_sources": [
+        "SRC-005",
+        "SRC-015"
+      ],
+      "geometry_kinds": [
+        "box"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          -488.1372,
+          -27.7368,
+          9.144
+        ],
+        "max": [
+          -474.1164,
+          27.7368,
+          16.1544
+        ],
+        "size": [
+          14.0208,
+          55.4736,
+          7.0104
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          160.97,
+          636.9,
+          80.49
+        ]
+      },
+      "style": "anchorage_solid",
+      "geometry": [
+        {
+          "kind": "box",
+          "min": [
+            -488.13720000000006,
+            -27.736800000000002,
+            9.144
+          ],
+          "max": [
+            -488.1128159261199,
+            27.736800000000002,
+            9.728200000000001
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            -474.14078407388024,
+            -27.736800000000002,
+            9.144
+          ],
+          "max": [
+            -474.11640000000006,
+            27.736800000000002,
+            9.728200000000001
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            -488.13720000000006,
+            -27.736800000000002,
+            9.728200000000001
+          ],
+          "max": [
+            -488.0391476185737,
+            27.736800000000002,
+            10.3124
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            -474.21445238142644,
+            -27.736800000000002,
+            9.728200000000001
+          ],
+          "max": [
+            -474.11640000000006,
+            27.736800000000002,
+            10.3124
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            -488.13720000000006,
+            -27.736800000000002,
+            10.3124
+          ],
+          "max": [
+            -487.9145906125632,
+            27.736800000000002,
+            10.8966
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            -474.33900938743693,
+            -27.736800000000002,
+            10.3124
+          ],
+          "max": [
+            -474.11640000000006,
+            27.736800000000002,
+            10.8966
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            -488.13720000000006,
+            -27.736800000000002,
+            10.8966
+          ],
+          "max": [
+            -487.736268505107,
+            27.736800000000002,
+            11.4808
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            -474.51733149489314,
+            -27.736800000000002,
+            10.8966
+          ],
+          "max": [
+            -474.11640000000006,
+            27.736800000000002,
+            11.4808
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            -488.13720000000006,
+            -27.736800000000002,
+            11.4808
+          ],
+          "max": [
+            -487.4996696173703,
+            27.736800000000002,
+            12.065000000000001
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            -474.75393038262985,
+            -27.736800000000002,
+            11.4808
+          ],
+          "max": [
+            -474.11640000000006,
+            27.736800000000002,
+            12.065000000000001
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            -488.13720000000006,
+            -27.736800000000002,
+            12.065000000000001
+          ],
+          "max": [
+            -487.1979844906905,
+            27.736800000000002,
+            12.6492
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            -475.05561550930963,
+            -27.736800000000002,
+            12.065000000000001
+          ],
+          "max": [
+            -474.11640000000006,
+            27.736800000000002,
+            12.6492
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            -488.13720000000006,
+            -27.736800000000002,
+            12.6492
+          ],
+          "max": [
+            -486.82087725623745,
+            27.736800000000002,
+            13.2334
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            -475.43272274376267,
+            -27.736800000000002,
+            12.6492
+          ],
+          "max": [
+            -474.11640000000006,
+            27.736800000000002,
+            13.2334
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            -488.13720000000006,
+            -27.736800000000002,
+            13.2334
+          ],
+          "max": [
+            -486.35204364982155,
+            27.736800000000002,
+            13.8176
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            -475.90155635017857,
+            -27.736800000000002,
+            13.2334
+          ],
+          "max": [
+            -474.11640000000006,
+            27.736800000000002,
+            13.8176
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            -488.13720000000006,
+            -27.736800000000002,
+            13.8176
+          ],
+          "max": [
+            -485.76374374777185,
+            27.736800000000002,
+            14.401800000000001
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            -476.48985625222826,
+            -27.736800000000002,
+            13.8176
+          ],
+          "max": [
+            -474.11640000000006,
+            27.736800000000002,
+            14.401800000000001
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            -488.13720000000006,
+            -27.736800000000002,
+            14.401800000000001
+          ],
+          "max": [
+            -485.0019444050513,
+            27.736800000000002,
+            14.986
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            -477.25165559494883,
+            -27.736800000000002,
+            14.401800000000001
+          ],
+          "max": [
+            -474.11640000000006,
+            27.736800000000002,
+            14.986
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            -488.13720000000006,
+            -27.736800000000002,
+            14.986
+          ],
+          "max": [
+            -483.92852477591936,
+            27.736800000000002,
+            15.5702
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            -478.32507522408076,
+            -27.736800000000002,
+            14.986
+          ],
+          "max": [
+            -474.11640000000006,
+            27.736800000000002,
+            15.5702
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            -488.13720000000006,
+            -27.736800000000002,
+            15.5702
+          ],
+          "max": [
+            -481.12680000000006,
+            27.736800000000002,
+            16.154400000000003
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            -481.12680000000006,
+            -27.736800000000002,
+            15.5702
+          ],
+          "max": [
+            -474.11640000000006,
+            27.736800000000002,
+            16.154400000000003
           ]
         }
       ]
@@ -5575,7 +5980,7 @@
       "confidence": "B",
       "prototype_units": "meters",
       "ho_scale_units": "millimeters",
-      "notes": "Anchorage envelope, 237 ft long by 182 ft wide by 135 ft tall, all sourced (CTL-034/035/036), retiring OQ-008. Extends outboard from the cable point. The Cherry Street and Water Street arches are not modelled.",
+      "notes": "Anchorage envelope, 237 ft long by 182 ft wide by 135 ft tall, all sourced (CTL-034/035/036), retiring OQ-008. Extends outboard from the cable point. Drawn in three segments -- either side of the thoroughfare arch and above its crown -- so the street opening registered by CTL-052 is a real void rather than a shape buried inside a solid block. The envelope and its sourced extent are unchanged; only the subdivision differs. Deliberately does NOT cite the arch placeholders: this part's three dimensions are all grade A/B, and the weakest-link rule would otherwise drag a fully sourced envelope down to D because of where a doorway was cut in it. The arch itself carries those references, and its own grade. The Cherry Street and Water Street arches are not separately modelled.",
       "scale": "1:1 prototype, HO 1:87.1",
       "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
       "review_status": "unreviewed",
@@ -5633,9 +6038,414 @@
             0.0
           ],
           "max": [
+            474.11640000000006,
+            27.736800000000002,
+            41.148
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            488.13720000000006,
+            -27.736800000000002,
+            0.0
+          ],
+          "max": [
             517.2456000000001,
             27.736800000000002,
             41.148
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            474.11640000000006,
+            -27.736800000000002,
+            16.154400000000003
+          ],
+          "max": [
+            488.13720000000006,
+            27.736800000000002,
+            41.148
+          ]
+        }
+      ]
+    },
+    {
+      "part_id": "brooklyn_anchorage_arch",
+      "system": "anchorages",
+      "subsystem": "thoroughfare",
+      "source_basis": [
+        "control_dimension",
+        "photo",
+        "inferred"
+      ],
+      "confidence": "D",
+      "prototype_units": "meters",
+      "ho_scale_units": "millimeters",
+      "notes": "Street thoroughfare arch through the anchorage. Better sourced than the tower arches: the opening WIDTH is CTL-052, 46 ft, grade A from a directly examined period primary, and a semicircular head means the rise follows from the width rather than being chosen. SRC-005's view under the south anchorage arch shows exactly this form in dressed coursed ashlar. What is not sourced is the springing height and the jamb thickness, so those are placeholders and the part is graded C. The vault runs transversely because the street passes through the short dimension. Modelled as a spandrel, not a cut hole, so it is selectable and gradeable. See OQ-024.",
+      "scale": "1:1 prototype, HO 1:87.1",
+      "last_modified_by_agent": "build_control_skeleton.py@1.0.0",
+      "review_status": "unreviewed",
+      "control_refs": [
+        "CTL-005",
+        "CTL-006",
+        "CTL-034",
+        "CTL-035",
+        "CTL-052",
+        "CTL-115"
+      ],
+      "open_questions": [
+        "OQ-024"
+      ],
+      "basis_confidence": "C",
+      "geometry_provenance": "INFERRED",
+      "material": "masonry",
+      "material_id": "MAT-022",
+      "material_confidence": "B",
+      "material_sources": [
+        "SRC-005",
+        "SRC-015"
+      ],
+      "geometry_kinds": [
+        "box"
+      ],
+      "bbox_prototype_m": {
+        "min": [
+          474.1164,
+          -27.7368,
+          9.144
+        ],
+        "max": [
+          488.1372,
+          27.7368,
+          16.1544
+        ],
+        "size": [
+          14.0208,
+          55.4736,
+          7.0104
+        ]
+      },
+      "bbox_ho_mm": {
+        "size": [
+          160.97,
+          636.9,
+          80.49
+        ]
+      },
+      "style": "anchorage_solid",
+      "geometry": [
+        {
+          "kind": "box",
+          "min": [
+            474.11640000000006,
+            -27.736800000000002,
+            9.144
+          ],
+          "max": [
+            474.14078407388024,
+            27.736800000000002,
+            9.728200000000001
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            488.1128159261199,
+            -27.736800000000002,
+            9.144
+          ],
+          "max": [
+            488.13720000000006,
+            27.736800000000002,
+            9.728200000000001
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            474.11640000000006,
+            -27.736800000000002,
+            9.728200000000001
+          ],
+          "max": [
+            474.21445238142644,
+            27.736800000000002,
+            10.3124
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            488.0391476185737,
+            -27.736800000000002,
+            9.728200000000001
+          ],
+          "max": [
+            488.13720000000006,
+            27.736800000000002,
+            10.3124
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            474.11640000000006,
+            -27.736800000000002,
+            10.3124
+          ],
+          "max": [
+            474.33900938743693,
+            27.736800000000002,
+            10.8966
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            487.9145906125632,
+            -27.736800000000002,
+            10.3124
+          ],
+          "max": [
+            488.13720000000006,
+            27.736800000000002,
+            10.8966
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            474.11640000000006,
+            -27.736800000000002,
+            10.8966
+          ],
+          "max": [
+            474.51733149489314,
+            27.736800000000002,
+            11.4808
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            487.736268505107,
+            -27.736800000000002,
+            10.8966
+          ],
+          "max": [
+            488.13720000000006,
+            27.736800000000002,
+            11.4808
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            474.11640000000006,
+            -27.736800000000002,
+            11.4808
+          ],
+          "max": [
+            474.75393038262985,
+            27.736800000000002,
+            12.065000000000001
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            487.4996696173703,
+            -27.736800000000002,
+            11.4808
+          ],
+          "max": [
+            488.13720000000006,
+            27.736800000000002,
+            12.065000000000001
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            474.11640000000006,
+            -27.736800000000002,
+            12.065000000000001
+          ],
+          "max": [
+            475.05561550930963,
+            27.736800000000002,
+            12.6492
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            487.1979844906905,
+            -27.736800000000002,
+            12.065000000000001
+          ],
+          "max": [
+            488.13720000000006,
+            27.736800000000002,
+            12.6492
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            474.11640000000006,
+            -27.736800000000002,
+            12.6492
+          ],
+          "max": [
+            475.43272274376267,
+            27.736800000000002,
+            13.2334
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            486.82087725623745,
+            -27.736800000000002,
+            12.6492
+          ],
+          "max": [
+            488.13720000000006,
+            27.736800000000002,
+            13.2334
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            474.11640000000006,
+            -27.736800000000002,
+            13.2334
+          ],
+          "max": [
+            475.90155635017857,
+            27.736800000000002,
+            13.8176
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            486.35204364982155,
+            -27.736800000000002,
+            13.2334
+          ],
+          "max": [
+            488.13720000000006,
+            27.736800000000002,
+            13.8176
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            474.11640000000006,
+            -27.736800000000002,
+            13.8176
+          ],
+          "max": [
+            476.48985625222826,
+            27.736800000000002,
+            14.401800000000001
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            485.76374374777185,
+            -27.736800000000002,
+            13.8176
+          ],
+          "max": [
+            488.13720000000006,
+            27.736800000000002,
+            14.401800000000001
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            474.11640000000006,
+            -27.736800000000002,
+            14.401800000000001
+          ],
+          "max": [
+            477.25165559494883,
+            27.736800000000002,
+            14.986
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            485.0019444050513,
+            -27.736800000000002,
+            14.401800000000001
+          ],
+          "max": [
+            488.13720000000006,
+            27.736800000000002,
+            14.986
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            474.11640000000006,
+            -27.736800000000002,
+            14.986
+          ],
+          "max": [
+            478.32507522408076,
+            27.736800000000002,
+            15.5702
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            483.92852477591936,
+            -27.736800000000002,
+            14.986
+          ],
+          "max": [
+            488.13720000000006,
+            27.736800000000002,
+            15.5702
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            474.11640000000006,
+            -27.736800000000002,
+            15.5702
+          ],
+          "max": [
+            481.12680000000006,
+            27.736800000000002,
+            16.154400000000003
+          ]
+        },
+        {
+          "kind": "box",
+          "min": [
+            481.12680000000006,
+            -27.736800000000002,
+            15.5702
+          ],
+          "max": [
+            488.13720000000006,
+            27.736800000000002,
+            16.154400000000003
           ]
         }
       ]
