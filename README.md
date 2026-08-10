@@ -16,6 +16,12 @@ the open question that would retire it.
 Rebuilt and republished from `GEOMETRY-CONTROL.md` on every push to `main`, and the deploy is gated
 on the regression suite, so the published model is always one that passed its own tests.
 
+One caveat about the published build: the geometry regression suite runs in CI and gates the
+deploy, but **schema validation is skipped there**. It needs the `digital-3d-shared-contracts`
+checkout for both the schemas and its Ajv install, which is not present on the runner, so
+`validate_contract.mjs` says so plainly rather than reporting a pass it did not perform. Run it
+locally before relying on the published contract documents.
+
 ## Read these first
 
 | Document | What it governs |
