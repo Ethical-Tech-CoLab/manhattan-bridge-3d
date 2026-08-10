@@ -8,15 +8,28 @@
  *
  *   node scripts/validate_contract.mjs
  */
-import { readFileSync, readdirSync } from 'node:fs';
+import { readFileSync, readdirSync, existsSync } from 'node:fs';
 import { join, resolve, dirname } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { createRequire } from 'node:module';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const REPO = resolve(HERE, '..');
-const CONTRACTS = resolve('c:/Dev/digital-3d-shared-contracts');
+// Overridable so this runs somewhere other than one developer's machine. The first GitHub Pages
+// build failed on exactly this kind of hardcoded sibling path.
+const CONTRACTS = resolve(process.env.D3D_CONTRACTS_DIR ?? 'c:/Dev/digital-3d-shared-contracts');
 const PUBLIC = join(REPO, 'viewer', 'public');
+
+// Unlike the frame copy, this check cannot fall back to anything committed here: it needs the
+// shared schemas AND the Ajv install from that repository. Skipping is therefore the honest
+// outcome when it is absent -- but skip loudly and with an exit code that still reads as success,
+// because a validator that silently reports nothing is worse than one that says it did not run.
+if (!existsSync(join(CONTRACTS, 'schemas'))) {
+  console.log(`shared contracts not found at ${CONTRACTS}`);
+  console.log('SKIPPED: schema validation needs the digital-3d-shared-contracts checkout.');
+  console.log('Set D3D_CONTRACTS_DIR to run it. The published documents were NOT validated here.');
+  process.exit(0);
+}
 
 const require = createRequire(join(CONTRACTS, 'package.json'));
 const Ajv = require('ajv/dist/2020.js');

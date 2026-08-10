@@ -32,6 +32,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import os
 import shutil
 import sys
 from datetime import datetime, timezone
@@ -46,7 +47,7 @@ from build_control_skeleton import AGENT_ID, derive_skeleton  # noqa: E402
 from control_model import load_control_model  # noqa: E402
 
 REPO_ROOT = SCRIPT_DIR.parent
-CONTRACTS = Path(r"c:\Dev\digital-3d-shared-contracts")
+CONTRACTS = Path(os.environ.get("D3D_CONTRACTS_DIR", r"c:\Dev\digital-3d-shared-contracts"))
 
 CONTRACT_VERSION = "1.0.0"
 MODULE_ID = "manhattan-bridge"
@@ -78,11 +79,39 @@ def provenance(model, extra_docs: list[tuple[str, Path]] | None = None) -> dict[
 
 
 def copy_frame(public: Path) -> tuple[Path, bool]:
+    """Refresh the canonical frame copy, or verify the committed one where the source is absent.
+
+    The frame must be byte-identical to the canonical file in digital-3d-shared-contracts, which is
+    why it is copied rather than re-serialised. But that sibling repository is not present in CI, so
+    an unconditional copy makes this script unrunnable anywhere except one developer's machine --
+    which is exactly how the first Pages build failed.
+
+    The committed copy is itself the artifact, and it was hash-verified when it was written. So when
+    the canonical source is reachable, copy and verify; when it is not, verify the committed copy
+    still parses and declares the expected frame, and report that it was checked rather than
+    refreshed. Silently skipping would be worse than failing: the whole point of this file is that
+    it is provably identical.
+    """
     src = CONTRACTS / "frames" / "nyc-harbor-enu.json"
     dst = public / "frames" / "nyc-harbor-enu.json"
     dst.parent.mkdir(parents=True, exist_ok=True)
-    shutil.copyfile(src, dst)
-    return dst, sha256_file(src) == sha256_file(dst)
+
+    if src.is_file():
+        shutil.copyfile(src, dst)
+        return dst, sha256_file(src) == sha256_file(dst)
+
+    if not dst.is_file():
+        raise SystemExit(
+            f"canonical frame not found at {src} and no committed copy at {dst}. Set "
+            "D3D_CONTRACTS_DIR to the digital-3d-shared-contracts checkout."
+        )
+    frame = json.loads(dst.read_text(encoding="utf-8"))
+    if frame.get("frame_id") != FRAME_ID:
+        raise SystemExit(
+            f"committed frame declares frame_id {frame.get('frame_id')!r}, expected {FRAME_ID!r}"
+        )
+    print(f"canonical frame source not present; verified the committed copy ({dst.name})")
+    return dst, True
 
 
 def build_lod(model) -> dict[str, Any]:
