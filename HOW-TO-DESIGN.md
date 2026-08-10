@@ -347,6 +347,13 @@ rather than smoothed away.
 **A validator with a parsing bug reporting success.** A "verified" column parser choked on markdown
 bold (`**yes**`), so every verified source read as unverified. **Test your tests.**
 
+**A document that hashes two different ways.** If you hash your control document into build
+outputs -- and you should -- add a `.gitattributes` forcing `text eol=lf` on day one. Without it
+Git's `autocrlf` gives a Windows checkout CRLF while the committed blob and every Linux CI runner
+keep LF, so the same content produces two different provenance hashes and a local build disagrees
+with CI for a reason that has nothing to do with geometry. Mark binaries (`*.glb`, `*.jpg`, `*.png`,
+`*.pdf`) explicitly, or line-ending conversion will corrupt them.
+
 **Writing into the repo by accident.** A `curl -o` loop with relative paths overwrote `README.md`.
 Use absolute output paths.
 
