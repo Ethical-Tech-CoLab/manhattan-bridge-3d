@@ -34,6 +34,43 @@ Four things differ, and they are the reason this is not a copy:
 **Use the portal.** It timestamps the request, which is what starts the statutory clock and what you
 will rely on if you need to appeal.
 
+### The 5,000-character box, and what to paste in it
+
+The OpenRecords free-text field caps at **5,000 characters**. The full request in §4 is about 6,900,
+so it does not fit. Two files are committed for this, and you need both:
+
+| File | What it is | Where it goes |
+|---|---|---|
+| [`sources/foil/dot-request-portal.txt`](sources/foil/dot-request-portal.txt) | The request condensed to **4,890 characters**, worst case | Paste into the portal box |
+| [`sources/foil/NYCDOT-FOIL-Manhattan-Bridge.pdf`](sources/foil/NYCDOT-FOIL-Manhattan-Bridge.pdf) | The full request, four pages, formatted as a letter | Attach as an upload |
+
+**The pasted text is deliberately complete on its own.** It keeps all nine numbered items, both
+BINs, the statutory invocation, the demand for a specific exemption per withheld record and for
+segregable portions, the offer to take redactions, and the request for a date certain. Nothing in it
+says "see attached", because if the attachment is mislaid or never opened, a request that depends on
+it could be read far more narrowly than intended. The PDF adds detail and formatting; it does not
+add scope.
+
+What the condensed version drops: the sub-detail under each item, the contract scope table, the
+inspection dates, and some of the explanatory framing. All of that is in the PDF.
+
+**Watch the character count when you fill in your details.** The count above already assumes the
+worst case, where the portal counts a line break as two characters. It leaves about **110
+characters** of headroom, and the `[Name] - [Postal address] - [Email] - [Phone]` placeholder is 45
+of them. A real name and address is typically 70–110, so you will land near 4,960 — under, but not
+by much. If the box rejects it, delete the "Context, to help you locate the records" paragraph,
+which is explicitly not part of the request and buys you 385 characters.
+
+Regenerate the PDF after any edit to the request:
+
+```powershell
+python scripts\build_foil_pdf.py
+```
+
+### The MTA request is short enough to paste
+
+The parallel MTA request in §7 is about 1,400 characters and needs no attachment.
+
 **Follow the agency's own three tips**, which are printed on that page and are the difference
 between a search and a brush-off:
 
@@ -108,6 +145,11 @@ Say so in the request. It demonstrates the records are not already available and
 are asking for.
 
 ## 4. Request text
+
+This is the full request, and it is what the **PDF** carries. It is about 6,900 characters, so it
+does **not** fit the portal's 5,000-character box — paste
+[`sources/foil/dot-request-portal.txt`](sources/foil/dot-request-portal.txt) there instead and
+attach [the PDF](sources/foil/NYCDOT-FOIL-Manhattan-Bridge.pdf). See §1.
 
 > **Subject: FOIL request — Manhattan Bridge structural record drawings, contract drawings and inspection reports**
 >

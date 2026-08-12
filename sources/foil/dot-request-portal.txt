@@ -1,0 +1,42 @@
+Subject: FOIL request - Manhattan Bridge structural record drawings and inspection reports
+
+To the Records Access Officer:
+
+Under Article 6 of the New York State Public Officers Law I request the following records concerning the Manhattan Bridge. NYC DOT registers this bridge as TWO structures: BIN 2240027 (lower level, over the East River) and BIN 2240028 (upper level). Please treat every item below as applying to BOTH BINs.
+
+I request electronic copies, by download link or electronic transfer. I do not require certified copies. Where a record exists only on paper, microfilm or aperture card, please tell me its extent and estimated copying cost before producing it, so I can narrow rather than incur an avoidable fee. Where drawings are scanned, please include the full sheet with its title block and graphic scale bar: a cropped scan cannot be scaled.
+
+1. Record and as-built drawings of the main bridge, original construction era (approx. 1901-1912) and later as-built revisions:
+a. Tower elevations, plans and sections: shaft plan dimensions, leg spacing, and the dimensions of the arch openings through the towers.
+b. Tower tops at the cable saddles: saddle castings, their bearings, and the vertical relationship between the saddle seat and the top of the cable.
+c. Dimensioned transverse sections at midspan, at a tower line, and on each approach, showing out-to-out width, the positions of the four stiffening trusses, the structural depths of the upper roadway, the lower roadway and the transit floor, and the lateral centrelines of the four transit tracks.
+d. Cable and suspender schedule: the main cable profile with sag, and suspender lengths along the span. If the original is unavailable, the equivalent produced for Contract 14 (2010-2013), which replaced all suspenders, would serve.
+e. Longitudinal profile of the upper and lower roadways, with elevations referenced to a stated datum, and a statement of which datum that is.
+
+2. Record and as-built drawings of both anchorages: plan dimensions, elevations and sections, including the vaulted thoroughfare passing through each.
+
+3. Record and as-built drawings of the approach viaducts, Manhattan and Brooklyn: bent or pier spacing, the type and structural depth of the longitudinal girders or trusses, and the longitudinal grade down to street level.
+
+4. Foundation and caisson drawings for both towers: depth of the cutting edge, caisson height, founding level and top of the masonry pier, each referenced to a stated datum.
+
+5. Contract and record drawings documenting as-built geometry from the rehabilitation programme begun in 1982, in particular Contracts 8 (1992-1997), 8C (1997-2001), 10 (2001-2004), 11 (2005-2008), 14 (2010-2013) and 15 (2018-2021). Not temporary works or means and methods.
+
+6. The two most recent biennial inspection reports for each BIN, with attached sketches, load ratings and element-level condition data.
+
+7. Any survey control on the structure: geodetic coordinates, monument descriptions or control diagrams for the tower centres or anchorage corners, in any stated coordinate system.
+
+8. Any existing three-dimensional survey of the structure - laser scan, LiDAR, point cloud or photogrammetric survey - produced for any contract above or for inspection purposes, in any form.
+
+9. Any index, drawing register, aperture-card list or file inventory covering the above, and the portion of the Department's subject matter list maintained under Public Officers Law section 87(3)(c) covering bridge engineering records. If producing the drawings is burdensome, I would value the index first, so I can resubmit a narrower request.
+
+Context, to help you locate the records: I am building an openly published, source-documented three-dimensional model of this bridge in which every dimension traces to a cited source. These records would replace fourteen placeholder dimensions with documented ones. The project is public at github.com/Ethical-Tech-CoLab/manhattan-bridge-3d and any records provided will be credited to NYC DOT.
+
+I have already reviewed and am NOT requesting: DOT's published Manhattan Bridge facts page; the Bridges and Tunnels Annual Condition Report; NYC Open Data; the HAER survey at the Library of Congress (NY-164, item ny0980: photographs, no measured drawings); and the 2010 National Bridge Inventory sheet for structure 36-2240027.
+
+If any part of this request is denied, please cite the specific statutory exemption for each withheld record and release the remainder, including any reasonably segregable portions.
+
+If security review is required before release of structural drawings, I am content to receive a redacted set, or to narrow the request to the 1901-1912 construction-era drawings alone.
+
+Please acknowledge receipt and provide a date certain for a response.
+
+[Name] - [Postal address] - [Email] - [Phone]
