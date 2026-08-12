@@ -3,10 +3,10 @@
   "model": "control_skeleton",
   "milestone": 2,
   "generated_by": "build_control_skeleton.py@1.0.0",
-  "generated_at": "2026-08-12T14:01:16+00:00",
+  "generated_at": "2026-08-12T15:23:50+00:00",
   "control_document": {
     "path": "GEOMETRY-CONTROL.md",
-    "sha256": "87537f870fe0faec223712771e24f823d41e88c7e73bddacb28988be416ab86e"
+    "sha256": "fd1f87581320b39f24b92fade852a15e86c2290b80ac20a26d5b8467f598cd72"
   },
   "source_register": "SOURCE-REGISTER.md",
   "confidence_model": "CONFIDENCE-MODEL.md",
@@ -2049,7 +2049,7 @@
       "source_ids": [],
       "confidence": "D",
       "is_placeholder": true,
-      "notes": "PLACEHOLDER. Transverse offset to the innermost track centerline of each side. **Now bounded**: SRC-011 places the tracks between the inner truss (CTL-022, 20 ft) and the outer truss (CTL-023, 48 ft), so this value cannot be far wrong. Retired by SRC-004. See OQ-010.",
+      "notes": "PLACEHOLDER. Transverse distance from the **bridge's own longitudinal axis** to the centreline of the innermost track on each side. **This is a position, not a dimension \u2014 it is not gauge.** Gauge is CTL-017, 4 ft 8.5 in, already sourced at grade B; it fixes how wide a track is, and says nothing about where that track sits on the deck. **Bounded**: SRC-011 places the tracks between the inner truss (CTL-022, 20 ft) and the outer truss (CTL-023, 48 ft). The value is not arbitrary but it is still a guess \u2014 27 and 41 ft with CTL-106 puts 7 ft, 14 ft and 7 ft across the 28 ft bay, i.e. the two tracks centred evenly in it. Real alignments are often deliberately offset within a bay for walkway, egress or contact-rail clearance, so symmetry is an assumption rather than a default. **No standard can retire this**, because it is measured from this bridge's axis: only a drawing of this structure answers it. Retired by SRC-025 or SRC-004. See OQ-010.",
       "ho": {
         "prototype_m": 8.2296,
         "prototype_ft": 27.0,
@@ -2068,7 +2068,7 @@
       "source_ids": [],
       "confidence": "D",
       "is_placeholder": true,
-      "notes": "PLACEHOLDER. Transverse spacing between the two tracks in the same bay. Bounded by the 28 ft truss bay. Retired by SRC-004. See OQ-010.",
+      "notes": "PLACEHOLDER. Centre-to-centre distance between the two tracks sharing a bay \u2014 again a spacing between tracks, not the gauge within one. Bounded by the 28 ft truss bay, and currently set so the pair sits symmetrically in it. Unlike CTL-105, this one **could** be retired at grade B by a published NYCT standard track spacing if one is shown to apply here, exactly as CTL-017 takes gauge from a standard \u2014 but a standard states what is normal, not what was built, so a drawing of this bridge would still be needed for grade A. Retired by SRC-025 or SRC-004. See OQ-010.",
       "ho": {
         "prototype_m": 4.2672,
         "prototype_ft": 14.0,

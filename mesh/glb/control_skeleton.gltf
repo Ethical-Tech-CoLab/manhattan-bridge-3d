@@ -25,7 +25,7 @@
         "model": "control_skeleton",
         "milestone": 2,
         "scale": "1:1 prototype",
-        "control_document_sha256": "87537f870fe0faec223712771e24f823d41e88c7e73bddacb28988be416ab86e",
+        "control_document_sha256": "fd1f87581320b39f24b92fade852a15e86c2290b80ac20a26d5b8467f598cd72",
         "coordinate_system": "authoring Z-up, +X toward Brooklyn, +Y north; root node rotates to glTF Y-up",
         "units": "meters"
       },

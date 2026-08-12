@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "control_document_sha256": "87537f870fe0faec223712771e24f823d41e88c7e73bddacb28988be416ab86e",
-  "built_from_sha256": "87537f870fe0faec223712771e24f823d41e88c7e73bddacb28988be416ab86e",
+  "control_document_sha256": "fd1f87581320b39f24b92fade852a15e86c2290b80ac20a26d5b8467f598cd72",
+  "built_from_sha256": "fd1f87581320b39f24b92fade852a15e86c2290b80ac20a26d5b8467f598cd72",
   "generated_by_build": "build_control_skeleton.py@1.0.0",
   "summary": {
     "pass": 74,
@@ -821,7 +821,7 @@
       "suite": "source_traceability",
       "mode": "assert",
       "status": "pass",
-      "detail": "control document sha256 87537f870fe0"
+      "detail": "control document sha256 fd1f87581320"
     }
   ]
 }
