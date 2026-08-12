@@ -19,6 +19,12 @@
 *.html text eol=lf
 *.yml text eol=lf
 
+# The FOIL portal text is committed because its LENGTH is the point: it has to fit a
+# 5,000-character box. Line endings change that count, so they are pinned rather than left to
+# autocrlf, which would otherwise give a Windows checkout a different character count from the one
+# scripts/build_foil_pdf.py reports and from the one CI would see.
+*.txt text eol=lf
+
 # Binary artifacts must never be line-ending converted; doing so corrupts them.
 *.glb binary
 *.jpg binary
