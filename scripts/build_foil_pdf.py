@@ -17,6 +17,7 @@ Playwright is already here for viewer testing.
 
 from __future__ import annotations
 
+import hashlib
 import pathlib
 import sys
 
@@ -287,6 +288,52 @@ def check_portal_text() -> list[str]:
     return problems
 
 
+def make_reproducible(path: pathlib.Path, content_digest: str) -> None:
+    """Strip the timestamps Chromium stamps into the PDF, so identical input gives identical bytes.
+
+    Without this, every rebuild produces a different file even when nothing changed, because a PDF
+    records its own creation time and a random document ID. The artifact is committed, so that means
+    permanent churn and -- worse in a repository built on byte-level provenance -- a diff that cannot
+    distinguish "the request changed" from "someone ran the script".
+
+    The document ID is derived from the **source HTML**, not from Chromium's output. Deriving it from
+    the output was the first attempt and could not work: the output already carries the varying
+    timestamp, so the ID varied with it.
+    """
+    from pypdf import PdfReader, PdfWriter
+    from pypdf.generic import ArrayObject, ByteStringObject, NameObject
+
+    reader = PdfReader(str(path))
+    writer = PdfWriter()
+    for page in reader.pages:
+        writer.add_page(page)
+
+    # A fixed date rather than "now". It is not a claim about when the request was written; the
+    # request carries its own [Date] field for that.
+    fixed = "D:20000101000000Z"
+    writer.add_metadata({
+        "/Title": "FOIL request - Manhattan Bridge structural records (BIN 2240027 / 2240028)",
+        "/Subject": "Request under Article 6 of the New York State Public Officers Law",
+        "/Creator": "manhattan-bridge-3d/scripts/build_foil_pdf.py",
+        "/Producer": "Chromium via Playwright",
+        "/CreationDate": fixed,
+        "/ModDate": fixed,
+    })
+
+    # Chromium also embeds an XMP packet carrying its own CreateDate. Left in place it would defeat
+    # everything above, because it is a second, independent copy of the timestamp.
+    for page in writer.pages:
+        page.get_object().pop(NameObject("/Metadata"), None)
+    root = writer._root_object  # noqa: SLF001
+    root.pop(NameObject("/Metadata"), None)
+
+    ident = ByteStringObject(content_digest[:16].encode("ascii"))
+    writer._ID = ArrayObject([ident, ident])  # noqa: SLF001 - pypdf exposes no public setter
+
+    with path.open("wb") as fh:
+        writer.write(fh)
+
+
 def main() -> int:
     try:
         from playwright.sync_api import sync_playwright
@@ -320,6 +367,7 @@ def main() -> int:
         browser.close()
 
     tmp.unlink()
+    make_reproducible(OUT, hashlib.sha256(html.encode("utf-8")).hexdigest())
     print("wrote %s (%d bytes)" % (OUT.relative_to(REPO_ROOT), OUT.stat().st_size))
 
     problems = check_portal_text()
