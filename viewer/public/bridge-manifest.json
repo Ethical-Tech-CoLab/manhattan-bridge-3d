@@ -125,7 +125,7 @@
   ],
   "not_implemented_yet": [
     "no level-1 segmented mesh; the ladder jumps from 0.01 m to 8.0 m",
-    "7 of 69 control values remain placeholders: deck framing depths (OQ-013) and subway track centrelines (OQ-010) await the 1907-1909 contract drawings",
+    "14 of 78 control values remain placeholders: deck framing depths (OQ-013) and subway track centrelines (OQ-010) await the 1907-1909 contract drawings (see FOIL-REQUEST.md)",
     "truss web members are grade D; the Warren diagonal handedness at each panel is inferred (OQ-017)",
     "placement azimuth derives from mapped alignments, not survey; OQ-009 stays open",
     "no inspect-mode UI bundle is published, so handoff.ui_url is absent and a consuming viewer renders only the shared metadata panel"
@@ -133,15 +133,15 @@
   "provenance": {
     "module_id": "manhattan-bridge",
     "generated_by": "publish_module_contract.py via build_control_skeleton.py@1.0.0",
-    "generated_at": "2026-08-10T17:00:52+00:00",
+    "generated_at": "2026-08-12T01:05:42+00:00",
     "source_documents": [
       {
         "path": "GEOMETRY-CONTROL.md",
-        "sha256": "a89f7d5ebd2630b80efe6d7d50a1a3c50a4ee8541f29aaf8775d2075db7a6159"
+        "sha256": "613f7784670c103a2b55998d65b5ddcb938dd089c8340e88e38d3792a030dbe5"
       },
       {
         "path": "SOURCE-REGISTER.md",
-        "sha256": "8f1ae43a44a47fa3033e176b4b3e26eb50ed11ebc53411fe922b19843e832470"
+        "sha256": "f6ffd8c4a1ecc59220347aace847d55db371b60230fc6e15235e8cd32dd68bbc"
       },
       {
         "path": "CONFIDENCE-MODEL.md",

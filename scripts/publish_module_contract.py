@@ -481,8 +481,12 @@ def build_manifest(model, parts_doc) -> dict[str, Any]:
         ],
         "not_implemented_yet": [
             "no level-1 segmented mesh; the ladder jumps from 0.01 m to 8.0 m",
-            "7 of 69 control values remain placeholders: deck framing depths (OQ-013) and subway "
-            "track centrelines (OQ-010) await the 1907-1909 contract drawings",
+            # Counted, never typed. This line read "7 of 69" for several milestones after the true
+            # figures had moved to 14 of 78, which is exactly the false reassurance
+            # placeholder_count() was written to prevent -- and it was sitting right here, unused.
+            f"{placeholder_count(model)} of {len(model.controls)} control values remain "
+            "placeholders: deck framing depths (OQ-013) and subway track centrelines (OQ-010) "
+            "await the 1907-1909 contract drawings (see FOIL-REQUEST.md)",
             "truss web members are grade D; the Warren diagonal handedness at each panel is inferred "
             "(OQ-017)",
             "placement azimuth derives from mapped alignments, not survey; OQ-009 stays open",

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "control_document_sha256": "a89f7d5ebd2630b80efe6d7d50a1a3c50a4ee8541f29aaf8775d2075db7a6159",
-  "built_from_sha256": "a89f7d5ebd2630b80efe6d7d50a1a3c50a4ee8541f29aaf8775d2075db7a6159",
+  "control_document_sha256": "613f7784670c103a2b55998d65b5ddcb938dd089c8340e88e38d3792a030dbe5",
+  "built_from_sha256": "613f7784670c103a2b55998d65b5ddcb938dd089c8340e88e38d3792a030dbe5",
   "generated_by_build": "build_control_skeleton.py@1.0.0",
   "summary": {
     "pass": 74,
@@ -765,7 +765,7 @@
       "suite": "source_traceability",
       "mode": "assert",
       "status": "pass",
-      "detail": "24 registered open questions"
+      "detail": "25 registered open questions"
     },
     {
       "id": "STT-006",
@@ -821,7 +821,7 @@
       "suite": "source_traceability",
       "mode": "assert",
       "status": "pass",
-      "detail": "control document sha256 a89f7d5ebd26"
+      "detail": "control document sha256 613f7784670c"
     }
   ]
 }

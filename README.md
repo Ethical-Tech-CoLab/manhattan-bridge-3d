@@ -34,6 +34,7 @@ locally before relying on the published contract documents.
 | [SOURCE-REGISTER.md](SOURCE-REGISTER.md) | Every source that may influence geometry, its verification state, and the open conflicts. |
 | [CONFIDENCE-MODEL.md](CONFIDENCE-MODEL.md) | Grades A–D, the weakest-link rule, and the metadata contract every part must satisfy. |
 | [SCALE-HO.md](SCALE-HO.md) | 1:87.1 reporting scale and what it implies physically. |
+| [FOIL-REQUEST.md](FOIL-REQUEST.md) | **The records request that would retire every remaining placeholder.** Ready to file with NYC DOT, plus a parallel MTA request for the transit track geometry, the appeal letter, and the rules for grading records when they arrive. |
 | [AGENT-INSTRUCTIONS.md](AGENT-INSTRUCTIONS.md) | The original build handoff and milestone plan for this bridge. |
 | [HOW-TO-DESIGN.md](HOW-TO-DESIGN.md) | **Starting a sibling bridge?** The transferable method — governance model, the three grading axes, the verified HAER source landscape for all three East River bridges, and every trap this project hit. |
 
@@ -103,9 +104,12 @@ skeleton inside Blender from the tool-neutral JSON when a `.blend` is needed.
 | A | 33 | Stations, datum, bridge axis, tower centerlines, caissons, piers, the eight tower legs, and all sixteen stiffening truss chord sets. |
 | B | 4 | Anchorages and approach-end stations. |
 | C | 0 | Nothing from meshes or photogrammetry yet. |
-| D | 44 | Truss web members, suspenders, deck and track envelopes, approaches, tower bracing. |
+| D | 66 | Truss web members, suspenders, deck and track envelopes, approaches, tower bracing, the arches and finials. |
 
-**7 of 69 control values are placeholders**, down from 19 of 36 at Milestone 1.
+**14 of 78 control values are placeholders**, against 19 of 36 at Milestone 1. The count is held by
+`GRT-070`, which fails if it rises. Every one of the fourteen is waiting on a measured drawing, and
+there is no public measured drawing of this bridge — the HAER survey contains photographs and no
+drawings. [FOIL-REQUEST.md](FOIL-REQUEST.md) is the request that would retire them.
 
 **Milestone 2** sourced the transverse layout: stiffening truss spacing **28–40–28 ft** (trusses A–D,
 south to north), which also fixes the four cable positions since each cable sits directly above its
@@ -153,7 +157,7 @@ reaches `MEASURED` or `DOCUMENTED`. Their visual quality comes from rendering di
 sources this project lacks, which means the same standard is reachable here without inventing a
 single dimension.
 
-Thirteen conflicts are carried openly in [SOURCE-REGISTER.md](SOURCE-REGISTER.md) rather than
+Fifteen conflicts are carried openly in [SOURCE-REGISTER.md](SOURCE-REGISTER.md) rather than
 silently resolved. Seven are settled by weight of evidence.
 
 ## Photographs, video and crowdsourced imagery
