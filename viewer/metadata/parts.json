@@ -3,10 +3,10 @@
   "model": "control_skeleton",
   "milestone": 2,
   "generated_by": "build_control_skeleton.py@1.0.0",
-  "generated_at": "2026-08-12T15:23:50+00:00",
+  "generated_at": "2026-08-12T15:34:26+00:00",
   "control_document": {
     "path": "GEOMETRY-CONTROL.md",
-    "sha256": "fd1f87581320b39f24b92fade852a15e86c2290b80ac20a26d5b8467f598cd72"
+    "sha256": "772b18261f8175b025ea9845e57f247062498ecd3346c1ebe4bcc642901c854d"
   },
   "source_register": "SOURCE-REGISTER.md",
   "confidence_model": "CONFIDENCE-MODEL.md",
@@ -2068,7 +2068,7 @@
       "source_ids": [],
       "confidence": "D",
       "is_placeholder": true,
-      "notes": "PLACEHOLDER. Centre-to-centre distance between the two tracks sharing a bay \u2014 again a spacing between tracks, not the gauge within one. Bounded by the 28 ft truss bay, and currently set so the pair sits symmetrically in it. Unlike CTL-105, this one **could** be retired at grade B by a published NYCT standard track spacing if one is shown to apply here, exactly as CTL-017 takes gauge from a standard \u2014 but a standard states what is normal, not what was built, so a drawing of this bridge would still be needed for grade A. Retired by SRC-025 or SRC-004. See OQ-010.",
+      "notes": "PLACEHOLDER. Centre-to-centre distance between the two tracks sharing a bay \u2014 again a spacing between tracks, not the gauge within one. Bounded by the 28 ft truss bay, and currently set so the pair sits symmetrically in it. **A published NYCT standard spacing would not retire this**, and the reason is worth stating because it is easy to get wrong. CTL-017 may take gauge from a standard because gauge is *forced*: the B, D, N and Q trains that cross this bridge run through the rest of the network, and rolling stock physically cannot run on a different gauge, so the standard applies by necessity rather than by convention. Nothing forces track *spacing* in the same way. Two tracks may sit any distance apart provided their clearance envelopes do not overlap, and here the governing constraint is a 28 ft truss bay specific to this bridge \u2014 not a network-wide figure. Adopting a modern new-construction standard for a 1909 structure would be a number lifted out of the scope in which it was set, which SRC-018 records as its own most-repeated error. Retired by SRC-025 or SRC-004, and by nothing else. See OQ-010.",
       "ho": {
         "prototype_m": 4.2672,
         "prototype_ft": 14.0,

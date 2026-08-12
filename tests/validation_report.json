@@ -1,10 +1,10 @@
 {
   "schema_version": "1.0",
-  "control_document_sha256": "fd1f87581320b39f24b92fade852a15e86c2290b80ac20a26d5b8467f598cd72",
-  "built_from_sha256": "fd1f87581320b39f24b92fade852a15e86c2290b80ac20a26d5b8467f598cd72",
+  "control_document_sha256": "772b18261f8175b025ea9845e57f247062498ecd3346c1ebe4bcc642901c854d",
+  "built_from_sha256": "772b18261f8175b025ea9845e57f247062498ecd3346c1ebe4bcc642901c854d",
   "generated_by_build": "build_control_skeleton.py@1.0.0",
   "summary": {
-    "pass": 74,
+    "pass": 75,
     "reported": 6,
     "fail": 0,
     "error": 0
@@ -821,7 +821,15 @@
       "suite": "source_traceability",
       "mode": "assert",
       "status": "pass",
-      "detail": "control document sha256 fd1f87581320"
+      "detail": "control document sha256 772b18261f81"
+    },
+    {
+      "id": "STT-013",
+      "title": "Counts written into the documents match the model",
+      "suite": "source_traceability",
+      "mode": "assert",
+      "status": "pass",
+      "detail": "103 parts, 14 of 78 controls are placeholders"
     }
   ]
 }

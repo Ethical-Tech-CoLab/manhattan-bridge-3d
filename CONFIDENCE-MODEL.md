@@ -91,17 +91,34 @@ Milestone 3 status: the tower caissons and piers are solid volumes whose every d
 examined period primary sources, so they are graded `A`.
 
 The live counts are emitted by every build into `viewer/metadata/parts.json` and surfaced in the viewer's
-confidence legend, so this table is a snapshot rather than the authority. As of Milestone 7, across 95 parts:
+confidence legend, so this table is a snapshot rather than the authority. As of Milestone 10, across 103 parts:
 
 | Grade | Parts | Notes |
 |---|---:|---|
 | A | 33 | Stations, datum, bridge axis, tower centerlines, caissons, piers, tower legs, stiffening truss chords. |
 | B | 4 | Anchorages and the approach-end stations. |
 | C | 0 | **Still nothing derived from a mesh or from photogrammetry.** This band stays empty until an image set is ingested and aligned; see section 6. |
-| D | 58 | Cables, suspenders, deck, tracks and approaches — each blocked by one of the ten remaining placeholders. |
+| D | 66 | Cables, suspenders, deck, tracks, approaches, arches and finials — each blocked by one of the fourteen remaining placeholders. |
 
 The empty `C` band is the single most informative cell in this table: it records that no photographic or
 photogrammetric evidence has yet entered the model at all.
+
+### 4.1 When an engineering standard may stand in for a source
+
+A published standard is evidence about *practice*, not about *this structure*. It may support a
+control only where the standard is **forced** rather than merely customary — that is, where the
+thing could not physically be otherwise.
+
+| | Standard usable? | Why |
+|---|---|---|
+| **Track gauge** (`CTL-017`, grade `B` from `SRC-010`) | **Yes** | The B, D, N and Q trains crossing this bridge run through the rest of the network. Rolling stock cannot run on a different gauge, so interoperability *forces* the standard figure. |
+| **Track spacing** (`CTL-106`, grade `D`) | **No** | Nothing forces two adjacent tracks to a particular separation; they need only clear each other. Here the governing constraint is a 28 ft truss bay specific to this bridge, so a network-wide figure does not bind it. |
+
+The test is not "does a standard exist" but "could this dimension have been anything else?" Where
+the answer is yes, adopting the standard is *a number lifted out of the scope in which it was set* —
+the failure mode `SRC-018` records as its own most-repeated error, having committed it five times
+including once in the document written to prevent it. A standard-backed control is capped at `B`
+regardless, because a standard states what is normal rather than what was built.
 
 ---
 

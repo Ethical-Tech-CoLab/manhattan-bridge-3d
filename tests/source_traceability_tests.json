@@ -124,6 +124,19 @@
       "rule": "control_document_hash_matches",
       "mode": "assert",
       "rationale": "Catches a stale build after an edit to the control document."
+    },
+    {
+      "id": "STT-013",
+      "title": "Counts written into the documents match the model",
+      "kind": "traceability",
+      "rule": "documented_counts_match_model",
+      "mode": "assert",
+      "refs": [
+        "README.md",
+        "CONFIDENCE-MODEL.md",
+        "GEOMETRY-CONTROL.md"
+      ],
+      "rationale": "Hand-typed counts go stale silently. Three had already drifted before this test existed: the published manifest said '7 of 69' placeholders when it was 14 of 78, the README claimed 44 grade-D parts against 66, and CONFIDENCE-MODEL.md still described a 95-part model. Each was true when written. A number that is only correct on the day it is typed is not a fact about the model, and this repository does not rely on anyone remembering to re-type it."
     }
   ]
 }

@@ -453,6 +453,50 @@ def run_rule(test: dict[str, Any], ctx: Context, suite: str) -> Result:
             )
         summary = f"control document sha256 {current[:12]}"
 
+    elif rule == "documented_counts_match_model":
+        # Prose drifts. Three published counts had already gone stale before this rule existed:
+        # the manifest said "7 of 69 control values remain placeholders" when it was 14 of 78,
+        # the README claimed 44 grade-D parts and thirteen conflicts against 66 and fifteen, and
+        # CONFIDENCE-MODEL.md was still describing a 95-part model at Milestone 7.
+        #
+        # None of those was a lie anyone told; each was true when written and nobody re-typed it.
+        # That is precisely the class of error a guard catches and vigilance does not, and this
+        # repository already refuses to trust vigilance anywhere else.
+        #
+        # Only unambiguous, machine-checkable phrasings are matched. The aim is to catch the
+        # sentence that quietly goes out of date, not to police prose.
+        live = {
+            "parts": len(parts),
+            "placeholders": sum(1 for c in ctx.model.controls.values() if c.is_placeholder),
+            "controls": len(ctx.model.controls),
+            "grade_d": sum(1 for p in parts if p.get("confidence") == "D"),
+        }
+        patterns = [
+            # "14 of 78 control values" / "14 of 78 controls"
+            (re.compile(r"(\d+)\s+of\s+(\d+)\s+control", re.I),
+             lambda m: (int(m.group(1)) == live["placeholders"]
+                        and int(m.group(2)) == live["controls"]),
+             lambda: f'{live["placeholders"]} of {live["controls"]} control'),
+            # "across 103 parts"
+            (re.compile(r"across\s+(\d+)\s+parts", re.I),
+             lambda m: int(m.group(1)) == live["parts"],
+             lambda: f'across {live["parts"]} parts'),
+        ]
+        for rel in ("README.md", "CONFIDENCE-MODEL.md", "GEOMETRY-CONTROL.md"):
+            path = REPO_ROOT / rel
+            if not path.exists():
+                continue
+            text = path.read_text("utf-8")
+            for regex, ok, expected in patterns:
+                for match in regex.finditer(text):
+                    if not ok(match):
+                        findings.append(
+                            f"{rel}: {match.group(0).strip()!r} is stale; "
+                            f"the model says {expected()!r}"
+                        )
+        summary = (f'{live["parts"]} parts, {live["placeholders"]} of {live["controls"]} '
+                   f'controls are placeholders')
+
     else:  # pragma: no cover
         raise ValueError(f"unknown rule {rule!r}")
 
