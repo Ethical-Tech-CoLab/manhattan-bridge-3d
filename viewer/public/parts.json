@@ -3,10 +3,10 @@
   "model": "control_skeleton",
   "milestone": 2,
   "generated_by": "build_control_skeleton.py@1.0.0",
-  "generated_at": "2026-08-12T03:42:10+00:00",
+  "generated_at": "2026-08-12T14:01:16+00:00",
   "control_document": {
     "path": "GEOMETRY-CONTROL.md",
-    "sha256": "613f7784670c103a2b55998d65b5ddcb938dd089c8340e88e38d3792a030dbe5"
+    "sha256": "87537f870fe0faec223712771e24f823d41e88c7e73bddacb28988be416ab86e"
   },
   "source_register": "SOURCE-REGISTER.md",
   "confidence_model": "CONFIDENCE-MODEL.md",

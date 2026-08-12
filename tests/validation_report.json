@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "control_document_sha256": "613f7784670c103a2b55998d65b5ddcb938dd089c8340e88e38d3792a030dbe5",
-  "built_from_sha256": "613f7784670c103a2b55998d65b5ddcb938dd089c8340e88e38d3792a030dbe5",
+  "control_document_sha256": "87537f870fe0faec223712771e24f823d41e88c7e73bddacb28988be416ab86e",
+  "built_from_sha256": "87537f870fe0faec223712771e24f823d41e88c7e73bddacb28988be416ab86e",
   "generated_by_build": "build_control_skeleton.py@1.0.0",
   "summary": {
     "pass": 74,
@@ -733,7 +733,7 @@
       "suite": "source_traceability",
       "mode": "assert",
       "status": "pass",
-      "detail": "25 registered sources"
+      "detail": "26 registered sources"
     },
     {
       "id": "STT-002",
@@ -797,7 +797,7 @@
       "suite": "source_traceability",
       "mode": "assert",
       "status": "pass",
-      "detail": "25 sources carry a verification state"
+      "detail": "26 sources carry a verification state"
     },
     {
       "id": "STT-010",
@@ -821,7 +821,7 @@
       "suite": "source_traceability",
       "mode": "assert",
       "status": "pass",
-      "detail": "control document sha256 613f7784670c"
+      "detail": "control document sha256 87537f870fe0"
     }
   ]
 }

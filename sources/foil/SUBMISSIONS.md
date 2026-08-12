@@ -132,6 +132,74 @@ ratchet `GRT-070` down from 14 as placeholders retire.
 
 ---
 
+## R016646-081226 — MTA / New York City Transit ✅
+
+| | |
+|---|---|
+| **Reference** | `R016646-081226` |
+| **Agency** | Metropolitan Transportation Authority — the FOIL team processes for all MTA agencies, including NYCT |
+| **Received** | Wednesday 12 August 2026 (date stated by the agency) |
+| **Status** | Receipt confirmed; acknowledgment promised within 5 business days |
+| **Tracking** | [My Records Center](https://mtany.govqa.us/WEBAPP/_rs/CustomerIssues.aspx) — GovQA, a different system from NYC OpenRecords |
+| **Request text** | [`mta-request-portal.txt`](mta-request-portal.txt) |
+| **Attachment** | none needed |
+
+The account used to file is deliberately **not recorded here**. This repository is public, and a
+personal email address committed to it would be scraped. It is in the filer's own inbox and in the
+GovQA account; it does not need to be in version control to make the request traceable — the
+reference number and date do that.
+
+### Statutory dates
+
+| Date | What is due |
+|---|---|
+| **Wed 19 Aug 2026** | 5 business days: acknowledge, grant, or deny in writing |
+| **Thu 10 Sep 2026** | 20 business days: outside date for a determination if acknowledged |
+| **Fri 11 Sep 2026** | 30 calendar days from a denial: appeal window closes |
+
+One day later than the DOT request throughout, because it was received on the 12th rather than the
+11th. Diary both.
+
+### Three clauses were dropped in transit
+
+The submitted text is very slightly shorter than
+[`mta-request-portal.txt`](mta-request-portal.txt) as committed. Comparing the agency's own echo of
+the request against the file:
+
+| Clause | Committed | Submitted |
+|---|---|---|
+| BIN 2240027, items 1–4, electronic copies, cost before production, per-record exemption | ✅ | ✅ |
+| "including any reasonably segregable portions" | ✅ | ✗ |
+| "provide a date certain for a response" | ✅ | ✗ |
+| "Please acknowledge receipt" | ✅ | ✗ |
+
+**None of this is worth refiling for**, and all three losses are recoverable:
+
+- **Segregable portions is a statutory duty, not a favour.** Public Officers Law §87(2) requires an
+  agency to redact an exempt portion and release the rest whether or not you ask. Asking makes it
+  harder to overlook; not asking does not waive it.
+- **The acknowledgment is already promised.** The receipt states one will follow within five
+  business days, which is the same outcome the "date certain" sentence exists to force.
+- **Receipt is already acknowledged.** The confirmation is itself the acknowledgment of receipt.
+
+If the response withholds records without citing an exemption per record, the appeal in
+[FOIL-REQUEST.md §6b](../../FOIL-REQUEST.md) still applies — it argues from the statute, not from
+what the request happened to say.
+
+### What it would retire
+
+`CTL-105` (innermost track offset, 27 ft), `CTL-106` (track spacing, 14 ft), `CTL-107` (track
+structure depth, 1.5 ft) and `OQ-010`. Item 1 alone — a track chart showing centrelines and spacing
+— would retire all three, and none of them is answerable from the DOT request if DOT does not hold
+transit track geometry.
+
+### Outcome
+
+*Awaiting response.* Same discipline as the DOT request:
+[FOIL-REQUEST.md §8](../../FOIL-REQUEST.md) before any dimension is extracted.
+
+---
+
 ## Filing checklist
 
 Everything below is prepared and ready to paste. Filing requires a logged-in NYC account and puts
@@ -155,14 +223,20 @@ arrives.
 5. Record the reference number and date in the table at the top of this file, and diary the
    five-business-day date.
 
-### 2. The MTA request — ⬜ still to file
+### 2. The MTA request — ✅ filed 12 August 2026 as `R016646-081226`
 
 Different portal: <https://www.mta.info/transparency/foil>. The MTA is a state public authority and
-is not on OpenRecords.
+is not on OpenRecords; it runs GovQA, so requests are tracked in
+[My Records Center](https://mtany.govqa.us/WEBAPP/_rs/CustomerIssues.aspx) rather than on the NYC
+portal, and reference numbers look like `R######-MMDDYY` rather than `FOIL-YYYY-AAA-#####`.
 
 Paste [`mta-request-portal.txt`](mta-request-portal.txt). It is about 1,800 characters and needs no
 attachment. It covers `CTL-105`, `CTL-106`, `CTL-107` and `OQ-010` — track geometry DOT may not hold
 at all.
+
+**Paste the whole file.** Three closing clauses were lost from the submitted version — see the
+`R016646-081226` entry above. No harm done in this instance, but the last paragraphs are the ones
+carrying the statutory asks, and they are the easiest to lose to a scroll box.
 
 ### 3. Tidy up the DCP request — optional, one minute
 
@@ -180,9 +254,9 @@ all times.
 | Request | Agency | Text | Reference | Filed |
 |---|---|---|---|---|
 | Manhattan Bridge structural records | **NYC DOT** | [`dot-request-portal.txt`](dot-request-portal.txt) + [PDF](NYCDOT-FOIL-Manhattan-Bridge.pdf) | **FOIL-2026-841-04819** | **11 Aug 2026** ✅ |
-| Transit track structure on the lower level | MTA / NYCT | [`mta-request-portal.txt`](mta-request-portal.txt) | *pending* | *pending* |
+| Transit track structure on the lower level | **MTA / NYCT** | [`mta-request-portal.txt`](mta-request-portal.txt) | **R016646-081226** | **12 Aug 2026** ✅ |
+| Misfiled duplicate, superseded | DCP | — | FOIL-2026-030-00205 | 11 Aug 2026 ✗ |
 
-The MTA request is the only one still outstanding. It is about 1,800 characters, needs no
-attachment, and goes to a different portal — see step 2 of the checklist above. It covers `CTL-105`,
-`CTL-106`, `CTL-107` and `OQ-010`, which are track geometry DOT may not hold at all, so it is not
-made redundant by the DOT filing.
+**Both live requests are filed.** Nothing further to submit; the next action is a diary entry, not a
+form. Watch **19 August** (MTA) and **18 August** (DOT) — silence past either is a constructive
+denial, and the appeal letter is ready in [FOIL-REQUEST.md §6b](../../FOIL-REQUEST.md).
