@@ -58,14 +58,14 @@ reference number is the agency. `030` is DCP. **DOT is `841`** — a DOT request
 
 ### What to do about it
 
-**Refile with DOT now rather than waiting.** DCP may reroute the request, but nothing obliges it to,
-and the likely outcome is a "no records" determination that costs the full five to twenty business
-days and leaves you no further forward. Filing with DOT today starts a second, independent clock
-against the agency that actually holds the records. There is no penalty for having two open
-requests, and the wasted one costs nothing but its own reference number.
+**Superseded: the DOT request was filed on 11 August 2026 as `FOIL-2026-841-04819`** — see the entry
+below. There is now a live request with the agency that actually holds the records, so this one no
+longer matters.
 
-See [the filing checklist](#filing-checklist) below — everything is prepared, and it is about two
-minutes of work.
+Optionally send [`dcp-reroute-message.txt`](dcp-reroute-message.txt) through **Contact the Agency**
+on the request page, asking DCP to close it. Courtesy rather than strategy: it stops a records
+officer searching for records that were never theirs. It was important not to withdraw this one
+before the DOT request existed; that condition is now met.
 
 **A "no records" response from DCP is not a denial worth appealing.** It would be correct. The
 appeal machinery in FOIL-REQUEST.md §6b is aimed at an agency that holds records and will not
@@ -80,12 +80,67 @@ before the first control is edited.
 
 ---
 
+## FOIL-2026-841-04819 — Department of Transportation ✅ the real one
+
+| | |
+|---|---|
+| **Reference** | `FOIL-2026-841-04819` |
+| **Agency** | **Department of Transportation (DOT)** — the correct custodian |
+| **Records Access Officer** | Judith Falk — foiladmin@dot.nyc.gov |
+| **Appeals Officers** | Edalia George and Michael Twomey — foilappeal@dot.nyc.gov |
+| **Title** | FOIL request - Manhattan Bridge structural record drawings and inspection reports |
+| **Submitted** | Tuesday 11 August 2026 |
+| **Status** | Open · Under Review · *"The agency is working on a response."* |
+| **Portal record** | https://a860-openrecords.nyc.gov/request/view/FOIL-2026-841-04819 |
+| **Request text sent** | [`dot-request-portal.txt`](dot-request-portal.txt) |
+| **Attachment** | [`NYCDOT-FOIL-Manhattan-Bridge.pdf`](NYCDOT-FOIL-Manhattan-Bridge.pdf) |
+
+The `841` in the reference confirms it reached DOT rather than City Planning, and the portal names
+the assigned agency as Department of Transportation.
+
+### Statutory dates
+
+| Date | What is due | Source |
+|---|---|---|
+| **Tue 18 Aug 2026** | 5 business days: acknowledge, grant, or deny in writing | **Stated by the portal** as the Acknowledgment Due Date |
+| **Wed 9 Sep 2026** | 20 business days: outside date for a determination if it acknowledged | Computed |
+| **Thu 10 Sep 2026** | 30 calendar days from a denial: appeal window closes | Computed |
+
+The portal's own acknowledgment date agrees with the independently computed one, which is a small
+but useful check that the 5-day clock started on 11 August.
+
+**Diary 18 August.** Silence past that date is a **constructive denial** and is appealable exactly
+like a written refusal — the letter is ready in [FOIL-REQUEST.md §6b](../../FOIL-REQUEST.md).
+
+### What a good outcome looks like
+
+Any one of these would be worth the filing on its own:
+
+- **The Contract 14 suspender schedule** (item 1d) — retires `CTL-101` and with it the cable sag.
+- **A dimensioned transverse section** (item 1c) — retires `CTL-103`, `CTL-104`, `CTL-105`,
+  `CTL-106`, `CTL-107` in one document, and settles `CONF-014`.
+- **The drawing index alone** (item 9) — cheap for DOT to produce and lets a surgical second request
+  follow.
+
+### Outcome
+
+*Awaiting response.* When records arrive, follow
+[FOIL-REQUEST.md §8](../../FOIL-REQUEST.md) **before** extracting a single dimension: register each
+document as `SRC-0xx` marked **registered, not read**, record its SHA-256, and index every sheet
+before the first control is edited. Then grade per document, check the datum on every elevation, and
+ratchet `GRT-070` down from 14 as placeholders retire.
+
+---
+
 ## Filing checklist
 
 Everything below is prepared and ready to paste. Filing requires a logged-in NYC account and puts
 your name, address and telephone number on a legal request, so it has to be done by a person.
 
-### 1. The DOT request — the one that matters
+### 1. The DOT request — ✅ filed 11 August 2026 as `FOIL-2026-841-04819`
+
+Kept for the record, and as the recipe if a narrower second request follows once the drawing index
+arrives.
 
 1. Log in at <https://a860-openrecords.nyc.gov/auth/login>, then **Request a Record**.
 2. Agency: **Department of Transportation**.
@@ -100,7 +155,7 @@ your name, address and telephone number on a legal request, so it has to be done
 5. Record the reference number and date in the table at the top of this file, and diary the
    five-business-day date.
 
-### 2. The MTA request — file at the same time
+### 2. The MTA request — ⬜ still to file
 
 Different portal: <https://www.mta.info/transparency/foil>. The MTA is a state public authority and
 is not on OpenRecords.
@@ -124,5 +179,10 @@ all times.
 
 | Request | Agency | Text | Reference | Filed |
 |---|---|---|---|---|
-| Manhattan Bridge structural records | **NYC DOT** — the one that matters | [`dot-request-portal.txt`](dot-request-portal.txt) + [PDF](NYCDOT-FOIL-Manhattan-Bridge.pdf) | *pending* | *pending* |
+| Manhattan Bridge structural records | **NYC DOT** | [`dot-request-portal.txt`](dot-request-portal.txt) + [PDF](NYCDOT-FOIL-Manhattan-Bridge.pdf) | **FOIL-2026-841-04819** | **11 Aug 2026** ✅ |
 | Transit track structure on the lower level | MTA / NYCT | [`mta-request-portal.txt`](mta-request-portal.txt) | *pending* | *pending* |
+
+The MTA request is the only one still outstanding. It is about 1,800 characters, needs no
+attachment, and goes to a different portal — see step 2 of the checklist above. It covers `CTL-105`,
+`CTL-106`, `CTL-107` and `OQ-010`, which are track geometry DOT may not hold at all, so it is not
+made redundant by the DOT filing.

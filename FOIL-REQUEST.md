@@ -38,6 +38,10 @@ Four things differ, and they are the reason this is not a copy:
 > `FOIL-2026-841-#####`. See [`sources/foil/SUBMISSIONS.md`](sources/foil/SUBMISSIONS.md) for the
 > full record and the remedy.
 
+**Filed.** This request is live with NYC DOT as **`FOIL-2026-841-04819`**, submitted 11 August 2026,
+acknowledgment due **18 August 2026**. Status and what to do when it lands:
+[`sources/foil/SUBMISSIONS.md`](sources/foil/SUBMISSIONS.md). The MTA request in §7 is still to file.
+
 **Every request filed, and what came back, is logged in
 [`sources/foil/SUBMISSIONS.md`](sources/foil/SUBMISSIONS.md).** Keep it current: a source whose
 provenance begins "someone emailed it to me" is weaker than one traceable to a dated, numbered
