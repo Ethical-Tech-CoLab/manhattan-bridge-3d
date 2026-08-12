@@ -112,13 +112,29 @@ thing could not physically be otherwise.
 | | Standard usable? | Why |
 |---|---|---|
 | **Track gauge** (`CTL-017`, grade `B` from `SRC-010`) | **Yes** | The B, D, N and Q trains crossing this bridge run through the rest of the network. Rolling stock cannot run on a different gauge, so interoperability *forces* the standard figure. |
-| **Track spacing** (`CTL-106`, grade `D`) | **No** | Nothing forces two adjacent tracks to a particular separation; they need only clear each other. Here the governing constraint is a 28 ft truss bay specific to this bridge, so a network-wide figure does not bind it. |
+| **Track spacing** (`CTL-106`, grade `D`) | **Not to fix it — but it bounds it** | Nothing forces two adjacent tracks to a *particular* separation; they need only clear each other. But they must clear each other, so the 10 ft B Division car width does set a floor. See below. |
 
 The test is not "does a standard exist" but "could this dimension have been anything else?" Where
 the answer is yes, adopting the standard is *a number lifted out of the scope in which it was set* —
 the failure mode `SRC-018` records as its own most-repeated error, having committed it five times
 including once in the document written to prevent it. A standard-backed control is capped at `B`
 regardless, because a standard states what is normal rather than what was built.
+
+**But a forced standard can *bound* a value even when it cannot *fix* one, and a bound is worth
+registering.** This is the useful middle case, and the model missed it until it was challenged.
+`SRC-026` records that the B, D, N and Q services crossing this bridge are B Division, whose cars
+are 10 ft wide with a dynamic envelope of roughly 11 in each side. That fixes nothing about this
+bridge — but two trains cannot pass at a centre-to-centre spacing under about 11.8 ft, so `CTL-106`
+now has a hard floor it did not have before. It stays grade `D`, because a floor is not a value; the
+placeholder simply stopped being unconstrained.
+
+So a system-wide fact has three possible uses here, and they should not be confused:
+
+| | Example |
+|---|---|
+| **Fixes a value** (usable, `B`) | Gauge — interoperability compels the figure |
+| **Bounds a value** (registrable, grade unchanged) | Car width bounds track spacing from below |
+| **Neither** | Nothing about the network locates a track relative to *this bridge's* axis (`CTL-105`) |
 
 ---
 

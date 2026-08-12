@@ -193,6 +193,12 @@ structure depth, 1.5 ft) and `OQ-010`. Item 1 alone — a track chart showing ce
 — would retire all three, and none of them is answerable from the DOT request if DOT does not hold
 transit track geometry.
 
+**Still worth having after SRC-026.** System-wide rolling-stock dimensions now bound `CTL-106`
+from below at about 11.8 ft, which is real progress and came from a standard rather than an
+archive. It does not narrow this request. A floor is not a value, and `CTL-105` — where the pair
+sits relative to *this bridge's* axis — is untouched by any network-wide fact, which is exactly
+what item 1's phrase *"relative to the bridge structure"* is there to obtain.
+
 ### Outcome
 
 *Awaiting response.* Same discipline as the DOT request:

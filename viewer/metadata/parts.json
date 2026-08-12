@@ -3,10 +3,10 @@
   "model": "control_skeleton",
   "milestone": 2,
   "generated_by": "build_control_skeleton.py@1.0.0",
-  "generated_at": "2026-08-12T15:34:26+00:00",
+  "generated_at": "2026-08-12T15:50:56+00:00",
   "control_document": {
     "path": "GEOMETRY-CONTROL.md",
-    "sha256": "772b18261f8175b025ea9845e57f247062498ecd3346c1ebe4bcc642901c854d"
+    "sha256": "1847c9a06c4f541443436d58587867df8a112a028a618080b5c70981d4721a82"
   },
   "source_register": "SOURCE-REGISTER.md",
   "confidence_model": "CONFIDENCE-MODEL.md",
@@ -2068,7 +2068,7 @@
       "source_ids": [],
       "confidence": "D",
       "is_placeholder": true,
-      "notes": "PLACEHOLDER. Centre-to-centre distance between the two tracks sharing a bay \u2014 again a spacing between tracks, not the gauge within one. Bounded by the 28 ft truss bay, and currently set so the pair sits symmetrically in it. **A published NYCT standard spacing would not retire this**, and the reason is worth stating because it is easy to get wrong. CTL-017 may take gauge from a standard because gauge is *forced*: the B, D, N and Q trains that cross this bridge run through the rest of the network, and rolling stock physically cannot run on a different gauge, so the standard applies by necessity rather than by convention. Nothing forces track *spacing* in the same way. Two tracks may sit any distance apart provided their clearance envelopes do not overlap, and here the governing constraint is a 28 ft truss bay specific to this bridge \u2014 not a network-wide figure. Adopting a modern new-construction standard for a 1909 structure would be a number lifted out of the scope in which it was set, which SRC-018 records as its own most-repeated error. Retired by SRC-025 or SRC-004, and by nothing else. See OQ-010.",
+      "notes": "PLACEHOLDER. Centre-to-centre distance between the two tracks sharing a bay \u2014 again a spacing between tracks, not the gauge within one. Bounded by the 28 ft truss bay, and currently set so the pair sits symmetrically in it. **Now bounded from below by a forced system-wide fact.** SRC-026: the B, D, N and Q services crossing this bridge are B Division, whose cars are 10 ft wide with a dynamic envelope of roughly 11 in each side. Two trains cannot pass at a spacing under about 11.8 ft, so the 14 ft placeholder is not merely plausible \u2014 it clears a hard floor the model previously did not have. That floor is genuinely forced: a car cannot be wider than the division it runs in. **A published NYCT standard spacing would still not retire this**, and the reason is worth stating because it is easy to get wrong. CTL-017 may take gauge from a standard because gauge is *forced*: the B, D, N and Q trains that cross this bridge run through the rest of the network, and rolling stock physically cannot run on a different gauge, so the standard applies by necessity rather than by convention. Nothing forces track *spacing* in the same way. Two tracks may sit any distance apart provided their clearance envelopes do not overlap, and here the governing constraint is a 28 ft truss bay specific to this bridge \u2014 not a network-wide figure. Adopting a modern new-construction standard for a 1909 structure would be a number lifted out of the scope in which it was set, which SRC-018 records as its own most-repeated error. The distinction to hold on to: a forced standard can **bound** this value, as SRC-026 now does, without **fixing** it. Bounded by SRC-026; retired by SRC-025 or SRC-004, and by nothing else. See OQ-010.",
       "ho": {
         "prototype_m": 4.2672,
         "prototype_ft": 14.0,

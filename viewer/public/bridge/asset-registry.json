@@ -35,7 +35,7 @@
           "byte_size": 137944,
           "triangle_count": 4620,
           "max_geometric_error_m": 8.0,
-          "sha256": "bd5497b1a67dce3d35338dc03fe513e743a96b2799c05b6483ad7535faf28165"
+          "sha256": "1fb3cd14b5d7d62991c2a6c7f6f85babbe1f57020c9518012ec34b78bc4725f2"
         }
       ]
     },
@@ -54,7 +54,7 @@
           "format": "glb",
           "byte_size": 976056,
           "max_geometric_error_m": 0.01,
-          "sha256": "c1c4420b9bfdd73d046ad50fdaa243ebfc7e835f5425a9e97bc81efad05ab762"
+          "sha256": "f5da8f2b2341f30eb2e0fed724ee00b576f54991b9d09f1e9708bf762c2efeef"
         }
       ]
     },
@@ -2843,11 +2843,11 @@
   "provenance": {
     "module_id": "manhattan-bridge",
     "generated_by": "publish_module_contract.py via build_control_skeleton.py@1.0.0",
-    "generated_at": "2026-08-12T15:34:36+00:00",
+    "generated_at": "2026-08-12T15:50:59+00:00",
     "source_documents": [
       {
         "path": "GEOMETRY-CONTROL.md",
-        "sha256": "772b18261f8175b025ea9845e57f247062498ecd3346c1ebe4bcc642901c854d"
+        "sha256": "1847c9a06c4f541443436d58587867df8a112a028a618080b5c70981d4721a82"
       }
     ]
   }
