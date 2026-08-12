@@ -64,16 +64,8 @@ days and leaves you no further forward. Filing with DOT today starts a second, i
 against the agency that actually holds the records. There is no penalty for having two open
 requests, and the wasted one costs nothing but its own reference number.
 
-1. **File the same request against DOT.** Same pasted text, same PDF attachment — nothing in either
-   is DCP-specific, and both already name NYC DOT throughout as the intended custodian. Select
-   **Department of Transportation** in the agency dropdown. Record the new reference number below.
-2. **Optionally, message DCP through the portal** using "Contact the Agency" on the request page, and
-   ask them either to reroute it to DOT or to close it. A short note is enough: *"This request seeks
-   bridge structural records held by NYC DOT, not DCP. Please reroute it to the Department of
-   Transportation if you are able; otherwise please close it. I have filed separately with DOT."*
-   This is courtesy rather than strategy — it stops a records officer spending time searching for
-   records that were never theirs.
-3. **Do not withdraw it before DOT is filed.** Keep at least one live request at all times.
+See [the filing checklist](#filing-checklist) below — everything is prepared, and it is about two
+minutes of work.
 
 **A "no records" response from DCP is not a denial worth appealing.** It would be correct. The
 appeal machinery in FOIL-REQUEST.md §6b is aimed at an agency that holds records and will not
@@ -88,12 +80,49 @@ before the first control is edited.
 
 ---
 
+## Filing checklist
+
+Everything below is prepared and ready to paste. Filing requires a logged-in NYC account and puts
+your name, address and telephone number on a legal request, so it has to be done by a person.
+
+### 1. The DOT request — the one that matters
+
+1. Log in at <https://a860-openrecords.nyc.gov/auth/login>, then **Request a Record**.
+2. Agency: **Department of Transportation**.
+   Check the reference number you get back starts `FOIL-2026-841-` — `841` is DOT. If it says
+   `030` you have hit City Planning again.
+3. Paste [`dot-request-portal.txt`](dot-request-portal.txt) into the request box.
+   It is 4,890 characters against a 5,000 limit, so **replace the `[Name] - [Postal address] -
+   [Email] - [Phone]` line with your details and watch the counter.** If it will not fit, delete the
+   paragraph beginning "Context, to help you locate the records" — that is explicitly not part of
+   the request and frees 385 characters.
+4. Attach [`NYCDOT-FOIL-Manhattan-Bridge.pdf`](NYCDOT-FOIL-Manhattan-Bridge.pdf).
+5. Record the reference number and date in the table at the top of this file, and diary the
+   five-business-day date.
+
+### 2. The MTA request — file at the same time
+
+Different portal: <https://www.mta.info/transparency/foil>. The MTA is a state public authority and
+is not on OpenRecords.
+
+Paste [`mta-request-portal.txt`](mta-request-portal.txt). It is about 1,800 characters and needs no
+attachment. It covers `CTL-105`, `CTL-106`, `CTL-107` and `OQ-010` — track geometry DOT may not hold
+at all.
+
+### 3. Tidy up the DCP request — optional, one minute
+
+On the [DCP request page](https://a860-openrecords.nyc.gov/request/view/FOIL-2026-030-00205) use
+**Contact the Agency** and send [`dcp-reroute-message.txt`](dcp-reroute-message.txt). Courtesy rather
+than strategy: it stops a records officer searching for records that were never theirs.
+
+**Do not withdraw the DCP request until the DOT one is filed.** Keep at least one live request at
+all times.
+
+---
+
 ## Not yet filed
 
-| Request | Agency | Text |
-|---|---|---|
-| Manhattan Bridge structural records | **NYC DOT** — the one that matters | [`dot-request-portal.txt`](dot-request-portal.txt) + [PDF](NYCDOT-FOIL-Manhattan-Bridge.pdf) |
-| Transit track structure on the lower level | MTA / NYCT | [FOIL-REQUEST.md §7](../../FOIL-REQUEST.md) |
-
-The MTA request is about 1,400 characters and needs no attachment. It covers `CTL-105`, `CTL-106`,
-`CTL-107` and `OQ-010`, which are track geometry DOT may not hold at all.
+| Request | Agency | Text | Reference | Filed |
+|---|---|---|---|---|
+| Manhattan Bridge structural records | **NYC DOT** — the one that matters | [`dot-request-portal.txt`](dot-request-portal.txt) + [PDF](NYCDOT-FOIL-Manhattan-Bridge.pdf) | *pending* | *pending* |
+| Transit track structure on the lower level | MTA / NYCT | [`mta-request-portal.txt`](mta-request-portal.txt) | *pending* | *pending* |

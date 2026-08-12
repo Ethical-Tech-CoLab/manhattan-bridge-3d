@@ -1,0 +1,21 @@
+Subject: FOIL request - Manhattan Bridge transit track structure, records
+
+Under Article 6 of the Public Officers Law I request records held by the MTA or New York City Transit concerning the four transit tracks carried on the lower level of the Manhattan Bridge (NYC DOT BIN 2240027), on the BMT alignment serving the B, D, N and Q services:
+
+1. Track charts or track alignment drawings for the bridge crossing, showing track centrelines and the spacing between tracks, and the transverse position of each track relative to the bridge structure.
+
+2. Sections through the transit floor showing the structural depth of the track support system, from the running rail down to the supporting floor beams.
+
+3. Drawings or records from the transit floor beam retrofit on the approach spans carried out under NYC DOT Contract 15 (2018-2021), to the extent MTA or NYCT holds them.
+
+4. Any index or drawing register covering the above.
+
+I request electronic copies. Where a record exists only on paper or microfilm, please tell me its extent and estimated copying cost before producing it, so I can narrow the request rather than incur an avoidable fee.
+
+I am building an openly published, source-documented model of the bridge in which every dimension is traceable to a cited source; these records would replace three invented placeholder dimensions with documented ones. The project is public at github.com/Ethical-Tech-CoLab/manhattan-bridge-3d and any records provided will be credited.
+
+If any part of this request is denied, please cite the specific statutory exemption for each withheld record and release the remainder, including any reasonably segregable portions.
+
+Please acknowledge receipt and provide a date certain for a response.
+
+[Name] - [Postal address] - [Email] - [Phone]
