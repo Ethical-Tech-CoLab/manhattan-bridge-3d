@@ -9294,11 +9294,11 @@
   "provenance": {
     "module_id": "manhattan-bridge",
     "generated_by": "publish_module_contract.py via build_control_skeleton.py@1.0.0",
-    "generated_at": "2026-08-12T15:50:59+00:00",
+    "generated_at": "2026-08-12T16:17:18+00:00",
     "source_documents": [
       {
         "path": "GEOMETRY-CONTROL.md",
-        "sha256": "1847c9a06c4f541443436d58587867df8a112a028a618080b5c70981d4721a82"
+        "sha256": "04116aca83a1c868eb4b248807e9aa9a87e062def606d1295a70c5fc414981a5"
       }
     ]
   }

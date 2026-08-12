@@ -1,6 +1,6 @@
 {
   "module_id": "manhattan-bridge-3d",
-  "campaign_name": "Manhattan Bridge — material and arrangement evidence",
+  "campaign_name": "Manhattan Bridge \u2014 material and arrangement evidence",
   "frame_id": "nyc-harbor-enu",
   "purpose": "Close the open questions that documents cannot. This model reaches 74 passing tests, and the open questions that survive are not all dimensional. Three of them are precisely what a photograph settles. OQ-019 records that materials are unregistered for the anchorages, the caissons, the cables, the stiffening trusses and both roadway surfaces -- every one of those is a question about what a thing is MADE OF. OQ-020 records that the approach viaducts' structural form is unregistered: girder type, pier form, bent arrangement. OQ-017 asks which way the Warren truss diagonals run at each panel and how the tower bracing is arranged. No amount of re-reading the 1909 Annual Report answers any of these; a person looking at an openly-licensed photograph answers all three. The dimensional questions -- OQ-001 cable sag, OQ-007 tower plan, OQ-024 anchorage arch springing -- are deliberately NOT in this campaign's category vocabulary, because a photograph without scale control in the frame cannot measure and must not be allowed to appear to.",
   "user_agent": "manhattan-bridge-3d/1.0 (https://github.com/Ethical-Tech-CoLab/manhattan-bridge-3d; openly-licensed imagery survey) Python-urllib/3.12",
@@ -11,7 +11,9 @@
     "radius_m": 1400,
     "note": "Roughly the main-span midpoint. A 1.4 km radius reaches both towers, both anchorages and a useful part of both approaches. This coordinate is for SEARCH ONLY and is not a control. OQ-009 records that the real-world azimuth and geodetic anchor of the bridge axis are still provisional (grade D, DOQ-001), and a search centre must never quietly become the answer to that."
   },
-  "area_informs": ["bridge"],
+  "area_informs": [
+    "bridge"
+  ],
   "categories": [
     {
       "id": "masonry",
@@ -75,6 +77,13 @@
       "grants": "appearance",
       "help": "A good overall view that shows the bridge in its setting but settles no single component. Useful for the presentation layer, weak as evidence.",
       "temporal": "stable"
+    },
+    {
+      "id": "scale_reference",
+      "label": "measurable frame",
+      "grants": "arrangement",
+      "help": "A frame that could be MEASURED, not just read. Tick it when a known dimension is fully visible in the same plane as the thing of interest and the view is roughly square on -- above all a complete rail pair, which is 4 ft 8.5 in by forced standard (CTL-017) and so is a ruler lying in the photograph. Both rail pairs AND both trusses in one square-ish frame is the shot that retires CTL-105 and CTL-106. This tick does not itself grant a dimension; it marks the frame as a candidate for photogrammetric measurement under CONFIDENCE-MODEL.md section 6.2, which is the only route by which a photograph reaches grade B for a length.",
+      "temporal": "renewed"
     }
   ],
   "shots": [
@@ -82,85 +91,122 @@
       "subject": "bridge_overall",
       "commons_category": "Manhattan Bridge",
       "openverse": "Manhattan Bridge New York",
-      "informs": ["bridge"]
+      "informs": [
+        "bridge"
+      ]
     },
     {
       "subject": "towers",
       "commons_category": "Towers of the Manhattan Bridge",
       "openverse": "Manhattan Bridge tower steel",
-      "informs": ["tower_brooklyn_leg_a", "tower_manhattan_leg_a"]
+      "informs": [
+        "tower_brooklyn_leg_a",
+        "tower_manhattan_leg_a"
+      ]
     },
     {
       "subject": "tower_arches",
       "commons_category": null,
       "openverse": "Manhattan Bridge tower arch portal",
-      "informs": ["tower_brooklyn_arch_lower", "tower_brooklyn_arch_upper"]
+      "informs": [
+        "tower_brooklyn_arch_lower",
+        "tower_brooklyn_arch_upper"
+      ]
     },
     {
       "subject": "tower_bracing",
       "commons_category": null,
       "openverse": "Manhattan Bridge tower bracing lattice",
-      "informs": ["tower_brooklyn_bracing", "tower_manhattan_bracing"]
+      "informs": [
+        "tower_brooklyn_bracing",
+        "tower_manhattan_bracing"
+      ]
     },
     {
       "subject": "anchorages",
       "commons_category": null,
       "openverse": "Manhattan Bridge anchorage masonry",
-      "informs": ["brooklyn_anchorage", "manhattan_anchorage"]
+      "informs": [
+        "brooklyn_anchorage",
+        "manhattan_anchorage"
+      ]
     },
     {
       "subject": "anchorage_arch",
       "commons_category": null,
       "openverse": "Manhattan Bridge anchorage arch street",
-      "informs": ["brooklyn_anchorage_arch", "manhattan_anchorage_arch"]
+      "informs": [
+        "brooklyn_anchorage_arch",
+        "manhattan_anchorage_arch"
+      ]
     },
     {
       "subject": "cables_and_suspenders",
       "commons_category": null,
       "openverse": "Manhattan Bridge cables suspenders",
-      "informs": ["north_main_cable_1", "suspenders_truss_a"]
+      "informs": [
+        "north_main_cable_1",
+        "suspenders_truss_a"
+      ]
     },
     {
       "subject": "stiffening_trusses",
       "commons_category": null,
       "openverse": "Manhattan Bridge stiffening truss steel",
-      "informs": ["stiffening_truss_a_web_main_span", "stiffening_truss_a_chords_main_span"]
+      "informs": [
+        "stiffening_truss_a_web_main_span",
+        "stiffening_truss_a_chords_main_span"
+      ]
     },
     {
       "subject": "underside",
       "commons_category": null,
       "openverse": "under Manhattan Bridge DUMBO arch",
-      "informs": ["stiffening_truss_a_web_main_span"]
+      "informs": [
+        "stiffening_truss_a_web_main_span"
+      ]
     },
     {
       "subject": "approach_viaduct",
       "commons_category": null,
       "openverse": "Manhattan Bridge approach viaduct girder",
-      "informs": ["brooklyn_approach_bents", "manhattan_approach_bents"]
+      "informs": [
+        "brooklyn_approach_bents",
+        "manhattan_approach_bents"
+      ]
     },
     {
       "subject": "subway_tracks",
       "commons_category": null,
       "openverse": "Manhattan Bridge subway tracks B D N Q",
-      "informs": ["track_1_approach_brooklyn"]
+      "informs": [
+        "track_1_approach_brooklyn"
+      ]
     },
     {
       "subject": "roadway_deck",
       "commons_category": null,
       "openverse": "Manhattan Bridge roadway traffic deck",
-      "informs": ["lower_roadway_envelope_main_span"]
+      "informs": [
+        "lower_roadway_envelope_main_span"
+      ]
     },
     {
       "subject": "footwalk",
       "commons_category": null,
       "openverse": "Manhattan Bridge pedestrian walkway bike path",
-      "informs": ["footwalk_north", "footwalk_south"]
+      "informs": [
+        "footwalk_north",
+        "footwalk_south"
+      ]
     },
     {
       "subject": "construction_history",
       "commons_category": "Construction of the Manhattan Bridge",
       "openverse": "Manhattan Bridge construction 1909",
-      "informs": ["bridge"]
+      "informs": [
+        "bridge"
+      ]
     }
   ],
   "outputs": {

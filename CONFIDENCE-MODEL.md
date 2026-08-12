@@ -216,15 +216,46 @@ photographs from the riverbank still do not see inside a truss bay.
 
 ### 6.4 What would retire the placeholders
 
-Ranked by cost, cheapest first:
+**The scale control is already in the frame.** Section 6.2 grants grade `B` to a length measured
+against a control dimension visible in the same photograph. On the track deck that dimension is
+free: `CTL-017`, the 4 ft 8.5 in gauge, is present in every image that shows a rail pair, is grade
+`B` from a forced standard, and lies *in the plane being measured*. A square-on photograph of a
+truss bay therefore carries its own ruler, and `CTL-105`, `CTL-106` and `CTL-107` can be recovered
+from it **without waiting for a drawing**. Nothing else in this model enjoys that: a tower
+photograph has no known dimension in it.
 
-1. **One licensed photograph of each anchorage and tower face** — promotes `MAT-003` and `MAT-010`,
-   and moves several parts from `ASSUMED` toward `INFERRED`.
-2. **A walkway-level image set along the pedestrian path** — the path runs *inside* the structure,
-   between the trusses. This is the only publicly accessible viewpoint that sees the deck framing,
-   and it is the one capture that could plausibly reach `OQ-013`.
-3. **`SfM` with scale control** — a survey target, or any control dimension physically measured on
-   site. This is what makes `MEASURED` non-zero for the first time.
+That makes the track placeholders the cheapest remaining targets in the project, not the dearest.
+
+#### The shot list, per control
+
+Every shot below names what it retires and what makes it usable. A shot that does not meet its
+condition yields grade `D` and is not worth taking.
+
+| # | Shot | Retires | Condition that makes it count |
+|---|---|---|---|
+| **1** | Transverse view across one truss bay, both tracks and both trusses in frame, camera as square to the bridge axis as the walkway allows | `CTL-105`, `CTL-106` | **Both rail pairs fully visible.** The gauge scales the image; the truss faces give the bay datum. Obliquity is the enemy — a rectified or near-square view is worth more than a sharp one |
+| **2** | Low, along-track view down a single track, rail head and the deck surface beneath both visible | `CTL-107` | The rail's own section height above the deck plane, scaled off the gauge in the same frame |
+| **3** | Under-deck view from the walkway edge showing floor beams and the track support | `CTL-103`, `CTL-104`, `OQ-013` | Any beam depth is scalable only if a rail or a known member is in shot |
+| **4** | Approach viaduct from below or beside, bent or pier and the girder line together | `CTL-108`, `CTL-109`, `CTL-110`, `OQ-020` | Needs a scale reference — a rail, a track gauge, or a person of stated height |
+| **5** | Anchorage and tower faces, square on, at consistent exposure | `MAT-003`, `MAT-010` | Material and coursing only. **No dimension** — nothing of known size is in frame |
+| **6** | Tower arch opening, square on, with the deck edge or a rail visible | `CTL-111`, `CTL-112`, `OQ-023` | Currently measured off a photograph with *no* scale control. A single in-frame known length upgrades it from `D` |
+| **7** | Anchorage thoroughfare arch, square on, with a vehicle, doorway or person for scale | `CTL-115`, `CTL-116`, `OQ-024` | The 46 ft opening width (`CTL-052`, grade `A`) is itself the ruler if the full opening is in frame |
+
+#### Ranked by cost
+
+1. **Shots 1, 2 and 6** — walkway-accessible, no permission needed, and each carries its own scale
+   control. This is the cheapest route to a non-empty `C`/`B` band anywhere in the model.
+2. **Shots 3 and 4** — same walkway, harder sightlines.
+3. **Shot 7** — street level, at the anchorage plaza.
+4. **`SfM` with surveyed scale control** — the only route to `MEASURED`, and the only one needing
+   equipment rather than a walk.
+
+#### What a photograph still cannot do here
+
+It cannot locate the track pair against the bridge's *longitudinal axis* unless both trusses are in
+the same frame, because the axis is not a visible object — it is derived from the structure either
+side of it. That is why shot 1 insists on both trusses rather than one track. A photograph of a
+single track, however sharp, measures the gauge it already knows and nothing else.
 
 ---
 

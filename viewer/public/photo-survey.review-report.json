@@ -1,0 +1,9 @@
+{
+ "tool": "photo-survey/build_corpus@1.0.0",
+ "module_id": "manhattan-bridge-3d",
+ "accepted": 0,
+ "auto_screened": 253,
+ "refused_by_review": 0,
+ "by_category": {},
+ "grants_note": "An accepted photograph supports material, arrangement, existence, condition and appearance, and grants confidence B at best. It does NOT carry a dimension: without scale control in the frame a photograph cannot measure. Dimensional claims stay with measured drawings and primary documents."
+}
