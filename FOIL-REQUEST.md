@@ -31,6 +31,18 @@ Four things differ, and they are the reason this is not a copy:
 | **Appeals Officers** | Edalia George and Michael Twomey — foilappeal@dot.nyc.gov |
 | **Copying fee** | 25¢ per page for paper. Electronic copies should be free — ask for electronic. |
 
+> **Check the agency dropdown before you submit.** This has already gone wrong once: request
+> `FOIL-2026-030-00205` was filed against the **Department of City Planning**, which holds zoning and
+> land-use records and no bridge engineering records at all. On the portal the middle segment of the
+> reference number is the agency — **DOT is `841`**, so a correctly routed request reads
+> `FOIL-2026-841-#####`. See [`sources/foil/SUBMISSIONS.md`](sources/foil/SUBMISSIONS.md) for the
+> full record and the remedy.
+
+**Every request filed, and what came back, is logged in
+[`sources/foil/SUBMISSIONS.md`](sources/foil/SUBMISSIONS.md).** Keep it current: a source whose
+provenance begins "someone emailed it to me" is weaker than one traceable to a dated, numbered
+request to a named agency.
+
 **Use the portal.** It timestamps the request, which is what starts the statutory clock and what you
 will rely on if you need to appeal.
 
