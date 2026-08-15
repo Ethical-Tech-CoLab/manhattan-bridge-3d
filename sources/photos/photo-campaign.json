@@ -37,6 +37,13 @@
       "temporal": "stable"
     },
     {
+      "id": "steelwork",
+      "label": "steel surface",
+      "grants": "material",
+      "help": "What the STEEL IS MADE OF and how it is finished -- paint system and colour, rivets versus welds or bolts, built-up plate and lattice versus rolled section, corrosion and coating condition. Tick this alongside truss, approach or rail whenever the surface is legible, not instead of them: those record how members are ARRANGED, this records what they ARE. It is the only category that can promote MAT-009, MAT-011 and MAT-012, which between them hold 46 of the 82 recoverable grade-steps.",
+      "temporal": "renewed"
+    },
+    {
       "id": "cable",
       "label": "cable",
       "grants": "material",
