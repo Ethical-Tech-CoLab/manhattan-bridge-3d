@@ -58,8 +58,8 @@
   "photoAudit": {
     "url": "review/index.html",
     "label": "Photograph audit",
-    "reviewed": 0,
+    "reviewed": 217,
     "total": 253,
-    "note": "Openly-licensed photographs harvested for the questions documents cannot close: OQ-019 materials, OQ-020 approach form, OQ-017 truss arrangement. None has been reviewed by a person yet, so every record is still auto_screened and counts as weaker evidence. A photograph can establish what a thing is made of and how it is arranged; it cannot give a dimension without scale control."
+    "note": "Reviewed by a person on 2026-08-15: 217 of 253 decided, 30 accepted as evidence and the rest skipped. Those acceptances promoted five material rows -- stiffening trusses, roadway surface, approaches, main cables and suspenders -- each argued in GEOMETRY-CONTROL.md. A photograph settles what a thing is MADE OF; it cannot give a dimension without scale control, so every placeholder LENGTH is untouched."
   }
 }

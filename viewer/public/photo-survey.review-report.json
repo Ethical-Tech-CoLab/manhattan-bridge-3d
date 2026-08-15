@@ -1,9 +1,18 @@
 {
  "tool": "photo-survey/build_corpus@1.0.0",
  "module_id": "manhattan-bridge-3d",
- "accepted": 0,
- "auto_screened": 253,
- "refused_by_review": 0,
- "by_category": {},
+ "accepted": 30,
+ "auto_screened": 36,
+ "refused_by_review": 187,
+ "by_category": {
+  "context": 9,
+  "steelwork": 13,
+  "cable": 8,
+  "deck": 1,
+  "truss": 9,
+  "arch": 8,
+  "masonry": 2,
+  "approach": 2
+ },
  "grants_note": "An accepted photograph supports material, arrangement, existence, condition and appearance, and grants confidence B at best. It does NOT carry a dimension: without scale control in the frame a photograph cannot measure. Dimensional claims stay with measured drawings and primary documents."
 }

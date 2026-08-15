@@ -19,8 +19,8 @@
   },
   "frame": "manhattan-bridge-local",
   "vertical_datum": "MHW",
-  "control_document_sha256": "04116aca83a1c868eb4b248807e9aa9a87e062def606d1295a70c5fc414981a5",
+  "control_document_sha256": "81153c6639d32c7c863713fbf07e4aa0ae38b5299f64ded3709f183d07340248",
   "generated_by": "export_proxy.py via build_control_skeleton.py@1.0.0",
-  "generated_at": "2026-08-15T16:50:16+00:00",
+  "generated_at": "2026-08-15T17:48:01+00:00",
   "suspender_stride": 4
 }
