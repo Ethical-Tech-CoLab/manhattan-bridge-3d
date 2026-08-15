@@ -133,7 +133,7 @@
   "provenance": {
     "module_id": "manhattan-bridge",
     "generated_by": "publish_module_contract.py via build_control_skeleton.py@1.0.0",
-    "generated_at": "2026-08-12T16:17:19+00:00",
+    "generated_at": "2026-08-15T16:50:17+00:00",
     "source_documents": [
       {
         "path": "GEOMETRY-CONTROL.md",
@@ -145,7 +145,7 @@
       },
       {
         "path": "CONFIDENCE-MODEL.md",
-        "sha256": "c2434ed1ce1d196932bfa0626b662cf71d0d682dafc02b689fb0e29dfbeb865a"
+        "sha256": "e00f7da122f1c659a67d8d143a230ce5361ea7ca010b7e634a50805515517c3a"
       }
     ]
   },

@@ -259,6 +259,94 @@ single track, however sharp, measures the gauge it already knows and nothing els
 
 ---
 
+### 6.5 Licensing is a gate on display, not only on storage
+
+Storage and display are different permissions and conflating them is how an all-rights-reserved
+image ends up on a public page. Every ingested asset therefore records `display_permitted`
+separately from `stored_copy`, so a viewer gallery reading the manifest can tell "cite this" from
+"you may show this" rather than re-deriving it from a licence string.
+
+**The worked example is HistoricBridges.org, SRC-005.** It is the most thorough photographic
+documentation of this bridge available, and none of it may be used here. Its terms, read directly
+from `historicbridges.org/info/about/`, require written permission secured before publication,
+confirmed by a Letter of Agreement and an invoice, at a website fee of $50.00 per image, and grant
+permission for **"one-time, one edition use only"** with **"all rights ... reserved in full"**.
+
+The fee is not the obstacle. **One-edition permission cannot be satisfied by an open repository at
+all**, because anyone may fork and redistribute it, which is precisely what CC BY 4.0 invites. No
+payment would fix that, so the question is closed rather than deferred.
+
+What remains permitted, and what this project does instead:
+
+- **Link to the gallery.** Linking is not reproduction. `SOURCE-REGISTER.md` carries the URL and
+  the viewer offers it as an outbound reference.
+- **Use the data on the same site that is not theirs to license.** The National Bridge Inventory
+  sheet at that domain is federal data submitted by NYSDOT to FHWA. The *form layout* is
+  HistoricBridges.org's; the *data* is public domain. Registered separately as SRC-024 for exactly
+  that reason, and it turned out to be the more valuable half.
+- **Look at the photographs while modelling.** Reading a source and republishing it are different
+  acts. Proportions checked against a copyrighted photograph are fine; the photograph does not come
+  with them.
+
+---
+
+### 6.6 Material is the binding constraint, not geometry
+
+Every part carries two independent grades: `basis_confidence` for how well its **shape and position**
+are sourced, and `material_confidence` for how well its **fabric** is. The part takes the weaker of
+the two. So a material row only costs the model anything where it is *strictly worse than the basis
+it sits on* -- a grade-`D` material on grade-`D` geometry is not the bottleneck, but a grade-`D`
+material on grade-`A` geometry is sourced work being thrown away.
+
+Run `python scripts/material_priority.py` for the current ranking. It is computed on every run
+rather than written here, because three hand-typed counts in this repository have already gone stale
+and `STT-013` now exists to catch the fourth.
+
+At Milestone 10 it reports **51 of 87 physical parts have material as the binding constraint**, with
+82 grade-steps recoverable from sourcing fabric alone. That is the single largest block of
+recoverable confidence in the project, and none of it needs a drawing.
+
+Two things follow, and they invert the obvious reading of the grade table:
+
+- **Counting placeholders by grade gives the wrong priority.** It puts the approaches near the top
+  because there are sixteen of them. Counting *binding* placeholders puts the stiffening trusses
+  there instead, because their geometry is already sourced and only the surface is missing.
+- **Reference rows are excluded, and must be.** Datum planes, axes and station markers carry
+  `material: reference` at grade `D` only because the vocabulary has no "not applicable". No
+  research can ever promote them, so leaving them in would park sixteen permanently-unfixable rows
+  at the top of a list nobody could ever clear.
+
+**And material is exactly what a photograph settles.** Section 6.2 allows a photograph to promote a
+material row as far as `A`; `MAT-010` was promoted `D` to `B` this way at Milestone 9 on two
+registered views of coursed ashlar. So the highest-leverage work available is not a records request
+and not a site visit -- it is **reviewing the 253 photographs already harvested**, of which zero have
+been looked at by a person. The corpus is sitting in `viewer/public/review/`.
+
+### 6.7 Field capture: the procedures exist, and they are not ours
+
+Two field procedures already exist in the sibling research programme
+`manhattan-bridge-noise-dumbo` (registered here as `SRC-018`). They are **referenced, not copied** --
+the same anti-fork rule this stack applies to viewer code and photo tooling.
+
+| Need | Where it lives | State |
+|---|---|---|
+| **Photogrammetry on site** | `FIELD-CAPTURE-PROTOCOL.md` capture **C5** | Complete and usable. Structure-from-motion, no LiDAR assumed; overlap, passes, focus lock, single focal length, overcast preference, RAW under the deck |
+| **Scale control** | same, C5 | The part that matters most here. Ranked: ChArUco/ArUco board, then folding rule or steel tape at right angles, then a Letter sheet or dollar bill, plus an independent tape measurement as a check |
+| **Audio capture** | `FIELD-CAPTURE-PROTOCOL.md` C1-C4, and `pedestrian-site-visits/FIELD-KIT.md` | Complete -- and **not needed by this repository** |
+
+**On audio, the honest answer is that this model has no use for it.** This is a geometry and
+material twin; no control here can be graded by a recording, and adding an audio procedure would be
+scope this project cannot spend. It is the noise programme's instrument and belongs to it. Where the
+two meet is the *geometry* -- `OQ-013`'s deck framing depths are an input to that programme's
+acoustic work, which is an argument for capture C5, not for a microphone.
+
+**What C5 does not cover, and this repository must supply**, is *what to point the camera at*. C5 is
+aimed at the underside for an acoustic model. The shot list in section 6.4 above is the counterpart:
+seven shots, each naming the control it retires and the condition that makes it count. Use C5 for
+**how to shoot and how to scale**, and 6.4 for **what to shoot and why**.
+
+---
+
 ## 7. The presentation layer
 
 A render can be improved in two entirely different ways, and keeping them apart is what lets this
@@ -306,32 +394,3 @@ Any visual improvement made ahead of the survey is a loan against future work, a
 recorded. `OQ-021` tracks it: every presentation-layer decision that stands in for missing evidence
 is listed there, with what would retire it. The viewer states the same thing on screen rather than
 only in this document, because a render travels further than a methods section.
-
-### 6.5 Licensing is a gate on display, not only on storage
-
-Storage and display are different permissions and conflating them is how an all-rights-reserved
-image ends up on a public page. Every ingested asset therefore records `display_permitted`
-separately from `stored_copy`, so a viewer gallery reading the manifest can tell "cite this" from
-"you may show this" rather than re-deriving it from a licence string.
-
-**The worked example is HistoricBridges.org, SRC-005.** It is the most thorough photographic
-documentation of this bridge available, and none of it may be used here. Its terms, read directly
-from `historicbridges.org/info/about/`, require written permission secured before publication,
-confirmed by a Letter of Agreement and an invoice, at a website fee of $50.00 per image, and grant
-permission for **"one-time, one edition use only"** with **"all rights ... reserved in full"**.
-
-The fee is not the obstacle. **One-edition permission cannot be satisfied by an open repository at
-all**, because anyone may fork and redistribute it, which is precisely what CC BY 4.0 invites. No
-payment would fix that, so the question is closed rather than deferred.
-
-What remains permitted, and what this project does instead:
-
-- **Link to the gallery.** Linking is not reproduction. `SOURCE-REGISTER.md` carries the URL and
-  the viewer offers it as an outbound reference.
-- **Use the data on the same site that is not theirs to license.** The National Bridge Inventory
-  sheet at that domain is federal data submitted by NYSDOT to FHWA. The *form layout* is
-  HistoricBridges.org's; the *data* is public domain. Registered separately as SRC-024 for exactly
-  that reason, and it turned out to be the more valuable half.
-- **Look at the photographs while modelling.** Reading a source and republishing it are different
-  acts. Proportions checked against a copyrighted photograph are fine; the photograph does not come
-  with them.

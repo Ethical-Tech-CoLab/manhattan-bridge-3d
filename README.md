@@ -47,7 +47,11 @@ python scripts/build_control_skeleton.py
 # 2. Check it against the regression and traceability suites
 python scripts/validate_dimensions.py
 
-# 3. Run the viewer
+# 3. Ask what to work on next: which material rows are holding back
+#    already-sourced geometry, computed rather than remembered
+python scripts/material_priority.py
+
+# 4. Run the viewer
 cd viewer && npm install && npm run dev     # http://localhost:5173
 ```
 

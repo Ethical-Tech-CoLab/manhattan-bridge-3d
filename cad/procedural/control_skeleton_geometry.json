@@ -3,7 +3,7 @@
   "model": "control_skeleton",
   "milestone": 2,
   "generated_by": "build_control_skeleton.py@1.0.0",
-  "generated_at": "2026-08-12T16:17:12+00:00",
+  "generated_at": "2026-08-15T16:50:14+00:00",
   "control_document": {
     "path": "GEOMETRY-CONTROL.md",
     "sha256": "04116aca83a1c868eb4b248807e9aa9a87e062def606d1295a70c5fc414981a5"
